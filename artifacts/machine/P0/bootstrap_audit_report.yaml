@@ -1,0 +1,97 @@
+artifact_meta:
+  artifact_type: bootstrap_audit_report
+  version: "0.1.0"
+  created_by: P0.3
+  created_at: "2026-05-12T12:00:00Z"
+
+status: FAIL
+
+project:
+  project_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand"
+  workspace_verified: true
+
+preflight:
+  checks_passed: false
+  failed_checks:
+    - bootstrap_execution_plan_exists
+    - pipeline_graph_exists
+
+workspace_validation:
+  workspace_path_matches_spec: true
+  workspace_not_in_forbidden_location: true
+  required_directories_exist: true
+
+artifact_transfer_validation:
+  staging_yaml_transferred: true
+  staging_markdown_transferred: true
+  transferred_files_valid: true
+
+script_validation:
+  required_scripts_exist: true
+  forbidden_operations_detected: false
+  detected_forbidden_patterns: []
+
+sqlite_validation:
+  sqlite_validation_mode: static_and_runtime
+  required_tables_exist: true
+  schema_matches_spec: true
+  undocumented_tables: []
+
+pipeline_graph_validation:
+  graph_valid: false
+  invalid_edges_detected: false
+  invalid_cycles_detected: false
+
+runtime_files_validation:
+  readme_valid: true
+  gitignore_valid: true
+  pyproject_valid: true
+
+security_validation:
+  secrets_detected: false
+  destructive_operations_detected: false
+  workspace_created_under_owner_path: true
+
+idempotency_validation:
+  rerun_safe: true
+  overwrite_risks_detected: false
+
+drift_detection:
+  undocumented_directories: []
+  undocumented_files: []
+  undocumented_tables: []
+  undocumented_graph_changes: []
+
+scores:
+  workspace_integrity_score: 10
+  security_compliance_score: 10
+  bootstrap_contract_compliance_score: 4
+  sqlite_integrity_score: 10
+  graph_integrity_score: 0
+  idempotency_score: 8
+
+warnings:
+  - warning_id: undocumented_scripts
+    description: Additional scripts generated beyond required ones
+
+failures:
+  - failure_id: missing_pipeline_graph
+    description: pipeline_graph.yaml is missing despite bootstrap_result claiming it exists
+    severity: critical
+  - failure_id: execution_plan_location
+    description: bootstrap_execution_plan.yaml is in pipeline/generated/ instead of artifacts/machine/P0/
+    severity: major
+
+handoff_to_next_node:
+  next_node: null
+  required_inputs: []
+  start_condition: false
+
+self_audit:
+  audit_completed: true
+  filesystem_state_checked: true
+  sqlite_checked_or_staticly_validated: true
+  graph_checked: true
+  forbidden_operations_scanned: true
+  drift_detection_completed: true
+  ready_for_P0_4: false

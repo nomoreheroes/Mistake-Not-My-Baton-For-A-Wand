@@ -1,0 +1,61 @@
+artifact_meta:
+  artifact_type: bootstrap_result
+  version: "0.1.0"
+  created_by: P0.2
+  created_at: "2026-05-12T12:00:00Z"
+
+project:
+  project_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand"
+  workspace_created: true
+  workspace_path_source_verified: true
+
+filesystem:
+  required_directories_created: true
+  required_files_created: true
+  transferred_staging_artifacts: true
+
+sqlite:
+  schema_generated: true
+  init_script_generated: true
+  database_created: true
+  required_tables_defined: true
+
+git:
+  git_initialized: true
+  remote_configured: false
+  initial_commit_created: false
+
+runtime:
+  pyproject_generated: true
+  readme_generated: true
+  gitignore_generated: true
+
+graph:
+  pipeline_graph_present: true
+  graph_validation_script_generated: true
+
+execution:
+  bootstrap_execution_plan_generated: true
+  filesystem_write_used: true
+  shell_execution_used: true
+  sqlite_execution_used: true
+
+handoff_to_next_node:
+  next_node: P0.3
+  required_inputs:
+    - bootstrap_result.yaml
+    - bootstrap_execution_plan.yaml
+    - bootstrap_project.py
+  start_condition: bootstrap_result.self_audit.ready_for_P0_3 == true
+
+self_audit:
+  workspace_created_only_under_explicit_owner_path: true
+  required_directories_created: true
+  required_files_created: true
+  bootstrap_scripts_generated: true
+  sqlite_schema_matches_spec: true
+  no_extra_tables_added: true
+  no_forbidden_git_operations: true
+  no_destructive_operations: true
+  staging_artifacts_transferred: true
+  ready_for_P0_3: true

@@ -1,0 +1,558 @@
+artifact_meta:
+  artifact_type: project_bootstrap_spec
+  version: "0.1.0"
+  created_at: "2026-05-12T12:00:00Z"
+  created_by: P0.1
+  status: ready_for_bootstrap_script
+  file_persistence_status: saved
+  canonical_machine_path: "./pipeline_staging/project_bootstrap_spec.yaml"
+  canonical_human_path: "./pipeline_staging/project_bootstrap_spec.md"
+
+project:
+  project_id: "1-mistake-not-my-baton-for-a-wand"
+  project_name: "1.Mistake Not My Baton For A Wand"
+  project_slug: "1-mistake-not-my-baton-for-a-wand"
+  local_workspace_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand"
+  local_workspace_path_source: explicit_owner_input_only
+  description: null
+  derived_from_workspace_path:
+    project_name_auto_derived: true
+    project_slug_auto_derived: true
+
+bootstrap_mode:
+  create_new_workspace: false
+  use_existing_workspace: true
+  idempotent: true
+
+paths:
+  project_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand"
+  artifacts_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts"
+  artifacts_machine: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\machine"
+  artifacts_human: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\human"
+  artifacts_snapshots: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\snapshots"
+  artifacts_audits: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\audits"
+  artifacts_meta: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\meta"
+  pipeline_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline"
+  prompts_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\prompts"
+  audit_prompts_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\prompts\\meta_audit"
+  schemas_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\schemas"
+  tests_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\tests"
+  generated_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\generated"
+  pipeline_graph_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\pipeline_graph.yaml"
+  pipeline_state_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline_state"
+  sqlite_db_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline_state\\pipeline.db"
+  event_log_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline_state\\events.jsonl"
+  scripts_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\scripts"
+  logs_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\logs"
+
+artifact_storage:
+  artifact_forms:
+    - machine_readable
+    - human_readable
+  machine_readable_format_preference:
+    - yaml
+    - json
+  human_readable_format: markdown
+  versioning_policy:
+    immutable_artifact_versions: true
+    overwrite_policy: do_not_overwrite_without_backup
+
+pipeline_graph:
+  source_of_truth_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\pipeline_graph.yaml"
+  generated_outputs:
+    - path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\generated\\pipeline_graph.json"
+      format: json
+      purpose: runtime pipeline execution plan
+    - path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline\\generated\\pipeline_graph.mmd"
+      format: mermaid
+      purpose: human-readable pipeline diagram
+  validation_required: true
+
+sqlite:
+  engine: sqlite
+  database_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline_state\\pipeline.db"
+  commit_database_file_to_git: false
+  commit_schema_files_to_git: true
+  required_tables:
+    - table_name: products
+      purpose: stores product/project identity
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique product/project id.
+        - name: name
+          type: TEXT
+          nullable: false
+          description: Human-readable product/project name.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: pipeline_runs
+      purpose: stores pipeline execution run metadata
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique run id.
+        - name: product_id
+          type: TEXT
+          nullable: false
+          description: References products.id.
+        - name: layer_id
+          type: TEXT
+          nullable: false
+          description: Current layer id.
+        - name: run_status
+          type: TEXT
+          nullable: false
+          description: active/completed/blocked/failed.
+        - name: started_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+        - name: completed_at
+          type: TEXT
+          nullable: true
+          description: ISO timestamp if completed.
+    - table_name: artifacts
+      purpose: stores artifact metadata and provenance
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique artifact id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: artifact_type
+          type: TEXT
+          nullable: false
+          description: vision, idea_note, review, snapshot, audit, etc.
+        - name: artifact_name
+          type: TEXT
+          nullable: false
+          description: File-like artifact name.
+        - name: version
+          type: TEXT
+          nullable: false
+          description: Immutable artifact version.
+        - name: machine_format
+          type: TEXT
+          nullable: false
+          description: yaml or json.
+        - name: machine_path
+          type: TEXT
+          nullable: false
+          description: Filesystem path to machine-readable artifact.
+        - name: human_path
+          type: TEXT
+          nullable: true
+          description: Filesystem path to human-readable artifact.
+        - name: content_checksum
+          type: TEXT
+          nullable: false
+          description: Hash of artifact content.
+        - name: created_by_agent
+          type: TEXT
+          nullable: false
+          description: Agent id.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: artifact_links
+      purpose: stores relationships between artifacts
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique link id.
+        - name: from_artifact_id
+          type: TEXT
+          nullable: false
+          description: Source artifact id.
+        - name: to_artifact_id
+          type: TEXT
+          nullable: false
+          description: Target artifact id.
+        - name: link_type
+          type: TEXT
+          nullable: false
+          description: derived_from, blocks, resolves, supersedes, cites.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: events
+      purpose: stores structured pipeline events
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique event id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: layer_id
+          type: TEXT
+          nullable: false
+          description: Layer id.
+        - name: agent_id
+          type: TEXT
+          nullable: false
+          description: Agent or system component id.
+        - name: event_type
+          type: TEXT
+          nullable: false
+          description: Event type from event model.
+        - name: payload_json
+          type: TEXT
+          nullable: false
+          description: Serialized event payload.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: decisions
+      purpose: stores decisions made during pipeline execution
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique decision id.
+        - name: event_id
+          type: TEXT
+          nullable: false
+          description: References events.id.
+        - name: agent_id
+          type: TEXT
+          nullable: false
+          description: Agent that made the decision.
+        - name: decision_type
+          type: TEXT
+          nullable: false
+          description: BLOCK, PROCEED, ACCEPT_PATCH, REJECT_PATCH, etc.
+        - name: decision_summary
+          type: TEXT
+          nullable: false
+          description: Short decision summary.
+        - name: reasoning_markdown
+          type: TEXT
+          nullable: false
+          description: Human-readable reasoning.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: issues
+      purpose: stores issues detected during pipeline execution
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique issue id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: source_agent
+          type: TEXT
+          nullable: false
+          description: Agent that raised the issue.
+        - name: severity
+          type: TEXT
+          nullable: false
+          description: info/warning/significant/critical.
+        - name: issue_type
+          type: TEXT
+          nullable: false
+          description: inconsistency, missing_field, scope_drift, etc.
+        - name: description
+          type: TEXT
+          nullable: false
+          description: Human-readable issue description.
+        - name: affected_fields_json
+          type: TEXT
+          nullable: false
+          description: JSON array of affected field paths.
+        - name: status
+          type: TEXT
+          nullable: false
+          description: open/resolved/accepted/ignored.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+        - name: resolved_at
+          type: TEXT
+          nullable: true
+          description: ISO timestamp if resolved.
+    - table_name: revision_requests
+      purpose: stores agent revision requests
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique revision request id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: initiated_by_agent
+          type: TEXT
+          nullable: false
+          description: Agent that initiated the request.
+        - name: target_agent
+          type: TEXT
+          nullable: false
+          description: Agent expected to handle the revision.
+        - name: status
+          type: TEXT
+          nullable: false
+          description: open/in_progress/resolved/cancelled.
+        - name: request_json
+          type: TEXT
+          nullable: false
+          description: Serialized revision_request artifact.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+        - name: resolved_at
+          type: TEXT
+          nullable: true
+          description: ISO timestamp if resolved.
+    - table_name: hitl_signoffs
+      purpose: stores HITL review sign-offs
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique HITL sign-off id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: layer_id
+          type: TEXT
+          nullable: false
+          description: Layer being signed off.
+        - name: status
+          type: TEXT
+          nullable: false
+          description: approved/rejected/approved_with_risks/return_to_revision.
+        - name: signoff_markdown
+          type: TEXT
+          nullable: false
+          description: Human-readable sign-off details.
+        - name: approved_by
+          type: TEXT
+          nullable: true
+          description: Owner or HITL reviewer identifier.
+        - name: approved_at
+          type: TEXT
+          nullable: true
+          description: ISO timestamp.
+    - table_name: prompt_versions
+      purpose: stores prompt version metadata
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique prompt version id.
+        - name: prompt_name
+          type: TEXT
+          nullable: false
+          description: Prompt file or logical prompt name.
+        - name: version
+          type: TEXT
+          nullable: false
+          description: Prompt version.
+        - name: path
+          type: TEXT
+          nullable: false
+          description: Filesystem path to prompt file.
+        - name: content_checksum
+          type: TEXT
+          nullable: false
+          description: Hash of prompt content.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+        - name: derived_from
+          type: TEXT
+          nullable: true
+          description: Previous prompt version id.
+    - table_name: meta_audits
+      purpose: stores meta-audit results
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique meta-audit id.
+        - name: run_id
+          type: TEXT
+          nullable: false
+          description: References pipeline_runs.id.
+        - name: audited_layer
+          type: TEXT
+          nullable: false
+          description: Layer being audited.
+        - name: status
+          type: TEXT
+          nullable: false
+          description: PASS/WARN/FAIL.
+        - name: report_json
+          type: TEXT
+          nullable: false
+          description: Serialized meta-audit report.
+        - name: created_at
+          type: TEXT
+          nullable: false
+          description: ISO timestamp.
+    - table_name: pipeline_patches
+      purpose: stores pipeline patch proposals and status
+      required_columns:
+        - name: id
+          type: TEXT PRIMARY KEY
+          nullable: false
+          description: Unique pipeline patch id.
+        - name: meta_audit_id
+          type: TEXT
+          nullable: false
+          description: References meta_audits.id.
+        - name: patch_status
+          type: TEXT
+          nullable: false
+          description: proposed/approved/applied/rejected.
+        - name: patch_plan_json
+          type: TEXT
+          nullable: false
+          description: Serialized pipeline patch plan.
+        - name: approved_by_hitl
+          type: INTEGER
+          nullable: false
+          description: 1 if approved by HITL, otherwise 0.
+        - name: applied_at
+          type: TEXT
+          nullable: true
+          description: ISO timestamp if applied.
+
+runtime:
+  primary_language: python
+  python_version: "3.11"
+  package_manager: uv
+  virtual_environment_path: ".venv"
+
+scripts:
+  bootstrap_script_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\scripts\\bootstrap.sh"
+  migration_script_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\scripts\\migrate_db.sh"
+  graph_validation_script_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\scripts\\validate_graph.sh"
+
+logs:
+  logs_root: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\logs"
+  event_log_path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\pipeline_state\\events.jsonl"
+  log_format: jsonl
+
+git:
+  initialize_repo: true
+  default_branch: "main"
+  remote_url: null
+  initial_commit: false
+  ignore_patterns:
+    - pattern: ".venv/"
+      reason: ignore local virtual environment
+    - pattern: "__pycache__/"
+      reason: ignore Python bytecode cache
+    - pattern: "*.pyc"
+      reason: ignore compiled Python files
+    - pattern: ".env"
+      reason: do not commit environment secrets
+    - pattern: "*.sqlite-wal"
+      reason: ignore SQLite write-ahead log files
+    - pattern: "*.sqlite-shm"
+      reason: ignore SQLite shared-memory files
+
+security_policy:
+  secrets_policy:
+    store_secrets_in_repo: false
+    env_file_allowed: true
+    env_file_committed: false
+    env_example_committed: true
+  destructive_operations:
+    allowed: false
+    requires_explicit_owner_confirmation: true
+  network_operations:
+    allowed_by_default: false
+    git_remote_push_allowed_by_default: false
+  existing_directory_policy:
+    allow_existing_directory: true
+    overwrite_existing_files: false
+    backup_before_overwrite: true
+
+idempotency_policy:
+  create_missing_directories_only: true
+  do_not_delete_existing_files: true
+  do_not_overwrite_existing_files_without_backup: true
+  rerun_safe: true
+
+bootstrap_checks_required:
+  - check_id: git_initialized
+    description: Git repository exists if git.initialize_repo is true.
+    blocking: true
+  - check_id: sqlite_db_created
+    description: SQLite database exists at sqlite.database_path.
+    blocking: true
+  - check_id: required_tables_present
+    description: All required SQLite tables exist.
+    blocking: true
+  - check_id: artifact_dirs_present
+    description: Required artifact directories exist.
+    blocking: true
+  - check_id: prompt_registry_present
+    description: Prompt registry directories exist.
+    blocking: true
+  - check_id: pipeline_graph_valid
+    description: pipeline_graph.yaml exists and validates against graph schema.
+    blocking: true
+
+open_questions: []
+
+handoff_to_next_node:
+  next_node: P0.2
+  required_inputs:
+    - artifact_name: project_bootstrap_spec.yaml
+      path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\machine\\P0\\project_bootstrap_spec.yaml"
+      must_exist_before_start: true
+    - artifact_name: project_bootstrap_spec.md
+      path: "C:\\Projects\\software_workflow 2.0\\Projects\\1.Mistake Not My Baton For A Wand\\artifacts\\human\\P0\\project_bootstrap_spec.md"
+      must_exist_before_start: true
+  start_condition: "both required files exist and pass P0.1 self_audit"
+
+p0_1_completion_event:
+  event_type: ARTIFACT_CREATED
+  agent_id: P0.1
+  created_artifacts:
+    - project_bootstrap_spec.yaml
+    - project_bootstrap_spec.md
+  handoff_target: P0.2
+
+self_audit:
+  local_workspace_path_explicitly_provided_by_owner: true
+  no_fallback_workspace_path_used: true
+  project_root_is_under_local_workspace_path: true
+  output_paths_defined: true
+  files_saved_or_external_write_marked: true
+  handoff_to_P0_2_defined: true
+  sqlite_schema_defined: true
+  git_policy_defined: true
+  security_policy_defined: true
+  no_secrets_in_spec: true
+  no_destructive_operations_required: true
+  human_readable_output_required: true
+  ready_for_P0_2: true

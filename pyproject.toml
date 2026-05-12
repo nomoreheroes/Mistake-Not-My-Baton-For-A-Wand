@@ -1,0 +1,13 @@
+[project]
+name = "1-mistake-not-my-baton-for-a-wand"
+version = "0.1.0"
+description = "Project workspace for 1.Mistake Not My Baton For A Wand"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
