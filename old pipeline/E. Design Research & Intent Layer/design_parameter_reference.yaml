@@ -1,0 +1,823 @@
+version: 2
+artifact_type: design_parameter_reference
+purpose:
+  - Provide the canonical parameter set for Layer E agents.
+  - Define the minimum complete design specification required before Layers F, G, and H.
+  - Prevent downstream layers from inventing typography, spacing, component states, density, or surface grammar.
+  - Structure E output as two artifacts enabling mechanical E×F composition in Layer G.
+
+global_rules:
+  final_layer_e_artifacts:
+    - design_tokens.json    # W3C Design Tokens Format Module 2025.10 — конкретные значения
+    - design_grammar.yaml   # grammar rules — правила применения, не значения
+  token_format: w3c_design_tokens_format_module_2025
+  artifact_split_rule: >
+    Параметры с конкретными значениями (hex, px, ms, bezier) → design_tokens.json.
+    Параметры-правила (channels, depth, posture, policy) → design_grammar.yaml.
+    Grammar rules могут содержать token_refs — ссылки на пути в design_tokens.json.
+    Raw values в design_grammar.yaml и grammar rules без $value в design_tokens.json запрещены.
+  downstream_invariant_layers:
+    - F
+    - G
+    - H
+  owner_signoff_required: true
+  no_unspecified_required_parameters: true
+  restrained_does_not_mean_flat: true
+  feasible_does_not_mean_good_enough: true
+  calm_does_not_mean_generic: true
+  no_raw_values_in_grammar_yaml: true
+  no_grammar_rules_in_tokens_json: true
+  every_parameter_requires:
+    - value_or_rule
+    - rationale
+    - source
+    - confidence
+    - owner_confirmation_status
+    - downstream_invariant_status
+
+allowed_sources:
+  owner_confirmed: strongest
+  owner_selected_from_options: strong
+  normalized_from_owner_intent: strong
+  derived_from_product_context: medium
+  category_pattern: medium
+  reviewer_constraint: medium
+  agent_default: weak_requires_owner_confirmation
+
+owner_confirmation_statuses:
+  - confirmed
+  - revised_by_owner
+  - rejected
+  - pending
+
+downstream_invariant_statuses:
+  - invariant
+  - conditional_invariant
+  - non_invariant
+
+confidence_scale:
+  - high
+  - medium
+  - low
+
+completion_policy:
+  required_parameter_missing: block_e12
+  required_parameter_pending_owner_confirmation: block_final_approval
+  optional_parameter_missing: allowed_only_if_marked_not_applicable
+  agent_default_without_owner_confirmation: block_final_approval
+  design_tokens_json_incomplete: block_final_approval
+  design_grammar_yaml_incomplete: block_final_approval
+  circular_token_reference: block_final_approval
+  broken_token_reference_in_grammar: block_final_approval
+  surface_type_grammar_incomplete: block_final_approval
+  zone_type_grammar_incomplete: block_final_approval
+  state_grammar_matrix_incomplete: block_final_approval
+
+design_specification_schema:
+  metadata:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: spec_version
+        value_type: string
+        required: true
+      - id: product_name
+        value_type: string
+        required: true
+      - id: product_category
+        value_type: string
+        required: true
+      - id: target_user_summary
+        value_type: string
+        required: true
+      - id: design_owner_decision_date
+        value_type: date
+        required: true
+      - id: approved_by_owner
+        value_type: boolean
+        required: true
+
+  source_integrity:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: owner_intent_sources
+        value_type: list
+        required: true
+      - id: research_sources
+        value_type: list
+        required: true
+      - id: reviewer_reports_used
+        value_type: list
+        required: true
+      - id: unresolved_items_count
+        value_type: integer
+        required: true
+        final_required_value: 0
+      - id: known_limits
+        value_type: list
+        required: true
+
+  product_and_design_intent:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: value_mechanism_primary
+        value_type: string
+        required: true
+      - id: primary_user_job
+        value_type: string
+        required: true
+      - id: trust_posture
+        value_type: enum
+        allowed_values: [institutional, expert, transparent, collaborative, friendly, premium, utility_first]
+        required: true
+      - id: control_posture
+        value_type: enum
+        allowed_values: [user_led, assisted, co_pilot, automated_with_review, automated_by_default]
+        required: true
+      - id: explainability_posture
+        value_type: enum
+        allowed_values: [minimal, contextual, explicit, audit_trail, educational]
+        required: true
+      - id: memorability_vs_reliability
+        value_type: enum
+        allowed_values: [reliability_first, balanced, memorable_but_controlled, expressive]
+        required: true
+      - id: expression_priority
+        value_type: list
+        required: true
+      - id: anti_personality
+        value_type: list
+        required: true
+      - id: non_negotiable_design_invariants
+        value_type: list
+        required: true
+
+  visual_character:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: formality
+        value_type: scale_1_5
+        required: true
+      - id: energy
+        value_type: scale_1_5
+        required: true
+      - id: visual_richness
+        value_type: scale_1_5
+        required: true
+      - id: perceived_weight
+        value_type: scale_1_5
+        required: true
+      - id: brand_character
+        value_type: scale_1_5
+        required: true
+      - id: operational_warmth
+        value_type: scale_1_5
+        required: true
+      - id: acceptable_plainness_limit
+        value_type: string
+        required: true
+      - id: restrained_but_rich_rule
+        value_type: string
+        required: true
+
+  density_and_rhythm:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    required: true
+    parameters:
+      - id: density_mode_default
+        value_type: enum
+        allowed_values: [compact, balanced, spacious, adaptive]
+        required: true
+      - id: density_modes_supported
+        value_type: list
+        required: true
+      - id: base_spacing_unit_px
+        value_type: integer
+        required: true
+      - id: spacing_scale_px
+        value_type: list_integer
+        required: true
+      - id: section_spacing_px
+        value_type: map
+        required: true
+      - id: panel_internal_padding_px
+        value_type: map
+        required: true
+      - id: control_group_gap_px
+        value_type: map
+        required: true
+      - id: button_group_gap_px
+        value_type: integer
+        required: true
+      - id: form_field_gap_px
+        value_type: integer
+        required: true
+      - id: list_item_gap_px
+        value_type: integer
+        required: true
+      - id: surface_rhythm
+        value_type: enum
+        allowed_values: [tight_productive, balanced_productive, editorial_breathing, dashboard_dense, adaptive]
+        required: true
+
+  layout_system:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive]
+    required: true
+    parameters:
+      - id: layout_grid_type
+        value_type: enum
+        allowed_values: [fixed_columns, fluid_columns, css_grid_auto, container_queries, custom]
+        required: true
+      - id: column_count_desktop
+        value_type: integer
+        required: true
+      - id: column_count_tablet
+        value_type: integer
+        required: true
+      - id: column_count_mobile
+        value_type: integer
+        required: true
+      - id: gutter_px
+        value_type: map
+        required: true
+      - id: page_max_width_px
+        value_type: integer_or_none
+        required: true
+      - id: content_max_width_px
+        value_type: integer_or_none
+        required: true
+      - id: breakpoint_tokens_px
+        value_type: map
+        required: true
+      - id: responsive_priority_rules
+        value_type: list
+        required: true
+      - id: full_width_element_rules
+        value_type: list
+        required: true
+
+  color_system:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    dtfm_type: color
+    required: true
+    parameters:
+      - id: palette_architecture
+        value_type: enum
+        allowed_values: [semantic_only, numbered_scale, tonal_palette, layered_tokens, css_variables_semantic]
+        required: true
+      - id: brand_color_roles
+        value_type: map
+        required: true
+      - id: neutral_palette_character
+        value_type: enum
+        allowed_values: [cool_gray, warm_gray, neutral_gray, brand_tinted_gray]
+        required: true
+      - id: neutral_scale
+        value_type: map
+        required: true
+      - id: semantic_color_roles
+        value_type: map
+        required: true
+      - id: interactive_color_states
+        value_type: map
+        required: true
+      - id: data_visualization_palette
+        value_type: map_or_not_applicable
+        required: true
+      - id: dark_theme_policy
+        value_type: enum
+        allowed_values: [not_supported, planned, required, automatic_tokens, separate_theme]
+        required: true
+      - id: contrast_policy
+        value_type: string
+        required: true
+      - id: color_usage_guardrails
+        value_type: list
+        required: true
+
+  typography:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    dtfm_type: typography
+    required: true
+    parameters:
+      - id: font_family_primary
+        value_type: string
+        required: true
+      - id: font_family_secondary
+        value_type: string_or_none
+        required: true
+      - id: font_family_monospace
+        value_type: string
+        required: true
+      - id: type_scale_model
+        value_type: enum
+        allowed_values: [named_roles, numeric_scale, tshirt_scale, modular_scale, custom]
+        required: true
+      - id: type_styles
+        value_type: map
+        required: true
+        required_keys: [display, h1, h2, h3, h4, body_lg, body_md, body_sm, label, caption, code]
+      - id: heading_font_weights
+        value_type: map
+        required: true
+      - id: body_font_weights
+        value_type: map
+        required: true
+      - id: line_heights
+        value_type: map
+        required: true
+      - id: letter_spacing
+        value_type: map
+        required: true
+      - id: numeric_formatting
+        value_type: map
+        required: true
+      - id: truncation_and_wrapping_rules
+        value_type: list
+        required: true
+
+  shape_borders_depth:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    dtfm_types: [dimension, border, shadow]
+    required: true
+    parameters:
+      - id: radius_scale_px
+        value_type: map
+        required: true
+      - id: container_radius_policy
+        value_type: string
+        required: true
+      - id: control_radius_policy
+        value_type: string
+        required: true
+      - id: border_width_scale_px
+        value_type: map
+        required: true
+      - id: border_color_roles
+        value_type: map
+        required: true
+      - id: divider_policy
+        value_type: string
+        required: true
+      - id: elevation_model
+        value_type: enum
+        allowed_values: [none, surface_tones, semantic_depth, numeric_shadow_levels, mixed]
+        required: true
+      - id: elevation_tokens
+        value_type: map
+        required: true
+      - id: shadow_character
+        value_type: enum
+        allowed_values: [none, subtle, soft, crisp, dramatic]
+        required: true
+
+  iconography:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    dtfm_type: dimension
+    required: true
+    parameters:
+      - id: icon_source
+        value_type: string
+        required: true
+      - id: icon_style
+        value_type: enum
+        allowed_values: [outline, filled, duotone, mixed_by_semantic_role]
+        required: true
+      - id: icon_grid_px
+        value_type: integer
+        required: true
+      - id: icon_stroke_width_px
+        value_type: number_or_not_applicable
+        required: true
+      - id: icon_sizes_px
+        value_type: map
+        required: true
+      - id: icon_color_policy
+        value_type: string
+        required: true
+      - id: icon_button_policy
+        value_type: string
+        required: true
+
+  motion:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [primitive, semantic]
+    dtfm_types: [duration, cubicBezier, transition]
+    required: true
+    parameters:
+      - id: motion_philosophy
+        value_type: enum
+        allowed_values: [none, functional_only, productive, expressive_controlled, expressive]
+        required: true
+      - id: duration_tokens_ms
+        value_type: map
+        required: true
+      - id: easing_tokens
+        value_type: map
+        required: true
+      - id: loading_motion_policy
+        value_type: string
+        required: true
+      - id: transition_usage_rules
+        value_type: list
+        required: true
+      - id: reduced_motion_policy
+        value_type: string
+        required: true
+
+  interaction_states:
+    artifact_destination: design_grammar.yaml
+    note: >
+      State language rules → design_grammar.yaml (state_grammar_matrix).
+      Конкретные token values для состояний (цвет, opacity) берутся из
+      color_system и density_and_rhythm через token_refs.
+    required: true
+    parameters:
+      - id: hover_state_language
+        value_type: string
+        required: true
+      - id: active_state_language
+        value_type: string
+        required: true
+      - id: selected_state_language
+        value_type: string
+        required: true
+      - id: focus_indicator
+        value_type: map
+        required: true
+      - id: disabled_state_language
+        value_type: string
+        required: true
+      - id: loading_state_language
+        value_type: string
+        required: true
+      - id: error_state_language
+        value_type: string
+        required: true
+      - id: success_state_language
+        value_type: string
+        required: true
+      - id: warning_state_language
+        value_type: string
+        required: true
+      - id: info_state_language
+        value_type: string
+        required: true
+
+  surface_grammar:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: hierarchy_sharpness
+        value_type: scale_1_5
+        required: true
+      - id: hierarchy_depth_levels
+        value_type: integer
+        required: true
+      - id: role_legibility
+        value_type: scale_1_5
+        required: true
+      - id: human_vs_system_signal_rules
+        value_type: list
+        required: true
+      - id: status_visibility
+        value_type: scale_1_5
+        required: true
+      - id: status_encoding_channels
+        value_type: list
+        required: true
+      - id: informational_vs_actionable_separation
+        value_type: string
+        required: true
+      - id: service_state_expression
+        value_type: string
+        required: true
+      - id: surface_depth_policy
+        value_type: string
+        required: true
+      - id: monotony_prevention_rules
+        value_type: list
+        required: true
+      - id: underexpression_watchpoints
+        value_type: list
+        required: true
+
+  component_system:
+    artifact_destination: design_grammar.yaml
+    note: >
+      Component anatomies, sizing rules, state policies → design_grammar.yaml
+      (component_category_grammar). Конкретные размеры в px ссылаются через
+      token_refs на density_and_rhythm токены.
+    required: true
+    parameters:
+      - id: component_size_scale
+        value_type: map
+        required: true
+      - id: button_hierarchy
+        value_type: map
+        required: true
+        required_keys: [primary, secondary, tertiary, destructive, icon]
+      - id: button_padding_px
+        value_type: map
+        required: true
+      - id: button_min_width_px
+        value_type: integer
+        required: true
+      - id: button_loading_policy
+        value_type: string
+        required: true
+      - id: card_anatomy
+        value_type: map
+        required: true
+      - id: panel_anatomy
+        value_type: map
+        required: true
+      - id: input_anatomy
+        value_type: map
+        required: true
+      - id: form_validation_timing
+        value_type: enum
+        allowed_values: [on_blur, on_submit, while_typing_after_delay, mixed_by_risk]
+        required: true
+      - id: dialog_anatomy
+        value_type: map
+        required: true
+      - id: tooltip_policy
+        value_type: string
+        required: true
+      - id: toast_policy
+        value_type: string
+        required: true
+      - id: inline_alert_policy
+        value_type: string
+        required: true
+      - id: table_density
+        value_type: enum
+        allowed_values: [compact, balanced, spacious, adaptive]
+        required: true
+      - id: table_row_height_px
+        value_type: map
+        required: true
+      - id: table_alignment_rules
+        value_type: list
+        required: true
+      - id: list_item_anatomy
+        value_type: map
+        required: true
+      - id: navigation_active_state
+        value_type: string
+        required: true
+      - id: navigation_hover_state
+        value_type: string
+        required: true
+      - id: empty_state_anatomy
+        value_type: map
+        required: true
+      - id: skeleton_vs_spinner_policy
+        value_type: string
+        required: true
+
+  content_and_voice:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: voice_tone
+        value_type: enum
+        allowed_values: [formal, neutral_professional, friendly_professional, warm, bold]
+        required: true
+      - id: microcopy_rules
+        value_type: list
+        required: true
+      - id: error_copy_rules
+        value_type: list
+        required: true
+      - id: empty_state_copy_rules
+        value_type: list
+        required: true
+      - id: automation_explanation_copy_rules
+        value_type: list
+        required: true
+      - id: number_date_time_formatting
+        value_type: map
+        required: true
+
+  accessibility:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: target_wcag_level
+        value_type: enum
+        allowed_values: [wcag_2_2_aa, wcag_2_2_aaa_for_text, custom]
+        required: true
+      - id: color_independence_policy
+        value_type: string
+        required: true
+      - id: keyboard_navigation_policy
+        value_type: string
+        required: true
+      - id: focus_visibility_policy
+        value_type: string
+        required: true
+      - id: semantic_role_policy
+        value_type: string
+        required: true
+      - id: status_announcement_policy
+        value_type: string
+        required: true
+      - id: state_recognizability_policy
+        value_type: string
+        required: true
+      - id: role_recognizability_policy
+        value_type: string
+        required: true
+      - id: reduced_motion_policy
+        value_type: string
+        required: true
+      - id: text_scaling_policy
+        value_type: string
+        required: true
+
+  token_architecture:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [meta]
+    note: >
+      Token architecture decisions определяют структуру design_tokens.json.
+      W3C DTFM задаёт формат файла; token_architecture задаёт tier structure и naming.
+    required: true
+    parameters:
+      - id: token_layers
+        value_type: enum
+        allowed_values: [primitive_semantic, primitive_semantic_surface, primitive_semantic_surface_platform]
+        required: true
+      - id: token_naming_convention
+        value_type: string
+        required: true
+      - id: token_storage_format
+        value_type: enum
+        allowed_values: [w3c_design_tokens_json, css_variables, typescript_tokens, theme_object, mixed]
+        required: true
+        note: w3c_design_tokens_json является рекомендуемым форматом (W3C DTFM 2025.10)
+      - id: semantic_token_categories
+        value_type: list
+        required: true
+      - id: component_token_policy
+        value_type: string
+        required: true
+      - id: theming_mechanism
+        value_type: enum
+        allowed_values: [none, css_class, data_attribute, provider_theme, token_build_pipeline]
+        required: true
+      - id: platform_targets
+        value_type: list
+        required: true
+      - id: styling_technology
+        value_type: string
+        required: true
+      - id: component_api_pattern
+        value_type: enum
+        allowed_values: [compound_components, props_variants, headless_plus_styles, slot_based, mixed]
+        required: true
+
+  implementation_contract_for_downstream:
+    artifact_destination: design_grammar.yaml
+    required: true
+    parameters:
+      - id: f_layer_invariants
+        value_type: list
+        required: true
+      - id: g_layer_invariants
+        value_type: list
+        required: true
+      - id: h_layer_invariants
+        value_type: list
+        required: true
+      - id: allowed_downstream_interpretation_zones
+        value_type: list
+        required: true
+      - id: prohibited_downstream_changes
+        value_type: list
+        required: true
+      - id: escalation_rules
+        value_type: list
+        required: true
+
+  surface_type_grammar:
+    artifact_destination: design_grammar.yaml
+    required: true
+    note: >
+      Определяет grammar rules для каждого архетипа поверхности.
+      Минимальный набор surface_types должен покрывать все архетипы из prd.index.
+    parameters:
+      - id: surface_types_covered
+        value_type: list
+        required: true
+        description: список surface type IDs — каждый должен иметь grammar entry
+      - id: per_surface_type_rules
+        value_type: map
+        required: true
+        required_keys_per_surface:
+          - density_rule           # compact / comfortable / spacious / inherits_global
+          - density_token_ref      # путь в design_tokens.json к density token
+          - hierarchy_depth        # shallow / moderate / deep
+          - status_encoding        # minimal / adequate / multichannel
+          - information_action_separation  # weak / moderate / strong / explicit
+          - state_coverage_required        # list: loading / empty / error / success / warning
+          - primary_role_channels          # list: каналы различения ролей на этой поверхности
+
+  zone_type_grammar:
+    artifact_destination: design_grammar.yaml
+    required: true
+    note: >
+      Определяет grammar rules для каждого типа зоны внутри поверхностей.
+      Zone types из F-слоя должны все присутствовать здесь.
+    parameters:
+      - id: zone_types_covered
+        value_type: list
+        required: true
+        description: список zone type IDs
+      - id: per_zone_type_rules
+        value_type: map
+        required: true
+        required_keys_per_zone:
+          - hierarchy_role         # featured / secondary / utility / background
+          - density                # compact / comfortable / inherits_surface
+          - elevation              # base / raised / overlay
+          - border                 # none / subtle / strong
+          - separation_from_adjacent  # none / soft / explicit
+          - token_refs             # map: property → token path в design_tokens.json
+
+  state_grammar_matrix:
+    artifact_destination: design_grammar.yaml
+    required: true
+    note: >
+      Для каждого state type определяет channels и конкретные token_refs.
+      Все token_refs должны разрешаться в design_tokens.json.
+    parameters:
+      - id: states_covered
+        value_type: list
+        required: true
+        minimum_required: [loading, error, empty, success, warning, disabled, focus, hover]
+      - id: per_state_rules
+        value_type: map
+        required: true
+        required_keys_per_state:
+          - required_channels      # list: color / label / icon / border / motion / opacity
+          - optional_channels      # list
+          - token_refs             # map: channel → token path в design_tokens.json
+          - multichannel_required_for  # список severity levels где требуется multichannel
+          - applies_to_zone_types  # list zone types или "all"
+
+  platform_token_overrides:
+    artifact_destination: design_tokens.json
+    dtfm_tiers: [platform]
+    required: true
+    note: >
+      Platform-specific token overrides структурируются как отдельный tier в design_tokens.json.
+      Только параметры, которые реально отличаются между платформами.
+    parameters:
+      - id: platforms_supported
+        value_type: list
+        required: true
+      - id: per_platform_overrides
+        value_type: map
+        required: true
+        note: >
+          Только переопределённые токены. Неизменённые токены наследуются из semantic tier.
+        common_override_areas:
+          - typography_scale      # размеры шрифтов могут отличаться
+          - touch_target_minimum  # mobile: 44px
+          - density_default       # mobile может быть comfortable если global = compact
+          - navigation_pattern    # bottom_tab vs sidebar
+
+signoff_matrix:
+  required_status_per_parameter:
+    value_or_rule: present
+    owner_confirmation_status: confirmed
+    downstream_invariant_status: invariant
+  e12_must_present_to_owner:
+    - all agent defaults
+    - all derived values
+    - all reviewer-driven constraints
+    - all values with confidence below high
+    - all parameters that affect F, G, or H implementation
+  design_tokens_json_validation:
+    - no_circular_token_references
+    - all_token_references_resolve
+    - all_token_values_match_declared_dtfm_type
+    - primitive_semantic_tiers_present
+    - platform_tier_present_if_multi_platform
+  design_grammar_yaml_validation:
+    - all_token_refs_resolve_to_design_tokens_json
+    - surface_type_grammar_covers_all_prd_surfaces
+    - zone_type_grammar_covers_all_f_zone_types
+    - state_grammar_matrix_covers_all_required_states
+    - no_raw_hex_or_px_values_without_token_ref
