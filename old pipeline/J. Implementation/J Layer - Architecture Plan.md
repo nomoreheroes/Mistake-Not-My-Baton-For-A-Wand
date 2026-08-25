@@ -654,7 +654,13 @@ request_id: BER-{task_id}-{seq}
 task_id: T-042
 step: j_coder
 trigger:
-  type: decision_overflow | scope_expansion | technology_fundamental_gap
+  type: decision_overflow | scope_expansion | technology_fundamental_gap | human_action_escalation
+  # ВНИМАНИЕ: канон этого enum — J0.md, «Budget Escalation» (4 триггера). Значение
+  # human_action_escalation отсутствовало здесь до 2026-08-25 — расхождение документации,
+  # не второй легитимный вариант схемы.
+  # human_action_escalation — только execution_chain: external_manual; J22 записал
+  #   acceptance_evidence.yaml с human_action_summary.result_status: rejected|blocked и непустым
+  #   escalation_context.requested_i_layer_action
   # decision_overflow    — >N дизайн-решений вне task_spec (N = task_spec.budget.max_unspecified_decisions)
   # scope_expansion      — нужны файлы вне task_spec.files_allowed_to_touch
   # technology_fundamental_gap — approved libs фундаментально недостаточны (не решается dep-amendment)
@@ -663,7 +669,10 @@ trigger:
   evidence_manifest_ref: "TEST WORKFLOW/10. J. Implementation RS/T-042/escalation_evidence_manifest.yaml"
   evidence_manifest_hash: sha256:{hash}
 created_at: 2026-06-23T11:00:00Z
-requested_action: task_decomposition | task_spec_update | technology_decision_update
+requested_action: task_decomposition | task_spec_update | technology_decision_update | architecture_decision_update
+# Union двух источников, а не один enum: J21 подаёт technology_decision_update (канон — J21.md,
+# таблица совместимости trigger/action), J22 подаёт architecture_decision_update (канон — J0.md
+# «Budget Escalation» п.4 / J22.md). J0 копирует значение как есть и не переименовывает его.
 context:
   task_spec_hash: sha256:{hash}
   frozen_snapshot_hash: sha256:{hash}

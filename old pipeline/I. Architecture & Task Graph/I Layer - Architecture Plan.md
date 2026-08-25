@@ -1442,6 +1442,32 @@ J-слой обязан проверять `allowed_use` перед любым �
 
 ---
 
+### 5.24 Budget Escalation — маршрутизация из J-слоя
+
+**Проблема, которую закрывает этот раздел.** До 2026-08-25 канал `budget_escalation_request/response` был единственным I↔J каналом без приёмника: `budget_escalation_request.yaml` не значился входом ни одного I-агента, `budget_escalation_response.yaml` не имел ни одного производителя, а §6 знал ровно один вход из J — `spike_rejection.yaml`. J0 при формальном триггере обязан создать запрос, встать в `pending_i_layer_response` и остановиться, читая в этом состоянии только response (инвариант J0 №18) — то есть любая budget/human_action эскалация терминально подвешивала слой. Обнаружено первой же реальной эскалацией прогона (BER-T-010-001). Раздел строится симметрично §5.18 (Circuit Breaker), а не изобретается заново.
+
+**Handoff package (создаёт J0, не I-слой).** Как и при spike rejection, generic handoff запрещён: J0 обязан вместе с `budget_escalation_request.yaml` создать `j_budget_escalation_signal.yaml` с явным `target_prompt`. В отличие от §5.18, где два целевых промпта требуют разных по форме payload (`constraints_patch.yaml` vs `i17_spike_rejection_signal.yaml`), здесь payload одинаков для всех целей — сам запрос плюс манифест evidence — поэтому артефакт один, а различается только `target_prompt`.
+
+**Escalation routing screen — обязателен и имеет приоритет над `requested_action`.** Тот же принцип, что `decision_gap_routing_screen` в §5.18: грубое `requested_action` (`task_spec_update` и т. п.) не определяет цель однозначно — `task_spec_update` может означать и правку текста одной спеки (I21), и изменение рёбер графа (I20). Поэтому J0 обязан заполнить `escalation_routing_screen.scope` закрытым enum:
+
+| `escalation_routing_screen.scope` | `target_prompt` | Владелец / почему |
+|---|---|---|
+| `task_graph_edges` | `I20. Task Tree Builder.md` | I20 владеет `task_tree.yaml` и `depends_on` |
+| `task_status_change` | `I20. Task Tree Builder.md` | статус задачи (`ready_for_spec \| blocked_by_spike \| deferred`) рождается в task_tree; см. §11 Deep Findings J о жизненном цикле `deferred` |
+| `task_decomposition` | `I20. Task Tree Builder.md` | декомпозиция — зона I20 |
+| `task_spec_text` | `I21. Task Spec Agent.md` | I21 владеет текстом `task_specs/<id>.yaml` |
+| `architecture_decision` | `I17. Trade-off HITL.md` | требует human trade-off |
+| `technology_decision` | `I17. Trade-off HITL.md` | тот же human trade-off; при чисто синтезной правке I17 форвардит в I6 обычным механизмом |
+| `prompt_defect` | `null` | **см. ниже** — ни один I-агент не может это исполнить |
+
+`scope` — список, не одно значение: одна эскалация законно несёт несколько (BER-T-010-001 несёт `task_status_change` + `task_graph_edges` + `prompt_defect`). При нескольких scope `target_prompt` определяется первым по порядку строк таблицы выше, остальные передаются целевому агенту как контекст и форвардятся обычными внутренними механизмами I-слоя.
+
+**`prompt_defect` — честный тупик, а не маршрут.** Если эскалация требует изменить *логику самого агента*, а не данные (пример из BER-T-010-001: «I20 не должен разворачивать `blocks_task_types` в blanket-рёбра»), ни один I-агент этого исполнить не может — правится промпт, а это работа человека/дизайна пайплайна. Такой scope не получает `target_prompt`; J0 обязан явно назвать его в signal и сообщить человеку. Запрещено молча маршрутизировать `prompt_defect` в I20 «раз он всё равно про граф» — агент выполнит запрос данных и оставит дефект логики на месте, а следующая эскалация повторит его.
+
+**Производитель `budget_escalation_response.yaml` — I24, всегда.** Независимо от того, какой агент фактически применял изменение, цикл закрывается публикацией: response несёт `new_snapshot_id`, который J0 обязан прогнать через обычный Snapshot Gate, а единственный агент, публикующий снапшоты, — I24. Промежуточные агенты (I20/I21/I17/I6) не пишут response и не общаются с J напрямую; они отрабатывают своё изменение и передают управление дальше по обычной внутренней цепочке I-слоя вплоть до I24.
+
+**Симметрия контракта (закрывает §9 Deep Findings J).** `budget_escalation_response.yaml` обязан эхом нести `request_id` и `request_hash` (SHA-256 байт `budget_escalation_request.yaml`, который I-слой фактически прочитал). J0 сверяет оба перед применением response; несовпадение `request_hash` означает ответ на другую ревизию запроса и не применяется. Повторный `resolved` с тем же `request_id` идемпотентен. `new_snapshot_id` применяется только после того, как новый снапшот прошёл Snapshot Gate по своему `j_handoff_signal.yaml`.
+
 ## 6. Карта входных/выходных артефактов
 
 ### Входы I-слоя
@@ -1456,6 +1482,7 @@ J-слой обязан проверять `allowed_use` перед любым �
 | `idea_note.yaml` | A/B | I1, I3 |
 | `pipeline.db` | I3 (создаёт) | I4, I5, I6, I7 |
 | `spike_rejection.yaml` | **J-слой** | I6 (если `provenance_category: i_layer_initiative` или `decision_gap_routing_screen.route: I6` для missing/mismatched architecture contract), либо I17 (если `upstream_requirement` требует human trade-off/layer rollback) |
+| `budget_escalation_request.yaml` + `j_budget_escalation_signal.yaml` | **J-слой (J0)** | промпт из `j_budget_escalation_signal.yaml#target_prompt` — I20 (`task_graph_edges` / `task_status_change` / `task_decomposition`), I21 (`task_spec_text`), I17 (`architecture_decision` / `technology_decision`); `scope: prompt_defect` не маршрутизируется в агента (см. §5.24). Ответ пишет **только I24** |
 
 ### Артефакты внутри I-слоя
 
