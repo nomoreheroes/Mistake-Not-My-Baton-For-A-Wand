@@ -1,0 +1,54 @@
+review_id: d0-01-d0-02-review-02
+schema_version: 1
+review_kind: independent_fresh_context_focused_rereview
+reviewed_at: "2026-08-26"
+verdict: approve_with_changes
+scope: D0-01_D0-02_revision_1_and_new_registries
+projection:
+  path: new pipeline/reviews/d0-01-d0-02-review-02.md
+  sha256: 1f410e23ccdfd53b202211b78f392787d6e885eb2d82a283ecdfbfe4f0d62999
+source_evidence:
+  kind: external_conversation_attachment
+  filename: pasted-text.txt
+  sha256: 7345e4693d58e626cff2573f946aa75e1d7709b3fd880c0c27e34758adebbfb2
+  repository_locator: new pipeline/reviews/sources/d0-01-d0-02-review-02.txt
+  preservation_note: "The repository locator is a byte-for-byte copy of the owner-supplied external attachment."
+reviewer_identity:
+  actor_id: not_provided_by_source
+  provider: not_provided_by_source
+  model: not_provided_by_source
+  profile: not_provided_by_source
+  source_claims_fresh_context: true
+  explicit_conflict_declaration: not_provided_by_source
+  limitation: "Missing historical metadata is preserved as a provenance gap and is not synthesized."
+confirmed:
+  original_blockers_closed: 4
+  original_serious_closed: 13
+  original_moderate_closed: 10
+  original_minor_closed: 6
+  recalculation_reproducible: true
+findings:
+  blocker: []
+  serious:
+    accepted: [R-01, R-02, R-03, R-04, R-05]
+  moderate:
+    accepted: [R-06, R-07, R-08, R-09, R-10, R-11, R-12]
+  minor:
+    accepted: [R-13, R-14]
+implementation_choices:
+  R-02: "Rename to asserted fixed non-binary growth and state derivation none_before_k0b."
+  R-04: "Keep 16/64 KiB planning scenarios and publish a separate 256 KiB sensitivity projection; do not claim context deduplication."
+  R-08: "Use explicit deterministic validator rules for exact decision-ID and record-role sets in addition to JSON Schema."
+  R-09: "Define canonical-yaml-v1 as restricted YAML data normalized and encoded through RFC 8785 before SHA-256."
+revision_status:
+  revision_return_round: 2
+  maximum_revision_return_rounds: 2
+  changes: mechanically_validated
+  third_autonomous_review_return: forbidden
+decision_readiness:
+  already_ready: 34
+  unblocked_after_mechanical_validation: [V2-D01, V2-D04, V2-D22, V2-D33, V2-D38]
+  total_ready_for_owner_disposition: 39
+owner_approval:
+  issued_by_reviewer: false
+  note: "approve_with_changes is a review verdict, not owner disposition."

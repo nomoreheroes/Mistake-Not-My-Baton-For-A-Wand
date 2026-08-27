@@ -1,0 +1,98 @@
+envelope_id: d0-01-decision-baseline-approval
+schema_version: 1
+approval_type: d0_decision_baseline
+actor:
+  actor_id: workspace_owner
+  role: human_owner
+  authentication_ref: null
+approved_at: "2026-08-27T17:38:02.0365116+03:00"
+authority_ref: current_conversation_explicit_owner_approval
+decision: approved
+records:
+  - role: dispositions
+    path: new pipeline/decisions/d0-01-decision-dispositions.yaml
+    sha256: ff4b045966be8fb57d6e4243bed59bae72d7b7aced5be7efb766bd08d1aa59ab
+    projection_path: new pipeline/decisions/d0-01-decision-dispositions.md
+    projection_sha256: 3946add7b50aeb37a2a29ad151587702d21bb8930b34448f6177199193f85b76
+  - role: forecast
+    path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+    sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+    projection_path: new pipeline/decisions/d0-01-full-route-forecast.md
+    projection_sha256: 5861e3cca7c6e45a248f38a978219802539158c81859dfca72b0a880e83bc0d7
+  - role: gate_contract
+    path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+    projection_path: new pipeline/decisions/d0-02-layer-architecture-gate.md
+    projection_sha256: 5442d6366f9fabe6e3ce41e98fa3f366f5ff70d074695253869297be11acfb16
+  - role: checkpoint_policy
+    path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+    sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+    projection_path: new pipeline/registry/checkpoint-budget-policy/v1.md
+    projection_sha256: 02ddee381cf51ce2f4966feb107f963440581dc4d26f5577de9cffad6194eabf
+decision_dispositions:
+  - {decision_id: V2-D01, disposition: accepted}
+  - {decision_id: V2-D02, disposition: accepted}
+  - {decision_id: V2-D03, disposition: accepted}
+  - {decision_id: V2-D04, disposition: accepted}
+  - {decision_id: V2-D05, disposition: accepted}
+  - {decision_id: V2-D06, disposition: accepted}
+  - {decision_id: V2-D07, disposition: accepted}
+  - {decision_id: V2-D08, disposition: accepted}
+  - {decision_id: V2-D09, disposition: accepted}
+  - {decision_id: V2-D10, disposition: accepted}
+  - {decision_id: V2-D11, disposition: accepted}
+  - {decision_id: V2-D12, disposition: accepted}
+  - {decision_id: V2-D13, disposition: accepted}
+  - {decision_id: V2-D14, disposition: accepted}
+  - {decision_id: V2-D15, disposition: accepted}
+  - {decision_id: V2-D16, disposition: accepted}
+  - {decision_id: V2-D17, disposition: accepted}
+  - {decision_id: V2-D18, disposition: accepted}
+  - {decision_id: V2-D19, disposition: accepted}
+  - {decision_id: V2-D20, disposition: accepted}
+  - {decision_id: V2-D21, disposition: accepted}
+  - {decision_id: V2-D22, disposition: accepted}
+  - {decision_id: V2-D23, disposition: accepted}
+  - {decision_id: V2-D24, disposition: accepted}
+  - {decision_id: V2-D25, disposition: accepted}
+  - {decision_id: V2-D26, disposition: accepted}
+  - {decision_id: V2-D27, disposition: accepted}
+  - {decision_id: V2-D28, disposition: accepted}
+  - {decision_id: V2-D29, disposition: accepted}
+  - {decision_id: V2-D30, disposition: accepted}
+  - {decision_id: V2-D31, disposition: accepted}
+  - {decision_id: V2-D32, disposition: accepted}
+  - {decision_id: V2-D33, disposition: accepted}
+  - {decision_id: V2-D34, disposition: accepted}
+  - {decision_id: V2-D35, disposition: accepted}
+  - {decision_id: V2-D36, disposition: accepted}
+  - {decision_id: V2-D37, disposition: accepted}
+  - {decision_id: V2-D38, disposition: accepted}
+  - {decision_id: V2-D39, disposition: accepted}
+approved_scope:
+  decision_set: V2-D01_through_V2-D39
+  decision_count: 39
+  included_findings: [N-01, N-02, N-03, N-04, N-05, N-06, N-07, N-08, N-09, N-10, N-11, N-12]
+  overrides: none
+  authorized_actions:
+    - create_conversational_approval_envelope
+    - execute_D0_05_root_pipeline_baseline_commit
+    - commit_project_local_swarm_gitignore_in_separate_project_Git
+  immutable_input_rule: Approved records remain unchanged; this envelope carries approval without invalidating their hashes.
+  approval_projection:
+    path: new pipeline/receipts/d0-01-decision-baseline-approval.md
+    sha256: c323c4b485883a947c8cd68168b62797d76ea1639030f8ee0e61cb4b33a7ea26
+provenance:
+  mode: conversational_only
+  source_ref: current_conversation_explicit_owner_message_without_exposed_stable_id
+  limitations:
+    - actor_authentication_unavailable_before_approval_runtime
+    - stable_external_message_identifier_not_exposed
+    - Git_authorship_not_cryptographically_linked_to_conversational_actor
+integrity:
+  profile: canonical-yaml-v1
+  profile_version: 1
+  profile_ref: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+  excluded_field_path: integrity.canonical_payload_sha256
+  canonical_payload_sha256: ab1c9415a83226ac337032c452966a829614d81f0e5a11ab92acd2904fe5ffba
+  external_complete_file_binding_ref: null

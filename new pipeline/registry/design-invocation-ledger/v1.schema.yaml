@@ -1,0 +1,70 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "pipeline-v2://registry/design-invocation-ledger/v1"
+title: Pipeline v2 design-time invocation ledger
+type: object
+additionalProperties: false
+required: [ledger_id, schema_version, pipeline_git_boundary, entries]
+properties:
+  ledger_id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9._-]+$"
+  schema_version: {const: 1}
+  pipeline_git_boundary: {type: string, minLength: 1}
+  bootstrap_note: {type: string, minLength: 1}
+  entries:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - invocation_id
+        - purpose
+        - plan_path
+        - plan_version
+        - role
+        - actor_id
+        - provider
+        - model
+        - profile
+        - started_at
+        - completed_at
+        - input_manifest_sha256
+        - output_sha256
+        - review_round
+      properties:
+        invocation_id: {type: string, minLength: 1}
+        purpose: {enum: [plan_authoring, fresh_context_review, revision_authoring, revision_review]}
+        plan_path: {type: string, minLength: 1}
+        plan_version: {type: [string, integer]}
+        role: {enum: [author, independent_reviewer]}
+        actor_id: {type: string, minLength: 1}
+        provider: {type: string, minLength: 1}
+        model: {type: string, minLength: 1}
+        profile: {type: string, minLength: 1}
+        started_at: {type: string, format: date-time}
+        completed_at: {type: string, format: date-time}
+        input_manifest_sha256: {type: string, pattern: "^[0-9a-f]{64}$"}
+        output_sha256: {type: string, pattern: "^[0-9a-f]{64}$"}
+        review_round: {type: integer, minimum: 0, maximum: 2}
+        fresh_context: {type: boolean}
+        inherited_author_context: {type: boolean}
+        conflict_declaration: {type: string, minLength: 1}
+      allOf:
+        - if:
+            properties:
+              role: {const: independent_reviewer}
+            required: [role]
+          then:
+            required: [fresh_context, inherited_author_context, conflict_declaration]
+            properties:
+              fresh_context: {const: true}
+              inherited_author_context: {const: false}
+x-pipeline-validation:
+  storage_path: new pipeline/ledgers/design-invocations.yaml
+  append_only_by_invocation_id: true
+  required_before_layer_plan_receipt: true
+  author_and_reviewer_refs_must_resolve: true
+  missing_legacy_metadata_is_not_synthesized: true
+x-pipeline-projection:
+  path: new pipeline/registry/design-invocation-ledger/v1.schema.md
+  sha256: 246d8d8d983a6275c8cae20f618be727a778ebaa7e3941f2736def86ef5d6fa5

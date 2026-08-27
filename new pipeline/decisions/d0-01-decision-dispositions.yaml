@@ -1,0 +1,372 @@
+record_id: d0-01-decision-dispositions
+schema_version: 2
+status: owner_disposition_inputs_applied_all_39_ready
+created_at: "2026-08-26"
+updated_at: "2026-08-27"
+projection:
+  path: new pipeline/decisions/d0-01-decision-dispositions.md
+  sha256: 3946add7b50aeb37a2a29ad151587702d21bb8930b34448f6177199193f85b76
+decision_source:
+  path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+  version: "0.16"
+  sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  section: 23
+forecast_binding:
+  path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+  sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+  independent_review_status: revision_2_approve_with_changes_plus_non_return_owner_inputs_applied
+review_binding:
+  initial: new pipeline/reviews/d0-01-d0-02-review-01.yaml
+  focused_rereview: new pipeline/reviews/d0-01-d0-02-review-02.yaml
+  revision_return_rounds_consumed: 2
+  further_autonomous_review_return: forbidden
+  owner_disposition_input:
+    path: new pipeline/reviews/sources/d0-01-d0-02-owner-disposition-input-03.txt
+    sha256: 1052e69ee0653423dfa11613f754d3c69b6c069586fcd694474278c06dd1e2fd
+    classification: non_return_findings
+    findings: [N-01, N-02, N-03, N-04, N-05, N-06, N-07, N-08, N-09, N-10, N-11, N-12]
+    proposed_disposition: accept_document_and_contract_corrections_without_changing_decision_meanings
+
+disposition_policy:
+  allowed_values:
+    - accepted
+    - modified
+    - explicitly_deferred
+  decision_owner_role: human_owner
+  agent_may_propose: true
+  agent_may_approve: false
+  hash_bound_owner_action_required: true
+  blocker_may_be_deferred: false
+
+summary:
+  decision_count: 39
+  proposed_accepted: 39
+  proposed_modified: 0
+  proposed_explicitly_deferred: 0
+  owner_approved: 0
+  ready_for_owner_disposition: 39
+  blocked_pending_focused_rereview: 0
+  blocked_decision_ids: []
+  note: Deferred capabilities inside accepted rollout decisions retain explicit activation triggers; no architecture decision itself is proposed as deferred.
+
+decisions:
+  - id: V2-D01
+    title: Layer composition
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "The 10 domain/meta layers plus S0 cover distinct ownership boundaries; the bound forecast makes them a staged program rather than a bootstrap prerequisite."
+    conditions:
+      - Approve or modify the independently reviewed D0 full-route forecast.
+      - Retain K0-b and N1 continuation checkpoints.
+    approval_status: ready_for_owner_disposition
+  - id: V2-D02
+    title: Canonical runtime storage
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "One SQLite database per project gives transactional process memory and relational lineage without a premature distributed storage system."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D03
+    title: Human-facing project artifacts
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "YAML+Markdown pairs remain readable key-decision projections while SQLite avoids a large mutable file graph; the forensic checkpoint is governed separately."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D04
+    title: Runtime DB in Git and forensic recovery
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "The owner requires reconstruction of every published situation; logical replay points plus a tracked clean checkpoint preserve this without tracking active WAL state."
+    conditions:
+      - K0-b measures real snapshot and pack behavior.
+      - G and Q reconcile binary_payload_budget before their first applicable payload.
+      - No LFS, CAS or external backend is enabled automatically.
+      - Every warning or hard crossing requires an owner route under the canonical checkpoint policy.
+    registry_ref:
+      path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+      sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+      authority: canonical_exact_parameters
+    approval_status: ready_for_owner_disposition
+  - id: V2-D05
+    title: Event orchestration
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Events make routing, retry, error ownership and replay observable; direct agent handoff would bypass dispatchers and the event log."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D06
+    title: Deterministic persistence writer
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "LLM agents propose typed results; only deterministic code may transact state, enforce CAS and publish artifacts/events."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D07
+    title: Harness technology
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "A Python CLI/library is practical for SQLite, Git and contract tooling and fits Windows plus Visual Studio integration."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D08
+    title: Risk-tiered autonomy
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Safe reversible work should not require per-agent approval; high-risk side effects and owner decisions remain explicit HITL."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D09
+    title: Internal-software usability
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Adoption and usability are operational requirements for internal software because poor UX creates resistance and workarounds."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D10
+    title: Independent audit
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Q must reconstruct from primary product sources and independent evidence rather than accept implementation self-report."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D11
+    title: Meta-change approvals
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Self-healing remains controlled by separate authorization to implement and authorization to publish."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D12
+    title: Project folder outside root Git
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "The root Git stores Pipeline assets while each project owns its separate history; /projects/ is already root-ignored."
+    implementation_evidence:
+      - .gitignore
+    approval_status: ready_for_owner_disposition
+  - id: V2-D13
+    title: Pinned normal runs
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "A committed Pipeline version is required for reproducibility; dirty development remains visible through an explicit profile and diff hash."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D14
+    title: Canonical machine-readable schemas
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Plans explain boundaries; registry and migrations remain the only executable schema authority, preventing drift."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D15
+    title: Elm standard
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Elm is the default for applicable stateful interactive UI and mandatory for existing Elm UI, while evidence-based exceptions avoid forced rewrites of inapplicable systems."
+    conditions:
+      - Accepted only as the default architectural direction; the exact elm-applicability policy predicates require a separate owner decision in S1-00.
+    approval_status: ready_for_owner_disposition
+  - id: V2-D16
+    title: Graphic-solution separation
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Separating creative and structural contexts directly addresses the observed LLM failure to optimize visual quality and formal project mapping simultaneously."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D17
+    title: Engineering baseline
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "P1-P20 become enforceable language profiles; P8 and P20 remain blocking even where other rules are advisory or inapplicable."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D18
+    title: Scale and context policy
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Complete inventories, honest sampling and lossless sharding prevent claims based on unread repository regions."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D19
+    title: Tool execution policy
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Pinned executables, argument templates, resource bounds and deny-by-default hooks/network are required for safe agentic execution."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D20
+    title: Untrusted-content boundary
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Repository and research text are data, never authority to expand capabilities, emit arbitrary events or impersonate approval."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D21
+    title: Egress and retention
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Pre-context classification is necessary because committed replay memory inherits Git retention and selective post-commit deletion is impossible without history rewrite."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D22
+    title: Artifact storage and addressing
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Version IDs preserve artifact identity, hashes verify bytes, relational fields preserve queryability and SQLite BLOB keeps alpha storage coherent without premature multi-backend complexity."
+    conditions:
+      - Structured relations are stored relationally rather than hidden in opaque blobs.
+      - External object storage remains evidence-triggered, not assumed.
+      - Accepted for alpha only while V2-D04 thresholds remain viable; choosing migrate_checkpoint_storage automatically reopens V2-D22 for owner disposition.
+    cross_decision_ref: V2-D04
+    approval_status: ready_for_owner_disposition
+  - id: V2-D23
+    title: Harness meta-change track
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Harness and registry defects need the same red-to-green discipline as prompt defects but a distinct M5h implementation track."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D24
+    title: First vertical rollout
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "The staged route validates kernel and nonvisual behavior before spending heavily on Swarm discovery, visual/Elm risk, implementation and audit."
+    conditions:
+      - This accepts rollout shape only; execution beyond K0-b and N1 remains separately gated by K0b-05, N1-03 and V2-D39.
+    approval_status: ready_for_owner_disposition
+  - id: V2-D25
+    title: Deterministic nominal routing
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "A compiled exact nominal route saves calls while any ambiguity or non-nominal state returns to the owning Layer0."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D26
+    title: Worktree layout
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "External task worktrees isolate writes; coordination-only checkpoint materialization prevents binary divergence and repeated working-copy cost."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D27
+    title: DB compatibility
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Joint Pipeline/schema binding, forward migrations and fail-closed old harness behavior are prerequisites for recoverable evolution."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D28
+    title: Greenfield Swarm baseline
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "The new Swarm must derive from validated problems and requirements, not inherit legacy code or architecture accidentally."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D29
+    title: Rollback domains
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Pipeline/DB compatibility rollback and product rollback affect different repositories, owners and evidence and must be tested separately."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D30
+    title: Minimal Alpha events
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Alpha implements only events with an executable subscriber or terminal policy; target families are added just in time."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D31
+    title: Evidence-based layer readiness
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Real readiness requires exact downstream consumption and a demonstrated defect/revision route, not prompt existence or self-report."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D32
+    title: Legacy Swarm isolation
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "Physical separation prevents accidental inheritance, misleading inventory and bulk commits; the relocation and product hygiene checks are complete."
+    implementation_evidence:
+      - new pipeline/receipts/d0-04-legacy-relocation.yaml
+      - new pipeline/receipts/d0-04-legacy-relocation.md
+    remaining_enforcement:
+      - Foundation research-capability adversarial test
+    approval_status: ready_for_owner_disposition
+  - id: V2-D33
+    title: Layer Architecture Gate bounds
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Just-in-time individual plans, finite review and independent binary-payload budgets provide depth without delaying all runtime behind every future layer plan."
+    contract_ref:
+      path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+      sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+    approval_status: ready_for_owner_disposition
+  - id: V2-D34
+    title: V1 failure route
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "A failed visual/interaction/Elm hypothesis must revise the owning plans, honestly narrow scope or pause; A-final/T/I cannot conceal the failure."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D35
+    title: Elm applicability authority
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "P supplies facts, A1 evaluates pinned policy, A0 validates routing and only A8 authorizes exceptions, avoiding hidden technology decisions."
+    conditions:
+      - Accepted only as the authority split/default direction; exact registry predicates and evidence thresholds require owner disposition in S1-00.
+    approval_status: ready_for_owner_disposition
+  - id: V2-D36
+    title: Creative Dialogue Protocol
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "An owner-first moderator/challenger/co-creator triad improves creative elicitation while explicit provenance prevents agent proposals from becoming decisions silently."
+    approval_status: ready_for_owner_disposition
+  - id: V2-D37
+    title: Measurement bootstrap
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "Raw timing, model, context, usage, event, artifact and approval facts cannot be reconstructed later; they must be captured in K0-a before KPI design."
+    may_be_deferred: false
+    approval_status: ready_for_owner_disposition
+  - id: V2-D38
+    title: Invocation and human budgets
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: true
+    rationale: "A priori route budgets expose program cost and prevent post-hoc ledgers from legitimizing an unbounded agent graph."
+    forecast_ref:
+      path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+      sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+    conditions:
+      - Independent review of the D0 worksheet.
+      - Exact deep/high-attention authorization before V1.
+    approval_status: ready_for_owner_disposition
+  - id: V2-D39
+    title: Program fallback
+    proposed_disposition: accepted
+    owner_role: human_owner
+    k0a_blocker: false
+    rationale: "After N1 the owner may continue full, prove a real nonvisual Core-6 route or pause; reduced scope cannot be mislabeled as full Swarm/Pipeline success."
+    approval_status: ready_for_owner_disposition
+
+owner_approval:
+  status: pending
+  requested_action: Approve this exact record hash or return a list of modified decision IDs with replacement dispositions and rationale.
+  approved_by: null
+  approved_at: null
+  record_sha256: supplied_by_external_approval_envelope

@@ -1,7 +1,7 @@
 # Pipeline v2 — архитектурный план
 
-**Версия:** 0.7  
-**Дата:** 2026-08-25  
+**Версия:** 0.16
+**Дата:** 2026-08-27
 **Статус:** DRAFT / обновлено по результатам архитектурного ревью  
 **Область:** общая архитектура пайплайна; детальные планы слоёв и тексты промптов появятся на следующих этапах
 
@@ -16,6 +16,24 @@
 **Изменения 0.6:** legacy snapshot старого Swarm обязан быть физически вынесен из product root до baseline и доступен только как отдельный read-only research root; D0 получил симметричный product-tree hygiene gate. Layer Architecture Gate ограничен scope текущей фазы, complexity budget и двумя review-return rounds. Для провала V1 определён явный fallback ladder без обхода G/H quality gate. Elm applicability перенесён в machine-readable registry policy.
 
 **Изменения 0.7:** Foundation разделён на K0-a bootstrap proof и K0-b operational hardening; первый доказывает один минимальный artifact/event cycle на fixture, второй gate-ит Alpha-0 recovery/safety. Добавлены `interaction_model_failure`, canonical SQLite architecture hypothesis register, ранний сбор raw telemetry без преждевременных KPI, явный Q-Alpha profile и центральный consumer-proof invariant. V2-D24/V2-D31 уточнены без расширения decision catalog.
+
+**Изменения 0.8:** творческие HITL-интервью заменены общим `Creative Dialogue Protocol`: owner-led elicitation, независимые moderator/critical challenger/co-creator roles, bounded divergence→challenge→repair→decision rounds и строгий provenance agent proposals. Для greenfield/существенной инициативы P публикует owner-approved Idea Note; factual/approval/reconstruction interviews не превращаются в brainstorming. Добавлены dialogue policy/target events, fixture F14 и V2-D36.
+
+**Изменения 0.9:** закрыты швы ownership/readiness/security: P хранит только Elm input facts, A1 производит platform/Elm evaluation, Q7-Alpha adjudicates findings, `permanent_gap` привязан к любому acceptance gate, а Alpha events получили terminal policies. F10/S14 перенесены до первого untrusted import, V1 включает asset lane и не завышает readiness H. Добавлены real-LLM dispatcher proof F15, reproducible fixture binding, tiered plan/call/human budgets, Q independence policy, pre-M F06 boundary, Core-6 program fallback и решения V2-D37…V2-D39.
+
+**Изменения 0.10:** устранены оставшиеся неоднозначности baseline: platform/Elm predecision везде маршрутизируется через A0 к содержательному owner A1; F13 разделён по rollback domains; S14 использует отдельный poisoned fixture; program checkpoints разделены до и после N1; определён bootstrap resource-budget calculation. Введён обязательный phase/release backup binding без коммита SQLite в Git: полная process memory восстанавливается из pinned Git commits и versioned внешнего backup, а phase/release decision фиксирует его locator/hash.
+
+**Изменения 0.11:** V2-D04 изменён owner-решением в пользу forensic reproducibility: active SQLite/WAL остаются runtime-only, но clean checkpoint полной process memory хранится и версионируется в project Git. Добавлен Replay Point Contract с точным agent context, worktree/tool/environment/external-response snapshots и двумя режимами — deterministic forensic replay и stochastic re-execution. F13a теперь доказывает clone-only restore; S17 измеряет реальную цену бинарной Git-истории до решения об усложнении storage.
+
+**Изменения 0.12:** устранены швы tracked-checkpoint модели: Q primary source физически исключает `.pipeline/`, logical replay points отделены от bounded Git publication, K0-b получил checkpoint cost gate, а D0 — rough full-route forecast, exact thresholds и pre-V1 migration runbook. Task worktrees не материализуют checkpoint; Creative Dialogue ограничен topic/session manifest; AT1 и real-LLM Bootstrap DoD названы однозначно.
+
+**Изменения 0.13:** D0 checkpoint forecast связан с обязательным per-layer `binary_payload_budget`. G, Q и любой другой слой, способный породить или сохранить binary payload, до реализации объявляют expected count, per-item и aggregate caps, publication amplification и сверяют их с D0; любое расхождение закрывается owner route §9.5.1 до первого payload.
+
+**Изменения 0.14:** учтён независимый D0-01/D0-02 review: planning/runtime invocations и package/phase envelopes разделены, checkpoint и publications получили выводимые модели, а продолжение после forecast hard stop стало условным owner route. Закреплены versioned checkpoint policy и approval-envelope schema, hash-bound gate receipts, pre-compiler budget enforcement, D0 governance directories и честное различение policy от ещё не реализованного enforcement.
+
+**Изменения 0.15:** учтён повторный review `approve_with_changes`: checkpoint budget применяется отдельно к fixture и real-project chains; publication window выводится из model/human/tool/side-effect replay points, времени и DB growth. Design-time plan author/reviewer calls получили отдельный Pipeline-Git ledger, package identity стала однозначной, binary budget получил mean и aggregate runtime cap, threshold status разделён на checkpoint/pack, а semantic self-hash закреплён исполняемым `canonical-yaml-v1` profile.
+
+**Изменения 0.16:** применены не являющиеся третьим review-return findings N-01…N-12: D0 baseline включает весь hash-reachable governance graph; полный 12-полевой binary budget снова синхронизирован с D0-02; human attention и capacity authorization закреплены на package scope; pre-publisher K0-a явно исключён из checkpoint window enforcement; registry schemas получили projection bindings и условно обязательные reviewer-independence поля.
 
 ---
 
@@ -34,7 +52,9 @@ Pipeline v2 предлагается строить не как жёсткую �
 - запусков слоёв и агентов;
 - решений, gate-результатов, approvals, findings, lineage и recovery-state.
 
-В файлы проекта выводятся только ключевые решения. Каждое такое решение имеет две синхронные проекции с одинаковым именем: YAML для машинного чтения и Markdown для человека. Обе проекции генерируются из одной версии решения в SQLite и проверяются по hash.
+В человекочитаемые/редактируемые файлы проекта выводятся только ключевые решения. Каждое такое решение имеет две синхронные проекции с одинаковым именем: YAML для машинного чтения и Markdown для человека. Обе проекции генерируются из одной версии решения в SQLite и проверяются по hash. Единственное системное исключение — не редактируемый вручную tracked SQLite checkpoint полной process memory для forensic replay.
+
+Творческие HITL-сессии используют общий owner-first `Creative Dialogue Protocol`: moderator ведёт разговор, critical challenger ищет слабые места, co-creator предлагает альтернативы и repairs. Их вклад проходит через события и явные owner dispositions; factual interviews и approvals остаются отдельными режимами. Поэтому новый Idea Note получает больше творческой критики, но не приписывает owner идеи агентов без подтверждения.
 
 Предлагаемый набор предметных слоёв:
 
@@ -51,7 +71,7 @@ Q — Independent Audit, Documentation & Release
 M — Meta / Pipeline Self-Healing                    [сквозной]
 ```
 
-Нормальный UI-маршрут выглядит как `P → R → E → A0(platform predecision) → G → A(draft) → H → A(final) → T → I → Q`. Ранний вызов A0 не проектирует архитектуру целиком: он фиксирует только ограничения, без которых G рисовал бы для неизвестной платформы. Для невизуального проекта E/G/H могут быть облегчены или неприменимы. Это не жёсткая линейная цепочка: события могут запускать параллельные reviews, минимальный replay, возврат к владельцу данных или отдельную M-сессию. Пропуск слоя всегда оформляется проверяемым решением applicability, а не молчаливым отсутствием артефакта.
+Нормальный UI-маршрут выглядит как `P → R → E → A0→A1(platform/Elm predecision) → G → A(draft) → H → A(final) → T → I → Q`. Ранний route A0→A1 не проектирует архитектуру целиком: A1 фиксирует только ограничения, без которых G рисовал бы для неизвестной платформы, а A0 остаётся dispatcher/gate. Для невизуального проекта E/G/H могут быть облегчены или неприменимы. Это не жёсткая линейная цепочка: события могут запускать параллельные reviews, минимальный replay, возврат к владельцу данных или отдельную M-сессию. Пропуск слоя всегда оформляется проверяемым решением applicability, а не молчаливым отсутствием артефакта.
 
 ---
 
@@ -110,11 +130,11 @@ M — Meta / Pipeline Self-Healing                    [сквозной]
 
 | Старый слой | Куда переходит | Что сохраняется | Что меняется |
 |---|---|---|---|
-| A — Idea Note | P + R | интервью, feasibility/ethics lenses, binary gate, frozen handoff | MVP и marketing перестают быть обязательными; intent описывает change/product любого типа |
+| A — Idea Note | P + R | сильные вопросы discovery, feasibility/ethics lenses, binary gate, frozen handoff | творческий owner interview становится bounded triadic dialogue с explicit provenance; MVP/marketing перестают быть обязательными, intent описывает change/product любого типа |
 | B — Concept | P + R | полнота доменных аспектов, single-writer catalog, merge lineage, accepted-risk carry-forward | aspect corpus строится только в нужной глубине; micro-задача не обязана проходить полный concept review |
 | C — Requirements | R | классы требований, set identity, source binding, независимая validation | staging/publish живут в SQLite; requirement defects возвращаются событиями |
 | D — Stories & PRD | R + T | scenarios, Given/When/Then, acceptance, coverage и per-item review | PRD не является обязательным жанром для bugfix/utility; decomposition отделена от product scenario |
-| E — Design Research & Intent | E | claim classes, owner intent, tension mapping, accessibility и signed experience intent | слой больше не заставляет того же агента одновременно рисовать и формализовать |
+| E — Design Research & Intent | E | claim classes, factual research, owner intent, tension mapping, accessibility и signed experience intent | creative owner interview использует общий triadic protocol; factual respondents не подвергаются brainstorming, а слой не заставляет того же агента одновременно рисовать и формализовать |
 | F — UX Architecture | E | surface ownership, navigation/IA/interaction chain, accessibility, immutable handoff | UX и adoption объединяются до визуального творчества; графическое решение вынесено в G |
 | G — Visual System & UI | G | draw-first, assets-before-surfaces, art critic, mapping, human-visible review | разделение creative/structural lanes становится жёстким контрактом; canonical artifacts хранятся в DB |
 | H — Design-to-Code Handoff | H + A | Elm modules, Model/Msg/update/view, ports, traceability, maker-checker reviews | Elm сохраняется как first-class стандарт; H получает system contracts из A draft и возвращает integration constraints в A final |
@@ -203,7 +223,11 @@ Human command in Visual Studio
    - safe tool execution and side-effect intents
               │
               ▼
- projects/<project>/.pipeline/pipeline.sqlite3
+ projects/<project>/.pipeline/runtime/pipeline.sqlite3
+              │
+              └── checkpoint publisher
+                       ▼
+ projects/<project>/.pipeline/history/pipeline-checkpoint.sqlite3 [project Git]
 ```
 
 Супердиспетчер и диспетчеры слоёв являются reasoning-компонентами. Транзакции, блокировки, хеширование, Git-проверки и публикация должны быть детерминированными функциями harness. Промпты не должны «симулировать базу данных» или воспроизводить многостраничный CAS-протокол по памяти.
@@ -232,13 +256,17 @@ Control/artifact plane проекта находятся в SQLite этого п
 **Предварительные workers:**
 
 - `P1` Repository & Workspace Baseline — проверка двух Git-контуров, инвентаризация проекта, commit/dirty/submodule state.
-- `P2` Intent & Project Profile Interview — тип проекта, цель, пользователь, urgency, interface, assurance.
+- `P2` Intent & Project Profile Creative Dialogue [HITL] — тип проекта, цель, пользователь, urgency, interface и assurance. Для greenfield, новой версии продукта и иной существенной инициативы он применяет `Creative Dialogue Protocol` §13.5; для точечного bugfix/factual clarification — режим `elicitation` без искусственного brainstorming.
 - `P3` Existing System Reconnaissance — архитектура и фактическое поведение существующего ПО; для greenfield выдаёт applicability receipt.
 - `P4` Stakeholder & Adoption Context — пользователи, процессы, ограничения компании, риск саботажа/непринятия внутреннего ПО.
 - `P5` Scope, Risk & Unknowns Triage — change boundary, критические неизвестные, необходимость early spikes.
-- `P6` Context Gate & Publisher — полнота профиля и стартовый immutable package.
+- `P6` Context Gate & Publisher — неразговорный compiler/gate: собирает только явно dispositioned owner statements/proposals, проверяет полноту профиля и публикует стартовый immutable package. Он не вправе придумывать новое содержание или сам принимать предложение агента.
 
-**Главные outputs в БД:** project profile, repository baseline, change intent, stakeholder/adoption context, initial risk/unknown ledger.
+Роли `moderator`, `critical_challenger` и `co_creator` являются role instances внутри контракта P2, запускаются только через P0 и не образуют новый слой. Для greenfield/new-product/substantial-initiative route P6 публикует canonical versioned `idea_note`; поскольку он фиксирует ключевое owner-решение о направлении продукта, из той же версии строится YAML+MD pair. Для мелкого изменения `idea_note` может быть `not_applicable` с receipt.
+
+**Главные outputs в БД:** project profile, repository baseline, change intent, owner-approved Idea Note при применимости, dialogue session/disposition refs, stakeholder/adoption context, initial risk/unknown ledger. Объявленный downstream consumer Idea Note/context package — R0; readiness P требует его exact-version `consumer_receipt`.
+
+Для UI P публикует только наблюдаемые `existing_ui_stack` и `ui_applicability_inputs`; enum-решение Elm applicability в `project_profile` запрещено. Его единственный producer — A1 по pinned registry policy.
 
 ### 5.2 R — Requirements & Success Criteria
 
@@ -267,14 +295,14 @@ Market/monetization review является подключаемой линзо�
 **Предварительные workers:**
 
 - `E1` Experience & Adoption Research — ожидания пользователя, контекст использования, барьеры внедрения и саботажа.
-- `E2` Owner Experience Intent Interview — характер опыта, доверие, выразительность, допустимые напряжения и антицели.
+- `E2` Owner Experience Intent Creative Dialogue [HITL] — характер опыта, доверие, выразительность, допустимые напряжения и антицели; применяет тот же §13.5 с domain-профилями UX/adoption/accessibility для challenger/co-creator.
 - `E3` Surface, Journey & Navigation Architect.
 - `E4` Information, Interaction & Content Architect.
 - `E5` UX Structure & Accessibility Architecture Reviewer.
 - `E6` HITL Experience Structure Review.
-- `E7` Experience Gate & Publisher.
+- `E7` Experience Gate & Publisher — компилирует только явно принятые/изменённые owner dispositions; новые идеи publisher не добавляет.
 
-E публикует human-readable creative brief для G и отдельный formal structural contract. Он не создаёт готовое графическое решение и не заставляет будущего visual designer размечать компоненты.
+E1 остаётся factual user/stakeholder research: ответы исследуемых пользователей не подвергаются совместному «улучшению» агентами. E публикует human-readable creative brief для G и отдельный formal structural contract. Он не создаёт готовое графическое решение и не заставляет будущего visual designer размечать компоненты.
 
 Для внутреннего ПО E включается по умолчанию: adoption и usability считаются функциональными рисками, а не косметикой. Для невизуальной утилиты E0 публикует явное решение о неприменимости или облегчённом CLI/API experience review.
 
@@ -311,7 +339,7 @@ G0 формирует два непересекающихся context bundle:
 
 Эта изоляция обеспечивается DB allowlist/context query, а не только текстовой просьбой в промпте. Первым агентом, которому разрешено увидеть оба результата, является G9.
 
-G не стартует только из абстрактного interface intent. До открытия creative lane A0 публикует ограниченный `platform_constraint_predecision`: целевые platform/runtime, viewport и input modes, offline/online constraints, performance envelope, asset/media constraints и известные integration boundaries. Это не A draft и не выбор всей технологии; изменение predecision инвалидирует зависимые G-артефакты.
+G не стартует только из абстрактного interface intent. До открытия creative lane `A1` производит ограниченный `platform_constraint_predecision` и Elm applicability evaluation: целевые platform/runtime, viewport и input modes, offline/online constraints, performance envelope, asset/media constraints и известные integration boundaries. A0 только валидирует artifact/policy binding и маршрутизирует публикацию; он не является содержательным автором. Это не A draft и не выбор всей технологии; изменение predecision инвалидирует зависимые G-артефакты.
 
 #### 5.4.2 Поток G
 
@@ -360,7 +388,7 @@ G8 может выполняться параллельно creative lane пос
 
 Canonical visual artifacts, generations, mappings и reviews хранятся в SQLite. Для HITL harness материализует временный preview workspace; после принятия его content/hash импортируется в БД. Preview-файлы не становятся третьим источником истины.
 
-**V1 failure policy:** провал раннего G/H risk slice не разрешает молча перейти к A-final/T/I. G0/S0 классифицируют источник как `creative_quality | structural_contract | mapping | interaction_model | A0_platform | H_elm`. `interaction_model_failure` означает, что visual и formal structure приемлемы, но пользовательский поток, состояния или обратная связь непригодны; его primary owner — E0, который возвращает исправленный journey/interaction contract и запускает dependency-based invalidation G/H/A. Затем owner выбирает один из заранее допустимых routes: (1) изменить и повторно утвердить применимые E/G/H/A layer architecture plans, сузив конкретную гипотезу и повторив V1; (2) сузить первый product surface через явное scope decision, не удаляя обязательную user-facing capability продукта; (3) использовать A8 только для доказанного Elm applicability/feasibility conflict, но не как обход visual-quality/interaction/mapping gate; (4) остановить product track и провести изолированный disposable research spike. Продолжение A-final/T/I допустимо лишь после успешного повторного V1 для оставшегося scope либо human scope decision, действительно устраняющего эту surface из продукта.
+**V1 failure policy:** провал раннего G/H risk slice не разрешает молча перейти к A-final/T/I. G12/G13 либо owner HITL создают evidence-bound finding class из `creative_quality | structural_contract | mapping | interaction_model_failure | platform_predecision_failure | H_elm`; G0/S0 только валидируют taxonomy/ownership и маршрутизируют его. `interaction_model_failure` означает, что visual и formal structure приемлемы, но пользовательский поток, состояния или обратная связь непригодны; его primary owner — E0, который возвращает исправленный journey/interaction contract и запускает dependency-based invalidation G/H/A. Затем owner выбирает один из заранее допустимых routes: (1) изменить и повторно утвердить применимые E/G/H/A layer architecture plans, сузив конкретную гипотезу и повторив V1; (2) сузить первый product surface через явное scope decision, не удаляя обязательную user-facing capability продукта; (3) использовать A8 только для доказанного Elm applicability/feasibility conflict, но не как обход visual-quality/interaction/mapping gate; (4) остановить product track и провести изолированный disposable research spike. Продолжение A-final/T/I допустимо лишь после успешного повторного V1 для оставшегося scope либо human scope decision, действительно устраняющего эту surface из продукта.
 
 ### 5.5 A — Solution Architecture, Data & Risk
 
@@ -370,7 +398,7 @@ Canonical visual artifacts, generations, mappings и reviews хранятся в
 
 **Предварительные workers:**
 
-- `A1` Technology Research & Spike Planner.
+- `A1` Platform Constraint, Elm Applicability, Technology Evidence & Spike Planner — единственный producer `platform_constraint_predecision` и machine-readable Elm evaluation trace.
 - `A2` Process, Invariant & Ownership Modeler.
 - `A3` Solution/Delta Architect — draft system boundaries и frontend/backend contracts.
 - `A4` Data, Contract, Migration & Compatibility Architect.
@@ -414,9 +442,9 @@ H сохраняет Model/Msg/update/view, module ownership, ports, package con
 - локальный bugfix в существующем non-Elm UI не вызывает скрытую перепись на Elm;
 - исключение для нового применимого UI требует решения A8 с причиной, альтернативами и последствиями.
 
-Эти критерии не остаются только prose. Canonical `registry/ui-architecture-policy/elm-applicability.yaml` задаёт versioned predicates, требуемые input facts/evidence, outcomes `required | applicable_default | exception_proposed | not_applicable`, A8 exception route и staleness rules. A0 обязан ссылаться на pinned policy version/hash и сохранять machine-checkable evaluation trace; свободный вывод агента без registry evaluation не является applicability decision.
+Эти критерии не остаются только prose. Canonical `registry/ui-architecture-policy/elm-applicability.yaml` задаёт versioned predicates, требуемые input facts/evidence, outcomes `required | applicable_default | exception_proposed | not_applicable`, A8 exception route и staleness rules. A1 обязан вычислить outcome по pinned policy version/hash и сохранить machine-checkable evaluation trace; A0 проверяет schema/binding и route. Свободный вывод любого агента без registry evaluation не является applicability decision.
 
-H получает G14 package и A draft. Его published handoff является обязательным входом A9/T0; обнаруженный конфликт возвращается событием H0 → S0 → A0/G0/E0, а не исправляется H напрямую. Для одного architecture generation допускается не более двух содержательных возвратов `A draft ↔ H`; третий нерешённый конфликт переводится в A8 HITL с вариантами, последствиями и точными hashes конфликтующих контрактов.
+H получает G14 package и A draft. Его published handoff является обязательным входом A9/T0; до фактического consumption в phase AT1 H может иметь real-project artifact и `fixture_verified`, но не `real_project_verified`. A-draft является upstream input, а не допустимым consumer H. После exact-version receipts A9/T0 статус H пересчитывается. Обнаруженный конфликт возвращается событием H0 → S0 → A0/G0/E0, а не исправляется H напрямую. Для одного architecture generation допускается не более двух содержательных возвратов `A draft ↔ H`; третий нерешённый конфликт переводится в A8 HITL с вариантами, последствиями и точными hashes конфликтующих контрактов.
 
 ### 5.7 T — Task Graph & Evidence Plan
 
@@ -509,9 +537,11 @@ P8 и P20 являются блокирующими во всех профиля
 - `Q9` HITL Acceptance, Limitation & Release Gate.
 - `Q10` Documentation/Release Publisher.
 
-Это target roster, не Alpha prerequisite. **Q-Alpha** активирует только Q0 и минимальные независимые capabilities для четырёх проверок: requirement/acceptance coverage, artifact/version lineage, code+test evidence и rollback evidence. Он публикует findings/dispositions, но не строит полный documentation portal, release governance, comprehensive security/performance audit или Q8–Q10 publication contour. Эти возможности добавляются в X1 по evidence-triggered scope; независимость Q и запрет принимать I self-report как primary proof действуют уже в Q-Alpha.
+Это target roster, не Alpha prerequisite. **Q-Alpha** активирует Q0 как dispatcher, минимальные Q1/Q2 profiles для четырёх проверок — requirement/acceptance coverage, artifact/version lineage, code+test evidence и rollback evidence — и bounded `Q7-Alpha` как единственного producer/adjudicator finding classification/disposition. Q0 только валидирует и маршрутизирует. Q-Alpha не строит полный documentation portal, release governance, comprehensive security/performance audit или Q8–Q10 publication contour. Эти возможности добавляются в X1 по evidence-triggered scope; независимость Q и запрет принимать I self-report как primary proof действуют уже в Q-Alpha.
 
-Q может читать I evidence как вторичную подсказку только если это явно разрешено профилем, но не использует его как primary proof. Primary proof — immutable source snapshot, независимые deterministic scans/tests и отдельно предоставленное runtime evidence.
+Q может читать I evidence как вторичную подсказку только если это явно разрешено профилем, но не использует его как primary proof. Primary proof — immutable **product-source** snapshot, независимые deterministic scans/tests и отдельно предоставленное runtime evidence. Q1 source scope строится положительным allowlist product-owned code/tests/config/migrations/docs и физически исключает `/.pipeline/**`, `.git`, worktree metadata, build/cache/runtime roots. `.pipeline/history/` и `.pipeline/decisions/` не индексируются как source: нужные exact records выдаются harness отдельным secondary-evidence bundle с полем `evidence_role: secondary`, provenance и artifact-version binding. Raw checkpoint никогда не попадает в Q agent context. Попытка включить excluded path в primary snapshot fail-closed и создаёт independence finding.
+
+Каждый Q contract объявляет `independence_profile`: fresh context без author transcript/hidden summary и без reuse author invocation, а также отдельные `primary_source_scope` и `secondary_evidence_scope`. Для `high` assurance по умолчанию требуется другая model family/provider относительно primary implementer/reviewer, если это совместимо с egress и доступностью; иначе допускаются отдельный adversarial model profile плюс independent deterministic tools, explicit limitation и owner receipt. Независимость не считается выполненной только из-за нового prompt ID на той же conversation state.
 
 Q9 обязан перед release перечислить все `deferred`, accepted risks и known limitations, проверить owner/expiry/activation condition и явно определить влияние каждого пункта на release. Deferred item не становится runnable по календарю молча: условие активирует событие `deferred.activation_triggered`, которое снова проходит routing и gate. Q использует incremental cache по immutable source shard, tool/config hash и dependency graph; любое неоднозначное изменение консервативно инвалидирует зависимый shard, а cache-hit является оптимизацией, но не evidence.
 
@@ -543,7 +573,7 @@ P-слой формирует `project_profile`, который определя
 
 - `project_kind`: existing_bugfix, existing_feature, internal_application, utility, greenfield_product;
 - `interface_kind`: none, library, CLI, API, GUI, web, mobile, mixed;
-- `existing_ui_stack` и `elm_applicability`: required, applicable_default, exception_proposed, not_applicable;
+- `existing_ui_stack` и `ui_applicability_inputs`: state/interaction complexity signals, runtime/interop constraints и evidence refs; outcome Elm здесь отсутствует;
 - `change_scope`: micro, bounded, multi_component, system_wide;
 - `assurance_level`: light, standard, high;
 - `deployment_impact`: none, local, shared_environment, production;
@@ -555,17 +585,17 @@ P-слой формирует `project_profile`, который определя
 | Сценарий | Базовый маршрут |
 |---|---|
 | Малый невизуальный bugfix | P → R(light) → A(delta/light) → T → I → Q(targeted) |
-| Bugfix существующего Elm UI | P → R(light) → E(delta) → A0(platform predecision) → G(targeted visual applicability) → A(draft) → H(delta) → A(final) → T → I → Q(targeted) |
+| Bugfix существующего Elm UI | P → R(light) → E(delta) → A0 → A1(platform/Elm predecision) → G(targeted visual applicability) → A(draft) → H(delta) → A(final) → T → I → Q(targeted) |
 | Функция существующего ПО без UI-изменений | P → R → A(delta) → T → I → Q |
-| Пользовательская функция существующего ПО | P → R → E → A0(platform predecision) → G → A(draft) → H, если применим → A(final) → T → I → Q |
-| Внутреннее приложение | P → R → E(adoption mandatory) → A0(platform predecision) → G → A(draft) → H(Elm default) → A(final) → T → I → Q |
+| Пользовательская функция существующего ПО | P → R → E → A0 → A1(platform/Elm predecision) → G → A(draft) → H, если применим → A(final) → T → I → Q |
+| Внутреннее приложение | P → R → E(adoption mandatory) → A0 → A1(platform/Elm predecision) → G → A(draft) → H(Elm default) → A(final) → T → I → Q |
 | Небольшая CLI-утилита | P → R(light) → E(CLI applicability) → A(light) → T(minimal) → I → Q(targeted) |
-| Новый продукт с browser UI | P → R → E → A0(platform predecision) → G → A(draft) → H(Elm default) → A(final) → T → I → Q(full) |
+| Новый продукт с browser UI | P → R → E → A0 → A1(platform/Elm predecision) → G → A(draft) → H(Elm default) → A(final) → T → I → Q(full) |
 | Срочный security hotfix | P(expedited baseline) → R(security acceptance) → A(threat/delta) → T → I → Q(security-focused), с последующей полной ретроспективой |
 
 `light` означает меньший набор workers и более компактный context, а не отключение lineage, evidence, Git guards, security или final gate.
 
-Elm applicability определяет A0 по state/interaction complexity, runtime и scope. Отклонение от Elm-default для новой пригодной stateful interactive application подтверждает человек через A8. Сам факт существования non-Elm legacy не является автоматическим разрешением переписать его в рамках локального изменения.
+Elm applicability определяет A1 по фактам P и pinned policy; A0 только валидирует и маршрутизирует результат. Отклонение от Elm-default для новой пригодной stateful interactive application подтверждает человек через A8. Сам факт существования non-Elm legacy не является автоматическим разрешением переписать его в рамках локального изменения.
 
 ### 6.3 Applicability protocol
 
@@ -586,7 +616,7 @@ Elm applicability определяет A0 по state/interaction complexity, run
 - он не продолжает старую архитектуру и не копирует старый product code;
 - старый swarm и результаты старого pipeline импортируются только как provenance-bound `research_observation`/problem evidence в untrusted context;
 - допустимое преобразование: `old observation → verified problem/requirement → new owner decision`; ссылка на старое решение не является обоснованием нового;
-- если Swarm имеет stateful interactive UI, его real-project route обязан пройти `P → R → E → A0(platform predecision) → G → A(draft) → H → A(final) → T → I → Q`; T/I не публикуют UI scope до G/H handoff либо утверждённого applicability/exception decision.
+- если Swarm имеет stateful interactive UI, его real-project route обязан пройти `P → R → E → A0 → A1(platform/Elm predecision) → G → A(draft) → H → A(final) → T → I → Q`; T/I не публикуют UI scope до G/H handoff либо утверждённого applicability/exception decision.
 
 На момент подготовки плана внутри ещё не закоммиченного Git `projects/swarm` существует untracked legacy snapshot `old swarm/`: 12 504 файла, 208 572 020 bytes (~199 MiB), шесть вложенных `.git`, включая `node_modules`; в корне snapshot находятся `audit_results.json` и `fix_prompts.md`. Project-local ignore не считается достаточной изоляцией: он не ограничивает repository-read capability, искажает inventory/scale gates и сохраняет риск случайного bulk commit.
 
@@ -603,6 +633,16 @@ Pipeline version N (pinned)
 ```
 
 Finding в Swarm не даёт права hot-reload Pipeline или править prompt-repository из product run. До полного M он обрабатывается тем же red→green/HITL процессом вручную через pipeline-development workflow; после появления M — его штатным track.
+
+### 6.5 Program-level fallback
+
+После K0-b W0 публикует kernel/N1 feasibility forecast; owner выбирает только `continue_to_N1 | pause_program`, потому что содержательную пригодность Core-6 fixture ещё не доказал. После N1 W0 повторяет forecast по remaining layer plans, nominal/worst-case invocations, human-attention budget и calendar/cost constraints; тогда owner выбирает один versioned route:
+
+- `continue_full` — продолжить Swarm P/R/E/G/A/H/T/I/Q + M roadmap;
+- `core6_nonvisual` — зафиксировать минимально полезный профиль `P/R/A/T/I/Q` для bugfix/feature/CLI/API routes без применимого visual surface;
+- `pause_program` — сохранить pins/evidence/findings и не маскировать остановку как готовность.
+
+`Core-6` считается самостоятельным ограниченным успехом только после полного consumer/revision cycle на реальном bounded nonvisual project; один N1 fixture недостаточен. E/G/H/M получают explicit deferred records с owner/activation trigger. Core-6 не разрешает проводить через себя Swarm UI или любой applicable user-facing visual scope без E/G/H, не получает claims full self-healing/release governance и не отменяет V1 gate при возобновлении full route. Старый pipeline остаётся prior art, а не скрытым runtime fallback.
 
 ---
 
@@ -626,6 +666,8 @@ Finding в Swarm не даёт права hot-reload Pipeline или прави�
 `S0` не создаёт предметные требования, архитектуру, задачи, код или findings. Он не выбирает, как исправить upstream artifact; он доставляет событие владельцу и применяет результат его локального диспетчера.
 
 S0 ведёт budget ledger по run/layer/invocation: токены, стоимость, wall time, число attempts/subagents и тяжёлых tool calls. При достижении soft limit он предлагает уменьшение context/assurance или дополнительный budget; hard limit атомарно останавливает новые deliveries и создаёт `budget.escalation_requested`. Продолжение допустимо только после hash-bound ответа человека с новым пределом и scope. Агентское обещание «уложиться» budget не изменяет.
+
+Это target scope S0. В K0-a действуют один process и raw usage facts без автоматического budget gate; в K0-b — single-run lock и static resource limits, но не project-level distributed lease. Полные project lease, budget ledger decisions/events, cross-run scheduling и escalation FSM активируются в X1 только после соответствующих contracts/scenarios. Отложенная capability не подразумевается безусловно пунктами 7 и следующим абзацем.
 
 ### 7.2 `{Layer}0` — обязанности локального диспетчера
 
@@ -661,14 +703,16 @@ Fast-path не является direct agent-to-agent handoff: доставку,
 - triggering event IDs и correlation/causation IDs;
 - prompt ID, prompt version/hash и pipeline Git commit;
 - input artifact version IDs и content hashes;
-- project baseline/worktree identity;
-- разрешённые roots, capabilities, tools и side-effect class;
-- `model_profile`, `context_budget` и `expected_cost_tier`;
+- `replay_point_before`, project baseline commit/tree и exact working-tree snapshot artifact;
+- exact ordered rendered context snapshot после сборки system/developer/user/tool messages, с byte/hash binding на каждый fragment;
+- разрешённые roots, capabilities, tool registry/binary/config versions и side-effect class;
+- `provider/model_profile`, доступный immutable model/version identifier, sampling parameters/seed availability, `context_budget` и `expected_cost_tier`;
+- environment fingerprint: OS/architecture/locale/timezone, harness/IDE/adapter versions, dependency lock/toolchain identities и существенные allowlisted environment values;
 - hash/canonicalization profile IDs для входов и ожидаемых outputs;
 - expected output schema IDs;
 - deadline, retry budget и autonomy tier.
 
-Результат обязан точно эхо-ить envelope identity, budget request hash и фактическое usage/cost до того, как диспетчер прочитает его `status`. Late/stale/orphan result не может заменить актуальный результат.
+Каждый tool call сохраняет exact agent-visible request/response bytes, status, duration, external-state/time binding и side-effect receipt; секретное capability material никогда не включается. Результат обязан точно эхо-ить envelope identity, budget request hash и фактическое usage/cost до того, как диспетчер прочитает его `status`. После persistence создаётся `replay_point_after`. Late/stale/orphan result не может заменить актуальный результат.
 
 ### 7.4 Возврат downstream → upstream
 
@@ -736,11 +780,12 @@ Downstream никогда не диктует upstream, какой именно 
 | Нормальный handoff | `handoff.ready`, `gate.passed`, `next_work.available` |
 | Возврат/replay | `revision.requested`, `replay.requested`, `upstream.resolved`, `snapshot.superseded` |
 | Applicability | `applicability.check_requested`, `applicability.resolved` |
+| Creative dialogue | `dialogue.session_started`, `dialogue.owner_input_recorded`, `dialogue.contribution_proposed`, `dialogue.synthesis_ready`, `dialogue.owner_disposition_recorded`, `dialogue.session_completed` |
 | Visual/Elm | `visual.generation_locked`, `visual.mapping_requested`, `visual.mapping_confirmed`, `elm.architecture_requested`, `elm.exception_requested` |
 | Ошибки | `error.input_missing`, `error.schema_mismatch`, `error.stale_input`, `error.tool_failure`, `error.timeout`, `error.security_policy` |
 | Delivery/lease | `delivery.retry_scheduled`, `delivery.deadlettered`, `lease.expiring`, `lease.expired`, `late_result.rejected` |
 | HITL | `approval.requested`, `approval.granted`, `approval.rejected`, `human_action.required`, `human_action.completed` |
-| Quality | `finding.created`, `finding.confirmed`, `finding.refuted`, `risk.acceptance_requested` |
+| Quality | `finding.created` (включая class `interaction_model_failure`), `finding.confirmed`, `finding.refuted`, `risk.acceptance_requested` |
 | Budget/scale | `budget.warning`, `budget.escalation_requested`, `budget.increased`, `context.overflow_detected`, `scale.reshard_requested` |
 | DB/backup | `database.upgrade_required`, `database.upgraded`, `database.integrity_failed`, `backup.created`, `backup.verified`, `restore.requested` |
 | Deferred | `deferred.recorded`, `deferred.activation_triggered`, `deferred.expired` |
@@ -761,7 +806,9 @@ Event type всегда versioned. Несовместимое изменение
 - `error.schema_mismatch`, `error.tool_failure`, `error.security_policy`;
 - `meta.incident_detected` как hook без полного M roster.
 
-K0-a bootstrap proof компилирует только `command.received`, `run.started`, `artifact.version_created`, `handoff.ready` и `run.completed` для одного fixture route; ошибки до K0-b могут быть typed internal terminal states. K0-b реализует остальной необходимый Alpha-0 subset и fail-closed errors; Alpha-1 добавляет gate/finding semantics для P/R/A/T/I/Q. Lease/retry events, budget/scale, cache, deferred, full replay и domain-specific namespaces добавляются только перед первым сценарием, которому они необходимы. При этом safety mechanism может существовать как внутреннее state transition до появления отдельного публичного event type. Добавление event выполняется forward-compatible migration и registry reachability test, а не расширением «на всякий случай».
+K0-a bootstrap proof компилирует только `command.received`, `run.started`, `artifact.version_created`, `handoff.ready` и `run.completed` для одного fixture route; ошибки до K0-b могут быть typed internal terminal states. K0-b реализует остальной необходимый Alpha-0 subset и fail-closed errors; Alpha-1 добавляет gate/finding semantics для P/R/A/T/I/Q. Dialogue namespace не входит в K0: он добавляется just-in-time вместе с policy и F14 до первого P2/E2 route в режиме `creative_dialogue`. Lease/retry events, budget/scale, cache, deferred, full replay и остальные domain-specific namespaces добавляются только перед первым сценарием, которому они необходимы. При этом safety mechanism может существовать как внутреннее state transition до появления отдельного публичного event type. Добавление event выполняется forward-compatible migration и registry reachability test, а не расширением «на всякий случай».
+
+До активации runtime M contracts события `error.schema_mismatch`, `error.tool_failure`, `error.security_policy` имеют обязательную terminal policy `block_run_and_enqueue_human`; `meta.incident_detected` — `persist_incident_and_enqueue_W5`. Они переводят run в typed blocked state и создают human queue item, поэтому registry не содержит висячего hook. После M1 новая registry version заменяет terminal policy подпиской M0. В F00 `handoff.ready` имеет fixture-only terminal policy `bootstrap_sink`; она запрещена вне exact F00 contract/profile и не считается downstream consumption.
 
 ### 8.4 Подписки и fan-out
 
@@ -796,12 +843,17 @@ K0-a bootstrap proof компилирует только `command.received`, `ru
 Рекомендуемый путь:
 
 ```text
-projects/<project>/.pipeline/pipeline.sqlite3
+projects/<project>/.pipeline/runtime/pipeline.sqlite3
+projects/<project>/.pipeline/history/pipeline-checkpoint.sqlite3
 ```
 
-База принадлежит только этому проекту. Она не используется другим проектом и не находится в верхнем prompt-repository.
+Первая строка — active canonical DB; вторая — её clean consistent checkpoint для Git. Это не две независимые базы и не два источника истины: checkpoint создаётся только harness из зафиксированной runtime-транзакции и никогда не открывается как writer. Обе принадлежат только этому проекту и не находятся в верхнем prompt-repository.
 
-По умолчанию runtime DB не коммитится в Git: бинарный SQLite-файл плохо сливается и создаёт шум. История версий хранится внутри самой БД; Git проекта хранит код и ключевые YAML+MD projections. Долговечность БД обеспечивается проверяемыми SQLite backups. Если владелец решит version-control DB snapshot, это должна быть отдельная явно утверждённая policy, а не случайный `git add .`.
+Active DB, `-wal`, `-shm`, temporary copies и migration backups не коммитятся. Файл `.pipeline/history/pipeline-checkpoint.sqlite3` является единственным исключением: он track-ится в **project Git**, содержит полную accumulated process memory и обновляется только checkpoint publisher. Корневой Pipeline Git продолжает игнорировать `/projects/`, поэтому project process memory не смешивается с prompt history.
+
+Project-local `.gitignore` обязан игнорировать `/.pipeline/runtime/`, `/.pipeline/backups/` и checkpoint temp files, но не `/.pipeline/history/pipeline-checkpoint.sqlite3`. Harness проверяет это через `git check-ignore`/tracked-path assertions до первого product run; broad `/.pipeline/` ignore запрещён, если он скрывает checkpoint.
+
+Полная восстановимость означает: clean clone project Git содержит product tree, key YAML+MD projections и SQLite checkpoint; checkpoint, в свою очередь, связывает каждый replay point с exact Pipeline commit из отдельного корневого Git. В этой роли checkpoint является бинарной versioned serialization того полного рабочего состояния, которое старый pipeline раскладывал бы по множеству YAML/log files, а не просто резервной копией latest state. Размер, delta compression, clone time и чувствительность истории признаются осознанной ценой forensic replay и измеряются S17 до любого перехода к CAS/LFS/external backend.
 
 ### 9.2 Логическая схема
 
@@ -811,6 +863,8 @@ projects/<project>/.pipeline/pipeline.sqlite3
 - pipeline/prompt/model/tool version bindings;
 - runs и layer runs;
 - agent invocations и invocation attempts;
+- replay points, exact rendered context snapshots и environment fingerprints;
+- tool request/response snapshots и external-state bindings;
 - events и event deliveries;
 - artifacts и immutable artifact versions;
 - artifact dependencies/lineage/invalidations;
@@ -824,18 +878,18 @@ projects/<project>/.pipeline/pipeline.sqlite3
 - budget allocations, usage/cost records и escalation receipts;
 - source shards, retrieval/cache entries и invalidation edges;
 - hash/canonicalization profile bindings и внутреннее payload storage;
-- schema migrations и backup registry.
+- schema migrations, runtime backup и Git checkpoint publication registry.
 
 ### 9.3 Правила хранения артефактов
 
 1. В БД логически доступен полный payload каждой версии рабочего артефакта, а не только path. Физическое повторение идентичных bytes внутри SQLite не требуется, но это storage optimization, а не модель идентичности.
 2. Каноническая адресация в events, approvals, decisions, projections и evidence использует stable `artifact_version_id`. Hash хранится рядом как верифицируемый атрибут и никогда не заменяет version ID во внешней ссылке.
-3. Hash binding состоит не из голого digest, а из `hash_profile_id + digest`; профиль pin-ит algorithm, byte canonicalization и её version. Смена алгоритма выполняется добавлением нового профиля и dual-write/backfill, без переписывания старых IDs и receipts.
+3. Hash binding состоит не из голого digest, а из `hash_profile_id + digest`; профиль pin-ит algorithm, byte canonicalization и её version. Первый исполняемый semantic profile — `registry/hash-profiles/canonical-yaml-v1.yaml`: restricted YAML 1.2 Core → NFC → RFC 8785 canonical JSON bytes → SHA-256. Смена алгоритма выполняется добавлением нового профиля и dual-write/backfill, без переписывания старых IDs и receipts. Complete-file SHA-256 остаётся отдельным byte-level binding.
 4. Query-intensive данные control/trace plane — events, deliveries, decisions, approvals, gates, findings, lineage/trace/coverage/task edges и их version bindings — реляционны первично. JSON-копия не является authority для графового query или completeness gate.
 5. Неоднородный структурированный payload хранится как canonical JSON `TEXT` вместе с media type, encoding, `schema_id/version/hash` и `canonicalization_version`. JSONB допустим только как воспроизводимый производный read-cache после benchmark и не участвует в identity/integrity hash.
 6. Canonical schemas остаются в pinned prompt-plane registry. Project DB хранит binding на pipeline commit и schema identity/hash, но не создаёт независимый источник истины. Если для автономного аудита позже понадобится schema snapshot/cache, он импортируется только после byte/hash-сверки с registry и хранит source registry identity.
-7. Бинарный payload хранится внутри SQLite как BLOB с incremental I/O для крупных значений. Оппортунистическая дедупликация возможна по уникальному `(hash_profile_id, digest)` во внутреннем payload storage, но ссылки наружу остаются version-ID-based, а provenance и reverse references сохраняются для purge.
-8. External object backend, `storage_backend` polymorphism, миграция между backend и reconciliation потерянных файлов не входят в alpha. Их нельзя вводить до измерения реальных G/Q payload, backup growth и доли повторяющегося content.
+7. Бинарный payload хранится внутри SQLite как BLOB с incremental I/O для крупных значений. Оппортунистическая дедупликация возможна по уникальному `(hash_profile_id, digest)` во внутреннем payload storage, но ссылки наружу остаются version-ID-based, а provenance и reverse references сохраняются для active-DB cleanup и определения полного scope обязательного Git history rewrite при security incident.
+8. External object backend, `storage_backend` polymorphism, Git LFS/CAS, миграция между backend и reconciliation потерянных файлов не входят в alpha. Их нельзя вводить до измерения реальных G/Q payload, checkpoint/Git growth и доли повторяющегося content.
 9. Версия после publication не обновляется; новая редакция — новая строка с parent/supersedes edge. Current state — derived view, а не перезапись истории.
 10. Project source code не дублируется как «рабочий артефакт» целиком: его primary store — project Git; БД хранит snapshot identity, diff/evidence и необходимые извлечённые представления.
 
@@ -853,15 +907,43 @@ Publication результата одного invocation выполняется 
 
 Невозможно получить опубликованный артефакт без соответствующего события или событие, ссылающееся на несуществующую версию.
 
-### 9.5 Конкурентность и backups
+### 9.5 Конкурентность, runtime backups и Git checkpoint
 
 - SQLite работает локально, не на network share.
 - `WAL`, foreign keys, busy timeout и выбранный durability profile включаются harness.
 - Ни один LLM-компонент, включая S0 и `{Layer}0`, не открывает write connection. Все mutations проходят через локальную harness CLI/library, которая берёт project-scoped file lock и завершает процесс после короткой транзакции; постоянный writer-service/daemon для v2 не требуется.
-- Перед schema migration и risky replay создаётся полный consistent backup через SQLite backup API. После обычной layer publication создаётся дешёвый recovery checkpoint, а новый physical backup запускается по time/change-volume/risk threshold; backup storage может применять block-level incremental/deduplicated transport, не меняя SQLite как canonical artifact store.
-- Backup имеет DB schema version, project ID, last event ID и file hash.
+- K0-a создаёт logical replay points только в disposable fixture active DB; tracked checkpoint publisher и следующие правила Git publication появляются в K0-b. F00 не создаёт claim clone-only recovery.
+- Перед schema migration и risky replay создаётся локальный full consistent backup через SQLite backup API в новый path. Он нужен для оперативного rollback и не заменяет tracked forensic checkpoint.
+- **Logical replay boundary** обязателен в active DB до и после каждого LLM invocation, human answer/approval, nondeterministic/external tool interaction и side-effect intent/result. Он дешёвый: завершает короткую DB transaction, но сам по себе не копирует SQLite и не создаёт Git commit.
+- **Checkpoint publication boundary** может включать непрерывный range logical replay points, включая уже сохранённые stochastic/external results. Начиная с K0-b publisher делает один SQLite Backup API snapshot во временный файл, проверяет `integrity_check`/identity, атомарно заменяет `.pipeline/history/pipeline-checkpoint.sqlite3`, затем создаёт project-Git commit только для checkpoint и готовых YAML+MD projections той же DB sequence. Ни LLM-agent, ни worker worktree этот файл не изменяют.
+- Publication обязательна после top-level command/run, перед human wait/process exit, до и после irreversible side effect, перед migration/risky replay и на phase/release gate, а также при достижении любого versioned window limit: `max_unpublished_replay_points`, `max_unpublished_minutes`, `max_unpublished_db_bytes`. Recommended initial standard values — `10 points / 5 min / 32 MiB`; `strict` profile использует `1 / 0 / 0`. D0 pin-ит exact values. Следующее внешнее действие запрещено, если обязательная publication не завершилась.
+- Forecast обязан явно посчитать model, human-answer/approval, external-tool и irreversible intent/result replay points. Минимальный `window_limit` равен максимуму `ceil(points/point_limit)`, `ceil(publisher-eligible minutes/time_limit)` и `ceil(new DB bytes/byte_limit)`; до K0-b overlap с другими publication triggers не вычитается, чтобы неизвестная корреляция не давала оптимистический credit.
+- Binary checkpoint не merge-ится. Единственный S0/harness checkpoint publisher работает в coordination worktree; divergent checkpoint histories fail-closed и reconciles через event/replay identity, а не выбор `ours/theirs`.
+- Checkpoint commit содержит DB со ссылкой на предшествующий `product_state_commit/tree` и exact dirty snapshot, но БД не пытается сохранить hash коммита, который содержит её саму. Получившийся commit связывается с `checkpoint_id/replay_point range` через deterministic commit footer; gate checkpoints дополнительно могут получать annotated tag.
 - Restore является отдельным human-authorized действием; destructive overwrite текущей БД запрещён без проверенного backup.
-- Backups находятся в `projects/<project>/.pipeline/backups/`, исключены из project Git, шифруются при наличии confidential data и удаляются по versioned retention policy. После подтверждённой утечки выполняется отдельный purge workflow для primary DB, backups, previews и logs с audit receipt; обычная ротация не считается достаточной.
+- Локальные migration/recovery-копии находятся в `projects/<project>/.pipeline/backups/` и исключены из Git. После подтверждённой утечки checkpoint publication останавливается, repository/remote quarantines, выполняются secret rotation, history rewrite и clone/mirror invalidation с audit receipt; обычное удаление active DB недостаточно.
+
+#### 9.5.1 Checkpoint budget и заранее определённая миграция
+
+V2-D04 не считается dispositioned в D0 без versioned `registry/checkpoint-budget-policy/` со следующими exact полями: `max_checkpoint_bytes`, `max_projected_pack_growth_per_phase`, `max_publications_per_run`, `max_publication_p95_seconds`, `max_clean_clone_restore_seconds`, warning ratio, hard-stop ratio и `last_cheap_migration_gate`. Recommended initial standard defaults: `100 MiB`, `1 GiB`, `12`, `10 s`, `120 s`, `0.5`, `1.0`, а последняя дешёвая точка миграции — до `V1-01`, то есть до первого real G asset/BLOB package. Owner может изменить числа в D0, но не оставить их неизвестными.
+
+Threshold scope всегда `per_project_checkpoint_chain`: fixture DB/checkpoint принадлежит fixture Git, Swarm DB/checkpoint начинается с нуля в Swarm Git, и байты одной цепочки не переносятся в начальный размер другой. Статус хранится двумя независимыми осями `{checkpoint, phase_pack}`, чтобы pack hard-stop не скрывал checkpoint warning и наоборот.
+
+До K0-b/каждой следующей phase compiler публикует pessimistic range, а не один optimistic number:
+
+```text
+projected_pack_growth = checkpoint_size_estimate
+                      × projected_publication_count
+                      × measured_or_worst_case_delta_factor
+```
+
+Пока synthetic K0-b measurement отсутствует, `worst_case_delta_factor = 1.0`; Git compression не считается гарантией. K0-b прогоняет generated page-churn/BLOB distributions, измеряет snapshot I/O, commit/pack delta и clean-clone restore, затем уточняет factor. S17 валидирует forecast на реальных G/Q payload, но не является первым cost gate.
+
+До реализации любого слоя, способного создать или сохранить binary payload, его approved layer plan обязан содержать полный `binary_payload_budget` из `d0-02-layer-architecture-gate.yaml#binary_payload_budget.required_fields`: классы/media types payload; nominal/worst-case object count; assumed mean bytes; hard per-object cap; nominal/worst-case aggregate new bytes; policy-permitted maximum aggregate; fail-closed runtime aggregate limit; checkpoint-publication count; pessimistic pack amplification; exact ref/hash D0 или phase forecast, с которым выполнена сверка. Это требование безусловно применяется к G assets/references и к Q runtime evidence (screenshots, recordings, traces/archives); `not_applicable` допустим только если contract запрещает сохранение binary bytes и ссылается лишь на payload, уже учтённый его producer. Line-count complexity budget не заменяет payload budget, а сокращённое prose-перечисление не заменяет полный machine-readable список.
+
+Layer-plan compiler сравнивает этот бюджет с последним approved D0/phase forecast до Layer Architecture Gate. Любое расхождение assumptions или чисел создаёт блокирующий forecast-variance disposition и до реализации/первого реального payload запускает owner route этого раздела: `narrow/checkpoint batching | raise threshold with storage/clone evidence | migrate checkpoint storage | pause`. Новый approved forecast и reconciliation receipt становятся inputs layer approval; для G проверка обязана завершиться в V1-00 до V1-01, для Q — до реализации соответствующего runtime-evidence scope. Реальные S17 measurements уточняют следующий forecast, но не легализуют задним числом уже созданный package.
+
+Forecast ≥ warning ratio до следующей phase создаёт обязательный owner route до продолжения: `narrow/checkpoint batching | raise threshold with storage/clone evidence | migrate checkpoint storage | pause`. Hard-stop блокирует **следующий** product/external action; publisher обязан сохранить текущий unpublished range одним terminal `over_limit` checkpoint, после чего разрешены только recovery/migration evidence actions. Если выбран Git LFS/history migration, заранее утверждённый runbook требует freeze publisher, immutable pre-migration tag/backup, dry-run exact-path rewrite, object/hash reconciliation, remote policy check, invalidation/recreation всех известных clones/worktrees, clean-clone F13a и новую repository identity receipt. После `V1-01` такая миграция считается дорогой и требует отдельного architecture change; pipeline не обещает, что позднее измерение автоматически сделает rewrite безопасным.
 
 ### 9.6 Совместимость pipeline и DB schema
 
@@ -870,6 +952,28 @@ Publication результата одного invocation выполняется 
 - Upgrade начинается событием `database.upgrade_required`, создаёт и проверяет backup, применяет только forward migrations и записывает `database.upgraded` вместе с pre/post integrity results.
 - Downgrade in-place запрещён. Возврат выполняется восстановлением проверенного pre-upgrade backup в новый путь после HITL, не перезаписью текущего файла.
 - Prompt/pipeline version и DB schema version pin-ятся совместно в run binding; несовместимость блокирует resume до upgrade/migration decision.
+
+### 9.7 Replay Point Contract
+
+`replay_point` — не Git commit и не произвольный timestamp, а immutable logical boundary в DB до или после действия, способного изменить наблюдаемое состояние либо дать стохастический/внешний результат. Один tracked checkpoint может публиковать bounded range таких points без потери возможности восстановить состояние `as of replay_point_id`. Каждая запись содержит:
+
+- `replay_point_id`, before/after relation, DB schema, transaction/event sequence и run/layer-run/invocation/attempt IDs;
+- exact Pipeline commit, prompt/contract/schema/registry hashes и adapter/harness versions;
+- product base commit/tree и полный working-state delta: staged/unstaged diff, untracked input bytes, file modes/symlink facts и submodule/worktree identities;
+- ordered exact rendered agent context bytes, role/message boundaries, input artifact versions и context-query/allowlist proof;
+- provider/model identity, доступный immutable version, parameters, seed availability, context limits и фактический usage receipt;
+- tool/capability policy version, executable/toolchain identities, exact agent-visible request/response bytes, external retrieval time/content hash и side-effect receipts;
+- environment fingerprint: OS/architecture, locale/timezone, allowlisted environment, dependency locks и random/clock inputs, влияющие на результат;
+- output/result bytes, artifacts/events, validation result и causal link к следующему replay point.
+
+Все доступные harness/adapter agent-visible bytes, которые могли повлиять на решение, хранятся payload-ом в SQLite, а не только hash или path. Каждый point имеет `capture_completeness` и typed gaps: provider-controlled hidden instructions/model state, которые Claude/Codex/API не раскрывает adapter, нельзя объявлять сохранёнными; вместо этого pin-ится engine/provider build/profile и фиксируется `provider_hidden_context_gap`. Source code, уже существующий в project Git, не дублируется целиком: достаточно commit/tree плюс сохранённый dirty/untracked delta. Raw credentials никогда не являются допустимым agent-visible input; сохраняются capability/secret version refs и точный ответ tool, показанный агенту. Если secret всё же попал в context, это security incident с quarantine/history-rewrite procedure, а не разрешение молча потерять replay evidence.
+
+Поддерживаются два честно различаемых режима:
+
+1. **Forensic replay** — восстанавливает Git/worktree, DB state и context, подставляет сохранённые LLM/tool/external responses и должен детерминированно воспроизвести routing, artifacts и events.
+2. **Stochastic re-execution** — восстанавливает те же inputs и повторно вызывает доступную pinned model/tool version; exact wording не требуется, результат сравнивается по заранее определённым semantic properties, route и safety invariants. Недоступный прежний model/tool создаёт explicit reproducibility gap, но не мешает forensic replay сохранённого результата.
+
+Claim `replayable` разрешён только если clean-clone test без исходной runtime DB выбирает replay point, восстанавливает состояние в новый path и проходит forensic replay. Claim `re-executable` сильнее и требует полного harness-visible context, доступного environment/model/tool profile и допустимых typed gaps; один model name или hash-only context его не доказывает. Provider-hidden gap не мешает forensic reconstruction фактически полученного ответа, но запрещает обещать полное причинное воспроизведение внутренних вычислений модели.
 
 ---
 
@@ -887,16 +991,21 @@ Publication результата одного invocation выполняется 
 - release, migration и rollback decision;
 - accepted known limitation с owner/expiry.
 
-Review reports, промежуточные черновики, event logs, run state, retry counters и обычные findings остаются только в БД.
+После bootstrap runtime review reports, промежуточные черновики, event logs, run state, retry counters и обычные findings остаются только в БД. До появления authoritative DB независимые D0/architecture review records допускаются в `new pipeline/reviews/` как versioned Pipeline-governance evidence; после bootstrap это исключение не распространяется на project runtime review поток.
 
 ### 10.2 Размещение
 
 ```text
 projects/<project>/.pipeline/decisions/<decision-id>.yaml
 projects/<project>/.pipeline/decisions/<decision-id>.md
+
+new pipeline/decisions/<pipeline-governance-record>.yaml
+new pipeline/decisions/<pipeline-governance-record>.md
+new pipeline/receipts/<pre-runtime-receipt>.yaml
+new pipeline/receipts/<pre-runtime-receipt>.md
 ```
 
-Оба файла имеют один stem и представляют одну DB decision version.
+Project decision pair имеет один stem и представляет одну DB decision version. До появления authoritative project DB bootstrap/D0 governance records и их receipts живут versioned в Pipeline Git; после K0-a новые runtime records создаются через SQLite/projector, а Pipeline Git хранит только pipeline-wide contracts, registries и approved governance inputs.
 
 ### 10.3 Синхронизация проекций
 
@@ -928,7 +1037,7 @@ YAML и Markdown не являются двумя источниками ист�
 | Репозиторий | Содержимое | Кто меняет |
 |---|---|---|
 | Верхний `C:\Projects\1.Mistake Not My Baton For A Wand` | `old pipeline`, `new pipeline`, harness, schemas, prompt tests | разработка v2 и M-слой |
-| `projects/<project>` | код проекта, тесты, миграции, product docs, key decision projections | I/Q и человек в контексте проекта |
+| `projects/<project>` | код проекта, тесты, миграции, product docs, key decision projections и tracked full SQLite checkpoint | I/Q/человек меняют product paths; только S0/harness publisher меняет checkpoint |
 
 Один commit никогда не пытается охватить оба репозитория. Скоординированное изменение оформляется saga: отдельные commits, связанные event/correlation ID и checkpoints.
 
@@ -949,6 +1058,8 @@ Git-команды выполняются через явный `git -C <exact-r
 ### 11.3 Изоляция
 
 - Нормальная реализация выполняется в task/run-owned worktree project Git, физически расположенном вне checkout проекта: `projects/.worktrees/<project>/<task-or-run>/`.
+- Только project coordination worktree материализует `.pipeline/history/pipeline-checkpoint.sqlite3` и разрешает checkpoint publisher. Task/run worktree создаётся до checkout с harness-managed sparse policy, исключающей `/.pipeline/history/**`, `/.pipeline/runtime/**` и `/.pipeline/backups/**`; checkpoint blob остаётся один раз в общем Git object store, но не копируется в каждый рабочий каталог и не попадает в worker context. Если sparse exclusion нельзя доказать, worktree creation fail-closed; ручной `skip-worktree` не является достаточной policy.
+- Q primary-source worktree использует ещё более узкий positive allowlist product paths и исключает весь `/.pipeline/**`; secondary evidence выдаётся только harness bundles по §5.9/§15.5.
 - Harness запрещает создавать worktree внутри `projects/<project>/` и проверяет, что checkout path не является потомком individual project root. Q отдельно сканирует project tree на вложенные `.git`, worktree markers и случайно импортированные runtime roots.
 - Shared checkout пользователя не очищается, не reset-ится и не используется как rollback target.
 - Prompt changes M выполняются в отдельном worktree/branch верхнего репозитория.
@@ -967,20 +1078,20 @@ Git-команды выполняются через явный `git -C <exact-r
 
 1. после owner disposition §23 добавить в корневой `.gitignore` exact rules `/projects/` и `/research/old-swarm/`, проверить их через `git check-ignore` до перемещения данных;
 2. физически перенести `projects/swarm/old swarm/` в `research/old-swarm/` без удаления содержимого и проверить source/destination, число файлов/bytes и шесть nested Git roots; операция требует отдельного human approval;
-3. выполнить симметричный product-tree hygiene scan: `projects/swarm` не содержит nested `.git`, untracked bulk, legacy/runtime/build roots или файлов вне baseline allowlist; создать project-local ignore rules до первого product commit;
+3. выполнить симметричный product-tree hygiene scan: `projects/swarm` не содержит nested `.git`, untracked bulk, legacy/runtime/build roots или файлов вне baseline allowlist; создать project-local ignore rules до первого product commit, игнорируя runtime/backups/temp, но не exact tracked checkpoint path;
 4. только после этих checks зафиксировать корневой `.gitignore`, принятый pipeline baseline и relocation/hygiene receipt; foundation test блокирует normal bootstrap, если правила отсутствуют в pinned commit либо snapshot всё ещё достижим из product root;
-5. создать committed fixture project с project-local ignore rules для SQLite/runtime/worktrees, сохранив tracked `.pipeline/decisions/*.yaml` и `*.md`;
-6. записать prompt-repository, research и fixture repository/root identities в initialization record; research root не входит в capability product agents.
+5. закоммитить в root Pipeline Git canonical fixture seed/spec и expected tree/hash под `new pipeline/tests/fixtures/`; harness детерминированно материализует из него отдельный fixture Git в ignored project area с fixed author/timestamp, project-local ignore rules, tracked `.pipeline/decisions/*.yaml`/`*.md` и разрешённым exact checkpoint path;
+6. записать prompt-repository, research и fixture repository/root identities, fixture-spec hash и фактический fixture commit в initialization/scenario record; каждый F-run pin-ит одновременно Pipeline commit + fixture-spec hash + fixture commit. Clean clone обязан воспроизводить expected fixture tree/commit либо fail-closed; research root не входит в capability product agents.
 
 До полного §20.5 pilot отдельно требуется осознанный baseline commit в уже очищенном `projects/swarm`, его project-local ignore rules и project initialization record.
 
-`.pipeline/backups/`, preview и transient runtime paths всегда игнорируются project Git; `.pipeline/decisions/*.yaml` и `*.md` остаются разрешёнными tracked-проекциями. Имена runtime/projected файлов следуют Windows-safe grammar: lowercase ASCII, цифры, `-`, `_`, `.`, без reserved device names, trailing dots/spaces и path components, отличающихся только регистром. Harness не исполняет команды из текстовых артефактов; разрешённый command template и hash binary берутся из registry.
+`.pipeline/backups/`, preview и transient runtime paths всегда игнорируются project Git; `.pipeline/decisions/*.yaml`/`*.md` и exact `.pipeline/history/pipeline-checkpoint.sqlite3` остаются разрешёнными tracked paths. Имена runtime/projected файлов следуют Windows-safe grammar: lowercase ASCII, цифры, `-`, `_`, `.`, без reserved device names, trailing dots/spaces и path components, отличающихся только регистром. Harness не исполняет команды из текстовых артефактов; разрешённый command template и hash binary берутся из registry.
 
 Эти действия не выполняются данным архитектурным планом: commit pipeline baseline относится к переходу Decision baseline → 2.0a/3.0a, fixture — к Foundation, а baseline `swarm` — к подготовке полного pilot. Обнаруженный prior-art commit `d9573c4` содержит начальные schema/bootstrap scripts, но рассматривается только как источник идей: его schema и shell/Python scripts не становятся v2 baseline без отдельного review, migration map и tests.
 
 ### 11.5 Два независимых rollback domain
 
-- **Product rollback** возвращает code/config/data/deployment конкретного проекта к approved product checkpoint через project Git и project-owned migration/restore plan. Он не меняет pipeline commit/prompts.
+- **Product rollback** возвращает только allowlisted code/config/data/deployment paths конкретного проекта к approved product checkpoint через project Git и project-owned migration/restore plan. Он не меняет pipeline commit/prompts и никогда не checkout/revert-ит `.pipeline/history/pipeline-checkpoint.sqlite3`; rollback intent/result добавляются в новую process-memory version и следующий checkpoint commit.
 - **Pipeline rollback** означает выбор ранее опубликованного pipeline commit/version для нового run либо explicit compatibility/migration decision для существующего run. Он не выполняется `git reset` общего checkout и не откатывает product code.
 - Если новая pipeline version уже изменила project DB schema, выбор старой версии подчиняется §9.6: несовместимый harness не пишет БД; требуется verified pre-upgrade restore в новый path либо отдельная forward compatibility migration.
 - Product и Pipeline rollback имеют разные approval receipts, events, checkpoints и Git commits. Корреляция допускается через incident/correlation ID, но атомарного cross-repository commit не существует.
@@ -1021,7 +1132,7 @@ intent/change request
 - `deferred` с owner, reason, expiry/activation condition и влиянием на release;
 - `accepted_risk` с hash-bound human authorization;
 - `gap` — блокирует соответствующий gate.
-- `permanent_gap` — терминальный outcome только для статической достижимости/учёта completeness: дальнейшего автоматического producer не существует. Для release он не терминален и остаётся blocker; до Q9 обязан быть преобразован человеком в `accepted_risk` либо в явное scope decision, иначе Q9 отклоняет release.
+- `permanent_gap` — терминальный outcome только для статической достижимости/учёта completeness: дальнейшего автоматического producer не существует. Для любого release/slice-acceptance gate он не терминален и остаётся blocker; до такого gate обязан быть преобразован человеком в `accepted_risk` либо в явное scope decision. В Q-Alpha запрет удерживает Q7-Alpha + independent slice-acceptance gate, в полном Q — Q9.
 
 Правила совместимости:
 
@@ -1064,7 +1175,7 @@ Registry compiler строит двунаправленный reachability graph
 
 Центральное правило готовности: **нет зарегистрированного потребителя — нет готовности слоя и нет основания публиковать артефакт как required output**. Producer contract заранее называет downstream consumer либо terminal policy; фактическое потребление создаёт `consumer_receipt` с consumer contract/run, exact `artifact_version_id`, прочитанными semantic fields, результатом `accepted | revision_requested | rejected` и evidence refs. Self-report producer не является receipt.
 
-Артефакт без текущего consumer может существовать только как `experimental | deferred` с owner и activation trigger; он не повышает readiness/coverage. Для терминального Q потребителем является независимый owner/release/scope gate, который обязан сослаться на точную Q finding-set version. Registry compiler проверяет объявленную достижимость, runtime gate — фактический receipt.
+Артефакт без текущего consumer может существовать только как `experimental | deferred` с owner и activation trigger; он не повышает readiness/coverage. Raw telemetry K0-a регистрируется как `deferred_observability_input` с consumer trigger N1/Q1 и не считается required output слоя. YAML+MD projection является derived `governance_projection`: если она участвует в human approval, approval receipt ссылается на exact projection/version; иначе она informational и сама не повышает readiness. Для терминального Q потребителем является независимый owner/release/scope gate, который обязан сослаться на точную Q finding-set version. Registry compiler проверяет объявленную достижимость, runtime gate — фактический receipt.
 
 ### 12.6 Architecture hypothesis register
 
@@ -1077,7 +1188,9 @@ Pipeline v2 сам является проверяемой архитектур�
 - status `proposed | testing | supported | refuted | inconclusive | superseded`;
 - evidence refs, limitations, decision impact и next review/expiry.
 
-Примеры: достаточность SQLite по growth/restore evidence; влияние Elm-profile на качество LLM-generated stateful UI; снижение routing/revision errors событийной моделью; улучшение human visual review при разделении G creative/structural. Метрика и критерий фиксируются до наблюдения результата. Generic artifact events достаточны для K0-a/N1; отдельные hypothesis events не добавляются «про запас». Если оценка гипотезы приводит к key decision, только это решение публикуется YAML+MD pair со ссылкой на hypothesis/evidence versions.
+Примеры: достаточность SQLite по growth/restore evidence; влияние Elm-profile на качество LLM-generated stateful UI; снижение routing/revision errors событийной моделью; улучшение human visual review при разделении G creative/structural; снижение downstream revision cycles и рост owner-rated clarity при bounded triadic creative dialogue без неприемлемого роста cognitive load, elapsed time и token/cost. Для последней гипотезы заранее фиксируются число противоречий, снятых до публикации, число последующих пересмотров, субъективные clarity/cognitive-load оценки и стоимость сессии; доля принятых agent proposals не считается quality KPI и не оптимизируется. Метрика и критерий фиксируются до наблюдения результата. Generic artifact events достаточны для K0-a/N1; отдельные hypothesis events не добавляются «про запас». Если оценка гипотезы приводит к key decision, только это решение публикуется YAML+MD pair со ссылкой на hypothesis/evidence versions.
+
+Главная control-plane гипотеза регистрируется отдельно как `HYP-DISPATCH-01`: LLM-`{Layer}0` способен выбирать только разрешённые contract branches, а uniform envelope/validator не пропускает route drift в state transition. K0-a даёт лишь smoke observation; до N1 гипотезу фальсифицирует F15 в K0-b на pinned model/profile: 12 заранее размеченных nominal/ambiguous/non-nominal cases × 3 независимых attempts. Default success criterion — 36/36 без forbidden transition/capability/event и с отклонением каждого malformed result до side effect; не менее 34/36 initial choices совпадают с oracle branch, и каждый case имеет минимум 2/3 верных choices. Провал блокирует N1 и требует сузить semantic routing, изменить envelope/contract либо перевести ветвь в deterministic/human route; повторный тест использует новую hypothesis/version, а не меняет threshold задним числом.
 
 ---
 
@@ -1105,6 +1218,8 @@ Pipeline v2 сам является проверяемой архитектур�
 
 Approval хранит actor identity/role, action, scope, exact input hashes, decision payload hash, timestamp, nonce/expiry и policy revision. Изменение входа делает approval stale. Самоутверждение роли текстом агента не является авторизацией.
 
+Machine-readable envelope обязан соответствовать versioned `registry/approval-envelope/v1.schema.yaml`: он связывает actor/timestamp, точные hashes YAML-record и прочитанной Markdown-проекции, per-decision dispositions/overrides, scope/provenance и `canonical-yaml-v1` integrity profile. Для D0 validator требует exact ID set V2-D01…D39 и record roles `dispositions | forecast | gate_contract | checkpoint_policy`, а не полагается только на object `uniqueItems`. Полный approval artifact внешне hash-ится вместе с record pair; его внутренний `integrity` hash вычисляется по canonical payload без собственного поля, поэтому self-reference не возникает.
+
 Trust anchor первой локальной версии — интерактивный оператор в harness CLI/Visual Studio session. Approval создаётся только отдельной интерактивной командой harness, которая показывает exact action/input hashes и записывает локальную actor identity; текст, файл, event proposal или tool output от агента никогда не являются approval. Это даёт accountable audit trail на одной машине, но не заявляет криптографическую non-repudiation между независимыми людьми.
 
 ### 13.4 HITL UX
@@ -1121,6 +1236,39 @@ Trust anchor первой локальной версии — интеракти
 Для внутреннего ПО отдельное внимание уделяется usability/adoption decision: «работает технически» недостаточно для принятия.
 
 HITL requests образуют отдельную очередь с `blocking | deferrable`, priority, scope, expiry и зависимыми ветвями. Blocking request останавливает только транзитивно зависимые deliveries; независимые ветви продолжаются. Deferral требует явного resume/activation condition и не превращается в неограниченное молчаливое ожидание.
+
+### 13.5 Creative Dialogue Protocol
+
+`Creative Dialogue Protocol` — общая policy для творческих HITL-сессий P/E и будущих применимых workers, а не новый слой. Dispatcher contract выбирает и сохраняет один режим: `elicitation | creative_dialogue | hybrid | decision_approval | fact_reconstruction`. `creative_dialogue` обязателен, когда ожидаемый результат требует совместно породить и оценить новые продуктовые либо experience-альтернативы; `hybrid` сначала фиксирует factual block, затем открывает отдельный creative block. Выбор режима, policy version/hash и rationale входят в session record.
+
+Три видимых собеседника имеют раздельные обязанности:
+
+- `moderator` нейтрально ведёт повестку, задаёт по одному вопросу, следит за budget, явно маркирует источники и синтезирует напряжения; он не формирует собственную product position;
+- `critical_challenger` называет не более двух конкретных слабых мест, скрытых предположений или counterexamples на раунд;
+- `co_creator` предлагает не более трёх альтернатив/repair ideas, адресующих исходную цель и выявленные слабости.
+
+Domain profile ролей меняется по предмету разговора, но семантика не меняется: для P это product/scope/feasibility, для E — UX/adoption/accessibility. Все role instances запускает локальный dispatcher. Worker не вызывает worker и не получает его незавершённый вывод напрямую.
+
+До первого creative fan-out owner утверждает versioned `topic_manifest`: стабильные topic IDs, цель/границы каждого и порядок либо `unordered`. Default limits — не более `6 topics/session` и `2 creative sessions/artifact`; каждый topic сохраняет прежний cap двух challenge/repair rounds. Если предмет ещё неясен, moderator сначала проводит bounded `elicitation` и только затем предлагает manifest на approval. Новый topic или дополнительная session требуют новой manifest version, пересчёта invocation/human-attention budget и owner authorization **до** следующего agent call; бесконечное добавление topics внутри активной сессии запрещено.
+
+Один topic проходит детерминированную последовательность:
+
+1. moderator получает первый ответ owner без подсказок challenger/co-creator;
+2. harness сохраняет immutable owner-input version;
+3. P0/E0 запускает challenger и co-creator независимо на одном и том же snapshot; они не видят ответы друг друга;
+4. их предложения сохраняются как отдельные contributions и события;
+5. barrier допускает moderator к синтезу только по объявленной policy;
+6. moderator показывает компактные, подписанные ролью позиции и задаёт owner один следующий вопрос;
+7. owner явно присваивает существенным предложениям disposition;
+8. отдельный неразговорный compiler строит accepted content только из owner statements/adopted/modified proposals и отдельно маркирует owner-dispositioned open items.
+
+Canonical provenance различает `owner_stated`, `agent_proposed`, `owner_adopted`, `owner_modified`, `rejected`, `open_hypothesis`, `unresolved_tension`. `agent_proposed` никогда автоматически не становится требованием, решением, Experience Intent или частью Idea Note. Принятие фиксирует actor, exact contribution/input hashes и, для `owner_modified`, итоговую формулировку. `open_hypothesis`/`unresolved_tension` допускаются в опубликованном artifact только в явно отделённом open-items разделе, не как принятое решение. Сходство текста и summary агента не заменяют disposition.
+
+По умолчанию допускается не более двух challenge/repair rounds на topic. Если owner признаёт найденную слабость существенной, snapshot следующего раунда содержит owner-authorized формулировку challenge: co-creator предлагает repairs, а critic может проверить уже выбранный owner candidate. Так помощник действительно преодолевает слабое место, но получает его через moderator/owner disposition и событие, а не прямой agent handoff. Затем moderator обязан предложить owner явный исход `accept | defer | narrow_scope | stop`; незакрытое расхождение сохраняется, а не сглаживается. Owner может в любой момент отключить одну из вспомогательных ролей, остановить сессию или перейти в `elicitation`. Достижение topic/session cap создаёт `dialogue.budget_exhausted` и не открывает новый topic без manifest/rebudget receipt. Moderator — единственный управляющий human turn: критик и помощник присутствуют как явно подписанные contributions, поэтому три голоса не создают одновременный поток вопросов.
+
+Протокол не применяется к user/stakeholder research, сбору compliance facts, approval/consent/risk acceptance, incident reconstruction и уточнению точного patch. Там нужны соответственно `elicitation`, `decision_approval` или `fact_reconstruction`, потому что «улучшение» ответа агентами исказило бы evidence. Формальные downstream reviews также остаются независимыми: triad повышает качество discovery, но не заменяет R/E/A/Q gates.
+
+Полное состояние сессии — topic, round, immutable inputs, contributions, dispositions, unanswered question, budgets и следующий допустимый transition — хранится versioned в SQLite. После остановки `continue project Y` возобновляет сессию с последнего committed transition, не повторяя уже принятые предложения. YAML+MD создаются не для transcript, а только для возникшего key decision/Idea Note по правилам §10.
 
 ---
 
@@ -1229,7 +1377,7 @@ Machine-readable `registry/tool-policy/` для каждого executable profil
 - Перед persistence выполняется secret scan/redaction gate.
 - Если задача требует секрет, которого нет, создаётся `human_action.required`, а не просьба вставить значение в чат/файл.
 
-До отправки любого context внешней модели harness выполняет secret/PII/classification scan и применяет `registry/egress-policy/`: допустимые provider/model classes, data residency, retention class, redact/drop rules и `deny_source_content` для проектов, где исходный код нельзя передавать провайдеру. Логи, DB rows, previews, backups и model traces имеют versioned retention period; истечение создаёт проверяемую purge job, а не только рекомендацию удалить файлы вручную.
+До отправки любого context внешней модели harness выполняет secret/PII/classification scan и применяет `registry/egress-policy/`: допустимые provider/model classes, data residency, retention class, redact/drop rules и `deny_source_content` для проектов, где исходный код нельзя передавать провайдеру. Поскольку tracked checkpoint переносит agent-visible process memory в Git history, project repository получает максимальный confidentiality/retention class любого сохранённого replay payload. Данные, которые нельзя хранить с этой политикой, должны быть redacted/tokenized **до** agent context; selective expiry уже committed replay row без history rewrite невозможен.
 
 ### 15.4 Команды и код
 
@@ -1241,7 +1389,7 @@ Machine-readable `registry/tool-policy/` для каждого executable profil
 
 ### 15.5 Независимый аудит
 
-Q использует detached immutable source snapshot. Отсутствующий или непрочитанный in-scope source создаёт completeness gap. Уровень уверенности результата явно указывается: source-only, source+runtime evidence или release-bound evidence.
+Q использует detached immutable product-source snapshot с positive allowlist. `/.pipeline/history/**`, `/.pipeline/decisions/**`, active runtime, `.git`, build/cache и worker evidence paths исключены до index/materialization; checkpoint binary не открывается и не сканируется Q1. Нужные decisions, requirements, receipts и I claims поступают только отдельными typed secondary bundles, поэтому Q может сверить их с primary code/tests/runtime proof, но не принять self-report за source fact. Отсутствующий или непрочитанный in-scope product source создаёт completeness gap; попадание excluded path в primary index создаёт independence violation и блокирует audit. Уровень уверенности результата явно указывается: source-only, source+runtime evidence или release-bound evidence.
 
 ---
 
@@ -1269,7 +1417,21 @@ Q использует detached immutable source snapshot. Отсутствую�
 - RAG разрешён только как retrieval backend внутри назначенного shard. Query, retrieval scope, selected refs, misses и unsupported scope сохраняются; RAG не заменяет sharding, inventory или reconciliation.
 - Cache key включает content, dependency/reverse-dependency closure, prompt/model/tool/config/schema hashes. Rebase/merge, неизвестный edge или изменившаяся policy вызывают conservative invalidation; cache никогда не повышает claim confidence и не является evidence.
 
-#### 16.1.2 Measurement policy
+#### 16.1.2 Invocation и human-attention budgets
+
+Bootstrap не предполагает уже существующий compiler. До disposition V2-D01 D0 manual/reference worksheet даёт rough order-of-magnitude **полного Swarm target route**: roster, nominal/worst-case LLM calls, dialogue topics/sessions, human attention и checkpoint publications/growth; иначе состав слоёв фиксировался бы без знания порядка цены. Для исполняемых D0/K0-a packages тот же versioned worksheet рассчитывает exact текущий route/fan-out/retry/dialogue graph и проходит независимую проверку. K0-a фиксирует machine contract и reference cases; K0-b реализует registry/resource-budget compiler и доказывает exact field/value equivalence с ними. Начиная с N1 ни один package не запускается, пока compiler по `registry/resource-budget-policy/` не вычислил и gate не принял априорный budget. Ledger постфактум этот gate не заменяет. Default profiles:
+
+- `light`: не более 12 nominal и 20 worst-case LLM invocations;
+- `standard`: не более 30 nominal и 50 worst-case;
+- `deep`: universal cap отсутствует, но exact nominal/worst-case count и owner authorization обязательны до run.
+
+Plan-production package отдельно считает initial author call, обязательный fresh-context reviewer call и bounded author/reviewer calls каждого revision-return; new-plan и delta-plan используют exact call models, pinned в D0 forecast. Runtime package отдельно считает S0/`{Layer}0`, workers, независимых runtime reviewers, retries, fallback и dialogue roles; compiled fast-path считается нулём dispatcher LLM calls, но worker остаётся в count. Phase envelope является суммой уникально адресуемых packages, а не самостоятельным tier. Превышение до запуска требует сузить scope/roster, обосновать parallel fan-out либо получить hash-bound budget escalation; runtime ledger не легализует заранее невозможный план.
+
+Поскольку plan author/review происходят до project DB, их identity/provider/model/profile, timestamps и exact input/output hashes записываются в versioned Pipeline-Git ledger `new pipeline/ledgers/design-invocations.yaml` по `registry/design-invocation-ledger/v1.schema.yaml`. Layer-plan approval receipt недействителен, если author/reviewer invocation refs не разрешаются в ledger; неизвестные исторические metadata фиксируются gap, а не реконструируются вымышленными значениями.
+
+Тот же route plan содержит `human_attention_budget`: число blocking decisions/sessions, ожидаемые active minutes, максимальную длину одной сессии и batchable requests. V1 всегда планируется как high-attention package и сравнивается не только с compute cost, но и с доступным owner capacity. Исчерпание human budget создаёт scope/schedule decision, а не молчаливую очередь approvals.
+
+#### 16.1.3 Measurement policy
 
 Raw telemetry закладывается в K0-a, поскольку задним числом её восстановить нельзя: monotonic/wall timestamps по run/invocation/tool/HITL, provider/model identity, input/output/context tokens, configured context limit, tool duration/outcome, event/delivery/revision counts, artifact sizes, approval/escalation facts и provider usage/cost receipt, если он доступен. K0-a не строит dashboard и не объявляет success thresholds.
 
@@ -1279,7 +1441,7 @@ Versioned `registry/metric-definitions/` позже вычисляет три с
 - quality: downstream/Q findings по artifact version, escaped defects, decision churn после implementation, coverage gaps и rollback outcomes;
 - autonomy: auto/run-authorized/HITL actions, approval/rejection/escalation counts и human waiting time.
 
-До N1/Q1 эти данные являются diagnostic baseline, а не KPI или release gate. Числовой threshold становится нормативным только если заранее привязан к approved architecture hypothesis/decision с формулой, window и anti-gaming interpretation. Отсутствующий provider cost не пересчитывается по незафиксированной текущей цене; сохраняются исходные usage facts и versioned cost model. Telemetry подчиняется тем же secret/PII/retention rules, что event log.
+До N1/Q1 эти данные являются diagnostic baseline, а не KPI или release gate. Числовой threshold становится нормативным только если заранее привязан к approved architecture hypothesis/decision с формулой, window и anti-gaming interpretation. Отсутствующий provider cost не пересчитывается по незафиксированной текущей цене; сохраняются исходные usage facts и versioned cost model. Telemetry, вошедшая в replay checkpoint, наследует confidentiality/retention policy project Git; более короткий selective retention возможен только для данных, исключённых или агрегированных до agent-visible/persisted context.
 
 ### 16.2 Параллелизм
 
@@ -1297,13 +1459,14 @@ SQLite остаётся single-writer на коротких транзакция
 
 При `continue project Y` S0:
 
-1. проверяет DB integrity/schema и project/pipeline binding;
-2. закрывает истёкшие leases;
-3. находит orphaned/late invocations;
-4. reconciles незавершённые projection/Git/external intents;
-5. проверяет remote/local Git state;
-6. пересчитывает runnable deliveries;
-7. продолжает с первого безопасного действия или сообщает typed blocker.
+1. проверяет tracked checkpoint identity и project/Pipeline Git bindings; если active DB отсутствует, восстанавливает checkpoint в новый runtime path, не открывая tracked file как writer;
+2. если active DB существует, сверяет integrity/schema, last logical replay point, последний published range и допустимое unpublished window; необъяснимое расхождение fail-closed;
+3. закрывает истёкшие leases;
+4. находит orphaned/late invocations;
+5. reconciles незавершённые projection/checkpoint-Git/external intents;
+6. проверяет remote/local Git state;
+7. пересчитывает runnable deliveries;
+8. продолжает с первого безопасного действия или сообщает typed blocker.
 
 Ни Claude, ни Codex session memory не является source of truth.
 
@@ -1344,10 +1507,11 @@ Contract определяет:
 - output artifact schema IDs;
 - допустимые event proposals;
 - capabilities/tools/side-effect tier;
-- `model_profile`, hard/soft `context_budget`, `expected_cost_tier` и permitted fallback profiles;
+- `model_profile`, hard/soft `context_budget`, `expected_cost_tier`, per-branch invocation contribution, human-attention contribution и permitted fallback profiles;
 - retry/timeout/stop semantics;
 - owner/write scope;
 - applicable project profiles;
+- для HITL — допустимые `dialogue_mode`, applicability rule и pinned dialogue/role profile; compiler prompts отдельно объявляют разрешённые provenance/disposition states;
 - behavioral test fixtures.
 
 Для dispatcher contract дополнительно обязательны machine-readable:
@@ -1412,9 +1576,28 @@ Dispatcher `prompt.md` объясняет, как интерпретироват
 ```text
 new pipeline/
   PIPELINE_V2_ARCHITECTURE_PLAN.md
-  PIPELINE_V2_ARCHITECTURE_REVIEW.md
   PIPELINE_V2_DEVELOPMENT_PLAN.md
   README.md
+  decisions/
+    d0-01-full-route-forecast.yaml
+    d0-01-full-route-forecast.md
+    d0-01-decision-dispositions.yaml
+    d0-01-decision-dispositions.md
+    d0-02-layer-architecture-gate.yaml
+    d0-02-layer-architecture-gate.md
+  receipts/
+    d0-04-legacy-relocation.yaml
+    d0-04-legacy-relocation.md
+  reviews/
+    d0-01-d0-02-review-01.yaml
+    d0-01-d0-02-review-01.md
+    d0-01-d0-02-review-02.yaml
+    d0-01-d0-02-review-02.md
+    sources/
+      README.md
+      d0-01-d0-02-review-01.txt
+      d0-01-d0-02-review-02.txt
+      d0-01-d0-02-owner-disposition-input-03.txt
   architecture/
     shared-control-plane.md
     shared-artifact-and-event-plane.md
@@ -1452,6 +1635,8 @@ new pipeline/
     work-types/
     execution-recipes/
     claim-classes/
+    finding-classes/
+      visual-interaction.yaml
     hypothesis-types/
     metric-definitions/
     engineering-standards/
@@ -1459,12 +1644,29 @@ new pipeline/
       standards.elm.yaml
       standards.python.yaml
     scale-policy/
+    resource-budget-policy/
+    checkpoint-budget-policy/
+      v1.yaml
+      v1.md
+    hash-profiles/
+      canonical-yaml-v1.yaml
+      canonical-yaml-v1.md
+    design-invocation-ledger/
+      v1.schema.yaml
+      v1.schema.md
+    approval-envelope/
+      v1.schema.yaml
+      v1.schema.md
     ui-architecture-policy/
       elm-applicability.yaml
+    dialogue-policy/
+      creative-dialogue.yaml
     capability-policy/
     tool-policy/
     egress-policy/
     dependency-policy/
+  ledgers/
+    design-invocations.yaml
   schemas/
   harness/
     migrations/
@@ -1473,8 +1675,16 @@ new pipeline/
     structural/
     contracts/
     behavioral/
+    fixtures/
+      <fixture-id>/
+        seed/
+        fixture.yaml
     scenarios/
 ```
+
+`registry/dialogue-policy/creative-dialogue.yaml` задаёт applicability modes, domain role profiles, owner-first ordering, `max_topics_per_session`, `max_sessions_per_artifact`, topic-manifest/rebudget rules, per-role contribution/round budgets, provenance/disposition FSM, barrier/resume rules, допустимые compiler inputs и event schemas. Он является исполняемым authority §13.5; prose prompt только объясняет поведение и ссылается на rule IDs.
+
+`registry/finding-classes/visual-interaction.yaml` регистрирует `creative_quality | structural_contract | mapping | interaction_model_failure | platform_predecision_failure | H_elm`, producer evidence, owner, event payload, invalidation scope и recovery route. `interaction_model_failure` производит G12/G13 либо owner HITL по evidence приемлемых visual/structure и дефектного flow/state/feedback; G0 валидирует class и маршрутизирует E0, но не создаёт finding самостоятельно.
 
 Architecture plans не содержат копии SQL/YAML/JSON schemas. Они указывают их canonical registry location и описывают только responsibility/invariants/flow.
 
@@ -1491,17 +1701,26 @@ Architecture plans не содержат копии SQL/YAML/JSON schemas. Он�
 - lease expiry, stale/late result rejection и CAS;
 - repository guard для обоих Git;
 - запрет worktree внутри individual project repo и поиск nested `.git`/worktree markers;
+- task worktree sparse policy не материализует tracked checkpoint, а Q primary worktree/index не содержит `/.pipeline/**`;
 - graceful abort до, во время и после side effect;
 - path/symlink/secret/unsafe-command/process-limit/tool-hash tests;
-- backup retention и purge after leak;
+- security incident quarantine, secret rotation, checkpoint Git history rewrite и clone/mirror invalidation receipt;
 - canonical JSON golden vectors для key order, numbers, Unicode и line endings;
 - hash-profile agility: dual-write/backfill нового digest без изменения artifact version IDs/старых receipts;
-- incremental BLOB I/O, shared-payload purge и backup-growth measurements;
+- incremental BLOB I/O, shared-payload reference integrity и checkpoint/Git-growth measurements;
+- layer-plan compiler отклоняет G/Q или другой binary-producing scope без полного `binary_payload_budget`, D0 forecast binding и закрытого variance disposition; per-item/aggregate cap проверяется до первой записи payload;
+- K0-b synthetic page-churn/BLOB matrix проверяет checkpoint size, publication count, snapshot/commit p95, pessimistic pack growth и clean-clone restore против D0 warning/hard thresholds;
+- hard threshold публикует один terminal `over_limit` checkpoint текущего range и блокирует следующее product/external action до owner migration/storage disposition;
+- tracked checkpoint publisher сохраняет exact replay-point range, не захватывает unrelated dirty files и воспроизводимо создаёт clean SQLite copy;
+- clean clone project Git без исходной runtime DB восстанавливает выбранный replay point из tracked checkpoint, product commit/tree + dirty/untracked delta и exact rendered context;
+- forensic replay с recorded LLM/tool responses повторяет route/artifacts/events; stochastic re-execution использует тот же envelope и сообщает явный gap при недоступном model/tool profile;
 - registry compiler принимает ровно минимальный Alpha event profile, отклоняет необъявленные события и расширяет profile только через versioned forward migration;
 - product rollback и Pipeline-version rollback не меняют чужой Git root, pin, checkpoint или approval receipt;
 - D0 relocation receipt сверяет source/destination, file/byte counts и nested Git inventory; product-tree scan после переноса не находит legacy path, nested `.git` или untracked bulk;
 - capability test доказывает, что product repository-read не достигает `research/old-swarm/`, а designated research importer получает его отдельным read-only root.
-- K0-a raw telemetry golden test фиксирует timestamps/durations, model/context/usage facts, event/revision/HITL counts без dashboard/KPI dependency.
+- clean-clone fixture test материализует separate Git из tracked seed/spec и сверяет Pipeline commit + fixture-spec hash + expected fixture commit/tree;
+- F10 adversarial guard проходит до выдачи research-import capability; failing F10 блокирует K0-b/S1 независимо от наличия read-only root;
+- K0-a raw telemetry golden test фиксирует timestamps/durations и реальные provider/model/context/usage receipts Layer0/worker, event/revision/HITL counts без dashboard/KPI dependency.
 
 ### 20.2 Contract tests
 
@@ -1523,17 +1742,29 @@ Architecture plans не содержат копии SQL/YAML/JSON schemas. Он�
 - language profile назначает enforcement всем применимым P1–P20, причём P8/P20 всегда blocking;
 - неизвестный язык до I маршрутизируется в создание profile либо hash-bound `advisory_only` owner decision; P8/P20 не ослабляются;
 - dispatcher `contract.yaml`, а не `prompt.md`, полностью задаёт routing/fan-out/ownership/invalidation/recovery fields для compiler;
+- K0-a `handoff.ready` имеет только fixture `bootstrap_sink`, а Alpha errors/meta hook до M1 имеют declared blocking human/W5 terminal policy; dangling event route отклоняется;
+- P schema содержит Elm input facts, но запрещает applicability outcome; единственный producer platform/Elm evaluation — A1, A0 только dispatcher/gate;
+- Q0 не производит finding/disposition; в Q-Alpha ownership принадлежит bounded Q7-Alpha;
+- Q contract компилируется только с непересекающимися `primary_source_scope`/`secondary_evidence_scope`; Q1 fail-closed отклоняет `/.pipeline/**` в primary index, а checkpoint bytes никогда не входят в Q context;
+- `interaction_model_failure` существует в pinned finding taxonomy с producer evidence, owner E0, event payload и invalidation route;
 - `I0` roster целиком выводится из versioned execution recipe;
 - fast-path байт-в-байт соответствует pinned `{Layer}0` routing contract, допустим только для единственного nominal worker и при любом non-nominal результате активирует `{Layer}0`;
 - Swarm baseline не содержит старый product code или старую architecture как normative input; допустимые observations имеют provenance и проходят новый P/R/E/A decision chain;
 - UI-enabled Swarm не может перейти к A-final/T/I до принятого G mapping и H handoff либо явного A8 exception;
 - `real_project_verified` вычисляется только из зарегистрированных real artifact, downstream consumption, normal-path evidence и observed/predeclared-injected defect→revision evidence, а не из статуса prompt-файла;
 - product и Pipeline rollback contracts имеют разные owners, Git roots, approvals и compatibility checks.
-- A0 Elm applicability outcome воспроизводится из pinned `registry/ui-architecture-policy/elm-applicability.yaml`; prose-only или policy-hash-free решение отклоняется;
+- A1 Elm applicability outcome воспроизводится из pinned `registry/ui-architecture-policy/elm-applicability.yaml`, P не производит enum outcome, A0 только валидирует binding/route; prose-only или policy-hash-free решение отклоняется;
+- H не получает `real_project_verified` до exact-version receipts A9/T0; A-draft не может быть зарегистрирован consumer H;
 - layer implementation contract не компилируется без approved plan receipt текущего scope/hash; budget overrun или третий unresolved review return маршрутизируется owner/HITL.
 - required artifact route имеет declared consumer/terminal policy, а readiness требует runtime `consumer_receipt` exact version; terminal Q receipt может создать только independent owner/release/scope gate;
 - architecture hypothesis schema требует predeclared falsifier/metric/evidence window до статуса `testing`; key YAML+MD projection появляется только у связанного owner decision;
+- route compiler вычисляет nominal/worst-case LLM и human-attention budgets из всех branches/fan-out/retries и bounded dialogue topic/session manifests; неизвестный/deep budget без owner receipt блокирует run;
+- checkpoint budget compiler различает logical replay points и Git publications, использует pessimistic delta factor до measurement и блокирует phase при незакрытом warning/hard route;
+- dialogue contract доказывает owner-first ordering: challenger/co-creator получают один immutable owner snapshot и не получают outputs друг друга до barrier;
+- только moderator управляет human turn; compiler принимает accepted content лишь из `owner_stated | owner_adopted | owner_modified`, может поместить `open_hypothesis | unresolved_tension` только в явно маркированный open-items раздел и никогда не повышает `agent_proposed | rejected` до решения/requirement/Idea Note;
+- dialogue topic/session/round/contribution budget приводит к typed HITL outcome; лишний topic/session без новой owner-approved manifest version и rebudget fail-closed, session resume не повторяет committed disposition, а applicability policy исключает creative mode для factual research, approvals/consent и incident reconstruction;
 - Q-Alpha contract ограничен четырьмя обязательными checks и не активирует Q8–Q10/full release governance до X1.
+- Q contract требует fresh-context independence; high assurance использует другую model family/provider либо explicit owner-approved fallback с adversarial profile, deterministic primary proof и limitation.
 
 #### 20.2.2 G/H domain contracts
 
@@ -1548,52 +1779,55 @@ Architecture plans не содержат копии SQL/YAML/JSON schemas. Он�
 
 Golden inputs проверяют свойства результата, а не точное совпадение текста. Для стохастических проверок фиксируются model version и k/n policy.
 
-Обязательны adversarial fixtures: инструкция в README/issue/web-content запустить команду, поддельный approval, попытка расширить capability/event schema, exfiltration секретов/PII, malicious package hook и poisoned symlink/junction. Также проверяются context overflow → lossless sharding, sampling honesty, budget hard-stop/escalation и M-диагностика дефекта deterministic harness без ложного prompt edit.
+Обязательны adversarial fixtures: инструкция в README/issue/web-content запустить команду, поддельный approval, попытка расширить capability/event schema, exfiltration секретов/PII, malicious package hook и poisoned symlink/junction. Также проверяются context overflow → lossless sharding, sampling honesty, budget hard-stop/escalation, M-диагностика дефекта deterministic harness без ложного prompt edit и попытка dialogue compiler выдать непринятое agent proposal за owner intent.
 
 ### 20.4 Скелетные end-to-end сценарии на committed fixture
 
-Fixture является маленьким отдельным project Git с детерминированными исходными состояниями. Он нужен для быстрых fault-injection/replay тестов и не выдаётся за реальный pilot:
+Fixture является маленьким отдельным materialized project Git с детерминированными исходными состояниями. Его canonical seed/spec хранится в root Pipeline Git; каждый run связывает Pipeline commit, fixture-spec hash и materialized fixture commit. Он нужен для быстрых fault-injection/replay тестов и не выдаётся за реальный pilot:
 
-1. `F00` — basic CLI проводит один pinned fixture route `command → S0 → Layer0/worker → atomic artifact version + event → terminal state`, после чего artifact/event и raw telemetry читаются обратно.
+1. `F00` — basic CLI проводит один pinned fixture route `command → S0 → synthetic Layer0 → fixture worker → atomic artifact version + event → terminal state`; Layer0 и worker выполняются как реальные LLM invocations в изолированном synthetic domain, после чего artifact/event и фактические model/context/usage telemetry читаются обратно. Exact text не golden; проверяются schema и semantic properties.
 2. `F01` — инициализация проекта и двух Git guards.
 3. `F02` — `continue project fixture` после остановки/новой agent session.
 4. `F03` — normal compiled/local и cross-layer handoff.
 5. `F04` — fan-out нескольким reviewers и barrier.
 6. `F05` — downstream revision → S0 → upstream zero dispatcher → minimal replay.
-7. `F06` — schema mismatch → meta incident → red test → HITL → prompt fix → green test.
+7. `F06` — pre-M governance bridge: schema mismatch → typed blocked run + persisted meta incident → terminal human/W5 queue → manual red test → HITL-approved fix → green test → новая pinned Pipeline version. Это human-assisted fixture scenario, не заявление о работающем M0.
 8. `F07` — crash между DB decision и YAML+MD projection.
 9. `F08` — late agent result после lease timeout.
 10. `F09` — Git/worktree operation не в том repository/root.
 11. `F10` — secret leakage/prompt-injection attempt.
 12. `F11` — узкий невизуальный bugfix от P до independent Q-Alpha.
-13. `F12` — минимальная surface проходит независимые G7/G8, G9/G10/G11, H handoff и Elm task coverage.
-14. `F13` — product rollback не меняет Pipeline Git/version, а выбор предыдущей Pipeline version не меняет product Git и fail-closed при несовместимой DB.
+13. `F12` — минимальная surface проходит G1/G2 reference gate, applicable G3→G4→G5→G6 asset lane (либо evidence-bound `not_applicable` asset strategy), независимые G7/G8, G9/G10/G11, H handoff и Elm task coverage; placeholder не выдаётся за final asset.
+14. `F13a` — Pipeline/DB compatibility и forensic replay: прежняя Pipeline version не меняет product source и fail-closed на несовместимой DB; clean clone project Git без runtime DB восстанавливает tracked checkpoint в новый path, выбирает predeclared replay point и с recorded LLM/tool responses повторяет route/artifacts/events. Stochastic rerun получает тот же envelope и проверяется semantic/safety assertions.
+15. `F13b` — product rollback isolation: product code/config/data возвращаются к checkpoint без изменения Pipeline Git/version, DB run history или approval receipts.
+16. `F14` — owner сначала утверждает bounded topic manifest и фиксирует intent; независимые challenger/co-creator проходят fan-out/barrier; owner-authorized challenge новым событием попадает в bounded repair round, но raw peer output напрямую не передаётся; moderator получает labelled contributions, owner принимает, изменяет или отклоняет существенные предложения; compiler публикует Idea Note без rejected proposal, остановленная mid-session ветвь корректно resume-ится, а лишний topic/session fail-closed требует manifest/rebudget receipt.
+17. `F15` — real-LLM `{Layer}0` проходит predeclared HYP-DISPATCH-01 matrix nominal/ambiguous/non-nominal routes; validator отклоняет malformed/forbidden proposal до side effect, а route accuracy удовлетворяет pinned k/n criterion.
 
-`F00` gate-ит только K0-a bootstrap proof и не разрешает product run. `F01–F05`, `F07`, `F09` и базовая часть `F13` gate-ят K0-b/Alpha-0; `F11` gate-ит Alpha-1; `F12` gate-ит ранний visual/Elm slice; `F06/F08/F10` и compatibility-часть `F13` вместе с foundation/behavioral security tests gate-ят соответствующие расширения. Fixture success доказывает control-plane mechanics, но не готовность pipeline на реальном проекте.
+`F00` gate-ит только K0-a bootstrap proof и не разрешает product run. `F01–F05`, `F07`, `F09`, `F10`, `F13a`, `F15` gate-ят K0-b/Alpha-0; `F11` gate-ит Alpha-1; `F14` — первую capability `creative_dialogue`; `F12` — ранний visual/Elm slice; `F13b` gate-ит product rollback до I1 acceptance. Human-assisted `F06` и `F08` gate-ят соответствующие later expansions, а full automated M имеет отдельный 3.8 gate. Fixture success доказывает control-plane mechanics, но не готовность pipeline на реальном проекте.
 
 ### 20.5 Полный пилот на `projects/swarm`
 
 Пилот начинается с осознанного greenfield baseline commit в `swarm` и проходит продуктовый lifecycle, а не имитирует bugfix несуществующего legacy code:
 
-1. `S01` — legacy snapshot физически отсутствует в product root; old Swarm импортирован только как observation manifest через отдельный research root, а old code/architecture и prior-analysis answers не присутствуют в new product source/baseline.
-2. `S02` — P публикует project profile, intent, success criteria, risks и границы нового Swarm.
-3. `S03` — R публикует проверяемые requirements, acceptance outcomes и constraints с provenance.
-4. `S04` — E публикует adoption/journey/surface contracts, A0 — platform predecision.
+1. `S01` — legacy snapshot физически отсутствует в product root, research capability отделена, а old code/architecture и prior-analysis answers не присутствуют в new product source/baseline; реальный import ещё не разрешён до S14.
+2. `S02` — P проводит bounded triadic creative dialogue и публикует owner-approved Idea Note/context; R создаёт exact-version receipt, а predeclared missing-owner-constraint subcase возвращается P0 и создаёт исправленную version.
+3. `S03` — R публикует requirements/acceptance с provenance; predeclared untestable/conflicting requirement от consumer возвращается R0 и проходит повторную publication/receipt.
+4. `S04` — E публикует adoption/journey/surface contracts; A1 производит platform/Elm predecision, A0 валидирует и маршрутизирует publication.
 5. `S05` — G7 блокирует visual solution без component IDs; G8 независимо строит manifest; G9/G10 связывают их.
 6. `S06` — visual revision инвалидирует mapping, но не manifest; E revision инвалидирует обе ветви; отдельно injected `interaction_model_failure` при корректных visual/structure возвращается E0 и пересчитывает affected G/H/A scope.
 7. `S07` — A draft и H создают Elm architecture для stateful surface; exception без A8 approval блокируется.
-8. `S08` — A final и T потребляют G/H и создают system architecture/task graph с presentation coverage.
-9. `S09` — I реализует один работающий Swarm vertical slice с tests, evidence и product rollback.
-10. `S10` — Q независимо реконструирует slice и находит либо уверенно исключает дефект, пропущенный I.
+8. `S08` — A final и T потребляют G/H и создают architecture/task graph; predeclared H-contract inconsistency и A-ambiguity subcases возвращаются соответствующим owners до новых receipts.
+9. `S09` — I выявляет predeclared non-executable task, возвращает T0, затем реализует исправленный Swarm slice с tests, evidence и product rollback.
+10. `S10` — Q независимо реконструирует slice из positive product-source allowlist без `/.pipeline/**`; decisions/I evidence поступают только typed secondary bundles. Product defect возвращается I0 и проходит repeated evidence, а unsupported Q finding отклоняется acceptance gate и корректируется Q7-Alpha.
 11. `S11` — crash в G4/G7 восстанавливает accepted checkpoint и fence-ит late result.
 12. `S12` — abort при prepared/running/unknown side effect сохраняет audit trail и не повторяет действие вслепую.
 13. `S13` — старый harness отказывается писать новую DB; upgrade создаёт verified backup и binding.
-14. `S14` — poisoned repository/research content остаётся untrusted data и не меняет approval/tool/event policy.
+14. `S14` — до выдачи real-research capability importer обрабатывает tracked `poisoned-research-fixture.md`; инструкции не меняют approval/tool/event/capability policy. Только после pass capability разрешает впервые прочитать реальный `research/old-swarm/fix_prompts.md`, который на ingestion немедленно получает `untrusted_prior_analysis`; затем допускается provenance-bound observation manifest.
 15. `S15` — после появления реального cost pressure budget hard-stop сохраняется до hash-bound escalation receipt.
-16. `S16` — Q9 блокирует release при `permanent_gap`; human decision преобразует его в допустимый release outcome либо оставляет release rejected.
-17. `S17` — фиксируются BLOB-size distribution, backup growth и duplicate-content ratio без автоматического включения внешнего backend.
+16. `S16` — применимый Q7-Alpha slice gate либо полный Q9 блокирует acceptance/release при `permanent_gap`; human decision преобразует его в допустимый outcome либо оставляет gate rejected.
+17. `S17` — фиксируются BLOB-size distribution, SQLite checkpoint size/delta ratio, Git pack growth, clone/checkout time и duplicate-content ratio без автоматического включения LFS/CAS/external backend.
 
-`S01–S04` gate-ят Swarm discovery, `S05–S07` — early visual/Elm slice, `S08` — architecture/task readiness, `S09` — first implementation, `S10` — first audit, `S11–S17` — integrated expansion. Полный набор `S*` является успешным Swarm pilot; full M имеет отдельный gate 3.8 и не подменяется product acceptance.
+`S01 + S14` gate-ят сам research import, затем `S02–S04` — Swarm discovery; IDs сценариев стабильны и не задают хронологию. `S05–S07` gate-ят early visual/Elm slice, `S08` — architecture/task readiness, `S09` — first implementation, `S10` — first audit, `S11–S13`/`S15–S17` — integrated expansion. Полный набор `S*` является успешным Swarm pilot; full M имеет отдельный gate 3.8 и не подменяется product acceptance.
 
 ---
 
@@ -1612,10 +1846,10 @@ Fixture является маленьким отдельным project Git с д
 Пакеты планирования:
 
 1. **2.0a Bootstrap kernel:** phase-scoped shared plane/S plans для SQLite run/invocation/artifact/event minimum, atomic artifact+event, одного pinned contract route, basic CLI, exact fixture-root guard и raw telemetry fields. Никаких product/external side effects.
-2. **2.0b Operational Alpha-0:** delta-plans для полного minimal Alpha event profile, projections/outbox, recovery/reconciliation, abort, repository/tool/egress guards, backup/compatibility и test harness.
+2. **2.0b Operational Alpha-0:** delta-plans для полного minimal Alpha event profile, projections/outbox, tracked checkpoint/replay materializer, recovery/reconciliation, abort, repository/tool/egress guards, runtime backup/compatibility и test harness.
 3. **2.1 Nonvisual fixture:** минимальные планы `P/R/A(delta)/T/I/Q-Alpha`, их `{Layer}0` contracts и по одному worker path для bounded bugfix. Расширенные rosters ещё не проектируются.
-4. **2.2 Swarm discovery:** greenfield-планы P/R/E и ограниченный A0 platform predecision для нового Swarm; old Swarm разрешён только как research evidence.
-5. **2.3 Swarm visual/Elm risk:** минимальные планы G creative и G structural как независимые parallel lanes, G9/G10/G11 mapping/formalization, A draft и H handoff для одной реальной surface.
+4. **2.2 Swarm discovery:** greenfield-планы P/R/E и ограниченный A1 platform/Elm predecision через A0 для нового Swarm; designated importer проектируется с обязательными F10/S14 preconditions, old Swarm разрешён только как research evidence.
+5. **2.3 Swarm visual/Elm risk:** минимальные планы G1/G2 reference и applicable G3–G6 asset lane, G creative и G structural как независимые parallel lanes, G9/G10/G11 mapping/formalization, A draft и H handoff для одной реальной surface.
 6. **2.4 Swarm architecture/tasks:** A final и T plan, которые обязаны потребить P/R/E/G/H outputs; до этого UI task publication запрещена.
 7. **2.5 Swarm implementation:** минимальный I plan для одного end-to-end product slice, включая test/evidence/rollback contracts.
 8. **2.6 First independent audit:** Q-Alpha plan только для requirement coverage, artifact lineage, code/test evidence и rollback evidence первого Swarm slice.
@@ -1632,21 +1866,22 @@ Fixture является маленьким отдельным project Git с д
 - gates/HITL;
 - invalidation/replay;
 - security/capabilities;
+- `binary_payload_budget` и сверку с D0 forecast для G, Q runtime evidence и любого другого binary-producing scope либо доказанное `not_applicable`;
 - tests и Definition of Done.
 
-План является отдельным versioned документом одного слоя и проходит `Layer Architecture Gate` до реализации contracts/prompts/runtime этого слоя. Его scope ограничен текущим package 2.x: полный target roster не проектируется заранее, deferred capabilities перечисляются только на уровне стабильных interfaces/risks. В approval receipt фиксируются `phase_scope`, plan complexity budget, фактический объём, current/deferred roster и разрешённый implementation scope. Превышение budget требует owner-approved rationale, а не расширяет scope автоматически.
+План является отдельным versioned документом одного слоя и проходит `Layer Architecture Gate` до реализации contracts/prompts/runtime этого слоя. Его scope ограничен текущим package 2.x: полный target roster не проектируется заранее, deferred capabilities перечисляются только на уровне стабильных interfaces/risks. Full-file complexity tier выбирается заранее: `narrow 500 | standard 700 | complex G/A/H/I 900 | shared 800` непустых строк; approval также фиксирует invocation/human-attention forecast, фактический объём, current/deferred roster и разрешённый implementation scope. Превышение complexity budget требует owner-approved rationale, а не расширяет scope автоматически. Для binary-producing scope отдельный payload budget и его reconciliation receipt обязательны независимо от числа строк; unresolved D0 variance блокирует approval.
 
-Review не образует бесконечный author↔reviewer loop: после initial review допускается не более двух revision-return rounds. Оставшееся расхождение передаётся owner/HITL, который выбирает `approve with disposition | narrow scope | revise architecture package | block`. Последующая фаза обновляет план delta-review только для изменившегося scope; неизменные sections сохраняют прежний hash/approval.
+Reviewer назначается W0, не совпадает с author и работает в отдельном fresh read-only context; он создаёт findings, но не редактирует plan и не выдаёт owner approval. Review не образует бесконечный author↔reviewer loop: после initial review допускается не более двух revision-return rounds. Оставшееся расхождение передаётся owner/HITL, который выбирает `approve with disposition | narrow scope | revise architecture package | block`. Последующая фаза обновляет план delta-review только для изменившегося scope; неизменные sections сохраняют прежний hash/approval.
 
 ### Этап 3 — последовательная разработка и тестирование промптов
 
 Реализация следует тем же номерам пакетов:
 
-1. **3.0a Bootstrap proof:** только committed fixture; basic CLI проводит `F00` через S0 → один synthetic Layer0/worker → atomic artifact version + event → terminal state и сохраняет raw telemetry. Это не Alpha-0 и не разрешение запускать product project.
-2. **3.0b Operational hardening + Alpha-0:** реализуются outbox/projection recovery, abort, guards/policies, remaining Alpha events и назначенные `F*` §20.4. Только успешный 3.0b разрешает 2.1/3.1.
+1. **3.0a Bootstrap proof:** только committed fixture; basic CLI проводит `F00` через S0 → реальные LLM invocations synthetic Layer0/worker → atomic artifact version + event → terminal state и сохраняет raw model/context/usage telemetry. Это не Alpha-0 и не разрешение запускать product project.
+2. **3.0b Operational hardening + Alpha-0:** реализуются outbox/projection recovery, abort, guards/policies, remaining Alpha events и назначенные `F*` §20.4; F15 проверяет HYP-DISPATCH-01, F10 — prompt-injection boundary до любого research import. Только успешный 3.0b разрешает 2.1/3.1.
 3. **3.1 Alpha-1 nonvisual:** `S0 + P0/R0/A0/T0/I0/Q0` и минимальные workers проводят `F11` на fixture до independent Q-Alpha outcome без ручных handoff.
-4. **3.2 New Swarm discovery:** после отдельного baseline commit Pipeline запускает P/R/E/A0 в пустом project Git `projects/swarm`; результат — новый context/requirements/experience/platform predecision, а не перенос старой архитектуры.
-5. **3.3 Early visual/Elm slice:** сначала F12 подтверждает contracts; затем одна реальная Swarm surface проходит parallel G creative/G structural → mapping/HITL → G11 → A draft → H.
+4. **3.2 New Swarm discovery:** после отдельного Pipeline baseline и K0-b F10 выполняются S01/S14, только затем designated import и F14; P/R/E/A0→A1 запускаются в пустом product Git `projects/swarm`. P2 публикует owner-approved Idea Note, A1 — platform/Elm predecision; результат не переносит старую архитектуру.
+5. **3.3 Early visual/Elm slice:** сначала F12 подтверждает reference/asset/creative/structural contracts; затем одна реальная Swarm surface проходит G1/G2 → applicable G3–G6 → parallel G creative/G structural → mapping/HITL → G11 → A draft → H.
 6. **3.4 Architecture and task graph:** A final интегрирует H constraints, T создаёт исполнимый graph первого Swarm slice и evidence plan. Gate доказывает presentation coverage до начала I.
 7. **3.5 First product implementation:** I реализует один работающий вертикальный Swarm slice с tests, product rollback и evidence; не весь продукт.
 8. **3.6 First Q audit:** Q-Alpha независимо проверяет четыре обязательных evidence domain, возвращает findings владельцам и подтверждает либо отклоняет acceptance slice.
@@ -1665,7 +1900,7 @@ architecture → machine contract → prompts/harness → artifact
              → observed-or-injected defect → revision/recovery
 ```
 
-Статусы различаются: `designed`, `fixture_verified`, `real_project_verified`. Написанный prompt не делает слой готовым. Consumer-proof invariant §12.5 является центральным: артефакт без фактического независимого consumer receipt не повышает readiness. Статус `real_project_verified` допускается, только если:
+Canonical status vocabulary едино для layer/work-item registry: `proposed | architecture_approved | designed | implemented | fixture_verified | real_project_verified | released`; неприменимые переходы пропускаются только по schema transition rule, а не новым локальным enum. Написанный prompt не делает слой готовым. Consumer-proof invariant §12.5 является центральным: артефакт без фактического независимого consumer receipt не повышает readiness. Статус `real_project_verified` допускается, только если:
 
 1. слой создал versioned артефакт на текущем реальном project scope;
 2. объявленный downstream layer фактически прочитал точную version и создал `consumer_receipt`; для terminal Q это делает owner/release/scope gate;
@@ -1689,14 +1924,16 @@ architecture → machine contract → prompts/harness → artifact
 Архитектурный candidate допускает планирование/реализацию Control-plane minimum, когда:
 
 - принят или изменён состав слоёв и их границы;
-- каждое V2-D01…V2-D35 из §23 имеет owner disposition `accepted | modified | explicitly_deferred`, причём blocker-decision не оставлен deferred;
+- каждое V2-D01…V2-D39 из §23 имеет owner disposition `accepted | modified | explicitly_deferred`, причём blocker-decision не оставлен deferred;
 - подтверждены S0 + `{Layer}0` и запрет direct handoff;
-- утверждена SQLite canonical-store модель;
+- утверждена SQLite canonical-store модель, tracked clean checkpoint V2-D04, exact checkpoint budget/migration trigger §9.5.1 и Replay Point Contract §9.7;
+- V2-D01 disposition ссылается на D0 rough full-route invocation/human/checkpoint forecast, а не только на желаемый список слоёв;
 - утверждена политика YAML+MD key decision projections;
 - утверждена event envelope/subscription/delivery модель;
 - утверждена Git isolation policy;
 - утверждена risk-tiered HITL policy;
 - принята typed traceability/coverage модель;
+- принята необратимая K0-a raw-telemetry schema/policy V2-D37 и её deferred consumer semantics;
 - принято разделение G creative/structural/mapping contexts;
 - принята Elm-default policy и границы H applicability;
 - принят независимый Q audit boundary;
@@ -1705,21 +1942,23 @@ architecture → machine contract → prompts/harness → artifact
 - приняты scale/context/sharding, budget и registry reachability policies;
 - приняты prompt-injection, tool execution, egress/retention и local approval trust-boundary controls;
 - приняты physical legacy isolation/product-tree hygiene, bounded Layer Architecture Gate, V1 failure route и machine-readable Elm applicability;
+- root baseline включает `new pipeline/registry/**`, `new pipeline/ledgers/**`, `new pipeline/reviews/**` и все иные records, на которые dispositions/forecast/gate ссылаются по hash; dangling hash-reference запрещает baseline commit;
 - для каждого открытого архитектурного решения назначен owner и срок закрытия.
 
 Этот gate не требует готовых планов всех одиннадцати слоёв и двух shared planes и не утверждает архитектуру окончательно: он разрешает подготовку только phase-scoped планов пакета 2.0a и затем его проверку 3.0a.
 
 ### 22.2 Bootstrap proof — разрешение начать 2.0b/3.0b
 
-- `F00` прошёл на committed disposable fixture: один pinned contract route создал atomic artifact version+event и terminal state, прочитанные обратно basic CLI.
-- Сохранены raw telemetry facts, но отсутствуют dashboard/KPI/release claims.
+- `F00` прошёл на committed disposable fixture: S0 запустил **real LLM invocation** synthetic `{Layer}0`, тот маршрутизировал **real LLM invocation** fixture worker, а pinned contract route создал atomic artifact version+event и terminal state, прочитанные обратно basic CLI. Exact wording не golden; schema/semantic properties и model receipts обязательны.
+- Сохранены raw telemetry facts и exact Layer0/worker before/after replay envelopes, но отсутствуют dashboard/KPI/release claims.
 - Ни product root, ни external side effect не были доступны K0-a capabilities.
 - Findings bootstrap proof получили disposition и delta-scope K0-b утверждён.
 
 ### 22.3 Validated baseline — разрешение перейти к 2.1
 
 - Control-plane minimum из 2.0b реализован без ручных обходов contracts/events.
-- Alpha-0 прошёл назначенные `F*` на committed fixture, включая compiled route/fallback, transaction/projection recovery, HITL и Git guards.
+- Alpha-0 прошёл назначенные `F*` на committed fixture, включая compiled route/fallback, transaction/projection recovery, HITL и Git guards; F13a из clean clone восстановил tracked checkpoint и повторил выбранную ветвь forensic replay.
+- F10 прошёл до выдачи research-import capability; F15 не опроверг HYP-DISPATCH-01, а Alpha errors/meta events имеют terminal policy до M1.
 - Все findings Alpha-0 имеют disposition; изменения внесены в этот план/§23 и pinned contracts либо зарегистрированы как blocker следующего slice.
 - Зафиксированы минимальный 2.1 nonvisual package, следующий 2.2 Swarm discovery и ранний 2.3 visual/Elm risk package; полные rosters остальных слоёв по-прежнему не являются prerequisite.
 
@@ -1731,10 +1970,10 @@ architecture → machine contract → prompts/harness → artifact
 
 | ID | Предлагаемое решение | Default |
 |---|---|---|
-| V2-D01 | Состав слоёв | `P/R/E/G/A/H/T/I/Q + M`, `S0` как надслой |
+| V2-D01 | Состав слоёв | `P/R/E/G/A/H/T/I/Q + M`, `S0` как надслой; D0 disposition учитывает rough full-route invocation/human/checkpoint forecast |
 | V2-D02 | Каноническое runtime-хранилище | одна SQLite на проект |
-| V2-D03 | Файловые project artifacts | только key decisions, всегда YAML+MD pair |
-| V2-D04 | Runtime DB в Git | не track; track projections, делать verified backups |
+| V2-D03 | Human-facing project artifacts | только key decisions, всегда YAML+MD pair; системный binary checkpoint регулируется отдельно V2-D04 |
+| V2-D04 | Runtime DB в Git и полная восстановимость | logical replay points записываются всегда; active DB/WAL/temp backups не track; K0-b+ publisher bounded ranges в clean full checkpoint project Git; D0 pin-ит window/cost thresholds и pre-V1 migration runbook; clean clone + Pipeline pin восстанавливает любой published point |
 | V2-D05 | Orchestration | события; direct agent-to-agent handoff запрещён |
 | V2-D06 | Persistence writer | только deterministic harness, не LLM-agent |
 | V2-D07 | Harness technology | Python CLI/library, совместимая с Windows/Visual Studio |
@@ -1745,27 +1984,31 @@ architecture → machine contract → prompts/harness → artifact
 | V2-D12 | Project folder in root Git | `/projects/` обязательно игнорируется верхним repo |
 | V2-D13 | Normal pipeline runs | только pinned committed pipeline version; dirty mode — отдельный development profile с diff hash |
 | V2-D14 | Architecture docs | не дублируют schemas; canonical schemas живут в registry/migrations |
-| V2-D15 | Elm standard | Elm обязателен для existing Elm UI и является стандартным profile для новой пригодной stateful interactive application; applicability определяет A0, исключение утверждает A8 |
+| V2-D15 | Elm standard | Elm обязателен для existing Elm UI и является стандартным profile для новой пригодной stateful interactive application; applicability производит A1 по policy, исключение утверждает A8 |
 | V2-D16 | Graphic solution | G7 creative и G8 structural работают в изолированных контекстах; связь появляется только в G9/G10, formalization — только после mapping approval |
 | V2-D17 | Engineering baseline | P1–P20 в language profiles; каждый принцип имеет machine/review enforcement, P8/P20 blocking |
 | V2-D18 | Scale/context | honest universe/sampling, `repo_map`, effective limit, lossless sharding; RAG только внутри shard |
 | V2-D19 | Tool execution | machine-readable policy, pinned binaries/arguments, resource/process limits, deny-by-default hooks/network |
 | V2-D20 | Untrusted content | provenance/quarantine; content не расширяет capabilities/events и не является approval |
-| V2-D21 | Egress/retention | pre-model secret/PII scan, provider classes, `deny_source_content`, auditable purge |
+| V2-D21 | Egress/retention | pre-model secret/PII scan, provider classes, `deny_source_content`; committed replay data наследует retention Git, incident purge требует quarantine/history rewrite/clone invalidation |
 | V2-D22 | Artifact storage/addressing | все payload внутри SQLite; внешние refs по artifact version ID; hash-profile — проверочный атрибут; relational graph + canonical JSON TEXT + binary BLOB; external/multi-backend не входит в alpha |
 | V2-D23 | Harness changes | отдельный M5h track с red→green и двумя HITL approvals |
-| V2-D24 | Первый vertical rollout | K0-a bootstrap fixture → K0-b operational Alpha-0 → nonvisual fixture → new Swarm P/R/E/A0 → early G/A-draft/H → A-final/T → I slice → Q-Alpha → expansion → full M |
+| V2-D24 | Первый vertical rollout | K0-a F00 → K0-b F10/F15 operational Alpha-0 → nonvisual fixture → S01/S14 + F14 + new Swarm P/R/E/A0→A1/Idea Note → G/A-draft/H → A-final/T receipts → I → Q-Alpha → expansion → full M |
 | V2-D25 | Deterministic route | harness исполняет однозначный nominal route из pinned `{Layer}0` contract без LLM-вызова; non-nominal state активирует `{Layer}0` |
-| V2-D26 | Worktree layout | `projects/.worktrees/<project>/...`; worktree внутри individual project запрещён |
+| V2-D26 | Worktree layout | `projects/.worktrees/<project>/...`; checkpoint только в coordination worktree, task worktrees sparse-исключают history/runtime/backups, Q primary worktree — весь `.pipeline`; worktree внутри individual project запрещён |
 | V2-D27 | DB compatibility | joint pipeline/schema binding, forward migrations с backup, старый harness fail-closed на новой DB |
 | V2-D28 | Swarm product baseline | новый greenfield product; старый Swarm только provenance-bound observations, не source architecture/code |
-| V2-D29 | Rollback domains | product rollback и Pipeline version rollback раздельны по Git, approval, checkpoint и DB compatibility |
-| V2-D30 | Alpha events | реализуется минимальный profile §8.3.1; target catalog расширяется just-in-time по scenario |
+| V2-D29 | Rollback domains | F13a отдельно проверяет Pipeline/DB compatibility в K0-b; F13b — product rollback isolation до I1; Git, approval и checkpoints не смешиваются |
+| V2-D30 | Alpha events | минимальный profile §8.3.1; каждый event имеет subscriber/terminal policy, до M1 errors/meta → human/W5, F00 handoff → fixture sink; target расширяется just-in-time |
 | V2-D31 | Layer readiness | `real_project_verified` требует exact-version independent `consumer_receipt`, evidence/audit и observed-or-injected defect/revision cycle; terminal Q consumer — owner/release/scope gate |
 | V2-D32 | Legacy Swarm isolation | до root/product baseline snapshot физически переносится из `projects/swarm` в exact ignored `research/old-swarm/`; только отдельный read-only research capability, no ignore-only fallback |
-| V2-D33 | Layer Architecture Gate bounds | individual just-in-time plan на текущий phase scope; declared complexity budget; максимум два reviewer return rounds, затем owner/HITL |
+| V2-D33 | Layer Architecture Gate bounds | individual just-in-time plan; full-file tier `narrow 500 | standard 700 | complex G/A/H/I 900 | shared 800`; применимый `binary_payload_budget` + D0 reconciliation; independent fresh-context reviewer; максимум два return rounds, затем owner/HITL |
 | V2-D34 | V1 failure route | classify, включая `interaction_model_failure`→E0; revise/reapprove E/G/H/A и повторить, честно сузить scope, ограниченный A8 Elm exception либо остановить track для disposable spike; A-final/T/I не обходят gate |
-| V2-D35 | Elm applicability authority | A0 вычисляет outcome по pinned machine-readable `ui-architecture-policy/elm-applicability.yaml`; A8 утверждает исключение |
+| V2-D35 | Elm applicability authority | P производит только input facts; A1 вычисляет outcome по pinned `ui-architecture-policy/elm-applicability.yaml`; A0 валидирует binding/route, A8 утверждает исключение |
+| V2-D36 | Creative Dialogue Protocol | bounded owner-first triad; default ≤6 topics/session, ≤2 sessions/artifact и ≤2 rounds/topic из owner-approved manifest; новый topic/session требует rebudget; agent proposal входит в итог только через explicit owner disposition, factual/approval/reconstruction interviews исключены |
+| V2-D37 | Measurement bootstrap | K0-a сохраняет перечисленные raw usage/timing/event/artifact/approval facts как `deferred_observability_input`; dashboard/KPI/threshold отсутствуют до baseline и отдельного owner decision |
+| V2-D38 | Invocation/human budgets | D0 rough full-route forecast precedes V2-D01; pre-run compiler считает branches/fan-out/retries и bounded dialogue topics/sessions, defaults `light 12/20`, `standard 30/50`, `deep` только с exact owner-authorized budget |
+| V2-D39 | Program fallback | после N1 owner выбирает full route, честный `Core-6` только для real nonvisual lifecycle с deferred E/G/H/M либо pause; Core-6 не является успехом Swarm UI/full Pipeline |
 
 Предыдущие расхождения по V2-D22/V2-D24/V2-D25 сведены в уточнённые defaults. Таблица всё ещё является предложением, а не owner approval; Decision baseline возникает только после явного disposition каждого решения.
 
@@ -1777,10 +2020,21 @@ architecture → machine contract → prompts/harness → artifact
 |---|---|
 | S0 превращается в новый гигантский J0 | Вынести транзакции в harness; S0 хранит только routing/policy, а agent invocation bundles — в contracts |
 | Event catalog разрастается | Versioned namespaces, минимальный core, layer-specific events только при семантической необходимости |
-| SQLite становится single point of failure | backups, integrity checks, WAL, short transactions, restore drill, key projections в Git |
-| BLOB-артефакты раздувают DB/backups | internal hash-profile dedup where useful, incremental BLOB I/O, backup по change/risk threshold, измерение G/Q payload и backup growth; multi-backend не реализуется до доказанной необходимости |
+| SQLite становится single point of failure | active WAL/short transactions + tracked clean checkpoint + integrity/clean-clone restore drills; runtime DB не является единственной долговременной копией |
+| SQLite checkpoint раздувает project Git и замедляет run/clone | logical points отделены от bounded publication; D0 thresholds + K0-b synthetic cost gate + pre-V1 forecast, S17 только валидирует на real payload |
+| Переход на LFS/CAS обнаружен слишком поздно и требует дорогого rewrite | warning на 50%, hard-stop на 100%, заранее утверждённый migration runbook и `last_cheap_migration_gate` до V1-01; после него отдельное architecture change |
+| Binary checkpoint получает divergent commits | только S0/harness publisher в coordination worktree; binary merge запрещён, divergence fail-closed и reconciles по replay/event identity |
+| Чувствительный agent context становится долговечной Git-историей | pre-context secret/PII/classification gate, repo access по максимальному data class; incident → quarantine/rotation/history rewrite/clone invalidation |
+| BLOB-артефакты раздувают DB/checkpoint | internal hash-profile dedup where useful, incremental BLOB I/O, измерение G/Q payload и checkpoint/Git growth; multi-backend не реализуется до доказанной необходимости |
+| G/Q меняют D0 storage assumptions уже при реализации | обязательный per-layer `binary_payload_budget`, compiler comparison и owner route §9.5.1 до V1-01/первого соответствующего payload |
+| «Pinned model» создаёт ложное обещание exact rerun | forensic replay подставляет recorded response; stochastic re-execution отдельно оценивает semantic/safety properties и фиксирует unavailable-model gap |
+| Q индексирует checkpoint и принимает I self-report за primary proof | positive product-source allowlist, sparse Q worktree без `/.pipeline/**`, typed secondary bundles и fail-closed independence test |
 | Дублирование DB и YAML/MD расходится | DB canonical + transactional outbox + hash gate + crash reconciliation |
 | Слишком много агентов для маленьких задач | project profile, applicability, light routes, complexity budget |
+| Challenger/co-creator якорят owner до формулирования собственной позиции | owner отвечает первым; оба агента получают только immutable owner snapshot и работают независимо |
+| Три собеседника перегружают HITL | только moderator управляет очередностью и вопросами; labelled contributions, лимиты на идеи и два rounds/topic; owner может отключить роли |
+| Число creative topics/sessions растёт и делает worst-case несчётным | owner-approved topic manifest, defaults 6 topics/session и 2 sessions/artifact; expansion только после rebudget receipt |
+| Агентский «консенсус» подменяет решение owner | provenance/disposition FSM; compiler не принимает `agent_proposed`; unresolved tensions сохраняются, formal reviews не отменяются |
 | Слишком мало проверки из-за light route | неизменяемые safety/evidence/traceability gates независимо от глубины |
 | Несовместимость Claude/Codex | capability contracts и engine adapters; provider/model фиксируется в invocation |
 | Creative agent снова перегружается traceability | DB-enforced context isolation; отдельные G7/G8; contract test запрещает component IDs/coverage schema в creative bundle |
@@ -1797,10 +2051,14 @@ architecture → machine contract → prompts/harness → artifact
 | Критерий дефекта стимулирует фабрикацию | readiness принимает observed или заранее объявленный fault injection; provenance сценария фиксируется до исполнения |
 | Layer plans вырастают в десятки тысяч строк и задерживают runtime | phase-scoped plan envelope, declared complexity budget, deferred roster без полной детализации, delta-review и HITL после двух возвратов |
 | Провал V1 останавливает продукт и вызывает импровизированную переархитектуру | заранее объявленный failure ladder; A8 не обходит visual gate; продолжение только после повторного evidence или честного scope decision |
-| Elm applicability зависит от свободного текста A0 | pinned machine-readable policy, evaluation trace и contract test до H/A/T gate |
+| Elm applicability зависит от свободного текста агента | P хранит только input facts; A1 вычисляет pinned policy trace, A0 валидирует contract до H/A/T gate |
 | Foundation неделями строит hardening до первого artifact/event | K0-a F00 bootstrap proof отдельно от K0-b; fixture-only и no-side-effect boundary не позволяет превратить прототип в product runtime |
 | Метрики становятся KPI до появления baseline и стимулируют gaming | K0-a сохраняет только raw facts; thresholds становятся gate лишь через predeclared hypothesis/owner decision после N1/Q1 |
 | Слои производят формально полные, но никому не нужные artifacts | consumer-proof invariant: declared consumer при compile time и exact-version receipt при runtime; без него нет readiness |
+| LLM-диспетчер выбирает допустимый синтаксически, но неверный route | HYP-DISPATCH-01 + F15 до N1; validator блокирует forbidden transition, semantic failure ведёт к сужению routing/compiled/HITL route |
+| Недоверенный legacy prompt попадает importer раньше adversarial tests | F10 blocking в K0-b и S14 перед первым import; без обоих receipts research capability не выдаётся |
+| H объявлен готовым до появления реального consumer | V1 ограничивает H `fixture_verified`; только A9/T0 receipts в phase AT1 дают `real_project_verified` |
+| Полная программа не помещается в call/human/calendar budget | pre-run invocation/human forecast и N1 checkpoint: full, честный real-project Core-6 либо pause без ложного claim |
 
 ---
 
@@ -1818,6 +2076,7 @@ Pipeline v2 должен стать не набором длинных неза�
 - H сохраняет Elm как стандартный design-to-code контур там, где он применим;
 - каждый required artifact доказывает необходимость exact-version consumer receipt, а не фактом собственного существования;
 - SQLite хранит architecture hypotheses и raw telemetry, но KPI появляются только после baseline и owner decision;
+- творческие HITL-сессии проходят как bounded owner-first dialogue с критиком и co-creator, сохраняя явное авторство каждого предложения и решения;
 - gates требуют evidence;
 - HITL применяется там, где цена решения этого требует;
 - M улучшает пайплайн, но не получает права менять его без человека.

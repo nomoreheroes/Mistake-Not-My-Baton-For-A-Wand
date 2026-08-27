@@ -1,2 +1,5 @@
 # Project workspaces have their own Git repositories.
 /projects/
+
+# Legacy product snapshots are available only through the read-only research root.
+/research/old-swarm/

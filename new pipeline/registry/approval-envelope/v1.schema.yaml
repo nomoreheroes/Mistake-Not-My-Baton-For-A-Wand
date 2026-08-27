@@ -1,0 +1,170 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "pipeline-v2://registry/approval-envelope/v1"
+title: Pipeline v2 approval envelope
+type: object
+additionalProperties: false
+required:
+  - envelope_id
+  - schema_version
+  - approval_type
+  - actor
+  - approved_at
+  - authority_ref
+  - decision
+  - records
+  - approved_scope
+  - provenance
+  - integrity
+properties:
+  envelope_id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9._-]+$"
+  schema_version:
+    const: 1
+  approval_type:
+    enum:
+      - d0_decision_baseline
+      - layer_architecture_plan
+      - budget_escalation
+      - meta_change
+      - meta_publish
+      - risk_acceptance
+  actor:
+    type: object
+    additionalProperties: false
+    required: [actor_id, role]
+    properties:
+      actor_id: {type: string, minLength: 1}
+      role: {type: string, minLength: 1}
+      authentication_ref: {type: [string, "null"]}
+  approved_at: {type: string, format: date-time}
+  authority_ref: {type: string, minLength: 1}
+  decision:
+    enum: [approved, approved_with_overrides, narrowed, rejected]
+  records:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [role, path, sha256]
+      properties:
+        role: {type: string, minLength: 1}
+        path: {type: string, minLength: 1}
+        sha256: {type: string, pattern: "^[0-9a-f]{64}$"}
+        projection_path: {type: [string, "null"]}
+        projection_sha256:
+          anyOf:
+            - {type: string, pattern: "^[0-9a-f]{64}$"}
+            - {type: "null"}
+  decision_dispositions:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [decision_id, disposition]
+      properties:
+        decision_id: {type: string, pattern: "^V2-D[0-9]{2}$"}
+        disposition: {enum: [accepted, modified, explicitly_deferred]}
+        rationale: {type: string}
+  overrides:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [field_path, replacement_value, rationale]
+      properties:
+        field_path: {type: string, minLength: 1}
+        replacement_value: {}
+        rationale: {type: string, minLength: 1}
+  approved_scope:
+    type: object
+    minProperties: 1
+  provenance:
+    type: object
+    additionalProperties: false
+    required: [mode, source_ref]
+    properties:
+      mode: {enum: [authenticated_runtime, signed_file, conversational_only]}
+      source_ref: {type: string, minLength: 1}
+      limitations: {type: array, items: {type: string}}
+  integrity:
+    type: object
+    additionalProperties: false
+    required: [profile, profile_version, profile_ref, excluded_field_path, canonical_payload_sha256]
+    properties:
+      profile: {const: canonical-yaml-v1}
+      profile_version: {const: 1}
+      profile_ref: {const: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml}
+      excluded_field_path: {const: integrity.canonical_payload_sha256}
+      canonical_payload_sha256: {type: string, pattern: "^[0-9a-f]{64}$"}
+      external_complete_file_binding_ref: {type: [string, "null"]}
+allOf:
+  - if:
+      properties:
+        approval_type: {const: d0_decision_baseline}
+      required: [approval_type]
+    then:
+      required: [decision_dispositions]
+      properties:
+        decision_dispositions:
+          minItems: 39
+          maxItems: 39
+          uniqueItems: true
+x-pipeline-validation:
+  d0_decision_baseline:
+    exact_decision_id_set:
+      - V2-D01
+      - V2-D02
+      - V2-D03
+      - V2-D04
+      - V2-D05
+      - V2-D06
+      - V2-D07
+      - V2-D08
+      - V2-D09
+      - V2-D10
+      - V2-D11
+      - V2-D12
+      - V2-D13
+      - V2-D14
+      - V2-D15
+      - V2-D16
+      - V2-D17
+      - V2-D18
+      - V2-D19
+      - V2-D20
+      - V2-D21
+      - V2-D22
+      - V2-D23
+      - V2-D24
+      - V2-D25
+      - V2-D26
+      - V2-D27
+      - V2-D28
+      - V2-D29
+      - V2-D30
+      - V2-D31
+      - V2-D32
+      - V2-D33
+      - V2-D34
+      - V2-D35
+      - V2-D36
+      - V2-D37
+      - V2-D38
+      - V2-D39
+    duplicate_decision_id: rejected
+    missing_or_extra_decision_id: rejected
+    required_record_roles:
+      - dispositions
+      - forecast
+      - gate_contract
+      - checkpoint_policy
+    each_required_record_role_exactly_once: true
+  canonical_hash_profile:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+    version: 1
+    sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+x-pipeline-projection:
+  path: new pipeline/registry/approval-envelope/v1.schema.md
+  sha256: 4087ca9b11358d74946e82613697493e6993c7340b4b6281fbcb86a5e5228163

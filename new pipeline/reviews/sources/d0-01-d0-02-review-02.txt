@@ -1,0 +1,133 @@
+Повторное независимое ревью — revision 1 пакета D0-01 / D0-02
+Прочитаны все записи заново (включая четыре новых файла в registry/ и reviews/), полностью пересчитаны обе модели, перепроверены все hash-привязки и оба git-дерева. Содержимое legacy snapshot по-прежнему не открывалось.
+
+Verdict
+approve_with_changes
+
+Все 4 Blocker и все 13 Serious первого раунда закрыты; 10 Moderate и 6 Minor закрыты полностью. Blocker'ов не осталось. Пересчёт revision 1 сходится во всех проверенных ячейках — модель впервые стала воспроизводимой сторонним проверяющим.
+
+34 решения можно передавать владельцу немедленно — ничто в этом раунде их не затрагивает. Пять заблокированных (V2-D01, D04, D22, D33, D38) закрываются перечисленными ниже правками уровня «поле/строка/локальный пересчёт», без нового цикла моделирования.
+
+Что подтверждено пересчётом
+Проверено независимо, ячейка за ячейкой:
+
+Проверка	Результат
+checkpoint[n] = prior + calls × points × bytes + fixed + binary	Сходится во всех 10 фазах для nominal и worst (все 20 значений checkpoint_unrounded_mib и все 20 checkpoint_bytes после ceil до MiB)
+pack = rounded_checkpoint × publications × 1.0	Сходится во всех 18 ненулевых ячейках
+Суммы пакетов → llm_invocations по фазе	Сходятся во всех 10 фазах (nominal и worst)
+checkpointed = total − plan calls	Сходится во всех 20 значениях
+publication_trigger_counts → checkpoint_publications_per_phase	Суммы сходятся во всех 18 ячейках
+Итоги 288 / 722, 140 / 338, 12 299 796 480 / 123 084 996 608	Все пересчитаны и совпали до байта
+Модель plan-calls (new 1+1/6, delta 1+1/4) против backlog §12	Сходится по всем 10 package-строкам; 13 новых планов = ровно 11 слоёв + 2 shared plane
+Формула диалогов topics × rounds × roles	P2 4×1×3=12/12×2×3=72 ✓, E2 то же ✓, G 3×3=9 / 8×3=24 ✓; свёрнуто в S1 24/144 и V1 9/24 ✓
+Binary: count × mean = aggregate	G 20×2=40 / 40×4=160 ✓; Q 12×2=24 / 28×4=112 ✓
+F-D0-02 (точки первых пересечений)	Проверено и верно: nominal pack — V1; nominal checkpoint — Q1; worst pack — N1; worst checkpoint — S1 (с оговоркой R-05 ниже)
+Все package-профили против tier'ов D0-02	Все 22 пакета в пределах light 12/20 / standard 30/50 / exact deep ✓
+Human tier'ы против tier_binds: nominal_and_worst_case	K0-a standard (1/1/20, 2/3/60) вписывается; остальные high_attention с exact-значениями ✓ — противоречие S1/X1 устранено
+MD ↔ YAML во всех четырёх парах	Ни одного числового расхождения
+Граф hash-привязок	Замкнут полностью: 10 из 10 объявленных sha256 совпали с фактическими байтами (план 0.14, dev 0.11, forecast, обе проекции, d0-02, checkpoint-policy, approval-envelope, contract_ref, forecast_binding)
+Git-правила (перепроверено командами)	-journal добавлен ✓, old swarm/ теперь ловит и вложенные ✓, checkpoint остаётся TRACKABLE ✓, .pipeline/decisions/ TRACKABLE ✓
+Статус 33 findings первого раунда
+Раунд 1	Статус
+B-01 design-time calls	Частично — исправлено в D0-01, не перенесено в D0-02 / §16.1.2 / dev §4.2 → R-01
+B-02 projection за hard-stop	Закрыто ✓ — threshold_status + execution_condition в каждой строке, reachability_note, F-D0-02 переписан и верен
+B-03 payload ↔ checkpoint	Закрыто ✓ — binary входит в формулу; V1 +40/+160, Q1 +24/+112
+B-04 checkpoint-budget-policy	Закрыто ✓ — registry/checkpoint-budget-policy/v1.yaml, все 8 полей §9.5.1, привязан hash'ем из forecast и из V2-D04
+S-01 publications	Закрыто ✓ — единица объявлена, выведена из триггеров, runs_per_phase есть, max_publications_per_run переопределён как guard. Остаточное: под-счётчик window_limit → R-03
+S-02 нет вывода checkpoint	Частично — модель добавлена и пересчитывается ✓, но fixed_non_binary_growth (49 % nominal) остался утверждением → R-02
+S-03 delta_factor 1.0	Закрыто ✓ — no_delta_bound_assumptions (page churn, VACUUM, incompressible BLOB), expected_*: unknown_until_k0b, program_sum_label
+S-04 human tiers	Закрыто ✓
+S-05 package vs phase	Закрыто ✓ — packages[] + tier_scope. Остаточное: идентичность пакетов → R-10
+S-06 dialogue_seed	Закрыто ✓
+S-07 цикл compiler	Закрыто ✓ — enforcement с этапами before_compiler / K0a / K0b / from_N1 для обоих бюджетов
+S-08 approval_criteria	Закрыто ✓ — разделение + deterministic_validator_authority: machine_checkable_only + reference test 12
+S-09 stale_conditions	Закрыто ✓ — 7 обязательных условий + тест «даже если план их не объявил»
+S-10 receipt binding	Закрыто ✓ — gate-contract hash, self-hash, self_hash_rule. Остаточное: профиль канонизации → R-09
+S-11 approval envelope	Закрыто ✓ — полноценная JSON-схема. Остаточное: два ограничения → R-08
+S-12 D22 ↔ D04	Закрыто ✓ — условие + cross_decision_ref, оба блокированы вместе
+S-13 k0a_blocker	Закрыто ✓ — проставлено во всех 39
+M-01…M-10	Все закрыты ✓ (M-01 — с обоснованной модификацией: взаимные hash'и невозможны, применена односторонняя привязка YAML→MD плюс конверт, хеширующий оба файла — это корректное решение)
+Mi-01…Mi-06	Все закрыты ✓ (проверено фактически: -journal, вложенный old swarm/, файл nul 83 байта присутствует, манифест содержимого, префиксы policy_*, artifact count для G)
+Запись ревью в reviews/d0-01-d0-02-review-01.yaml честно фиксирует все 33 findings как принятые и не выдаёт owner approval.
+
+Blocker
+Нет.
+
+Serious
+R-01 — правило подсчёта design-time вызовов не перенесено из D0-01 в исполняемые документы
+Где: d0-02…yaml invocation_budgets.counting_includes; PIPELINE_V2_ARCHITECTURE_PLAN.md §16.1.2; dev-план §4.2
+Что недоказано: D0-01 теперь явно разделяет layer_plan_initial_authoring / mandatory_fresh_context_layer_plan_review / bounded_revision_return_author_and_reviewer_calls и workers_and_independent_runtime_reviewers. Но D0-02 сохранил прежний runtime-список (S0_and_Layer0_reasoning_calls, workers, reviewers, dialogue_roles, retries, fallbacks), а §16.1.2 — прежнюю формулировку «в count входят LLM-вызовы S0/{Layer}0, workers, reviewers, retries, fallback и dialogue roles». Изменена только запись 0.14/0.11 в шапках.
+Последствие: бюджет любого layer-плана будет составлен по одним правилам подсчёта, а сверяться с D0-01 — по другим. Первый же forecast_reconciliation_ref на K0a-00 даст ложный forecast-variance и заблокирует собственный gate. Это ровно тот дефект, который B-01 должен был устранить.
+Минимальная правка: добавить в D0-02 invocation_budgets.counting_scope: {plan_production_package: [author_call, fresh_context_reviewer_call, bounded_revision_return_calls], runtime_package: [...]} со ссылкой на new_plan_call_model/delta_plan_call_model из D0-01, и повторить абзац в §16.1.2 и dev §4.2.
+Тип: document_defect
+
+R-02 — fixed_non_binary_growth не выведен, а это половина nominal-чекпоинта
+Где: d0-01-full-route-forecast.yaml phase_forecast[*].checkpoint_growth_mib.fixed_non_binary_*
+Что недоказано: значения 2/4/6/10/10/6/8/6/10/6 MiB заданы без единой формулы и без количественных составляющих; phase_fixed_non_binary_growth_includes перечисляет три категории, но ни счётчиков, ни байт на единицу. Вклад: 68 из 139 MiB nominal (49 %) и 134 из 547 MiB worst (25 %) — больше, чем replay-часть, которая как раз выведена.
+Последствие: запись объявляет себя Recalculable D0 reference model, но крупнейший небинарный драйвер пересчитать нельзя. V2-D04 принимается по числу, половина которого — постулат.
+Минимальная правка: разложить на объявленные единицы (events × байт, deliveries × байт, artifacts/decisions × байт, tool/human replay × байт), либо переименовать поле в asserted_fixed_non_binary_growth и добавить derivation: none_before_k0b рядом с существующим caveat.
+Тип: missing_independent_evidence
+
+R-03 — триггер window_limit не выведен; worst-case S1 нарушает собственное окно
+Где: phase_forecast[*].publication_trigger_counts.*.window_limit; checkpoint-budget-policy/v1.yaml publication_window
+Что неверно: четыре из пяти триггеров выведены из runs_per_phase и human-сессий, пятый — только заявлен. Три отдельные проблемы:
+
+Арифметическое нарушение. S1 worst: 180 checkpointed × 4 точки = 720 replay points при max_unpublished_replay_points: 10 → обязательный минимум 72 публикации, заявлено 34. Пересчёт pack: 112 197 632 × 72 = 7.52 GiB вместо заявленных 3.55 GiB. (Остальные девять фаз проверены — там от 1.8 до 7.6 точек на публикацию, нарушений нет.)
+Триггер времени не смоделирован. max_unpublished_minutes: 5 не участвует нигде. При типичной длительности вызова любой run длиннее 5 минут даёт принудительную публикацию; для V1 (8 runs, 39 вызовов) это одна-две публикации на run, то есть 8–16, тогда как весь window_limit объявлен равным 4.
+Replay points считаются только от LLM-вызовов. §9.5 требует границы также вокруг human answer/approval, внешних tool-взаимодействий и side-effect intent/result. Их байты учтены в fixed_non_binary_growth, но их количество в оконный триггер не входит — систематическое занижение во всех фазах. Последствие: публикации — прямой множитель pack-границы. Занижение переносится на каждую строку и на оба итога. Минимальная правка: добавить replay_points_per_phase (включая нечисленные сейчас источники), вычислять window_limit = max(ceil(points / 10), ceil(unpublished_minutes / 5)) и пересчитать строку S1 worst. Тип: document_defect
+R-04 — 16/64 KiB на replay point опираются на дедупликацию, которой архитектура не обещает
+Где: checkpoint_size_model.assumed_new_unique_bytes_per_replay_point_after_internal_payload_dedup; PIPELINE_V2_ARCHITECTURE_PLAN.md:883-889 §9.3 п.1 и п.7
+Что недоказано: §9.3 п.7 описывает дедупликацию как оппортунистическую, по уникальному (hash_profile_id, digest), во внутреннем payload storage — то есть дедупликацию целых payload по digest, и прежде всего бинарных. §9.7 при этом требует хранить ordered exact rendered agent context bytes payload-ом, а не hash/path. У каждого replay point отрендеренный контекст — своя байтовая строка со своим digest, поэтому дедупликация целых payload на нём не срабатывает. Механизма chunk/delta-дедупликации в архитектуре нет.
+Последствие: допущение несущее — в S1 worst replay-часть даёт 45 из 107 MiB (42 %), а S1 worst и есть заявленная точка первого worst-case пересечения по размеру чекпоинта. Чувствительность: при 160 KiB на точку (×10) nominal-чекпоинт пересекает hard stop уже на V1, а не на Q1.
+Минимальная правка: либо зафиксировать дедупликацию контекстов как архитектурное обязательство (новый пункт §9.3 с механизмом), либо заменить одно число диапазоном {low: 16384, high: 262144} и опубликовать вариант чекпоинта по верхней границе рядом с основным.
+Тип: missing_independent_evidence
+
+R-05 — накопительная цепочка смешивает fixture-DB и Swarm project DB
+Где: checkpoint_size_model.project_db_invocation_scope и formula (prior_unrounded_checkpoint) против PIPELINE_V2_ARCHITECTURE_PLAN.md:835-851 §9.1 и §11.4 п.5
+Что неверно: §9.1 — «одна SQLite на проект», обе базы «принадлежат только этому проекту»; §11.4 п.5 материализует fixture как отдельный project-area Git со своим .pipeline/history/pipeline-checkpoint.sqlite3. По карте фаз K0-a, K0-b и N1 исполняются только на fixture; Swarm project DB появляется не раньше S1. Модель же ведёт один накопитель через все десять фаз и сама называет его «the Swarm project DB» — то есть переносит 13.16 MiB nominal / 42 MiB worst fixture-байтов в основание чекпоинта Swarm.
+Последствие: S1 worst без переноса = 65 MiB, то есть ниже hard stop 100 MiB. Заявление F-D0-02 «worst checkpoint first exceeds hard stop at S1» — артефакт смешения; фактически первое worst-пересечение по размеру приходится на V1 (266 MiB). Меняется момент, когда владелец обязан выбрать route §9.5.1 — то есть прямой вход в V2-D04. (Nominal-вывод устойчив: пересечение остаётся на Q1, 109 MiB без переноса.)
+Минимальная правка: разделить на две цепочки — fixture_checkpoint_chain (K0a→N1) и swarm_project_checkpoint_chain (с нуля на S1); проверять пороги по каждой отдельно; исправить F-D0-02; добавить в checkpoint-budget-policy/v1.yaml поле threshold_scope: per_project_checkpoint_chain.
+Тип: document_defect
+
+Moderate
+ID	Где	Суть, последствие, минимальная правка	Тип
+R-06	binary_payload_seed.*	«Худший случай» построен на среднем размере, а не на разрешённом политикой максимуме: при hard_per_object_bytes 8 MiB предел равен 40×8 = 320 MiB (G) и 28×8 = 224 MiB (Q) против заявленных 160/112. Ни один per-object предел при этом не нарушается, значит fail-closed на hard cap такой прогон не остановит. → добавить policy_permitted_maximum_aggregate_bytes и агрегатный лимит, проверяемый в runtime.	document_defect
+R-07	d0-02 binary_payload_budget.required_fields против одноимённого раздела d0-02…md	MD требует «assumed mean and hard per-object size», YAML assumed_mean_object_bytes не содержит. Пара связана hash'ем, но расходится по смыслу — при том что §10.3 требует генерации обоих из одной нормализованной записи. Без этого поля валидатор не может проверить count × mean = aggregate, а именно так теперь строится D0-01. → добавить поле в required_fields.	document_defect
+R-08	approval-envelope/v1.schema.yaml блок allOf	Условие для d0_decision_baseline даёт minItems/maxItems: 39 + uniqueItems, но uniqueItems сравнивает объекты целиком: 39 записей с повторяющимся decision_id и разными rationale пройдут схему, оставив одно решение без disposition. Также ничто не требует, чтобы records содержал сам файл dispositions. → добавить 39 contains-ограничений по decision_id (или явную проверку валидатора) и required_record_roles: [dispositions, forecast, gate_contract, checkpoint_policy].	document_defect
+R-09	canonical_yaml_v1_excluding_integrity_* в 4 местах	Профиль назван, но нигде не определён: нет спецификации порядка ключей, кавычек, отступов, переводов строк и нормализации Unicode. hash_profile в §9.3 п.3 обещает такой реестр, но записи для него нет. Reference test 11 требует «canonical self-hash profile», которого не существует. → определить registry/hash-profiles/canonical-yaml-v1.yaml либо явно записать, что до K0-b нормативной является только полнофайловая SHA-256 из records[].sha256 (она проверяема — я её проверил).	document_defect
+R-10	phase_forecast[S1].packages, [V1].packages	S1-02 входит в два бюджетных пакета, V1-02 — тоже. Пакет адресуется ID работы из backlog §12, поэтому «бюджет пакета» перестаёт быть однозначно адресуемым, а D0-02 требует привязывать tier именно к пакету. → выдать каждому бюджетному пакету собственный package_id, а ID backlog оставить как covers_work_items.	document_defect
+R-11	counting_rules.checkpointed_invocations_exclude против d0-02 approval_receipt_schema	Design-time вызовы автора и рецензента корректно исключены из project DB — но D0-02 требует в каждом receipt author_identity_and_invocation_ref и reviewer_identity_model_provider_profile_and_invocation_ref. Ссылаться не на что: у этих ~50–150 вызовов нет ни replay point, ни какого-либо ledger'а. → объявить registry/-уровневый или Pipeline-Git ledger design-time инвокаций (id, model/provider, время, hash входов) до первого receipt на K0a-00.	document_defect
+R-12	phase_forecast[*].threshold_status	Шесть ad-hoc значений (publisher_unavailable, below_warning, above_warning, above_hard_pack, above_hard, above_hard_checkpoint_and_pack) нигде не перечислены, и above_hard_pack молча поглощает факт «checkpoint выше warning» (V1: 76 MiB, I1: 92 MiB). Это поле будет читать валидатор. → сделать структурой `{checkpoint: below_warning	above_warning
+Minor
+R-13 — reviews/d0-01-d0-02-review-01.yaml: запись ревью не содержит identity/model/provider/profile рецензента и декларации конфликтов, хотя D0-02 требует ровно этого от каждого gate-review. Это первое применение шаблона — зафиксировать сейчас дешевле, чем вводить позже.
+R-14 — source_evidence.repository_locator: null: исходное ревью существует только как вложение вне Git; в самой записи это честно отмечено, но при D0-05 в baseline попадёт сводка без первоисточника.
+Итоговые списки
+1. Готовы к owner disposition сейчас — 34
+V2-D02, D03, D05, D06, D07, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D23, D24, D25, D26, D27, D28, D29, D30, D31, D32, D34, D35, D36, D37, D39.
+
+Все условия, которых не хватало в прошлом раунде, добавлены: V2-D15/D35 — «только направление, предикаты — S1-00»; V2-D24 — «только форма маршрута, K0b-05/N1-03/V2-D39 остаются». k0a_blocker проставлен во всех 39, поэтому правило blocker_may_be_deferred: false стало исполнимым.
+
+2. Пока принимать нельзя — 5
+V2-D01 и V2-D38 — зависят от R-01 (несовпадающие правила подсчёта сорвут первую же сверку на K0a-00) и от R-02/R-03/R-04.
+V2-D04 — зависит от R-05 (момент первого worst-пересечения) и R-02/R-03; регистр политики и cross-условие с D22 уже на месте.
+V2-D22 — открывается вместе с D04 (связка корректна).
+V2-D33 — четыре полевые правки в D0-02: R-01, R-07, R-08, R-09.
+3. Обязательно до D0-05
+R-01, R-02, R-03, R-05, R-07, R-08, R-09, R-11, R-12. R-04 допустимо закрыть диапазоном вместо механизма. R-06, R-10, R-13, R-14 — желательно, но не блокируют.
+
+После правки D0-01 меняется его sha256 — перевыпустить forecast_binding в dispositions и source_binding.forecast в D0-02; при правке D0-02 — contract_ref в dispositions. Граф сейчас замкнут корректно, важно не разорвать его.
+
+4. Ждут K0-b / V1-00 и K0-a не блокируют
+Реальные expected_delta_factor и expected_pack_growth; page-churn / VACUUM / BLOB-распределения; фактические уникальные байты на replay point (проверка допущения R-04); publication p95 и clean-clone restore; фактические G/Q payload и S17; resource-budget compiler и его reference-equivalence; runtime capability enforcement и F10; содержание elm-applicability.yaml (S1-00); стоимостная модель ветки Core-6 (N1-03).
+
+5. Рекомендуемая следующая работа
+Немедленно, параллельно всему остальному — передать владельцу 34 готовых решения. Они полны, снабжены условиями и ни от одного из findings этого раунда не зависят.
+Перенести правило подсчёта design-time вызовов в D0-02, §16.1.2 и dev §4.2 (R-01) — одна правка, но она блокирует первый же gate.
+Разделить цепочку чекпоинтов на fixture и Swarm, пересчитать S1 worst публикации по оконному лимиту, исправить F-D0-02 (R-05, R-03).
+Разложить или честно переименовать fixed_non_binary_growth; заменить единичное значение байт на точку диапазоном (R-02, R-04).
+Четыре полевые правки: assumed_mean_object_bytes в D0-02, ограничения конверта, определение профиля канонизации, структурный threshold_status (R-07, R-08, R-09, R-12); объявить ledger design-time инвокаций (R-11).
+Перепроверка: перечисленное — это исправления, а не новая модель. Достаточно механической сверки девяти пунктов, а не третьего полного цикла. Обратите внимание: D0-02 сейчас на current_revision_return_round: 1 из максимум 2 — если оформлять это как второй возврат, дальше любое расхождение по контракту уходит владельцу без права на ещё один автономный цикл.
+Затем — D0-05, D0-06 (fixture seed/spec + triple binding), K0a-00.
+D0-03/D0-04 закрыты: relocation, hygiene, ordering-deviation, provenance владельца, манифест содержимого и файл nul подтверждены; правки git-правил проверены командами и работают.
+
+Owner approval не выдаю — это findings и рекомендация.

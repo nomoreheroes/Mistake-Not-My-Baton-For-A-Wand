@@ -1,0 +1,496 @@
+record_id: d0-01-full-route-forecast
+schema_version: 2
+status: owner_disposition_inputs_applied_ready_for_owner_disposition
+created_at: "2026-08-26"
+forecast_class: rough_order_of_magnitude_reference_model
+currency_forecast: not_in_scope_until_provider_cost_model_is_pinned
+
+projection:
+  path: new pipeline/decisions/d0-01-full-route-forecast.md
+  sha256: 5861e3cca7c6e45a248f38a978219802539158c81859dfca72b0a880e83bc0d7
+
+scope:
+  project: swarm
+  project_profile: greenfield_product
+  route: first_real_vertical_slice_plus_pipeline_foundation_and_full_m_enablement
+  exclusions:
+    - full_product_completion
+    - exact_provider_price
+    - unbounded_worker_rosters
+    - post_pilot_feature_expansion
+
+source_binding:
+  pipeline_git_head_at_generation: e5aaed82d2c946d9108f327cc1536e97a93847e8
+  dirty_development_mode: true
+  architecture_plan:
+    path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+    version: "0.16"
+    sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  development_plan:
+    path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    version: "0.13"
+    sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+  note: Current bytes and all D0 records require the future D0-05 baseline commit before any normal run.
+
+counting_rules:
+  llm_invocation_includes:
+    - layer_plan_initial_authoring
+    - mandatory_fresh_context_layer_plan_review
+    - bounded_revision_return_author_and_reviewer_calls
+    - S0_and_local_Layer0_reasoning_calls
+    - workers_and_independent_runtime_reviewers
+    - dialogue_role_instances
+    - retries_and_non_nominal_fallbacks
+  new_plan_call_model: {nominal_author: 1, nominal_reviewer: 1, worst_case_total_with_two_returns: 6}
+  delta_plan_call_model: {nominal_author: 1, nominal_reviewer: 1, worst_case_total_with_bounded_return: 4}
+  compiled_fast_path_dispatcher_calls: 0
+  checkpointed_invocations_exclude:
+    - root_pipeline_layer_plan_authoring_and_review_before_project_runtime
+  human_active_minutes_exclude:
+    - waiting_for_agents
+    - unattended_deterministic_tools
+  postulated_phase_input_derivations:
+    estimated_runs_per_phase: none_before_k0b
+    estimated_external_tool_interactions: none_before_k0b
+    asserted_irreversible_boundary_publications: none_before_k0b
+    asserted_migration_or_gate_publications: none_before_k0b
+    rule: These prefixed inputs are planning assertions or estimates, not measurements; K0-b must replace or retain them with evidence.
+  program_worst_case_semantics: independent_per_metric_upper_bound_not_a_joint_reachable_scenario
+  design_invocation_ledger:
+    schema_path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml
+    schema_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b
+    ledger_path: new pipeline/ledgers/design-invocations.yaml
+    note: Design calls are excluded from project DB checkpoints but must exist in the Pipeline-Git ledger before a layer-plan receipt can reference them.
+
+target_roster:
+  entries:
+    - {layer: S, dispatchers: 1, workers_or_families: 0, note: superdispatcher}
+    - {layer: P, dispatchers: 1, workers_or_families: 6, note: P1-P6}
+    - {layer: R, dispatchers: 1, workers_or_families: 7, note: R1-R7}
+    - {layer: E, dispatchers: 1, workers_or_families: 7, note: E1-E7}
+    - {layer: G, dispatchers: 1, workers_or_families: 15, note: G1-G15}
+    - {layer: A, dispatchers: 1, workers_or_families: 9, note: A1-A9}
+    - {layer: H, dispatchers: 1, workers_or_families: 15, note: H1-H15}
+    - {layer: T, dispatchers: 1, workers_or_families: 7, note: T1-T7}
+    - {layer: I, dispatchers: 1, workers_or_families: 9, note: preliminary recipe_selected families}
+    - {layer: Q, dispatchers: 1, workers_or_families: 10, note: Q1-Q10 target; Q_Alpha is smaller}
+    - {layer: M, dispatchers: 1, workers_or_families: 8, note: M1-M4, M5p, M5h, M6, M7}
+  totals: {dispatchers: 11, workers_or_families: 93, logical_role_slots: 104}
+  applicability_note: The target roster is a planning universe, not a requirement to invoke every role or design deferred prompts before K0-a.
+
+dialogue_model:
+  creative_dialogue_defaults: {max_topics_per_session: 6, max_sessions_per_artifact: 2, max_rounds_per_topic: 2}
+  invocation_formula: topics * rounds * active_agent_roles_per_round
+  routes:
+    - route: P2
+      phase: S1
+      artifacts: {nominal: 1, worst_case: 1}
+      topics: {nominal: 4, worst_case: 12}
+      rounds_per_topic: {nominal: 1, worst_case: 2}
+      active_agent_roles_per_round: 3
+      sessions: {nominal: 1, worst_case: 2}
+      derived_invocations: {nominal: 12, worst_case: 72}
+    - route: E2
+      phase: S1
+      artifacts: {nominal: 1, worst_case: 1}
+      topics: {nominal: 4, worst_case: 12}
+      rounds_per_topic: {nominal: 1, worst_case: 2}
+      active_agent_roles_per_round: 3
+      sessions: {nominal: 1, worst_case: 2}
+      derived_invocations: {nominal: 12, worst_case: 72}
+    - route: G4_G7_interactive
+      phase: V1
+      artifact_count: {nominal: 2, worst_case: 4}
+      max_sessions_per_artifact: 2
+      total_sessions: {nominal: 3, worst_case: 8}
+      calls_per_session: 3
+      derived_invocations: {nominal: 9, worst_case: 24}
+      note: This route is interactive visual work, not a claim that every G session uses the P2/E2 dialogue FSM.
+
+checkpoint_policy_ref:
+  path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+  sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+
+checkpoint_size_model:
+  purpose: Recalculable D0 reference model; values remain hypotheses until K0-b measurement.
+  project_db_invocation_scope: runtime_only; design-time calls are counted for cost and Pipeline ledger evidence but are not inserted into a project DB.
+  checkpoint_chains:
+    fixture: [K0a, K0b, N1]
+    swarm: [S1, V1, AT1, I1, Q1, X1, M1]
+  chain_rule: Each project chain starts at zero; prior_unrounded_checkpoint never crosses a project boundary.
+  replay_points_per_checkpointed_llm_invocation: {nominal: 2, worst_case: 4}
+  planning_new_unique_bytes_per_replay_point: {nominal: 16384, worst_case: 65536}
+  sensitivity_range_bytes_per_replay_point: {low: 16384, high: 262144}
+  high_sensitivity_checkpoint_projection_mib:
+    fixture: {K0a: 10, K0b: 48, N1: 96}
+    swarm: {S1: 200, V1: 624, AT1: 674, I1: 740, Q1: 1012, X1: 1102, M1: 1146}
+  high_sensitivity_interpretation: Uses 256 KiB per replay point and policy-permitted binary maxima; it is a storage-risk sensitivity branch, not expected size.
+  expected_unique_bytes_per_replay_point: unknown_until_k0b
+  asserted_fixed_non_binary_growth_includes:
+    - events_deliveries_and_indexes
+    - non_binary_artifacts_and_decisions
+    - tool_human_and_gate_replay_not_already_attributed_to_llm_calls
+  asserted_fixed_non_binary_growth_derivation: none_before_k0b
+  asserted_fixed_non_binary_growth_contribution_mib: {nominal: 68, worst_case: 134}
+  replay_point_count_model:
+    human_answer_or_approval_points_per_blocking_decision: 2
+    external_tool_points_per_interaction: 2
+    irreversible_side_effect_points_per_boundary: 2
+    assumed_publisher_eligible_minutes_per_checkpointed_llm_invocation: {nominal: 1, worst_case: 3}
+  window_publication_formula: max(ceil(total_replay_points / 10), ceil(publisher_eligible_runtime_minutes / 5), ceil(new_db_bytes / 32_MiB))
+  overlap_credit_before_k0b: 0
+  formula: prior_unrounded_checkpoint_in_same_project_chain + checkpointed_invocations * replay_points_per_invocation * planning_new_unique_bytes_per_replay_point + asserted_fixed_non_binary_growth + new_binary_payload
+  display_rounding: ceil_to_whole_MiB
+  caveat: Replay bytes and asserted fixed growth are not measurements; K0-b must replace them before they can become a release threshold.
+
+pack_growth_model:
+  formula: rounded_checkpoint_bytes * checkpoint_publications_per_phase * no_delta_factor
+  no_delta_factor: 1.0
+  no_delta_bound_assumptions:
+    - no_credit_for_Git_delta_compression
+    - SQLite_page_churn_may_reduce_similarity
+    - VACUUM_or_equivalent_rewrite_may_replace_most_pages
+    - new_media_BLOBs_may_be_incompressible
+  expected_delta_factor: unknown_until_k0b
+  expected_pack_growth: unknown_until_k0b
+  program_sum_label: ungated_no_delta_upper_bound
+  reachability_note: Rows after a warning/hard crossing are conditional branches and are not executable unless §9.5.1 owner disposition permits continuation.
+
+phase_forecast:
+  - phase: K0a
+    checkpoint_chain: fixture
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: K0a-plan-bootstrap, covers_work_items: [K0a-00], kind: three_new_layer_or_shared_plans, invocation_profile: light, invocations: {nominal: 6, worst_case: 18}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 2}, blocking_decisions: {nominal: 1, worst_case: 3}, active_minutes: {nominal: 20, worst_case: 60}, max_single_session_minutes: 30, batchable_requests: true}}
+      - {package_id: K0a-runtime-F00, covers_work_items: [K0a-01, K0a-02, K0a-03], kind: F00_runtime, invocation_profile: light, invocations: {nominal: 3, worst_case: 6}, human_attention: {profile: light, sessions: {nominal: 0, worst_case: 0}, blocking_decisions: {nominal: 0, worst_case: 0}, active_minutes: {nominal: 0, worst_case: 0}, max_single_session_minutes: 30, batchable_requests: true}}
+    llm_invocations: {nominal: 9, worst_case: 24, checkpointed_nominal: 3, checkpointed_worst_case: 6}
+    human_attention_envelope_profile: standard
+    human_attention: {sessions_nominal: 1, sessions_worst_case: 2, blocking_decisions_nominal: 1, blocking_decisions_worst_case: 3, active_minutes_nominal: 20, active_minutes_worst_case: 60}
+    estimated_runs_per_phase: {nominal: 1, worst_case: 2}
+    estimated_external_tool_interactions: {nominal: 3, worst_case: 6}
+    publication_window_derivation:
+      nominal: {llm_points: 6, human_points: 2, tool_points: 6, side_effect_points: 0, total_points: 14, publisher_eligible_minutes: 3, by_points: 2, by_minutes: 1, by_db_bytes: 1, window_limit: 2}
+      worst_case: {llm_points: 24, human_points: 6, tool_points: 12, side_effect_points: 0, total_points: 42, publisher_eligible_minutes: 18, by_points: 5, by_minutes: 4, by_db_bytes: 1, window_limit: 5}
+    publication_trigger_counts: {publisher_available: false, run_end: 0, human_wait_or_exit: 0, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 0, window_limit: 0, derived_window_limit_not_applied: {nominal: 2, worst_case: 5, reason: checkpoint_publisher_unavailable_until_K0b}}
+    checkpoint_publications_per_phase: {nominal: 0, worst_case: 0}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.09375, replay_unique_worst_case: 1.5, asserted_fixed_non_binary_nominal: 2, asserted_fixed_non_binary_worst_case: 4, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 2.09375, worst_case: 5.5}
+    checkpoint_bytes: {nominal: 3145728, worst_case: 6291456}
+    no_delta_pack_growth_bytes: {nominal: 0, worst_case: 0}
+    threshold_status:
+      nominal: {checkpoint: below_warning, phase_pack: publisher_unavailable}
+      worst_case: {checkpoint: below_warning, phase_pack: publisher_unavailable}
+    execution_condition: D0_owner_disposition_and_fixture_only_scope
+  - phase: K0b
+    checkpoint_chain: fixture
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: K0b-plan-deltas, covers_work_items: [K0b-00], kind: three_delta_plan_approvals, invocation_profile: light, invocations: {nominal: 6, worst_case: 12}, human_attention: {profile: light, sessions: {nominal: 1, worst_case: 1}, blocking_decisions: {nominal: 1, worst_case: 2}, active_minutes: {nominal: 30, worst_case: 30}, max_single_session_minutes: 30, batchable_requests: true}}
+      - {package_id: K0b-runtime-operational, covers_work_items: [K0b-01, K0b-02, K0b-03, K0b-04, K0b-05], kind: operational_hardening_and_F15, invocation_profile: standard, invocations: {nominal: 16, worst_case: 30}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 3}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 30, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 22, worst_case: 42, checkpointed_nominal: 16, checkpointed_worst_case: 30}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 2, sessions_worst_case: 4, blocking_decisions_nominal: 3, blocking_decisions_worst_case: 6, active_minutes_nominal: 60, active_minutes_worst_case: 150}
+    estimated_runs_per_phase: {nominal: 4, worst_case: 8}
+    estimated_external_tool_interactions: {nominal: 8, worst_case: 20}
+    publication_window_derivation:
+      nominal: {llm_points: 32, human_points: 6, tool_points: 16, side_effect_points: 0, total_points: 54, publisher_eligible_minutes: 16, by_points: 6, by_minutes: 4, by_db_bytes: 1, window_limit: 6}
+      worst_case: {llm_points: 120, human_points: 12, tool_points: 40, side_effect_points: 0, total_points: 172, publisher_eligible_minutes: 90, by_points: 18, by_minutes: 18, by_db_bytes: 1, window_limit: 18}
+    publication_trigger_counts:
+      nominal: {run_end: 4, human_wait_or_exit: 2, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 6, total: 14}
+      worst_case: {run_end: 8, human_wait_or_exit: 4, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 18, total: 34}
+    checkpoint_publications_per_phase: {nominal: 14, worst_case: 34}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.5, replay_unique_worst_case: 7.5, asserted_fixed_non_binary_nominal: 4, asserted_fixed_non_binary_worst_case: 8, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 6.59375, worst_case: 21.0}
+    checkpoint_bytes: {nominal: 7340032, worst_case: 22020096}
+    no_delta_pack_growth_bytes: {nominal: 102760448, worst_case: 748683264}
+    threshold_status:
+      nominal: {checkpoint: below_warning, phase_pack: below_warning}
+      worst_case: {checkpoint: below_warning, phase_pack: above_warning}
+    execution_condition: K0a_success
+  - phase: N1
+    checkpoint_chain: fixture
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: N1-plan-batch, covers_work_items: [N1-00], kind: six_new_layer_plans, invocation_profile: standard, invocations: {nominal: 12, worst_case: 36}, human_attention: {profile: standard, sessions: {nominal: 2, worst_case: 3}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: N1-runtime-nonvisual, covers_work_items: [N1-01, N1-02, N1-03], kind: nonvisual_fixture_runtime, invocation_profile: standard, invocations: {nominal: 18, worst_case: 36}, human_attention: {profile: high_attention, sessions: {nominal: 1, worst_case: 3}, blocking_decisions: {nominal: 2, worst_case: 6}, active_minutes: {nominal: 60, worst_case: 180}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 30, worst_case: 72, checkpointed_nominal: 18, checkpointed_worst_case: 36}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 3, sessions_worst_case: 6, blocking_decisions_nominal: 4, blocking_decisions_worst_case: 10, active_minutes_nominal: 120, active_minutes_worst_case: 300}
+    estimated_runs_per_phase: {nominal: 6, worst_case: 12}
+    estimated_external_tool_interactions: {nominal: 10, worst_case: 24}
+    publication_window_derivation:
+      nominal: {llm_points: 36, human_points: 8, tool_points: 20, side_effect_points: 0, total_points: 64, publisher_eligible_minutes: 18, by_points: 7, by_minutes: 4, by_db_bytes: 1, window_limit: 7}
+      worst_case: {llm_points: 144, human_points: 20, tool_points: 48, side_effect_points: 0, total_points: 212, publisher_eligible_minutes: 108, by_points: 22, by_minutes: 22, by_db_bytes: 1, window_limit: 22}
+    publication_trigger_counts:
+      nominal: {run_end: 6, human_wait_or_exit: 3, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 7, total: 18}
+      worst_case: {run_end: 12, human_wait_or_exit: 6, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 22, total: 44}
+    checkpoint_publications_per_phase: {nominal: 18, worst_case: 44}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.5625, replay_unique_worst_case: 9, asserted_fixed_non_binary_nominal: 6, asserted_fixed_non_binary_worst_case: 12, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 13.15625, worst_case: 42.0}
+    checkpoint_bytes: {nominal: 14680064, worst_case: 44040192}
+    no_delta_pack_growth_bytes: {nominal: 264241152, worst_case: 1937768448}
+    threshold_status:
+      nominal: {checkpoint: below_warning, phase_pack: below_warning}
+      worst_case: {checkpoint: below_warning, phase_pack: above_hard}
+    execution_condition: K0b_measurement_and_owner_warning_hard_disposition
+  - phase: S1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: S1-plan-batch, covers_work_items: [S1-00], kind: E_new_plus_P_R_A_delta_plans, invocation_profile: light, invocations: {nominal: 8, worst_case: 18}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 2}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: S1-runtime-dialogues, covers_work_items: [S1-02], kind: P2_and_E2_dialogues, invocation_profile: deep, invocations: {nominal: 24, worst_case: 144}, human_attention: {profile: high_attention, sessions: {nominal: 2, worst_case: 4}, blocking_decisions: {nominal: 4, worst_case: 8}, active_minutes: {nominal: 120, worst_case: 300}, max_single_session_minutes: 90, batchable_requests: false}}
+      - {package_id: S1-runtime-discovery, covers_work_items: [S1-01, S1-02], kind: other_discovery_runtime, invocation_profile: standard, invocations: {nominal: 18, worst_case: 36}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 2}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: true}}
+    llm_invocations: {nominal: 50, worst_case: 198, checkpointed_nominal: 42, checkpointed_worst_case: 180}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 4, sessions_worst_case: 8, blocking_decisions_nominal: 8, blocking_decisions_worst_case: 16, active_minutes_nominal: 240, active_minutes_worst_case: 540}
+    estimated_runs_per_phase: {nominal: 6, worst_case: 14}
+    estimated_external_tool_interactions: {nominal: 12, worst_case: 36}
+    publication_window_derivation:
+      nominal: {llm_points: 84, human_points: 16, tool_points: 24, side_effect_points: 4, total_points: 128, publisher_eligible_minutes: 42, by_points: 13, by_minutes: 9, by_db_bytes: 1, window_limit: 13}
+      worst_case: {llm_points: 720, human_points: 32, tool_points: 72, side_effect_points: 8, total_points: 832, publisher_eligible_minutes: 540, by_points: 84, by_minutes: 108, by_db_bytes: 3, window_limit: 108}
+    publication_trigger_counts:
+      nominal: {run_end: 6, human_wait_or_exit: 4, asserted_irreversible_boundaries: 2, asserted_migration_or_gate: 2, window_limit: 13, total: 27}
+      worst_case: {run_end: 14, human_wait_or_exit: 8, asserted_irreversible_boundaries: 4, asserted_migration_or_gate: 4, window_limit: 108, total: 138}
+    checkpoint_publications_per_phase: {nominal: 27, worst_case: 138}
+    checkpoint_growth_mib: {replay_unique_nominal: 1.3125, replay_unique_worst_case: 45, asserted_fixed_non_binary_nominal: 10, asserted_fixed_non_binary_worst_case: 20, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 11.3125, worst_case: 65.0}
+    checkpoint_bytes: {nominal: 12582912, worst_case: 68157440}
+    no_delta_pack_growth_bytes: {nominal: 339738624, worst_case: 9405726720}
+    threshold_status:
+      nominal: {checkpoint: below_warning, phase_pack: below_warning}
+      worst_case: {checkpoint: above_warning, phase_pack: above_hard}
+    execution_condition: N1_03_program_route_and_storage_disposition
+  - phase: V1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: V1-plan-batch, covers_work_items: [V1-00], kind: G_H_new_plus_E_A_delta_plans, invocation_profile: light, invocations: {nominal: 8, worst_case: 20}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 2}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: V1-runtime-GH, covers_work_items: [V1-01, V1-02], kind: G_H_noninteractive_runtime, invocation_profile: deep, invocations: {nominal: 30, worst_case: 60}, human_attention: {profile: high_attention, sessions: {nominal: 2, worst_case: 4}, blocking_decisions: {nominal: 4, worst_case: 8}, active_minutes: {nominal: 180, worst_case: 360}, max_single_session_minutes: 90, batchable_requests: true}}
+      - {package_id: V1-runtime-G-interactive, covers_work_items: [V1-02], kind: G4_G7_interactive_runtime, invocation_profile: standard, invocations: {nominal: 9, worst_case: 24}, human_attention: {profile: high_attention, sessions: {nominal: 3, worst_case: 6}, blocking_decisions: {nominal: 6, worst_case: 12}, active_minutes: {nominal: 240, worst_case: 480}, max_single_session_minutes: 90, batchable_requests: false}}
+    llm_invocations: {nominal: 47, worst_case: 104, checkpointed_nominal: 39, checkpointed_worst_case: 84}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 6, sessions_worst_case: 12, blocking_decisions_nominal: 12, blocking_decisions_worst_case: 24, active_minutes_nominal: 480, active_minutes_worst_case: 960}
+    estimated_runs_per_phase: {nominal: 8, worst_case: 20}
+    estimated_external_tool_interactions: {nominal: 16, worst_case: 40}
+    publication_window_derivation:
+      nominal: {llm_points: 78, human_points: 24, tool_points: 32, side_effect_points: 0, total_points: 134, publisher_eligible_minutes: 39, by_points: 14, by_minutes: 8, by_db_bytes: 2, window_limit: 14}
+      worst_case: {llm_points: 336, human_points: 48, tool_points: 80, side_effect_points: 0, total_points: 464, publisher_eligible_minutes: 252, by_points: 47, by_minutes: 51, by_db_bytes: 12, window_limit: 51}
+    publication_trigger_counts:
+      nominal: {run_end: 8, human_wait_or_exit: 6, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 14, total: 30}
+      worst_case: {run_end: 20, human_wait_or_exit: 12, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 51, total: 87}
+    checkpoint_publications_per_phase: {nominal: 30, worst_case: 87}
+    checkpoint_growth_mib: {replay_unique_nominal: 1.21875, replay_unique_worst_case: 21, asserted_fixed_non_binary_nominal: 10, asserted_fixed_non_binary_worst_case: 20, binary_nominal: 40, binary_worst_case: 320}
+    checkpoint_unrounded_mib: {nominal: 62.53125, worst_case: 426.0}
+    checkpoint_bytes: {nominal: 66060288, worst_case: 446693376}
+    no_delta_pack_growth_bytes: {nominal: 1981808640, worst_case: 38862323712}
+    threshold_status:
+      nominal: {checkpoint: above_warning, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: V1_00_owner_route_required_before_V1_01
+  - phase: AT1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: AT1-plan-deltas, covers_work_items: [AT1-00], kind: A_T_delta_plans, invocation_profile: light, invocations: {nominal: 4, worst_case: 8}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 1}, blocking_decisions: {nominal: 2, worst_case: 2}, active_minutes: {nominal: 30, worst_case: 60}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: AT1-runtime-final, covers_work_items: [AT1-01], kind: A_final_T_runtime, invocation_profile: standard, invocations: {nominal: 20, worst_case: 40}, human_attention: {profile: high_attention, sessions: {nominal: 1, worst_case: 3}, blocking_decisions: {nominal: 2, worst_case: 6}, active_minutes: {nominal: 60, worst_case: 180}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 24, worst_case: 48, checkpointed_nominal: 20, checkpointed_worst_case: 40}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 2, sessions_worst_case: 4, blocking_decisions_nominal: 4, blocking_decisions_worst_case: 8, active_minutes_nominal: 90, active_minutes_worst_case: 240}
+    estimated_runs_per_phase: {nominal: 4, worst_case: 8}
+    estimated_external_tool_interactions: {nominal: 8, worst_case: 16}
+    publication_window_derivation:
+      nominal: {llm_points: 40, human_points: 8, tool_points: 16, side_effect_points: 0, total_points: 64, publisher_eligible_minutes: 20, by_points: 7, by_minutes: 4, by_db_bytes: 1, window_limit: 7}
+      worst_case: {llm_points: 160, human_points: 16, tool_points: 32, side_effect_points: 0, total_points: 208, publisher_eligible_minutes: 120, by_points: 21, by_minutes: 24, by_db_bytes: 1, window_limit: 24}
+    publication_trigger_counts:
+      nominal: {run_end: 4, human_wait_or_exit: 2, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 7, total: 15}
+      worst_case: {run_end: 8, human_wait_or_exit: 4, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 24, total: 40}
+    checkpoint_publications_per_phase: {nominal: 15, worst_case: 40}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.625, replay_unique_worst_case: 10, asserted_fixed_non_binary_nominal: 6, asserted_fixed_non_binary_worst_case: 10, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 69.15625, worst_case: 446.0}
+    checkpoint_bytes: {nominal: 73400320, worst_case: 467664896}
+    no_delta_pack_growth_bytes: {nominal: 1101004800, worst_case: 18706595840}
+    threshold_status:
+      nominal: {checkpoint: above_warning, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: conditional_on_successful_V1_owner_route
+  - phase: I1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: I1-plan-delta, covers_work_items: [I1-00], kind: I_delta_plan, invocation_profile: light, invocations: {nominal: 2, worst_case: 4}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 1}, blocking_decisions: {nominal: 1, worst_case: 2}, active_minutes: {nominal: 30, worst_case: 60}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: I1-runtime-implementation, covers_work_items: [I1-01], kind: implementation_runtime, invocation_profile: standard, invocations: {nominal: 28, worst_case: 50}, human_attention: {profile: high_attention, sessions: {nominal: 1, worst_case: 4}, blocking_decisions: {nominal: 3, worst_case: 8}, active_minutes: {nominal: 90, worst_case: 240}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 30, worst_case: 54, checkpointed_nominal: 28, checkpointed_worst_case: 50}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 2, sessions_worst_case: 5, blocking_decisions_nominal: 4, blocking_decisions_worst_case: 10, active_minutes_nominal: 120, active_minutes_worst_case: 300}
+    estimated_runs_per_phase: {nominal: 6, worst_case: 16}
+    estimated_external_tool_interactions: {nominal: 20, worst_case: 50}
+    publication_window_derivation:
+      nominal: {llm_points: 56, human_points: 8, tool_points: 40, side_effect_points: 8, total_points: 112, publisher_eligible_minutes: 28, by_points: 12, by_minutes: 6, by_db_bytes: 1, window_limit: 12}
+      worst_case: {llm_points: 200, human_points: 20, tool_points: 100, side_effect_points: 20, total_points: 340, publisher_eligible_minutes: 150, by_points: 34, by_minutes: 30, by_db_bytes: 1, window_limit: 34}
+    publication_trigger_counts:
+      nominal: {run_end: 6, human_wait_or_exit: 2, asserted_irreversible_boundaries: 4, asserted_migration_or_gate: 2, window_limit: 12, total: 26}
+      worst_case: {run_end: 16, human_wait_or_exit: 5, asserted_irreversible_boundaries: 10, asserted_migration_or_gate: 4, window_limit: 34, total: 69}
+    checkpoint_publications_per_phase: {nominal: 26, worst_case: 69}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.875, replay_unique_worst_case: 12.5, asserted_fixed_non_binary_nominal: 8, asserted_fixed_non_binary_worst_case: 16, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 78.03125, worst_case: 474.5}
+    checkpoint_bytes: {nominal: 82837504, worst_case: 498073600}
+    no_delta_pack_growth_bytes: {nominal: 2153775104, worst_case: 34367078400}
+    threshold_status:
+      nominal: {checkpoint: above_warning, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: conditional_on_prior_owner_storage_route
+  - phase: Q1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: Q1-plan-delta, covers_work_items: [Q1-00], kind: Q_delta_plan, invocation_profile: light, invocations: {nominal: 2, worst_case: 4}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 1}, blocking_decisions: {nominal: 2, worst_case: 2}, active_minutes: {nominal: 30, worst_case: 60}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: Q1-runtime-audit, covers_work_items: [Q1-01], kind: Q_Alpha_runtime, invocation_profile: standard, invocations: {nominal: 18, worst_case: 36}, human_attention: {profile: high_attention, sessions: {nominal: 1, worst_case: 3}, blocking_decisions: {nominal: 2, worst_case: 6}, active_minutes: {nominal: 60, worst_case: 180}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 20, worst_case: 40, checkpointed_nominal: 18, checkpointed_worst_case: 36}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 2, sessions_worst_case: 4, blocking_decisions_nominal: 4, blocking_decisions_worst_case: 8, active_minutes_nominal: 90, active_minutes_worst_case: 240}
+    estimated_runs_per_phase: {nominal: 4, worst_case: 10}
+    estimated_external_tool_interactions: {nominal: 16, worst_case: 40}
+    publication_window_derivation:
+      nominal: {llm_points: 36, human_points: 8, tool_points: 32, side_effect_points: 0, total_points: 76, publisher_eligible_minutes: 18, by_points: 8, by_minutes: 4, by_db_bytes: 1, window_limit: 8}
+      worst_case: {llm_points: 144, human_points: 16, tool_points: 80, side_effect_points: 0, total_points: 240, publisher_eligible_minutes: 108, by_points: 24, by_minutes: 22, by_db_bytes: 8, window_limit: 24}
+    publication_trigger_counts:
+      nominal: {run_end: 4, human_wait_or_exit: 2, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 8, total: 16}
+      worst_case: {run_end: 10, human_wait_or_exit: 4, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 24, total: 42}
+    checkpoint_publications_per_phase: {nominal: 16, worst_case: 42}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.5625, replay_unique_worst_case: 9, asserted_fixed_non_binary_nominal: 6, asserted_fixed_non_binary_worst_case: 12, binary_nominal: 24, binary_worst_case: 224}
+    checkpoint_unrounded_mib: {nominal: 108.59375, worst_case: 719.5}
+    checkpoint_bytes: {nominal: 114294784, worst_case: 754974720}
+    no_delta_pack_growth_bytes: {nominal: 1828716544, worst_case: 31708938240}
+    threshold_status:
+      nominal: {checkpoint: above_hard, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: conditional_on_Q_binary_budget_and_prior_owner_storage_route
+  - phase: X1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: X1-plan-deltas, covers_work_items: [X1-*], kind: four_nominal_to_eight_worst_delta_plans, invocation_profile: standard, invocations: {nominal: 8, worst_case: 32}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 2}, blocking_decisions: {nominal: 2, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 120}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: X1-runtime-evidence-triggered, covers_work_items: [X1-*], kind: evidence_triggered_runtime, invocation_profile: deep, invocations: {nominal: 30, worst_case: 70}, human_attention: {profile: high_attention, sessions: {nominal: 3, worst_case: 8}, blocking_decisions: {nominal: 6, worst_case: 16}, active_minutes: {nominal: 180, worst_case: 480}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 38, worst_case: 102, checkpointed_nominal: 30, checkpointed_worst_case: 70}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 4, sessions_worst_case: 10, blocking_decisions_nominal: 8, blocking_decisions_worst_case: 20, active_minutes_nominal: 240, active_minutes_worst_case: 600}
+    estimated_runs_per_phase: {nominal: 8, worst_case: 24}
+    estimated_external_tool_interactions: {nominal: 24, worst_case: 70}
+    publication_window_derivation:
+      nominal: {llm_points: 60, human_points: 16, tool_points: 48, side_effect_points: 8, total_points: 132, publisher_eligible_minutes: 30, by_points: 14, by_minutes: 6, by_db_bytes: 1, window_limit: 14}
+      worst_case: {llm_points: 280, human_points: 40, tool_points: 140, side_effect_points: 24, total_points: 484, publisher_eligible_minutes: 210, by_points: 49, by_minutes: 42, by_db_bytes: 2, window_limit: 49}
+    publication_trigger_counts:
+      nominal: {run_end: 8, human_wait_or_exit: 4, asserted_irreversible_boundaries: 4, asserted_migration_or_gate: 2, window_limit: 14, total: 32}
+      worst_case: {run_end: 24, human_wait_or_exit: 10, asserted_irreversible_boundaries: 12, asserted_migration_or_gate: 6, window_limit: 49, total: 101}
+    checkpoint_publications_per_phase: {nominal: 32, worst_case: 101}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.9375, replay_unique_worst_case: 17.5, asserted_fixed_non_binary_nominal: 10, asserted_fixed_non_binary_worst_case: 20, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 119.53125, worst_case: 757.0}
+    checkpoint_bytes: {nominal: 125829120, worst_case: 793772032}
+    no_delta_pack_growth_bytes: {nominal: 4026531840, worst_case: 80170975232}
+    threshold_status:
+      nominal: {checkpoint: above_hard, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: conditional_on_evidence_triggered_scope_and_prior_owner_storage_route
+  - phase: M1
+    checkpoint_chain: swarm
+    phase_envelope: aggregate_reference_only
+    packages:
+      - {package_id: M1-plan-new, covers_work_items: [M1-00], kind: M_new_plan, invocation_profile: light, invocations: {nominal: 2, worst_case: 6}, human_attention: {profile: standard, sessions: {nominal: 1, worst_case: 1}, blocking_decisions: {nominal: 1, worst_case: 2}, active_minutes: {nominal: 30, worst_case: 60}, max_single_session_minutes: 60, batchable_requests: true}}
+      - {package_id: M1-runtime-full, covers_work_items: [M1-01], kind: full_M_runtime, invocation_profile: standard, invocations: {nominal: 16, worst_case: 32}, human_attention: {profile: high_attention, sessions: {nominal: 1, worst_case: 3}, blocking_decisions: {nominal: 1, worst_case: 4}, active_minutes: {nominal: 60, worst_case: 180}, max_single_session_minutes: 60, batchable_requests: false}}
+    llm_invocations: {nominal: 18, worst_case: 38, checkpointed_nominal: 16, checkpointed_worst_case: 32}
+    human_attention_envelope_profile: high_attention
+    human_attention: {sessions_nominal: 2, sessions_worst_case: 4, blocking_decisions_nominal: 2, blocking_decisions_worst_case: 6, active_minutes_nominal: 90, active_minutes_worst_case: 240}
+    estimated_runs_per_phase: {nominal: 6, worst_case: 16}
+    estimated_external_tool_interactions: {nominal: 16, worst_case: 40}
+    publication_window_derivation:
+      nominal: {llm_points: 32, human_points: 4, tool_points: 32, side_effect_points: 8, total_points: 76, publisher_eligible_minutes: 16, by_points: 8, by_minutes: 4, by_db_bytes: 1, window_limit: 8}
+      worst_case: {llm_points: 128, human_points: 12, tool_points: 80, side_effect_points: 16, total_points: 236, publisher_eligible_minutes: 96, by_points: 24, by_minutes: 20, by_db_bytes: 1, window_limit: 24}
+    publication_trigger_counts:
+      nominal: {run_end: 6, human_wait_or_exit: 2, asserted_irreversible_boundaries: 4, asserted_migration_or_gate: 2, window_limit: 8, total: 22}
+      worst_case: {run_end: 16, human_wait_or_exit: 4, asserted_irreversible_boundaries: 8, asserted_migration_or_gate: 4, window_limit: 24, total: 56}
+    checkpoint_publications_per_phase: {nominal: 22, worst_case: 56}
+    checkpoint_growth_mib: {replay_unique_nominal: 0.5, replay_unique_worst_case: 8, asserted_fixed_non_binary_nominal: 6, asserted_fixed_non_binary_worst_case: 12, binary_nominal: 0, binary_worst_case: 0}
+    checkpoint_unrounded_mib: {nominal: 126.03125, worst_case: 777.0}
+    checkpoint_bytes: {nominal: 133169152, worst_case: 814743552}
+    no_delta_pack_growth_bytes: {nominal: 2929721344, worst_case: 45625638912}
+    threshold_status:
+      nominal: {checkpoint: above_hard, phase_pack: above_hard}
+      worst_case: {checkpoint: above_hard, phase_pack: above_hard}
+    execution_condition: conditional_on_prior_owner_storage_route_and_stable_X1_subset
+
+full_route_totals:
+  llm_invocations: {nominal: 288, worst_case: 722}
+  human_attention:
+    sessions_nominal: 28
+    sessions_worst_case: 59
+    blocking_decisions_nominal: 50
+    blocking_decisions_worst_case: 111
+    active_minutes_nominal: 1550
+    active_minutes_worst_case: 3630
+  checkpoint_publications_per_phase_sum: {nominal: 200, worst_case: 611}
+  ungated_no_delta_upper_bound_bytes: {nominal: 14728298496, worst_case: 261533728768}
+  expected_pack_growth_bytes: unknown_until_k0b
+  policy_reachable_total: not_computable_before_each_required_owner_route
+  interpretation: LLM/human worst totals are independent per-metric upper bounds, not one jointly reachable scenario. Pack sums deliberately ignore gates and delta compression and must not be presented as an expected repository size.
+
+binary_payload_seed:
+  G:
+    scope: first_real_surface_references_assets_and_visual_generations
+    object_count: {nominal: 20, worst_case: 40}
+    assumed_mean_object_bytes: {nominal: 2097152, worst_case: 8388608}
+    hard_per_object_bytes: 8388608
+    aggregate_new_bytes: {nominal: 41943040, worst_case: 335544320}
+    policy_permitted_maximum_aggregate_bytes: 335544320
+    runtime_aggregate_limit_bytes: 335544320
+    note: G-layer-plan must replace or explicitly retain these assumptions and reconcile every variance before V1-01.
+  Q:
+    scope: first_slice_new_runtime_evidence_only
+    object_count: {nominal: 12, worst_case: 28}
+    assumed_mean_object_bytes: {nominal: 2097152, worst_case: 8388608}
+    hard_per_object_bytes: 8388608
+    aggregate_new_bytes: {nominal: 25165824, worst_case: 234881024}
+    policy_permitted_maximum_aggregate_bytes: 234881024
+    runtime_aggregate_limit_bytes: 234881024
+    note: Existing G/I payload is referenced by artifact version and is not counted again; Q-owned screenshots, recordings, traces or archives are counted.
+
+forecast_findings:
+  - id: F-D0-01
+    severity: serious
+    finding: The full target route is a deep program; the revised model includes design-time layer-plan author/reviewer calls and requires K0-b/N1 program checkpoints.
+  - id: F-D0-02
+    severity: blocker_before_affected_phase
+    finding: Per-project chains keep fixture and Swarm bytes separate. Nominal no-delta phase pack first exceeds hard stop at V1 and nominal Swarm checkpoint at Q1. Planning-worst pack first exceeds hard stop at fixture N1; planning-worst checkpoint first exceeds hard stop at Swarm V1. The separate 256-KiB replay sensitivity exceeds checkpoint hard stop at Swarm S1 while fixture remains 96 MiB at N1.
+  - id: F-D0-03
+    severity: serious
+    finding: All downstream rows after a threshold crossing are conditional counterfactual branches, not an executable continuation or an expected Git-size forecast.
+  - id: F-D0-04
+    severity: moderate
+    finding: V1 owner attention is approximately 8 nominal to 16 worst-case active hours and requires exact capacity authorization.
+
+proposed_routes:
+  foundation: Continue only K0-a/K0-b within approved package budgets; this worksheet does not authorize product execution.
+  storage: Keep SQLite canonical and the tracked clean checkpoint as the current hypothesis. Measure K0-b; every warning/hard crossing requires narrow/batching, evidence-backed threshold change, storage migration reopening V2-D22, or pause.
+  visual: V1-00 must reconcile G payload/publication assumptions and close the nominal pack hard-stop before V1-01; no first real asset may be written while unresolved.
+  human_capacity: Phase profiles are aggregate envelope labels only. Require an exact owner capacity receipt before each package whose own human_attention.profile is high_attention; V1 contains two such packages and both must be authorized before execution.
+
+independent_review:
+  initial_review_status: return_for_revision
+  initial_review_ref: new pipeline/reviews/d0-01-d0-02-review-01.md
+  current_revision_return_round: 2
+  rereview_status: approve_with_changes
+  rereview_ref: new pipeline/reviews/d0-01-d0-02-review-02.md
+  revision_2_changes_status: mechanically_validated
+  further_autonomous_review_return: forbidden
+  owner_disposition_input:
+    path: new pipeline/reviews/sources/d0-01-d0-02-owner-disposition-input-03.txt
+    sha256: 1052e69ee0653423dfa11613f754d3c69b6c069586fcd694474278c06dd1e2fd
+    classification: non_return_findings_N_01_through_N_12
+    disposition: accepted_and_applied_before_D0_05
+
+owner_decision:
+  status: ready_for_owner_disposition
+  allowed_outcomes:
+    - approve_as_D0_reference
+    - modify_numbers_or_assumptions
+    - narrow_program_scope
+    - pause_program

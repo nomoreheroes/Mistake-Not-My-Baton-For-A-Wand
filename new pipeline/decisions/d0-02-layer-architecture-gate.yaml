@@ -1,0 +1,379 @@
+record_id: d0-02-layer-architecture-gate
+schema_version: 2
+status: owner_disposition_inputs_applied_ready_for_owner_disposition
+created_at: "2026-08-26"
+projection:
+  path: new pipeline/decisions/d0-02-layer-architecture-gate.md
+  sha256: 5442d6366f9fabe6e3ce41e98fa3f366f5ff70d074695253869297be11acfb16
+applies_to:
+  - shared_control_plane
+  - shared_artifact_event_plane
+  - S
+  - P
+  - R
+  - E
+  - G
+  - A
+  - H
+  - T
+  - I
+  - Q
+  - M
+
+source_binding:
+  architecture_plan:
+    path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+    version: "0.16"
+    sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  development_plan:
+    path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    version: "0.13"
+    sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+  forecast:
+    path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+    sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+
+gate_invariant:
+  statement: No production prompt, contract or layer-specific runtime behavior may be implemented before approval of the exact plan version and scope.
+  exceptions:
+    - read_only_old_pipeline_analysis
+    - explicitly_disposable_spike_excluded_from_baseline
+
+plan_identity:
+  one_layer_per_plan: true
+  shared_planes_may_have_separate_phase_scoped_plans: true
+  combined_multi_layer_plan_satisfies_gate: false
+  just_in_time: true
+  scope_expansion_requires_new_plan_version: true
+  unchanged_sections_preserve_hash_on_delta_review: true
+
+required_plan_sections:
+  entries:
+    - purpose_boundaries_non_goals_applicability
+    - dispatcher_deterministic_harness_worker_boundary
+    - state_machine_invariants_terminal_states
+    - input_events_guards_routing_fanout_barriers_fast_paths
+    - output_events_subscribers_terminal_policy_cross_layer_contracts
+    - artifact_types_ownership_versioning_lineage_key_decision_projections
+    - context_query_allowlists_trust_provenance_prompt_injection
+    - current_worker_roster_inputs_outputs_capabilities_stop_conditions
+    - failure_taxonomy_revision_ownership_invalidation_replay_recovery_abort
+    - hitl_autonomy_approvals_dialogue_rules
+    - tools_side_effects_security_egress_repository_boundaries
+    - context_scale_sharding_invocation_and_human_budgets
+    - binary_payload_budget_or_proved_not_applicable
+    - downstream_consumers_and_actual_consumption
+    - structural_contract_behavioral_fixture_real_project_scenarios
+    - evidence_package_and_readiness_criteria
+    - old_pipeline_migration_note
+    - risks_open_decisions_deferred_capabilities
+  count: 18
+  inapplicable_section_rule:
+    section_must_be_present: true
+    value: N/A
+    reason_and_evidence_required: true
+    omission_is_not_equivalent_to_not_applicable: true
+
+scope_envelope_required_fields:
+  - phase_package
+  - project_profiles_and_scenarios
+  - current_workers_routes_artifact_types
+  - explicit_exclusions
+  - deferred_triggers_and_stable_interfaces
+  - downstream_boundary
+
+complexity_budgets:
+  metric: non_empty_full_file_lines_including_tables
+  tiers:
+    narrow: 500
+    standard: 700
+    complex_G_A_H_I: 900
+    shared_plane: 800
+  section_sub_budgets_required:
+    - routing
+    - roster
+    - failure_recovery
+  excluded_from_count:
+    - auto_generated_registry_index
+  overrun_policy:
+    owner_receipt_required: true
+    receipt_must_explain:
+      - why_scope_cannot_be_narrowed
+      - why_appendix_or_next_package_is_not_safer
+    overrun_never_expands_implementation_scope_automatically: true
+
+invocation_budgets:
+  tier_scope: package_or_exact_layer_plan_scope_not_phase_aggregate
+  tier_binds: nominal_and_worst_case
+  counting_scope:
+    plan_production_package:
+      includes:
+        - initial_author_call
+        - mandatory_fresh_context_reviewer_call
+        - bounded_revision_return_author_calls
+        - bounded_revision_return_reviewer_calls
+      new_plan_call_model_ref: new pipeline/decisions/d0-01-full-route-forecast.yaml#counting_rules.new_plan_call_model
+      delta_plan_call_model_ref: new pipeline/decisions/d0-01-full-route-forecast.yaml#counting_rules.delta_plan_call_model
+    runtime_package:
+      includes:
+        - S0_and_Layer0_reasoning_calls
+        - workers_and_independent_runtime_reviewers
+        - dialogue_roles
+        - retries
+        - fallbacks
+    phase_envelope: sum_of_uniquely_identified_plan_and_runtime_packages
+  tiers:
+    light: {nominal_max: 12, worst_case_max: 20}
+    standard: {nominal_max: 30, worst_case_max: 50}
+    deep:
+      universal_max: null
+      exact_nominal_and_worst_case_required: true
+      hash_bound_owner_authorization_required: true
+  unknown_budget_result: gate_rejected
+  enforcement:
+    before_compiler: versioned_manual_reference_worksheet_under_D0_02
+    K0a: manual_reference_case_required
+    K0b: compiler_and_reference_equivalence_implemented
+    from_N1: machine_generated_forecast_required
+
+design_invocation_ledger:
+  schema_path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml
+  schema_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b
+  ledger_path: new pipeline/ledgers/design-invocations.yaml
+  storage_boundary: Pipeline_Git_not_project_DB
+  required_before_first_layer_plan_receipt: true
+  receipt_author_and_reviewer_invocation_refs_must_resolve: true
+  unknown_historical_metadata: recorded_as_gap_never_synthesized
+
+human_attention_budgets:
+  tier_scope: package_or_exact_layer_plan_scope_not_phase_aggregate
+  tier_binds: nominal_and_worst_case
+  required_package_fields:
+    - profile
+    - sessions_nominal_and_worst_case
+    - blocking_decisions_nominal_and_worst_case
+    - active_minutes_nominal_and_worst_case
+    - max_single_session_minutes
+    - batchable_requests
+  phase_envelope:
+    derivation: sum_of_unique_package_human_budgets
+    profile_is_informational_label_only: true
+    never_creates_capacity_receipt_by_itself: true
+  tiers:
+    light:
+      sessions_max: 1
+      blocking_decisions_max: 2
+      active_minutes_max: 30
+      max_single_session_minutes: 30
+    standard:
+      sessions_max: 3
+      blocking_decisions_max: 6
+      active_minutes_max: 120
+      max_single_session_minutes: 60
+    high_attention:
+      universal_max: null
+      exact_sessions_decisions_minutes_required: true
+      default_max_single_session_minutes: 90
+      owner_capacity_authorization_required: true
+  batchable_requests_must_be_declared: true
+  capacity_authorization_scope: each_package_with_profile_high_attention
+  high_attention_package_must_have_owner_capacity_receipt_before_execution: true
+  V1_minimum_profile: high_attention
+  exhausted_budget_result: owner_scope_or_schedule_decision
+  enforcement:
+    before_compiler: versioned_manual_reference_worksheet_under_D0_02
+    K0a: manual_reference_case_required
+    K0b: compiler_and_reference_equivalence_implemented
+    from_N1: machine_generated_forecast_required
+
+binary_payload_budget:
+  required_when:
+    - layer_creates_binary_payload
+    - layer_first_persists_binary_payload
+    - G_assets_references_or_visual_generations
+    - Q_captured_or_ingested_runtime_evidence
+  required_fields:
+    - payload_classes_and_media_types
+    - nominal_object_count
+    - worst_case_object_count
+    - assumed_mean_object_bytes
+    - hard_per_object_bytes
+    - nominal_aggregate_new_bytes
+    - worst_case_aggregate_new_bytes
+    - policy_permitted_maximum_aggregate_bytes
+    - runtime_aggregate_limit_bytes
+    - checkpoint_publication_count
+    - pessimistic_pack_amplification
+    - exact_D0_or_phase_forecast_ref_and_hash
+  not_applicable_rule: Contract must prohibit binary persistence and use only an artifact-version reference to payload already budgeted by its producer.
+  variance_rule:
+    any_assumption_or_number_change_blocks_gate: true
+    owner_routes:
+      - narrow_or_checkpoint_batching
+      - raise_threshold_with_storage_and_clone_evidence
+      - migrate_checkpoint_storage
+      - pause
+    reconciliation_receipt_required: true
+    G_deadline: V1-00_before_V1-01
+    Q_deadline: before_corresponding_runtime_evidence_implementation
+    per_object_and_aggregate_limits_are_both_fail_closed: true
+  enforcement:
+    before_compiler: manual_reference_check_under_D0_02
+    after_K0b: fail_closed_layer_plan_validator
+
+reviewer_contract:
+  appointed_by: W0
+  appointment_time: before_review_starts
+  independence:
+    reviewer_is_not_an_author_of_any_prior_or_current_version_of_this_plan: true
+    separate_invocation_or_session: true
+    fresh_context: true
+    author_transcript_or_hidden_summary_reuse: false
+    read_only_inputs: true
+    conflicts_must_be_disclosed: true
+    reviewer_identity_model_provider_profile_recorded: true
+  allowed_inputs:
+    - exact_plan_version
+    - parent_architecture
+    - applicable_canonical_contracts_schemas_and_registries
+    - evidence_and_old_pipeline_migration_sources
+    - review_rubric
+    - D0_or_phase_budget_forecast
+  allowed_outputs:
+    - typed_findings
+    - evidence_refs
+    - proposed_dispositions
+    - recommendation_approve_revise_narrow_or_block
+  forbidden_actions:
+    - edit_plan
+    - edit_contracts_or_runtime
+    - issue_owner_approval
+    - hide_conflicts
+    - rely_on_author_self_report_without_source
+
+review_cycle:
+  initial_review_required: true
+  max_revision_return_rounds: 2
+  current_D0_02_revision_return_round: 1
+  third_autonomous_author_reviewer_loop: forbidden
+  unresolved_after_second_return:
+    owner_routes:
+      - approve_with_disposition
+      - narrow_scope
+      - revise_package_architecture
+      - block
+  delta_review:
+    changed_scope_only: true
+    unchanged_sections_keep_prior_hash_and_approval: true
+
+approval_criteria:
+  machine_checkable:
+    - one_layer_exact_plan_exists
+    - all_18_sections_present_or_NA_with_reason
+    - independent_review_receipt_exists_and_identity_differs_from_all_plan_authors
+    - plan_parent_gate_registry_and_forecast_hashes_match
+    - route_owners_and_terminal_policies_are_declared
+    - complexity_budget_or_owner_overrun_receipt_present
+    - invocation_and_human_budget_fields_are_complete_and_within_tier_or_escalated
+    - every_high_attention_package_has_exact_owner_capacity_receipt_before_execution
+    - every_budget_package_has_unique_package_id_and_covers_work_items_are_non_identity_metadata
+    - applicable_binary_payload_budget_is_complete_and_reconciled
+    - review_return_count_is_at_most_two
+    - blocker_decisions_have_terminal_dispositions
+    - owner_approval_envelope_hashes_exact_plan_review_and_scope
+    - checkpoint_and_phase_pack_threshold_statuses_use_registry_enums_independently
+  reviewer_judgment:
+    - ownership_overlap_is_resolved_safely_by_contract
+    - current_roster_is_minimal_and_deferred_roster_is_honest
+    - tests_and_evidence_can_falsify_the_architecture
+    - implementation_scope_is_unambiguous_and_sufficient
+    - security_replay_and_failure_routes_are_coherent
+  deterministic_validator_authority: machine_checkable_only
+  reviewer_judgment_requires_typed_finding_or_explicit_pass: true
+
+approval_receipt_schema:
+  canonicalization_profile:
+    id: canonical-yaml-v1
+    version: 1
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+    sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+    excluded_field_path: receipt_sha256
+  required_fields:
+    - receipt_id
+    - receipt_sha256_and_hash_profile
+    - plan_path_version_sha256
+    - parent_architecture_version_sha256
+    - gate_contract_path_version_sha256
+    - phase_package_and_project_profiles
+    - author_identity_and_invocation_ref
+    - reviewer_identity_model_provider_profile_and_invocation_ref
+    - reviewer_fresh_context_and_conflict_declaration
+    - review_rounds_and_finding_dispositions
+    - complexity_tier_cap_and_actual_counts
+    - current_and_deferred_roster_counts
+    - invocation_budget
+    - human_attention_budget
+    - binary_payload_budget_ref_or_proved_not_applicable
+    - forecast_reconciliation_ref
+    - plan_section_presence_and_NA_reasons
+    - exact_allowed_implementation_scope
+    - owner_decision_actor_timestamp_and_exact_input_hashes
+    - stale_conditions
+  mandatory_stale_conditions:
+    - plan_sha256
+    - parent_architecture_sha256
+    - gate_contract_sha256
+    - referenced_registry_versions_and_hashes
+    - bound_forecast_sha256
+    - complexity_tier
+    - approved_phase_package_and_profiles
+  self_hash_rule: receipt_sha256 is computed with canonical-yaml-v1 after removing receipt_sha256; the enclosing approval envelope also records the complete-file SHA256.
+  status_values:
+    - approved
+    - approved_with_disposition
+    - narrowed
+    - blocked
+
+reference_tests:
+  - Reject a multi-layer plan presented as one layer approval.
+  - Reject an author of any prior/current plan version acting as reviewer.
+  - Reject a reviewer with inherited author transcript or write capability.
+  - Reject a third autonomous revision-return round.
+  - Reject unknown route, invocation or human-attention bounds.
+  - Reject a package without all human-attention fields or a phase aggregate presented as its substitute.
+  - Reject execution of a high-attention package without its exact owner-capacity receipt; do not require a receipt from a phase envelope label alone.
+  - Reject G or Q binary scope without a reconciled payload budget.
+  - Reject an N/A binary budget when the contract can persist bytes.
+  - Reject complexity overrun without an owner receipt.
+  - Reject implementation whose scope exceeds the approval receipt.
+  - Invalidate approval when any mandatory stale condition changes even if the plan omitted it.
+  - Reject a receipt without gate-contract binding and canonical self-hash profile.
+  - Prove deterministic validator evaluates only machine_checkable criteria and cannot synthesize reviewer judgment.
+  - Reject a D0 approval envelope with duplicate/missing decision IDs or without dispositions, forecast, gate-contract and checkpoint-policy record roles.
+  - Reject a receipt whose author/reviewer invocation refs do not resolve in the Pipeline design-invocation ledger.
+  - Reject a binary budget whose aggregate exceeds either the reconciled planning bound or runtime aggregate limit even when every object fits its per-object cap.
+
+approval_envelope_schema_ref:
+  path: new pipeline/registry/approval-envelope/v1.schema.yaml
+  sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54
+
+independent_review:
+  initial_review_status: return_for_revision
+  initial_review_ref: new pipeline/reviews/d0-01-d0-02-review-01.md
+  current_revision_return_round: 2
+  rereview_status: approve_with_changes
+  rereview_ref: new pipeline/reviews/d0-01-d0-02-review-02.md
+  revision_2_changes_status: mechanically_validated
+  further_autonomous_review_return: forbidden
+  owner_disposition_input:
+    path: new pipeline/reviews/sources/d0-01-d0-02-owner-disposition-input-03.txt
+    sha256: 1052e69ee0653423dfa11613f754d3c69b6c069586fcd694474278c06dd1e2fd
+    classification: non_return_findings_N_01_through_N_12
+    disposition: accepted_and_applied_before_D0_05
+
+owner_approval:
+  status: pending
+  requested_action: Approve this exact contract hash or provide modified fields and rationale.
+  approved_by: null
+  approved_at: null
+  record_sha256: supplied_by_external_approval_envelope

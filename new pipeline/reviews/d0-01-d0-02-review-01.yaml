@@ -1,0 +1,51 @@
+review_id: d0-01-d0-02-review-01
+schema_version: 1
+review_kind: independent_fresh_context
+reviewed_at: "2026-08-26"
+verdict: return_for_revision
+scope: D0-01_D0-02_governance_package
+projection:
+  path: new pipeline/reviews/d0-01-d0-02-review-01.md
+  sha256: af79073de0f0c281cbc7456e60f61ddc1ddb2ecb07e817c3603d13876b475609
+source_evidence:
+  kind: external_conversation_attachment
+  filename: pasted-text.txt
+  sha256: e51490c8694f33eb0527b7257784f3df3bfbb871557e1101b396a15dedf7f90e
+  repository_locator: new pipeline/reviews/sources/d0-01-d0-02-review-01.txt
+  preservation_note: "The repository locator is a byte-for-byte copy of the owner-supplied external attachment."
+reviewer_identity:
+  actor_id: not_provided_by_source
+  provider: not_provided_by_source
+  model: not_provided_by_source
+  profile: not_provided_by_source
+  source_claims_fresh_context: true
+  explicit_conflict_declaration: not_provided_by_source
+  limitation: "Missing historical metadata is preserved as a provenance gap and is not synthesized."
+findings:
+  blocker:
+    accepted: [B-01, B-02, B-03, B-04]
+  serious:
+    accepted: [S-01, S-02, S-03, S-04, S-05, S-06, S-07, S-08, S-09, S-10, S-11, S-12, S-13]
+  moderate:
+    accepted_as_written: [M-02, M-03, M-04, M-05, M-06, M-07, M-08, M-09, M-10]
+    accepted_with_modified_implementation:
+      - id: M-01
+        implementation: "One-way canonical YAML to Markdown SHA-256 binding plus an external approval envelope that hashes both files."
+        reason: "Mutual complete-file YAML and Markdown hashes would create an unsatisfiable hash cycle."
+  minor:
+    accepted: [Mi-01, Mi-02, Mi-03, Mi-04, Mi-05, Mi-06]
+revision_status:
+  author_revision: superseded_by_mechanically_validated_revision_2
+  focused_rereview: completed_approve_with_changes
+  focused_rereview_ref: new pipeline/reviews/d0-01-d0-02-review-02.yaml
+  rereview_scope:
+    - new pipeline/decisions/d0-01-full-route-forecast.yaml
+    - new pipeline/decisions/d0-01-full-route-forecast.md
+    - new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    - new pipeline/decisions/d0-02-layer-architecture-gate.md
+    - new pipeline/registry/checkpoint-budget-policy/v1.yaml
+    - new pipeline/registry/approval-envelope/v1.schema.yaml
+    - cross_hash_bindings_and_five_blocked_dispositions
+owner_approval:
+  issued_by_reviewer: false
+  note: "The review produced findings only; it did not approve owner decisions."

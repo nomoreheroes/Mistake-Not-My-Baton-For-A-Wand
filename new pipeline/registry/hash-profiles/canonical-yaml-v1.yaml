@@ -1,0 +1,49 @@
+profile_id: canonical-yaml-v1
+version: 1
+status: proposed_for_owner_approval
+created_at: "2026-08-26"
+projection:
+  path: new pipeline/registry/hash-profiles/canonical-yaml-v1.md
+  sha256: 21058957d8d6984b1597e72bd672290b229709729bfde9b753770a4eeb27bec7
+
+input_contract:
+  media_type: application/yaml
+  character_encoding: UTF-8
+  byte_order_mark: forbidden
+  yaml_version: "1.2"
+  schema: core
+  duplicate_mapping_keys: rejected
+  merge_keys: rejected
+  aliases_and_anchors: rejected
+  custom_tags: rejected
+  mapping_keys: strings_only
+  values: JSON_compatible_only
+
+normalization:
+  string_and_key_unicode_form: NFC
+  excluded_field_paths:
+    supplied_by_calling_contract: true
+    remove_before_normalization: true
+    missing_declared_exclusion: rejected
+  canonical_data_encoding:
+    specification: RFC_8785_JSON_Canonicalization_Scheme
+    output_encoding: UTF-8
+    byte_order_mark: forbidden
+    trailing_newline: forbidden
+
+digest:
+  algorithm: SHA-256
+  representation: lowercase_hex_64
+
+self_hash_usage:
+  approval_receipt_excluded_path: receipt_sha256
+  approval_envelope_excluded_path: integrity.canonical_payload_sha256
+  complete_file_sha256_is_separate: true
+
+reference_tests:
+  - Equivalent permitted YAML mappings with different key order produce identical canonical bytes.
+  - CRLF/LF and indentation differences do not affect canonical data bytes.
+  - Duplicate keys, aliases, custom tags and non-string keys are rejected.
+  - NFC-equivalent strings produce identical canonical bytes.
+  - Changing any non-excluded semantic field changes the digest.
+  - Changing only the declared self-hash field does not change the canonical payload digest.

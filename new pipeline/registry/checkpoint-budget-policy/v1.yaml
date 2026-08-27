@@ -1,0 +1,98 @@
+policy_id: checkpoint-budget-policy
+version: 1
+status: proposed_for_owner_approval
+created_at: "2026-08-26"
+projection:
+  path: new pipeline/registry/checkpoint-budget-policy/v1.md
+  sha256: 02ddee381cf51ce2f4966feb107f963440581dc4d26f5577de9cffad6194eabf
+
+thresholds:
+  max_checkpoint_bytes: 104857600
+  max_projected_pack_growth_per_phase: 1073741824
+  max_publications_per_run: 12
+  max_publication_p95_seconds: 10
+  max_clean_clone_restore_seconds: 120
+  warning_ratio: 0.5
+  hard_stop_ratio: 1.0
+
+threshold_scope: per_project_checkpoint_chain
+project_chain_rule:
+  fixture_and_real_project_databases_are_independent: true
+  bytes_must_not_carry_between_project_chains: true
+  phase_pack_growth_is_attributed_to_the_owning_project_Git: true
+
+threshold_status_schema:
+  checkpoint: [below_warning, above_warning, above_hard]
+  phase_pack: [publisher_unavailable, below_warning, above_warning, above_hard]
+
+publication_window:
+  applies_from: K0b
+  pre_publisher_phases_are_exempt: true
+  max_unpublished_replay_points: 10
+  max_unpublished_minutes: 5
+  max_unpublished_db_bytes: 33554432
+  strict_profile: {replay_points: 1, minutes: 0, db_bytes: 0}
+  forecast_requirement:
+    replay_points_include:
+      - model_invocation_boundaries
+      - human_answer_and_approval_boundaries
+      - external_tool_intent_and_result_boundaries
+      - irreversible_side_effect_intent_and_result_boundaries
+    window_publications_formula: max(ceil(replay_points_per_phase / max_unpublished_replay_points), ceil(publisher_eligible_runtime_minutes / max_unpublished_minutes), ceil(new_db_bytes / max_unpublished_db_bytes))
+    overlap_credit_before_measurement: forbidden
+
+forecast_semantics:
+  pre_k0b_no_delta_factor: 1.0
+  expected_delta_factor: unknown_until_k0b
+  expected_pack_growth: unknown_until_k0b
+  checkpoint_publications_unit: per_phase_forecast_derived_from_per_run_triggers
+  phase_pack_formula: rounded_checkpoint_bytes * checkpoint_publications_per_phase * measured_or_no_delta_factor
+  warning_status: utilization_greater_than_or_equal_to_warning_ratio_and_below_hard_stop
+  hard_status: utilization_greater_than_or_equal_to_hard_stop_ratio
+  downstream_after_hard_status: conditional_on_owner_route
+
+last_cheap_migration_gate: V1-00_before_V1-01
+
+owner_routes:
+  - narrow_or_checkpoint_batching
+  - raise_threshold_with_storage_and_clone_evidence
+  - migrate_checkpoint_storage_and_reopen_V2-D22
+  - pause
+
+hard_stop_behavior:
+  block_next_product_or_external_action: true
+  permit_one_terminal_over_limit_checkpoint_for_current_unpublished_range: true
+  allowed_after_stop:
+    - recovery_evidence
+    - migration_evidence
+    - owner_disposition
+
+migration_runbook:
+  required_steps:
+    - freeze_checkpoint_publisher
+    - create_immutable_pre_migration_tag_and_backup
+    - dry_run_exact_path_history_or_storage_migration
+    - reconcile_artifact_versions_object_hashes_and_checkpoint_identity
+    - verify_remote_policy
+    - invalidate_and_recreate_known_clones_and_worktrees
+    - execute_clean_clone_F13a
+    - publish_new_repository_identity_receipt
+  automatic_LFS_CAS_or_external_backend: false
+  after_V1_01_requires_architecture_change: true
+
+measurement_requirements:
+  K0b:
+    - SQLite_page_churn_distribution
+    - BLOB_size_and_compressibility_distribution
+    - VACUUM_or_full_rewrite_cost
+    - snapshot_and_commit_p95
+    - actual_pack_delta_factor
+    - clean_clone_restore_seconds
+  G_Q:
+    - object_count_mean_hard_and_aggregate_bytes
+    - duplicate_content_ratio
+    - phase_publication_amplification
+
+owner_approval:
+  status: pending
+  envelope_ref: null

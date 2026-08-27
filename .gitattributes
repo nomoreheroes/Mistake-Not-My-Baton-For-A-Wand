@@ -1,0 +1,13 @@
+# Byte-bound governance artifacts must survive Windows clean checkout unchanged.
+*.yaml text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# SQLite checkpoints and other payloads are never subject to text conversion.
+*.sqlite3 binary
+*.db binary
