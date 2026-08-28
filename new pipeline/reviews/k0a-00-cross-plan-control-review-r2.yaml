@@ -1,0 +1,111 @@
+review_id: k0a-00-cross-plan-control-review-r2-final
+schema_version: 1
+classification: owner_authorized_fresh_context_cross_plan_revision_review
+review_round: 2
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root_with_orchestrator_model_metadata_precedence
+reviewer:
+  actor_id: /root/review_cross_plan_control_r2
+  provider: openai
+  model: gpt-5.6-sol
+  model_recording_source: orchestrator_spawn_configuration
+  reviewer_return_self_reported_model: gpt-5
+  profile: k0a_owner_authorized_fresh_context_cross_plan_revision_review_v1
+  genuine_fresh_context: true
+  inherited_author_context: false
+  read_only: true
+  conflict_declaration: No known conflict; reviewer authored no reviewed plan version, received no author transcript or hidden author summary, used only manifest-authorized files, and made no file changes.
+review_boundaries:
+  owner_authorization_scope: revision_review_only_not_implementation_approval
+  runtime_execution: false
+  approval_receipt_issued: false
+  owner_approval_claimed: false
+  forbidden_inputs_accessed: false
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-cross-plan-control-review-input-r2.yaml
+  expected_sha256: 6a177e385b5dc80d1ab5bc278fe64a33872300881de4d1705e6c63de0c7361b8
+  actual_sha256: 6a177e385b5dc80d1ab5bc278fe64a33872300881de4d1705e6c63de0c7361b8
+  hash_match: true
+exact_changed_plan:
+  path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+  plan_id: k0a-00-shared-control-plane
+  version: "1.2.0"
+  declared_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+  actual_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+  hash_match: true
+mandatory_comparators:
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, plan_id: k0a-00-s-layer, version: "1.2.0", declared_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, hash_match: true}
+  - {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, plan_id: k0a-00-shared-artifact-event-plane, version: "1.1.0", declared_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, actual_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, hash_match: true}
+allowed_input_integrity: {files_with_declared_sha256: 16, matched: 16, mismatched: 0, result: pass}
+delta_check:
+  baseline: {path: new pipeline/reviews/sources/k0a-00-shared-control-plan-v1.1.0.md, version: "1.1.0", sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12}
+  candidate: {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, version: "1.2.0", sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  limited_to_version_and_retry_clauses_in_sections_3_9_12: true
+  other_byte_differences: false
+  scope_expansion: false
+  result: pass
+dispositions:
+  EXT-001:
+    status: fully_resolved
+    result: pass
+    assessment: Control v1.2 and S v1.2 now prescribe one automatic second physical attempt only for the two exact pre-acceptance transient triggers, preserving run/delivery/context/pins, assigning a new physical identity, retaining attempt-1 evidence, fencing late results, forbidding a third attempt, and excluding validation, policy, semantic, partial-response, and downstream retries.
+  EXT-005_and_S-R2-001:
+    status: resolved_by_owner_binding_interpretation
+    result: pass
+    S_plan_bytes_changed: false
+    S_plan_sha256_preserved: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+    binding_interpretation: S0 returns raw s0_route_proposal; only the deterministic harness validates and persists validated_route_proposal. Semantic blockers and abstentions are failed_validation and never schedule Layer0.
+    scope_expansion: false
+    approval_receipt_condition: Bind this interpretation to the exact S plan hash and carry it into the K0a-02 contract and conformance tests.
+artifact_event_boundary:
+  comparator_byte_unchanged: true
+  retry_boundary_coherent: true
+  duplicate_publication_possible_from_retry: false
+  late_attempt_result_fenced_before_publication: true
+  result: pass
+control_section_check: {required: 18, present: 18, result: pass}
+complexity:
+  shared_control_plane: {tier: shared_plane, actual_non_empty_lines: 143, cap: 800, routing: {actual: 5, cap: 80}, roster: {actual: 9, cap: 40}, failure_recovery: {actual: 15, cap: 70}, result: pass}
+  S_layer: {tier: narrow, actual_non_empty_lines: 124, cap: 500, routing: {actual: 12, cap: 75}, roster: {actual: 7, cap: 30}, failure_recovery: {actual: 13, cap: 60}, result: pass}
+  shared_artifact_event_plane: {tier: shared_plane, actual_non_empty_lines: 139, cap: 800, routing: {actual: 12, cap: 85}, roster: {actual: 11, cap: 45}, failure_recovery: {actual: 13, cap: 75}, result: pass}
+budgets:
+  design_invocations: {package_id: K0a-plan-bootstrap, nominal: 6, worst_case: 18, this_review_call_number: 17, used_after_this_review: 17, remaining: 1, variance_required: false, result: pass}
+  runtime_invocations: {package_id: K0a-runtime-F00, authorization_status: unauthorized_pending_exact_owner_approval, nominal: 3, worst_case: 6, actual: 0, third_call_per_role_forbidden: true, result: pass}
+  human_attention: {plan_profile: standard, runtime_profile: light, runtime_sessions: 0, runtime_decisions: 0, runtime_minutes: 0, result: pass}
+  binary_payload: {applicability: N/A, nominal_bytes: 0, worst_case_bytes: 0, forecast_match: true, result: pass}
+machine_checks:
+  pass:
+    - manifest_and_all_declared_hashes
+    - exact_plan_and_comparator_identities
+    - authorized_delta_only
+    - all_18_control_sections
+    - one_shared_plane_fixture_only_F00_scope
+    - control_S_retry_trigger_and_attempt_limit_equivalence
+    - unchanged_artifact_event_boundary
+    - complexity_and_section_sub_budgets
+    - unique_budget_packages_and_call_17_within_18
+    - human_attention_and_binary_NA
+    - implementation_authorization_boundary
+    - control_revision_round_at_most_two
+  fail: []
+judgment_checks:
+  pass:
+    - EXT_001_cross_plan_retry_conflict_fully_resolved
+    - ownership_overlap_resolved
+    - artifact_event_boundary_coherent_under_pre_acceptance_retry
+    - terminal_state_completion_failure_replay_and_late_result_fencing
+    - security_prompt_injection_egress_and_repository_boundaries
+    - falsifiable_tests_and_downstream_actual_consumption
+    - EXT_005_binding_interpretation_scope_preserving
+    - implementation_scope_unambiguous_and_sufficient
+    - no_revision_scope_expansion
+  fail: []
+findings: []
+revision_limit:
+  control_revision_round_2_is_final: true
+  third_autonomous_author_reviewer_return_permitted: false
+recommendation: approve
+recommendation_is_owner_approval: false
+owner_approval_status: not_issued_by_reviewer
+rationale: All declared hashes match; the surgical control v1.2 delta fully resolves EXT-001 against S v1.2 without changing artifact/event or expanding F00, and the owner interpretation settles EXT-005/S-R2-001 without changing S bytes. All gate, complexity, failure, security, evidence, and budget checks pass. This is call 17 of 18 and issues neither receipt nor owner approval.
+started_at: "2026-08-28T17:35:57.7903300+03:00"
+completed_at: "2026-08-28T17:37:38.5041455+03:00"

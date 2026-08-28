@@ -219,4 +219,52 @@ entries:
     fresh_context: true
     inherited_author_context: false
     conflict_declaration: No known conflict; reviewer did not author any plan version, inherited no author context, and performed no file modifications.
+  - invocation_id: k0a-00-external-advisory-review-ext-r1
+    purpose: fresh_context_review
+    plan_path: new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: external-advisory/claude-code-opus5
+    provider: anthropic
+    model: claude-opus-5
+    profile: k0a_owner_requested_external_advisory_review_v1
+    started_at: "2026-08-28T17:02:41+03:00"
+    completed_at: "2026-08-28T17:16:03+03:00"
+    input_manifest_sha256: c5deb17ac87c158076ab96910861ac3faa87adb7fb40254b27db43984ea49bae
+    output_sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211
+    review_round: 2
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: External reviewer declared no conflict, authored no K0a plan or evidence version, received no author transcript or hidden summary, and performed a read-only blind-first review.
+  - invocation_id: k0a-00-revision-author-shared-control-r2
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.2.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T17:28:22.0831284+03:00"
+    completed_at: "2026-08-28T17:31:03.9217002+03:00"
+    input_manifest_sha256: fa3cdd32e5a7756e3fe9988f0c7671adc4c5a4d97259ca01e8e8d6c9ce5fb9a6
+    output_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+    review_round: 2
+  - invocation_id: k0a-00-review-cross-plan-control-r2
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.2.0"
+    role: independent_reviewer
+    actor_id: /root/review_cross_plan_control_r2
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_owner_authorized_fresh_context_cross_plan_revision_review_v1
+    started_at: "2026-08-28T17:35:57.7903300+03:00"
+    completed_at: "2026-08-28T17:37:38.5041455+03:00"
+    input_manifest_sha256: 6a177e385b5dc80d1ab5bc278fe64a33872300881de4d1705e6c63de0c7361b8
+    output_sha256: c27623b5dc7376a61653b9c7d2802e3ff6daa0124d752eb4e094fb74477d2adc
+    review_round: 2
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No known conflict; reviewer authored no reviewed plan version, received no author transcript or hidden author summary, used only manifest-authorized files, and performed a read-only review.
 bootstrap_note: "K0a-00 and every later Layer Architecture Gate must append author/reviewer entries before issuing a receipt. Earlier D0 conversational invocations lack complete metadata and are not backfilled with invented values."

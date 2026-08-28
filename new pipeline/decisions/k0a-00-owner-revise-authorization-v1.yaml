@@ -1,0 +1,40 @@
+record_id: k0a-00-owner-revise-authorization-v1
+schema_version: 1
+status: authorized
+received_at: "2026-08-28T17:28:22.0831284+03:00"
+owner_actor_id: owner_via_current_codex_session
+authorized_route: revise_package_architecture
+source_external_review:
+  review_id: k0a-00-external-advisory-review-ext-r1
+  path: new pipeline/reviews/sources/k0a-00-external-advisory-review-ext-r1.yaml
+  sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211
+  candidate_commit: 04413d00e1d4fcf5bb40563ff343aaf55e106612
+dispositions:
+  EXT-001:
+    status: accepted
+    action: Revise only shared-control retry clauses in sections 3, 9, and 12 to one automatic deterministic retry for the two S v1.2 pre-acceptance transient triggers, then obtain a genuinely fresh cross-plan review.
+    revision_round: control_plane_round_2_of_2
+  EXT-002:
+    status: accepted
+    corrected_pipeline_seed_spec_tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+  EXT-003:
+    status: accepted
+    action: Extend mechanical validation to resolve Git objects and distinguish machine verification from author attestation.
+  EXT-004:
+    status: accepted
+    action: Preserve the append-only r2 ledger entry, mark it non-controlling for final approval, and use the external advisory review plus a new genuinely fresh cross-plan review as controlling independent evidence.
+  EXT-005_and_S-R2-001:
+    status: accepted_with_binding_interpretation
+    interpretation: S0 returns raw s0_route_proposal; only the deterministic harness validates and persists validated_route_proposal. Semantic blockers and abstentions are failed_validation and never schedule Layer0.
+    S_plan_bytes_must_change: false
+budget_authorization:
+  external_review_invocation: 15
+  control_v1_2_author_invocation: 16
+  fresh_cross_plan_review_invocation: 17
+  package_worst_case: 18
+  variance_required: false
+explicit_boundaries:
+  - do_not_change_artifact_event_plan
+  - do_not_change_S_plan
+  - do_not_start_runtime_or_K0a_01_K0a_02_K0a_03
+  - create_one_new_root_candidate_commit_then_stop_for_exact_owner_approval

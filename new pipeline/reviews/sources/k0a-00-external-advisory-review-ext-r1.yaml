@@ -1,0 +1,951 @@
+review_id: k0a-00-external-advisory-review-ext-r1
+classification: owner_requested_external_advisory_review
+
+reviewer:
+  actor_id: external-advisory/claude-code-opus5
+  organization: Anthropic
+  provider: anthropic
+  model: claude-opus-5
+  profile: k0a_owner_requested_external_advisory_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  read_only: true
+  conflict_declaration: >-
+    No known conflict. This reviewer authored no version of k0a-00-shared-control-plane-v1,
+    k0a-00-shared-artifact-event-plane-v1, or k0a-00-s-layer-v1, and no K0a scope envelope,
+    worksheet, review record, or evidence record. No author transcript, hidden summary, or
+    verbal author explanation was received; all conclusions derive from committed blob bytes
+    read at 04413d0. No file, index, commit, plan, review record, contract, or runtime was
+    modified; no K0a runtime was executed; projects/swarm and research/old-swarm were not
+    accessed; no network research was performed. Old-pipeline reads were limited to the two
+    rule-8 permitted files.
+  blind_review_before_history: true
+  blind_review_protocol: >-
+    Primary conclusion was fixed from the three plans, the scope envelope, the budget
+    worksheet, and the normative contracts (d0-02, d0-01, checkpoint policy, hash profile,
+    ledger schema, approval-envelope schema) before any k0a-00 review record or evidence
+    record was opened. Findings EXT-001, EXT-004(part), and EXT-005 were identified blind.
+    EXT-002 and EXT-003 were identified during evidence verification after the blind pass.
+
+candidate_commit:
+  expected: 04413d00e1d4fcf5bb40563ff343aaf55e106612
+  actual: 04413d00e1d4fcf5bb40563ff343aaf55e106612
+  parent:
+    expected: 6bd34033611bdb3cefa9a96eb3c1600bd220d989
+    actual: 6bd34033611bdb3cefa9a96eb3c1600bd220d989
+    match: true
+  tree:
+    expected: 3d3e0697661a6aec1702019bcaa7d3b1989ccf1b
+    actual: 3d3e0697661a6aec1702019bcaa7d3b1989ccf1b
+    match: true
+  author: Andrei Mossakovski <andreimoss@gmail.com>
+  committed_at: "2026-08-28T17:05:06+03:00"
+  subject: Add K0a-00 architecture owner-disposition package
+  result: exact_match
+
+repository_integrity:
+  root_worktree_clean_at_review_start: true
+  root_worktree_clean_at_review_end: true
+  head_unchanged_across_review: true
+  diff_parent_to_candidate:
+    files_changed: 32
+    added: 31
+    modified: 1
+    modified_paths: ["new pipeline/ledgers/design-invocations.yaml"]
+    deleted: 0
+    insertions: 3005
+    deletions: 1
+  fixture_unchanged:
+    result: pass
+    method: blob_identity_comparison_parent_vs_candidate
+    paths_compared: 18
+    changed: 0
+    note: >-
+      All new pipeline/tests/fixtures/canonical-v1/** and all D0-06 receipt blobs are
+      byte-identical between 6bd3403 and 04413d0.
+  swarm_unchanged:
+    result: pass_by_absence
+    note: >-
+      No swarm path is tracked in the pipeline repository and no swarm path appears in the
+      candidate diff. Rule 6 was honoured, so the swarm HEAD asserted at
+      k0a-00-validation-v1.yaml:30 was NOT independently verified; see EXT-003.
+  old_pipeline_unchanged: true
+  tracked_top_level: [".gitattributes", ".gitignore", "new pipeline", "old pipeline"]
+  fixture_triple_binding_independently_verified:
+    pipeline_seed_spec_commit:
+      declared: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+      resolves: true
+      subject: D0-06 add deterministic canonical fixture seed
+    fixture_spec_sha256:
+      declared: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+      actual_at_seed_commit: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+      actual_at_head: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+      result: exact_match
+    canonical_fixture_commit:
+      declared: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+      actual_refs_heads_main: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+      method: read_only_read_of_projects/pipeline-v2-fixture/.git/refs/heads/main
+      result: exact_match
+      note: >-
+        git refused normal operation on the fixture repo for dubious ownership; the ref was
+        read as a plain file rather than adding a safe.directory exception, because that
+        would mutate user git config and violate the read-only mandate.
+    canonical_fixture_tree:
+      declared: 93a9b120c6284bb4b094ab1efd3784582597452d
+      actual_seed_tree_in_pipeline_repo: 93a9b120c6284bb4b094ab1efd3784582597452d
+      result: exact_match
+      significance: >-
+        The canonical fixture root tree is byte-identical to the committed D0-06 seed tree,
+        which independently corroborates the fixture binding.
+    pipeline_seed_spec_tree:
+      declared: 8b60d12c2f831bc0603913d346ded8201da73561
+      actual_root_tree_of_seed_commit: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+      declared_value_resolves_in_repo: false
+      result: FAIL
+      finding_ref: EXT-002
+
+verified_inputs:
+  method: sha256_over_committed_blob_bytes_via_git_cat_file_not_worktree_not_author_narration
+  normative_inputs:
+    - {path: "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md", bytes: 246369, declared: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, actual: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, match: true}
+    - {path: "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md", bytes: 97569, declared: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, actual: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, match: true}
+    - {path: "new pipeline/decisions/d0-02-layer-architecture-gate.yaml", bytes: 15320, declared: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, actual: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, match: true}
+    - {path: "new pipeline/decisions/d0-01-full-route-forecast.yaml", bytes: 42771, declared: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, actual: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, match: true}
+    - {path: "new pipeline/registry/checkpoint-budget-policy/v1.yaml", bytes: 3594, declared: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, actual: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, match: true}
+    - {path: "new pipeline/registry/design-invocation-ledger/v1.schema.yaml", bytes: 2629, declared: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, actual: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, match: true}
+    - {path: "new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml", bytes: 1668, declared: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, actual: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, match: true}
+    - {path: "new pipeline/registry/approval-envelope/v1.schema.yaml", bytes: 4628, declared: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54, actual: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54, match: true}
+  scope_and_budget:
+    - {path: "new pipeline/architecture/k0a-00-scope-envelope-v1.yaml", bytes: 5501, declared: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216, actual: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216, match: true}
+    - {path: "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml", bytes: 5022, declared: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9, actual: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9, match: true}
+  review_records:
+    - {path: "new pipeline/reviews/k0a-00-shared-control-review-r1.yaml", declared: 5f6d780ba21b92c9a215d47e62e102beb6100ee102d9eb92047cc44fa6751326, actual: 5f6d780ba21b92c9a215d47e62e102beb6100ee102d9eb92047cc44fa6751326, match: true}
+    - {path: "new pipeline/reviews/k0a-00-shared-artifact-event-review-r1.yaml", declared: da42b7b83fb2c6a6ca32d5a120eb225a25894275cabeaf4c609478134ae053b0, actual: da42b7b83fb2c6a6ca32d5a120eb225a25894275cabeaf4c609478134ae053b0, match: true}
+    - {path: "new pipeline/reviews/k0a-00-s-layer-review-r2.yaml", declared: 33386dfe40da9563152c65302af68c070f3d835e7db1ea967096921b30053057, actual: 33386dfe40da9563152c65302af68c070f3d835e7db1ea967096921b30053057, match: true}
+  evidence_records:
+    - {path: "new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml", declared: 337015a93af404b52953081d015b9da33761090abfa7690b1460f01138acc854, actual: 337015a93af404b52953081d015b9da33761090abfa7690b1460f01138acc854, match: true}
+    - {path: "new pipeline/evidence/k0a-00-forecast-reconciliation-v1.yaml", declared: bbe762e27068a8e98f5a650a69d8552e4ce66385574ebd09e6400dc67eabf22b, actual: bbe762e27068a8e98f5a650a69d8552e4ce66385574ebd09e6400dc67eabf22b, match: true}
+    - {path: "new pipeline/evidence/k0a-00-validation-v1.yaml", declared: 7effadea7cffec6d9f4517442826a1b82f6dc13a9d56431ba1fad583651fe1f9_DECLARED_AS_7effadea7cffec6d9f4517442826a1b82f6dc13a9d56431ba1fa583651fe1f9, actual: 7effadea7cffec6d9f4517442826a1b82f6dc13a9d56431ba1fa583651fe1f9, match: true, note: "declared value 7effadea7cffec6d9f4517442826a1b82f6dc13a9d56431ba1fa583651fe1f9 matched exactly; the expanded form above is a transcription artifact of this record only"}
+    - {path: "new pipeline/ledgers/design-invocations.yaml", declared: 9cc6c3a65dde248be52b22a0b0b8ec68958f8852de7c5653010d737641485c4f, actual: 9cc6c3a65dde248be52b22a0b0b8ec68958f8852de7c5653010d737641485c4f, match: true}
+  totals: {declared_sha256_checked: 20, matched: 20, mismatched: 0}
+  transitive_check:
+    owner_disposition_package_file_sha256_refs: {checked: 18, resolved_and_matched: 18, failed: 0}
+    owner_disposition_package_git_object_refs: {checked: 4, resolved: 3, failed: 1, failed_ref: pipeline_seed_spec.tree, finding_ref: EXT-002}
+    migration_note_source:
+      path: "old pipeline/J. Implementation/J0. Dispatcher.md"
+      declared_in_all_three_plans: d435daba6f83156d9919c6f2368aaf216e2f4a6214d0f8f260db30fc40932d74
+      actual: d435daba6f83156d9919c6f2368aaf216e2f4a6214d0f8f260db30fc40932d74
+      match: true
+
+exact_plans:
+  - plan_id: k0a-00-shared-control-plane
+    path: "new pipeline/architecture/k0a-00-shared-control-plane-v1.md"
+    declared_version: "1.1.0"
+    actual_version_in_bytes: "1.1.0"
+    declared_sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12
+    actual_sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12
+    id_version_hash_result: exact_match
+    review_rounds_used: 1
+    review_rounds_remaining_under_gate: 1
+  - plan_id: k0a-00-shared-artifact-event-plane
+    path: "new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md"
+    declared_version: "1.1.0"
+    actual_version_in_bytes: "1.1.0"
+    declared_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+    actual_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+    id_version_hash_result: exact_match
+    review_rounds_used: 1
+    review_rounds_remaining_under_gate: 1
+  - plan_id: k0a-00-s-layer
+    path: "new pipeline/architecture/k0a-00-s-layer-v1.md"
+    declared_version: "1.2.0"
+    actual_version_in_bytes: "1.2.0"
+    declared_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+    actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+    id_version_hash_result: exact_match
+    review_rounds_used: 2
+    review_rounds_remaining_under_gate: 0
+
+section_checks:
+  required_count_per_plan: 18
+  authority: "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:50-75"
+  method: independent_header_enumeration_and_substantive_content_read_of_every_section
+  shared_control_plane:
+    present: 18
+    missing: []
+    empty_or_placeholder: 0
+    na_sections_with_reason_and_evidence: [5_cross_layer_contracts, 6_key_decision_projections, 9_operational_abort, 13_binary_payload, 15_real_project]
+    substantiveness: pass
+  shared_artifact_event_plane:
+    present: 18
+    missing: []
+    empty_or_placeholder: 0
+    na_sections_with_reason_and_evidence: [5_cross_layer_contracts, 6_key_decision_projections, 9_recovery_abort, 13_binary_payload, 15_real_project]
+    substantiveness: pass
+  s_layer:
+    present: 18
+    missing: []
+    empty_or_placeholder: 0
+    na_sections_with_reason_and_evidence: [4_fanout_barriers, 5_cross_layer_contracts, 6_key_decision_projections, 10_dialogue, 12_sharding_and_fallback, 13_binary_payload, 15_real_project]
+    substantiveness: pass
+  scope_envelope_required_fields:
+    authority: "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:77-83"
+    phase_package: present
+    project_profiles_and_scenarios: present
+    current_workers_routes_artifact_types: present
+    explicit_exclusions: present
+    deferred_triggers_and_stable_interfaces: present
+    downstream_boundary: present
+    result: pass
+  one_layer_one_shared_plane_scope:
+    combined_multi_layer_plan_presented_as_one: false
+    each_plan_disclaims_the_other_two: true
+    evidence_refs:
+      - "new pipeline/architecture/k0a-00-shared-control-plane-v1.md:15"
+      - "new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md:15"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:15"
+    result: pass
+
+complexity_checks:
+  metric: non_empty_full_file_lines_including_tables
+  method: independently_recomputed_by_this_reviewer_not_read_from_author_records
+  shared_control_plane:
+    tier: shared_plane
+    cap: 800
+    actual: 143
+    routing: {actual: 5, cap: 80}
+    roster: {actual: 9, cap: 40}
+    failure_recovery: {actual: 15, cap: 70}
+    result: pass
+    agrees_with_author_record: true
+  shared_artifact_event_plane:
+    tier: shared_plane
+    cap: 800
+    actual: 139
+    routing: {actual: 12, cap: 85}
+    roster: {actual: 11, cap: 45}
+    failure_recovery: {actual: 13, cap: 75}
+    result: pass
+    agrees_with_author_record: true
+  s_layer:
+    tier: narrow
+    cap: 500
+    actual: 124
+    routing: {actual: 12, cap: 75}
+    roster: {actual: 7, cap: 30}
+    failure_recovery: {actual: 13, cap: 60}
+    result: pass
+    agrees_with_author_record: true
+  section_sub_budgets_declared_in_plan_text: true
+  owner_overrun_receipt_required: false
+  observation: >-
+    All three plans sit far below cap (18 to 25 percent of tier). This is not a defect, but
+    it means the complexity budget exerted no constraining pressure and provides no evidence
+    of scope discipline by itself.
+
+budget_checks:
+  authority_chain_verified: true
+  invocation_budget:
+    plan_package:
+      package_id: K0a-plan-bootstrap
+      tier: light
+      tier_caps: {nominal_max: 12, worst_case_max: 20}
+      declared: {nominal: 6, worst_case: 18}
+      forecast: {nominal: 6, worst_case: 18}
+      within_tier: true
+      result: exact_match
+      actual_ledger_entries: 14
+      within_worst_case: true
+      remaining_to_worst_case: 4
+    runtime_package:
+      package_id: K0a-runtime-F00
+      tier: light
+      declared: {nominal: 3, worst_case: 6}
+      forecast: {nominal: 3, worst_case: 6}
+      actual: 0
+      execution_status: not_authorized_not_started
+      result: exact_match
+    phase_envelope:
+      recomputed: {nominal: 9, worst_case: 24}
+      approved_forecast: "new pipeline/decisions/d0-01-full-route-forecast.yaml:166"
+      forecast_values: {nominal: 9, worst_case: 24}
+      result: exact_match
+    package_id_uniqueness: pass
+  human_attention_budget:
+    plan_package:
+      profile: standard
+      sessions: {nominal: 1, worst_case: 2}
+      blocking_decisions: {nominal: 1, worst_case: 3}
+      active_minutes: {nominal: 20, worst_case: 60}
+      max_single_session_minutes: 30
+      batchable_requests: true
+      all_six_required_fields_present: true
+      within_standard_tier: true
+      result: exact_match_to_forecast
+    runtime_package:
+      profile: light
+      sessions: {nominal: 0, worst_case: 0}
+      blocking_decisions: {nominal: 0, worst_case: 0}
+      active_minutes: {nominal: 0, worst_case: 0}
+      all_six_required_fields_present: true
+      result: exact_match_to_forecast
+    high_attention_capacity_receipt_required: false
+    phase_aggregate_not_substituted_for_package_fields: true
+  binary_payload:
+    applicability: N/A
+    proved_not_merely_asserted: true
+    per_plan_executable_proof:
+      shared_control_plane: "no BLOB write API; artifact_version_id references only; zero-row negative tests (:178-180, :191, :194)"
+      shared_artifact_event_plane: "UTF-8 textual allowlist enforced pre-transaction; BLOB/non-UTF8/media/opaque-bytes rejected (:172-174, :185, :189)"
+      s_layer: "no persistence or payload API; contract prohibits binary fields (:157-159)"
+    aggregate_new_binary_bytes: {nominal: 0, worst_case: 0}
+    approved_forecast: {binary_nominal: 0, binary_worst_case: 0}
+    result: exact_match
+    na_rule_satisfied: true
+    note: >-
+      The artifact/event plane is the only plane that can persist bytes at all, and it is
+      the one plane that makes the N/A executable rather than definitional. This is the
+      correct treatment under d0-02 not_applicable_rule and reference test
+      "Reject an N/A binary budget when the contract can persist bytes".
+  checkpoint_reference:
+    publisher_available: false
+    publications: {nominal: 0, worst_case: 0}
+    unrounded_mib: {nominal: 2.09375, worst_case: 5.5}
+    rounded_bytes: {nominal: 3145728, worst_case: 6291456}
+    threshold_status_uses_registry_enums_independently: true
+    enums_observed: [below_warning, publisher_unavailable]
+    result: exact_match
+  forecast_reconciliation:
+    changed_assumptions_or_numbers: false
+    variance_owner_route_required: false
+    result: pass
+
+machine_checks:
+  authority: "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:269-284"
+  pass:
+    - candidate_commit_head_parent_tree_exact_match
+    - root_worktree_clean_before_and_after
+    - fixture_blobs_unchanged_parent_to_candidate
+    - swarm_and_old_pipeline_untouched_by_candidate_diff
+    - all_20_declared_sha256_match_committed_blob_bytes
+    - one_layer_exact_plan_exists_per_plan
+    - all_18_sections_present_or_NA_with_reason
+    - independent_review_receipt_exists_and_identity_differs_from_all_plan_authors
+    - plan_parent_gate_registry_and_forecast_hashes_match
+    - route_owners_and_terminal_policies_are_declared
+    - complexity_budget_within_tier_no_overrun_receipt_needed
+    - invocation_and_human_budget_fields_complete_and_within_tier
+    - unique_package_ids_and_covers_work_items_non_identity
+    - binary_payload_NA_complete_and_reconciled
+    - review_return_count_is_at_most_two
+    - no_third_autonomous_author_reviewer_loop_occurred
+    - approval_receipts_absent_and_runtime_not_started
+    - design_invocation_ledger_entries_resolve_and_are_unique
+    - migration_note_source_hash_matches_committed_bytes
+    - fixture_triple_binding_commit_spec_and_fixture_tree_verified
+  fail:
+    - owner_disposition_package_pipeline_seed_spec_tree_does_not_resolve
+  not_verifiable_under_review_rules:
+    - swarm_head_and_worktree_cleanliness_asserted_at_validation_v1_line_30
+    - canonical_fixture_worktree_cleanliness_asserted_at_validation_v1_line_29
+  deferred_to_owner_approval_receipt:
+    - owner_approval_envelope_hashes_exact_plan_review_and_scope
+    - blocker_decisions_have_terminal_dispositions
+
+judgment_checks:
+  authority: "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:285-292"
+  ownership_dispatcher_harness_worker:
+    result: pass_with_one_exception
+    assessment: >-
+      The dispatcher/harness/worker split is clean and consistently stated: reasoning actors
+      propose, the deterministic harness alone validates, persists, transitions, and
+      schedules. The control plane's section 2 table is the strongest artifact in the
+      package. The single exception is retry authority, which two plans assign
+      incompatibly; see EXT-001.
+  state_machine_and_terminal_states:
+    result: pass_with_one_exception
+    assessment: >-
+      Run, invocation, artifact, event, and delivery state machines are each closed, and all
+      six scope-envelope terminal states are reachable and owned. Terminal states are
+      consistent across the three plans. The exception is the S0 delivery-level
+      retry_pending state, which has no counterpart in the control-plane invocation state
+      machine that owns the harness; see EXT-001.
+  event_producers_subscribers_route_owners_terminal_policies:
+    result: pass
+    assessment: >-
+      Both shared planes independently tabulate all five F00 events. Cross-checked
+      producer/subscriber/terminal-policy assignments agree row-for-row between
+      k0a-00-shared-control-plane-v1.md:80-86 and
+      k0a-00-shared-artifact-event-plane-v1.md:83-89. No dangling event or unowned route.
+      The control plane adds an explicit route_owner column, which the gate requires.
+  artifact_ownership_lineage_atomicity_replay:
+    result: pass
+    assessment: >-
+      Single artifact type with a fixed logical owner (fixture.bootstrap_worker) that the
+      model cannot select; identity separated from digest; artifact plus two events plus
+      subscriber snapshots in one transaction; lineage traversable end to end; replay
+      correctly scoped as read-only diagnostic retrieval with no clone-only or forensic
+      claim. The honesty of the replay limitation is a strength.
+  security_trust_prompt_injection_roots_capabilities_egress:
+    result: pass
+    assessment: >-
+      Deny-all capability posture with one pinned provider exception; untrusted-content
+      handling is explicit and consistent across all three plans; the injection boundary is
+      stated as data-versus-authority rather than as filtering; security negatives name the
+      enforcing component and require before/after zero-write proof, which is materially
+      stronger than typical. Path escape, symlink/junction, ATTACH, extension load,
+      trigger/pragma, and content-derived paths are each individually covered.
+  current_and_deferred_roster:
+    result: pass
+    assessment: >-
+      Rosters are genuinely minimal (one dispatcher, zero workers in S; zero LLM workers in
+      both planes) and the deferred lists are honest and specific, with triggers named and
+      no prompt or internal route designed ahead of approval.
+  failure_retry_recovery_coherence:
+    result: FAIL
+    assessment: >-
+      Coherent within each document, incoherent across documents. The S plan mandates one
+      automatic harness-taken adapter retry; the control plane, which owns the harness,
+      states twice that K0a performs no automatic retry and that a provider failure
+      terminates the run. See EXT-001.
+  hitl_autonomy_boundary:
+    result: pass
+    assessment: >-
+      Runtime is Auto-only with zero blocking decisions; the sole HITL is pre-implementation
+      owner approval, placed outside runtime; all three plans explicitly refuse to treat
+      model output, fixture text, or file content as approval. The boundary is stated
+      identically in all three plans, which is the correct redundancy for this rule.
+  downstream_actual_consumption_evidence:
+    result: pass
+    assessment: >-
+      Consumption is defined as a recorded act by a named consumer with exact IDs and fields
+      read, and producer self-report is explicitly rejected in all three plans. The S plan's
+      formulation is the sharpest: the validated route is "actually consumed only when the
+      harness creates the matching synthetic Layer0 invocation", with shared causation and
+      contract hashes required.
+  falsifiability_of_tests_and_evidence:
+    result: pass
+    assessment: >-
+      The scenario sets can fail. Negative and fault-injection cases are concrete
+      (zero-row proofs, wrong-owner, forged approval, over-bound context, late-result
+      fencing, corrupt ref blocking completion) and readiness is explicitly bounded to
+      bootstrap evidence with forbidden claims enumerated in the scope envelope.
+  implementation_scope_unambiguous_and_sufficient:
+    result: FAIL
+    assessment: >-
+      Sufficient in breadth but not unambiguous. Two independent ambiguities exist in the
+      package: the retry-authority conflict (EXT-001), which would cause two implementers
+      reading two approved plans to build different harnesses, and the S-R2-001 wording
+      (EXT-005), which is documentary rather than behavioural. Only the second was
+      dispositioned.
+  no_third_autonomous_revision_return_loop:
+    result: pass
+    assessment: >-
+      Confirmed from the ledger and the review records. S used exactly two returns and
+      stopped; the r2 review terminated as blocked_revision_limit_exhausted and routed to
+      owner disposition rather than initiating a third author call. The control and
+      artifact/event plans used one return each. The gate limit was respected.
+
+prior_finding_dispositions:
+  method: blind_conclusion_fixed_first_then_history_read_and_compared
+  shared_control_plane:
+    - {finding_id: K0A-C-001, round: 0, severity_recorded: not_stated, disposition: resolved, independent_assessment: agree, note: "completion now follows sink acceptance plus gate-bearing readback (:88-96, :63)"}
+    - {finding_id: K0A-C-002, round: 0, severity_recorded: not_stated, disposition: resolved, independent_assessment: agree, note: "five-event table at :80-86 carries producer, subscriber/terminal, route owner, required result"}
+    - {finding_id: K0A-C-003, round: 0, severity_recorded: not_stated, disposition: resolved, independent_assessment: agree, note: "binary N/A is executable with API/storage inventory and zero-row tests (:178-180, :190-194)"}
+  shared_artifact_event_plane:
+    - {finding_id: F-01, round: 0, disposition: resolved, independent_assessment: agree, note: "logical owner fixture.bootstrap_worker is positive, immutable, and wrong-owner is testable (:97-99, :185)"}
+    - {finding_id: F-02, round: 0, disposition: resolved, independent_assessment: agree, note: "security negatives name enforcing component and require before/after zero-write proof (:189, :194)"}
+  s_layer:
+    - {finding_id: S-R0-001, round: 0, severity: moderate, disposition: disposed_at_r1, independent_assessment: agree, note: "preflight now precedes S0 existence; rejected preflight creates no S0 state (:48, :69-70, :118)"}
+    - {finding_id: S-R0-002, round: 0, severity: moderate, disposition: partially_disposed_at_r1_then_fully_disposed_at_r2, independent_assessment: disagree, note: "See EXT-001. The r2 closure resolved the S plan's internal contradiction by declaring the retry automatic, which created a new contradiction with the already-frozen control plane. The finding was closed intra-document and the cross-document consequence was never assessed."}
+    - {finding_id: S-R0-003, round: 0, severity: moderate, disposition: partially_disposed_at_r1_then_carried_to_S-R1-002, independent_assessment: agree}
+    - {finding_id: S-R1-001, round: 1, severity: moderate, disposition: fully_disposed_at_r2, independent_assessment: disagree_in_part, note: "Same as S-R0-002. The r2 judgment_check pass on bounded_retry_and_zero_human_coherence is correct within the S plan and incorrect across the package."}
+    - {finding_id: S-R1-002, round: 1, severity: moderate, disposition: partially_disposed_at_r2, independent_assessment: agree, note: "Semantic blocker branch genuinely removed; the residue is exactly S-R2-001."}
+    - {finding_id: S-R2-001, round: 2, severity: moderate, disposition: unresolved_routed_to_owner, independent_assessment: agree_that_it_is_unresolved_disagree_on_relative_severity, note: "See S_R2_001_assessment. Correctly identified and correctly escalated rather than looped."}
+  overall_disposition_quality:
+    assessment: >-
+      Finding identification and per-plan disposition discipline are high. Every closed
+      finding was genuinely closed in the plan bytes, not merely asserted closed, and each
+      closure was independently reproducible from the committed text. The systemic weakness
+      is structural rather than a matter of diligence: every review input manifest is scoped
+      to one plan, so no reviewer in the entire cycle was ever positioned to compare the S
+      plan against the control plane. The one defect that escaped the process is precisely
+      the one the process could not see.
+    process_gap_evidence:
+      - "new pipeline/reviews/k0a-00-shared-control-review-r1.yaml completed 2026-08-28T12:06:15.264+03:00"
+      - "new pipeline/ledgers/design-invocations.yaml:205-220 k0a-00-revision-author-s-r2 ran 12:07:27 to 12:12:12"
+      - "the control plane was frozen at v1.1.0 approximately one minute before the S plan text that contradicts it was written, and was never re-reviewed"
+
+findings:
+  - finding_id: EXT-001
+    severity: high
+    category: cross_plan_ownership_and_failure_route_coherence
+    statement: >-
+      The S plan v1.2.0 and the shared control plane plan v1.1.0 give directly opposite
+      instructions for the same deterministic component. The S plan requires the harness to
+      take one automatic retry transition on a transient pre-acceptance provider failure:
+      "the deterministic harness automatically takes the single retry_pending transition; no
+      new command or human trigger is required", with state path
+      "retry_pending -> evaluating_attempt_2". The control plane plan, which owns the
+      harness, states "K0a does not retry automatically", assigns provider
+      timeout/unavailable to "failed_invocation; no automatic retry", and states that
+      "Invocation or response failures terminate the run as failed_invocation". Because both
+      plans would be approved together and neither is subordinate to the other, an
+      implementer of K0a-02 has two conflicting authorities for whether the harness retries.
+      This is a genuine fork in implementation authority with divergent observable
+      behaviour: under the S plan a transient provider blip yields a second S0 call and a
+      potentially completed F00 run; under the control plane plan the same blip terminates
+      the run as failed_invocation. The conflict was introduced by the r2 revision: S plan
+      v1.1.0 section 18 read "no automatic retry", consistent with the control plane, and
+      v1.2.0 changed it to "exactly one automatic deterministic adapter retry" in order to
+      close S-R1-001. The control plane's own section 12 compounds this by budgeting
+      "one/two S0 calls" in the worst case while its sections 3 and 9 deny any mechanism
+      that could produce the second call.
+    evidence_refs:
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:48"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:72"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:122"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:127"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:198"
+      - "new pipeline/architecture/k0a-00-shared-control-plane-v1.md:53"
+      - "new pipeline/architecture/k0a-00-shared-control-plane-v1.md:55"
+      - "new pipeline/architecture/k0a-00-shared-control-plane-v1.md:140"
+      - "new pipeline/architecture/k0a-00-shared-control-plane-v1.md:174"
+      - "new pipeline/reviews/sources/k0a-00-s-layer-plan-v1.1.0.md:199"
+      - "new pipeline/reviews/k0a-00-s-layer-review-r2.yaml (judgment_checks.pass: bounded_retry_and_zero_human_coherence)"
+      - "new pipeline/reviews/k0a-00-shared-control-review-r1.yaml (judgment_checks.pass: failure_security_and_replay_coherence, terminal_state_coherence)"
+    why_not_dispositionable_by_wording_alone: >-
+      Unlike S-R2-001, this conflict is not a summary row contradicted by the same
+      document's contract sections. It is a state-machine and failure-taxonomy clause in one
+      approved plan contradicted by a state-machine and failure-taxonomy clause in another
+      approved plan. An owner disposition selecting the S plan reading would silently
+      invert two judgment checks that an independent reviewer explicitly passed on the
+      control plane at v1.1.0, on the assumption of no automatic retry. Under d0-02
+      reviewer_judgment_requires_typed_finding_or_explicit_pass, inverting an explicit
+      reviewer pass without any reviewer having assessed the inverted text is the specific
+      outcome the independent-review contract exists to prevent.
+    required_disposition: >-
+      Owner-authorized revise_package_architecture, narrowly scoped to retry authority.
+      Preferred route: issue shared control plane plan v1.2.0 stating the retry policy
+      consistently with S v1.2.0 (one automatic adapter retry per reasoning-role delivery,
+      pre-acceptance triggers only, new physical invocation identity, inside the declared
+      3/6 runtime worst case), then a fresh-context independent review of that plan. The
+      control plane has used one of its two permitted returns, so this fits its own return
+      budget and requires no third autonomous S loop. Cost is two invocations against
+      K0a-plan-bootstrap, taking the actual from 14 to 16 against a worst case of 18, so no
+      budget variance route is triggered. The alternative route, reverting S to
+      non-automatic retry, would reopen S-R1-001 and is not recommended.
+
+  - finding_id: EXT-002
+    severity: high
+    category: evidence_integrity_machine_checkable
+    statement: >-
+      The owner disposition package declares a pipeline_seed_spec tree hash that does not
+      resolve to any object in the repository. Declared value is
+      8b60d12c2f831bc0603913d346ded8201da73561; the actual root tree of the declared seed
+      commit 3021a7c05bb685be671a2bf205cfcc7996ec45d7 is
+      8b60d12e418eb152bff1e25f86465eae6a7bbc58. The two values share only the first seven
+      characters and then diverge, and "git cat-file -e" on the declared value fails, so it
+      is not merely the wrong object but not an object at all. This matters beyond
+      cosmetics: the same package lists
+      "fixture_seed_commit_spec_sha256_fixture_commit_or_tree_changes" as a mandatory stale
+      condition, so an approval receipt built on this package would bind its staleness
+      guarantee to a value that can never be recomputed or compared. Under d0-02, an
+      approval receipt must carry mandatory_stale_conditions, and reference test "Invalidate
+      approval when any mandatory stale condition changes even if the plan omitted it"
+      presumes every stale-condition value is resolvable. Note that the other three git
+      object references in the same baseline_binding block (seed commit, canonical fixture
+      commit, canonical fixture tree) were independently verified correct, and all eighteen
+      file SHA-256 references in the package were independently verified correct, which
+      isolates this to a single transcribed value rather than a systemic hashing problem.
+    evidence_refs:
+      - "new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml:13"
+      - "new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml:100-109"
+      - "verified: git rev-parse 3021a7c^{tree} = 8b60d12e418eb152bff1e25f86465eae6a7bbc58"
+      - "verified: git cat-file -e 8b60d12c2f831bc0603913d346ded8201da73561 -> absent"
+    required_disposition: >-
+      Correct the value to 8b60d12e418eb152bff1e25f86465eae6a7bbc58 in the evidence package
+      before any approval receipt is emitted, or remove the field if the seed-spec root tree
+      is not intended to be a binding. This is an evidence-record correction, not a plan
+      revision, so it does not consume a plan return round and does not alter any plan
+      SHA-256. It does change the disposition package SHA-256, which the owner must re-bind.
+
+  - finding_id: EXT-003
+    severity: moderate
+    category: validation_record_overstates_coverage
+    statement: >-
+      The mechanical validation record reports
+      "owner_package_path_hash_resolution: {result: pass, refs_checked: 19}" and an overall
+      "machine_checkable_criteria: pass", but the unresolvable tree hash in EXT-002 sits
+      inside the very package that record validates. The validation therefore covered file
+      path plus SHA-256 pairs but did not resolve git object references (commit and tree
+      hashes) in baseline_binding, while presenting an unqualified pass. Separately, the
+      same record asserts swarm HEAD 3fb16d7fcf6c6078e41fa82d238a35eab6458b39 with
+      worktree_clean true and canonical fixture worktree_clean true. Those assertions are
+      unverifiable by any reviewer operating under the stated independence rules, since rule
+      6 forbids swarm access; they are author-attested facts presented inside a record whose
+      value is that it is machine-checked. The risk is that a downstream deterministic
+      validator or receipt treats "machine_checkable_criteria: pass" as covering more than
+      it did.
+    evidence_refs:
+      - "new pipeline/evidence/k0a-00-validation-v1.yaml:10"
+      - "new pipeline/evidence/k0a-00-validation-v1.yaml:29-30"
+      - "new pipeline/evidence/k0a-00-validation-v1.yaml (gate_result.machine_checkable_criteria: pass)"
+      - "new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml:13"
+    proposed_disposition: >-
+      Extend the validation check to resolve git object references, not only file digests,
+      and re-run it after EXT-002 is corrected. Mark author-attested, non-reproducible
+      assertions (swarm and fixture worktree cleanliness) with an explicit
+      attested_not_machine_verified qualifier so they are not counted toward
+      machine_checkable_criteria.
+
+  - finding_id: EXT-004
+    severity: moderate
+    category: reviewer_independence_recording
+    statement: >-
+      The r2 S-layer review was performed under actor_id /root/review_s_r1, the same
+      actor_id as the r1 review, with invocation_identity
+      "/root/review_s_r1#review_round_2". Its own context_declaration states that "Existing
+      context contained only the prior manifest-authorized independent S review", and it
+      qualifies the independence claim as "fresh_context_relative_to_author: true". The
+      review record is therefore candid that r2 was a continuation of the r1 reviewer's
+      context, not a fresh context in the unqualified sense. The design invocation ledger,
+      however, records the same invocation with a flat "fresh_context: true" and no
+      qualifier, so the ledger states a stronger independence property than the review
+      record it points to. The d0-02 reviewer_contract requires "fresh_context: true" and
+      "separate_invocation_or_session: true" without a relative-to-author carve-out, and
+      d0-02 reference tests include "Reject a reviewer with inherited author transcript or
+      write capability". No author transcript inheritance is alleged or evidenced here, and
+      the reviewer authored nothing, so the core independence property is intact; the defect
+      is that the ledger and the review record disagree about the strength of the claim, and
+      the ledger is the record an approval receipt resolves against.
+    evidence_refs:
+      - "new pipeline/reviews/k0a-00-s-layer-review-r2.yaml:7-8"
+      - "new pipeline/reviews/k0a-00-s-layer-review-r2.yaml:12-16"
+      - "new pipeline/ledgers/design-invocations.yaml:174-180"
+      - "new pipeline/ledgers/design-invocations.yaml:205-220"
+      - "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:224-234"
+      - "new pipeline/decisions/d0-02-layer-architecture-gate.yaml:340"
+    proposed_disposition: >-
+      Reconcile the ledger entry for k0a-00-review-s-r2 with the review record's own
+      qualified declaration, and have the owner rule explicitly on whether
+      fresh_context_relative_to_author satisfies d0-02 reviewer_contract.independence for a
+      final-round review. If it does, state that as a gate interpretation so future rounds
+      apply it consistently; if it does not, the r2 review needs a genuinely separate
+      reviewer session. Distinct per-round actor_ids should be required going forward, since
+      /root/review_s and /root/review_s_r1 established that convention and r2 broke it.
+
+  - finding_id: EXT-005
+    severity: low
+    category: output_contract_identity
+    statement: >-
+      S-R2-001 as recorded: the S plan's scope-envelope table row states that S0 will
+      "return a validated route proposal to the harness", whereas five numbered contract
+      locations in the same document state that S0 returns raw s0_route_proposal and that
+      only the harness validates and persists validated_route_proposal. This is a real
+      inconsistency in the plan bytes and is correctly unresolved. This reviewer assesses it
+      as low rather than moderate severity for implementation-authority purposes; see
+      S_R2_001_assessment for the full independent reasoning.
+    evidence_refs:
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:22"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:40"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:68"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:71"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:80"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:163"
+      - "new pipeline/architecture/k0a-00-s-layer-v1.md:170"
+    proposed_disposition: >-
+      The binding disposition proposed by the owner is adequate and is endorsed without
+      modification. See recommended_binding_disposition.
+
+findings_summary:
+  total: 5
+  high: 2
+  moderate: 2
+  low: 1
+  blocking_approval_receipts: [EXT-001, EXT-002]
+  correctable_without_plan_revision: [EXT-002, EXT-003, EXT-004]
+  requires_plan_revision: [EXT-001]
+
+S_R2_001_assessment:
+  scope_note: >-
+    Locating the wording precisely matters to the answer. The disputed sentence is not in
+    new pipeline/architecture/k0a-00-scope-envelope-v1.yaml. That YAML never says S0 returns
+    a validated proposal; at line 122 it lists validated_route_proposal only as a deferred
+    stable interface, which is consistent with the harness-validates reading. The sentence
+    is at k0a-00-s-layer-v1.md:22, inside the "Scope envelope" summary table of the S plan
+    itself, in the descriptive row "Current S route". The conflict is therefore internal to
+    one document between a summary row and that document's own contract sections, not a
+    conflict between two normative documents. This is materially weaker than a cross-document
+    conflict, and it is the distinction that separates S-R2-001 from EXT-001.
+
+  question_1_local_wording_or_real_authority_ambiguity:
+    answer: local_terminological_inaccuracy_with_documentary_not_behavioural_ambiguity
+    reasoning:
+      - >-
+        Weight of authority is lopsided and one-directional. Five numbered sections state
+        the raw/validated split unambiguously (section 2 line 40, section 4 lines 68 and 71,
+        section 5 line 80, section 14 line 163, section 15 line 170). One summary table row
+        states it loosely. No numbered contract section supports the line 22 reading.
+      - >-
+        The plan states its own precedence rule. Section 5 line 80 says "implementation must
+        not create competing success/blocker schemas", and section 2 line 40 says
+        "route_selected is a state name, not a second output type". Both sentences exist
+        specifically to forbid the implementation that a literal line 22 reading would
+        produce.
+      - >-
+        Line 22 is not even self-consistent under the literal reading. It says S0 returns a
+        validated proposal "to the harness". If S0 had already validated, returning it to the
+        harness for validation would be redundant. The phrase only coheres under the reading
+        the contract sections state.
+      - >-
+        Section 15 line 170 is labelled "Contract:" and is the clause a test suite is written
+        from. It says "accept only raw type s0_route_proposal ... persist success only as
+        validated_route_proposal". A conformance test generated from the plan's own contract
+        line cannot be satisfied by an S0 that self-validates.
+      - >-
+        Section 8 line 106, the roster table, independently states S0's output as "exact
+        route proposal only", with no validation verb.
+    conclusion: >-
+      No competent implementer reading the whole plan could reasonably build validation
+      authority into S0. The genuine risk is documentary rather than behavioural: an auditor,
+      a receipt author, or a downstream delta plan could quote line 22 in isolation and
+      thereby record a false statement about where validation authority sits. That is a real
+      defect worth fixing, but it is not an implementation-authority fork.
+    severity_assessment:
+      recorded_by_r2_reviewer: moderate
+      independent_assessment: low
+      basis: >-
+        Downgraded because the controlling text is unambiguous, unanimous, and internal to
+        the same document, and because the plan contains explicit precedence language that
+        forecloses the incorrect reading. The r2 reviewer was right to refuse to close it
+        silently and right to escalate rather than loop; the classification is the only point
+        of difference.
+
+  question_2_is_the_binding_disposition_sufficient_without_changing_plan_bytes:
+    answer: yes_for_S_R2_001_specifically
+    reasoning:
+      - >-
+        The proposed disposition does not add meaning to the plan. It restates verbatim what
+        sections 2, 4, 5, 14, and 15 already say, and resolves the summary row against the
+        contract sections in the direction the contract sections already point.
+      - >-
+        Both clauses of the disposition are already plan text. The raw/validated split is at
+        line 40 and line 163. The blocker/abstention clause is at line 40 ("Semantic
+        blockers, abstentions, and alternate outcomes are not valid outputs in F00; the
+        harness rejects them as failed_validation") and line 71 ("harness persists
+        failed_validation; no fallback/retry"), and the never-schedule-Layer0 consequence is
+        at line 58 ("a failed S0 attempt never schedules Layer0") and line 80.
+      - >-
+        d0-02 lists approve_with_disposition as the first owner route for a finding
+        unresolved after the second return, and the approval receipt schema carries
+        review_rounds_and_finding_dispositions plus status approved_with_disposition, so a
+        disposition that binds interpretation without changing bytes is exactly the mechanism
+        the gate provides for this situation.
+      - >-
+        Preserving the plan bytes preserves the reviewed SHA-256 and every hash binding built
+        on it, which is the correct outcome when the defect is a summary-row wording and the
+        contract is already right.
+    condition: >-
+      Sufficient only if the disposition is recorded in the approval receipt as a binding
+      interpretation with the exact plan SHA-256 it applies to, and is carried into the
+      K0a-02 contract and its conformance tests, so the interpretation governs the
+      implementation rather than living only in a receipt. It should also be listed as a
+      correction to fold into the next S plan version whenever one is issued for any other
+      reason, so line 22 does not survive indefinitely.
+    caveat: >-
+      This answer addresses S-R2-001 alone. It does not make the package approvable, because
+      EXT-001 and EXT-002 are independent of S-R2-001 and are not covered by this
+      disposition.
+
+  question_3_can_approval_receipts_be_safely_formed_after_this_disposition:
+    answer: no_not_on_this_package_as_committed
+    reasoning:
+      - >-
+        The disposition fully settles S-R2-001, so S-R2-001 alone would not block receipts.
+      - >-
+        EXT-001 blocks. Two plans that would be approved by the same receipt give the
+        deterministic harness opposite retry instructions. d0-02 approval criteria include
+        the reviewer judgment "security_replay_and_failure_routes_are_coherent" and
+        "implementation_scope_is_unambiguous_and_sufficient"; neither can be truthfully
+        asserted across this package while the conflict stands. Issuing receipts would record
+        a coherence claim that the plan bytes contradict.
+      - >-
+        EXT-002 blocks mechanically. The receipt must carry mandatory_stale_conditions
+        including the fixture seed commit, spec SHA-256, and tree. One of those values does
+        not resolve to any object, so the staleness guarantee cannot be evaluated now or
+        later.
+      - >-
+        EXT-003 weakens the evidentiary basis a receipt would rest on, since the validation
+        record's unqualified pass is broader than what it actually checked.
+      - >-
+        Everything else required for receipts is in place and verified: commit identity,
+        worktree cleanliness, fixture integrity, all twenty declared digests, section
+        presence, complexity, both budget packages, binary N/A, ledger resolution, and the
+        two-return limit. The blockers are narrow and individually fixable.
+    conclusion: >-
+      Receipts become safe after EXT-001 is resolved by an owner-authorized narrow revision
+      and EXT-002 is corrected; the S-R2-001 disposition can be carried forward unchanged
+      into that receipt.
+
+  question_4_is_owner_authorized_revise_package_architecture_required:
+    answer: yes_but_not_for_S_R2_001_and_not_for_the_S_plan
+    reasoning:
+      - >-
+        For S-R2-001 alone, a new S plan version and new SHA are not required. The
+        disposition is adequate, and forcing an S revision would spend a return round the S
+        plan no longer has and would change a SHA-256 that is currently correct and fully
+        reviewed.
+      - >-
+        A revision is required for EXT-001, and it should target the shared control plane
+        plan, not the S plan. The control plane has used one of its two permitted returns, so
+        a v1.2.0 plus a fresh-context independent review is within its own budget and is not
+        a third autonomous loop on any plan. Under d0-02, revise_package_architecture is one
+        of the four owner routes available after an exhausted return, and an owner-authorized
+        revision is by definition not an autonomous loop.
+      - >-
+        Cost is bounded and already provisioned: two additional invocations against
+        K0a-plan-bootstrap, moving actual from 14 to 16 against a worst case of 18. No budget
+        variance route, no forecast change, no owner capacity receipt.
+      - >-
+        EXT-002 and EXT-003 are evidence-record corrections and consume no return round and
+        no plan SHA change.
+    recommended_shape_of_revision: >-
+      Minimal and surgical. Amend only the control plane's section 3 invocation-state
+      sentence and section 9 provider-failure row so they state the single automatic
+      pre-acceptance adapter retry consistently with S v1.2.0 sections 3, 4, 9, and 18, and
+      align section 12's existing "one/two S0 calls" budget line with that mechanism. Do not
+      reopen any other section; under d0-02 delta_review, unchanged sections keep their prior
+      hash and approval.
+
+  question_5_does_the_proposed_disposition_expand_approved_F00_scope:
+    answer: no_it_is_scope_preserving_and_slightly_narrowing
+    verification:
+      - >-
+        Adds no actor. Roster remains one S0, zero S workers
+        (k0a-00-s-layer-v1.md:21, :108).
+      - >-
+        Adds no route. Route statement in the scope envelope is unchanged
+        (k0a-00-scope-envelope-v1.yaml:38).
+      - >-
+        Adds no event or artifact type. S owns none and the disposition creates none
+        (k0a-00-s-layer-v1.md:80, :88).
+      - >-
+        Adds no terminal state. failed_validation is already an approved F00 terminal state
+        (k0a-00-scope-envelope-v1.yaml:64).
+      - >-
+        Adds no interface. validated_route_proposal is already the listed deferred stable
+        interface (k0a-00-scope-envelope-v1.yaml:122;
+        k0a-00-shared-control-plane-v1.md:28).
+      - >-
+        Adds no capability, root, or egress. The disposition touches only where validation
+        authority sits, and both readings place it inside components that already exist.
+      - >-
+        Changes no budget. Invocation and human-attention numbers are untouched.
+      - >-
+        Net effect is narrowing: it removes the permissive reading in which S0 could hold
+        validation authority, which is a reduction in what S0 may do, and it is consistent
+        with d0-02 scope_expansion_requires_new_plan_version because nothing expands.
+    conclusion: >-
+      The disposition constrains rather than extends the approved F00 scope and does not
+      trigger the new-plan-version requirement.
+
+recommended_binding_disposition:
+  for_S_R2_001:
+    endorsed_verbatim: true
+    text: >-
+      For K0a implementation, the scope-envelope wording SHALL mean that S0 returns raw
+      s0_route_proposal to the harness; only the deterministic harness validates it and
+      persists validated_route_proposal. Semantic blockers and abstentions are rejected as
+      failed_validation and never schedule Layer0.
+    binding_conditions:
+      - record it in the approval receipt against plan SHA-256 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+      - carry it into the K0a-02 contract and its conformance tests, not the receipt alone
+      - queue line 22 as a wording correction for the next S plan version issued for any reason
+    plan_bytes_changed: false
+    scope_expanded: false
+  additionally_required_before_receipts:
+    - id: EXT-001
+      action: owner_authorized_revise_package_architecture
+      target: "new pipeline/architecture/k0a-00-shared-control-plane-v1.md"
+      new_version: "1.2.0"
+      then: fresh_context_independent_review_of_the_changed_sections_only
+      return_round_consumed: "control plane round 2 of 2"
+      invocation_cost: 2
+      budget_after: "16 of 18 worst case"
+    - id: EXT-002
+      action: correct_evidence_record
+      target: "new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml:13"
+      correction: "tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58"
+      return_round_consumed: none
+    - id: EXT-003
+      action: extend_and_rerun_mechanical_validation
+      target: "new pipeline/evidence/k0a-00-validation-v1.yaml"
+      return_round_consumed: none
+    - id: EXT-004
+      action: owner_gate_interpretation_plus_ledger_reconciliation
+      target: "new pipeline/ledgers/design-invocations.yaml:205-220"
+      return_round_consumed: none
+
+recommendation: revise_package_architecture
+recommendation_is_owner_approval: false
+
+recommendation_scope:
+  narrowly_limited_to: retry_authority_in_the_shared_control_plane_plan
+  explicitly_not_recommended:
+    - a third autonomous S-layer revision return
+    - any change to the S plan bytes or SHA-256 for S-R2-001
+    - any change to the shared artifact/event plane, which passes cleanly
+    - narrowing the F00 scope, which is already minimal and well bounded
+    - blocking the package, which the defects do not warrant
+  if_owner_disagrees_on_EXT_001:
+    alternative: >-
+      If the owner judges EXT-001 dispositionable rather than revision-worthy, the minimum
+      safe alternative is a binding disposition that explicitly selects the S v1.2.0 reading,
+      names control plane lines 53, 55, and 140 as superseded on this single point, and is
+      recorded as inverting two explicit reviewer passes without reviewer assessment. That is
+      a coherent owner choice, but it is a weaker guarantee than a reviewed plan version, and
+      it should not be characterised in the receipt as a coherence pass.
+
+rationale: >-
+  Verification of the candidate is clean and the package is, on the whole, unusually
+  disciplined. HEAD, parent, and tree match exactly; the root worktree was clean before and
+  after this review and no file, index, or commit was touched; the fixture is byte-identical
+  to its parent state and the swarm and old-pipeline trees are untouched by the candidate
+  diff; all twenty declared SHA-256 values match the committed blob bytes; the fixture triple
+  binding was independently confirmed, including the notable fact that the canonical fixture
+  root tree equals the committed D0-06 seed tree; all eighteen required sections are present
+  and substantive in all three plans; every complexity and section sub-budget passes with
+  wide margin; both budget packages reconcile exactly to the approved forecast at 9 nominal
+  and 24 worst case; the binary N/A is proved executably rather than asserted, including in
+  the one plane that can actually persist bytes; and the two-return limit was respected, with
+  the r2 review correctly terminating and escalating to the owner instead of starting a third
+  autonomous loop. On S-R2-001 specifically, my independent conclusion is that the author's
+  proposed disposition is correct, sufficient without changing plan bytes, does not expand
+  the approved F00 scope, and if anything overstates the severity: the disputed sentence is a
+  summary-table row inside the S plan, contradicted unanimously by five numbered contract
+  sections in the same document that also contain explicit precedence language forbidding the
+  incorrect reading, so the ambiguity is documentary rather than an implementation-authority
+  fork. I therefore endorse that disposition verbatim. I nevertheless cannot recommend
+  proceeding to approval receipts, for two reasons that are independent of S-R2-001 and that
+  the review cycle was structurally unable to surface. First, the S plan v1.2.0 and the
+  shared control plane plan v1.1.0 give the same deterministic harness opposite retry
+  instructions; this is a genuine fork in implementation authority with divergent observable
+  behaviour, and it was created by the r2 revision that closed S-R1-001 roughly one minute
+  after the control plane was frozen and never re-reviewed, because every review input
+  manifest in this cycle was scoped to a single plan. Second, the owner disposition package
+  declares a pipeline_seed_spec tree hash that resolves to no object in the repository, while
+  the same package binds a mandatory stale condition to that value, so a receipt built on it
+  would carry an unevaluable guarantee. Both defects are narrow and cheaply fixable: the
+  retry conflict should be corrected in the control plane plan, which still has one of its
+  two return rounds available, at a cost of two invocations that takes the package from 14 to
+  16 against a worst case of 18 and triggers no variance route; the hash is a one-value
+  evidence correction consuming no round. Because the retry conflict requires a new plan
+  version and SHA rather than an interpretation, the correct owner route is
+  revise_package_architecture, scoped narrowly to that one issue, with the S-R2-001
+  disposition carried forward unchanged into the eventual receipt. This recommendation is
+  advisory only and is not owner approval; no approval receipt was created and no file was
+  modified.
+
+started_at: "2026-08-28T17:02:41+03:00"
+completed_at: "2026-08-28T17:16:03+03:00"

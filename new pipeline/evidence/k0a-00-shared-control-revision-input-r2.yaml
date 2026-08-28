@@ -1,0 +1,19 @@
+manifest_id: k0a-00-shared-control-revision-input-r2
+schema_version: 1
+review_round: 2
+purpose: Exact owner-authorized inputs for the second and final shared-control revision.
+author_actor_id: /root
+inputs:
+  - {path: new pipeline/reviews/sources/k0a-00-shared-control-plan-v1.1.0.md, version: "1.1.0", sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12}
+  - {path: new pipeline/reviews/sources/k0a-00-external-advisory-review-ext-r1.yaml, review_id: k0a-00-external-advisory-review-ext-r1, sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211}
+  - {path: new pipeline/decisions/k0a-00-owner-revise-authorization-v1.yaml, sha256: 07b39efdd6ac5e62d1cadff0243fe09eb069183424a1939f68f1576104caa160}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, schema_version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+authorized_delta:
+  sections: [3, 9, 12]
+  finding: EXT-001
+  policy: exactly_one_automatic_deterministic_adapter_retry_for_two_named_pre_acceptance_transient_triggers
+  forbidden_changes: [S_plan_bytes, artifact_event_plan_bytes, other_control_sections, F00_scope, runtime]
+revision_limit_after_this_authoring_call: no_further_shared_control_author_revision_allowed

@@ -1,0 +1,81 @@
+record_id: k0a-00-validation-v2
+schema_version: 1
+version: "2.0.0"
+status: mechanical_and_reviewer_validation_passed_pending_exact_owner_approval
+supersedes:
+  path: new pipeline/evidence/k0a-00-validation-v1.yaml
+  sha256: 7effadea7cffec6d9f4517442826a1b82f6dc13a9d56431ba1fda583651fe1f9
+  known_v1_gap: v1 resolved file path hashes but did not resolve all Git object IDs and did not distinguish independent review coverage from root operational-state checks.
+validated_package: {path: new pipeline/evidence/k0a-00-owner-disposition-package-v2.yaml, sha256: 82b0f712ca64a5b3b67199ac45734506c6f93f8f1dc5ca77dcb4d54db6d7b5f9}
+checks:
+  yaml_parse: {result: pass, files_checked_before_this_record: 33}
+  design_invocation_ledger_schema: {result: pass, entries: 17, unique_invocation_ids: true}
+  design_invocation_ledger_hash_resolution: {result: pass, input_and_output_hashes_resolved: 34}
+  owner_package_v2_path_hash_resolution: {result: pass, refs_checked: 18}
+  external_review_payload: {result: pass, YAML_parse: true, sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211}
+  exact_plan_identity_version_hash: {result: pass, plans: 3}
+  required_section_presence: {result: pass, required_each: 18, present_each: 18}
+  control_delta:
+    result: pass
+    baseline_version: "1.1.0"
+    candidate_version: "1.2.0"
+    allowed_changes: [version_field, section_3_retry_clause, section_9_retry_clause, section_12_retry_budget_clause]
+    other_byte_differences: false
+    reviewer_ref: k0a-00-review-cross-plan-control-r2
+  unchanged_comparators:
+    shared_artifact_event_plane: {result: pass, sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+    S: {result: pass, sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  complexity:
+    result: pass
+    shared_control_plane: {actual_non_empty_lines: 143, cap: 800}
+    shared_artifact_event_plane: {actual_non_empty_lines: 139, cap: 800}
+    S: {actual_non_empty_lines: 124, cap: 500}
+  package_id_uniqueness: {result: pass, ids: [K0a-plan-bootstrap, K0a-runtime-F00]}
+  plan_invocation_budget: {result: pass, actual: 17, nominal: 6, worst_case: 18, remaining: 1}
+  runtime_invocations: {result: pass, actual: 0, status: not_authorized_not_started}
+  encoding: {result: pass, policy: UTF-8_without_BOM_and_LF, files_checked_before_this_record: 41}
+  final_staged_diff_check:
+    expected_result: pass_with_blank_at_eof_exemption
+    command: git -c core.whitespace=-blank-at-eof diff --cached --check
+    reason: Preserve exact historical hash-bound bytes; no trailing-space or space-before-tab finding is exempted.
+git_object_resolution:
+  result: pass
+  revision_base_candidate: {object: 04413d00e1d4fcf5bb40563ff343aaf55e106612, type: commit, tree: 3d3e0697661a6aec1702019bcaa7d3b1989ccf1b}
+  pipeline_seed_spec:
+    commit: {object: 3021a7c05bb685be671a2bf205cfcc7996ec45d7, type: commit}
+    root_tree: {object: 8b60d12e418eb152bff1e25f86465eae6a7bbc58, type: tree, result: pass}
+    fixture_spec_path: new pipeline/tests/fixtures/canonical-v1/fixture-spec.json
+    fixture_spec_sha256_at_seed: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+    fixture_spec_sha256_at_revision_base: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+    result: pass
+  canonical_fixture: {commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, type: commit, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, tree_type: tree, result: pass}
+review_authority:
+  historical_S_r2:
+    invocation_ref: k0a-00-review-s-r2
+    status: non_controlling_for_final_approval
+    reason: Reviewer retained the prior r1 reviewer context although it inherited no author context.
+  external_advisory:
+    invocation_ref: k0a-00-external-advisory-review-ext-r1
+    status: controlling_owner_requested_independent_evidence
+  fresh_cross_plan:
+    invocation_ref: k0a-00-review-cross-plan-control-r2
+    status: controlling_genuinely_fresh_independent_evidence
+    recommendation: approve
+    findings: 0
+root_operational_state_checks:
+  classification: root_orchestrator_machine_verified_not_independent_reviewer_judgment
+  canonical_fixture: {head: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, worktree_status_count: 0}
+  swarm: {head: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39, worktree_status_count: 0}
+  independent_cross_plan_reviewer_accessed_these_worktrees: false
+gate_result:
+  machine_checkable_criteria: pass
+  reviewer_judgment: pass
+  EXT_001: resolved
+  EXT_002: resolved
+  EXT_003: resolved
+  EXT_004: resolved
+  EXT_005_and_S_R2_001: resolved_by_owner_binding_interpretation
+  owner_approval: pending
+  K0a_00_complete: false
+  approval_receipts_created: false
+  runtime_started: false

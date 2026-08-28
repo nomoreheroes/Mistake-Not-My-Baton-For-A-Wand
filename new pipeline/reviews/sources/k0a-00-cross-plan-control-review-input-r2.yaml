@@ -1,0 +1,45 @@
+manifest_id: k0a-00-cross-plan-control-review-input-r2
+schema_version: 1
+review_round: 2
+classification: owner_authorized_fresh_context_cross_plan_revision_review
+mode: fresh_context_read_only
+exact_changed_plan:
+  path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+  plan_id: k0a-00-shared-control-plane
+  version: "1.2.0"
+  sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+mandatory_cross_plan_comparators:
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, plan_id: k0a-00-s-layer, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, plan_id: k0a-00-shared-artifact-event-plane, version: "1.1.0", sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+allowed_inputs:
+  - {path: new pipeline/reviews/sources/k0a-00-shared-control-plan-v1.1.0.md, version: "1.1.0", sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12}
+  - {path: new pipeline/reviews/k0a-00-shared-control-review-r1.yaml, sha256: 5f6d780ba21b92c9a215d47e62e102beb6100ee102d9eb92047cc44fa6751326}
+  - {path: new pipeline/reviews/sources/k0a-00-external-advisory-review-ext-r1.yaml, sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211}
+  - {path: new pipeline/decisions/k0a-00-owner-revise-authorization-v1.yaml, sha256: 07b39efdd6ac5e62d1cadff0243fe09eb069183424a1939f68f1576104caa160}
+  - {path: new pipeline/reviews/k0a-00-s-layer-review-r2.yaml, sha256: 33386dfe40da9563152c65302af68c070f3d835e7db1ea967096921b30053057}
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, schema_version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, schema_version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, schema_version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries_before_this_review: 16, sha256: 975ea1fd57c641973f62de5f8d1411c71b65b97279efdc70118eda423827937e}
+review_rubric:
+  - verify_every_declared_hash_from_actual_bytes
+  - verify_control_v1_2_delta_is_only_version_and_retry_clauses_in_sections_3_9_12
+  - determine_whether_EXT_001_is_fully_resolved_across_control_v1_2_and_S_v1_2
+  - verify_shared_artifact_event_plan_remains_unchanged_and_coherent_at_its_boundaries
+  - recheck_all_18_control_sections_complexity_sub_budgets_security_replay_failure_and_implementation_scope
+  - recheck_plan_and_runtime_invocation_human_and_binary_budgets_with_this_review_as_call_17_of_18
+  - assess_EXT_005_binding_interpretation_without_changing_S_bytes
+  - confirm_control_round_2_is_final_and_no_third_autonomous_return_is_permitted
+  - return_approve_or_blocked_revision_limit_exhausted
+forbidden_inputs_and_actions:
+  - author_transcript
+  - hidden_author_summary
+  - research/old-swarm
+  - projects/swarm_content
+  - any_file_edit
+  - runtime_execution
+  - approval_receipt_or_owner_approval

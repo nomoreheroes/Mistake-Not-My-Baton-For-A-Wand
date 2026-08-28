@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Plan ID | `k0a-00-shared-control-plane` |
-| Version | `1.1.0` |
+| Version | `1.2.0` |
 | Status | `review_candidate` |
 | Work item / phase | `K0a-00` / `K0a` (`2.0a`) |
 | Architecture owner | `W1 Kernel / shared control plane` |
@@ -50,9 +50,9 @@ Every physical invocation is created and recorded by the harness. Reasoning comp
 
 ## 3. State machine, invariants, and terminal states
 
-Run states are `created -> running -> completed`. A guard failure before a model call terminates as `blocked_input` or `blocked_policy`. Invocation or response failures terminate the run as `failed_invocation` or `failed_validation`; transaction failure terminates as `failed_persistence` only after rollback is confirmed. These failure values are internal typed terminals, not public Alpha events.
+Run states are `created -> running -> completed`. A guard failure before a model call terminates as `blocked_input` or `blocked_policy`. A non-retriable or retry-exhausted invocation/response failure terminates the run as `failed_invocation` or `failed_validation`; transaction failure terminates as `failed_persistence` only after rollback is confirmed. These failure values are internal typed terminals, not public Alpha events.
 
-Invocation states are `prepared -> replay_before_committed -> dispatched -> response_captured -> validated -> replay_after_committed -> published`. Failure from any state is terminal for this F00 attempt; K0a does not retry automatically.
+Each physical invocation has states `prepared -> replay_before_committed -> dispatched -> response_captured -> validated -> replay_after_committed -> published`; failure is terminal for that physical attempt. For each reasoning-role delivery, the deterministic harness may automatically create exactly one second physical invocation only after the adapter records `transient_unavailable_before_dispatch_ack` or `timeout_before_accepted_response` and no response was accepted. The retry stays in the same run/delivery, reuses byte-identical context and pins, receives a new invocation/attempt ID, preserves attempt-1 evidence, and fences any late attempt-1 result. Validation, policy, semantic, partial-response ambiguity, and downstream failures never retry; a second trigger or any other failure terminates the run as `failed_invocation` or its exact typed terminal.
 
 Invariants:
 
@@ -137,7 +137,7 @@ Taxonomy and owner:
 |---|---|
 | identity/root/pin mismatch | control harness -> `blocked_input`; no model call |
 | capability/egress/prompt-injection violation | control harness -> `blocked_policy`; no side effect |
-| provider timeout/unavailable response | model adapter -> `failed_invocation`; no automatic retry |
+| provider timeout/unavailable response | model adapter records the physical-attempt failure; on attempt 1 only, `transient_unavailable_before_dispatch_ack` or `timeout_before_accepted_response` with no accepted response causes the single automatic same-run/delivery retry defined in section 3; otherwise `failed_invocation` |
 | malformed/forbidden route or worker result | originating S0/Layer0/worker invocation evidence -> `failed_validation`; W1 finding |
 | stale state/idempotency conflict | control harness -> rollback/no publication -> `failed_validation` |
 | SQLite transaction error | artifact/event plane rolls back; control confirms no partial publication -> `failed_persistence` |
@@ -171,7 +171,7 @@ F00 inputs are fixed, small, and text-only. No sampling, RAG, repository scan, s
 
 The manual worksheet authority is `k0a-00-budget-reference-v1` (`new pipeline/worksheets/k0a-00-budget-reference-v1.yaml`, version `1.0.0`, SHA-256 `eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9`). `K0a-plan-bootstrap` is plan-production only: light, 6 nominal/18 worst-case calls and standard human attention of 1/2 sessions, 1/3 blocking decisions, 20/60 active minutes, 30-minute maximum single session, batchable. This exact plan contributes one author plus one reviewer nominal, with two bounded return pairs in the worst case; it does not claim a separate additive package ID.
 
-`K0a-runtime-F00` is separate and currently unauthorized: light, 3 nominal/6 worst-case calls, consisting of one/two S0 calls, one/two synthetic Layer0 calls, and one/two worker calls. Human attention is 0/0 sessions, 0/0 decisions, 0/0 minutes, max session 30, batchable. The shared control plane owns the S0 call boundary but does not double-count the package in other plans.
+`K0a-runtime-F00` is separate and currently unauthorized: light, 3 nominal/6 worst-case calls, consisting of one/two S0 calls, one/two synthetic Layer0 calls, and one/two worker calls. A second call at any role boundary is solely the section 3 automatic retry for the two named pre-acceptance transient triggers; it uses no human decision, and any third call blocks. Human attention is 0/0 sessions, 0/0 decisions, 0/0 minutes, max session 30, batchable. The shared control plane owns the call boundary but does not double-count the package in other plans.
 
 ## 13. Binary payload budget or proved N/A
 

@@ -1,0 +1,62 @@
+record_id: k0a-00-forecast-reconciliation-v2
+schema_version: 1
+version: "2.0.0"
+status: reconciled_pending_exact_owner_approval
+work_item_id: K0a-00
+supersedes: {path: new pipeline/evidence/k0a-00-forecast-reconciliation-v1.yaml, sha256: bbe762e27068a8e98f5a650a69d8552e4ce66385574ebd09e6400dc67eabf22b}
+authority:
+  approved_forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  manual_reference: {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+  owner_revision_authorization: {path: new pipeline/decisions/k0a-00-owner-revise-authorization-v1.yaml, sha256: 07b39efdd6ac5e62d1cadff0243fe09eb069183424a1939f68f1576104caa160}
+  invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 17, sha256: 8d9f3bdad2722f8626c17d54fddb6d45d21946412dba74de8b5b2d76f025c8bb}
+plan_production:
+  package_id: K0a-plan-bootstrap
+  invocation_profile: light
+  forecast: {nominal: 6, worst_case: 18}
+  actual_completed_model_invocations: 17
+  actual_by_scope:
+    k0a-00-shared-control-plane: 6
+    k0a-00-shared-artifact-event-plane: 4
+    k0a-00-s-layer: 6
+    owner_requested_external_cross_package_advisory: 1
+  remaining_to_worst_case: 1
+  result: within_worst_case
+  explanation: The external advisory review is counted as invocation 15, the owner-authorized control v1.2 author call as 16, and the genuinely fresh cross-plan review as 17. No third autonomous return occurred.
+  excluded_orchestration_attempt:
+    count: 1
+    reason: An earlier reviewer allocation was rejected by the service before model execution and produced no review output, so it is not an LLM invocation.
+runtime:
+  package_id: K0a-runtime-F00
+  forecast: {nominal: 3, worst_case: 6}
+  actual_model_invocations: 0
+  execution_status: not_authorized_not_started
+human_attention_budget:
+  plan_package:
+    profile: standard
+    sessions: {nominal: 1, worst_case: 2}
+    blocking_decisions: {nominal: 1, worst_case: 3}
+    active_minutes: {nominal: 20, worst_case: 60}
+    max_single_session_minutes: 30
+    batchable_requests: true
+  runtime_package:
+    profile: light
+    sessions: {nominal: 0, worst_case: 0}
+    blocking_decisions: {nominal: 0, worst_case: 0}
+    active_minutes: {nominal: 0, worst_case: 0}
+    max_single_session_minutes: 30
+    batchable_requests: true
+  actual_active_minutes: not_instrumented_no_value_invented
+binary_payload:
+  applicability: N/A
+  aggregate_new_bytes: {nominal: 0, worst_case: 0}
+  result: exact_match
+checkpoint_reference:
+  publisher_available: false
+  publications: {nominal: 0, worst_case: 0}
+  rounded_bytes: {nominal: 3145728, worst_case: 6291456}
+  phase_pack_growth_bytes: {nominal: 0, worst_case: 0}
+  result: exact_match
+reconciliation:
+  changed_assumptions_or_numbers: false
+  variance_owner_route_required: false
+  result: pass

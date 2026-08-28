@@ -1,0 +1,141 @@
+package_id: k0a-00-owner-disposition-package-v2
+schema_version: 1
+version: "2.0.0"
+status: approval_ready_pending_exact_owner_approval
+work_item_id: K0a-00
+K0a_00_complete: false
+runtime_started: false
+approval_receipts_created: false
+unresolved_findings: []
+supersedes:
+  path: new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml
+  sha256: 337015a93af404b52953081d015b9da33761090abfa7690b1460f01138acc854
+  reason: Owner-authorized control retry reconciliation, corrected seed tree, external review import, and controlling fresh cross-plan review.
+revision_base_candidate:
+  commit: 04413d00e1d4fcf5bb40563ff343aaf55e106612
+  tree: 3d3e0697661a6aec1702019bcaa7d3b1989ccf1b
+new_candidate_commit: supplied_outside_this_file_after_commit_to_avoid_self_reference
+
+baseline_binding:
+  pipeline_git_before_K0a_revision: {commit: 6bd34033611bdb3cefa9a96eb3c1600bd220d989}
+  pipeline_seed_spec: {commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7, tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58, sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a}
+  canonical_fixture: {commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d}
+  swarm_git: {commit: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39, access_during_design_package: none}
+
+authority:
+  architecture_plan: {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  development_plan: {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  gate_contract: {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, schema_version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, schema_version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, schema_version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  scope_envelope: {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  budget_reference: {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+  owner_revision_authorization: {path: new pipeline/decisions/k0a-00-owner-revise-authorization-v1.yaml, sha256: 07b39efdd6ac5e62d1cadff0243fe09eb069183424a1939f68f1576104caa160}
+  forecast_reconciliation: {path: new pipeline/evidence/k0a-00-forecast-reconciliation-v2.yaml, version: "2.0.0", sha256: 989f02c4d54c08569645743a82681e5da5bad831b0766753287c51a7bce0f7f4}
+  design_invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 17, sha256: 8d9f3bdad2722f8626c17d54fddb6d45d21946412dba74de8b5b2d76f025c8bb}
+
+external_and_controlling_reviews:
+  external_advisory:
+    review_id: k0a-00-external-advisory-review-ext-r1
+    path: new pipeline/reviews/sources/k0a-00-external-advisory-review-ext-r1.yaml
+    sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211
+    invocation_ref: k0a-00-external-advisory-review-ext-r1
+    recommendation: revise_package_architecture
+    disposition: accepted_and_applied
+  fresh_cross_plan_review:
+    review_id: k0a-00-cross-plan-control-review-r2-final
+    path: new pipeline/reviews/k0a-00-cross-plan-control-review-r2.yaml
+    sha256: c27623b5dc7376a61653b9c7d2802e3ff6daa0124d752eb4e094fb74477d2adc
+    invocation_ref: k0a-00-review-cross-plan-control-r2
+    recommendation: approve
+    genuine_fresh_context: true
+    inherited_author_context: false
+
+exact_plans_and_reviews:
+  - plan_id: k0a-00-shared-control-plane
+    plan: {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, version: "1.2.0", sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+    current_author_invocation_ref: k0a-00-revision-author-shared-control-r2
+    final_reviewer_invocation_ref: k0a-00-review-cross-plan-control-r2
+    final_review: {path: new pipeline/reviews/k0a-00-cross-plan-control-review-r2.yaml, sha256: c27623b5dc7376a61653b9c7d2802e3ff6daa0124d752eb4e094fb74477d2adc, recommendation: approve}
+    review_rounds: 2
+    findings: {initial: 3, external_cross_plan: 1, unresolved: 0}
+    complexity: {tier: shared_plane, cap: 800, actual_non_empty_lines: 143, routing: {actual: 5, cap: 80}, roster: {actual: 9, cap: 40}, failure_recovery: {actual: 15, cap: 70}}
+    roster: {current_deterministic_components: 3, current_worker_agents: 0, deferred_interfaces: 5}
+  - plan_id: k0a-00-shared-artifact-event-plane
+    plan: {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, version: "1.1.0", sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+    current_author_invocation_ref: k0a-00-revision-author-shared-artifact-event-r1
+    final_reviewer_invocation_ref: k0a-00-review-shared-artifact-event-r1
+    final_review: {path: new pipeline/reviews/k0a-00-shared-artifact-event-review-r1.yaml, sha256: da42b7b83fb2c6a6ca32d5a120eb225a25894275cabeaf4c609478134ae053b0, recommendation: approve}
+    review_rounds: 1
+    findings: {initial: 2, unresolved: 0}
+    complexity: {tier: shared_plane, cap: 800, actual_non_empty_lines: 139, routing: {actual: 12, cap: 85}, roster: {actual: 11, cap: 45}, failure_recovery: {actual: 13, cap: 75}}
+    roster: {current_deterministic_components: 5, current_worker_agents: 0, deferred_interfaces: 8}
+  - plan_id: k0a-00-s-layer
+    plan: {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+    current_author_invocation_ref: k0a-00-revision-author-s-r2
+    historical_r2_reviewer_invocation_ref: k0a-00-review-s-r2
+    historical_r2_review_authority: non_controlling_for_final_approval_due_retained_r1_reviewer_context
+    controlling_independent_evidence_refs: [k0a-00-external-advisory-review-ext-r1, k0a-00-review-cross-plan-control-r2]
+    review_rounds: 2
+    findings: {initial: 3, round_1: 2, owner_dispositioned: 1, unresolved: 0}
+    complexity: {tier: narrow, cap: 500, actual_non_empty_lines: 124, routing: {actual: 12, cap: 75}, roster: {actual: 7, cap: 30}, failure_recovery: {actual: 13, cap: 60}}
+    roster: {current_dispatchers: 1, current_worker_agents: 0, deferred_interfaces: 8}
+
+finding_dispositions:
+  EXT-001:
+    status: resolved
+    evidence: shared_control_v1_2_plus_fresh_cross_plan_review
+  EXT-002:
+    status: resolved
+    corrected_seed_tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+  EXT-003:
+    status: resolved_by_validation_v2
+    evidence: validation_v2_resolves_git_objects_and_separates_independent_review_from_root_operational_state_checks
+  EXT-004:
+    status: resolved
+    disposition: append_only_entry_preserved_but_non_controlling; external_and_genuinely_fresh_cross_plan_reviews_are_controlling
+  EXT-005_and_S-R2-001:
+    status: resolved_by_owner_binding_interpretation
+    interpretation: S0 returns raw s0_route_proposal; only the deterministic harness validates and persists validated_route_proposal. Semantic blockers and abstentions are failed_validation and never schedule Layer0.
+    exact_S_plan_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+    carry_into_K0a_02_contract_and_conformance_tests: true
+    queue_wording_correction_for_next_other_reason_S_version: true
+    scope_expansion: false
+
+section_presence:
+  each_exact_plan_required: 18
+  shared_control_plane: {present: 18, result: pass}
+  shared_artifact_event_plane: {present: 18, result: pass}
+  S: {present: 18, result: pass}
+
+budget_and_payload:
+  plan_package: {package_id: K0a-plan-bootstrap, invocations: {nominal: 6, worst_case: 18, actual: 17, remaining: 1}, human_profile: standard, result: pass}
+  runtime_package: {package_id: K0a-runtime-F00, invocations: {nominal: 3, worst_case: 6, actual: 0}, human_profile: light, execution_status: not_authorized_not_started}
+  binary_payload: {applicability: N/A, nominal_new_bytes: 0, worst_case_new_bytes: 0, result: pass}
+  forecast_variance: {changed_assumptions_or_numbers: false, owner_variance_route_required: false}
+
+implementation_scope_if_exact_owner_approval_receipts_are_issued:
+  allowed:
+    - K0a-01_minimal_SQLite_atomicity_and_exact_replay_telemetry_schema
+    - K0a-02_one_pinned_contract_S0_synthetic_Layer0_fixture_worker_basic_CLI_and_exact_guards
+    - K0a-03_execute_F00_and_disposition_findings
+  denied:
+    - K0b_or_later_operational_hardening
+    - checkpoint_publication_or_clone_only_recovery
+    - production_or_product_repository_side_effects
+    - full_layer_or_Alpha_event_implementation
+    - any_runtime_before_exact_owner_approval_receipts_exist
+
+mandatory_stale_conditions:
+  - any_exact_plan_sha256_changes
+  - parent_architecture_sha256_changes
+  - gate_contract_sha256_changes
+  - referenced_registry_version_or_sha256_changes
+  - forecast_sha256_changes
+  - scope_envelope_sha256_changes
+  - complexity_tier_changes
+  - phase_package_or_profile_changes
+  - fixture_seed_commit_spec_sha256_fixture_commit_or_tree_changes
+
+owner_action_required:
+  requested_exact_disposition: Approve this exact v2 package and its three plan hashes, author/reviewer refs, binding interpretation, and implementation scope, or provide revise, narrow, or block with rationale. No approval receipt or runtime exists yet.
