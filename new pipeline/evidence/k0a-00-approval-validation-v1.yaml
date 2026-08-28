@@ -1,0 +1,63 @@
+record_id: k0a-00-approval-validation-v1
+schema_version: 1
+version: "1.0.0"
+status: approval_receipts_ready_for_single_commit_and_post_commit_reverification
+work_item_id: K0a-00
+completion_rule: K0a-00 becomes complete only when this record, the three plan receipts, the approval envelope, and the owner input capture are committed together as the single direct child of the approved candidate commit.
+approved_candidate:
+  commit: 16795983c7a39e986fe63409ce8cab84a03f29c4
+  tree: 37b71f7f360c99f468614ba2e32faf7254fd36f6
+  commit_type: commit
+  tree_type: tree
+  result: pass
+owner_approval_input: {path: new pipeline/receipts/sources/k0a-00-owner-approval-input-v1.yaml, sha256: 8541eaa407c68736d0a439a7a3a48e38035dfb7d44dda8da1813a3263ce71796, result: pass}
+plan_receipts:
+  shared_control_plane:
+    path: new pipeline/receipts/k0a-00-shared-control-plane-approval-v1.yaml
+    canonical_payload_sha256: 86bead7065f52a7cd08dd080638fe69dddaa0df1d0ec58d28234e101bf97d3f1
+    complete_file_sha256: f89e3b579c99947ffe33d7e5415fa48430979ae7030afac2c19cbb3176d3ba40
+    status: approved
+  shared_artifact_event_plane:
+    path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml
+    canonical_payload_sha256: 508b42ef0ac182b897a4f8806a9d8a359292a306f95b79b0f8c65a177e720ee4
+    complete_file_sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724
+    status: approved
+  S:
+    path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml
+    canonical_payload_sha256: ee440eddc859c52dd636a7b19bbb9ff26ebae762baa587837b4813d44ff075b9
+    complete_file_sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1
+    status: approved_with_disposition
+approval_envelope:
+  path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml
+  schema_ref: {path: new pipeline/registry/approval-envelope/v1.schema.yaml, sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54}
+  canonical_payload_sha256: af1c96d273584174427871627ebaf1cf736439fafdab9777092a899fbd22b34d
+  complete_file_sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34
+  schema_validation: pass
+checks:
+  owner_input_matches_candidate_commit_tree_package_and_three_plan_hashes: pass
+  plan_blobs_resolve_in_candidate_commit: pass
+  plan_receipt_required_fields: pass
+  author_and_reviewer_invocation_refs_resolve_in_17_entry_ledger: pass
+  reviewer_independence_and_fresh_context: pass
+  review_round_limit: pass
+  controlling_external_and_fresh_cross_plan_evidence: pass
+  binding_S_disposition_recorded: pass
+  complexity_section_roster_invocation_human_and_binary_fields: pass
+  forecast_and_stale_conditions: pass
+  canonical_yaml_self_hashes: pass
+  envelope_complete_file_receipt_hashes: pass
+  YAML_parse_UTF8_without_BOM_and_LF: pass
+  runtime_invocations_at_approval: 0
+  canonical_fixture_worktree_status_count: 0
+  swarm_worktree_status_count: 0
+post_commit_requirements:
+  expected_parent: 16795983c7a39e986fe63409ce8cab84a03f29c4
+  expected_changed_files: 6
+  approval_commit: supplied_outside_this_file_after_commit_to_avoid_self_reference
+  verify_committed_complete_file_sha256: true
+  verify_root_fixture_and_swarm_clean: true
+gate_result_after_successful_post_commit_verification:
+  K0a_00_complete: true
+  approval_receipts_created: true
+  authorized_scope: [K0a-01, K0a-02, K0a-03]
+  runtime_started_by_this_commit: false

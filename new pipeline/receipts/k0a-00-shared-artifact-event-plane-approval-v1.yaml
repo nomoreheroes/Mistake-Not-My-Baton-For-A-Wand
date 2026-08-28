@@ -1,0 +1,108 @@
+receipt_id: k0a-00-shared-artifact-event-plane-approval-v1
+schema_version: 1
+status: approved
+work_item_id: K0a-00
+receipt_sha256: "508b42ef0ac182b897a4f8806a9d8a359292a306f95b79b0f8c65a177e720ee4"
+hash_profile:
+  id: canonical-yaml-v1
+  version: 1
+  path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+  sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+  excluded_field_path: receipt_sha256
+  complete_file_sha256_recorded_by: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml
+plan:
+  plan_id: k0a-00-shared-artifact-event-plane
+  path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+  version: "1.1.0"
+  sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+parent_architecture: {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+gate_contract: {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, schema_version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+phase_package_and_project_profiles:
+  planning_package: K0a-plan-bootstrap
+  implementation_package: K0a-runtime-F00
+  phase: K0a
+  profiles: [canonical_disposable_fixture_only]
+  scenarios: [F00]
+author:
+  actor_id: /root
+  invocation_ref: k0a-00-revision-author-shared-artifact-event-r1
+  provider: openai
+  model: gpt-5
+  profile: codex_root_architecture_author
+  output_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+reviewer:
+  actor_id: /root/review_artifact_event_r1
+  invocation_ref: k0a-00-review-shared-artifact-event-r1
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_revision_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  conflict_declaration: No conflict; reviewer did not author any plan version, received no author transcript or hidden summary, used only manifest-authorized read-only inputs, and made no file changes.
+review:
+  path: new pipeline/reviews/k0a-00-shared-artifact-event-review-r1.yaml
+  sha256: da42b7b83fb2c6a6ca32d5a120eb225a25894275cabeaf4c609478134ae053b0
+  review_rounds: 1
+  recommendation: approve
+  unresolved_findings: []
+  finding_dispositions: {F-01: resolved_in_v1.1.0, F-02: resolved_in_v1.1.0}
+  additional_cross_plan_review: {path: new pipeline/reviews/k0a-00-cross-plan-control-review-r2.yaml, sha256: c27623b5dc7376a61653b9c7d2802e3ff6daa0124d752eb4e094fb74477d2adc, result: pass}
+complexity:
+  tier: shared_plane
+  cap_non_empty_lines: 800
+  actual_non_empty_lines: 139
+  section_sub_budgets: {routing: {actual: 12, cap: 85}, roster: {actual: 11, cap: 45}, failure_recovery: {actual: 13, cap: 75}}
+roster_counts: {current_deterministic_components: 5, current_worker_agents: 0, deferred_interfaces: 8}
+invocation_budget:
+  exact_plan: {nominal: 2, worst_case: 6, actual: 4}
+  planning_package: {package_id: K0a-plan-bootstrap, nominal: 6, worst_case: 18, actual: 17, remaining: 1}
+  runtime_package: {package_id: K0a-runtime-F00, nominal: 3, worst_case: 6, actual_at_approval: 0}
+human_attention_budget:
+  profile: standard
+  sessions: {nominal: 1, worst_case: 2}
+  blocking_decisions: {nominal: 1, worst_case: 3}
+  active_minutes: {nominal: 20, worst_case: 60}
+  max_single_session_minutes: 30
+  batchable_requests: true
+binary_payload_budget:
+  applicability: N/A
+  proof: The F00 contract accepts strictly decoded textual UTF-8 only and rejects BLOB, non-UTF8, opaque, and binary media before transaction; it persists zero binary objects and bytes.
+  nominal_new_objects_and_bytes: 0
+  worst_case_new_objects_and_bytes: 0
+forecast_reconciliation: {path: new pipeline/evidence/k0a-00-forecast-reconciliation-v2.yaml, version: "2.0.0", sha256: 989f02c4d54c08569645743a82681e5da5bad831b0766753287c51a7bce0f7f4, result: pass}
+plan_section_presence:
+  required: 18
+  present: 18
+  result: pass
+  N_A_reasons: Binary persistence, production cross-layer contracts, operational recovery/abort, creative dialogue, key-decision projections, and real-project execution are excluded with explicit pre-transaction and fixture-bound evidence.
+exact_allowed_implementation_scope:
+  - K0a-01_minimal_SQLite_atomicity_and_exact_replay_telemetry_schema
+  - K0a-02_one_pinned_contract_S0_synthetic_Layer0_fixture_worker_basic_CLI_and_exact_guards
+  - K0a-03_execute_F00_and_disposition_findings
+scope_boundary: Artifact/event implementation must remain within the exact plan; no K0b recovery, checkpoint publisher, binary payload, full Alpha profile, production side effect, or later-layer contract is approved.
+owner_decision:
+  actor_id: workspace_owner
+  role: human_owner
+  approved_at: "2026-08-28T17:59:08.9287279+03:00"
+  authority_ref: current_conversation_explicit_owner_approval
+  input_capture: {path: new pipeline/receipts/sources/k0a-00-owner-approval-input-v1.yaml, sha256: 8541eaa407c68736d0a439a7a3a48e38035dfb7d44dda8da1813a3263ce71796}
+  exact_input_hashes:
+    candidate_commit: 16795983c7a39e986fe63409ce8cab84a03f29c4
+    candidate_tree: 37b71f7f360c99f468614ba2e32faf7254fd36f6
+    owner_package_sha256: 82b0f712ca64a5b3b67199ac45734506c6f93f8f1dc5ca77dcb4d54db6d7b5f9
+    plan_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+stale_conditions:
+  plan_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+  parent_architecture_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  gate_contract_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+  referenced_registry_versions_and_hashes:
+    canonical_yaml_v1: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+    design_invocation_ledger_v1: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b
+    approval_envelope_v1: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54
+    checkpoint_budget_policy_v1: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+  bound_forecast_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+  forecast_reconciliation_sha256: 989f02c4d54c08569645743a82681e5da5bad831b0766753287c51a7bce0f7f4
+  scope_envelope_sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216
+  complexity_tier: shared_plane
+  approved_phase_package_and_profiles: K0a-plan-bootstrap/light_invocation/standard_human_plus_K0a-runtime-F00/light
+  fixture_binding: 3021a7c05bb685be671a2bf205cfcc7996ec45d7/8b60d12e418eb152bff1e25f86465eae6a7bbc58/192a5b1e9e312b78c310184cde0fc3377c51ab1b/93a9b120c6284bb4b094ab1efd3784582597452d

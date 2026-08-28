@@ -1,0 +1,64 @@
+envelope_id: k0a-00-layer-architecture-approval-v1
+schema_version: 1
+approval_type: layer_architecture_plan
+actor:
+  actor_id: workspace_owner
+  role: human_owner
+  authentication_ref: null
+approved_at: "2026-08-28T17:59:08.9287279+03:00"
+authority_ref: current_conversation_explicit_owner_approval_for_candidate_16795983c7a39e986fe63409ce8cab84a03f29c4
+decision: approved
+records:
+  - {role: owner_approval_input, path: new pipeline/receipts/sources/k0a-00-owner-approval-input-v1.yaml, sha256: 8541eaa407c68736d0a439a7a3a48e38035dfb7d44dda8da1813a3263ce71796}
+  - {role: owner_disposition_package, path: new pipeline/evidence/k0a-00-owner-disposition-package-v2.yaml, sha256: 82b0f712ca64a5b3b67199ac45734506c6f93f8f1dc5ca77dcb4d54db6d7b5f9}
+  - {role: mechanical_validation, path: new pipeline/evidence/k0a-00-validation-v2.yaml, sha256: 21ae7cc7eda5e9923c9a059602148400161b8622b7909bcc826f003cbc047703}
+  - {role: shared_control_plan, path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  - {role: shared_artifact_event_plan, path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+  - {role: S_plan, path: new pipeline/architecture/k0a-00-s-layer-v1.md, sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {role: shared_control_plan_receipt, path: new pipeline/receipts/k0a-00-shared-control-plane-approval-v1.yaml, sha256: f89e3b579c99947ffe33d7e5415fa48430979ae7030afac2c19cbb3176d3ba40}
+  - {role: shared_artifact_event_plan_receipt, path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml, sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724}
+  - {role: S_plan_receipt, path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml, sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1}
+  - {role: controlling_external_review, path: new pipeline/reviews/sources/k0a-00-external-advisory-review-ext-r1.yaml, sha256: 32b27a79e02ecc1a3633e22b8c3bb7a91dfea7f74443a80101f64785e8941211}
+  - {role: controlling_fresh_cross_plan_review, path: new pipeline/reviews/k0a-00-cross-plan-control-review-r2.yaml, sha256: c27623b5dc7376a61653b9c7d2802e3ff6daa0124d752eb4e094fb74477d2adc}
+  - {role: forecast_reconciliation, path: new pipeline/evidence/k0a-00-forecast-reconciliation-v2.yaml, sha256: 989f02c4d54c08569645743a82681e5da5bad831b0766753287c51a7bce0f7f4}
+  - {role: design_invocation_ledger, path: new pipeline/ledgers/design-invocations.yaml, sha256: 8d9f3bdad2722f8626c17d54fddb6d45d21946412dba74de8b5b2d76f025c8bb}
+approved_scope:
+  work_item_id: K0a-00
+  gate_status_after_receipt_commit: complete
+  candidate_commit: 16795983c7a39e986fe63409ce8cab84a03f29c4
+  candidate_tree: 37b71f7f360c99f468614ba2e32faf7254fd36f6
+  approved_plan_receipts:
+    - k0a-00-shared-control-plane-approval-v1
+    - k0a-00-shared-artifact-event-plane-approval-v1
+    - k0a-00-s-layer-approval-v1
+  binding_disposition:
+    - S0 returns raw s0_route_proposal to the harness.
+    - Only the deterministic harness validates it and persists validated_route_proposal.
+    - Semantic blockers and abstentions terminate as failed_validation and never schedule Layer0.
+  binding_implementation_evidence: K0a-02 contract and conformance tests must enforce the disposition against exact S SHA-256 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77.
+  authorized_after_this_envelope_is_committed:
+    - K0a-01_minimal_SQLite_atomicity_and_exact_replay_telemetry_schema
+    - K0a-02_one_pinned_contract_S0_synthetic_Layer0_fixture_worker_basic_CLI_and_exact_guards
+    - K0a-03_execute_F00_and_disposition_findings
+  denied:
+    - K0b_or_later_operational_hardening
+    - checkpoint_publication_or_clone_only_recovery
+    - production_or_product_repository_side_effects
+    - full_layer_or_Alpha_event_implementation
+    - scope_beyond_the_three_exact_plan_receipts
+  runtime_invocations_at_approval: 0
+  immutable_input_rule: Candidate plans, reviews, ledger, package, and validation remain unchanged; this envelope and its plan receipts carry approval without invalidating their hashes.
+provenance:
+  mode: conversational_only
+  source_ref: new pipeline/receipts/sources/k0a-00-owner-approval-input-v1.yaml
+  limitations:
+    - actor_authentication_unavailable_before_approval_runtime
+    - stable_external_message_identifier_not_exposed
+    - Git_authorship_not_cryptographically_linked_to_conversational_actor
+integrity:
+  profile: canonical-yaml-v1
+  profile_version: 1
+  profile_ref: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+  excluded_field_path: integrity.canonical_payload_sha256
+  canonical_payload_sha256: "af1c96d273584174427871627ebaf1cf736439fafdab9777092a899fbd22b34d"
+  external_complete_file_binding_ref: new pipeline/evidence/k0a-00-approval-validation-v1.yaml

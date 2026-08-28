@@ -1,0 +1,27 @@
+record_id: k0a-00-owner-approval-input-v1
+schema_version: 1
+captured_at: "2026-08-28T17:59:08.9287279+03:00"
+capture_mode: semantic_normalization_of_current_conversation_owner_message
+decision: approve
+work_item_id: K0a-00
+candidate_commit: 16795983c7a39e986fe63409ce8cab84a03f29c4
+candidate_tree: 37b71f7f360c99f468614ba2e32faf7254fd36f6
+owner_package_sha256: 82b0f712ca64a5b3b67199ac45734506c6f93f8f1dc5ca77dcb4d54db6d7b5f9
+approved_plans:
+  shared_control_plane_v1.2.0: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+  shared_artifact_event_plane_v1.1.0: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+  S_v1.2.0: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+binding_disposition:
+  - S0 returns raw s0_route_proposal to the harness.
+  - Only the deterministic harness validates it and persists validated_route_proposal.
+  - Semantic blockers and abstentions terminate as failed_validation and never schedule Layer0.
+authorized_scope_after_approval_receipts: [K0a-01, K0a-02, K0a-03]
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_owner
+  source_ref: current_conversation_explicit_owner_approval
+  limitations:
+    - stable_external_message_identifier_not_exposed
+    - actor_authentication_unavailable_before_approval_runtime
+    - raw_transport_escaping_is_not_an_authority_field; semantic keys and values above are the approved input
