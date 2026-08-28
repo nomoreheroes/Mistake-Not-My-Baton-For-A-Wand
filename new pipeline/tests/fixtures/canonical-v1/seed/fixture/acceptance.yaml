@@ -1,0 +1,8 @@
+acceptance_id: f00-seed-001-acceptance
+schema_version: 1
+assertions:
+  - output_is_nonempty
+  - output_mentions_both_observation_ids
+  - artifact_type_is_fixture_summary
+  - terminal_event_is_fixture_handoff_consumed
+exact_natural_language_is_golden: false

@@ -1,0 +1,13 @@
+# Active process state and transient outputs never enter project Git.
+/.pipeline/runtime/
+/.pipeline/backups/
+/.pipeline/previews/
+/.pipeline/tmp/
+/build/
+/dist/
+/tmp/
+
+# SQLite is runtime-only except for the exact bounded checkpoint publication path.
+*.sqlite3
+!/.pipeline/history/
+!/.pipeline/history/pipeline-checkpoint.sqlite3

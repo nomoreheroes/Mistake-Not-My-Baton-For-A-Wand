@@ -1,0 +1,12 @@
+request_id: f00-seed-001
+schema_version: 1
+command: summarize_fixture_observations
+observations:
+  - observation_id: obs-alpha
+    text: The amber beacon is visible.
+  - observation_id: obs-beta
+    text: The blue gate is closed.
+expected_semantics:
+  artifact_type: fixture.summary
+  required_observation_ids: [obs-alpha, obs-beta]
+  terminal_event: fixture.handoff_consumed

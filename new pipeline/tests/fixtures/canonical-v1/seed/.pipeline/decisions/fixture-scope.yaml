@@ -1,0 +1,14 @@
+decision_id: fixture-seed-scope-v1
+schema_version: 1
+decision: synthetic_fixture_only
+authority: canonical_fixture_spec
+scope:
+  allowed:
+    - deterministic_local_tests
+    - fault_injection
+    - replay_tests
+  forbidden:
+    - product_baseline_claim
+    - production_side_effects
+    - legacy_research_access
+approval_semantics: this_record_is_test_data_not_human_owner_approval

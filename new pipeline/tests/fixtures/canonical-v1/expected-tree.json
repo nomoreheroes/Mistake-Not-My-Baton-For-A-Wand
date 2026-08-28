@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "fixture_id": "pipeline-v2-canonical-fixture",
+  "fixture_version": "1.0.0",
+  "git_tree_oid": "93a9b120c6284bb4b094ab1efd3784582597452d",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "sha256": "2fe00fdc6ee0b7259d869034624d37ab098c2906917d3f61686521e83b10e124"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "sha256": "575d68ebf73705061a321b83c1e24959a42caa7ed12f3291465f867f5cb67ae0"
+    },
+    {
+      "path": ".pipeline/decisions/fixture-scope.md",
+      "mode": "100644",
+      "sha256": "6fbeffd441815a718934849e5a954209f6542efcd990e0fb3049098547e18b26"
+    },
+    {
+      "path": ".pipeline/decisions/fixture-scope.yaml",
+      "mode": "100644",
+      "sha256": "427de923c362ff97410b66555acd8d1adf608915e58201b7b792cc561acdad3d"
+    },
+    {
+      "path": "fixture/acceptance.yaml",
+      "mode": "100644",
+      "sha256": "19642079958077b3be516a703a9a054855ae9fa16ba218d0b92346e79a52255d"
+    },
+    {
+      "path": "fixture/request.yaml",
+      "mode": "100644",
+      "sha256": "06a73aea028f78b5b68e681d37f4b48fef9fced4e41eee4bcedc9eac6fbeb75b"
+    },
+    {
+      "path": "readme.md",
+      "mode": "100644",
+      "sha256": "dc01d1ec949bf0bb7b25c9a2f1f41f3611917d3357abbe743a3f33afc14e51f1"
+    }
+  ]
+}

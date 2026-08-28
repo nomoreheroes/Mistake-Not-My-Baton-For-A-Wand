@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "fixture_id": "pipeline-v2-canonical-fixture",
+  "fixture_version": "1.0.0",
+  "purpose": "disposable deterministic Pipeline v2 bootstrap and fault-injection fixture",
+  "seed_root": "seed",
+  "expected_tree_manifest": "expected-tree.json",
+  "expected_tree_manifest_sha256": "a93e40a59f0eb954b1f0d56dbaed50c78cc3203c9823099a59efce3241075772",
+  "materializer": {
+    "path": "materialize.py",
+    "sha256": "49df3010b5f582d91c41816cdf5ff3e8f3a60fd567d9381e104178fea65874a3"
+  },
+  "git": {
+    "object_format": "sha1",
+    "initial_branch": "main",
+    "author_name": "Pipeline Fixture",
+    "author_email": "pipeline-fixture@example.invalid",
+    "committer_name": "Pipeline Fixture",
+    "committer_email": "pipeline-fixture@example.invalid",
+    "timestamp_unix": 946684800,
+    "timezone": "+0000",
+    "commit_message": "Initialize Pipeline v2 canonical fixture v1",
+    "expected_commit": "192a5b1e9e312b78c310184cde0fc3377c51ab1b"
+  },
+  "materialization": {
+    "copy_mode": "byte_exact",
+    "allow_symlinks": false,
+    "text_encoding": "utf-8",
+    "text_line_endings": "lf",
+    "file_mode": "100644",
+    "existing_output_policy": "fail_closed"
+  },
+  "boundaries": {
+    "synthetic_only": true,
+    "production_side_effects": false,
+    "legacy_research_access": false,
+    "projects_swarm_is_fixture": false
+  }
+}
