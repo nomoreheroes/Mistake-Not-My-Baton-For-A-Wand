@@ -1,0 +1,128 @@
+receipt_id: d0-06-fixture-initialization-v1
+schema_version: 1
+receipt_status: verified_reproducible_fixture_baseline
+work_item_id: D0-06
+verified_at: "2026-08-28T10:54:04.2593378+03:00"
+projection:
+  path: new pipeline/receipts/d0-06-fixture-initialization-v1.md
+  sha256: 8a6de54596d4e04cfe79889ef5eac916289b6c4346036b4a80315baec0860519
+
+authority:
+  source: current_conversation_explicit_D0_06_execution_request
+  new_owner_decision_required: false
+  rationale: Execution is fully determined by the accepted D0 plans and decisions; no new architectural disposition is introduced.
+
+normative_sources:
+  architecture_plan:
+    path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+    version: "0.16"
+    sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  development_plan:
+    path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    version: "0.13"
+    sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+  approval_envelope:
+    path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml
+    complete_file_sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b
+    decision: approved
+    decision_set: V2-D01_through_V2-D39
+
+approved_baseline_validation:
+  source: committed_blobs_at_e1130caab778c1fa2cbbf57902da11f132db66c3
+  all_declared_hashes_match: true
+  records:
+    - path: new pipeline/decisions/d0-01-decision-dispositions.yaml
+      declared_and_actual_sha256: ff4b045966be8fb57d6e4243bed59bae72d7b7aced5be7efb766bd08d1aa59ab
+    - path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+      declared_and_actual_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+    - path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+      declared_and_actual_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+    - path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+      declared_and_actual_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+  approved_records_modified_by_D0_06: false
+
+triple_binding:
+  pipeline_commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+  fixture_spec_sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+  fixture_commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+
+pipeline_source:
+  repository_role: prompt_and_pipeline_repository
+  root_relative_to_workspace: .
+  root_observed: "C:/Projects/1.Mistake Not My Baton For A Wand"
+  object_format: sha1
+  parent_baseline_commit: e1130caab778c1fa2cbbf57902da11f132db66c3
+  seed_spec_commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+  seed_spec_tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+  clean_clone_status: clean
+
+canonical_fixture_package:
+  root: new pipeline/tests/fixtures/canonical-v1
+  spec:
+    path: new pipeline/tests/fixtures/canonical-v1/fixture-spec.json
+    complete_file_sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+    git_blob: 2a6d12ac2b6437cc8464eb826e9ad3da7a6b99ce
+  expected_tree_manifest:
+    path: new pipeline/tests/fixtures/canonical-v1/expected-tree.json
+    complete_file_sha256: a93e40a59f0eb954b1f0d56dbaed50c78cc3203c9823099a59efce3241075772
+    git_blob: 6a0a7f805ff4d282664d2e27ad6aaacd339dfdcf
+    seed_file_count: 7
+    expected_git_tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+  materializer:
+    path: new pipeline/tests/fixtures/canonical-v1/materialize.py
+    complete_file_sha256: 49df3010b5f582d91c41816cdf5ff3e8f3a60fd567d9381e104178fea65874a3
+    git_blob: a0984e99448810ec67a90652ac38e77f8261e8e6
+    existing_output_policy: fail_closed
+    symlinks_allowed: false
+    copy_mode: byte_exact
+    text_line_endings: LF
+
+materialized_fixture_repository:
+  repository_role: disposable_synthetic_project_fixture
+  root_relative_to_workspace: projects/pipeline-v2-fixture
+  separate_git_repository: true
+  pipeline_git_ignore_rule: /projects/
+  object_format: sha1
+  branch: main
+  commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+  tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+  author_and_committer: "Pipeline Fixture <pipeline-fixture@example.invalid>"
+  timestamp_unix: 946684800
+  timezone: "+0000"
+  status_after_materialization: clean
+  project_local_decision_projections_tracked: true
+  exact_checkpoint_path_allowed: .pipeline/history/pipeline-checkpoint.sqlite3
+  active_runtime_backups_previews_and_scratch_ignored: true
+
+repository_boundaries:
+  swarm:
+    root_relative_to_workspace: projects/swarm
+    fixture_role: forbidden
+    commit_before_and_after: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39
+    status_before_and_after: clean
+    modified_by_D0_06: false
+  legacy_research:
+    root_relative_to_workspace: research/old-swarm
+    role: isolated_read_only_legacy_snapshot
+    inspected_for_D0_06: false
+    fixture_input: false
+    product_capability_policy: excluded
+    capability_enforcement_status: pending_foundation
+
+reproducibility_evidence:
+  path: new pipeline/receipts/d0-06-fixture-reproducibility-v1.yaml
+  result: pass
+
+self_reference_avoidance:
+  sequence:
+    - seed_spec_pipeline_commit
+    - deterministic_fixture_commit
+    - separate_binding_and_evidence_commit
+  binding_container_commit_embedded_in_record: false
+  binding_container_commit_resolution: git_log_for_this_path
+  rationale: Embedding the receipt commit in its own committed bytes would create a commit-hash cycle.
+
+scope_guard:
+  completed_scope: D0-06_only
+  K0a_implementation_started: false
+  layer_plans_created: false

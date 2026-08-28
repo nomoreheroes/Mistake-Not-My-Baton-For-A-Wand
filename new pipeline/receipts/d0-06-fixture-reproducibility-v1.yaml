@@ -1,0 +1,103 @@
+receipt_id: d0-06-fixture-reproducibility-v1
+schema_version: 1
+receipt_status: verified
+work_item_id: D0-06
+started_at: "2026-08-28T10:53:56.3628020+03:00"
+finished_at: "2026-08-28T10:54:04.2593378+03:00"
+projection:
+  path: new pipeline/receipts/d0-06-fixture-reproducibility-v1.md
+  sha256: 291b062b6a955fc76e7f1f689099134911c9645fbeeb113266c3329de32ec8df
+binding:
+  path: new pipeline/receipts/d0-06-fixture-initialization-v1.yaml
+  complete_file_sha256: fc0acc57227b55db579292affb3639797db72664a1f49c7555909c9865813bee
+
+test_environment:
+  os: Microsoft Windows NT 10.0.20348.0
+  git: git version 2.51.2.windows.1
+  python: Python 3.12.7
+  pipeline_git_object_format: sha1
+  fixture_git_object_format: sha1
+
+expected:
+  pipeline_commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+  pipeline_tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+  fixture_spec_sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+  fixture_commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+  fixture_tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+
+method:
+  pipeline_clone_mode: --no-local --no-checkout
+  pipeline_checkout_mode: detached_exact_commit
+  materialization_count_from_clean_clone: 2
+  output_policy: two_distinct_new_directories
+  fixture_clone_mode: --no-local
+  command_argv:
+    - [git, clone, --no-local, --quiet, --no-checkout, PIPELINE_ROOT, TEMP/pipeline-clone]
+    - [git, -C, TEMP/pipeline-clone, checkout, --quiet, --detach, 3021a7c05bb685be671a2bf205cfcc7996ec45d7]
+    - [python, "TEMP/pipeline-clone/new pipeline/tests/fixtures/canonical-v1/materialize.py", TEMP/fixture-a, --expected-spec-sha256, 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a, --expected-commit, 192a5b1e9e312b78c310184cde0fc3377c51ab1b]
+    - [python, "TEMP/pipeline-clone/new pipeline/tests/fixtures/canonical-v1/materialize.py", TEMP/fixture-b, --expected-spec-sha256, 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a, --expected-commit, 192a5b1e9e312b78c310184cde0fc3377c51ab1b]
+    - [git, clone, --no-local, --quiet, projects/pipeline-v2-fixture, TEMP/fixture-clone]
+    - [git, -C, TEMP/pipeline-clone, fsck, --full, --strict]
+    - [git, -C, TEMP/fixture-a, fsck, --full, --strict]
+    - [git, -C, TEMP/fixture-b, fsck, --full, --strict]
+    - [git, -C, TEMP/fixture-clone, fsck, --full, --strict]
+
+observed:
+  pipeline_clone:
+    commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+    tree: 8b60d12e418eb152bff1e25f86465eae6a7bbc58
+    fixture_spec_sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+    status: clean
+    projects_directory_present: false
+  materialization_a:
+    commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+    tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+    status: clean
+    fsck_full_strict: pass
+  materialization_b:
+    commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+    tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+    status: clean
+    fsck_full_strict: pass
+  official_fixture_clone:
+    commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+    tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+    status: clean
+    fsck_full_strict: pass
+  pipeline_clone_fsck_full_strict: pass
+
+assertions:
+  clean_clone_exact_pipeline_commit: pass
+  clean_clone_spec_complete_file_hash: pass
+  clean_clone_excludes_ignored_project_area: pass
+  independent_materialization_commits_equal: pass
+  independent_materialization_trees_equal: pass
+  materialized_commit_matches_spec: pass
+  materialized_tree_matches_manifest: pass
+  official_fixture_clone_matches_materializations: pass
+  all_repository_statuses_clean: pass
+  all_fsck_full_strict_checks: pass
+  reproducible_fixture_baseline: pass
+
+warnings:
+  - class: host_global_excludes_file_unreadable
+    text: "Git warned that C:/Users/Administrator/.config/git/ignore was inaccessible."
+    effect: none_on_result
+    controls:
+      - committed_spec_hash_matched
+      - all_statuses_clean
+      - materializer_disabled_system_and_global_git_config
+      - materializer_set_core_autocrlf_false
+
+cleanup:
+  temporary_root_kind: os_temporary_directory
+  resolved_path_verified_under_temporary_root: true
+  scoped_removal_completed: true
+  persistent_fixture_removed: false
+
+persistent_state_after_test:
+  pipeline_source_commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+  official_fixture_commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+  official_fixture_status: clean
+  swarm_commit: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39
+  swarm_status: clean
