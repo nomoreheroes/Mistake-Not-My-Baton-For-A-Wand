@@ -1,0 +1,59 @@
+record_id: k0a-00-forecast-reconciliation-v1
+schema_version: 1
+version: "1.0.0"
+status: reconciled_pending_owner_disposition
+work_item_id: K0a-00
+authority:
+  approved_forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  manual_reference: {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+  invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, sha256: 9cc6c3a65dde248be52b22a0b0b8ec68958f8852de7c5653010d737641485c4f}
+plan_production:
+  package_id: K0a-plan-bootstrap
+  invocation_profile: light
+  forecast: {nominal: 6, worst_case: 18}
+  actual_completed_model_invocations: 14
+  actual_by_plan:
+    k0a-00-shared-control-plane: 4
+    k0a-00-shared-artifact-event-plane: 4
+    k0a-00-s-layer: 6
+  remaining_to_worst_case: 4
+  result: within_worst_case
+  explanation: Control and artifact/event each used one bounded return; S used both permitted returns. The final S review left an owner-disposition finding, so no third return was started.
+  excluded_orchestration_attempt:
+    count: 1
+    reason: A separate reviewer allocation was rejected by the service usage limit before model execution and produced no review output; it is not an LLM invocation.
+runtime:
+  package_id: K0a-runtime-F00
+  forecast: {nominal: 3, worst_case: 6}
+  actual_model_invocations: 0
+  execution_status: not_authorized_not_started
+human_attention_budget:
+  plan_package:
+    profile: standard
+    sessions: {nominal: 1, worst_case: 2}
+    blocking_decisions: {nominal: 1, worst_case: 3}
+    active_minutes: {nominal: 20, worst_case: 60}
+    max_single_session_minutes: 30
+    batchable_requests: true
+  runtime_package:
+    profile: light
+    sessions: {nominal: 0, worst_case: 0}
+    blocking_decisions: {nominal: 0, worst_case: 0}
+    active_minutes: {nominal: 0, worst_case: 0}
+    max_single_session_minutes: 30
+    batchable_requests: true
+  actual_active_minutes: not_instrumented_no_value_invented
+binary_payload:
+  applicability: N/A
+  aggregate_new_bytes: {nominal: 0, worst_case: 0}
+  result: exact_match
+checkpoint_reference:
+  publisher_available: false
+  publications: {nominal: 0, worst_case: 0}
+  rounded_bytes: {nominal: 3145728, worst_case: 6291456}
+  phase_pack_growth_bytes: {nominal: 0, worst_case: 0}
+  result: exact_match
+reconciliation:
+  changed_assumptions_or_numbers: false
+  variance_owner_route_required: false
+  result: pass

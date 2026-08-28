@@ -1,5 +1,222 @@
 ledger_id: pipeline-v2-design-invocations
 schema_version: 1
 pipeline_git_boundary: C:/Projects/1.Mistake Not My Baton For A Wand
-entries: []
+entries:
+  - invocation_id: k0a-00-author-shared-control-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:37:38.7758636+03:00"
+    completed_at: "2026-08-28T11:40:20.2817486+03:00"
+    input_manifest_sha256: 90fe8f7fda2c5048be98fc914ffb50f55ceed114226b573f527be70e88d632b6
+    output_sha256: 623e4aa4d568a4221cf54f9deedcf1aacb38b0c827dba722b709c193ef90d298
+    review_round: 0
+  - invocation_id: k0a-00-author-shared-artifact-event-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:40:20.2817486+03:00"
+    completed_at: "2026-08-28T11:42:13.9252960+03:00"
+    input_manifest_sha256: 90fe8f7fda2c5048be98fc914ffb50f55ceed114226b573f527be70e88d632b6
+    output_sha256: 5bc9c28308fc74587a183b1b04ff43b226e80bed26fcfc99c34e34e4b0f9b2ca
+    review_round: 0
+  - invocation_id: k0a-00-author-s-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:42:13.9252960+03:00"
+    completed_at: "2026-08-28T11:44:01.4727086+03:00"
+    input_manifest_sha256: 90fe8f7fda2c5048be98fc914ffb50f55ceed114226b573f527be70e88d632b6
+    output_sha256: bd09f483bb189d982bc07be93497a7a28b03950a86462b8785810339927d25a3
+    review_round: 0
+  - invocation_id: k0a-00-review-shared-control-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_control
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_review_v1
+    started_at: "2026-08-28T11:46:43.3190004+03:00"
+    completed_at: "2026-08-28T11:50:29.8197400+03:00"
+    input_manifest_sha256: a67792af6263d79ce1e57c521ceafd412561f82b0911511125af55245a87695a
+    output_sha256: 8485a9fd34367498c34322c269a650b7b5422d64dfc2b3d6747512753b26aaec
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict known; reviewer did not author any version and received no author transcript or hidden summary.
+  - invocation_id: k0a-00-review-shared-artifact-event-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_artifact_event
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_review_v1
+    started_at: "2026-08-28T11:46:55.295+03:00"
+    completed_at: "2026-08-28T11:51:23.051+03:00"
+    input_manifest_sha256: 4c2f90b24a19472524077169ec1a5e4d2982b37f9003962991f7434b2d499e3e
+    output_sha256: d1148f7b04e0d35b17914c204ae2ee267c59f90ca39441a2fde2e5ccb2f84085
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer did not author any version and received only manifest-scoped fresh context.
+  - invocation_id: k0a-00-review-s-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_s
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_review_v1
+    started_at: "2026-08-28T11:47:08.8789492+03:00"
+    completed_at: "2026-08-28T11:50:15.3904327+03:00"
+    input_manifest_sha256: 9ae125e5901cfa0d2f1b67229def6bd6f21f319dd8fc10aa1b11390f31736af4
+    output_sha256: eec405d6b919fc8b322ff9e59d3237504c5804ae6a2dbde9d99997f3901b449a
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer did not author any version and received no author transcript or hidden summary.
+  - invocation_id: k0a-00-revision-author-shared-control-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:53:13.7160730+03:00"
+    completed_at: "2026-08-28T11:53:37.2838287+03:00"
+    input_manifest_sha256: a68f9d7d5e4119973c8ea77dcb73e7cc1283b6ec1bd294d327d47b39214e71b3
+    output_sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12
+    review_round: 1
+  - invocation_id: k0a-00-revision-author-shared-artifact-event-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:53:37.2838287+03:00"
+    completed_at: "2026-08-28T11:54:00.0259671+03:00"
+    input_manifest_sha256: b91c8b1f2534a5aecdd495c38bceaef38008e7fdc57ea814c5b1663f6f2d70a2
+    output_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+    review_round: 1
+  - invocation_id: k0a-00-revision-author-s-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T11:54:00.0259671+03:00"
+    completed_at: "2026-08-28T11:55:53.4591572+03:00"
+    input_manifest_sha256: 3ece97b25d8d9e1150537f7b5d2679254a80efa52c8043cdb18c8978a044ab22
+    output_sha256: cde748d10e673ad921cf2760d7610fb544d484309f872ce8638a5b5b6353e815
+    review_round: 1
+  - invocation_id: k0a-00-review-shared-control-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_control_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_revision_review_v1
+    started_at: "2026-08-28T12:03:18.013+03:00"
+    completed_at: "2026-08-28T12:06:15.264+03:00"
+    input_manifest_sha256: 5f65de907ee3e7ba5e5c8e3ac11fc20393131b89af3b8b160040dc4a885b0242
+    output_sha256: 5f6d780ba21b92c9a215d47e62e102beb6100ee102d9eb92047cc44fa6751326
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict known; reviewer did not author any plan version and received no author transcript or hidden summary.
+  - invocation_id: k0a-00-review-shared-artifact-event-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_artifact_event_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_revision_review_v1
+    started_at: "2026-08-28T12:03:26.0151545+03:00"
+    completed_at: "2026-08-28T12:05:22.8554873+03:00"
+    input_manifest_sha256: e8e315521ada4a36698d07e0153f9b6a0fbf3a74feea5dbca6cf063f7eacb53a
+    output_sha256: da42b7b83fb2c6a6ca32d5a120eb225a25894275cabeaf4c609478134ae053b0
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer did not author any plan version, received no author transcript or hidden summary, and made no file changes.
+  - invocation_id: k0a-00-review-s-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_s_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_revision_review_v1
+    started_at: "2026-08-28T12:03:37.169+03:00"
+    completed_at: "2026-08-28T12:07:27.179+03:00"
+    input_manifest_sha256: 348ce40ed01282bf1c06dec857c93c6e1cd07c33554b3972ec0f328b8f8463d9
+    output_sha256: 26efdf317aa649d56f3b871433eda9596c711a9fe6c421193d384519f4277b55
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer did not author any plan version and received no author transcript or hidden summary.
+  - invocation_id: k0a-00-revision-author-s-r2
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.2.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_architecture_author
+    started_at: "2026-08-28T12:07:27.180+03:00"
+    completed_at: "2026-08-28T12:12:12.1167734+03:00"
+    input_manifest_sha256: 25750fb2ea102f678a08e36f4268cf2d4eed1391a0dd052e6dbc4a60dc234c5e
+    output_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+    review_round: 2
+  - invocation_id: k0a-00-review-s-r2
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+    plan_version: "1.2.0"
+    role: independent_reviewer
+    actor_id: /root/review_s_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0a_independent_architecture_final_revision_review_v1
+    started_at: "2026-08-28T16:44:41.672+03:00"
+    completed_at: "2026-08-28T16:45:39.150+03:00"
+    input_manifest_sha256: b871a4a3153435755c5423c5103a99adad481126d668490c0aa494de2dc95cb1
+    output_sha256: 33386dfe40da9563152c65302af68c070f3d835e7db1ea967096921b30053057
+    review_round: 2
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No known conflict; reviewer did not author any plan version, inherited no author context, and performed no file modifications.
 bootstrap_note: "K0a-00 and every later Layer Architecture Gate must append author/reviewer entries before issuing a receipt. Earlier D0 conversational invocations lack complete metadata and are not backfilled with invented values."

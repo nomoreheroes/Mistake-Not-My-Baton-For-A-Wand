@@ -1,0 +1,151 @@
+envelope_id: k0a-00-bootstrap-f00-scope-v1
+schema_version: 1
+version: "1.0.0"
+status: review_candidate
+work_item_id: K0a-00
+phase_package: K0a/2.0a-bootstrap-kernel
+purpose: Bound the three independent K0a-00 architecture plans to one fixture-only F00 route without authorizing implementation.
+
+source_binding:
+  architecture_plan:
+    path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+    version: "0.16"
+    sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+  development_plan:
+    path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    version: "0.13"
+    sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+  gate_contract:
+    path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    schema_version: 2
+    sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+  forecast:
+    path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+    schema_version: 2
+    sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+  fixture_binding:
+    pipeline_seed_spec_commit: 3021a7c05bb685be671a2bf205cfcc7996ec45d7
+    fixture_spec_sha256: 6b188e11fa1ea35dbd8b487956e82e0d2ad05d06f5121b1c330b56cd6b3f4a8a
+    fixture_commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+    fixture_tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+
+project_profiles_and_scenarios:
+  profiles: [disposable_synthetic_fixture]
+  scenarios: [F00]
+  real_project_profiles: []
+
+route:
+  statement: command -> S0 -> synthetic Layer0 -> fixture worker -> atomic artifact version plus events -> terminal fixture sink and CLI readback
+  current_reasoning_actors:
+    - S0
+    - synthetic_Layer0
+    - fixture_worker
+  current_deterministic_components:
+    - basic_CLI
+    - root_and_binding_guard
+    - control_harness
+    - model_adapter
+    - artifact_event_store
+    - bootstrap_sink
+    - inspect_readback
+  public_event_types:
+    - command.received
+    - run.started
+    - artifact.version_created
+    - handoff.ready
+    - run.completed
+  artifact_types:
+    - bootstrap.synthetic_result
+  terminal_states:
+    - completed
+    - blocked_input
+    - blocked_policy
+    - failed_invocation
+    - failed_validation
+    - failed_persistence
+
+repository_boundaries:
+  pipeline_git:
+    root: C:/Projects/1.Mistake Not My Baton For A Wand
+    access: read_only_during_F00_runtime
+    current_planning_changes: K0a-00_governance_documents_only
+  canonical_fixture_git:
+    root: C:/Projects/1.Mistake Not My Baton For A Wand/projects/pipeline-v2-fixture
+    access: read_only_identity_and_clean_baseline
+  disposable_F00_run_root:
+    location_policy: newly_materialized_or_cloned_temporary_fixture_root_outside_canonical_fixture_checkout
+    access: write_only_within_exact_runtime_and_temporary_paths
+  swarm_git:
+    root: C:/Projects/1.Mistake Not My Baton For A Wand/projects/swarm
+    access: none
+  legacy_research:
+    root: C:/Projects/1.Mistake Not My Baton For A Wand/research/old-swarm
+    access: none
+
+capability_and_egress_boundary:
+  allowed:
+    - read_pinned_pipeline_contract_bytes
+    - read_fixture_identity_and_seed_spec
+    - create_disposable_F00_runtime_state_under_exact_run_root
+    - invoke_exact_pinned_model_provider_channel_for_three_reasoning_roles
+    - read_back_F00_SQLite_state
+  denied:
+    - arbitrary_filesystem_write
+    - product_repository_read_or_write
+    - legacy_research_read
+    - network_research
+    - package_install_or_project_hook_execution
+    - external_system_mutation
+    - git_commit_push_merge_or_deploy_from_runtime
+    - secret_access
+
+explicit_exclusions:
+  - operational_K0b_hardening
+  - checkpoint_publisher
+  - clone_only_SQLite_recovery
+  - full_Alpha_event_profile
+  - production_or_project_side_effects
+  - legacy_research_import
+  - full_P_R_E_G_A_H_T_I_Q_M_contracts
+  - K0a-01_implementation_during_this_planning_package
+  - K0a-02_implementation_during_this_planning_package
+  - crash_reconciliation_resume_and_operational_abort
+  - projection_outbox_and_YAML_Markdown_project_projections
+  - distributed_leases_retries_budget_events_and_full_replay
+  - dashboard_KPI_release_or_Alpha0_claims
+
+deferred_triggers_and_stable_interfaces:
+  K0a_implementation:
+    trigger: explicit_owner_approval_of_all_three_exact_plan_versions_hashes_and_scope
+    stable_interfaces:
+      - validated_control_transition_request
+      - validated_route_proposal
+      - validated_artifact_event_publication_request
+      - artifact_version_id_reference
+      - replay_point_before_and_after_reference
+  K0b_operational_delta:
+    trigger: successful_F00_and_dispositioned_findings
+    stable_interfaces:
+      - versioned_event_envelope
+      - versioned_invocation_envelope
+      - forward_only_SQLite_migration_boundary
+  downstream_layers:
+    trigger: K0b_validated_baseline_and_later_just_in_time_layer_gate
+    stable_interfaces:
+      - S0_to_Layer0_validated_route
+      - Layer0_to_worker_validated_invocation
+      - artifact_version_and_event_refs
+
+downstream_boundary:
+  current_terminal_consumer: fixture_bootstrap_sink_plus_CLI_readback
+  readiness_claim: K0a_bootstrap_evidence_only
+  forbidden_claims:
+    - Alpha0_ready
+    - product_ready
+    - replayable_from_clean_clone
+    - production_safe
+  implementation_scope_requested_after_owner_approval:
+    - K0a-01_minimal_SQLite_atomicity_and_exact_replay_telemetry_schema
+    - K0a-02_one_pinned_contract_S0_synthetic_Layer0_fixture_worker_basic_CLI_and_exact_guards
+    - K0a-03_execute_F00_and_disposition_findings
+

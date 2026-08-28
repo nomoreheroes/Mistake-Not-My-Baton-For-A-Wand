@@ -1,0 +1,32 @@
+manifest_id: k0a-00-s-layer-review-input-v1
+schema_version: 1
+review_round: 0
+mode: fresh_context_read_only
+exact_plan:
+  path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  plan_id: k0a-00-s-layer
+  version: "1.0.0"
+  sha256: bd09f483bb189d982bc07be93497a7a28b03950a86462b8785810339927d25a3
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, version: 1, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, version: 1, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/registry/approval-envelope/v1.schema.yaml, version: 1, sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54}
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+  - {path: new pipeline/receipts/d0-06-fixture-initialization-v1.yaml, version: 1, sha256: fc0acc57227b55db579292affb3639797db72664a1f49c7555909c9865813bee}
+  - {path: old pipeline/J. Implementation/J0. Dispatcher.md, version: legacy_read_only_current_blob, sha256: d435daba6f83156d9919c6f2368aaf216e2f4a6214d0f8f260db30fc40932d74}
+review_rubric:
+  - all_18_sections_present_or_reasoned_NA
+  - one_plan_one_layer_and_exact_F00_scope
+  - S0_harness_Layer0_worker_boundaries_and_no_direct_handoff
+  - state_guards_route_fail_closed_and_consumption_coherence
+  - minimal_roster_budgets_binary_NA_security_and_deferred_interfaces
+  - tests_and_evidence_can_falsify_claims
+  - implementation_scope_unambiguous
+forbidden_inputs: [author_transcript, hidden_author_summary, research/old-swarm, projects/swarm_content, other_K0a_plan_drafts]
+

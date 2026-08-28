@@ -1,0 +1,71 @@
+review_id: k0a-00-shared-control-review-r0
+schema_version: 1
+review_round: 0
+status: revision_required
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/review_control
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  conflict_declaration: No conflict known; reviewer did not author any prior or current version of this plan and received no author transcript or hidden summary.
+  started_at: "2026-08-28T11:46:43.3190004+03:00"
+  completed_at: "2026-08-28T11:50:29.8197400+03:00"
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-shared-control-review-input-v1.yaml
+  sha256: a67792af6263d79ce1e57c521ceafd412561f82b0911511125af55245a87695a
+exact_plan:
+  path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+  version: "1.0.0"
+  declared_sha256: 623e4aa4d568a4221cf54f9deedcf1aacb38b0c827dba722b709c193ef90d298
+  actual_sha256: 623e4aa4d568a4221cf54f9deedcf1aacb38b0c827dba722b709c193ef90d298
+  hash_match: true
+section_check: {required: 18, present: 18, result: pass}
+complexity:
+  tier: shared_plane
+  cap: 800
+  actual_non_empty_lines: 133
+  routing: {actual: 5, cap: 80}
+  roster: {actual: 9, cap: 40}
+  failure_recovery: {actual: 15, cap: 70}
+  result: pass
+machine_checks:
+  pass: [source_integrity, exact_plan_identity, section_presence, one_plane_scope, fixture_binding, complexity_budget, invocation_budget, human_attention_budget, implementation_authorization_boundary]
+  fail: [state_terminal_order, event_route_terminal_policy, binary_payload_na_executability]
+judgment_checks:
+  pass: [ownership_overlap, roster_and_deferred_interfaces, failure_security_replay_coherence, implementation_scope]
+  fail: [terminal_state_coherence, tests_and_evidence_falsifiability]
+findings:
+  - finding_id: K0A-C-001
+    severity: serious
+    category: state_terminal_ordering
+    statement: Completion requires successful CLI readback, yet the plan requests run.completed before inspect/readback, so a mismatch could be discovered after terminal success.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:63
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:84
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:132
+    proposed_disposition: Put sink success and a gate-bearing pre-completion readback before completed/run.completed, followed by an optional final inspect.
+  - finding_id: K0A-C-002
+    severity: serious
+    category: routing_and_terminal_policy
+    statement: The five-event lifecycle lacks an exact per-event producer, subscriber or terminal policy, route owner, and delivery-result mapping.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:76
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:86
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:172
+    proposed_disposition: Add a compact five-row lifecycle table and distinguish observational from gate-bearing readback.
+  - finding_id: K0A-C-003
+    severity: serious
+    category: binary_payload_na
+    statement: The binary-payload N/A proof is declarative; scenarios/evidence do not require rejection of BLOB, non-UTF-8, and raw-response persistence before mutation.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:164
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:176
+      - new pipeline/architecture/k0a-00-shared-control-plane-v1.md:185
+      - new pipeline/decisions/d0-02-layer-architecture-gate.yaml:208
+    proposed_disposition: Add API/storage type inventory and negative writes with rejection-before-persistence and zero-row evidence.
+recommendation: revise
+rationale: The plan is correctly scoped, hash-bound, budgeted, security-conscious, and within caps; three bounded corrections are required without scope expansion.
+

@@ -1,0 +1,84 @@
+review_id: k0a-00-shared-control-review-r1
+schema_version: 1
+review_round: 1
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/review_control_r1
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_revision_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  conflict_declaration: No conflict known; reviewer did not author any plan version, received no author transcript or hidden summary, and performed a read-only review.
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-shared-control-review-input-r1.yaml
+  sha256: 5f65de907ee3e7ba5e5c8e3ac11fc20393131b89af3b8b160040dc4a885b0242
+exact_plan:
+  path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+  version: "1.1.0"
+  declared_sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12
+  actual_sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12
+  hash_match: true
+prior_findings:
+  - finding_id: K0A-C-001
+    disposition_status: resolved
+    evidence: completion follows sink acceptance and gate-bearing consistency readback
+  - finding_id: K0A-C-002
+    disposition_status: resolved
+    evidence: all five events have producer, subscriber or terminal policy, route owner, and required result
+  - finding_id: K0A-C-003
+    disposition_status: resolved
+    evidence: binary N/A has API and storage inventory plus pre-persistence rejection and zero-row tests
+section_check:
+  required: 18
+  present: 18
+  result: pass
+complexity:
+  tier: shared_plane
+  cap: 800
+  actual_non_empty_lines: 143
+  routing: {actual: 5, cap: 80}
+  roster: {actual: 9, cap: 40}
+  failure_recovery: {actual: 15, cap: 70}
+  result: pass
+machine_checks:
+  verified_sha256_files: 11
+  pass:
+    - source_integrity
+    - exact_plan_identity_and_version
+    - all_allowed_input_hashes
+    - section_presence
+    - one_shared_plane_scope
+    - fixture_and_scope_binding
+    - parent_gate_forecast_and_policy_binding
+    - route_owners_and_terminal_policies
+    - state_terminal_completion_order
+    - blocker_terminal_dispositions
+    - complexity_and_section_sub_budgets
+    - unique_plan_and_runtime_budget_packages
+    - invocation_budget
+    - human_attention_budget
+    - checkpoint_status_reference
+    - binary_payload_na_executability
+    - review_return_count
+    - implementation_authorization_boundary
+  fail: []
+  deferred_to_owner_approval_receipt:
+    - exact_owner_approval_envelope
+judgment_checks:
+  pass:
+    - ownership_overlap
+    - minimal_current_roster_and_honest_deferred_interfaces
+    - terminal_state_coherence
+    - event_routing_and_completion_order
+    - failure_security_and_replay_coherence
+    - tests_and_evidence_falsifiability
+    - binary_na_contract_and_negative_evidence
+    - implementation_scope
+    - no_revision_scope_expansion
+  fail: []
+findings: []
+recommendation: approve
+rationale: Version 1.1.0 resolves all three round-0 findings without scope expansion; required categories, limits, budgets, contracts, evidence, and post-owner-approval implementation boundary pass. This recommendation is not owner approval.
+started_at: "2026-08-28T12:03:18.013+03:00"
+completed_at: "2026-08-28T12:06:15.264+03:00"

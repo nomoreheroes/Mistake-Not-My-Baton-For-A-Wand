@@ -1,0 +1,122 @@
+worksheet_id: k0a-00-budget-reference-v1
+schema_version: 1
+version: "1.0.0"
+status: review_candidate
+work_item_id: K0a-00
+calculation_mode: manual_reference_before_K0b_compiler
+
+authority:
+  gate_contract:
+    path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+  approved_forecast:
+    path: new pipeline/decisions/d0-01-full-route-forecast.yaml
+    sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840
+    phase: K0a
+  checkpoint_policy:
+    path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+    sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+  scope_envelope:
+    path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml
+    version: "1.0.0"
+
+counting_rules:
+  plan_model:
+    exact_ref: new pipeline/decisions/d0-01-full-route-forecast.yaml#counting_rules.new_plan_call_model
+    per_exact_plan: {nominal_author: 1, nominal_reviewer: 1, worst_case_total_with_two_returns: 6}
+  runtime_model:
+    includes: [S0, synthetic_Layer0, fixture_worker, bounded_retries]
+    compiled_dispatcher_fast_path_calls: 0
+  separation_rule: plan_production_calls_are_never_checkpointed_or_counted_as_runtime_calls
+  worst_case_semantics: independent_upper_bound_not_a_claim_that_every_retry_occurs_jointly
+
+packages:
+  - package_id: K0a-plan-bootstrap
+    scope: plan_production
+    covers_work_items: [K0a-00]
+    exact_plans:
+      - k0a-00-shared-control-plane
+      - k0a-00-shared-artifact-event-plane
+      - k0a-00-s-layer
+    invocation_profile: light
+    invocation_derivation:
+      nominal: 3 * (1_initial_author + 1_initial_fresh_context_reviewer)
+      worst_case: 3 * (1_initial_author + 1_initial_reviewer + 2_revision_authors + 2_revision_reviews)
+    invocations: {nominal: 6, worst_case: 18}
+    human_attention:
+      profile: standard
+      sessions: {nominal: 1, worst_case: 2}
+      blocking_decisions: {nominal: 1, worst_case: 3}
+      active_minutes: {nominal: 20, worst_case: 60}
+      max_single_session_minutes: 30
+      batchable_requests: true
+    execution_status: current_planning_package
+  - package_id: K0a-runtime-F00
+    scope: runtime
+    covers_work_items: [K0a-01, K0a-02, K0a-03]
+    exact_route: S0_plus_synthetic_Layer0_plus_fixture_worker
+    invocation_profile: light
+    invocation_derivation:
+      nominal: 1_S0 + 1_synthetic_Layer0 + 1_fixture_worker
+      worst_case: 2_S0 + 2_synthetic_Layer0 + 2_fixture_worker
+    invocations: {nominal: 3, worst_case: 6}
+    human_attention:
+      profile: light
+      sessions: {nominal: 0, worst_case: 0}
+      blocking_decisions: {nominal: 0, worst_case: 0}
+      active_minutes: {nominal: 0, worst_case: 0}
+      max_single_session_minutes: 30
+      batchable_requests: true
+    execution_status: excluded_until_exact_owner_plan_approval
+
+unique_package_id_check:
+  ids: [K0a-plan-bootstrap, K0a-runtime-F00]
+  duplicates: []
+  result: pass
+
+phase_envelope_recalculation:
+  llm_invocations:
+    nominal: 6 + 3
+    nominal_result: 9
+    worst_case: 18 + 6
+    worst_case_result: 24
+    approved_forecast: {nominal: 9, worst_case: 24}
+    result: exact_match
+  human_attention:
+    sessions: {nominal_result: 1, worst_case_result: 2, approved_nominal: 1, approved_worst_case: 2}
+    blocking_decisions: {nominal_result: 1, worst_case_result: 3, approved_nominal: 1, approved_worst_case: 3}
+    active_minutes: {nominal_result: 20, worst_case_result: 60, approved_nominal: 20, approved_worst_case: 60}
+    result: exact_match
+
+runtime_checkpoint_reference:
+  checkpoint_chain: fixture
+  publisher_available: false
+  checkpoint_publications: {nominal: 0, worst_case: 0}
+  checkpoint_unrounded_mib: {nominal: 2.09375, worst_case: 5.5}
+  checkpoint_bytes_rounded: {nominal: 3145728, worst_case: 6291456}
+  no_delta_pack_growth_bytes: {nominal: 0, worst_case: 0}
+  threshold_status:
+    nominal: {checkpoint: below_warning, phase_pack: publisher_unavailable}
+    worst_case: {checkpoint: below_warning, phase_pack: publisher_unavailable}
+  approved_forecast_result: exact_match
+
+binary_payload_reference_check:
+  shared_control_plane:
+    result: not_applicable_candidate
+    proof_requirement: no_binary_persistence_and_only_version_refs_for_any_external_artifact
+  shared_artifact_event_plane:
+    result: not_applicable_candidate
+    proof_requirement: F00_contract_rejects_BLOB_and_non_UTF8_payloads_before_persistence
+  S:
+    result: not_applicable_candidate
+    proof_requirement: S0_returns_route_refs_only_and_cannot_persist_payload_bytes
+  aggregate_new_binary_bytes: {nominal: 0, worst_case: 0}
+  approved_K0a_forecast_binary_mib: {nominal: 0, worst_case: 0}
+  result: exact_match_subject_to_each_plan_contract_proof
+
+forecast_reconciliation:
+  changed_assumptions_or_numbers: false
+  variance_owner_route_required: false
+  result: pass
+  limitation: This worksheet is reference evidence only; K0b must implement the compiler and prove field/value equivalence before operational hardening.
+

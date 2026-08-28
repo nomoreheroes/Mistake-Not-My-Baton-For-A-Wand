@@ -1,0 +1,18 @@
+manifest_id: k0a-00-shared-control-review-input-r1
+schema_version: 1
+review_round: 1
+mode: fresh_context_read_only
+exact_plan: {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, plan_id: k0a-00-shared-control-plane, version: "1.1.0", sha256: 746c9736c32572c6be8fb49fceb97a5c529bfe057bbd6bb1e68ca1fa11501b12}
+allowed_inputs:
+  - {path: new pipeline/reviews/sources/k0a-00-shared-control-plan-v1.0.0.md, version: "1.0.0", sha256: 623e4aa4d568a4221cf54f9deedcf1aacb38b0c827dba722b709c193ef90d298}
+  - {path: new pipeline/reviews/k0a-00-shared-control-review-r0.yaml, review_round: 0, sha256: 8485a9fd34367498c34322c269a650b7b5422d64dfc2b3d6747512753b26aaec}
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+review_rubric: [verify_all_r0_findings_disposed_without_scope_expansion, recheck_all_18_sections_and_gate_criteria, recheck_complexity_budgets_hashes_and_binary_NA]
+forbidden_inputs: [author_transcript, hidden_author_summary, research/old-swarm, projects/swarm_content, other_K0a_plan_drafts]
+

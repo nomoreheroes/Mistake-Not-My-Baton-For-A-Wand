@@ -1,0 +1,37 @@
+record_id: k0a-00-validation-v1
+schema_version: 1
+version: "1.0.0"
+status: mechanical_validation_passed_owner_disposition_blocked
+validated_package: {path: new pipeline/evidence/k0a-00-owner-disposition-package-v1.yaml, sha256: 337015a93af404b52953081d015b9da33761090abfa7690b1460f01138acc854}
+checks:
+  yaml_parse: {result: pass, files_checked_before_this_record: 24}
+  design_invocation_ledger_schema: {result: pass, entries: 14, unique_invocation_ids: true}
+  design_invocation_ledger_hash_resolution: {result: pass, input_and_output_hashes_resolved: 28}
+  owner_package_path_hash_resolution: {result: pass, refs_checked: 19}
+  exact_plan_identity_version_hash: {result: pass, plans: 3}
+  required_section_presence: {result: pass, required_each: 18, present_each: 18}
+  complexity:
+    result: pass
+    shared_control_plane: {actual_non_empty_lines: 143, cap: 800}
+    shared_artifact_event_plane: {actual_non_empty_lines: 139, cap: 800}
+    S: {actual_non_empty_lines: 124, cap: 500}
+  package_id_uniqueness: {result: pass, ids: [K0a-plan-bootstrap, K0a-runtime-F00]}
+  plan_invocation_budget: {result: pass, actual: 14, nominal: 6, worst_case: 18}
+  runtime_invocations: {result: pass, actual: 0, status: not_authorized_not_started}
+  encoding: {result: pass, policy: UTF-8_without_BOM_and_LF, files_checked_before_this_record: 31}
+  git_diff_check:
+    result: pass_with_blank_at_eof_exemption
+    command: git -c core.whitespace=-blank-at-eof diff --cached --check
+    reason: Preserve exact hash-bound reviewed bytes; no trailing-space or space-before-tab findings are exempted.
+  git_fsck: {result: pass, exit_code: 0, note: informational_dangling_objects_were_reported}
+repository_integrity:
+  root_baseline_head: 6bd34033611bdb3cefa9a96eb3c1600bd220d989
+  canonical_fixture: {head: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, worktree_clean: true}
+  swarm: {head: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39, worktree_clean: true}
+gate_result:
+  machine_checkable_criteria: pass
+  reviewer_judgment: blocked_on_S-R2-001
+  owner_approval: pending
+  K0a_00_complete: false
+  approval_receipts_created: false
+  runtime_started: false

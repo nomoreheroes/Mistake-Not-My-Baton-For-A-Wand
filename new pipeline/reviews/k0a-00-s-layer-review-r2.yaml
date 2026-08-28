@@ -1,0 +1,95 @@
+review_id: k0a-00-s-layer-review-r2-final
+schema_version: 1
+review_round: 2
+status: blocked_revision_limit_exhausted
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/review_s_r1
+  invocation_identity: /root/review_s_r1#review_round_2
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_final_revision_review_v1
+  fresh_context: true
+  fresh_context_relative_to_author: true
+  inherited_author_context: false
+  read_only: true
+  context_declaration: Existing context contained only the prior manifest-authorized independent S review, which is an allowed r2 input; no author transcript or hidden author summary was received.
+  conflict_declaration: No known conflict; reviewer did not author any plan version and performed no file modifications.
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-s-layer-review-input-r2.yaml
+  sha256: b871a4a3153435755c5423c5103a99adad481126d668490c0aa494de2dc95cb1
+exact_plan:
+  path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  plan_id: k0a-00-s-layer
+  version: "1.2.0"
+  declared_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+  actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+  hash_match: true
+verified_inputs: {count: 9, result: pass}
+dispositions:
+  - finding_id: S-R1-001
+    disposition_status: fully_disposed
+    assessment: The plan distinguishes one accepted semantic result from up to two physical attempts, defines retry states and exact automatic triggers, preserves identity/evidence rules, and remains coherent with zero runtime human attention.
+  - finding_id: S-R1-002
+    disposition_status: partially_disposed
+    assessment: The semantic-blocker branch is removed and sections 2, 4, 5, and 14 define a route-only contract, but scope-envelope line 22 still says S0 returns a validated proposal rather than the raw proposal validated by the harness.
+section_check:
+  required: 18
+  present: 18
+  presence_result: pass
+  content_result: blocked_revision_limit_exhausted
+complexity:
+  tier: narrow
+  cap: 500
+  actual_non_empty_lines: 124
+  routing: {actual: 12, cap: 75}
+  roster: {actual: 7, cap: 30}
+  failure_recovery: {actual: 13, cap: 60}
+  result: pass
+machine_checks:
+  pass:
+    - exact_plan_id_version_and_hash
+    - all_manifest_declared_hashes
+    - one_layer_fixture_only_F00_scope
+    - no_scope_expansion_from_v1_1_0
+    - all_18_sections_present
+    - complexity_and_section_sub_budgets
+    - minimal_roster
+    - unique_plan_and_runtime_package_ids
+    - plan_package_invocation_budget_6_18
+    - runtime_package_invocation_budget_3_6
+    - complete_plan_package_human_budget
+    - runtime_zero_human_budget
+    - forecast_reconciliation
+    - binary_payload_NA
+    - no_direct_handoff
+    - fail_closed_routing
+    - post_owner_approval_implementation_boundary
+    - second_revision_return_limit_not_exceeded
+  fail: []
+judgment_checks:
+  pass:
+    - ownership_overlap_resolved
+    - minimal_roster_and_honest_deferred_interfaces
+    - preflight_vs_S0_state_ownership
+    - bounded_retry_and_zero_human_coherence
+    - failure_and_replay_coherence
+    - security_and_prompt_injection_boundary
+    - successful_route_actual_consumption
+    - tests_and_evidence_falsifiability
+    - binary_NA_contract_proof
+    - implementation_scope_narrowness
+  fail:
+    - raw_validated_route_contract_identity_across_scope_envelope_and_sections
+findings:
+  - finding_id: S-R2-001
+    type: unresolved_final_revision_finding
+    severity: moderate
+    category: output_contract_identity
+    statement: The numbered contract sections define S0 as producer of raw s0_route_proposal and the harness as validator/persister of validated_route_proposal, but scope-envelope line 22 says S0 returns a validated route proposal to the harness.
+    required_disposition: Owner/HITL must choose approve_with_disposition, revise_package_architecture, narrow_scope, or block because the second autonomous revision-return limit is exhausted.
+recommendation: blocked_revision_limit_exhausted
+recommendation_is_owner_approval: false
+rationale: All hashes, 18 categories, limits, budgets, binary N/A, security, replay, failure, consumption, tests, and implementation boundary otherwise pass; the remaining producer/validator wording mismatch requires owner disposition and cannot enter a third autonomous return.
+started_at: "2026-08-28T16:44:41.672+03:00"
+completed_at: "2026-08-28T16:45:39.150+03:00"

@@ -1,0 +1,86 @@
+review_id: k0a-00-s-layer-review-r1
+schema_version: 1
+review_round: 1
+status: revision_required
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/review_s_r1
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_revision_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  conflict_declaration: No known conflict; reviewer did not author any plan version and used only manifest-authorized read-only inputs, without an author transcript or hidden summary.
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-s-layer-review-input-r1.yaml
+  sha256: 348ce40ed01282bf1c06dec857c93c6e1cd07c33554b3972ec0f328b8f8463d9
+exact_plan:
+  path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  version: "1.1.0"
+  declared_sha256: cde748d10e673ad921cf2760d7610fb544d484309f872ce8638a5b5b6353e815
+  actual_sha256: cde748d10e673ad921cf2760d7610fb544d484309f872ce8638a5b5b6353e815
+  hash_match: true
+prior_findings:
+  - {finding_id: S-R0-001, disposition_status: disposed}
+  - {finding_id: S-R0-002, disposition_status: partially_disposed}
+  - {finding_id: S-R0-003, disposition_status: partially_disposed}
+section_check:
+  required: 18
+  present: 18
+  presence_result: pass
+  content_result: revision_required
+complexity:
+  tier: narrow
+  cap: 500
+  actual_non_empty_lines: 125
+  routing: {actual: 13, cap: 75}
+  roster: {actual: 7, cap: 30}
+  failure_recovery: {actual: 13, cap: 60}
+  result: pass
+machine_checks:
+  pass:
+    - source_hash_verification
+    - exact_version_and_hash_binding
+    - one_layer_fixture_only_F00_scope
+    - scope_expansion_from_v1_0_0
+    - all_18_sections_present
+    - complexity_and_section_sub_budgets
+    - unique_budget_package_ids
+    - plan_package_invocation_budget_6_18
+    - runtime_package_invocation_budget_3_6
+    - plan_package_human_budget
+    - runtime_zero_human_budget
+    - forecast_reconciliation
+    - binary_payload_NA
+    - no_direct_handoff
+    - post_owner_approval_implementation_boundary
+  fail: []
+judgment_checks:
+  pass:
+    - ownership_overlap_resolved
+    - minimal_roster_and_deferred_interfaces
+    - preflight_vs_S0_state_ownership
+    - security_and_prompt_injection_boundary
+    - replay_and_evidence_preservation
+    - successful_route_actual_consumption
+    - tests_and_evidence_falsifiability
+  fail:
+    - raw_validated_route_contract_identity
+    - bounded_retry_and_zero_human_coherence
+    - failure_route_coherence
+    - implementation_scope_unambiguous_and_sufficient
+findings:
+  - finding_id: S-R1-001
+    severity: moderate
+    category: retry_recovery_and_budget_coherence
+    statement: The plan simultaneously limits one delivery to one S0 invocation, permits a second physical invocation for the same delivery, and labels the retry both pre-authorized and non-automatic.
+    proposed_disposition: Bound one accepted semantic result and two physical attempts per delivery, then consistently name the retry trigger as an automatic deterministic adapter transition or a new trigger.
+  - finding_id: S-R1-002
+    severity: moderate
+    category: output_contract_identity
+    statement: The accepted semantic-blocker branch has no coherent persisted contract and scheduling identity alongside the route-only validated proposal contract.
+    proposed_disposition: Define discriminated validated outcomes or exclude semantic blockers from the validated route contract, with Layer0 scheduled only for a validated route.
+recommendation: revise
+rationale: Hashes, scope, sections, limits, budgets, binary N/A, security, successful consumption, and authorization boundary pass, but retry invariants and semantic-blocker contract remain contradictory.
+started_at: "2026-08-28T12:03:37.169+03:00"
+completed_at: "2026-08-28T12:07:27.179+03:00"

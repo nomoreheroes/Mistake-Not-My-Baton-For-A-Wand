@@ -1,0 +1,13 @@
+manifest_id: k0a-00-shared-artifact-event-revision-input-v1
+schema_version: 1
+review_return_round: 1
+purpose: Bounded author revision responding only to initial independent-review findings.
+inputs:
+  - {path: new pipeline/reviews/sources/k0a-00-shared-artifact-event-plan-v1.0.0.md, version: "1.0.0", sha256: 5bc9c28308fc74587a183b1b04ff43b226e80bed26fcfc99c34e34e4b0f9b2ca}
+  - {path: new pipeline/reviews/k0a-00-shared-artifact-event-review-r0.yaml, review_round: 0, sha256: d1148f7b04e0d35b17914c204ae2ee267c59f90ca39441a2fde2e5ccb2f84085}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+allowed_changes: [exact_logical_artifact_owner, positive_and_wrong_owner_tests, explicit_security_negative_scenarios_and_evidence, version_increment]
+scope_expansion_allowed: false
+

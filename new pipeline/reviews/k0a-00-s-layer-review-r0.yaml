@@ -1,0 +1,72 @@
+review_id: k0a-00-s-layer-review-r0-review-s
+schema_version: 1
+review_round: 0
+status: revision_required
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/review_s
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0a_independent_architecture_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  conflict_declaration: No known conflict; reviewer received no author transcript or hidden summary and did not author any version of this plan.
+  started_at: "2026-08-28T11:47:08.8789492+03:00"
+  completed_at: "2026-08-28T11:50:15.3904327+03:00"
+input_manifest:
+  path: new pipeline/reviews/sources/k0a-00-s-layer-review-input-v1.yaml
+  sha256: 9ae125e5901cfa0d2f1b67229def6bd6f21f319dd8fc10aa1b11390f31736af4
+exact_plan:
+  path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  version: "1.0.0"
+  declared_sha256: bd09f483bb189d982bc07be93497a7a28b03950a86462b8785810339927d25a3
+  actual_sha256: bd09f483bb189d982bc07be93497a7a28b03950a86462b8785810339927d25a3
+  hash_match: true
+section_check: {required: 18, present: 18, result: pass}
+complexity:
+  tier: narrow
+  cap: 500
+  actual_non_empty_lines: 122
+  routing: {actual: 11, cap: 75}
+  roster: {actual: 7, cap: 30}
+  failure_recovery: {actual: 12, cap: 60}
+  result: pass
+machine_checks:
+  pass: [input_and_plan_hashes, one_layer_F00_scope, required_section_presence, complexity_budget, minimal_roster, invocation_and_human_budget, binary_payload_NA, no_direct_handoff, fail_closed_routing, post_approval_boundary]
+  fail: []
+judgment_checks:
+  pass: [minimal_roster_and_deferred_interfaces, tests_and_evidence_falsifiability, actual_consumption]
+  fail: [state_guard_and_harness_boundary, implementation_scope_output_and_retry, failure_retry_coherence]
+findings:
+  - finding_id: S-R0-001
+    severity: moderate
+    category: state_guard_and_harness_boundary
+    statement: Pre-model guard failures are assigned to S0 even though S0 cannot be invoked; terminal-state emitter and persistence owner are ambiguous.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:40
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:48
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:62
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:69
+    proposed_disposition: Distinguish pre-invocation harness rejection from post-invocation S0 blocker output, with actor/state/persistence for every condition.
+  - finding_id: S-R0-002
+    severity: moderate
+    category: retry_recovery_and_budget_coherence
+    statement: The second worst-case S0 attempt lacks a trigger, identity/run rule, evidence prerequisite, and reconciliation with zero human attention.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:71
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:121
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:126
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:150
+    proposed_disposition: Define one explicit bounded retry transition or remove/reconcile the second attempt.
+  - finding_id: S-R0-003
+    severity: moderate
+    category: output_contract_identity
+    statement: route_selected and validated_route_proposal are not explicitly related as logical state, raw result, and persisted contract.
+    evidence_refs:
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:40
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:79
+      - new pipeline/architecture/k0a-00-s-layer-v1.md:160
+    proposed_disposition: Use one canonical raw/validated contract naming model and bind it consistently.
+recommendation: revise
+rationale: Scope, hashes, sections, roster, budgets, binary N/A, no-direct-handoff, security, consumption, scenarios, and gate are sound; bounded ownership/retry/output clarifications are required.
+
