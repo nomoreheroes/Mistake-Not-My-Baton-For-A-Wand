@@ -345,6 +345,58 @@ class K0a01StoreTests(unittest.TestCase):
         with self.assertRaises(MigrationError):
             changed_store.initialize()
 
+    def test_reinitialization_rejects_live_schema_drift(self) -> None:
+        connection = sqlite3.connect(self.db_path)
+        try:
+            connection.execute("DROP TRIGGER artifact_versions_immutable_update")
+            connection.commit()
+        finally:
+            connection.close()
+        with self.assertRaisesRegex(MigrationError, "live SQLite schema"):
+            self.store.initialize()
+
+    def test_sql_migration_survives_clean_checkout_with_autocrlf_enabled(self) -> None:
+        seed = Path(self.temp.name) / "checkout-seed"
+        clone = Path(self.temp.name) / "checkout-clone"
+        migration_relative = Path("new pipeline/harness/migrations/0001_k0a01.sql")
+        seed_migration = seed / migration_relative
+        seed_migration.parent.mkdir(parents=True)
+        (seed / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
+        seed_migration.write_bytes(self.store.migration_path.read_bytes())
+        commands = (
+            ("init", "--quiet"),
+            ("config", "user.name", "K0a-01 Test"),
+            ("config", "user.email", "k0a01-test@example.invalid"),
+            ("add", "--", ".gitattributes", migration_relative.as_posix()),
+            ("commit", "--quiet", "-m", "seed"),
+        )
+        for command in commands:
+            subprocess.run(
+                ["git", *command],
+                cwd=seed,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        subprocess.run(
+            [
+                "git",
+                "-c",
+                "core.autocrlf=true",
+                "clone",
+                "--quiet",
+                str(seed),
+                str(clone),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        cloned_migration = clone / migration_relative
+        self.assertEqual(cloned_migration.read_bytes(), self.store.migration_path.read_bytes())
+        clone_store = K0a01Store(Path(self.temp.name) / "clone.sqlite3", cloned_migration)
+        self.assertEqual(clone_store.initialize(), self.migration_sha)
+
     def test_schema_declares_no_blob_payload_column(self) -> None:
         connection = sqlite3.connect(self.db_path)
         try:
@@ -1031,11 +1083,45 @@ class K0a01StoreTests(unittest.TestCase):
                 occurred_at=T4,
             )
 
+    def test_database_trigger_blocks_completion_without_sink_readback_gate(self) -> None:
+        connection = sqlite3.connect(self.db_path)
+        try:
+            with self.assertRaisesRegex(sqlite3.IntegrityError, "K0a-01 blocks completion"):
+                connection.execute(
+                    "UPDATE runs SET state = 'completed' WHERE run_id = 'run-001'"
+                )
+            with self.assertRaisesRegex(sqlite3.IntegrityError, "K0a-01 blocks completion"):
+                connection.execute(
+                    "INSERT INTO runs(run_id, profile, pipeline_commit, fixture_commit, fixture_tree, state, state_revision, created_at) "
+                    "VALUES ('run-forged-completed', 'F00', ?, ?, ?, 'completed', 0, ?)",
+                    (PIPELINE_COMMIT, FIXTURE_COMMIT, FIXTURE_TREE, T4),
+                )
+            connection.rollback()
+            state = connection.execute(
+                "SELECT state FROM runs WHERE run_id = 'run-001'"
+            ).fetchone()[0]
+            self.assertEqual(state, "running")
+        finally:
+            connection.rollback()
+            connection.close()
+
     def test_tests_use_disposable_database_and_leave_canonical_fixture_clean(self) -> None:
         fixture = ROOT / "projects" / "pipeline-v2-fixture"
         self.assertTrue(self.db_path.is_relative_to(Path(self.temp.name)))
+        if not fixture.is_dir():
+            self.skipTest("canonical fixture checkout is not present in this root clone")
+        git_command = [
+            "git",
+            "-c",
+            f"safe.directory={fixture.resolve()}",
+            "-C",
+            str(fixture),
+            "status",
+            "--porcelain=v1",
+            "--untracked-files=all",
+        ]
         before = subprocess.run(
-            ["git", "-C", str(fixture), "status", "--porcelain=v1", "--untracked-files=all"],
+            git_command,
             check=True,
             capture_output=True,
             text=True,
@@ -1043,7 +1129,7 @@ class K0a01StoreTests(unittest.TestCase):
         self.ready_worker()
         self.store.publish_artifact_version(self.publication())
         after = subprocess.run(
-            ["git", "-C", str(fixture), "status", "--porcelain=v1", "--untracked-files=all"],
+            git_command,
             check=True,
             capture_output=True,
             text=True,

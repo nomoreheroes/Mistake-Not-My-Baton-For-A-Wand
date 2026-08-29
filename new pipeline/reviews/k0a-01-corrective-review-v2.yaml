@@ -1,0 +1,92 @@
+review_id: k0a-01-corrective-review-v2
+schema_version: 1
+version: "2.0.0"
+status: approved
+recorded_at: "2026-08-29T15:14:20+03:00"
+recording_mode: reviewer_return_normalized_without_substantive_change_by_root
+supersedes:
+  path: new pipeline/reviews/k0a-01-schema-replay-review-v1.yaml
+  sha256: 5ce81204c5a361081a2a63e42663589fd83c1043d027ff15732781b4d74806eb
+  reason: A later external clean-clone audit found B-1 and three non-blocking hardening gaps.
+external_audit:
+  path: new pipeline/reviews/k0a-01-external-audit-r1.yaml
+  sha256: a4339c9606c6f04f4a4affec10d2b21bd5fd0cc03c157bbb074da1a3f60c4c51
+  original_recommendation: block
+reviewer:
+  actor_id: /root/k0a01_schema_replay_review
+  provider: openai
+  model: inherited_session_model_not_exposed
+  profile: independent_read_only_k0a01_corrective_review
+  independent_non_author: true
+  context: continued_independent_reviewer_after_prior_K0a01_rounds
+  reviewed_read_only: true
+  modified_files_or_index: false
+  created_evidence_or_cache: false
+owner_authorization:
+  corrective_round_authorized: true
+  gitattributes_scope_expansion_authorized: true
+  findings_authorized: [B-1, NB-1, NB-2, NB-3]
+  one_separate_corrective_commit_authorized: true
+  excluded: [K0a-02, K0a-03, K0b, F00_runtime]
+final_reviewed_files:
+  - {path: .gitattributes, sha256: 87be23033492faf4b5c24e97587e4838cd2d986689d64601884a58e1b1adc5f9}
+  - {path: new pipeline/harness/migrations/0001_k0a01.sql, sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3}
+  - {path: new pipeline/harness/k0a01/store.py, sha256: 06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925}
+  - {path: new pipeline/tests/foundation/test_k0a01_store.py, sha256: f6211a9a6db63ebb6a1049caae39161fe3cc6e5cf2c7d3065ce0f38c44b50c9b}
+dispositions:
+  B-1:
+    status: resolved
+    evidence:
+      effective_attribute: '*.sql text eol=lf'
+      clean_clone_core_autocrlf_true: pass
+      cloned_migration_CR_bytes: 0
+      cloned_migration_sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+      cloned_initialize: pass
+  NB-1:
+    status: resolved
+    evidence:
+      exact_command_scoped_safe_directory: true
+      persistent_git_config_changed: false
+      absent_fixture_is_explicit_skip: true
+      present_fixture_status: clean
+  NB-2:
+    status: resolved
+    evidence:
+      update_to_completed: rejected
+      insert_completed: rejected
+      insert_or_replace_completed: rejected
+      replace_completed: rejected
+      upsert_update_to_completed: rejected
+      integrity_check: ok
+      foreign_key_check_rows: 0
+    reviewer_followup_finding:
+      finding: Initial corrective bytes blocked UPDATE but permitted INSERT of an already-completed run.
+      author_response: Added a second BEFORE INSERT trigger before final review completion.
+      disposition: resolved
+  NB-3:
+    status: resolved
+    evidence:
+      expected_schema_source: exact_migration_applied_to_separate_in_memory_SQLite
+      expected_schema_fingerprint: f8874499478c69173ab02480b337abfd4af4c3b499a199de78feee2a4029f03e
+      live_schema_baseline_match: true
+      drop_trigger_changes_fingerprint: true
+      reinitialize_after_drop_trigger: rejected_with_MigrationError
+reviewer_tests:
+  command: 'python -B "new pipeline\tests\foundation\test_k0a01_store.py"'
+  tests: 28
+  result: pass
+  git_diff_check: pass
+  encoding: UTF8_without_BOM_and_LF
+  cache_paths_under_new_pipeline: 0
+new_findings:
+  blocking: []
+  non_blocking: []
+scope_assessment:
+  K0a01_corrective_hardening_only: true
+  scope_expansion_beyond_owner_authorization: false
+  runtime_model_invocations: 0
+  later_work_started: false
+recommendation: approve
+recommendation_is_external_reviewer_followup: false
+recommendation_is_owner_approval: false
+rationale: All four external findings and the review-time INSERT variant are closed in the exact final bytes. Clean-checkout byte identity, database completion gating, fixture isolation, and live-schema drift detection pass without later-stage implementation.

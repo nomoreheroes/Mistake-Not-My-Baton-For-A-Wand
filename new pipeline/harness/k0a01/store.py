@@ -380,6 +380,30 @@ class K0a01Store:
         if buffer.strip():
             raise MigrationError("migration ends with an incomplete SQL statement")
 
+    @staticmethod
+    def _schema_fingerprint_from(connection: sqlite3.Connection) -> str:
+        rows = connection.execute(
+            "SELECT type, name, tbl_name, sql FROM sqlite_schema "
+            "WHERE name NOT LIKE 'sqlite_%' ORDER BY type, name"
+        ).fetchall()
+        payload = [dict(row) for row in rows]
+        return _sha256_text(_canonical_json(payload))
+
+    @classmethod
+    def _expected_schema_fingerprint(cls, migration_text: str) -> str:
+        connection = sqlite3.connect(":memory:", isolation_level=None)
+        connection.row_factory = sqlite3.Row
+        try:
+            connection.execute("PRAGMA foreign_keys = ON")
+            connection.execute("PRAGMA recursive_triggers = ON")
+            for statement in cls._statements(migration_text):
+                connection.execute(statement)
+            return cls._schema_fingerprint_from(connection)
+        except sqlite3.DatabaseError as exc:
+            raise MigrationError("migration cannot build the expected SQLite schema") from exc
+        finally:
+            connection.close()
+
     def initialize(self) -> str:
         """Apply or verify the sole forward migration and return its SHA-256."""
 
@@ -393,6 +417,7 @@ class K0a01Store:
         except UnicodeError as exc:
             raise MigrationError("migration is not strict UTF-8") from exc
         migration_sha256 = sha256(migration_bytes).hexdigest()
+        expected_schema_fingerprint = self._expected_schema_fingerprint(migration_text)
 
         connection = self._connect()
         try:
@@ -415,6 +440,8 @@ class K0a01Store:
                     raise MigrationError("applied K0a-01 migration identity does not match committed bytes")
             else:
                 raise MigrationError(f"unsupported schema version {user_version}")
+            if self._schema_fingerprint_from(connection) != expected_schema_fingerprint:
+                raise MigrationError("live SQLite schema does not match the committed migration")
             connection.execute("COMMIT")
             integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
             foreign_keys = connection.execute("PRAGMA foreign_key_check").fetchall()
@@ -431,12 +458,7 @@ class K0a01Store:
     def schema_fingerprint(self) -> str:
         connection = self._connect(query_only=True)
         try:
-            rows = connection.execute(
-                "SELECT type, name, tbl_name, sql FROM sqlite_schema "
-                "WHERE name NOT LIKE 'sqlite_%' ORDER BY type, name"
-            ).fetchall()
-            payload = [dict(row) for row in rows]
-            return _sha256_text(_canonical_json(payload))
+            return self._schema_fingerprint_from(connection)
         finally:
             connection.close()
 

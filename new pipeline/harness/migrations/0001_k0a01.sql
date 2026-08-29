@@ -493,6 +493,14 @@ BEFORE DELETE ON schema_migrations BEGIN SELECT RAISE(ABORT, 'schema migrations 
 CREATE TRIGGER run_identity_immutable
 BEFORE UPDATE OF run_id, profile, pipeline_commit, fixture_commit, fixture_tree, created_at ON runs
 BEGIN SELECT RAISE(ABORT, 'run identity and pins are immutable'); END;
+CREATE TRIGGER runs_k0a01_blocks_completion
+BEFORE UPDATE OF state ON runs
+WHEN NEW.state = 'completed'
+BEGIN SELECT RAISE(ABORT, 'K0a-01 blocks completion until the K0a-02 sink readback gate'); END;
+CREATE TRIGGER runs_k0a01_blocks_completed_insert
+BEFORE INSERT ON runs
+WHEN NEW.state = 'completed'
+BEGIN SELECT RAISE(ABORT, 'K0a-01 blocks completion until the K0a-02 sink readback gate'); END;
 CREATE TRIGGER run_state_transitions_immutable_update
 BEFORE UPDATE ON run_state_transitions BEGIN SELECT RAISE(ABORT, 'run state transitions are immutable'); END;
 CREATE TRIGGER run_state_transitions_immutable_delete

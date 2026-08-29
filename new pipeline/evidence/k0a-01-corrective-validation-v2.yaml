@@ -1,0 +1,103 @@
+record_id: k0a-01-corrective-validation-v2
+schema_version: 1
+version: "2.0.0"
+status: validation_passed_for_one_corrective_commit
+recorded_at: "2026-08-29T15:14:20+03:00"
+supersedes:
+  path: new pipeline/evidence/k0a-01-validation-v1.yaml
+  sha256: 6776d5d3bc87e97d3563d97a39a2f6de90c1c52521c80998061fce23c55f0135
+  reason: External audit B-1 invalidated the v1 clean-Windows-checkout reproducibility claim and identified NB-1 through NB-3.
+work_item:
+  id: K0a-01-corrective
+  base_commit: ec577fc33fc5c4643e5f6e6adb2ea123f52d0c5a
+  base_tree: 062038be749456362c893b331ec83bd1f43dbd95
+  expected_new_commits: 1
+owner_authorization:
+  authorized_at: "2026-08-29"
+  gitattributes_scope_expansion: authorized
+  findings: [B-1, NB-1, NB-2, NB-3]
+  tests_review_evidence_and_one_corrective_commit: authorized
+  excluded: [K0a-02, K0a-03, K0b, F00_runtime]
+external_audit:
+  path: new pipeline/reviews/k0a-01-external-audit-r1.yaml
+  sha256: a4339c9606c6f04f4a4affec10d2b21bd5fd0cc03c157bbb074da1a3f60c4c51
+  original_recommendation: block
+corrective_review:
+  path: new pipeline/reviews/k0a-01-corrective-review-v2.yaml
+  sha256: 63ddffe045838331cddb48ad98b0de7ebbd025b843f3acd159ae52fd990910d1
+  reviewer: /root/k0a01_schema_replay_review
+  independent_read_only_non_author: true
+  recommendation: approve
+  open_findings: 0
+corrective_files:
+  - {path: .gitattributes, sha256: 87be23033492faf4b5c24e97587e4838cd2d986689d64601884a58e1b1adc5f9, change: modified}
+  - {path: new pipeline/harness/migrations/0001_k0a01.sql, sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3, change: modified}
+  - {path: new pipeline/harness/k0a01/store.py, sha256: 06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925, change: modified}
+  - {path: new pipeline/tests/foundation/test_k0a01_store.py, sha256: f6211a9a6db63ebb6a1049caae39161fe3cc6e5cf2c7d3065ce0f38c44b50c9b, change: modified}
+unchanged_package_file:
+  path: new pipeline/harness/k0a01/__init__.py
+  sha256: 0c0a731a860ebbd458dedc25a84869651650d9a5a9dea6f613eca4b23fbe79ad
+finding_dispositions:
+  B-1: resolved_by_SQL_eol_lf_attribute_and_clean_clone_test
+  NB-1: resolved_by_exact_command_scoped_safe_directory_and_explicit_absence_skip
+  NB-2: resolved_by_database_UPDATE_and_INSERT_completion_triggers
+  NB-3: resolved_by_expected_vs_live_schema_fingerprint_guard
+  review_time_completed_INSERT_variant: resolved_before_final_review
+test_runs:
+  ruff:
+    command: 'python -m ruff check "new pipeline\harness\k0a01" "new pipeline\tests\foundation\test_k0a01_store.py"'
+    result: pass
+  unittest:
+    command: 'python -B -m unittest discover -s "new pipeline\tests\foundation" -p "test_k0a01_*.py" -v'
+    tests: 28
+    result: pass
+  pytest:
+    command: 'python -B -m pytest "new pipeline\tests\foundation\test_k0a01_store.py" -q -p no:cacheprovider'
+    tests: 28
+    subtests: 2
+    result: pass
+  independent_reviewer:
+    command: 'python -B "new pipeline\tests\foundation\test_k0a01_store.py"'
+    tests: 28
+    result: pass
+adversarial_checks:
+  clean_clone_core_autocrlf_true:
+    result: pass
+    migration_bytes_equal: true
+    migration_CR_bytes: 0
+    migration_sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+    initialize_result: pass
+  completion_gate_paths:
+    UPDATE: rejected
+    INSERT: rejected
+    INSERT_OR_REPLACE: rejected
+    REPLACE: rejected
+    UPSERT_DO_UPDATE: rejected
+  live_schema_drift:
+    baseline_fingerprint: f8874499478c69173ab02480b337abfd4af4c3b499a199de78feee2a4029f03e
+    drop_trigger_detected: true
+    reinitialize_result: rejected_with_MigrationError
+mechanical_checks:
+  YAML_parse: pass
+  JSON_parse: pass
+  UTF8_without_BOM_and_LF: pass
+  declared_SHA256_cross_hash_resolution: pass
+  git_diff_check: pass
+  final_staged_diff_check: pass
+  cache_paths_under_new_pipeline: 0
+protected_state:
+  canonical_fixture: {head: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, modified: false}
+  swarm: {head: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39, modified: false}
+  research_old_swarm_modified: false
+scope_boundaries:
+  runtime_model_invocations: 0
+  product_side_effects: 0
+  K0a_02_started: false
+  K0a_03_started: false
+  K0b_started: false
+  F00_runtime_started: false
+gate_result:
+  external_findings_closed: true
+  machine_checks: pass
+  independent_corrective_review: pass
+  ready_for_one_corrective_commit: true

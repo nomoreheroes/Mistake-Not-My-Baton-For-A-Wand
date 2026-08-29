@@ -1,0 +1,60 @@
+review_id: k0a-01-external-audit-r1
+schema_version: 1
+version: "1.0.0"
+status: block
+recorded_at: "2026-08-29T15:14:20+03:00"
+recording_mode: user_supplied_external_report_normalized_without_substantive_change
+source:
+  delivery: conversation_attachment
+  attachment_sha256: d70fe2e94bf679c38831699274f5efc975514a35d9eeb3ae488031ebdbbf0d6c
+  original_source_committed: false
+reviewer:
+  identity_self_reported: Claude Opus 5
+  model_self_reported: claude-opus-5
+  external: true
+  fresh_context_self_reported: true
+  independent_non_author_self_reported: true
+  read_only_self_reported: true
+reviewed_git_object:
+  commit: ec577fc33fc5c4643e5f6e6adb2ea123f52d0c5a
+  parent: de8c24a5a745ca8f200071c5e8589dd0de7fcbd9
+  tree: 062038be749456362c893b331ec83bd1f43dbd95
+  changed_files: 6
+findings:
+  - id: B-1
+    severity: blocking
+    title: SQL migration bytes did not survive a Windows clean checkout
+    reproduction: A clean clone with core.autocrlf=true checked out 0001_k0a01.sql as CRLF, changed its SHA-256, and caused initialization and all 25 tests to fail.
+    required_fix: Add an owner-authorized '*.sql text eol=lf' rule to .gitattributes.
+  - id: NB-1
+    severity: non_blocking
+    title: Fixture cleanliness test did not bind safe.directory explicitly
+    reproduction: Git returned dubious-ownership status 128 instead of reporting fixture cleanliness.
+    required_fix: Use an exact command-scoped safe.directory value and distinguish an absent fixture checkout.
+  - id: NB-2
+    severity: non_blocking
+    title: K0a-01 completion gate existed only in the Python API
+    reproduction: Direct SQL could update a run to completed before the K0a-02 sink/readback gate.
+    required_fix: Enforce the temporary completion prohibition in SQLite until K0a-02 replaces it with the real gate.
+  - id: NB-3
+    severity: non_blocking
+    title: Migration hash guard did not verify the live schema
+    reproduction: Dropping an immutability trigger was not detected by a later initialize call although schema_fingerprint changed.
+    required_fix: Compare the live schema fingerprint with an expected schema built from the exact migration bytes.
+scope_assessment:
+  implementation_scope_respected: true
+  correction_requires_scope_expansion_to_gitattributes: true
+recommendation: block
+owner_disposition:
+  recorded_at: "2026-08-29"
+  decision: authorize_corrective_round
+  authorized_scope:
+    - .gitattributes
+    - B-1
+    - NB-1
+    - NB-2
+    - NB-3
+    - focused_negative_and_clean_clone_tests
+    - versioned_review_and_evidence
+    - one_separate_corrective_commit
+  explicitly_excluded: [K0a-02, K0a-03, K0b, F00_runtime]
