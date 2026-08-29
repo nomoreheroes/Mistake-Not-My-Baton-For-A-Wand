@@ -1,0 +1,96 @@
+record_id: k0a-01-validation-v1
+schema_version: 1
+version: "1.0.0"
+status: validation_passed_for_single_commit
+recorded_at: "2026-08-28T23:38:45+03:00"
+work_item:
+  id: K0a-01
+  title: SQLite schema, atomicity, and exact replay foundation
+  scope_expanded: false
+baseline:
+  root_commit: de8c24a5a745ca8f200071c5e8589dd0de7fcbd9
+  root_tree: d045e3e91fccddd481fd3e1280b2c921cd1a5b24
+  canonical_fixture_commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+  canonical_fixture_tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+  swarm_commit: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39
+authorization_and_approved_inputs:
+  - {path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml, sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34}
+  - {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  - {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/evidence/k0a-00-approval-validation-v1.yaml, sha256: 30a76087a1973f5d5bcee883243d35b68f5ad3a90021568b3d7bd2d5f9cfc912}
+implementation_files:
+  - {path: new pipeline/harness/migrations/0001_k0a01.sql, sha256: 9ebcdb1d043358b46a0180ba62da1c317dcd33886a062efe60cde933aca7d58a}
+  - {path: new pipeline/harness/k0a01/__init__.py, sha256: 0c0a731a860ebbd458dedc25a84869651650d9a5a9dea6f613eca4b23fbe79ad}
+  - {path: new pipeline/harness/k0a01/store.py, sha256: 62793183a7b68ebbd096f41409c60507a582710f5c514267dc9ea0bbbf4663ed}
+  - {path: new pipeline/tests/foundation/test_k0a01_store.py, sha256: 0a808ba76c4260b07b1fb856d6e45a051de0164ed81e7769996312bdeb53f31e}
+independent_review:
+  path: new pipeline/reviews/k0a-01-schema-replay-review-v1.yaml
+  sha256: 5ce81204c5a361081a2a63e42663589fd83c1043d027ff15732781b4d74806eb
+  reviewer: /root/k0a01_schema_replay_review
+  independent_read_only_non_author: true
+  recommendation: approve
+  blocking_findings_open: 0
+  non_blocking_findings_open: 0
+test_runs:
+  ruff:
+    command: 'python -m ruff check "new pipeline\harness\k0a01" "new pipeline\tests\foundation\test_k0a01_store.py"'
+    result: pass
+  unittest:
+    command: 'python -B -m unittest discover -s "new pipeline\tests\foundation" -p "test_k0a01_*.py" -v'
+    tests: 25
+    failures: 0
+    errors: 0
+    result: pass
+  pytest:
+    command: 'python -B -m pytest "new pipeline\tests\foundation\test_k0a01_store.py" -q -p no:cacheprovider'
+    tests: 25
+    subtests: 2
+    result: pass
+  independent_reviewer_unittest:
+    command: 'python -B "new pipeline\tests\foundation\test_k0a01_store.py"'
+    tests: 25
+    result: pass
+negative_evidence:
+  - exception_before_commit_exposes_no_partial_publication
+  - second_connection_never_observes_partial_artifact_event_pair
+  - foreign_key_failure_rolls_back_whole_publication
+  - stale_revision_and_conflicting_idempotency_fail_closed
+  - late_attempt_is_fenced_and_cannot_publish
+  - retry_pin_or_context_drift_is_rejected
+  - before_after_replay_context_or_environment_drift_is_rejected
+  - cross_run_artifact_and_event_causation_is_rejected
+  - cross_invocation_telemetry_substitution_is_rejected
+  - direct_BLOB_and_non_UTF8_payloads_are_rejected
+  - S0_blocker_or_abstention_cannot_be_laundered_or_consumed
+  - K0a_01_cannot_mark_run_completed_before_future_sink_readback_gate
+persistence_properties:
+  deterministic_forward_migration_with_hash_guard: pass
+  sqlite_foreign_keys_and_foreign_key_check: pass
+  strict_text_only_payload_policy: pass
+  append_only_artifact_event_replay_and_snapshot_evidence: pass
+  atomic_artifact_version_two_events_lineage_snapshots_and_publication: pass
+  exact_context_fragments_pins_capabilities_environment_usage_and_monotonic_time: pass
+  same_run_and_same_invocation_composite_foreign_keys: pass
+  bounded_public_read_api_without_freeform_SQL: pass
+mechanical_checks:
+  implementation_and_evidence_yaml_parse: pass
+  repository_JSON_parse: pass
+  UTF8_without_BOM_and_LF_for_new_files: pass
+  declared_SHA256_cross_hash_resolution: pass
+  git_diff_check: pass
+  final_staged_diff_check: pass
+  generated_cache_directories: 0
+scope_boundaries:
+  runtime_model_invocations: 0
+  product_side_effects: 0
+  K0a_02_started: false
+  K0a_03_started: false
+  F00_runtime_execution_started: false
+  canonical_fixture_modified: false
+  projects_swarm_modified: false
+  research_old_swarm_modified: false
+gate_result:
+  machine_checks: pass
+  reviewer_judgment: pass
+  K0a_01_ready_for_commit: true

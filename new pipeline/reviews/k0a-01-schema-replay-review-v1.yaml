@@ -1,0 +1,77 @@
+review_id: k0a-01-schema-replay-review-v1
+schema_version: 1
+version: "1.0.0"
+status: approved
+recorded_at: "2026-08-28T23:38:45+03:00"
+recording_mode: reviewer_returns_normalized_without_substantive_change_by_root
+reviewer:
+  actor_id: /root/k0a01_schema_replay_review
+  provider: openai
+  model: inherited_session_model_not_exposed
+  profile: independent_k0a01_schema_replay_review
+  initial_context_fork: none
+  independent_from_author: true
+  reviewed_read_only: true
+  authored_reviewed_files: false
+  modified_files: false
+  created_cache_or_evidence: false
+review_scope:
+  work_item: K0a-01
+  included:
+    - deterministic SQLite migration
+    - atomic artifact_version_and_event publication
+    - exact before_and_after replay persistence
+    - same_run_and_same_invocation referential integrity
+    - invocation retry pins and fencing
+    - S0 raw_to_validated route binding
+    - immutable persisted evidence
+  excluded_and_not_started: [K0a-02, K0a-03, K0b, F00_runtime_execution]
+final_reviewed_files:
+  - {path: new pipeline/harness/migrations/0001_k0a01.sql, sha256: 9ebcdb1d043358b46a0180ba62da1c317dcd33886a062efe60cde933aca7d58a}
+  - {path: new pipeline/harness/k0a01/__init__.py, sha256: 0c0a731a860ebbd458dedc25a84869651650d9a5a9dea6f613eca4b23fbe79ad}
+  - {path: new pipeline/harness/k0a01/store.py, sha256: 62793183a7b68ebbd096f41409c60507a582710f5c514267dc9ea0bbbf4663ed}
+  - {path: new pipeline/tests/foundation/test_k0a01_store.py, sha256: 0a808ba76c4260b07b1fb856d6e45a051de0164ed81e7769996312bdeb53f31e}
+review_rounds:
+  - round: 0
+    result: block
+    tests_observed: 18
+    findings:
+      - retry_and_before_after_drift_was_permitted
+      - S_response_laundering_was_permitted
+      - same_run_composite_foreign_keys_were_incomplete
+      - invocation_pins_and_subscriber_snapshots_were_mutable
+      - replay_context_and_telemetry_structure_was_too_weak
+  - round: 1
+    result: block
+    tests_observed: 24
+    reviewed_hashes:
+      migration: a65dbcf44a1a64056c8b380ac06976652a6869be00be5aece250a2b2fd24b65c
+      init: 0c0a731a860ebbd458dedc25a84869651650d9a5a9dea6f613eca4b23fbe79ad
+      store: 62793183a7b68ebbd096f41409c60507a582710f5c514267dc9ea0bbbf4663ed
+      tests: d7269c2c571e0ec80ccd24199fc25fe26fc1459f66321fd57cd57c27918f8553
+    remaining_finding: replay_points_telemetry_id_allowed_cross_invocation_substitution
+    independent_diagnostic: cross_invocation_telemetry_was_accepted_with_empty_foreign_key_check
+  - round: 2
+    result: approve
+    tests_observed: 25
+    independent_diagnostic:
+      cross_invocation_telemetry_substitution: rejected_with_foreign_key_constraint
+      foreign_key_check_after_rollback: clean
+      composite_mapping: telemetry_id_invocation_id_response_text_response_sha256
+final_dispositions:
+  retry_and_before_after_drift: resolved
+  S_response_laundering: resolved
+  cross_run_and_cross_invocation_foreign_keys: resolved
+  mutable_pins_and_snapshots: resolved
+  weak_replay_context_and_telemetry: resolved_for_K0a_01_scope
+new_findings:
+  blocking: []
+  non_blocking: []
+reviewer_checks:
+  command: python -B new pipeline/tests/foundation/test_k0a01_store.py
+  result: pass
+  tests: 25
+  cache_directories_under_new_pipeline: 0
+recommendation: approve
+recommendation_is_owner_approval: false
+rationale: The exact final bytes close all five findings. The final composite foreign key binds each after replay to the same invocation and the exact telemetry response text and hash. No regression or scope expansion was found.
