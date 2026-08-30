@@ -1,0 +1,129 @@
+record_id: k0a-02-validation-v1
+schema_version: 1
+version: "1.0.0"
+status: validation_passed_for_one_k0a02_commit
+recorded_at: "2026-08-30T10:13:34+03:00"
+work_item:
+  id: K0a-02
+  base_commit: 2ad6175ffd051be9c80dcb7573f95eb8cc762df4
+  base_parent: ec577fc33fc5c4643e5f6e6adb2ea123f52d0c5a
+  base_tree: a413f41fc0773214b53ef80cb898d36da1014d2e
+  expected_new_commits: 1
+owner_authorization:
+  authorized_scope: one_pinned_contract_package_S0_synthetic_Layer0_fixture_worker_orchestration_basic_CLI_exact_guards
+  tests_review_evidence_and_one_commit: authorized
+  excluded: [K0a-03, K0b, real_F00_runtime, real_model_provider_calls]
+governance_bindings:
+  - {path: new pipeline/architecture/k0a-00-scope-envelope-v1.yaml, sha256: 0ecfb4009935e362a39c5e037abd1b8692da1c82ffc142b6bb2426e2022cd216}
+  - {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  - {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml, sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34}
+  - {path: new pipeline/evidence/k0a-00-approval-validation-v1.yaml, sha256: 30a76087a1973f5d5bcee883243d35b68f5ad3a90021568b3d7bd2d5f9cfc912}
+prior_k0a01_bindings:
+  migration_0001_sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+  migration_0001_effective_attribute: text_eol_lf
+  corrective_review_sha256: 63ddffe045838331cddb48ad98b0de7ebbd025b843f3acd159ae52fd990910d1
+  corrective_validation_sha256: 4fe090ec2ed41310c519cd848daf6b9bc993420945cbd32552cc65d6c3fd405f
+  external_audit_sha256: a4339c9606c6f04f4a4affec10d2b21bd5fd0cc03c157bbb074da1a3f60c4c51
+contract_and_schema:
+  package_path: new pipeline/contracts/k0a02/f00-contract-package-v1.json
+  package_sha256: 5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6
+  internal_contract_prompt_schema_hashes: pass
+  complete_file_pin_enforced: true
+  direct_constructor_bypass_rejected: true
+  roles: [S0, synthetic_Layer0, fixture_worker]
+  route: [command, S0, synthetic_Layer0, fixture_worker, bootstrap_sink, bootstrap_readback]
+  event_profile: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+migrations:
+  historical_0001:
+    path: new pipeline/harness/migrations/0001_k0a01.sql
+    sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+    changed: false
+  forward_0002:
+    path: new pipeline/harness/migrations/0002_k0a02.sql
+    sha256: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b
+    exact_fresh_database_pin_enforced: true
+implementation_and_test_files:
+  - {path: new pipeline/contracts/k0a02/f00-contract-package-v1.json, sha256: 5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6}
+  - {path: new pipeline/harness/k0a02/__init__.py, sha256: 37531ca42f4ae90d63541a763350f185e3977d01c57c8e4b032a6a403f2e276a}
+  - {path: new pipeline/harness/k0a02/adapters.py, sha256: 3606b997d5d432ea7d9d715e46ac83607e91c825e8153d373c57a65cd9255fed}
+  - {path: new pipeline/harness/k0a02/cli.py, sha256: 074315f13e64b19771134dbd4e3d329ef171351bd89bd98b0b91f66c12ccc472}
+  - {path: new pipeline/harness/k0a02/contract.py, sha256: ba72e03629acbe8f6ffc54724b8a1ea25fec7cbc70bba0780313e00b242b1559}
+  - {path: new pipeline/harness/k0a02/guards.py, sha256: 071fbf521223de84de73303f8118be5841bcc5ca9692fad889f1c3b6fdd2f462}
+  - {path: new pipeline/harness/k0a02/orchestrator.py, sha256: b67f3410b95963167b9c104c81e4b3fa7a220deadd5a0b9a59e40cbe0ce12c5c}
+  - {path: new pipeline/harness/k0a02/security.py, sha256: f78560125c3a7b5075ec0ae3f6ee4c08b8f1fb5af11282565ee2fa2afa88baa8}
+  - {path: new pipeline/harness/k0a02/store.py, sha256: 4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55}
+  - {path: new pipeline/harness/migrations/0002_k0a02.sql, sha256: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b}
+  - {path: new pipeline/tests/contracts/test_k0a02_cli_and_checkout.py, sha256: 2b04bfa1f51d916fd04e197af6677b545f55f090024a7dade59d8e6a6680d855}
+  - {path: new pipeline/tests/contracts/test_k0a02_contract.py, sha256: 9537094848a94f6b799fc54b94cbdfdd487539342194d0890e849daa018e4a06}
+  - {path: new pipeline/tests/contracts/test_k0a02_roots.py, sha256: 1b2f9f16da9f5c77dde690a9e09960c0bc873e07e1ff145546bf092834214a8e}
+  - {path: new pipeline/tests/foundation/test_k0a02_store.py, sha256: d12bd1acbb941c4c13b1955da4d14913c6d3fdb5cc7431aaa447e5fa6647bda7}
+  - {path: new pipeline/tests/scenarios/test_k0a02_orchestration.py, sha256: 49b0f938ffcf35410510e96aec082b2598331c497fdf0a06ec00d7601555511f}
+independent_review:
+  path: new pipeline/reviews/k0a-02-independent-review-v1.yaml
+  sha256: 03bf771e1a83935cd85d2a99c186a8461f7276a0918f95f11d9760786888b3dc
+  reviewer: /root/k0a02_readonly_reviewer
+  independent_read_only_non_author: true
+  recommendation: approve
+  open_blocking_findings: 0
+  open_non_blocking_findings: 0
+test_runs:
+  ruff:
+    command: 'ruff check --no-cache "new pipeline/harness/k0a02" "new pipeline/tests/contracts" "new pipeline/tests/foundation/test_k0a02_store.py" "new pipeline/tests/scenarios/test_k0a02_orchestration.py"'
+    result: pass
+  focused_pytest:
+    command: 'python -B -m pytest -q -p no:cacheprovider new pipeline/tests/contracts/test_k0a02_contract.py new pipeline/tests/contracts/test_k0a02_roots.py new pipeline/tests/contracts/test_k0a02_cli_and_checkout.py new pipeline/tests/foundation/test_k0a02_store.py new pipeline/tests/scenarios/test_k0a02_orchestration.py'
+    tests: 44
+    subtests: 82
+    result: pass
+  full_pytest:
+    command: 'python -B -m pytest -q -p no:cacheprovider "new pipeline/tests"'
+    tests: 72
+    subtests: 84
+    result: pass
+adversarial_checks:
+  loaded_package_mutation: rejected
+  direct_package_construction: rejected
+  undeclared_or_wrong_worker_input: rejected
+  S0_blocker_abstention_malformed_extra_route_without_Layer0: pass
+  completion_without_worker_proposal: rejected_with_atomic_zero_rows
+  completion_without_sink_and_readback: rejected
+  terminal_sink_delivery_rewrite: rejected
+  failed_run_inspect_with_full_telemetry_replay: pass
+  sensitive_context_before_dispatch: blocked_policy
+  sensitive_response_or_artifact_before_persistence: blocked_policy_with_zero_forbidden_rows
+  altered_fresh_migration_0002: rejected
+  inner_runtime_junction: rejected
+  whole_runtime_root_junction_initialize_run_inspect: rejected_before_dispatch_or_write
+  absent_forbidden_roots_in_clean_clone: bound_without_creation
+  existing_forbidden_junction_target: rejected_as_runtime_overlap
+  absent_forbidden_roots_scenario: pass_without_git_or_stat_access_and_detects_creation
+  retry_pins_context_and_late_fence: pass
+  wrong_owner_media_schema_sink_profile_ref_hash_content: rejected
+mechanical_checks:
+  SQLite_integrity_check: ok
+  SQLite_foreign_key_check_rows: 0
+  YAML_parse: pass
+  JSON_parse: pass
+  UTF8_without_BOM_and_LF: pass
+  declared_SHA256_cross_hash_resolution: pass
+  clean_checkout_core_autocrlf_true: pass
+  cache_paths_under_new_pipeline: 0
+protected_state:
+  canonical_fixture: {head: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, modified: false}
+  swarm: {head: 3fb16d7fcf6c6078e41fa82d238a35eab6458b39, modified: false}
+  research_old_swarm_modified: false
+scope_boundaries:
+  scripted_fake_adapter_only: true
+  runtime_model_invocations: 0
+  network_calls: 0
+  product_external_side_effects: 0
+  K0a_03_started: false
+  K0b_started: false
+  F00_runtime_executed: false
+gate_result:
+  machine_checks: pass
+  independent_review: approve
+  ready_for_one_K0a02_commit: true
+  post_commit_blob_parent_tree_clean_clone_verification: required_after_commit

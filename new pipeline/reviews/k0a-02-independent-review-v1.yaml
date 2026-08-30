@@ -1,0 +1,137 @@
+review_id: k0a-02-independent-review-v1
+schema_version: 1
+version: "1.0.0"
+status: approved
+recorded_at: "2026-08-30T15:33:35+03:00"
+recording_mode: reviewer_returns_normalized_without_substantive_change_by_root
+work_item:
+  id: K0a-02
+  reviewed_base_commit: 2ad6175ffd051be9c80dcb7573f95eb8cc762df4
+  reviewed_base_tree: a413f41fc0773214b53ef80cb898d36da1014d2e
+  expected_new_commits: 1
+reviewer:
+  actor_id: /root/k0a02_readonly_reviewer
+  provider: openai
+  model: inherited_session_model_not_exposed
+  profile: independent_read_only_non_author_k0a02
+  independent_non_author: true
+  fresh_context_initial_review: true
+  reviewed_read_only: true
+  modified_files_or_index: false
+  created_evidence_or_cache: false
+review_rounds:
+  - round: 1
+    recommendation: block
+    blocking_findings: 8
+    dispositions:
+      mutable_loaded_contract_package: resolved
+      undeclared_unvalidated_worker_input: resolved
+      completion_without_worker_proposal: resolved
+      mutable_terminal_sink_delivery: resolved
+      incomplete_and_failure_blind_inspect: resolved
+      unpinned_fresh_database_migration_0002: resolved
+      absent_secret_pii_scan: resolved
+      inner_runtime_junction_revalidation_gap: resolved
+  - round: 2
+    recommendation: block
+    blocking_findings: 2
+    dispositions:
+      public_direct_package_construction_bypass: resolved
+      whole_runtime_root_junction_resolution_bypass: resolved
+  - round: 3
+    recommendation: block
+    blocking_findings: 1
+    dispositions:
+      whole_root_harness_regression_coverage_gap: resolved
+  - round: 4
+    recommendation: approve
+    blocking_findings: 0
+    non_blocking_findings: 0
+  - round: 5
+    recommendation: block
+    blocking_findings: 1
+    dispositions:
+      absent_forbidden_root_fix_weakened_existing_junction_overlap: resolved
+  - round: 6
+    recommendation: approve
+    blocking_findings: 0
+    non_blocking_findings: 0
+  - round: 7
+    recommendation: approve
+    blocking_findings: 0
+    non_blocking_findings: 0
+    dispositions:
+      clean_clone_absent_forbidden_roots_scenario_portability: resolved_without_guard_weakening
+final_reviewed_files:
+  - {path: new pipeline/contracts/k0a02/f00-contract-package-v1.json, sha256: 5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6}
+  - {path: new pipeline/harness/k0a02/__init__.py, sha256: 37531ca42f4ae90d63541a763350f185e3977d01c57c8e4b032a6a403f2e276a}
+  - {path: new pipeline/harness/k0a02/adapters.py, sha256: 3606b997d5d432ea7d9d715e46ac83607e91c825e8153d373c57a65cd9255fed}
+  - {path: new pipeline/harness/k0a02/cli.py, sha256: 074315f13e64b19771134dbd4e3d329ef171351bd89bd98b0b91f66c12ccc472}
+  - {path: new pipeline/harness/k0a02/contract.py, sha256: ba72e03629acbe8f6ffc54724b8a1ea25fec7cbc70bba0780313e00b242b1559}
+  - {path: new pipeline/harness/k0a02/guards.py, sha256: 071fbf521223de84de73303f8118be5841bcc5ca9692fad889f1c3b6fdd2f462}
+  - {path: new pipeline/harness/k0a02/orchestrator.py, sha256: b67f3410b95963167b9c104c81e4b3fa7a220deadd5a0b9a59e40cbe0ce12c5c}
+  - {path: new pipeline/harness/k0a02/security.py, sha256: f78560125c3a7b5075ec0ae3f6ee4c08b8f1fb5af11282565ee2fa2afa88baa8}
+  - {path: new pipeline/harness/k0a02/store.py, sha256: 4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55}
+  - {path: new pipeline/harness/migrations/0002_k0a02.sql, sha256: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b}
+  - {path: new pipeline/tests/contracts/test_k0a02_cli_and_checkout.py, sha256: 2b04bfa1f51d916fd04e197af6677b545f55f090024a7dade59d8e6a6680d855}
+  - {path: new pipeline/tests/contracts/test_k0a02_contract.py, sha256: 9537094848a94f6b799fc54b94cbdfdd487539342194d0890e849daa018e4a06}
+  - {path: new pipeline/tests/contracts/test_k0a02_roots.py, sha256: 1b2f9f16da9f5c77dde690a9e09960c0bc873e07e1ff145546bf092834214a8e}
+  - {path: new pipeline/tests/foundation/test_k0a02_store.py, sha256: d12bd1acbb941c4c13b1955da4d14913c6d3fdb5cc7431aaa447e5fa6647bda7}
+  - {path: new pipeline/tests/scenarios/test_k0a02_orchestration.py, sha256: 49b0f938ffcf35410510e96aec082b2598331c497fdf0a06ec00d7601555511f}
+independent_probes:
+  direct_package_construction: rejected_with_ContractValidationError
+  exact_package_load_sha256: 5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6
+  omitted_worker_proposal: rejected_with_zero_artifact_publication_and_gate_rows
+  terminal_sink_state_rewrite: rejected_by_SQLite_trigger
+  failed_run_inspect: pass_with_exact_telemetry_and_replay_evidence
+  altered_fresh_migration_0002: rejected_with_MigrationError
+  sensitive_response: blocked_policy_with_zero_secret_or_artifact_rows
+  inner_runtime_junction: initialize_run_inspect_rejected
+  whole_runtime_root_junction: initialize_run_inspect_rejected_before_dispatch_or_DB_write
+  absent_forbidden_roots: canonically_bound_without_creation
+  existing_forbidden_junction_target: rejected_as_runtime_overlap
+  absent_forbidden_roots_scenario: pass_without_git_or_stat_access
+  absent_forbidden_root_creation_during_run: detected_by_before_after_snapshot
+  nominal_connected_graph: pass
+reviewer_tests:
+  focused_before_post_commit_delta:
+    command: 'python -B -m pytest -q -p no:cacheprovider new pipeline/tests/contracts/test_k0a02_contract.py new pipeline/tests/contracts/test_k0a02_roots.py new pipeline/tests/contracts/test_k0a02_cli_and_checkout.py new pipeline/tests/foundation/test_k0a02_store.py new pipeline/tests/scenarios/test_k0a02_orchestration.py'
+    result: pass
+    tests: 42
+    subtests: 82
+  full_before_post_commit_delta:
+    command: 'python -B -m pytest -q -p no:cacheprovider "new pipeline/tests"'
+    result: pass
+    tests: 70
+    subtests: 84
+  ruff:
+    result: pass
+  final_root_delta:
+    command: 'python -B -m pytest -q -p no:cacheprovider new pipeline/tests/contracts/test_k0a02_roots.py'
+    result: pass
+    tests: 9
+    subtests: 12
+  final_scenario_portability_delta:
+    command: 'python -B -m pytest -q -p no:cacheprovider new pipeline/tests/scenarios/test_k0a02_orchestration.py'
+    result: pass
+    tests: 13
+    subtests: 22
+  full_after_scenario_portability_delta:
+    command: 'python -B -m pytest -q -p no:cacheprovider "new pipeline/tests"'
+    result: pass
+    tests: 72
+    subtests: 84
+scope_assessment:
+  K0a_02_only: true
+  scope_expansion: false
+  runtime_model_invocations: 0
+  network_calls: 0
+  K0a_03_started: false
+  K0b_started: false
+  F00_runtime_executed: false
+new_findings:
+  blocking: []
+  non_blocking: []
+recommendation: approve
+recommendation_is_owner_approval: false
+rationale: Exact final implementation bytes close every independently reproduced contract, completion, inspect, migration, sensitive-data, and root-boundary bypass while remaining a scripted fixture-only K0a-02 slice.
