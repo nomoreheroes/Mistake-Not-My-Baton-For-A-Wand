@@ -1,0 +1,282 @@
+record_id: k0a-03-validation-v1
+schema_version: 1
+version: "1.0.0"
+status: local_validation_pending_external_re_review
+recorded_at: "2026-09-01T13:30:02+03:00"
+stage: K0a-03
+profile: F00
+release_claim: false
+k0b_authorized: false
+
+work_item:
+  id: K0a-03
+  root_base_commit: 327f15a959e9038796a750be85c845d08cc0d441
+  root_base_tree: 21c3b41cd2a281a72c6f0c759e10635e2787c8cf
+  root_base_parent: 2ad6175ffd051be9c80dcb7573f95eb8cc762df4
+  expected_root_commits: 1
+  authorized_scope: manual_VS_Code_extension_F00_fixture_orchestration_tests_review_evidence_and_one_commit
+  excluded: [K0b, Alpha0, product, release, direct_provider_API, canonical_fixture_modification, protected_swarm_execution_or_modification, legacy_research_content]
+
+owner_authorization:
+  path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml
+  sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166
+  both_extensions_may_execute_any_role: true
+  transition_mode: manual_extension_handoff_v1
+  mid_invocation_extension_switch: forbidden
+  chatgpt_residual_zero_tools_risk_accepted: true
+  transcript_tool_event_or_unverifiable_transcript_blocks_publication: true
+
+pinned_runtime:
+  profile_id: pipeline-v2.k0a03.manual-extension-profile
+  profile_path: new pipeline/contracts/k0a03/manual-extension-profile-v1.json
+  profile_sha256: 2e2bc83038a1985ae8b5e1471737ed24534dac848aa67475fd153cdc486dd56b
+  base_k0a02_package_sha256: 5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6
+  roles: [S0, synthetic_Layer0, fixture_worker]
+  physical_invocation_budget: {nominal: 3, worst_case: 6}
+  migrations:
+    - {version: 1, name: 0001_k0a01, sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3}
+    - {version: 2, name: 0002_k0a02, sha256: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b}
+    - {version: 3, name: 0003_k0a03, sha256: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b}
+  cli_grammar: [initialize, run, inspect]
+
+extension_bindings:
+  chatgpt:
+    extension: openai.chatgpt@26.825.51511
+    bundled_executable_sha256: 24a37127b8298b7bf96ca9b1d51a63c0685d561d1596f052bec73f734ed524b5
+    selected_model: gpt-5.6-sol
+    context_limit_tokens: 32768
+    tool_enforcement: contract_forbidden_audited_zero_calls
+    capture_completeness: typed_gap
+    gap_code: chatgpt_tools_contract_forbidden_not_machine_disabled
+  claude:
+    extension: anthropic.claude-code@2.1.251
+    bundled_executable_sha256: 8d1229a281281b98fd2dee72b3253a704be4fce4d45207200cd32a9bb5a6c909
+    selected_model_profile_available: claude-opus-4-6
+    context_limit_tokens: 32768
+    tool_enforcement: process_flag_disable_all
+    used_in_nominal_f00: false
+  fixed_role_partition: false
+
+candidate_evolution:
+  original_requested_candidate:
+    commit: 0df947e3d29b635988e25faada6850e0a9859694
+    tree: 244bb90cd61af246fcf6c52525012a3d942e886e
+    source_bytes_matched_initial_root_worktree: true
+    tests: 88
+    ruff: pass
+    independent_review: reject
+    blocking_findings: 3
+  first_corrective_candidate:
+    commit: ae3c98b3e68aa9b756cda21ed263f96fcf9fa251
+    tree: f113cd37529ff3f709855e5b58d9636fde1432f8
+    original_blockers_closed: 3
+    independent_review: reject
+    new_blocking_findings: 1
+  final_candidate:
+    commit: 8c52d0da4ed73d71fe266f28a5e3a591e66a6e8e
+    tree: ea994cbd77e24df2929326c547b652737bb0a34d
+    parent: ae3c98b3e68aa9b756cda21ed263f96fcf9fa251
+    implementation_and_test_bytes_match_root_worktree: false_after_post_commit_external_audit_correction
+    independent_review: approve
+    open_blocking_findings: 0
+    open_non_blocking_findings: 0
+    clean: true
+  final_core_autocrlf_true_clone:
+    historical_pre_external_audit: true
+    commit: 8c52d0da4ed73d71fe266f28a5e3a591e66a6e8e
+    tree: ea994cbd77e24df2929326c547b652737bb0a34d
+    core_autocrlf: true
+    separate_canonical_fixture_clone: true
+    tests: 92
+    subtests: 91
+    ruff: pass
+    candidate_clean_after_checks: true
+    canonical_fixture_clean_after_checks: true
+  post_commit_external_audit_correction:
+    reviewed_root_commit: 63906e0f40a1a11ae38ed792f1bc55a877ea111c
+    reviewed_root_tree: 6151ac872483341721b2065a0f5706919e45c6b5
+    external_recommendation: approve
+    low_findings: 2
+    corrections:
+      hardlinked_atomic_temp: st_nlink_must_equal_one_before_promotion
+      root_base_parent: corrected_to_git_verified_value
+    corrected_bytes_external_re_review: required
+
+implementation_and_test_files:
+  - {path: new pipeline/contracts/k0a03/manual-extension-profile-v1.json, sha256: 2e2bc83038a1985ae8b5e1471737ed24534dac848aa67475fd153cdc486dd56b}
+  - {path: new pipeline/harness/k0a03/__init__.py, sha256: a54bd57557ea3088bec0335fe07afb4f7b7aa0c2b97be6d4aede8ec195d256ba}
+  - {path: new pipeline/harness/k0a03/cli.py, sha256: 62d12648c1fc2b18fbd74d323d0e62cb8fa9fc2c554c0c399d2ce875ff4fb73f}
+  - {path: new pipeline/harness/k0a03/orchestrator.py, sha256: 6154a03d07675d78fb7987fca322c4bc9edd5bdf78f88702d132cae6ee8ff10e}
+  - {path: new pipeline/harness/k0a03/profile.py, sha256: b719d5528d76bf8a4b818bd0b1c5ab4772f37e9229d70e116d182f6f10e7211e}
+  - {path: new pipeline/harness/k0a03/store.py, sha256: bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7}
+  - {path: new pipeline/harness/migrations/0003_k0a03.sql, sha256: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b}
+  - {path: new pipeline/tests/contracts/test_k0a03_profile_and_cli.py, sha256: 6db2c299b788ec527fd4d8cd82a984468ca6ffb3f814bc8320b05ef080bedea4}
+  - {path: new pipeline/tests/scenarios/test_k0a03_manual_orchestration.py, sha256: a098e385d666f19f7d21ace2092a7275b021371a55e914dc92ceb1ebb1fa465c}
+
+independent_review:
+  path: new pipeline/reviews/k0a-03-independent-review-v1.yaml
+  sha256: a3aa93d4e6296a38e75f9a6c79ac0b69e1df59407692dc73fd32c9aa1a1dad43
+  initial_reviewer: /root/k0a03_independent_review
+  final_reviewer: /root/k0a03_final_fresh_review
+  initial_recommendation: reject
+  initial_blocking_findings: 3
+  later_atomic_temp_blocking_finding: 1
+  final_recommendation_for_pre_correction_bytes: approve
+  post_commit_external_recommendation_for_pre_correction_root: approve
+  external_low_findings_corrected: 2
+  corrected_bytes_external_re_review: required
+
+real_f00:
+  runtime_fixture:
+    commit: 192a5b1e9e312b78c310184cde0fc3377c51ab1b
+    tree: 93a9b120c6284bb4b094ab1efd3784582597452d
+    independent_clone: true
+    clean_after_run_and_final_inspect: true
+  pipeline_candidate_commit: 0df947e3d29b635988e25faada6850e0a9859694
+  run_id: run-e636df51c38b47f9aade2c8cf3104475
+  state: completed
+  state_revision: 3
+  execution_mode: manual_extension_handoff_v1
+  role_assignment:
+    S0: chatgpt_gpt_5_6_sol
+    synthetic_Layer0: chatgpt_gpt_5_6_sol
+    fixture_worker: chatgpt_gpt_5_6_sol
+  counters:
+    physical_model_invocations: 3
+    successful_model_invocations: 3
+    captured_response_receipts: 3
+    failed_model_invocations: 0
+    pipeline_network_calls: 0
+    extension_model_calls: 3
+    tool_calls_observed: 0
+    total_input_tokens: 46342
+    total_output_tokens: 469
+    total_tokens: 46811
+  transcript_event_audit:
+    S0:
+      invocation_id: S0-invocation-1-7b3c8f90d9d4480584196140a3a3f82f
+      receipt_id: manual-receipt-f9209a6a414f488ba06e90ece5f771af
+      event_sequence: [thread.started, turn.started, item.completed, turn.completed]
+      item_types: [agent_message]
+      event_count: 4
+      transcript_sha256: c7e58f7a15f7f0260807864c001ca320ac883a7c39551689d7032d2755b84dfc
+      tool_calls_observed: 0
+      validation_disposition: accepted
+    synthetic_Layer0:
+      invocation_id: synthetic_Layer0-invocation-1-811d2a1ce5884aeb8fc732674c8d2bd0
+      receipt_id: manual-receipt-09976c9337b040e0b13257b373500ee4
+      event_sequence: [thread.started, turn.started, item.completed, turn.completed]
+      item_types: [agent_message]
+      event_count: 4
+      transcript_sha256: f4eacd10f65c426cb29215515c1b5f649eade2830d176c50f9110dc4cb7ef402
+      tool_calls_observed: 0
+      validation_disposition: accepted
+    fixture_worker:
+      invocation_id: fixture_worker-invocation-1-0bc7b270c2ec473eb2a369d5f8afa3a4
+      receipt_id: manual-receipt-859da901f96242a7a4e65f5f225bbabd
+      event_sequence: [thread.started, turn.started, item.completed, turn.completed]
+      item_types: [agent_message]
+      event_count: 4
+      transcript_sha256: c07b79771fccc57e8bce3531ec030a46a02611851b3bd09c1c2b4eb49ec1ce57
+      tool_calls_observed: 0
+      validation_disposition: accepted
+  telemetry:
+    - {role: S0, invocation_id: S0-invocation-1-7b3c8f90d9d4480584196140a3a3f82f, response_sha256: 7aaee9f0daca5306e9744c79afa396502b3680ccd32c05c135176f98bb672727, input_tokens: 15258, output_tokens: 110, total_tokens: 15368, duration_ms: 9466}
+    - {role: synthetic_Layer0, invocation_id: synthetic_Layer0-invocation-1-811d2a1ce5884aeb8fc732674c8d2bd0, response_sha256: cd6934b7231b539b804910a39b7db667c763787e895a43580f9722d794259352, input_tokens: 15334, output_tokens: 111, total_tokens: 15445, duration_ms: 12618}
+    - {role: fixture_worker, invocation_id: fixture_worker-invocation-1-0bc7b270c2ec473eb2a369d5f8afa3a4, response_sha256: 46892ee10c20497d771a660f5159834caefe488c621a26992369e728db164c90, input_tokens: 15750, output_tokens: 248, total_tokens: 15998, duration_ms: 15691}
+  replay_envelope_sha256:
+    - 53166507b1d3d4659392a372990fe3314d30e45e2528e99dfc789cae687448ce
+    - c3276dd1262b397995660330236e1239c197cb91914e7e6865c4095f6e8a570e
+    - 059171389d0c8ad9b23c6bb8d5a881b86a31667dd0a1c72e0b4f945401c9ec04
+    - 56c8fa47d890f5dcc6966f3a630beb4dc16bf2d1bb181c8d98053c2715965b30
+    - ca337df954503dfc75e0aa1deaed12eb95836b7aa8f44d89f09b0ec5ba0f2f6f
+    - 00035bb2e668233e130ae36d98699d44ec14bff8daf810ae4c2ef5064db0b535
+  event_sequence: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+  artifact:
+    artifact_version_id: artifact-version-637f9823145d41cfb92d95949184b583
+    content_sha256: 9db9e865237028fa1631d181ad8836810d48e9252fcf1de196fc5eb172a6280e
+    publication_transaction_id: publication-63cbf3993a834a429a8472bb8941262b
+    sink_acceptance_id: sink-acceptance-e33d866a80f340dd9f9633869fec210d
+    readback_gate_id: readback-gate-e7718da8d0d3487b883e2ebd69b0b51e
+    readback_gate_status: passed
+  integrity:
+    sqlite_integrity_check: ok
+    foreign_key_check: []
+    database_bytes: 598016
+    database_sha256: daa15f0feb8ab4ac0cc0687ee2d22eb8b4cbe84e827852688bb2d8cd567b1b31
+  final_cli_inspect:
+    exit_code: 0
+    stderr_bytes: 0
+    stdout_bytes: 146235
+    stdout_sha256: a602dce705cf7fcb7f53a983bef377817d6375c0b8b085580f042261ef243d04
+
+post_f00_corrective_validation:
+  real_F00_was_executed_on_candidate: 0df947e3d29b635988e25faada6850e0a9859694
+  final_candidate_after_independent_review: 8c52d0da4ed73d71fe266f28a5e3a591e66a6e8e
+  physical_model_run_repeated_after_corrections: false
+  reason: Review corrections affect strict transcript parsing and crash recovery; exact nominal behavior and every corrected boundary were validated by regression tests, clean clones, and independent fault probes without spending three new physical model invocations.
+  release_or_product_claim_from_prior_run: false
+  post_external_audit_correction_changes: [hardlink_fail_closed_check, evidence_parent_typo]
+  nominal_model_behavior_changed: false
+
+test_runs:
+  root_full_pytest:
+    command: 'python -B -m pytest -q -p no:cacheprovider "new pipeline/tests/foundation" "new pipeline/tests/contracts" "new pipeline/tests/scenarios"'
+    result: pass
+    tests: 93
+    subtests: 91
+  final_core_autocrlf_clone_pytest:
+    command: 'python -B -m pytest -q -p no:cacheprovider "new pipeline/tests/foundation" "new pipeline/tests/contracts" "new pipeline/tests/scenarios"'
+    result: pass
+    tests: 93
+    subtests: 91
+  ruff:
+    command: 'python -m ruff check --no-cache "new pipeline/harness" "new pipeline/tests"'
+    result: pass
+
+adversarial_and_crash_checks:
+  retry_lineage_uses_logical_delivery: pass
+  third_attempt_after_second_retriable_failure: forbidden
+  invocation_failure_and_manual_failure_receipt: atomic
+  failure_to_retry_staging_restart: pass
+  orphan_invocation_before_manual_dispatch_restart: pass
+  telemetry_receipt_replay_and_proposal_restarts: pass
+  stale_request_selection_and_archived_response_cleanup: pass
+  rejected_proposal_restart_to_failed_validation: pass
+  successful_counter_only_accepted_receipts: pass
+  publication_requires_three_accepted_zero_tool_receipts: pass
+  explicit_or_duplicate_key_hidden_tool_event: blocked_policy_without_publication
+  initial_run_and_control_events: atomic_with_rollback_restart
+  reconstructed_manual_request: exact_including_execution_mode
+  interrupted_matching_atomic_temp: promoted_without_duplicate_dispatch
+  differing_directory_or_linked_atomic_temp: fail_closed
+  matching_hardlinked_atomic_temp: fail_closed_after_external_audit_correction
+  publication_sink_readback_gate_and_completion_restarts: pass
+
+mechanical_checks:
+  SQLite_integrity_check: ok
+  SQLite_foreign_key_check_rows: 0
+  migration_identity_rows: 3_exact
+  git_diff_check: pass
+  YAML_parse: pass
+  JSON_parse: pass
+  UTF8_without_BOM_and_LF: pass
+  root_sources_match_last_independently_reviewed_candidate_bytes: superseded_by_post_commit_external_audit_correction
+  corrected_source_hashes_match_evidence: pass
+  final_candidate_clean: true
+  final_core_autocrlf_clone_clean: true
+  final_separate_canonical_fixture_clone_clean: true
+  runtime_fixture_clean: true
+
+protected_state:
+  canonical_fixture: {head: 192a5b1e9e312b78c310184cde0fc3377c51ab1b, tree: 93a9b120c6284bb4b094ab1efd3784582597452d, modified: false}
+  protected_swarm: {content_read: false, executed: false, modified: false}
+  protected_legacy_research: {content_read: false, modified: false}
+
+gate_result:
+  machine_checks: pass_after_post_commit_external_audit_correction
+  independent_review: prior_root_approved_with_two_low_findings
+  corrected_bytes_external_re_review: required
+  ready_for_one_K0a03_root_commit: false_until_external_re_review
+  post_commit_clean_clone_verification: pass
+  K0b: not_started_not_authorized

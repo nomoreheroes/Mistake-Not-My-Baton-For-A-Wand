@@ -1,0 +1,68 @@
+document_id: pipeline-v2.k0a-03.manual-extension-owner-disposition
+version: 1.0.0
+recorded_at: 2026-08-31
+scope: K0a-03 F00 synthetic fixture only
+status: approved
+
+owner_decisions:
+  extension_set:
+    allowed:
+      - extension_id: openai.chatgpt
+        validated_installed_version: 26.825.51511
+      - extension_id: anthropic.claude-code
+        validated_installed_version: 2.1.251
+    fixed_role_partition: false
+    statement: Either approved extension may execute any of S0, synthetic_Layer0, or fixture_worker.
+  transition_mode:
+    mode: manual_extension_handoff_v1
+    switch_boundary: only_after_accepted_after_replay_before_next_prepare
+    mid_invocation_switch: forbidden
+    quota_exhausted_before_next_role: manual_switch_allowed
+    quota_exhausted_mid_role: fail_closed_without_switch
+  chatgpt_tool_control:
+    technical_state: read_only sandbox does not expose a documented zero-tools switch
+    accepted_residual_risk: true
+    contractual_policy: all tools, filesystem access, MCP, plugins, and web use are forbidden to the actor
+    runtime_evidence: complete extension JSONL transcript is persisted, hashed, and machine-validated as zero tool calls
+    blocking_condition: any observed tool call or inability to verify the transcript blocks publication
+    replay_disposition:
+      capture_completeness: typed_gap
+      gap_code: chatgpt_tools_contract_forbidden_not_machine_disabled
+  claude_tool_control:
+    technical_state: bundled CLI supports an empty tools allowlist
+    required_flag_semantics: disable all tools
+    replay_disposition:
+      capture_completeness: complete_harness_visible
+      gap_code: null
+  budget:
+    nominal_physical_model_invocations: 3
+    worst_case_physical_model_invocations: 6
+    retry_policy: one retry only for the two pinned pre-acceptance failure codes
+  human_attention:
+    nominal_sessions: 1
+    nominal_minutes: 10
+    nominal_blocking_decisions: 0
+    worst_case_sessions: 2
+    worst_case_minutes: 30
+    worst_case_blocking_decisions: 0
+
+explicit_non_authorizations:
+  - K0b
+  - Alpha0 or product execution
+  - production or release claims
+  - arbitrary provider, model, endpoint, path, capability, tool, or SQL parameters
+  - Pipeline-managed credentials or direct provider network calls
+  - reading or modifying research/old-swarm
+  - running or modifying projects/swarm
+  - modifying the canonical fixture repository
+
+source_basis:
+  owner_statements:
+    - both extensions, without fixed role separation
+    - extension changes are allowed only after one worker completed and before the next began
+    - manual transition variant for this Pipeline version
+    - ChatGPT capability difference and residual risk explicitly accepted
+  openai_security_reference: https://learn.chatgpt.com/docs/agent-approvals-security
+  local_help_checks:
+    chatgpt: bundled Codex CLI exposes read-only sandbox but no zero-tools option
+    claude: bundled Claude CLI help states that an empty tools list disables tools

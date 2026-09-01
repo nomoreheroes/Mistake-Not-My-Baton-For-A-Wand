@@ -1,0 +1,44 @@
+{
+  "base_contract_package_sha256": "5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6",
+  "execution_mode": "manual_extension_handoff_v1",
+  "executors": {
+    "chatgpt_gpt_5_6_sol": {
+      "capture_completeness": "typed_gap",
+      "context_limit_tokens": 32768,
+      "extension_id": "openai.chatgpt",
+      "extension_version": "26.825.51511",
+      "gap_code": "chatgpt_tools_contract_forbidden_not_machine_disabled",
+      "model_identifier": "gpt-5.6-sol",
+      "model_profile": "chatgpt-gpt-5.6-sol-read-only-v1",
+      "parameters": {},
+      "provider": "openai.chatgpt-vscode-extension",
+      "tool_enforcement": "contract_forbidden_audited_zero_calls"
+    },
+    "claude_opus_4_6": {
+      "capture_completeness": "complete_harness_visible",
+      "context_limit_tokens": 32768,
+      "extension_id": "anthropic.claude-code",
+      "extension_version": "2.1.251",
+      "gap_code": null,
+      "model_identifier": "claude-opus-4-6",
+      "model_profile": "claude-opus-4.6-tools-disabled-v1",
+      "parameters": {},
+      "provider": "anthropic.claude-code-vscode-extension",
+      "tool_enforcement": "process_flag_disable_all"
+    }
+  },
+  "physical_invocation_budget": {
+    "nominal": 3,
+    "worst_case": 6
+  },
+  "policy_version": "k0a03-f00-manual-extension-deny-all-v1",
+  "profile": "F00",
+  "profile_id": "pipeline-v2.k0a03.manual-extension-profile",
+  "profile_version": "1.0.0",
+  "roles": [
+    "S0",
+    "synthetic_Layer0",
+    "fixture_worker"
+  ],
+  "switch_policy": "only_after_accepted_after_replay_before_next_prepare"
+}

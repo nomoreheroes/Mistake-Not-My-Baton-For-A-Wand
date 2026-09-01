@@ -1,0 +1,180 @@
+review_id: k0a-03-independent-review-v1
+schema_version: 1
+version: "1.0.0"
+status: corrections_applied_pending_external_re_review
+recorded_at: "2026-09-01T13:30:02+03:00"
+recording_mode: reviewer_reports_normalized_without_substantive_change_by_root
+
+work_item:
+  id: K0a-03
+  reviewed_base_commit: 327f15a959e9038796a750be85c845d08cc0d441
+  reviewed_base_tree: 21c3b41cd2a281a72c6f0c759e10635e2787c8cf
+  expected_root_commits: 1
+  initial_reviewed_candidate:
+    commit: 0df947e3d29b635988e25faada6850e0a9859694
+    tree: 244bb90cd61af246fcf6c52525012a3d942e886e
+  final_reviewed_candidate:
+    commit: 8c52d0da4ed73d71fe266f28a5e3a591e66a6e8e
+    tree: ea994cbd77e24df2929326c547b652737bb0a34d
+
+reviewers:
+  initial:
+    actor_id: /root/k0a03_independent_review
+    profile: independent_read_only_non_author_k0a03
+    fresh_context: true
+    reviewed_read_only: true
+    network_used: false
+    modified_files_or_index: false
+  final:
+    actor_id: /root/k0a03_final_fresh_review
+    profile: independent_read_only_non_author_k0a03
+    fresh_context_before_substantive_review: true
+    reviewed_read_only: true
+    network_used: false
+    modified_files_or_index: false
+  access_note: The first final-review attempt against a system-temp checkout was inconclusive because the reviewer sandbox denied access; the exact candidate was rematerialized in an ignored workspace checkout before any substantive final review.
+
+post_commit_external_audit:
+  source: user_supplied_independent_external_report
+  reviewed_root_commit: 63906e0f40a1a11ae38ed792f1bc55a877ea111c
+  reviewed_root_tree: 6151ac872483341721b2065a0f5706919e45c6b5
+  recommendation: approve
+  blocking_findings: 0
+  high_findings: 0
+  low_findings: 2
+  findings:
+    hardlinked_atomic_temp_was_promoted:
+      severity: low
+      observation: A byte-identical .request.json.tmp with st_nlink greater than one passed the link checks and remained aliased after promotion.
+      disposition: corrected_by_requiring_st_nlink_equal_to_one_before_promotion_with_a_regression_test
+    incorrect_root_base_parent_in_evidence:
+      severity: low
+      observation: The evidence root_base_parent contained one incorrect hexadecimal character.
+      disposition: corrected_to_the_git_verified_parent
+  current_corrected_bytes_external_re_review: required
+
+review_rounds:
+  - round: 1
+    candidate_commit: 0df947e3d29b635988e25faada6850e0a9859694
+    recommendation: reject
+    blocking_findings: 3
+    findings:
+      duplicate_key_tool_transcript_bypass:
+        severity: high
+        observation: Python JSON parsing accepted duplicate keys, allowing a raw command_execution item to be shadowed by a later agent_message item and qualify three unsafe receipts for publication.
+        disposition: resolved_by_recursive_duplicate_key_and_nonstandard_constant_rejection_for_fixed_receipts_response_JSON_and_each_transcript_JSONL_event
+      non_atomic_initial_run_start:
+        severity: high
+        observation: Run creation, the created-to-running transition, and the two initial control events committed separately and could strand a partial run after a crash.
+        disposition: resolved_by_one_SQLite_transaction_for_run_transitions_events_and_deliveries_with_fault_injection_rollback_coverage
+      incomplete_recovered_dispatch_request:
+        severity: medium
+        observation: Recovery after durable dispatch but before request write omitted the pinned execution_mode field.
+        disposition: resolved_by_exact_full_request_reconstruction_and_byte_equivalent_regression
+  - round: 2
+    candidate_commit: ae3c98b3e68aa9b756cda21ed263f96fcf9fa251
+    recommendation: reject
+    blocking_findings: 1
+    verified_closed_from_round_1: 3
+    findings:
+      interrupted_atomic_temp_blocks_restart:
+        severity: high
+        observation: A crash after writing .request.json.tmp but before os.replace left a matching temp that the next run rejected, stranding the durable dispatch.
+        disposition: resolved_by_safe_promotion_of_only_an_ordinary_unlinked_byte_identical_temp_with_differing_or_linked_temps_fail_closed
+  - round: 3
+    candidate_commit: 8c52d0da4ed73d71fe266f28a5e3a591e66a6e8e
+    recommendation: approve
+    blocking_findings: 0
+    non_blocking_findings: 0
+    verified_closed_from_prior_rounds: 4
+
+final_reviewed_files:
+  # These hashes identify the bytes approved before the two post-commit LOW corrections.
+  - {path: new pipeline/contracts/k0a03/manual-extension-profile-v1.json, sha256: 2e2bc83038a1985ae8b5e1471737ed24534dac848aa67475fd153cdc486dd56b}
+  - {path: new pipeline/harness/k0a03/__init__.py, sha256: a54bd57557ea3088bec0335fe07afb4f7b7aa0c2b97be6d4aede8ec195d256ba}
+  - {path: new pipeline/harness/k0a03/cli.py, sha256: 62d12648c1fc2b18fbd74d323d0e62cb8fa9fc2c554c0c399d2ce875ff4fb73f}
+  - {path: new pipeline/harness/k0a03/orchestrator.py, sha256: 8b63aec1e217b180dea52217036af9186288b846ebcdac26fce54eaf900d51ed}
+  - {path: new pipeline/harness/k0a03/profile.py, sha256: b719d5528d76bf8a4b818bd0b1c5ab4772f37e9229d70e116d182f6f10e7211e}
+  - {path: new pipeline/harness/k0a03/store.py, sha256: bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7}
+  - {path: new pipeline/harness/migrations/0003_k0a03.sql, sha256: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b}
+  - {path: new pipeline/tests/contracts/test_k0a03_profile_and_cli.py, sha256: 6db2c299b788ec527fd4d8cd82a984468ca6ffb3f814bc8320b05ef080bedea4}
+  - {path: new pipeline/tests/scenarios/test_k0a03_manual_orchestration.py, sha256: 865ad6f31e7593e67760cdccc477d04ef1b98e5469ab621c79c4d939bd5c02e1}
+
+independent_probes:
+  duplicate_key_raw_tool_event: blocked_policy_with_zero_receipts_and_zero_publication
+  atomic_initial_start_after_each_event_insert: full_transaction_rollback_then_clean_restart
+  durable_dispatch_before_request_write: exact_pinned_request_reconstructed_with_execution_mode
+  interrupted_matching_atomic_temp: promoted_on_restart_without_duplicate_dispatch_or_invocation
+  differing_atomic_temp: fail_closed
+  junction_backed_linked_atomic_temp: fail_closed
+  hardlinked_atomic_temp: corrected_to_fail_closed_pending_external_re_review
+  second_start_event_insert_failure: full_transaction_rollback
+  final_manual_failure_insert_failure: full_transaction_rollback
+  retry_lineage_and_second_failure: one_retry_then_terminal_without_third_attempt
+  telemetry_receipt_replay_proposal_archive_publication_sink_gate_completion_boundaries: pass
+  exactly_three_accepted_zero_tool_receipts_before_publication: pass
+  successful_counter_counts_only_accepted_receipts: pass
+
+reviewer_tests:
+  four_blocking_regressions:
+    result: pass
+    tests: 4
+  focused_k0a03:
+    command: 'python -B -m pytest -p no:cacheprovider "new pipeline/tests/contracts/test_k0a03_profile_and_cli.py" "new pipeline/tests/scenarios/test_k0a03_manual_orchestration.py" -q'
+    result: pass
+    tests: 20
+    subtests: 7
+  available_full_without_unavailable_nested_fixture_case:
+    result: pass
+    tests: 90
+    skipped: 1
+    deselected: 1
+    subtests: 91
+    note: Root and core.autocrlf validation clones included the separate canonical fixture and passed all 92 tests without deselection.
+  ruff:
+    command: 'python -B -m ruff check --no-cache "new pipeline/harness/k0a03" "new pipeline/tests/contracts/test_k0a03_profile_and_cli.py" "new pipeline/tests/scenarios/test_k0a03_manual_orchestration.py"'
+    result: pass
+  git_diff_check: pass
+  final_checkout_clean: true
+
+post_external_audit_correction_local_validation:
+  hardlink_regression:
+    result: pass
+    tests: 1
+  focused_k0a03:
+    result: pass
+    tests: 21
+    subtests: 7
+  root_full:
+    result: pass
+    tests: 93
+    subtests: 91
+  corrected_root_core_autocrlf_true_clone:
+    result: pass
+    tests: 93
+    subtests: 91
+    ruff: pass
+    pipeline_clean: true
+    separate_canonical_fixture_clean: true
+  ruff: pass
+  external_re_review_still_required: true
+
+scope_assessment:
+  K0a_03_only: true
+  scope_expansion: false
+  network_calls: 0
+  canonical_fixture_modified_or_run: false
+  protected_swarm_read_run_or_modified: false
+  protected_legacy_research_content_read_or_modified: false
+  K0b_started: false
+  release_claim: false
+
+new_findings_at_last_completed_independent_review:
+  blocking: []
+  non_blocking: []
+current_open_findings:
+  blocking: []
+  non_blocking: []
+recommendation: external_re_review_required_for_corrected_bytes
+recommendation_is_owner_approval: false
+rationale: The prior root received an external APPROVE with two LOW findings. Both LOW findings are corrected locally, but the changed bytes require a fresh external read-only review before the K0a-03 gate can again be considered final.
