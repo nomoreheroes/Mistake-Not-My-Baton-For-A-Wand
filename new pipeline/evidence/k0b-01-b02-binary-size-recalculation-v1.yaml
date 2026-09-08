@@ -1,0 +1,98 @@
+record_id: k0b-01-b02-binary-size-recalculation-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T13:23:57.9336300+03:00"
+work_item_id: K0b-01
+decision_id: K0b-B02
+status: planning_reference_recalculation_pass
+
+authority:
+  owner_selection: {path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml, sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6}
+  K0b_01_plan_v1_3: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  checkpoint_phase_policy: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+
+units:
+  KiB_bytes: 1024
+  MiB_bytes: 1048576
+  GiB_bytes: 1073741824
+  checkpoint_rounding_quantum_bytes: 1048576
+  checkpoint_rounding_mode: ceiling_to_whole_MiB
+
+selected_inputs:
+  non_binary_worst_bytes: 22020096
+  non_binary_worst_MiB: 21
+  worst_case_object_count: 12
+  hard_per_object_bytes: 655360
+  hard_per_object_KiB: 640
+  K0b_runtime_operational_phase_publications: 34
+  max_checkpoint_bytes: 104857600
+  max_projected_pack_growth_per_checkpoint_budget_phase: 1073741824
+  planning_pack_delta_factor: 1.0
+  storage_or_compression_credit_bytes: 0
+
+exact_calculation:
+  size_stressed_binary_formula: 12_times_655360
+  size_stressed_binary_bytes: 7864320
+  size_stressed_binary_MiB: 7.5
+  unrounded_checkpoint_formula: 22020096_plus_7864320
+  unrounded_checkpoint_bytes: 29884416
+  unrounded_checkpoint_MiB: 28.5
+  rounded_checkpoint_formula: ceil_29884416_over_1048576_times_1048576
+  rounded_checkpoint_bytes: 30408704
+  rounded_checkpoint_MiB: 29
+  checkpoint_margin_bytes: 74448896
+  checkpoint_margin_MiB: 71
+  phase_pack_formula: 30408704_times_34_times_1.0
+  phase_pack_bytes: 1033895936
+  phase_pack_MiB: 986
+  phase_hard_limit_bytes: 1073741824
+  phase_margin_bytes: 39845888
+  phase_margin_MiB: 38
+  phase_limit_fraction: 0.962890625
+  checkpoint_result: below_hard
+  phase_pack_result: below_hard
+
+superseded_reference_comparison:
+  prior_hard_per_object_bytes: 1048576
+  prior_size_stressed_binary_bytes: 12582912
+  prior_rounded_checkpoint_bytes: 34603008
+  prior_rounded_checkpoint_MiB: 33
+  prior_phase_pack_bytes: 1176502272
+  prior_phase_pack_MiB: 1122
+  prior_phase_excess_bytes: 102760448
+  prior_phase_excess_MiB: 98
+  phase_pack_reduction_bytes: 142606336
+  phase_pack_reduction_MiB: 136
+
+two_phase_and_credit_invariants:
+  exact_checkpoint_budget_phase_count: 2
+  exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  calculated_phase: K0b-runtime-operational
+  K0b_F15_exact_measurement_phase: unchanged_and_must_pass_its_own_independent_checks
+  cross_phase_credit: 0
+  overlap_compression_delta_dedup_or_batch_reset_credit: 0
+  third_phase: forbidden
+  threshold_change: 0
+  storage_migration: 0
+
+gate_result:
+  K0b_B02_owner_selection: pass
+  arithmetic_identity_checks: pass
+  selected_runtime_phase_reference_below_hard: true
+  K0b_B02_planning_gate: closed
+  actual_object_and_aggregate_runtime_checks: still_mandatory_for_future_implementation
+  K0b_01_implementation_authority: absent
+
+validation_method:
+  type: exact_integer_arithmetic_only
+  runtime_or_test_execution: 0
+  model_agent_review_or_API_calls: 0
+  fixture_product_or_research_access: 0
+
+explicit_non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_edit_or_activation_of_the_18_frozen_artifacts
+  - no_test_runtime_physical_model_or_API_execution
+  - no_forbidden_root_access
+  - no_push_PR_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim

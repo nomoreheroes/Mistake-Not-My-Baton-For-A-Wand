@@ -1,16 +1,18 @@
 # Pipeline v2 state projection
 
-Machine source: [state.yaml](state.yaml) `8f8f3a966b5a`
+Machine source: [state.yaml](state.yaml) `23217cc4163d`
 
 Projection profile: [state-projection-profile-v1.yaml](state-projection-profile-v1.yaml) `7032748afe3e`
 
-Program status: `governance_remediation_ready_for_containing_commit`. D0-05 becomes complete when this projection and its complete hash-reachable governance graph are tracked by the same validated commit. The commit SHA is intentionally not embedded in this projection.
+Program status: `K0b_01_planning_with_open_prerequisites`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 is closed at the planning level; runtime and implementation authority remain absent.
 
 ## Active authority
 
 - Final K0b-00 disposition: [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27`
 - K0b-01 governance direction: [k0b-01-governance-remediation-owner-direction-v1.yaml](../decisions/k0b-01-governance-remediation-owner-direction-v1.yaml) `364a6941a216`
 - K0b-01 plan: [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b`
+- K0b-B02 owner selection: [k0b-01-b02-binary-budget-owner-disposition-v1.yaml](../decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml) `349997f22c6f`
+- K0b-B02 recalculation: [k0b-01-b02-binary-size-recalculation-v1.yaml](../evidence/k0b-01-b02-binary-size-recalculation-v1.yaml) `5ebc6ba23898`
 - Frozen-draft reuse triage: [k0b-01-frozen-draft-reuse-triage-v1.yaml](../evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml) `3976909ee305`
 
 Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml) `c1438f246cb3` and [r1 ledger append](../evidence/k0b-01-r1-review-ledger-append-v1.yaml) `e2eb12a33f72`. They preserve two approvals with zero open findings for the exact v1.2 hash; they do not approve v1.3. Remaining review calls: `0`.
@@ -27,14 +29,14 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 | 1 | D0-01 | complete | [d0-01-decision-baseline-approval.yaml](../receipts/d0-01-decision-baseline-approval.yaml) `3cff717a14ab` | none |
 | 2 | D0-02 | complete | [d0-02-layer-architecture-gate.yaml](../decisions/d0-02-layer-architecture-gate.yaml) `1bf92c755912` | none |
 | 3 | D0-03_D0-04 | complete | [d0-04-legacy-relocation.yaml](../receipts/d0-04-legacy-relocation.yaml) `87d259ff0ccd` | none |
-| 4 | D0-05 | complete_on_containing_commit | [k0b-01-governance-remediation-owner-direction-v1.yaml](../decisions/k0b-01-governance-remediation-owner-direction-v1.yaml) `364a6941a216` | G-D005-CONTAINING-COMMIT |
+| 4 | D0-05 | complete | [k0b-01-governance-remediation-owner-direction-v1.yaml](../decisions/k0b-01-governance-remediation-owner-direction-v1.yaml) `364a6941a216` | none |
 | 5 | D0-06 | complete | [d0-06-fixture-reproducibility-v1.yaml](../receipts/d0-06-fixture-reproducibility-v1.yaml) `dc3d9dead0e9` | none |
 | 6 | K0a-00 | architecture_complete | [k0a-00-layer-architecture-approval-v1.yaml](../receipts/k0a-00-layer-architecture-approval-v1.yaml) `98411d2a98eb` | none |
 | 7 | K0a-01 | implemented_validated | [k0a-01-corrective-validation-v2.yaml](../evidence/k0a-01-corrective-validation-v2.yaml) `4fe090ec2ed4` | none |
 | 8 | K0a-02 | implemented_validated | [k0a-02-validation-v1.yaml](../evidence/k0a-02-validation-v1.yaml) `3c2385d28e38` | none |
 | 9 | K0a-03 | implemented_validated | [k0a-03-manual-extension-owner-disposition-v1.yaml](../decisions/k0a-03-manual-extension-owner-disposition-v1.yaml) `870979d78a26` | none |
 | 10 | K0b-00 | architecture_complete | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | none |
-| 11 | K0b-01 | planning_remediation | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-D005-CONTAINING-COMMIT, G-K0B01-BINARY-SIZE, G-K0B01-HUMAN-SIGNOFF, G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-IMPLEMENTATION-LEDGER, G-K0B01-STATE-RENDERER, G-K0B01-TOOLCHAIN |
+| 11 | K0b-01 | planning_remediation | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-K0B01-HUMAN-SIGNOFF, G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-IMPLEMENTATION-LEDGER, G-K0B01-STATE-RENDERER, G-K0B01-TOOLCHAIN |
 | 12 | K0b-02 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B02-K0B01-COMPLETE, G-K0B02-SINGLE-SOURCE-CONFIRMATION |
 | 13 | K0b-03 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B03-K0B01-COMPLETE, G-K0B03-UNTRUSTED-SHAPES |
 | 14 | K0b-04 | blocked | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | G-K0B04-F15-ATTESTATION-LIMIT, G-K0B04-PREREQUISITES |
@@ -45,8 +47,6 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 | gate | owner | status | blocks | closure condition |
 |---|---|---|---|---|
-| G-D005-CONTAINING-COMMIT | workspace_owner | ready | D0-05, K0b-01 | this_state_and_the_complete_hash_reachable_governance_graph_are_in_the_same_validated_commit |
-| G-K0B01-BINARY-SIZE | workspace_owner | open_blocking | K0b-01_implementation | select_K0b_B02_and_recalculate_the_size_stressed_reference_without_threshold_storage_credit_or_third_phase_change |
 | G-K0B01-HUMAN-SIGNOFF | workspace_owner | open_blocking | K0b-01_implementation | human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity |
 | G-K0B01-IMPLEMENTATION-DISPOSITION | workspace_owner | open_blocking | K0b-01_implementation | later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets |
 | G-K0B01-IMPLEMENTATION-LEDGER | Pipeline_governance | open_blocking | K0b-01_implementation | separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist |
@@ -62,6 +62,11 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 | G-N1-K0B-COMPLETE | N1 | blocked_by_predecessor | N1 | K0b_completion_and_owner_continue_or_pause_decision_exist |
 | G-N1-POLICY-LIMITS | Pipeline_governance | future_open | N1 | context_and_failure_receipt_limits_are_versioned_policy_values_not_function_defaults |
 
+## Closed gates
+
+- `G-D005-CONTAINING-COMMIT`: closed by commit `45536507a469403b4878d273b661fe3a1d2c9573`, tree `00fa73a15dc6b402b00af0426d54f02c7f8c0b64`.
+- `G-K0B01-BINARY-SIZE`: closed by K0b-B02-A. The selected runtime-phase pack is `1,033,895,936` bytes with `39,845,888` bytes of margin under the unchanged `1 GiB` phase limit.
+
 ## Superseded and frozen records
 
 - [k0b-01-implementation-owner-disposition-v1.yaml](../decisions/k0b-01-implementation-owner-disposition-v1.yaml) `cdb87a83b5bc` is non-authoritative.
@@ -71,4 +76,4 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Effective scope
 
-There is no runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
+K0b-B02 is complete. There is no runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.

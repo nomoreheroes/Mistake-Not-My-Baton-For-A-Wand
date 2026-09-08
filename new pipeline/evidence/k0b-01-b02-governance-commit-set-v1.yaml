@@ -1,0 +1,60 @@
+record_id: k0b-01-b02-governance-commit-set-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T13:23:57.9336300+03:00"
+work_item_id: K0b-01
+decision_id: K0b-B02
+status: ready_for_exact_stage_and_containing_commit
+
+authority:
+  owner_selection: {path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml, sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6}
+  recalculation: {path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
+  plan_v1_3: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+
+pre_commit_baseline:
+  HEAD: 45536507a469403b4878d273b661fe3a1d2c9573
+  tree: 00fa73a15dc6b402b00af0426d54f02c7f8c0b64
+  expected_parent_count: 1
+
+exact_commit_set:
+  entry_count_excluding_this_record: 4
+  this_record_inclusion: required_without_self_hash
+  total_path_count_including_this_record: 5
+  canonical_entry_bytes: UTF_8_of_each_sorted_entry_as_sha256_two_spaces_path_LF
+  canonical_entry_set_sha256_excluding_this_record: ae7615353391dbb546a0cf929d3e8926c2e0f2a05ea05efdaa3aa1af2ea57e6a
+  entries_excluding_this_record:
+    - {path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml, sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1, pre_stage_status: untracked}
+    - {path: new pipeline/state/STATE.md, sha256: 3e1ffd758f4611a08d2c9cce3c2d3ff5fa0f572b589df47ea2125a5e16c2ae0d, pre_stage_status: modified_tracked}
+    - {path: new pipeline/state/state.yaml, sha256: 23217cc4163df9ab51d724c89f9ecec32853aa13400eaadb03d388f252105151, pre_stage_status: modified_tracked}
+
+validation:
+  owner_selection_YAML_parse: pass
+  recalculation_YAML_parse: pass
+  recalculation_exact_integer_arithmetic: pass
+  state_YAML_parse: pass
+  state_path_hash_references: {checked: 18, matched: 18, mismatched: 0}
+  work_item_sequences_unique_and_sorted: pass
+  open_gate_IDs_unique_and_sorted: pass
+  STATE_md_work_item_and_open_gate_rows_equal_state_yaml: pass
+  D0_05_status: complete
+  K0b_B02_status: complete
+  open_K0b_01_prerequisite_gate_count: 5
+  runtime_or_test_execution: 0
+  model_agent_review_or_API_calls: 0
+  frozen_artifact_files_in_commit_set: 0
+
+post_stage_requirements:
+  - staged_path_set_equals_the_four_entries_plus_this_record
+  - git_diff_cached_check_passes
+  - every_staged_entry_hash_matches
+  - containing_commit_has_exactly_one_parent_equal_to_the_pre_commit_HEAD
+  - no_forbidden_cache_runtime_or_unrelated_path_is_staged
+
+non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_frozen_artifact_edit_or_activation
+  - no_test_runtime_physical_model_or_API_execution
+  - no_forbidden_root_access
+  - no_push_PR_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim

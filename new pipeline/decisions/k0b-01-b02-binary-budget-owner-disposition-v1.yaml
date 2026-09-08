@@ -1,0 +1,67 @@
+document_id: pipeline-v2.k0b-01.b02-binary-budget-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T13:23:57.9336300+03:00"
+work_item_id: K0b-01
+decision_id: K0b-B02
+status: approved_planning_parameter_selection
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  authentication_ref: null
+  source_ref: current_thread_owner_decision_2026_09_08
+  owner_statement_normalized: >-
+    Выбран K0b-B02-A: hard_per_object_bytes = 655360 (640 KiB).
+    Пределы checkpoint/phase pack, две фазы и правила zero-credit остаются неизменными.
+
+authority:
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  K0b_01_plan_v1_3: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  governance_remediation_direction: {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1}
+  checkpoint_phase_policy: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+
+selection:
+  candidate: K0b-B02-A
+  hard_per_object_bytes: 655360
+  hard_per_object_display: 640_KiB
+  worst_case_object_count: 12
+  K0b_runtime_operational_phase_publications: 34
+  publication_interpretation: cumulative_phase_publications_not_per_run_or_batch_limit
+
+retained_without_change:
+  max_checkpoint_bytes: 104857600
+  max_projected_pack_growth_per_checkpoint_budget_phase: 1073741824
+  exact_checkpoint_budget_phase_count: 2
+  exact_checkpoint_budget_phase_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  overlap_compression_delta_dedup_cross_phase_or_batch_reset_credit: 0
+  cumulative_checkpoint_contents_cross_phase: retained_and_visible
+  max_publications_per_run_or_batch: 12
+  threshold_raise: forbidden
+  storage_migration_CAS_LFS_or_external_backend: forbidden
+  third_checkpoint_budget_phase_or_arbitrary_batch_as_phase: forbidden
+
+required_interpretation:
+  nominal_expected_bytes: nominal_object_count_times_assumed_mean_object_bytes
+  forecast_worst_by_count_bytes: worst_case_object_count_times_assumed_mean_object_bytes_for_historical_comparison_only
+  size_stressed_bytes: worst_case_object_count_times_hard_per_object_bytes
+  size_stressed_checkpoint_and_phase_pack: independent_hard_stop_calculation
+  mean_based_forecast_offset_or_credit: forbidden
+  both_phases_must_pass_independently: true
+
+effect:
+  K0b_B02_owner_selection: complete
+  binary_size_planning_gate: closes_after_exact_recalculation_evidence_is_hash_bound
+  K0b_01_implementation_authority: absent
+  human_only_review_and_signoff: still_required
+  later_exact_hash_bound_implementation_owner_disposition: still_required
+
+explicit_non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_edit_or_activation_of_the_18_frozen_artifacts
+  - no_model_agent_independent_review_or_provider_API_call
+  - no_test_runtime_or_physical_model_execution
+  - no_forbidden_root_access
+  - no_push_PR_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim
