@@ -1,0 +1,72 @@
+record_id: k0b-01-frozen-draft-reuse-triage-clarification-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T17:45:18.3303728+03:00"
+work_item_id: K0b-01
+status: binding_historical_precision_clarification_no_reuse_change
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8
+  approval_request:
+    path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+    complete_file_sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+  clarified_record:
+    path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml
+    sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e
+    bytes_edited: false
+  freeze_manifest:
+    path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml
+    sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66
+    artifact_count: 18
+
+historical_precision:
+  plan_v1_0:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f
+    migration_rule: additive_migration_was_permitted_only_where_necessary
+    additive_draft_unambiguously_nonconformant_at_that_point: false
+  plan_v1_2:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+    migration_rule: four_table_rebuild_is_explicit_and_unambiguous
+    additive_draft_unambiguously_obsolete_at_that_point: true
+
+clarified_artifact_disposition:
+  forward_migration_draft:
+    path: new pipeline/harness/migrations/0004_k0b01.sql
+    sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a
+    status: unambiguously_obsolete_against_plan_v1_2_and_current_plan_v1_3
+  migration_tests_draft:
+    path: new pipeline/tests/foundation/test_k0b01_migration.py
+    sha256: 46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987
+    status: unambiguously_obsolete_with_the_additive_migration
+  all_other_frozen_artifacts:
+    treatment: concepts_may_be_considered_only_after_revalidation_against_current_authority
+    whole_file_reuse: forbidden
+
+unchanged_triage_effect:
+  complete_file_reuse: 0
+  retire_as_provenance_only: 2
+  rewrite_from_current_authority: 16
+  frozen_bytes_edited_moved_deleted_or_activated: 0
+  implementation_authority_created: false
+
+receipt_precision:
+  manual_receipt_form_and_internal_binding: strictly_validated
+  local_receipt_provenance: not_independently_attested
+  forged_bytes_matching_all_expected_bindings_detectable_by_current_local_checks: false
+
+migration_transaction_precision:
+  foreign_keys_OFF_before_BEGIN_IMMEDIATE: already_binding_in_plan_v1_2
+  legacy_alter_table_OFF: already_binding_in_plan_v1_2
+  pretransaction_readback: already_binding_in_plan_v1_2
+  plan_change_required: false
+
+non_authorizations:
+  - no_edit_delete_move_import_execute_or_activate_any_frozen_artifact
+  - no_whole_file_reuse
+  - no_runtime_code_contract_schema_registry_data_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_test_model_API_or_external_product_execution
+  - no_forbidden_root_access

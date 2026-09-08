@@ -1,0 +1,74 @@
+record_id: pipeline-v2-governance-hardening-commit-set-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T17:45:18.3303728+03:00"
+status: ready_for_exact_stage_and_containing_commit
+
+authority:
+  approval_request:
+    path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+    complete_file_sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+  separate_owner_confirmation:
+    source_ref: current_thread_owner_confirmation_2026_09_08
+    repeated_complete_file_sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+    exact_match: true
+  materialized_owner_disposition:
+    path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8
+
+pre_commit_baseline:
+  HEAD: 9b775a916a0e62d9f698a1eef89c8392d328c7ce
+  tree: 44cd0238e64ab77ff373bb4de735919105dfde59
+  expected_parent_count: 1
+
+exact_commit_set:
+  entry_count_excluding_this_record: 9
+  this_record_inclusion: required_without_self_hash
+  total_path_count_including_this_record: 10
+  canonical_entry_bytes: UTF_8_of_each_sorted_entry_as_sha256_two_spaces_path_LF
+  canonical_entry_set_sha256_excluding_this_record: b06342e6f57ba17d0f388c78d721bd086074d0e2f5516a502ae349f7c0c6ccc9
+  entries_excluding_this_record:
+    - {path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml, sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml, sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml, sha256: d0d2a81dff49194e70a9b9b79805478e9bc9caf94d73b26a6c1feba3d996b13b, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml, sha256: 2956de3d94856c5299ca0795570b332fc46fb871983dc50de9eb172c1fc4eae4, pre_stage_status: untracked}
+    - {path: new pipeline/registry/authority-confirmation/v1.yaml, sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd, pre_stage_status: untracked}
+    - {path: new pipeline/registry/design-review-independence/v2.yaml, sha256: 8e99106881905e56bc505c3a9cb6037562eab62e7585abac29039d4d99ba9cc3, pre_stage_status: untracked}
+    - {path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml, sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2, pre_stage_status: untracked}
+    - {path: new pipeline/state/STATE.md, sha256: d59de3efb55e791833e51ac16e25e23c0b9d26113b1b67899cd98bf7dae03c19, pre_stage_status: modified_tracked}
+    - {path: new pipeline/state/state.yaml, sha256: 51315537486618c718ba6fbcca70eb23bf6f89829c5a67d6d8c679e87f9a0b2d, pre_stage_status: modified_tracked}
+
+validation:
+  request_complete_file_SHA_256_match: pass
+  request_stale_conditions: none_observed
+  baseline_HEAD_and_tree: pass
+  new_and_modified_governance_YAML_parse: pass
+  state_path_hash_references: {result: pass, mismatched: 0}
+  state_work_item_sequences_unique_and_sorted: pass
+  state_open_gate_IDs_unique_and_sorted: pass
+  STATE_md_work_item_and_open_gate_rows_equal_state_yaml: pass
+  D0_02_subject_and_external_envelope_hash_binding: pass
+  frozen_artifact_hashes_before_materialization: {matched: 18, required: 18, result: pass}
+  frozen_artifact_hashes_after_materialization: {matched: 18, required: 18, result: pass}
+  frozen_artifact_files_in_commit_set: 0
+  runtime_or_test_execution: 0
+  model_agent_independent_review_or_API_calls: 0
+  forbidden_root_access: 0
+
+post_stage_requirements:
+  - staged_path_set_equals_the_nine_entries_plus_this_record
+  - git_diff_cached_check_passes
+  - every_staged_entry_hash_matches
+  - containing_commit_has_exactly_one_parent_equal_to_pre_commit_HEAD
+  - containing_commit_path_set_equals_the_exact_ten_paths
+  - no_forbidden_cache_runtime_frozen_or_unrelated_path_is_staged
+
+non_authorizations:
+  - no_runtime_code_contract_schema_registry_data_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_frozen_artifact_edit_delete_move_import_execution_or_activation
+  - no_canonical_hash_profile_implementation_retirement_or_payload_recalculation
+  - no_test_runtime_physical_model_provider_API_or_external_product_execution
+  - no_forbidden_root_access
+  - no_filesystem_ACL_or_ownership_changes
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim

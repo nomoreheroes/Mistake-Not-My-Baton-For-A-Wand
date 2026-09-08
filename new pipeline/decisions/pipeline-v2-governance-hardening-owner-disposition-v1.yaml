@@ -1,0 +1,112 @@
+document_id: pipeline-v2.governance-hardening-owner-disposition-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T17:45:18.3303728+03:00"
+status: approved_governance_materialization_and_one_exact_scope_commit
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  authentication_ref: null
+  confirmation_source_ref: current_thread_owner_confirmation_2026_09_08
+  confirmation_statement: >-
+    Подтверждаю approval-request SHA-256
+    1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+    и разрешаю ровно описанные governance materialization и один exact-scope commit.
+  limitations:
+    - stable_external_message_identifier_not_exposed
+    - conversational_actor_identity_not_cryptographically_authenticated
+    - Git_authorship_not_cryptographically_linked_to_conversational_actor
+
+two_step_authority_binding:
+  request:
+    path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+    complete_file_sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+    status_before_confirmation: non_authorizing_awaiting_exact_SHA_256_owner_confirmation
+  separate_confirmation_received: true
+  confirmation_repeated_complete_lowercase_SHA_256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+  comparison: exact_lowercase_hex_equality
+  comparison_result: match
+  request_bytes_changed_after_confirmation: false
+  baseline_HEAD_at_confirmation: 9b775a916a0e62d9f698a1eef89c8392d328c7ce
+  authority_effect: exact_request_scope_only
+
+approved_dispositions:
+  I_1:
+    disposition: accept_narrow_history_correction_without_changing_current_rewrite_rule
+    binding_effect:
+      - additive_migration_was_permitted_by_plan_v1_0_only_where_necessary
+      - four_table_rebuild_became_unambiguous_in_plan_v1_2
+      - migration_and_migration_tests_are_unambiguously_obsolete
+      - other_frozen_files_may_contribute_concepts_only_after_revalidation
+      - no_whole_file_reuse_or_activation_is_authorized
+  I_2:
+    disposition: accept_precision_correction
+    binding_effect:
+      - manual_receipt_form_and_internal_binding_are_strictly_validated
+      - local_receipt_provenance_is_not_independently_attested
+      - forged_bytes_matching_all_expected_bindings_are_not_distinguishable_by_current_local_checks
+  I_3:
+    disposition: confirmed_no_change_required
+    binding_effect:
+      - plan_v1_2_already_requires_foreign_keys_OFF_before_BEGIN_IMMEDIATE
+      - legacy_alter_table_OFF_and_pretransaction_readback_remain_binding
+  N_1:
+    disposition: create_blocking_canonical_hash_profile_remediation_gate
+  N_2:
+    disposition: create_immutable_successor_backlink_record
+  N_5:
+    disposition: create_prospective_review_diversity_policy
+  N_8:
+    disposition: create_two_step_authority_confirmation_protocol
+
+approved_write_set:
+  create:
+    - new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    - new pipeline/registry/authority-confirmation/v1.yaml
+    - new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml
+    - new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml
+    - new pipeline/registry/design-review-independence/v2.yaml
+    - new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml
+    - new pipeline/evidence/pipeline-v2-governance-hardening-commit-set-v1.yaml
+  modify:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  include_unchanged_request:
+    - new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+  total_commit_path_count: 10
+  all_other_paths: forbidden
+
+commit_authority:
+  commit_count: 1
+  expected_parent: 9b775a916a0e62d9f698a1eef89c8392d328c7ce
+  exact_scope_only: true
+  commit_message: "governance: add two-step authority and audit gates"
+  push_PR_merge_deploy_release: forbidden
+
+explicit_non_authorizations:
+  - no_implementation_or_retirement_of_canonical_yaml_v1
+  - no_generation_or_recalculation_of_existing_canonical_payload_hashes
+  - no_edit_of_D0_02_or_other_historical_hash_bound_record
+  - no_edit_delete_move_import_execute_or_activate_any_frozen_K0b_01_artifact
+  - no_rerun_or_replacement_of_any_historical_review
+  - no_new_model_agent_independent_review_or_provider_API_call
+  - no_runtime_code_contract_schema_registry_data_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_StorageFault_or_MigrationChain_runtime_implementation
+  - no_filesystem_ACL_or_ownership_changes
+  - no_canonical_fixture_research_old_swarm_or_projects_swarm_access
+  - no_test_runtime_physical_model_or_external_product_execution
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim
+
+stale_conditions:
+  - request_complete_file_sha256_differs
+  - pre_commit_HEAD_differs_from_expected_parent
+  - any_baseline_artifact_hash_differs
+  - exact_write_set_differs
+  - any_non_authorization_is_relaxed
+
+integrity:
+  complete_file_SHA_256: supplied_by_commit_set_evidence
+  self_hash_embedding: forbidden

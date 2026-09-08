@@ -1,0 +1,71 @@
+profile_id: pipeline-v2.design-review-independence-v2
+schema_version: 1
+version: "2.0.0"
+created_at: "2026-09-08T17:45:18.3303728+03:00"
+status: active_prospective_on_containing_commit
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8
+  prior_gate_contract:
+    path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+  design_invocation_ledger:
+    path: new pipeline/ledgers/design-invocations.yaml
+    sha256_at_adoption: b07d05ff29721089d404e827369e8fdf5143610fe69a4f467715406cc93288ee
+    entries_at_adoption: 49
+
+applicability:
+  temporal_scope: reviews_dispatched_after_the_containing_commit
+  review_scope: same_artifact_r0_to_r1_or_equivalent_initial_review_to_rereview
+  historical_reviews_retroactively_invalidated: false
+  historical_review_rerun_authorized: false
+
+requirements:
+  same_artifact_r1_model_family_must_differ_from_r0: true
+  provider_diversity:
+    rule: preferred_when_an_approved_eligible_profile_is_available
+    mandatory_without_owner_exception: false
+  existing_independence_requirements:
+    reviewer_not_author: retained
+    separate_invocation_or_session: retained
+    fresh_context: retained
+    inherited_author_context: forbidden
+    read_only_inputs: retained
+    conflicts_disclosed: retained
+
+model_family_identity:
+  source: exact_pre_dispatch_receipt
+  required_fields:
+    - provider_id
+    - model_id
+    - model_family_id
+    - profile_id
+  normalization: exact_case_sensitive_registry_identifier
+  missing_or_unknown_model_family_id: dispatch_blocked
+  equality_test: exact_model_family_id_equality
+  r1_valid_when: r1_model_family_id_differs_from_r0_model_family_id
+
+exception_protocol:
+  timing: before_r1_dispatch
+  authority: explicit_workspace_owner_disposition
+  required_bindings:
+    - exact_artifact_path_and_SHA_256
+    - r0_invocation_ID_provider_model_and_model_family
+    - proposed_r1_provider_model_model_family_and_profile
+    - reason_no_compliant_approved_profile_is_available_or_suitable
+    - accepted_independence_risk
+  implicit_budget_or_schedule_pressure_is_sufficient: false
+  post_dispatch_exception: forbidden
+
+historical_disposition:
+  K0b_01_r0_r1_same_model_family_observed: true
+  evidentiary_scope: retained_for_the_exact_reviewed_artifact_hashes
+  generalization_to_newer_artifacts: forbidden
+  rerun_or_new_model_call_authorized_by_this_policy: false
+
+non_authorizations:
+  - no_model_agent_independent_review_or_provider_API_call
+  - no_rewrite_of_historical_receipts_reviews_or_ledger_entries
+  - no_runtime_implementation_or_external_side_effect

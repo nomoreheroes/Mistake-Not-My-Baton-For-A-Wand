@@ -1,0 +1,80 @@
+profile_id: pipeline-v2.authority-confirmation-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T17:45:18.3303728+03:00"
+status: active_prospective_governance_protocol
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8
+  approved_request:
+    path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+    complete_file_sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2
+
+purpose: >-
+  Prevent an agent from both inferring owner authority and materializing that
+  inference as if the materialized file were itself authorizing.
+
+applies_to:
+  - future_agent_materialized_owner_approval_requests
+  - future_agent_materialized_owner_disposition_requests
+  - future_requests_for_exact_scope_commit_or_external_side_effect_authority
+
+protocol:
+  - step: 1
+    actor: materializing_agent
+    action: create_complete_non_authorizing_request_with_exact_scope_baseline_and_non_authorizations
+  - step: 2
+    actor: materializing_agent
+    action: compute_and_present_SHA_256_over_complete_request_file_bytes
+  - step: 3
+    actor: workspace_owner
+    action: return_the_exact_complete_lowercase_64_hex_SHA_256_in_a_separate_message_and_explicitly_authorize_the_request_scope
+  - step: 4
+    actor: materializing_agent
+    action: verify_exact_hash_match_unchanged_request_bytes_and_all_request_stale_conditions
+  - step: 5
+    actor: materializing_agent
+    action: materialize_authority_that_binds_both_request_hash_and_confirmation_source_without_expanding_scope
+
+request_state:
+  before_exact_confirmation: non_authorizing
+  after_hash_mismatch: non_authorizing
+  after_request_byte_change: stale_non_authorizing
+  after_baseline_or_scope_stale_condition: stale_non_authorizing
+  after_exact_confirmation_and_all_checks: authorizes_exact_request_scope_only
+
+confirmation_requirements:
+  separate_owner_message: required
+  complete_file_SHA_256: required
+  lowercase_hex_length: 64
+  exact_equality: required
+  explicit_scope_authorization: required
+  accepted_substitutes: []
+  abbreviated_hash: rejected
+  yes_ok_continue_or_implicit_assent: rejected
+  inference_from_prior_owner_messages: rejected
+
+materialized_authority_required_bindings:
+  - request_path
+  - request_complete_file_SHA_256
+  - owner_confirmation_source_ref
+  - repeated_confirmation_SHA_256
+  - exact_match_result
+  - request_baseline_and_stale_condition_result
+  - exact_authorized_write_or_action_scope
+  - retained_non_authorizations
+
+residual_risk:
+  accepted_for_conversational_governance: true
+  statement: >-
+    Exact hash repetition proves that the confirmation refers to specific request
+    bytes, but conversational identity is not cryptographically authenticated.
+  required_disclosure_in_materialized_authority: true
+
+non_effects:
+  - does_not_cryptographically_authenticate_the_owner
+  - does_not_replace_signed_or_authenticated_runtime_authority_when_required
+  - does_not_expand_a_request_scope
+  - does_not_authorize_runtime_implementation_model_calls_or_remote_side_effects

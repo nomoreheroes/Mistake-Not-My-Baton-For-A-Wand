@@ -1,0 +1,42 @@
+record_id: pipeline-v2.d0-02-external-approval-backlink-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T17:45:18.3303728+03:00"
+status: immutable_successor_backlink_effective_status_complete
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8
+
+immutable_subject:
+  path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+  complete_file_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+  embedded_status: owner_disposition_inputs_applied_ready_for_owner_disposition
+  embedded_owner_approval_status: pending
+  bytes_edited_by_this_record: false
+
+external_approval_envelope:
+  path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml
+  complete_file_sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b
+  envelope_id: d0-01-decision-baseline-approval
+  decision: approved
+  approved_at: "2026-08-27T17:38:02.0365116+03:00"
+  authority_ref: current_conversation_explicit_owner_approval
+  gate_contract_record:
+    role: gate_contract
+    path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+
+effective_status:
+  D0_02: complete
+  source: exact_hash_binding_in_external_approval_envelope
+  precedence_rule: immutable_external_approval_successor_controls_effective_status_without_rewriting_historical_bytes
+  internal_pending_label_is_historical: true
+  conflict_or_hash_mismatch: false
+
+scope:
+  creates_new_D0_02_approval: false
+  records_existing_external_approval_binding: true
+  edits_historical_D0_02_or_envelope: false
+  runtime_or_implementation_authority: none

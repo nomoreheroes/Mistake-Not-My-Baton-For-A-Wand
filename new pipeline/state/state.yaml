@@ -1,8 +1,8 @@
 state_id: pipeline-v2-program-state
 schema_version: 1
 projection_version: "1.0.0"
-generated_at: "2026-09-08T13:23:57.9336300+03:00"
-status: K0b_01_planning_with_open_prerequisites
+generated_at: "2026-09-08T17:45:18.3303728+03:00"
+status: K0b_01_planning_with_open_prerequisites_and_D0_hash_gate
 
 projection_profile:
   path: new pipeline/state/state-projection-profile-v1.yaml
@@ -21,10 +21,17 @@ baseline:
 active_authority:
   final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
   K0b_01_governance_direction: {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1}
+  governance_hardening_approval_request: {path: new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml, sha256: 1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2}
+  governance_hardening_owner_disposition: {path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml, sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8}
+  authority_confirmation_profile: {path: new pipeline/registry/authority-confirmation/v1.yaml, sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd}
+  canonical_hash_profile_remediation_gate: {path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml, sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3}
+  D0_02_external_approval_backlink: {path: new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml, sha256: d0d2a81dff49194e70a9b9b79805478e9bc9caf94d73b26a6c1feba3d996b13b}
+  design_review_independence_profile: {path: new pipeline/registry/design-review-independence/v2.yaml, sha256: 8e99106881905e56bc505c3a9cb6037562eab62e7585abac29039d4d99ba9cc3}
   K0b_01_plan: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
   K0b_01_B02_owner_selection: {path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml, sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6}
   K0b_01_B02_recalculation: {path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
   frozen_draft_triage: {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+  frozen_draft_triage_clarification: {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml, sha256: 2956de3d94856c5299ca0795570b332fc46fb871983dc50de9eb172c1fc4eae4}
 
 supporting_review_evidence:
   K0b_01_v1_2_r1_dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml, sha256: c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de}
@@ -62,7 +69,7 @@ work_items:
     status: complete
     authority_path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
     authority_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
-    effective_status_source: final_K0b_00_and_completed_layer_gate_usage_supersede_the_internal_ready_for_owner_disposition_label
+    effective_status_source: {path: new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml, sha256: d0d2a81dff49194e70a9b9b79805478e9bc9caf94d73b26a6c1feba3d996b13b}
     open_gate_ids: []
   - sequence: 3
     work_item_id: D0-03_D0-04
@@ -157,6 +164,11 @@ work_items:
     open_gate_ids: [G-N1-K0B-COMPLETE, G-N1-POLICY-LIMITS]
 
 open_gates:
+  - gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
+    owner: workspace_owner
+    status: open_blocking
+    blocks: [new_approval_envelopes_relying_on_canonical_payload_verification]
+    closure_condition: later_exact_hash_bound_owner_disposition_selects_and_completes_implement_and_validate_or_retire_and_supersede
   - gate_id: G-K0B01-HUMAN-SIGNOFF
     owner: workspace_owner
     status: open_blocking
@@ -245,6 +257,11 @@ closed_gates:
       phase_margin_bytes: 39845888
 
 status_index:
+  - path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+    sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+    embedded_status: proposed_for_owner_approval
+    effective_status: open_blocking_remediation_gate
+    effective_status_evidence: {path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml, sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3}
   - path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
     sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
     embedded_status: approved_for_zero_call_implementation
@@ -271,6 +288,11 @@ scope:
   implementation_authority: none
   runtime_authority: none
   K0b_B02_status: complete
+  canonical_payload_verification_status: blocked_pending_profile_remediation
+  complete_file_SHA_256_bindings_status: unaffected
+  authority_confirmation_protocol: active_prospective
+  review_model_family_diversity_policy: active_prospective
+  historical_reviews_retroactively_invalidated: false
   remaining_design_review_model_calls: 0
   forbidden_roots_access_authorized: false
   push_PR_deploy_release_authorized: false

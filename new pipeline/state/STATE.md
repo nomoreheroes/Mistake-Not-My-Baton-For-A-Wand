@@ -1,19 +1,26 @@
 # Pipeline v2 state projection
 
-Machine source: [state.yaml](state.yaml) `23217cc4163d`
+Machine source: [state.yaml](state.yaml) `513155374866`
 
 Projection profile: [state-projection-profile-v1.yaml](state-projection-profile-v1.yaml) `7032748afe3e`
 
-Program status: `K0b_01_planning_with_open_prerequisites`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 is closed at the planning level; runtime and implementation authority remain absent.
+Program status: `K0b_01_planning_with_open_prerequisites_and_D0_hash_gate`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 is closed at the planning level. The canonical-payload verification gate is open; runtime and implementation authority remain absent.
 
 ## Active authority
 
 - Final K0b-00 disposition: [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27`
 - K0b-01 governance direction: [k0b-01-governance-remediation-owner-direction-v1.yaml](../decisions/k0b-01-governance-remediation-owner-direction-v1.yaml) `364a6941a216`
+- Governance-hardening request: [pipeline-v2-governance-hardening-approval-request-v1.yaml](../requests/pipeline-v2-governance-hardening-approval-request-v1.yaml) `1569b1ff1588`
+- Governance-hardening owner disposition: [pipeline-v2-governance-hardening-owner-disposition-v1.yaml](../decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml) `06fdeda5f0cf`
+- Two-step authority-confirmation profile: [v1.yaml](../registry/authority-confirmation/v1.yaml) `b597423cb206`
+- Canonical hash-profile remediation gate: [d0-canonical-hash-profile-remediation-gate-v1.yaml](../decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml) `ad24abd94653`
+- D0-02 external-approval backlink: [d0-02-external-approval-backlink-v1.yaml](../evidence/d0-02-external-approval-backlink-v1.yaml) `d0d2a81dff49`
+- Prospective design-review independence profile: [v2.yaml](../registry/design-review-independence/v2.yaml) `8e9910688190`
 - K0b-01 plan: [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b`
 - K0b-B02 owner selection: [k0b-01-b02-binary-budget-owner-disposition-v1.yaml](../decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml) `349997f22c6f`
 - K0b-B02 recalculation: [k0b-01-b02-binary-size-recalculation-v1.yaml](../evidence/k0b-01-b02-binary-size-recalculation-v1.yaml) `5ebc6ba23898`
 - Frozen-draft reuse triage: [k0b-01-frozen-draft-reuse-triage-v1.yaml](../evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml) `3976909ee305`
+- Frozen-draft triage clarification: [k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml](../evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml) `2956de3d9485`
 
 Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml) `c1438f246cb3` and [r1 ledger append](../evidence/k0b-01-r1-review-ledger-append-v1.yaml) `e2eb12a33f72`. They preserve two approvals with zero open findings for the exact v1.2 hash; they do not approve v1.3. Remaining review calls: `0`.
 
@@ -47,6 +54,7 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 | gate | owner | status | blocks | closure condition |
 |---|---|---|---|---|
+| G-D0-CANONICAL-HASH-PROFILE-VERIFIER | workspace_owner | open_blocking | new_approval_envelopes_relying_on_canonical_payload_verification | later_exact_hash_bound_owner_disposition_selects_and_completes_implement_and_validate_or_retire_and_supersede |
 | G-K0B01-HUMAN-SIGNOFF | workspace_owner | open_blocking | K0b-01_implementation | human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity |
 | G-K0B01-IMPLEMENTATION-DISPOSITION | workspace_owner | open_blocking | K0b-01_implementation | later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets |
 | G-K0B01-IMPLEMENTATION-LEDGER | Pipeline_governance | open_blocking | K0b-01_implementation | separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist |
@@ -69,11 +77,12 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Superseded and frozen records
 
+- [canonical-yaml-v1.yaml](../registry/hash-profiles/canonical-yaml-v1.yaml) `46597d916fdc` remains byte-unchanged with embedded status `proposed_for_owner_approval`; its effective status is an open blocking remediation gate. Existing complete-file hashes are unaffected, while canonical-payload claims remain unverified by a repository machine verifier.
 - [k0b-01-implementation-owner-disposition-v1.yaml](../decisions/k0b-01-implementation-owner-disposition-v1.yaml) `cdb87a83b5bc` is non-authoritative.
 - [k0b-01-validation-v1.yaml](../evidence/k0b-01-validation-v1.yaml) `8a0485b0821b` is non-authoritative superseded draft evidence.
 - [k0b-01-planning-package-v1.2.md](../architecture/k0b-01-planning-package-v1.2.md) `f6c297a11134` remains the exact subject of two valid r1 approvals but is superseded by v1.3 for future implementation.
-- The 18-artifact frozen set is read-only. Reuse triage permits no whole-file reuse: 2 records are provenance-only and 16 artifacts require re-authoring from current authority.
+- The 18-artifact frozen set is read-only. The clarification records that additive migration was conditionally permitted by plan v1.0 and became unambiguously obsolete under v1.2; reuse triage still permits no whole-file reuse: 2 records are provenance-only and 16 artifacts require re-authoring from current authority.
 
 ## Effective scope
 
-K0b-B02 is complete. There is no runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
+K0b-B02 is complete. Two-step exact-hash authority confirmation and prospective r0/r1 model-family diversity are active governance rules. Historical reviews remain scoped evidence and are not retroactively invalidated. There is no runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.

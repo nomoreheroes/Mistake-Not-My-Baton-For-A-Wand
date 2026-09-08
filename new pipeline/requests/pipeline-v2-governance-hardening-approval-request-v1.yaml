@@ -1,0 +1,145 @@
+request_id: pipeline-v2-governance-hardening-approval-request-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T17:32:37.0074712+03:00"
+created_by: /root
+status: non_authorizing_awaiting_exact_SHA_256_owner_confirmation
+
+purpose: >-
+  Request exact owner authority for a governance-only package that introduces
+  two-step authority confirmation and records the non-runtime dispositions of
+  the 2026-09-08 round-2 audit without treating this request or that audit as authority.
+
+request_provenance:
+  owner_instruction: create_approval_request_for_the_proposed_scope
+  source_ref: current_thread_2026_09_08
+  external_audit:
+    path: C:/Users/Administrator/.codex/attachments/433d12e4-10fa-42cb-a04b-5c70acef5936/pasted-text.txt
+    sha256: 4321b503312873fab0b5e57816b43b5dcd69706005bfcdfa46cc6c8593f6bc4d
+    sha256_normalization: lowercase_hex_is_4321b503312873fab0b5e57816b43b5dcd69706005bfcdfa46cc6c8593f6bc4d
+    repository_artifact: false
+    authority_by_itself: none
+
+baseline:
+  HEAD: 9b775a916a0e62d9f698a1eef89c8392d328c7ce
+  tree: 44cd0238e64ab77ff373bb4de735919105dfde59
+  K0b_01_plan_v1_3: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  K0b_01_reuse_triage: {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+  D0_02_gate_contract: {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  D0_external_approval_envelope: {path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml, sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b}
+  canonical_hash_profile: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  design_invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, sha256: b07d05ff29721089d404e827369e8fdf5143610fe69a4f467715406cc93288ee, entries: 49}
+  program_state: {path: new pipeline/state/state.yaml, sha256: 23217cc4163df9ab51d724c89f9ecec32853aa13400eaadb03d388f252105151}
+  program_state_human_projection: {path: new pipeline/state/STATE.md, sha256: 3e1ffd758f4611a08d2c9cce3c2d3ff5fa0f572b589df47ea2125a5e16c2ae0d}
+
+verified_audit_disposition_to_materialize_after_confirmation:
+  I_1:
+    disposition: accept_narrow_history_correction_without_changing_current_rewrite_rule
+    exact_meaning:
+      - additive_migration_was_permitted_by_plan_v1_0_only_where_necessary
+      - four_table_rebuild_became_unambiguous_in_plan_v1_2
+      - migration_and_migration_tests_are_unambiguously_obsolete
+      - other_frozen_files_may_contribute_concepts_only_after_revalidation
+      - no_whole_file_reuse_or_activation_is_authorized
+  I_2:
+    disposition: accept_precision_correction
+    exact_meaning:
+      - manual_receipt_form_and_internal_binding_are_strictly_validated
+      - local_receipt_provenance_is_not_independently_attested
+      - a_forged_file_matching_all_expected_bindings_is_not_distinguishable_by_the_current_local_checks
+  I_3:
+    disposition: confirmed_no_change_required
+    exact_meaning:
+      - plan_v1_2_already_requires_foreign_keys_OFF_before_BEGIN_IMMEDIATE
+      - legacy_alter_table_OFF_and_pretransaction_readback_remain_binding
+  N_1:
+    disposition: create_blocking_canonical_hash_profile_remediation_gate
+    exact_meaning:
+      - canonical_yaml_v1_is_declared_but_has_no_machine_verifier_in_the_allowed_harness_and_test_scope
+      - existing_complete_file_hashes_remain_distinct_and_are_not_invalidated
+      - no_new_approval_envelope_may_rely_on_canonical_payload_verification_until_the_gate_is_closed
+      - later_owner_choice_must_select_implement_and_validate_or_retire_and_supersede
+  N_2:
+    disposition: create_immutable_successor_backlink_record
+    exact_meaning:
+      - do_not_edit_the_hash_bound_D0_02_file
+      - bind_its_exact_hash_to_the_external_approval_envelope_and_report_effective_status
+  N_5:
+    disposition: create_prospective_review_diversity_policy
+    exact_meaning:
+      - for_the_same_artifact_r1_must_use_a_different_model_family_from_r0
+      - provider_diversity_is_preferred_when_an_approved_profile_is_available
+      - any_exception_requires_explicit_owner_disposition_before_dispatch
+      - historical_reviews_remain_scoped_evidence_and_are_not_retroactively_invalidated
+      - no_review_rerun_or_model_call_is_authorized
+  N_8:
+    disposition: create_two_step_authority_confirmation_protocol
+    exact_meaning:
+      - an_agent_materialized_approval_request_is_non_authorizing
+      - the_owner_must_return_the_exact_complete_file_SHA_256_in_a_separate_message
+      - only_an_exact_match_authorizes_the_request_scope
+      - later_materialized_authority_must_bind_both_request_hash_and_confirmation_source
+      - any_request_byte_change_invalidates_confirmation_and_requires_a_new_hash
+      - conversational_identity_remains_non_cryptographic_and_is_an_explicit_residual_risk
+
+proposed_exact_write_set_after_matching_confirmation:
+  create:
+    - new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml
+    - new pipeline/registry/authority-confirmation/v1.yaml
+    - new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml
+    - new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml
+    - new pipeline/registry/design-review-independence/v2.yaml
+    - new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml
+    - new pipeline/evidence/pipeline-v2-governance-hardening-commit-set-v1.yaml
+  modify:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  include_unchanged_or_new_request:
+    - new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml
+  total_commit_path_count: 10
+  all_other_paths: forbidden
+
+requested_commit_authority_after_matching_confirmation:
+  commit_count: 1
+  exact_scope_only: true
+  expected_parent: 9b775a916a0e62d9f698a1eef89c8392d328c7ce
+  commit_message: governance_colon_add_two_step_authority_and_audit_gates
+  push_PR_merge_deploy_release: forbidden
+
+explicitly_excluded_from_this_request:
+  - implementation_or_retirement_of_canonical_yaml_v1
+  - generation_or_recalculation_of_existing_canonical_payload_hashes
+  - edit_of_D0_02_or_any_other_historical_hash_bound_record
+  - edit_delete_move_import_execute_or_activate_any_frozen_K0b_01_artifact
+  - rerun_or_replacement_of_any_historical_review
+  - any_new_model_agent_independent_review_or_provider_API_call
+  - StorageFault_runtime_implementation
+  - MigrationChain_runtime_implementation
+  - filesystem_ACL_or_ownership_changes
+  - canonical_fixture_research_old_swarm_or_projects_swarm_access
+  - runtime_code_contract_schema_registry_data_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - test_runtime_physical_model_or_external_product_execution
+  - push_PR_merge_deploy_release_or_remote_side_effect
+
+confirmation_protocol_for_this_request:
+  authority_before_confirmation: none
+  accepted_confirmation_format: >-
+    Подтверждаю approval-request SHA-256 <exact_lowercase_64_hex> и разрешаю
+    ровно описанные governance materialization и один exact-scope commit.
+  required_hash_subject: complete_file_bytes_of_this_request
+  comparison: exact_lowercase_hex_equality
+  separate_owner_message_required: true
+  abbreviated_hash: forbidden
+  inferred_confirmation_from_ok_yes_continue_or_prior_messages: forbidden
+  authority_if_hash_mismatch_or_baseline_change: none
+
+stale_conditions:
+  - this_request_bytes_change
+  - HEAD_differs_from_9b775a916a0e62d9f698a1eef89c8392d328c7ce_before_materialization
+  - any_baseline_path_complete_file_hash_changes
+  - requested_write_set_or_non_authorizations_change
+  - owner_confirmation_does_not_repeat_the_exact_complete_file_SHA_256
+
+request_integrity:
+  complete_file_SHA_256: supplied_after_materialization
+  self_hash_embedding: forbidden
