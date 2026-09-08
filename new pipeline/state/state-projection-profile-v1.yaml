@@ -1,0 +1,73 @@
+profile_id: pipeline-v2.state-projection-profile-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T12:31:49.7967285+03:00"
+status: active_governance_projection_profile
+
+purpose:
+  machine_projection: new pipeline/state/state.yaml
+  human_projection: new pipeline/state/STATE.md
+  authority_rule: projections_report_authority_but_never_replace_the_cited_hash_bound_records
+
+required_work_item_fields:
+  - sequence
+  - work_item_id
+  - status
+  - authority_path
+  - authority_sha256
+  - open_gate_ids
+
+status_vocabulary:
+  - complete
+  - complete_on_containing_commit
+  - implemented_validated
+  - architecture_complete
+  - planning_remediation
+  - blocked
+  - proposed
+  - superseded
+  - non_authoritative
+
+required_open_gate_fields:
+  - gate_id
+  - owner
+  - status
+  - blocks
+  - closure_condition
+
+generation:
+  source: new pipeline/state/state.yaml
+  work_item_order: ascending_integer_sequence
+  open_gate_order: ascending_gate_id_UTF8_bytes
+  hash_rendering: lowercase_SHA_256_complete_file
+  null_rendering: literal_null
+  list_rendering: preserve_source_order
+  markdown_columns: [sequence, work_item, status, authority, open_gates]
+  authority_cell: markdown_link_then_space_then_first_12_hex_characters
+  empty_open_gates_cell: none
+  newline: LF
+  encoding: UTF_8_without_BOM
+  nondeterministic_fields_in_human_projection: forbidden
+
+supersession_rules:
+  - immutable_historical_status_is_preserved_in_its_source_file
+  - effective_status_is_reported_with_exact_successor_paths_and_hashes
+  - a_review_recommendation_is_scoped_to_the_exact_reviewed_hash
+  - a_projection_cannot_create_owner_approval_implementation_authority_or_readiness
+  - containing_commit_identity_is_supplied_by_Git_and_is_not_self_embedded
+
+validation:
+  current_materialization_method: deterministic_manual_projection_under_owner_authorized_governance_remediation
+  automated_renderer: required_before_K0b_01_implementation
+  current_checks:
+    - YAML_parses
+    - every_authority_path_exists
+    - every_authority_hash_matches
+    - work_item_sequences_are_unique_and_sorted
+    - open_gate_IDs_are_unique_and_sorted
+    - STATE_md_rows_equal_state_yaml_rows
+
+non_authorizations:
+  - no_runtime_or_implementation_status_inference
+  - no_edit_of_historical_hash_bound_status_bytes
+  - no_model_API_fixture_product_or_research_access

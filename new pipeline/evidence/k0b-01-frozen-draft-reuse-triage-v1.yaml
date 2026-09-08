@@ -1,0 +1,202 @@
+record_id: k0b-01-frozen-draft-reuse-triage-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T12:24:32.3025238+03:00"
+work_item_id: K0b-01
+status: completed_read_only_triage_no_complete_file_reuse
+
+authority:
+  owner_direction: {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1}
+  external_audit_sha256: 8c796d6fd4e0f6f0d2763940c54cc31f8d7b50f8f905ac2a441d2a00e5b42eb8
+  freeze_manifest: {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+  reviewed_plan_v1_2: {path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff}
+
+method:
+  access_mode: read_only_static_inspection
+  artifact_scope: exactly_the_18_paths_in_the_freeze_manifest
+  hashes_verified_before_read: {matched: 18, required: 18, result: pass}
+  hashes_verified_after_read: {matched: 18, required: 18, result: pass}
+  execution_import_or_test: false
+  authoritative_truth_from_frozen_bytes: false
+  allowed_reuse_meaning: conceptual_pattern_only_after_revalidation_against_the_future_exact_plan_and_authority
+  forbidden_reuse_meaning: copying_a_complete_frozen_file_or_treating_its_embedded_authority_hashes_as_current
+
+summary:
+  artifact_count: 18
+  complete_file_reuse: 0
+  retire_as_provenance_only: 2
+  rewrite_from_current_authority: 16
+  files_edited_moved_or_deleted: 0
+  implementation_authority_created: false
+
+triage:
+  - role: invalid_implementation_owner_disposition
+    path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
+    sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
+    disposition: retire_provenance_only
+    rationale:
+      - derives_implementation_authority_from_an_owner_statement_later_corrected_as_non_authorizing
+      - binds_plan_v1_0_and_the_old_fixed_HEAD
+    future_treatment: never_use_as_authority_or_as_an_implementation_input
+  - role: non_authoritative_validation_draft
+    path: new pipeline/evidence/k0b-01-validation-v1.yaml
+    sha256: 8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f
+    disposition: retire_provenance_only
+    rationale:
+      - validated_status_depends_on_the_invalid_disposition_and_plan_v1_0
+      - claims_a_migration_and_budget_candidate_now_known_to_miss_required_v1_2_and_audit_controls
+    future_treatment: expose_as_non_authoritative_superseded_history_in_the_program_state_index
+  - role: contract_package_draft
+    path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json
+    sha256: fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [strict_closed_schemas, eight_output_family_vocabulary, zero_runtime_capability_fence]
+    blocking_reasons:
+      - embeds_the_invalid_implementation_disposition_and_plan_v1_0_hashes
+      - duplicates_event_route_phase_and_trigger_sets_instead_of_consuming_one_canonical_source
+      - predates_the_normative_v1_2_event_matrix_and_receipt_A_to_B_partition
+  - role: event_profile_draft
+    path: new pipeline/registry/alpha0/event-profile-v1.yaml
+    sha256: ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [closed_21_event_set, per_event_schema_identity, fail_closed_fields]
+    blocking_reasons:
+      - JSON_bytes_are_misnamed_as_yaml
+      - producer_delivery_fields_activation_replay_and_idempotency_facts_differ_from_the_normative_v1_2_matrix
+      - independently_duplicates_subscription_facts
+  - role: terminal_profile_draft
+    path: new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml
+    sha256: 62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [subscriber_or_terminal_exclusivity, explicit_F00_exception]
+    blocking_reasons:
+      - JSON_bytes_are_misnamed_as_yaml
+      - duplicates_event_matrix_route_and_fields_facts
+      - activation_and_delivery_tuples_do_not_match_the_v1_2_matrix
+  - role: routing_profile_draft
+    path: new pipeline/registry/alpha0/s-routing-profile-v1.yaml
+    sha256: 0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [five_closed_routes, all_required_F04_barrier, F05_revision_owner_rule, phase_fence]
+    blocking_reasons:
+      - JSON_bytes_are_misnamed_as_yaml
+      - must_be_coauthored_with_the_single_canonical_event_and_routing_source
+      - embedded_call_and_activation_facts_require_revalidation_against_v1_3
+  - role: resource_budget_policy_draft
+    path: new pipeline/registry/resource-budget-policy/v1.yaml
+    sha256: 3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [tier_vocabularies, two_phase_order, no_credit_rules, strict_checkpoint_thresholds]
+    blocking_reasons:
+      - JSON_bytes_are_misnamed_as_yaml
+      - lacks_a_required_size_stressed_binary_aggregate_field_and_rule
+      - predates_the_review_package_and_implementation_invocation_scope_corrections
+  - role: resource_budget_reference_cases_draft
+    path: new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml
+    sha256: f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [K0a_and_K0b_case_shapes, two_phase_arithmetic, strict_threshold_vectors]
+    blocking_reasons:
+      - JSON_bytes_are_misnamed_as_yaml
+      - worst_binary_bytes_use_object_count_times_mean_instead_of_a_size_stressed_boundary
+      - expected_outputs_share_the_production_source_file_instead_of_a_separate_test_only_oracle
+      - design_and_human_totals_predate_the_v1_2_review_package
+  - role: forward_migration_draft
+    path: new pipeline/harness/migrations/0004_k0b01.sql
+    sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [new_K0b_definition_tables, immutable_definition_triggers, useful_index_candidates]
+    blocking_reasons:
+      - additive_only_and_cannot_store_the_sixteen_new_Alpha_events_in_the_existing_events_table
+      - omits_the_required_runs_events_run_state_transitions_and_event_deliveries_rebuild
+      - omits_the_exact_external_FK_and_owned_schema_object_reconstruction_algorithm
+  - role: harness_package_draft
+    path: new pipeline/harness/k0b01/__init__.py
+    sha256: e029a9aa3699ac7f159ebdfd21880455a4bcd98727a5e06ae54273a400efdb59
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [small_explicit_public_surface]
+    blocking_reasons: [exports_only_stale_or_rejected_draft_modules_and_constants]
+  - role: contract_loader_draft
+    path: new pipeline/harness/k0b01/contract.py
+    sha256: 12ea694ffdf21d2396d1831d78df4fe2f95f06b90051a66ce9e1121403f75898
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [strict_UTF8_LF_and_duplicate_key_checks, exact_key_validation, canonical_JSON_helper]
+    blocking_reasons:
+      - hardcodes_six_source_hashes_and_multiple_closed_fact_sets_in_Python
+      - binds_invalid_and_stale_authority
+      - parses_JSON_while_exposing_yaml_paths
+      - violates_the_single_machine_readable_source_requirement
+  - role: routing_compiler_draft
+    path: new pipeline/harness/k0b01/compiler.py
+    sha256: 3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [generic_closed_key_checks, graph_reachability_checks, canonical_output_hashing]
+    blocking_reasons:
+      - duplicates_all_21_event_metadata_in_EXACT_EVENT_METADATA
+      - combines_registry_routing_and_resource_budget_compilation
+      - produces_all_eight_families_without_the_required_five_family_receipt_A_boundary
+      - consumes_embedded_reference_expected_outputs_in_the_same_source_graph
+  - role: budget_compiler_draft
+    path: new pipeline/harness/k0b01/budget.py
+    sha256: d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [integer_ceiling_and_rounding_helpers, tier_checks, phase_membership_checks, no_credit_checks]
+    blocking_reasons:
+      - computes_both_nominal_and_worst_binary_aggregates_with_assumed_mean_object_bytes
+      - does_not_validate_worst_case_object_count_times_hard_per_object_bytes
+      - is_not_a_three_family_receipt_B_compiler_bound_to_the_exact_receipt_A_hash_and_family_hashes
+  - role: store_adapter_draft
+    path: new pipeline/harness/k0b01/store.py
+    sha256: 8efbab7e3395874150289f4edfca4ed5d5e913d7550a911396128260fb18f05a
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [new_path_backup_requirement, separate_backup_file_hash, immutable_compiled_record_transaction]
+    blocking_reasons:
+      - substring_denylist_does_not_enforce_an_approved_runtime_root_for_source_or_backup
+      - full_table_in_memory_JSON_sorted_snapshot_is_repeated_many_times
+      - expected_v4_schema_is_rebuilt_in_memory_on_every_initialize
+      - migration_path_is_additive_and_not_the_required_four_table_rebuild
+      - binds_the_invalid_implementation_authority
+  - role: contract_tests_draft
+    path: new pipeline/tests/contracts/test_k0b01_contracts.py
+    sha256: 777e27bc6c0ccec71828ff20a952cf15853bb4686a9667e90051d3b60ba4c4e9
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [duplicate_key_negative_case, hash_mismatch_before_parse, unknown_event_and_route_negatives]
+    blocking_reasons: [imports_the_frozen_modules, asserts_stale_matrix_facts, lacks_single_source_and_receipt_partition_checks]
+  - role: routing_tests_draft
+    path: new pipeline/tests/contracts/test_k0b01_routing_compiler.py
+    sha256: 2816e2bac8df9b7f14fad38270d527906ed2c6651114a8b21498661314cf0b6a
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [cwd_locale_and_insertion_order_determinism, route_barrier_and_phase_negative_cases]
+    blocking_reasons: [imports_the_frozen_modules, lacks_receipt_A_B_ownership_dependency_and_aggregate_negative_vectors]
+  - role: budget_tests_draft
+    path: new pipeline/tests/contracts/test_k0b01_resource_budget.py
+    sha256: 2d30b21391b2bda0fe0788e7fcb07320dc166cac7df7345099c789265d5dd103
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [tier_overrun_negatives, phase_reorder_overlap_and_third_phase_negatives, exact_hard_boundary_checks]
+    blocking_reasons: [imports_the_frozen_modules, encodes_the_mean_based_worst_case_bug, lacks_size_stressed_object_vectors]
+  - role: migration_tests_draft
+    path: new pipeline/tests/foundation/test_k0b01_migration.py
+    sha256: 46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987
+    disposition: rewrite_from_current_authority
+    reusable_concepts_after_revalidation: [generated_temporary_database_only, backup_and_restore_shape, migration_history_negative_cases]
+    blocking_reasons:
+      - validates_the_additive_migration_instead_of_the_four_table_rebuild
+      - covers_only_five_exception_fault_points_and_no_process_loss_matrix
+      - checks_only_the_K0a03_reader_instead_of_all_three_hash_bound_K0a_readers
+      - tests_the_weak_substring_denylist_instead_of_an_exact_runtime_root_allowlist
+      - lacks_the_canonical_typed_streaming_digest_and_exact_platform_matrix
+
+authoritative_implementation_rules_after_triage:
+  - no_frozen_file_may_be_copied_wholesale
+  - reusable_concepts_must_be_rederived_from_plan_v1_3_and_new_exact_authority
+  - future_implementation_must_use_new_hashes_and_must_not_preserve_invalid_authority_pins
+  - production_compilers_must_not_import_or_derive_from_test_only_expected_outputs
+  - every_reused_algorithmic_pattern_requires_a_new_test_or_static_proof_against_its_v1_3_requirement
+  - frozen_files_remain_byte_preserved_provenance_and_are_not_runtime_import_targets
+
+non_authorizations:
+  - no_implementation_or_runtime_activation
+  - no_frozen_byte_edit_move_delete_or_execution
+  - no_model_agent_API_or_network_call
+  - no_canonical_fixture_research_old_swarm_or_projects_swarm_access
+  - no_push_PR_deploy_or_release

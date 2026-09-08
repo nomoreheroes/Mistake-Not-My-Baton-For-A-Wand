@@ -1,0 +1,213 @@
+scope_id: k0b-00-operational-alpha0-delta-scope-v1
+schema_version: 1
+version: "1.0.0"
+status: authoring_baseline_pending_three_independent_reviews_and_owner_approval
+phase: K0b
+work_item: K0b-00
+
+entry_gate:
+  k0a03_commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  k0a03_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  external_rereview:
+    path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml
+    sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b
+    verdict: approve
+    open_findings: 0
+  physical_f00:
+    run_id: run-e636df51c38b47f9aade2c8cf3104475
+    state: completed
+    physical_model_invocations: 3
+    tool_calls_observed: 0
+    pipeline_network_calls: 0
+    limitation: all_three_roles_used_the_ChatGPT_binding
+
+architecture_deltas:
+  - plan_id: k0b-00-shared-control-plane-delta
+    owner: W1_Kernel_shared_control_plane
+    baseline:
+      path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md
+      version: "1.2.0"
+      sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f
+  - plan_id: k0b-00-shared-artifact-event-plane-delta
+    owner: W1_Kernel_shared_artifact_event_plane
+    baseline:
+      path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+      version: "1.1.0"
+      sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+  - plan_id: k0b-00-s-layer-delta
+    owner: S_S0
+    baseline:
+      path: new pipeline/architecture/k0a-00-s-layer-v1.md
+      version: "1.2.0"
+      sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+
+planning_authority:
+  allowed_now:
+    - three_delta_architecture_plans
+    - exact_review_input_manifests
+    - independent_review_records
+    - owner_approval_request_and_hash_bound_receipts
+    - design_invocation_ledger_entries
+  forbidden_until_all_three_plan_approvals:
+    - K0b_SQL_migrations
+    - K0b_contracts_or_registries
+    - K0b_runtime_or_prompt_behavior
+    - K0b_fixture_execution
+    - checkpoint_or_projection_publication
+    - physical_model_invocations
+
+operational_target:
+  environment: committed_independent_fixture_clone_not_canonical_fixture_worktree
+  scenarios: [F01, F02, F03, F04, F05, F07, F09, F10, F13a, F15]
+  readiness_claim: operational_Alpha0_fixture_only_after_K0b04
+  next_program_decision: K0b05_continue_to_N1_or_pause_program
+  real_product_project: forbidden
+
+implementation_packages_after_approval:
+  K0b01:
+    scope: forward_migrations_registry_and_resource_budget_compilers_and_minimal_Alpha_events
+    gate: migration_contract_and_reference_equivalence_tests
+  K0b02:
+    scope: projection_outbox_checkpoint_publisher_replay_materializer_and_crash_reconciliation
+    gate: foundation_and_clean_clone_replay_tests
+  K0b03:
+    scope: repository_worktree_path_tool_egress_secret_process_guards_and_abort_compatibility
+    gate: security_and_recovery_tests
+  K0b04:
+    scope: assigned_fixture_scenarios_F15_and_checkpoint_cost_matrix
+    gate: Alpha0_dispatcher_security_storage_proof
+  K0b05:
+    scope: kernel_to_N1_feasibility_forecast_and_owner_decision
+    gate: program_checkpoint
+
+minimal_alpha_event_profile:
+  retained_from_K0a: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+  added_for_K0b:
+    - run.blocked
+    - run.abort_requested
+    - run.aborted
+    - artifact.published
+    - projection.requested
+    - projection.written
+    - projection.failed
+    - revision.requested
+    - gate.passed
+    - approval.requested
+    - approval.granted
+    - approval.rejected
+    - error.schema_mismatch
+    - error.tool_failure
+    - error.security_policy
+    - meta.incident_detected
+  terminal_policies_before_M1:
+    errors: block_run_and_enqueue_human
+    meta_incident: persist_incident_and_enqueue_W5
+  forbidden_families:
+    - dialogue
+    - distributed_lease_scheduler
+    - general_retry_or_dead_letter
+    - budget_optimizer_or_escalation_FSM
+    - cache_or_scale
+    - full_domain_layer_events
+
+cross_plan_boundaries:
+  validated_control_transition_request:
+    producer: shared_control_plane
+    consumer: shared_artifact_event_plane
+  compiled_route_decision:
+    semantic_owner: S
+    compiler_and_execution_owner: shared_control_plane
+    persistence_owner: shared_artifact_event_plane
+  validated_route_proposal:
+    producer: S_or_Layer0
+    validator_and_scheduler: shared_control_plane
+    persistence_owner: shared_artifact_event_plane
+  checkpoint_publish_request:
+    policy_and_sequence_owner: shared_control_plane
+    snapshot_outbox_and_project_Git_owner: shared_artifact_event_plane
+  projection_intent_and_pair:
+    request_owner: shared_control_plane
+    outbox_projector_and_hash_owner: shared_artifact_event_plane
+  abort_and_reconciliation:
+    run_state_owner: shared_control_plane
+    event_and_persistence_owner: shared_artifact_event_plane
+    route_freeze_owner: S
+
+repository_boundary:
+  pipeline_Git: read_only_during_fixture_runtime
+  canonical_fixture: immutable_source_and_never_runtime_writer
+  scenario_fixture: new_independent_clone_with_coordination_worktree
+  checkpoint_path: .pipeline/history/pipeline-checkpoint.sqlite3
+  checkpoint_writer: harness_only_in_coordination_worktree
+  task_worktrees: sparse_exclude_history_runtime_and_backups
+  Q_primary_worktree: exclude_entire_dot_pipeline_tree
+  projects_swarm: not_read_not_run_not_modified
+  research_old_swarm: not_read_not_modified
+
+budget_authorities:
+  plan_production:
+    package_id: K0b-plan-deltas
+    invocation_profile: light
+    invocations: {nominal: 6, worst_case: 12}
+    composition: three_independent_author_calls_plus_three_fresh_context_reviews_with_at_most_one_bounded_return_pair_per_plan_inside_worst_case
+    human_attention:
+      profile: light
+      sessions: {nominal: 1, worst_case: 1}
+      blocking_decisions: {nominal: 1, worst_case: 2}
+      active_minutes: {nominal: 30, worst_case: 30}
+      max_single_session_minutes: 30
+      batchable_requests: true
+  operational_phase:
+    package_id: K0b-runtime-operational
+    invocation_profile: standard
+    invocations: {nominal: 16, worst_case: 30}
+    activation: only_after_K0b00_and_per_work_item_gates
+  checkpoint_policy:
+    path: new pipeline/registry/checkpoint-budget-policy/v1.yaml
+    sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3
+    worst_case_delta_factor_before_measurement: 1.0
+
+binary_payload_scope:
+  control_plane: N_A_by_contract_no_binary_persistence
+  S: N_A_by_contract_no_binary_persistence
+  artifact_event_plane:
+    applicable_classes: [SQLite_checkpoint, synthetic_page_churn_and_BLOB_measurement_inputs]
+    requires_full_machine_readable_budget_and_D0_reconciliation: true
+
+owner_decisions_required_before_implementation:
+  - decision_id: K0b-D01-runtime-executor-binding
+    question: Select and hash-bind the permitted real-LLM transport/executor profile for F15 and other K0b physical calls; K0a manual-extension approval does not automatically extend to K0b.
+    options: [manual_extension_handoff_v1, separately_pinned_harness_adapter, narrow_and_pause_before_physical_F15]
+  - decision_id: K0b-D02-three-plan-scope
+    question: Approve, narrow, or reject the exact three reviewed delta-plan hashes and implementation work-item boundaries.
+    options: [approve, narrow, reject]
+  - decision_id: K0b-D03-checkpoint-budget-route
+    question: If the K0b compiler or measurements cross warning/hard thresholds, select the required storage/batching route before continuation.
+    options: [narrow_or_checkpoint_batching, raise_threshold_with_evidence, migrate_checkpoint_storage, pause]
+    activation: only_on_measured_or_forecast_crossing
+  - decision_id: K0b-D04-F15-invocation-budget-reconciliation
+    question: Reconcile the predeclared 36-attempt F15 matrix with the current K0b runtime forecast of 16 nominal and 30 worst-case calls before any physical invocation.
+    options: [approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast, revise_hypothesis_matrix_and_thresholds_before_execution, pause]
+    blocker_reason: 36_required_attempts_cannot_fit_inside_a_30_call_worst_case_envelope
+
+explicit_exclusions:
+  - K0b01_or_later_implementation_before_architecture_approval
+  - projects_swarm_or_any_real_product_run
+  - research_import_or_legacy_payload_access
+  - direct_provider_API_without_separate_owner_decision
+  - canonical_fixture_modification
+  - release_or_product_readiness_claim
+  - N1_or_later_layer_contracts
+  - full_M_or_automatic_pipeline_self_change
+  - CAS_LFS_external_checkpoint_backend
+  - distributed_project_lease_fleet
+
+exit_gate:
+  - three_delta_plans_each_cover_all_18_required_categories
+  - three_separate_author_invocations_and_three_fresh_context_reviews_resolve_in_the_design_ledger
+  - review_findings_have_dispositions_with_no_unresolved_blocker
+  - complexity_and_binary_payload_budgets_pass_or_have_owner_disposition
+  - cross_plan_interfaces_and_ownership_are_consistent
+  - owner_approval_hash_binds_all_three_plans_reviews_scope_and_executor_decision
+  - F15_invocation_budget_and_forecast_are_reconciled_without_hidden_or_post_hoc_credit
+  - no_K0b_runtime_contract_or_migration_exists_before_gate

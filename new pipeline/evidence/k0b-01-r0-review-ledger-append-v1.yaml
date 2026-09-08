@@ -1,0 +1,53 @@
+record_id: k0b-01-r0-review-ledger-append-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T18:35:00.9342105+03:00"
+work_item_id: K0b-01
+status: append_only_completed_review_entries_validated
+
+authority:
+  owner_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd}
+  ledger_schema: {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+
+ledger_transition:
+  path: new pipeline/ledgers/design-invocations.yaml
+  before_append_sha256: ed27ca29236d48178550ebfeb1e1c5e58f76b237aad42ed2d66fbb721ed150c2
+  before_append_binding:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+    record_role: pre_disposition_design_invocation_ledger
+  after_append_sha256: 55ae4cd0c142e3faf5c74048dd7d5c64bb76da0dfba5a61ac41e7297b3d4fcf0
+  before_entries: 45
+  appended_entries: 2
+  after_entries: 47
+  duplicate_invocation_IDs: 0
+  schema_validation: pass
+  append_only_interpretation: successor_activity_does_not_rewrite_the_historical_pre_disposition_hash_claim
+
+appended_records:
+  - invocation_id: k0b-01-review-migration-plan-r0
+    input_manifest_sha256: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66
+    output_sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2
+    recommendation: revise
+    open_blocking_findings: 5
+    evidence_qualification: reviewer_started_at_precedes_pre_dispatch_receipt_and_is_preserved_with_explicit_conflict
+  - invocation_id: k0b-01-review-compiler-budget-plan-r0
+    input_manifest_sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7
+    output_sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c
+    recommendation: revise
+    open_blocking_findings: 3
+    evidence_qualification: one_documented_syntax_only_YAML_normalization_after_reviewer_output
+
+non_reallocation:
+  expired_K0b_00_ordinals_29_30_reused: false
+  new_invocation_ID_namespace: K0b_01_review_package
+  runtime_or_F15_credit: 0
+  r1_reserve_consumed: 0
+
+non_authorizations:
+  - no_K0b_01_implementation_or_runtime_authority
+  - no_r1_dispatch_before_plan_revision_and_new_exact_inputs
+  - no_human_only_signoff_claim
+  - no_API_runtime_checkpoint_projection_or_fixture_effect
+  - no_commit_push_PR_deploy_or_release

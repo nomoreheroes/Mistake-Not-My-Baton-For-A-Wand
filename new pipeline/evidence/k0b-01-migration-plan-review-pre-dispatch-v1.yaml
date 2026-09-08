@@ -1,0 +1,68 @@
+receipt_id: k0b-01-migration-plan-review-pre-dispatch-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-07T18:21:30.0822289+03:00"
+work_item_id: K0b-01
+status: exact_ready_for_single_dispatch
+
+authority:
+  owner_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  owner_direction: {path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml, sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39}
+  review_budget: {path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217}
+
+dispatch:
+  invocation_id: k0b-01-review-migration-plan-r0
+  task_name: k0b01_migration_review_r0
+  canonical_actor_id: /root/k0b01_migration_review_r0
+  purpose: fresh_context_review
+  review_round: 0
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  model_selection_source: exact_spawn_agent_model_parameter
+  execution_surface: Codex_collaboration_subagent
+  fork_turns: none
+  inherited_author_context: false
+  direct_provider_API_REST_SDK_or_managed_credentials: false
+  review_input:
+    path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r0.yaml
+    sha256: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66
+  required_output:
+    path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml
+    format: YAML
+
+independence_and_capability_controls:
+  fresh_context_required: true
+  reviewer_authored_reviewed_plan: false
+  additional_subagents_or_model_calls: forbidden
+  network_web_API_plugins_connectors_or_external_state: forbidden
+  runtime_or_implementation_execution: forbidden
+  file_write_allowlist: [new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml]
+  canonical_fixture_access: forbidden
+  projects_swarm_access: forbidden
+  research_old_swarm_access: forbidden
+
+budget_binding:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  package_budget: {nominal: 2, worst_case: 4}
+  nominal_dispatch_ordinal: 1
+  call_cost: 1
+  checkpointed: false
+  runtime_or_F15_credit: 0
+  expired_K0b_00_ordinal_reuse: false
+
+ledger_binding:
+  invocation_ID_reserved_unique_before_dispatch: true
+  pending_incomplete_ledger_entry_created: false
+  completed_entry_required_after_terminal_output: true
+
+hard_stop:
+  - any_authority_or_review_input_hash_mismatch
+  - model_parameter_not_exactly_gpt_5_6_sol
+  - canonical_actor_or_task_name_mismatch
+  - output_path_exists_before_dispatch
+  - need_for_any_forbidden_input_action_or_additional_agent
+
+receipt_hash_binding:
+  complete_file_SHA256: external_dispatch_record_and_future_completed_ledger_evidence
+  self_embedded_hash: forbidden

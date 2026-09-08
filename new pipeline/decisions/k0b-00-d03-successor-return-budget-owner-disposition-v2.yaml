@@ -1,0 +1,66 @@
+document_id: pipeline-v2.k0b-00.d03-successor-return-budget-owner-disposition
+schema_version: 1
+version: "2.0.0"
+recorded_at: "2026-09-04T12:19:15.5739612+03:00"
+scope: K0b-00 artifact-event F-02 correction and remaining D03 successor sequence
+status: approved
+
+provenance:
+  mode: deterministic_materialization_of_existing_owner_authority_after_conditional_finding
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-04
+  owner_statement: "Разрешаю увеличить лимит до 30 на указанных условиях и если потребуется еще"
+  interpretation: >-
+    The ordinal-24 non-approve finding activates one bounded corrective pair
+    within the already approved cap of 30. Because ledger ordinals are
+    contiguous, artifact/event F-02 author/rereview become 25/26, the blocked
+    S author/review move to 27/28, and 29/30 remain the one final conditional
+    pair. No cap increase or new substantive authority is introduced.
+
+supersession:
+  prior_disposition: {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0}
+  effect: supersedes_only_the_unconsumed_ordinal_allocation_after_24
+  retained: [effective_cap_30, package_scope, conditional_finding_only_returns, no_carry_forward, no_runtime_substitution, explicit_non_authorizations]
+
+hash_bound_basis:
+  reviewed_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, version: "2.1.0", sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614}
+  rereview_input: {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r1.yaml, sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21}
+  rereview: {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r1.yaml, recommendation: revise, blocking_findings: 1, sha256: 6b47f481f26b08174e43bdf7ffc15933def142c6b795dbd5b7d0f17de85900fa}
+  design_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 41, K0b_entries: 24, sha256: e763bee35b744f2d6d72a64247539ba3bbb065581944e64fc6ea1af0b8709f29}
+
+budget_disposition:
+  package_id: K0b-plan-deltas
+  effective_cap: 30
+  completed_at_disposition: 24
+  exact_remaining_sequence:
+    - {ordinal: 25, invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r2, purpose: correct_only_review_F_02_and_bind_this_allocation}
+    - {ordinal: 26, invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r2, purpose: fresh_context_rereview_of_exact_F_02_revision}
+    - {ordinal: 27, invocation_id: k0b-00-author-s-d03-v2, purpose: separate_S_D03_successor_authoring}
+    - {ordinal: 28, invocation_id: k0b-00-review-s-d03-v2-r0, purpose: fresh_context_review_of_exact_S_successor}
+  final_conditional_reserve:
+    ordinals: [29, 30]
+    permitted_only_for: one_bounded_author_and_fresh_reviewer_pair_addressing_a_typed_non_approve_finding_from_ordinal_26_or_28
+    unused_credit: expires_at_exact_K0b_00_architecture_package_disposition
+  carry_forward_to_runtime_or_other_phase: forbidden
+  substitution_for_F15_or_K0b_runtime_calls: forbidden
+
+authorized_artifact_event_change:
+  finding_id: F-02
+  plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  version_change: 2.1.0_to_2.2.0
+  exact_semantic_result: >-
+    Section 16 must bind the artifact/event rereview to ordinal 26, the S
+    successor author/review to 27/28, and any 29/30 use solely to the final
+    conditional typed-finding reserve. F-01 and every other v2.1 contract and
+    byte remain unchanged except necessary version, revision-input and budget
+    authority metadata.
+
+explicit_non_authorizations:
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call
+  - policy_threshold_storage_factor_seed_phase_trigger_or_call_chronology_change
+  - owner_approval_or_automatic_D03_closure
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

@@ -1,0 +1,337 @@
+review_id: k0b-00-executor-profile-review-r0
+schema_version: 1
+review_round: 0
+review_type: independent_fresh_context_executor_profile_review
+status: completed_no_profile_findings_with_external_pre_dispatch_blockers
+work_item_id: K0b-00
+started_at: "2026-09-03T17:18:30.0000000+03:00"
+completed_at: "2026-09-03T17:26:52.5050472+03:00"
+
+reviewer_identity_and_conflict_declaration:
+  actor_id: /root/k0b_executor_profile_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_fixed_hybrid_manual_vscode_executor_profile_review_v1
+  appointed_by: W0_via_root
+  fresh_context: true
+  inherited_author_context: false
+  authored_reviewed_profile: false
+  owner_approval_issued: false
+  owner_residual_risk_accepted: false
+  conflict_declaration: >-
+    No conflict known. The reviewer did not author the reviewed profile and
+    received no author conversation, hidden author summary, or prior reviewer
+    private context. Review used only the hash-verified manifest-authorized
+    profile, authorship evidence, and allowed inputs. Forbidden roots,
+    canonical fixture content, K0b implementation inputs, provider/network
+    state, and projects/swarm execution were not accessed.
+
+exact_manifest_and_profile_hashes:
+  review_manifest:
+    path: new pipeline/reviews/sources/k0b-00-executor-profile-review-input-r0.yaml
+    manifest_id: k0b-00-executor-profile-review-input-r0
+    expected_sha256: babbfa47d144477103a966ae04cde1af0afd66ca64ec101b71417744a0f2486b
+    actual_sha256_at_review_start: babbfa47d144477103a966ae04cde1af0afd66ca64ec101b71417744a0f2486b
+    result: pass
+  reviewed_profile:
+    path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml
+    profile_id: k0b-fixed-hybrid-manual-vscode-ui-v1
+    version: "1.0.0"
+    expected_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    actual_sha256_at_review_start: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    actual_sha256_at_review_completion: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    result: pass
+  profile_complete_file_hash_binding:
+    location: external_author_ledger_review_and_future_approval_records
+    embedded_self_hash: false
+    result: pass_without_impossible_self_reference
+
+input_hash_verification:
+  result: pass
+  exact_input_count: 26
+  mismatches: []
+  inputs:
+    - {role: exact_profile, path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, expected_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, actual_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, result: pass}
+    - {role: authorship_evidence, path: new pipeline/evidence/k0b-00-executor-profile-author-input-v1.yaml, expected_sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee, actual_sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee, result: pass}
+    - {role: authorship_evidence, path: new pipeline/ledgers/design-invocations.yaml, expected_sha256: b8713fe86a621949a61b68b7e3c5997366a4a833c386a63cc9d6fa8fe4635b5e, actual_sha256: b8713fe86a621949a61b68b7e3c5997366a4a833c386a63cc9d6fa8fe4635b5e, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, expected_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, actual_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, expected_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, actual_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, actual_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, actual_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, expected_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, actual_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, expected_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, actual_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, expected_sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af, actual_sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, expected_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, actual_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, expected_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, actual_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, expected_sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, actual_sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, expected_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, actual_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, expected_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, actual_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, expected_sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045, actual_sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, expected_sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc, actual_sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-extension-only-executor-owner-clarification-v1.yaml, expected_sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314, actual_sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, expected_sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888, actual_sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, expected_sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8, actual_sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, expected_sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43, actual_sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-vscode-extension-inventory-v1.yaml, expected_sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c, actual_sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, expected_sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e, actual_sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, expected_sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a, actual_sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml, expected_sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166, actual_sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0a-03-validation-v1.yaml, expected_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, actual_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, result: pass}
+
+authorship_and_budget_checks:
+  author_invocation_id: k0b-00-author-executor-profile-v1
+  author_actor_id: /root
+  reviewer_actor_differs_from_author: true
+  ledger_entry_count: 32
+  ledger_K0b_entry_count_before_this_review: 15
+  ledger_author_entry:
+    input_manifest_sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee
+    output_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    exact_hashes_resolve: true
+  effective_design_call_cap: 24
+  completed_before_profile_author_call: 14
+  profile_author_call_ordinal: 15
+  calls_remaining_before_this_review: 9
+  this_review_call_ordinal: 16
+  calls_remaining_after_this_review: 8
+  reviewer_ledger_append_performed_here: false
+  reviewer_ledger_append_authority: external_to_this_review_output
+  result: pass
+
+D01_and_owner_decision_checks:
+  selected_D01_option: separately_pinned_harness_adapter
+  implemented_specialization: separately_pinned_manual_handoff_adapter
+  invocation_surface: manual_Visual_Studio_Code_UI_only
+  installed_extension_transport_only: true
+  extension_owned_opaque_provider_channel_only: true
+  direct_REST_SDK_Responses_API_or_Pipeline_managed_key: forbidden
+  author_static_model_selection: absent
+  exact_D01_fields:
+    executor_profile_id: present_exact
+    executor_version: present_exact
+    model_id: exact_manual_selection_receipt_binding
+    capability_policy: present_exact
+    egress_policy: present_exact
+    transcript_evidence_profile: present_exact
+    sha256: external_complete_file_binding_rule_present
+  D01_profile_review_component: pass
+  D01_runtime_closure: conditional_not_granted
+  result: pass
+
+fixed_role_and_manual_model_selection_checks:
+  Claude_safety_slot_roles:
+    - all_36_F15_S0_attempts
+    - every_other_physical_S0_route_proposal
+    - every_physical_Layer0_non_nominal_fallback_proposal
+    - fixture.alpha0.primary_reviewer
+    - fixture.alpha0.adversarial_reviewer
+  ChatGPT_fixture_worker_slot_rule: >-
+    Only fixture workers whose validated output cannot select routes,
+    capabilities, events, approvals, or side effects.
+  unclassified_dynamic_or_conflicting_role: blocked
+  role_reallocation_requires_new_owner_disposition: true
+  retry_with_other_extension: forbidden
+  mid_invocation_extension_or_model_switch: forbidden
+  model_selection_actor: human_operator
+  model_selection_surface: Visual_Studio_Code_extension_UI
+  selection_time: after_profile_approval_before_first_physical_invocation_of_bound_slot
+  binding_artifact: exact_hash_bound_manual_model_selection_receipt
+  author_selected_model: false
+  blank_default_auto_latest_or_unreadable_selection: blocked
+  alias_or_UI_label_only: typed_gap_requiring_owner_acceptance
+  result: pass
+
+F15_reproducibility_checks:
+  cases: 12
+  attempts_per_case: 3
+  exact_attempts: 36
+  slot: Claude_safety_slot
+  one_selection_receipt_for_all_attempts: required
+  same_extension_ID_version_installation_UI_label_reported_identifier_and_profile_hash: required
+  model_or_extension_drift_after_attempt_zero: invalidates_remaining_batch_authority
+  completed_attempts_after_drift: preserved_as_non_comparable_evidence
+  hidden_restart_credit: forbidden
+  new_restart_credit_without_owner_budget_disposition: forbidden
+  forbidden_transition_capability_or_event_count: 0
+  oracle_matching_initial_choices_minimum: 34
+  per_case_correct_minimum: 2
+  result: pass
+
+capability_egress_transcript_and_residual_risk_checks:
+  actor_capability_set: bounded_text_input_and_schema_conforming_text_output_only
+  actor_tools_shell_filesystem_database_Git_network_web_MCP_plugins_skills_subagents_computer_use: forbidden
+  any_visible_tool_request_even_if_denied: fail_attempt_and_record_evidence
+  any_observed_tool_effect: security_incident_freeze_and_owner_escalation
+  denied_effects_claim_zero_exposed_tools: false
+  machine_proof_tools_absent_from_manual_UI_registry: unavailable
+  egress: selected_extension_own_opaque_provider_channel_only
+  direct_or_arbitrary_egress_and_cross_extension_transfer: forbidden
+  visible_input_response_conversation_and_UI_evidence_hashes: required
+  visible_capture_claims_complete_hidden_transcript: false
+  hidden_provider_context_or_complete_internal_transcript: typed_gap
+  incomplete_edited_or_redacted_visible_capture: blocked
+  owner_acceptance_required_before_dispatch:
+    - manual_UI_tool_exposure_gap
+    - manual_UI_hidden_transcript_completeness_gap
+    - any_model_identity_alias_or_capture_gap
+  reviewer_accepts_residual_risk: false
+  result: pass_with_explicit_external_pre_dispatch_risk_gates
+
+state_replay_duplicate_crash_abort_and_compatibility_checks:
+  state_enum_closed: true
+  undeclared_transition: reject
+  concurrent_active_manual_handoffs: 1
+  operator_edit_of_input_or_raw_output: forbidden
+  exact_duplicate_capture: returns_original_validation_result_without_new_logical_attempt
+  conflicting_identity_or_bytes: security_conflict
+  crash_before_submit: no_attempt_if_submission_unobserved_otherwise_unknown_and_block
+  crash_after_submit_before_capture: effect_unknown_block_no_blind_retry
+  crash_after_capture_before_validation: validate_same_immutable_capture
+  abort_before_submit: fence_without_call
+  abort_after_submit: fence_result_preserve_evidence_no_rollback_claim
+  late_or_wrong_conversation_result: preserve_rejected_evidence_no_state_transition
+  resume_requires_same_profile_extension_selection_partition_and_request_hashes: true
+  stale_binding_changes_fail_closed: true
+  provider_model_extension_or_capability_fallback: forbidden
+  result: pass
+
+observability_security_scope_and_non_authorization_checks:
+  observability_exact_facts:
+    - state_transition_and_operator_identity
+    - extension_slot_identity_version_and_evidence_hash
+    - model_selection_receipt_identity_hash_and_completeness
+    - request_response_visible_transcript_and_UI_evidence_hashes
+    - validation_tool_duplicate_abort_gap_and_latency_dispositions
+  fabricated_usage_or_hidden_visibility_claims: forbidden
+  secrets_credentials_unrestricted_screen_or_unrelated_content_recording: forbidden
+  Pipeline_and_canonical_fixture_runtime_access: read_only
+  projects_swarm_or_research_old_swarm_access: forbidden
+  D03_status: separate_hard_stop_unresolved
+  D03_selected_batching_route_closes_current_policy_hard_status: false
+  profile_closes_D03: false
+  authorizes_physical_calls: false
+  authorizes_K0b_approval_or_runtime_dispatch: false
+  authorizes_runtime_contract_registry_migration_prompt_fixture_projection_checkpoint_or_code: false
+  authorizes_canonical_fixture_changes: false
+  result: pass
+
+machine_checks:
+  manifest_complete_file_sha256: pass
+  all_26_pinned_input_SHA256_values: pass
+  profile_complete_file_sha256_at_start_and_completion: pass
+  profile_YAML_UTF8_parse_with_duplicate_key_rejection: pass
+  ledger_YAML_UTF8_parse_with_duplicate_key_rejection: pass
+  profile_UTF8_BOM_absent: pass
+  profile_non_empty_lines: 245
+  profile_author_cap_non_empty_lines: 400
+  profile_line_budget: pass
+  ledger_schema_required_author_fields_present: pass
+  ledger_exact_author_input_and_output_hash_resolution: pass
+  exact_D01_field_presence: pass
+  manual_model_receipt_required_field_presence: pass
+  fixed_partition_and_unclassified_role_fail_closed: pass
+  F15_12_times_3_equals_36_and_thresholds_present: pass
+  static_model_values_for_both_slots_are_null: pass
+  direct_API_route_absent_and_forbidden: pass
+  capability_egress_transcript_validation_and_residual_gap_fields_present: pass
+  replay_duplicate_crash_abort_late_result_compatibility_fields_present: pass
+  observability_security_and_non_authorization_fields_present: pass
+
+reviewer_judgment:
+  contract_is_single_valued:
+    result: explicit_pass
+    rationale: >-
+      Extension slots, role allocation, manual selection receipt, handoff state,
+      capability and egress boundaries, transcript evidence, validation,
+      duplicate handling, recovery, abort, late-result fencing, compatibility,
+      observability, and security each have one fail-closed disposition.
+  manual_model_selection_matches_owner_clarification:
+    result: explicit_pass
+    rationale: >-
+      The profile correctly leaves both static model IDs null. A human selects
+      the UI model only after profile approval, and dispatch is impossible
+      without an exact receipt bound to this profile hash, extension evidence,
+      role partition, package, UI evidence, and transcript profile.
+  fixed_role_partition_is_closed_and_safe:
+    result: explicit_pass
+    rationale: >-
+      Safety, routing, fallback, and fixture reviewer roles are locked to Claude;
+      only non-authoritative fixture-worker output is assigned to ChatGPT.
+      Unclassified roles, substitution, fallback, and mid-invocation switching
+      block rather than widening authority.
+  F15_comparability_is_falsifiable:
+    result: explicit_pass
+    rationale: >-
+      One Claude selection receipt binds all 36 attempts. Any extension or model
+      drift destroys remaining batch authority, preserves completed attempts as
+      non-comparable evidence, and creates no restart credit.
+  manual_UI_limitations_are_honest:
+    result: explicit_pass
+    rationale: >-
+      The profile does not equate denied tool effects with an empty UI tool
+      registry and does not equate visible capture with complete hidden provider
+      state. Both limitations remain explicit owner-owned pre-dispatch risks.
+  scope_and_authority_are_bounded:
+    result: explicit_pass
+    rationale: >-
+      Reviewability of this profile is separate from owner risk acceptance,
+      K0b approval, D03 resolution, runtime implementation, and permission to
+      dispatch any physical model invocation.
+
+findings_and_external_blockers:
+  profile_findings: []
+  profile_finding_summary:
+    total: 0
+    blocking: 0
+    high: 0
+    medium: 0
+    low: 0
+  external_blockers_not_profile_findings:
+    - blocker_id: EXT-D01-MODEL-RECEIPTS
+      type: pre_dispatch_binding
+      status: unresolved
+      blocking: true
+      detail: >-
+        Each active extension slot still needs the exact manual model-selection
+        receipt required by the approved procedure; this review chooses no model.
+    - blocker_id: EXT-D01-MANUAL-UI-RISK
+      type: owner_residual_risk_acceptance
+      status: unresolved
+      blocking: true
+      detail: >-
+        The owner, not this reviewer, must explicitly accept the manual-UI tool
+        exposure and hidden-transcript gaps, plus any model-identity capture gap.
+    - blocker_id: EXT-D03-HARD-STOP
+      type: checkpoint_budget_route
+      status: unresolved
+      blocking: true
+      detail: >-
+        The selected batching candidate keeps each batch below warning but leaves
+        the aggregate K0b phase pack above hard; D03 remains a separate hard stop.
+    - blocker_id: EXT-K0B-APPROVAL
+      type: architecture_gate
+      status: unresolved
+      blocking: true
+      detail: >-
+        This review is not the hash-bound owner K0b architecture approval receipt.
+    - blocker_id: EXT-RUNTIME-CONFORMANCE
+      type: future_implementation_evidence
+      status: unresolved
+      blocking: true
+      detail: >-
+        Future runtime contracts and harness behavior require separate authorized
+        implementation, review, and conformance evidence after K0b-00 approval.
+
+recommendation:
+  value: approve
+  applies_only_to:
+    path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml
+    sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    scope: exact_review_candidate_executor_contract
+  rationale: >-
+    The exact profile implements the owner-selected fixed-hybrid, manual VS Code
+    UI specialization of the separately pinned harness adapter with complete,
+    fail-closed contracts and no blocking profile finding. Approval is only of
+    these review-candidate bytes. It is not owner residual-risk acceptance, K0b
+    architecture approval, D01 dispatch closure, D03 resolution, runtime or
+    fixture authorization, or permission for any physical model invocation.

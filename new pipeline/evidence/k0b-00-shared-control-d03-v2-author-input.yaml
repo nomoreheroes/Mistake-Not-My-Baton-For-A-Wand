@@ -1,0 +1,85 @@
+manifest_id: k0b-00-shared-control-d03-v2-author-input
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T19:32:07.9387926+03:00"
+status: closed_exact_revision_author_input
+work_item_id: K0b-00
+
+invocation:
+  invocation_id: k0b-00-author-shared-control-d03-v2
+  role: author
+  actor_id: /root
+  provider: openai
+  model: gpt-5.6-sol
+  profile: codex_root_k0b_shared_control_D03_v2_author
+  package_id: K0b-plan-deltas
+  budget_cap: 24
+  completed_before_this_invocation: 18
+  ordinal_if_completed: 19
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  - {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  - {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f}
+  - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md, sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896}
+  - {path: new pipeline/reviews/k0b-00-d03-checkpoint-phase-partition-review-r0.yaml, recommendation: revise, sha256: 814745fd7a4026bc5f8f20f1bebb511c44656d43a19c634ea6df86be062e2107}
+  - {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+  - {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 35, K0b_entries: 18, sha256: 256e08d9a04e2b0e32f471251a214294df7d75b2b2675427de37173d30c785f7}
+
+revision_task:
+  ordered_outputs:
+    - new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml
+    - new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+    - new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+    - new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+    - new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md
+    - new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+  requirements:
+    - Resolve review F-01 with an explicit K0b-only owner-approved policy overlay whose threshold unit is exactly two ordered, chronological, contiguous, non-overlapping, exhaustive checkpoint budget phases inside the parent K0b program phase.
+    - Resolve F-02 by assigning all non-F15 physical model calls to the operational phase before seal and making post-F15 K0b-04/K0b-05 deterministic with zero model calls in scope and shared control v2.
+    - Resolve F-03 with exactly four stable boundary trigger IDs covering entry gate, program owner wait or exit, exit gate, and the one top-level run end; a fifth blocks and reforecasts.
+    - Resolve F-04 by creating new scope and shared-control plan files, never editing v1 bytes; bind downstream artifact/event and S v2 revisions as required before final closure.
+    - Preserve unchanged hard/warning/checkpoint bytes, same fixture chain, batch cap 12, factor 1.0, zero credit, exact operational 16/30 and F15 36/36, binary seeds, and conservative phase arithmetic.
+    - Define compiler outputs, phase/time intervals, work-item/call allocation, trigger identities, publisher/outbox/seal sequencing, replay/reconciliation, crash/idempotency/duplicates, abort/late results, compatibility, observability, security, and acceptance.
+    - Cover all 18 Layer Architecture Gate categories in shared control v2 and addendum v2; preserve all passing v1 control contracts except exact D03 authority changes.
+    - Make policy overlay and scope v2 owner-approved candidates whose final activation still requires three v2 plan reviews and exact K0b approval; do not claim this author closes D03.
+
+allowed_writes:
+  - new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml
+  - new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+  - new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+  - new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+  - new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md
+  - new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+  - append_one_author_entry_to_new_pipeline/ledgers/design-invocations.yaml
+
+forbidden_inputs_and_actions:
+  - research/old-swarm
+  - projects/swarm
+  - canonical_fixture_content_or_modification
+  - runtime_code_contract_migration_prompt_fixture_projection_checkpoint_or_physical_invocation
+  - editing_any_v1_scope_plan_forecast_reconciliation_addendum_or_review
+  - editing_shared_artifact_event_or_S_v2_in_this_invocation
+  - independent_review_in_this_author_invocation
+  - threshold_raise_storage_migration_external_backend_or_unmeasured_credit
+  - commit_push_merge_deploy_or_release
+
+stop_conditions:
+  - any_allowed_input_hash_mismatch
+  - any_unresolved_F01_F02_F03_or_control_portion_of_F04
+  - any_phase_pack_at_or_above_hard_or_any_checkpoint_at_or_above_hard
+  - any_need_for_more_than_the_authorized_six_call_sequence

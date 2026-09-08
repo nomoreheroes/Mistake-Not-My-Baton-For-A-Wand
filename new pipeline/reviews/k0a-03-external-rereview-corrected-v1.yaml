@@ -1,0 +1,62 @@
+review_id: k0a-03-external-rereview-corrected-v1
+schema_version: 1
+version: "1.0.0"
+status: approved
+recorded_at: "2026-09-02T13:20:31+03:00"
+recording_mode: user_supplied_external_report_normalized_without_substantive_change
+
+source:
+  kind: codex_user_attachment
+  locator: 3c91e6f7-e896-4ae4-aafc-6b0d8440c321/pasted-text.txt
+  sha256: 85e5475f764a1abdcffc4aaf604f7e3f6a56eb454e59bdf96af0c53576467725
+  copied_into_repository: false
+  normalization_actor: /root
+  normalization_is_reviewer_authorship: false
+
+reviewed_identity:
+  commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  parent: 327f15a959e9038796a750be85c845d08cc0d441
+  commits_over_parent: 1
+  commit_message: Implement Pipeline v2 K0a-03 manual extension orchestration
+  worktree_clean: true
+  scope: exactly_12_authorized_K0a03_added_files
+
+verdict:
+  recommendation: approve
+  owner_approval: false
+  blocking_findings: 0
+  high_findings: 0
+  medium_findings: 0
+  low_findings: 0
+  k0b_authorized_by_review: false
+
+prior_findings:
+  hardlinked_atomic_temp:
+    disposition: closed
+    independent_probe: st_nlink_2_temp_failed_closed_without_request_promotion_duplicate_invocation_receipt_artifact_or_publication
+  incorrect_root_base_parent:
+    disposition: closed
+    verified_value: 2ad6175ffd051be9c80dcb7573f95eb8cc762df4
+
+verification:
+  full_pytest: {result: pass, tests: 93, subtests: 91}
+  ruff: pass
+  independent_fault_probes: {result: pass, count: 78}
+  sqlite_integrity_check: ok
+  sqlite_foreign_key_check_rows: 0
+  clean_clone: true
+  separate_canonical_fixture_clone_clean: true
+  root_worktree_clean: true
+  canonical_fixture_unmodified: true
+  physical_F00_repeat_required: false
+
+residual_risks:
+  - Claude executor binding and physical mid-route extension switching were not exercised by the real F00.
+  - Historical temporary candidate commits are absent from the current repository and are not load-bearing for the final gate.
+  - Atomic-temp stat/read checks retain fail-safe TOCTOU and filesystem link-count portability limitations.
+
+gate_disposition:
+  K0a_03: externally_approved_for_exact_reviewed_commit
+  K0b: requires_separate_owner_authorization_and_K0b00_architecture_gate
+  Alpha0_product_release: not_authorized

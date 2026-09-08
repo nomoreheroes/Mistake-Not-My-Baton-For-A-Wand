@@ -1,0 +1,71 @@
+document_id: pipeline-v2.k0b-00.plan-budget-extension-owner-disposition
+version: "1.0.0"
+recorded_at: "2026-09-03T11:07:23.6203270+03:00"
+scope: K0b-00 shared-control second bounded return pair only
+status: approved
+
+authority:
+  source: owner_response_to_explicit_budget_question
+  question: >-
+    Authorize increasing K0b-plan-deltas worst-case from 12 to 14 exclusively
+    for one-line shared-control revision r2 and independent rereview r2.
+  owner_response: "да"
+  interpreted_disposition: approve_exact_requested_extension
+
+hash_bound_basis:
+  scope:
+    path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml
+    sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a
+  reviewed_plan:
+    path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    version: "1.1.0"
+    sha256: 0e22dd506e9846dd0f0bda8290c6ddb9e061d7e6794a5e092ce630752b9f6ddd
+  rereview_input:
+    path: new pipeline/reviews/sources/k0b-00-shared-control-review-input-r1.yaml
+    sha256: 07d8f336a2b584e3f9735371c476a4ed30935bd8465bbfdc1b9ff2cca9e3c0c8
+  rereview:
+    path: new pipeline/reviews/k0b-00-shared-control-review-r1.yaml
+    sha256: 1f8a291312d98429f755f79e0137fbde49f56ca98f2bf6b8430637888455dd4b
+    recommendation: revise
+    remaining_blocking_findings: 1
+
+budget_disposition:
+  package_id: K0b-plan-deltas
+  base_invocations: {nominal: 6, worst_case: 12}
+  effective_invocations: {nominal: 6, worst_case: 14}
+  additional_invocations: 2
+  exact_authorized_invocations:
+    - invocation_id: k0b-00-revision-author-shared-control-r2
+      purpose: one_line_completion_reference_consistency_revision
+      target_finding: F-02
+    - invocation_id: k0b-00-review-shared-control-r2
+      purpose: fresh_context_rereview_of_exact_r2_hash
+      target_finding: F-02
+  carry_forward_credit: forbidden
+  substitution_or_reallocation: forbidden
+  further_return_after_r2: forbidden_without_new_owner_budget_disposition
+  stop_condition: >-
+    If rereview r2 does not recommend approve with zero blocking findings, pause
+    K0b-00 and return to the owner; do not start another author or review call.
+
+authorized_change:
+  plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+  required_semantic_result: >-
+    Completion from waiting must first transition to running, so the positive
+    compiler/reference case is waiting -> running -> completing -> completed;
+    waiting -> completing remains undeclared and must fail closed.
+  allowed_metadata_changes:
+    - plan_version_1_1_0_to_1_2_0
+    - exact_r2_revision_input_reference
+    - effective_budget_12_to_14_with_this_disposition_reference
+
+explicit_non_authorizations:
+  - any_change_to_K0b_D01_D02_D03_or_D04_disposition
+  - binary_forecast_reconciliation_or_threshold_route_selection
+  - artifact_event_or_S_plan_revision
+  - runtime_contract_registry_migration_prompt_fixture_or_physical_model_execution
+  - owner_approval_of_any_K0b_architecture_plan_or_implementation
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

@@ -1,0 +1,129 @@
+document_id: pipeline-v2.k0b-01.plan-v1.1-owner-direction
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T16:17:19.3563425+03:00"
+work_item_id: K0b-01
+decision: selected_for_plan_revision_and_bounded_review_preparation
+status: planning_authority_only
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  source_ref: current_thread_owner_choices_2026_09_07
+  first_choice_set: "1.A 2.B 3.C 4.C 5.B 6.B 7.C"
+  follow_up_choice_set: "1.A, 2.A, then C"
+  interpretation:
+    - full_dependency_closure_rebuild_for_migration
+    - two_independent_manual_VSCode_model_review_streams_first
+    - human_only_review_and_signoff_stage_after_model_reviews
+  interpretation_limit: human_reviewer_identity_capacity_and_exact_signoff_record_are_not_inferred
+
+authority_bindings:
+  final_K0b_00_owner_disposition:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+  original_K0b_01_plan:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f
+  unapproved_engineering_draft_freeze:
+    path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml
+    sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66
+
+selected_plan_resolutions:
+  unapproved_draft_treatment:
+    option: A
+    decision: preserve_and_freeze_non_authoritative_engineering_draft
+  plan_revision:
+    option: B
+    decision: materialize_K0b_01_planning_package_v1_1
+  migration_shape:
+    initial_option: C
+    follow_up_option: A
+    decision: rebuild_full_existing_dependency_closure
+    exact_tables: [runs, run_state_transitions, events, event_deliveries]
+    requirements:
+      - one_transaction_after_verified_new_path_backup
+      - preserve_all_historical_F00_rows_IDs_values_lineage_and_counts
+      - preserve_foreign_key_relationships_and_immutable_history
+      - K0a_reader_rejects_schema_v4_as_newer_unsupported
+      - no_runtime_activation
+  event_contract_shape:
+    option: C
+    decision: one_self_contained_schema_file_per_each_of_exactly_21_events
+    shared_schema_file: forbidden
+    dangling_or_external_schema_ref: forbidden
+  compiler_receipts:
+    option: B
+    decision: two_typed_compiler_receipts_plus_one_aggregate_manifest
+    receipt_streams: [registry_and_routing, resource_and_budget]
+  reference_equivalence:
+    option: B
+    decision: versioned_input_expected_vectors_plus_separate_independent_test_oracle
+    production_compiler_may_read_expected_values: false
+  independent_review_topology:
+    option: C
+    decision: two_independent_review_streams
+    streams: [migration_plan, compiler_and_budget_plan]
+    bounded_revision_policy: at_most_one_re_review_per_stream_only_for_blocking_findings
+  review_execution_profile:
+    follow_up_option: A
+    transport: manual_VSCode_UI_only
+    provider_API: forbidden
+    model_review_budget: {nominal: 2, worst_case: 4}
+    exact_manual_model_and_model_ID_pre_dispatch_receipt_before_every_call: required
+    expired_K0b_00_design_ordinals_29_30_reuse: forbidden
+  post_model_review_stage:
+    follow_up_option: C
+    decision: human_only_review_and_signoff_after_both_model_review_streams
+    ordering: strictly_after_both_model_streams_reach_terminal_outputs
+    reviewer_identity_capacity_budget: pending_explicit_assignment
+    completion_or_approval_claim: forbidden_until_exact_human_record_exists
+
+authorized_materialization_now:
+  - K0b_01_planning_package_v1_1
+  - review_budget_supplement_for_the_selected_2_4_model_review_package
+  - migration_plan_review_input_r0
+  - compiler_budget_plan_review_input_r0
+
+review_dispatch_authority:
+  necessity: approved_for_the_two_selected_plan_review_streams
+  invocation_budget: {nominal: 2, worst_case: 4}
+  dispatch_now_required: false
+  dispatch_preconditions:
+    - exact_v1_1_plan_and_review_input_complete_file_hashes_verified
+    - separate_ledger_compliant_invocation_ID_created_before_each_dispatch
+    - exact_manual_model_and_model_ID_pre_dispatch_receipt_created_before_each_dispatch
+    - manual_VSCode_UI_visible_transcript_controls_satisfied
+    - no_provider_API_or_credential_fallback
+  r1_use: only_when_corresponding_r0_has_open_blocking_findings
+  unused_worst_case_capacity: expires_with_this_exact_review_package_and_cannot_be_credited
+
+implementation_entry_gate:
+  state: closed
+  required_before_open:
+    - both_independent_review_outputs_recommend_approve_with_zero_open_blocking_findings
+    - exact_human_only_review_and_signoff_record
+    - separate_exact_hash_bound_K0b_01_implementation_owner_disposition
+    - implementation_write_set_and_validation_scope_bound_to_the_reviewed_plan
+  frozen_draft_cannot_satisfy_any_gate: true
+
+checkpoint_budget_invariants:
+  exact_phase_count: 2
+  exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  plan_review_calls_are_design_time_and_checkpointed: false
+  K0b_01_implementation_physical_model_calls: {nominal: 0, worst_case: 0}
+  runtime_phase_activation_by_this_record: forbidden
+  cross_package_or_cross_phase_credit: forbidden
+
+explicit_non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_import_execution_or_activation_of_the_frozen_engineering_draft
+  - no_physical_model_call_without_all_review_dispatch_preconditions
+  - no_provider_API_REST_SDK_Responses_API_or_managed_credentials
+  - no_reuse_or_reallocation_of_expired_K0b_00_design_ordinals_29_or_30
+  - no_third_checkpoint_budget_phase_or_threshold_or_storage_change
+  - no_canonical_fixture_read_write_or_runtime_use
+  - no_projects_swarm_read_run_or_modification
+  - no_research_old_swarm_read_or_modification
+  - no_commit_push_PR_deploy_or_release

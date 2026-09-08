@@ -1,0 +1,203 @@
+evidence_id: k0b-01-validation-v1
+schema_version: 1
+generated_at: "2026-09-07T10:21:26.3831493Z"
+status: validated_zero_call_implementation_candidate
+work_item: K0b-01
+claim_boundary:
+  establishes:
+    - exact_schema_v3_to_v4_forward_migration_candidate
+    - closed_21_event_Alpha0_definition_and_subscription_terminal_snapshot
+    - closed_five_route_S_profile_and_F04_F05_rules
+    - deterministic_registry_routing_and_resource_budget_compilation
+    - exact_two_phase_checkpoint_budget_reference_equivalence
+    - fail_closed_binary_payload_budget_validation
+  does_not_establish:
+    - independent_review_or_owner_completion_approval
+    - runtime_phase_activation_or_runtime_readiness
+    - checkpoint_or_projection_publication
+    - physical_model_dispatch_or_F15_execution
+    - K0b02_K0b03_K0b04_K0b05_or_N1_completion
+
+authority_bindings:
+  base_git_commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  base_git_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  final_K0b00_disposition:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+  K0b01_plan:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f
+  implementation_owner_disposition:
+    path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
+    sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
+  final_K0b00_record_hash_recheck:
+    records: 33
+    matched: 33
+    mismatched: 0
+    result: pass
+
+implementation_artifacts:
+  - {path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json, sha256: fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654}
+  - {path: new pipeline/registry/alpha0/event-profile-v1.yaml, sha256: ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2}
+  - {path: new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml, sha256: 62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab}
+  - {path: new pipeline/registry/alpha0/s-routing-profile-v1.yaml, sha256: 0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf}
+  - {path: new pipeline/registry/resource-budget-policy/v1.yaml, sha256: 3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9}
+  - {path: new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml, sha256: f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1}
+  - {path: new pipeline/harness/migrations/0004_k0b01.sql, sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a}
+  - {path: new pipeline/harness/k0b01/__init__.py, sha256: e029a9aa3699ac7f159ebdfd21880455a4bcd98727a5e06ae54273a400efdb59}
+  - {path: new pipeline/harness/k0b01/contract.py, sha256: 12ea694ffdf21d2396d1831d78df4fe2f95f06b90051a66ce9e1121403f75898}
+  - {path: new pipeline/harness/k0b01/compiler.py, sha256: 3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5}
+  - {path: new pipeline/harness/k0b01/budget.py, sha256: d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71}
+  - {path: new pipeline/harness/k0b01/store.py, sha256: 8efbab7e3395874150289f4edfca4ed5d5e913d7550a911396128260fb18f05a}
+  - {path: new pipeline/tests/contracts/test_k0b01_contracts.py, sha256: 777e27bc6c0ccec71828ff20a952cf15853bb4686a9667e90051d3b60ba4c4e9}
+  - {path: new pipeline/tests/contracts/test_k0b01_routing_compiler.py, sha256: 2816e2bac8df9b7f14fad38270d527906ed2c6651114a8b21498661314cf0b6a}
+  - {path: new pipeline/tests/contracts/test_k0b01_resource_budget.py, sha256: 2d30b21391b2bda0fe0788e7fcb07320dc166cac7df7345099c789265d5dd103}
+  - {path: new pipeline/tests/foundation/test_k0b01_migration.py, sha256: 46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987}
+
+compiler_readback:
+  compiler_id: pipeline-v2.k0b01.registry-routing-compiler
+  compiler_version: 1.0.0
+  compiler_hashes:
+    registry_routing_sha256: 3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5
+    resource_budget_sha256: d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71
+  aggregate_digest: 063754f5a8462ffe1ee6029f69d6cb0058c99b9f499ed9ad99c7ce0705e3f113
+  source_hashes:
+    contract_package: fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654
+    event_profile: ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2
+    subscription_profile: 62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab
+    routing_profile: 0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf
+    resource_policy: 3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9
+    reference_cases: f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1
+  output_hashes:
+    compiled_artifact_event_profile: 0d2a82ab7eed72192bbcfbfc46cb85db4cd2cb83b81bfdbf2b35fe3109f68b65
+    compiled_event_reachability_graph: 63d9a20e8ef3d1f5b9acb26de1a78f6b63cd14b79e9afdcce054767c2969caa3
+    compiled_subscription_terminal_snapshot: 9f4da0b9ca49ef648a19dff71ef9cf7e82746236264bd6b30716f1913016d583
+    compiled_s_route_table_v2: 2e2b625f3450e96b91bdf5a961e6b5a42f99934f14e7f315b945bd3869150f01
+    compiled_fanout_barrier_profile: 189e3b4ba82c63f666d5034d6b5a83a8e4d951909424e8d938510c8cebc7a36e
+    compiled_resource_forecast: 49629947800bedf61cdebff7d4ccdab64ead702d9ada9b8b9a6b088a8bce6826
+    compiled_checkpoint_phase_partition_v1: 5d043d82d04d409e05267cfd9a0ae2b4a8d5291cf67120fa234b02d3ebf7552d
+    compiled_checkpoint_publication_budget_v2: 395b7a16bf53391fb0919b1dadb57b2c56b5beb0d9519a7fd135f18743170c9f
+  closed_graph_counts:
+    event_types: 21
+    subscription_terminal_routes: 16
+    S_routes: 5
+    reachability_nodes: 52
+    reachability_edges: 42
+    consumed_field_owners: 64
+    dangling_routes_or_fields: 0
+
+resource_reference_equivalence:
+  status: exact_field_value_match
+  cases:
+    - case_id: k0a-bootstrap-reference-v1
+      total_calls: {nominal: 9, worst_case: 24}
+      publisher_available: false
+      phase_pack_bytes: {nominal: 0, worst_case: 0}
+    - case_id: k0b-approved-two-phase-reference-v1
+      total_calls_including_bound_design_history_and_later_packages: {nominal: 58, worst_case: 90}
+      K0b01_physical_model_calls: {nominal: 0, worst_case: 0}
+      binary_seed_object_count: {nominal: 6, worst_case: 12}
+      binary_payload_bytes: {nominal: 2236416, worst_case: 4472832}
+      checkpoint_phase_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+      phases:
+        K0b-runtime-operational:
+          checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+          publications: {nominal: 14, worst_case: 34}
+          phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+        K0b-F15-exact-measurement:
+          checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+          publications: {nominal: 12, worst_case: 26}
+          phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+      cumulative_observable_phase_pack_bytes:
+        nominal: 257949696
+        worst_case: 1881145344
+        used_as_phase_credit: false
+  fixed_F15_boundary_trigger_count: 4
+  third_phase_present: false
+  all_credit: 0
+  unchanged_hard_limits:
+    checkpoint_bytes_strictly_below: 104857600
+    phase_pack_bytes_strictly_below: 1073741824
+    warning_at_bytes: 536870912
+    publication_batch_cap: 12
+    publication_p95_seconds_strictly_below: 10
+    clean_clone_restore_seconds_strictly_below: 120
+
+migration_validation:
+  direction: schema_v3_to_schema_v4_forward_only
+  migration_sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a
+  earlier_migration_bytes_changed: false
+  source_fixture: generated_temporary_database_only
+  verified_controls:
+    - exact_v1_v2_v3_history_and_schema_fingerprint_preflight
+    - explicit_new_backup_path_required
+    - backup_integrity_foreign_keys_content_digest_and_table_counts_match_source
+    - historical_table_content_digest_matches_before_during_and_after_upgrade
+    - v4_schema_fingerprint_integrity_and_foreign_keys_match
+    - restored_backup_to_distinct_new_temporary_path
+    - repeated_v4_initialization_is_idempotent
+    - K0a_v3_reader_rejects_schema_v4
+    - changed_migration_bytes_fail_before_backup
+    - missing_extra_or_reidentified_migration_records_fail_closed
+    - unknown_twenty_second_event_and_seventeenth_subscription_route_fail_at_SQL_boundary
+    - compiled_bundle_is_atomic_immutable_hash_bound_and_idempotent
+  injected_failure_points:
+    - before_backup
+    - after_backup
+    - during_schema_application
+    - before_migration_row_insert
+    - before_commit
+  injected_failure_result: exact_schema_v3_no_partial_v4
+
+verification:
+  environment:
+    python: 3.12.7
+    sqlite: 3.45.3
+    ruff: 0.15.1
+  unit_tests:
+    commands:
+      - python -B -m unittest discover -s "new pipeline/tests/contracts" -p "test_k0b01_*.py"
+      - python -B -m unittest discover -s "new pipeline/tests/foundation" -p "test_k0b01_*.py"
+    contract_routing_budget_tests: {ran: 22, failures: 0, errors: 0, exit_code: 0}
+    migration_persistence_tests: {ran: 8, failures: 0, errors: 0, exit_code: 0}
+    aggregate: {ran: 30, failures: 0, errors: 0, result: pass}
+    prohibited_fixture_or_legacy_source_used: false
+  determinism_vectors:
+    repeated_compilation: byte_identical
+    changed_working_directory: byte_identical
+    C_locale: byte_identical
+    reversed_map_insertion_order: byte_identical
+  lint:
+    command: ruff check --no-cache <exact K0b-01 Python write-set>
+    result: pass
+  format:
+    command: ruff format --check <exact K0b-01 Python write-set>
+    result: pass
+
+scope_and_capability_audit:
+  checkpoint_budget_phase: K0b-runtime-operational
+  checkpoint_budget_phase_activated: false
+  physical_model_calls_executed: 0
+  manual_VSCode_dispatches: 0
+  provider_API_REST_SDK_or_Responses_API_calls: 0
+  network_calls: 0
+  independent_reviews_or_design_invocations_launched: 0
+  canonical_fixture_reads_writes_or_runs: 0
+  projects_swarm_reads_runs_or_writes: 0
+  research_old_swarm_reads_or_writes: 0
+  checkpoint_publications: 0
+  projection_writes: 0
+  commits_pushes_merges_PRs_deploys_or_releases: 0
+  runtime_or_product_readiness_claimed: false
+  pre_existing_user_changes_preserved: true
+  implementation_paths_outside_exact_owner_write_set: 0
+  result: pass
+
+remaining_runtime_prerequisites:
+  - K0b02_projection_outbox_renderer_checkpoint_publisher_replay_and_phase_seal_persistence
+  - K0b03_runtime_contract_harness_security_replay_crash_abort_and_clean_clone_conformance
+  - K0b04_pre_F15_dispatch_authority_and_exact_manual_pre_dispatch_receipts
+  - terminal_operational_phase_seal_before_F15
+  - exact_36_call_F15_package_and_four_trigger_runtime_measurement
+  - deterministic_post_F15_K0b04_closure_and_K0b05_in_the_same_top_level_run
+  - separate_owner_completion_or_next_work_item_authority

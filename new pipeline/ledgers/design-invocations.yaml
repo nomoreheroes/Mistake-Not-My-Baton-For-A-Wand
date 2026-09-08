@@ -267,4 +267,506 @@ entries:
     fresh_context: true
     inherited_author_context: false
     conflict_declaration: No known conflict; reviewer authored no reviewed plan version, received no author transcript or hidden author summary, used only manifest-authorized files, and performed a read-only review.
+  - invocation_id: k0b-00-author-shared-control-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_author
+    started_at: "2026-09-02T13:20:31.9942222+03:00"
+    completed_at: "2026-09-02T13:30:51.4573869+03:00"
+    input_manifest_sha256: d2da7a78e7e8dc46d04bf3a6c74f1e079f58aea766192283053571beeb653c97
+    output_sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823
+    review_round: 0
+  - invocation_id: k0b-00-author-shared-artifact-event-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_author
+    started_at: "2026-09-02T15:13:20.1872922+03:00"
+    completed_at: "2026-09-02T15:21:45.2432292+03:00"
+    input_manifest_sha256: 60f6a9134b2b36c41dee05264a0a4c975281ca46dee2e3b21e3196a6acd5b98e
+    output_sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a
+    review_round: 0
+  - invocation_id: k0b-00-review-shared-artifact-event-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_shared_artifact_event_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_architecture_delta_review_v1
+    started_at: "2026-09-02T15:39:28.9472550+03:00"
+    completed_at: "2026-09-02T15:45:53.1805677+03:00"
+    input_manifest_sha256: 538e45e4f354dac7e64471586c0e1245a41dae7da5a33febcef0f71c229eb869
+    output_sha256: 333d728699c9d2cb903be470aa6275cd085e91afecf68f445d20560605e312c0
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no plan version, received no author transcript or hidden summary, used only hash-verified manifest-authorized read-only inputs, and modified only the typed review output.
+  - invocation_id: k0b-00-revision-author-shared-artifact-event-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_revision_author
+    started_at: "2026-09-02T16:02:22.8488048+03:00"
+    completed_at: "2026-09-02T16:05:56.3603110+03:00"
+    input_manifest_sha256: c8b41fdac2bdbce52e9c7c833eb27949b0ac8d73214548a57a002672849f6524
+    output_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240
+    review_round: 1
+  - invocation_id: k0b-00-review-shared-artifact-event-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_shared_artifact_event_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_architecture_delta_rereview_v1
+    started_at: "2026-09-02T16:12:12.5632717+03:00"
+    completed_at: "2026-09-02T16:17:31.8998048+03:00"
+    input_manifest_sha256: 80b0c8e0ed39f07125c2110b2b3143390db2d93d7c8d615e279762ca879c7a36
+    output_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no plan version, received no author transcript, hidden summary, author input, or prior-reviewer context, used only hash-verified manifest-authorized inputs, and modified only the typed rereview output.
+  - invocation_id: k0b-00-author-s-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_author
+    started_at: "2026-09-02T16:27:04.0036193+03:00"
+    completed_at: "2026-09-02T18:24:44.7287062+03:00"
+    input_manifest_sha256: 9e9f348d0b9f162f998abd7e861d34d66b56ac370e01b1d8afd87503a1c7d9d2
+    output_sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04
+    review_round: 0
+  - invocation_id: k0b-00-review-s-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_s_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_s_architecture_delta_review_v1
+    started_at: "2026-09-02T18:33:57.8615072+03:00"
+    completed_at: "2026-09-02T18:47:52.6366150+03:00"
+    input_manifest_sha256: bc09d3818f94c1b6224096c1d3054691b83de00f62633dd76a592c483346cd21
+    output_sha256: 44bea1556895584b67ec4e8098f8bce9a97e3901b84b723ad9cda7f3ff7b3da1
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, hidden author summary, author input manifest, prior reviewer private context, or canonical fixture content, used only hash-verified manifest-authorized inputs, and modified only the typed review output.
+  - invocation_id: k0b-00-revision-author-s-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_revision_author
+    started_at: "2026-09-02T18:50:53.3706581+03:00"
+    completed_at: "2026-09-02T18:53:44.5281606+03:00"
+    input_manifest_sha256: 217cfaa78b5b916c7621e39623d6d0c3364ca50adabfe73af8be34d4f7f970d2
+    output_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0
+    review_round: 1
+  - invocation_id: k0b-00-review-s-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_s_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_s_architecture_delta_rereview_v1
+    started_at: "2026-09-02T18:54:21.5258510+03:00"
+    completed_at: "2026-09-02T19:00:41.0589471+03:00"
+    input_manifest_sha256: 64d795ed9ea1c780bec288c17959c8ff15482ac93c3318875ceed0376b1e3a33
+    output_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, hidden author summary, initial author input manifest, prior reviewer conversation or hidden context, canonical fixture content, research/old-swarm content, projects/swarm content, or implementation inputs, used only hash-verified manifest-authorized files, and modified only the typed rereview output.
+  - invocation_id: k0b-00-review-shared-control-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_shared_control_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_shared_control_architecture_delta_review_v1
+    started_at: "2026-09-03T10:23:00+03:00"
+    completed_at: "2026-09-03T10:32:12.9683362+03:00"
+    input_manifest_sha256: 25ecbe09c56052d6f6287228d0e45fc18c76e3fc6c96650b37dee47e51ee2980
+    output_sha256: 7404e383404a578e9d909997213efbec61f2d49e641fd453835ab8e39af81cc8
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, hidden author summary, author input manifest, prior reviewer private context, or canonical fixture content, used only hash-verified manifest-authorized inputs, did not inspect forbidden roots or implementation files, and modified only the typed review output.
+  - invocation_id: k0b-00-revision-author-shared-control-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_revision_author
+    started_at: "2026-09-03T10:33:46.1951862+03:00"
+    completed_at: "2026-09-03T10:36:06.4204060+03:00"
+    input_manifest_sha256: 5fbcf9ef4839faa9535abf00484b177a419e3fa968e8c81ba8df0c72f3dc6b63
+    output_sha256: 0e22dd506e9846dd0f0bda8290c6ddb9e061d7e6794a5e092ce630752b9f6ddd
+    review_round: 1
+  - invocation_id: k0b-00-review-shared-control-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_shared_control_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_shared_control_architecture_delta_rereview_v1
+    started_at: "2026-09-03T10:41:27.9584516+03:00"
+    completed_at: "2026-09-03T10:42:06.3822888+03:00"
+    input_manifest_sha256: 07d8f336a2b584e3f9735371c476a4ed30935bd8465bbfdc1b9ff2cca9e3c0c8
+    output_sha256: 1f8a291312d98429f755f79e0137fbde49f56ca98f2bf6b8430637888455dd4b
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, hidden author summary, initial author input manifest, prior reviewer conversation or private context, or canonical fixture content, used only hash-verified manifest inputs, did not inspect forbidden roots or implementation files, and modified only the typed rereview output.
+  - invocation_id: k0b-00-revision-author-shared-control-r2
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.2.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5
+    profile: codex_root_k0b_architecture_delta_revision_author
+    started_at: "2026-09-03T11:08:23.3518245+03:00"
+    completed_at: "2026-09-03T11:09:43.8642582+03:00"
+    input_manifest_sha256: 7d6c08d1c21c21c894bbbab7af83a99043ecc752dd1fdc6f2a8e8168a807c4b2
+    output_sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af
+    review_round: 2
+  - invocation_id: k0b-00-review-shared-control-r2
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+    plan_version: "1.2.0"
+    role: independent_reviewer
+    actor_id: /root/review_k0b_shared_control_r2
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_shared_control_architecture_delta_final_rereview_v1
+    started_at: "2026-09-03T11:10:30.0000000+03:00"
+    completed_at: "2026-09-03T11:14:36.7613150+03:00"
+    input_manifest_sha256: e1bee663f8c4bda4b2f36f798f4e05294a3f1b32fe4f74ac341bbb60f594c3fb
+    output_sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635
+    review_round: 2
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, hidden author summary, initial author input manifest, prior reviewer conversation or private context, or canonical fixture content, used only hash-verified r2-manifest inputs, did not inspect forbidden roots or implementation files, and modified only the typed rereview output.
+  - invocation_id: k0b-00-author-executor-profile-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_executor_profile_author_v1
+    started_at: "2026-09-03T17:10:06.0184189+03:00"
+    completed_at: "2026-09-03T17:15:20.8100929+03:00"
+    input_manifest_sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee
+    output_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+    review_round: 0
+  - invocation_id: k0b-00-review-executor-profile-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_executor_profile_review_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_fixed_hybrid_manual_vscode_executor_profile_review_v1
+    started_at: "2026-09-03T17:18:30.0000000+03:00"
+    completed_at: "2026-09-03T17:26:52.5050472+03:00"
+    input_manifest_sha256: babbfa47d144477103a966ae04cde1af0afd66ca64ec101b71417744a0f2486b
+    output_sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed profile, received no author conversation, hidden author summary, prior reviewer private context, forbidden roots, canonical fixture content, K0b implementation inputs, or unpinned external state, used only the 26 hash-verified manifest-authorized inputs, and modified only the typed review output.
+  - invocation_id: k0b-00-author-d03-checkpoint-phase-partition-v1
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md
+    plan_version: "1.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_d03_checkpoint_partition_author_v1
+    started_at: "2026-09-03T19:09:34.4520713+03:00"
+    completed_at: "2026-09-03T19:18:13.4918074+03:00"
+    input_manifest_sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83
+    output_sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+    review_round: 0
+  - invocation_id: k0b-00-review-d03-checkpoint-phase-partition-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md
+    plan_version: "1.0.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_d03_partition_review_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_D03_checkpoint_phase_partition_review_v1
+    started_at: "2026-09-03T19:21:40.1861697+03:00"
+    completed_at: "2026-09-03T19:25:06.3256480+03:00"
+    input_manifest_sha256: 08f21efdd2c1aa7b65a6b566684ed051520290b48e1355359d39568abd018a74
+    output_sha256: 814745fd7a4026bc5f8f20f1bebb511c44656d43a19c634ea6df86be062e2107
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored none of the D03 outputs, received no author conversation, hidden summary, private reasoning, prior-reviewer private context, forbidden roots, canonical fixture, implementation files, provider state, or physical execution, used only 28 hash-verified manifest inputs, and modified only the typed review output.
+  - invocation_id: k0b-00-author-shared-control-d03-v2
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+    plan_version: "2.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_shared_control_d03_successor_author_v2
+    started_at: "2026-09-03T19:32:07.9387926+03:00"
+    completed_at: "2026-09-03T19:42:42.7830753+03:00"
+    input_manifest_sha256: fa7965ed72984b39cce118bd1cc283be7970122c78386787720b1cfe340de595
+    output_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3
+    review_round: 0
+  - invocation_id: k0b-00-review-shared-control-d03-v2-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+    plan_version: "2.0.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_shared_control_d03_v2_review_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b_independent_shared_control_D03_successor_review_v2
+    started_at: "2026-09-04T11:09:06.1573642+03:00"
+    completed_at: "2026-09-04T11:25:14.9221375+03:00"
+    input_manifest_sha256: d24c08fabd8a7400db574a01b622a513dac8758b764ebc2b70d3b4a11b90048d
+    output_sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored none of the reviewed plan or five successor-package files, received no author transcript, author summary, hidden author reasoning, prior-reviewer private context, or provider state, used only hash-verified manifest inputs, accessed no forbidden roots or canonical fixture content, and created only the typed review output.
+  - invocation_id: k0b-00-author-shared-artifact-event-d03-v2
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_shared_artifact_event_D03_successor_author_v2
+    started_at: "2026-09-04T11:52:57.4109088+03:00"
+    completed_at: "2026-09-04T11:56:39.8005123+03:00"
+    input_manifest_sha256: 0e761b267d34c8630037edb7d85d215d110a52e069ed490b75d0b5643c2623db
+    output_sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f
+    review_round: 0
+  - invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.0.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_shared_artifact_event_d03_v2_review_r0
+    provider: openai
+    model: gpt-5.6-terra
+    profile: k0b_independent_shared_artifact_event_D03_successor_review_v2
+    started_at: "2026-09-04T11:59:08.0490467+03:00"
+    completed_at: "2026-09-04T12:01:45.8319093+03:00"
+    input_manifest_sha256: d91facd5d4f547b2cba16597ae0322d0322bbf4a52504c62210d67f05391e343
+    output_sha256: 1ee407cad615a4190ae40a8c5e2ed2decaa74d4219b0d92f7bee688c8a07098d
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored no reviewed plan version, received no author transcript, summary, hidden context, or prior-reviewer private context, used only 26 hash-verified manifest inputs, accessed no forbidden roots, canonical fixture, implementation/provider/external state, and created only the typed review output.
+  - invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r1
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.1.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_shared_artifact_event_D03_successor_revision_r1
+    started_at: "2026-09-04T12:11:13.4398287+03:00"
+    completed_at: "2026-09-04T12:12:27.0995708+03:00"
+    input_manifest_sha256: de7f37090e678847b68e799523acdc484e43bca4e5b9603fa1684bb118e0a092
+    output_sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614
+    review_round: 1
+  - invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.1.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_shared_artifact_event_d03_v2_review_r1
+    provider: openai
+    model: gpt-5.6-terra
+    profile: k0b_independent_shared_artifact_event_D03_successor_rereview_v2
+    started_at: "2026-09-04T12:13:07.1645978+03:00"
+    completed_at: "2026-09-04T12:16:46.1976893+03:00"
+    input_manifest_sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21
+    output_sha256: 6b47f481f26b08174e43bdf7ffc15933def142c6b795dbd5b7d0f17de85900fa
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored none of the reviewed plan versions, received no author conversation, hidden summary, prior-reviewer private context, forbidden-root or canonical-fixture content, runtime/provider/external state, used only 21 hash-verified manifest inputs, and created only the typed review record.
+  - invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r2
+    purpose: revision_authoring
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.2.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_shared_artifact_event_D03_successor_revision_r2
+    started_at: "2026-09-04T12:20:41.4370768+03:00"
+    completed_at: "2026-09-04T12:21:53.4554576+03:00"
+    input_manifest_sha256: d0e83798d6fd5b92d23ee443693fa441e11050eaab01e511fac8d812ac294be2
+    output_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce
+    review_round: 2
+  - invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r2
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    plan_version: "2.2.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_shared_artifact_event_d03_v2_review_r2
+    provider: openai
+    model: gpt-5.6-terra
+    profile: k0b_independent_shared_artifact_event_D03_successor_final_rereview_v2
+    started_at: "2026-09-04T12:22:32.7245577+03:00"
+    completed_at: "2026-09-04T12:25:49.8798420+03:00"
+    input_manifest_sha256: 21d774fb1855dcc20b2aad69836d3b3489e602838f55f27375d6bd8c724d6dd7
+    output_sha256: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1
+    review_round: 2
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored none of the reviewed plan versions, received no author conversation, summary, hidden context, or prior-reviewer private context, used only 18 hash-verified manifest files, accessed no forbidden roots, canonical fixture, runtime/provider/external state, and created only the typed final rereview record.
+  - invocation_id: k0b-00-author-s-d03-v2
+    purpose: plan_authoring
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+    plan_version: "2.0.0"
+    role: author
+    actor_id: /root
+    provider: openai
+    model: gpt-5.6-sol
+    profile: codex_root_k0b_S_D03_successor_author_v2
+    started_at: "2026-09-04T12:29:02.5547689+03:00"
+    completed_at: "2026-09-04T12:32:45.7027185+03:00"
+    input_manifest_sha256: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7
+    output_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3
+    review_round: 0
+  - invocation_id: k0b-00-review-s-d03-v2-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+    plan_version: "2.0.0"
+    role: independent_reviewer
+    actor_id: /root/k0b_s_d03_v2_review_r0
+    provider: openai
+    model: gpt-5.6-terra
+    profile: k0b_independent_S_D03_successor_review_v2
+    started_at: "2026-09-04T12:33:10.8895703+03:00"
+    completed_at: "2026-09-04T12:37:44.5669117+03:00"
+    input_manifest_sha256: 3fa043af146ed049a0659e86fe96d8a28aa9970ac11c032d801cddd69475a2e9
+    output_sha256: 4368ee7f4373f59772d293780ea47b4e63f359545d1e090c21c5da11a47506a2
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No conflict; reviewer authored none of the reviewed S plan versions, used only 25 hash-verified manifest files, received no author conversation, summary, prior-reviewer private context, forbidden-root or canonical-fixture content, unlisted runtime/provider/external state, and created only the typed review record.
+  - invocation_id: k0b-01-review-migration-plan-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-01-planning-package-v1.1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/k0b01_migration_review_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b01_independent_migration_plan_review_r0
+    started_at: "2026-09-07T18:20:00+03:00"
+    completed_at: "2026-09-07T18:26:03.2318593+03:00"
+    input_manifest_sha256: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66
+    output_sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No authorship conflict; the reviewer used only the exact hash-bound allowed inputs, spawned no agent, accessed no forbidden root, and wrote only its review output. Evidence qualification remains open because the self-reported started_at precedes the pre-dispatch receipt; the value is preserved without invention and no exact dispatch-start claim is made, as recorded by reconciliation 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd.
+  - invocation_id: k0b-01-review-compiler-budget-plan-r0
+    purpose: fresh_context_review
+    plan_path: new pipeline/architecture/k0b-01-planning-package-v1.1.md
+    plan_version: "1.1.0"
+    role: independent_reviewer
+    actor_id: /root/k0b01_compiler_budget_review_r0
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b01_independent_compiler_budget_plan_review_r0
+    started_at: "2026-09-07T18:22:00+03:00"
+    completed_at: "2026-09-07T18:26:32.2234190+03:00"
+    input_manifest_sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7
+    output_sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c
+    review_round: 0
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No authorship conflict; the reviewer used only the exact hash-bound allowed inputs, spawned no agent, accessed no forbidden root, and wrote only its review output. Root later made one deterministic YAML syntax-only normalization without changing text, findings, reasoning, counts, or recommendation; the reviewer-reported and normalized hashes are recorded by reconciliation 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd.
+  - invocation_id: k0b-01-review-migration-plan-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    plan_version: "1.2.0"
+    role: independent_reviewer
+    actor_id: /root/k0b01_migration_review_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b01_independent_migration_plan_review_r1
+    started_at: "2026-09-07T16:08:07.2686461Z"
+    completed_at: "2026-09-07T16:08:20.0233082Z"
+    input_manifest_sha256: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7
+    output_sha256: be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No authorship conflict; the reviewer used only the exact hash-bound allowed inputs, spawned no agent, made no network, API, runtime, or test call, accessed no forbidden root or frozen engineering draft, and wrote only the valid typed review output.
+  - invocation_id: k0b-01-review-compiler-budget-plan-r1
+    purpose: revision_review
+    plan_path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    plan_version: "1.2.0"
+    role: independent_reviewer
+    actor_id: /root/k0b01_compiler_budget_review_r1
+    provider: openai
+    model: gpt-5.6-sol
+    profile: k0b01_independent_compiler_budget_plan_review_r1
+    started_at: "2026-09-07T16:02:47.040Z"
+    completed_at: "2026-09-07T16:07:53.164Z"
+    input_manifest_sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495
+    output_sha256: e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d
+    review_round: 1
+    fresh_context: true
+    inherited_author_context: false
+    conflict_declaration: No authorship conflict; the reviewer used only the exact hash-bound allowed inputs, spawned no agent, made no network, API, runtime, or test call, accessed no forbidden root or frozen engineering draft, and wrote only the valid typed review output.
 bootstrap_note: "K0a-00 and every later Layer Architecture Gate must append author/reviewer entries before issuing a receipt. Earlier D0 conversational invocations lack complete metadata and are not backfilled with invented values."

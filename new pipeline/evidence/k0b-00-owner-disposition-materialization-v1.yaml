@@ -1,0 +1,63 @@
+record_id: k0b-00-owner-disposition-materialization-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T12:02:39.7095343+03:00"
+status: partially_materialized_fail_closed
+work_item_id: K0b-00
+K0b_00_complete: false
+architecture_approval_receipts_created: false
+runtime_started: false
+
+records:
+  owner_request: {path: new pipeline/evidence/k0b-00-owner-disposition-request-v1.yaml, sha256: e646e8a4e356367de296f006d4a4ca28c43e72f6ef7f3ac58c01a3394b211849}
+  owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  updated_forecast: {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  forecast_binary_reconciliation: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  executor_binding_candidate: {path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43}
+
+decision_status:
+  K0b-D01-runtime-executor-binding:
+    selected: separately_pinned_harness_adapter
+    materialized: false
+    blocker: exact model/provider egress, adapter artifact hash, zero-tool enforcement, transcript profile, and independent review evidence are absent
+  K0b-D02-three-plan-scope:
+    selected: approve
+    materialized: true
+    exact_hashes_unchanged: true
+  K0b-D03-checkpoint-budget-route:
+    selected: narrow_or_checkpoint_batching
+    batching_boundary_materialized: true
+    aggregate_hard_status_closed: false
+    blocker: 2055208960 worst-case phase-pack bytes exceeds the unchanged 1073741824-byte hard limit
+    deterministic_narrowing_bounds:
+      at_36700160_worst_checkpoint_bytes_max_publications_strictly_below_hard: 29
+      at_56_publications_max_checkpoint_bytes_strictly_below_hard: 19173961
+      note: Any proposed route must respect mandatory replay windows and may not claim unmeasured delta/compression credit.
+  K0b-D04-F15-invocation-budget-reconciliation:
+    selected: approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast
+    materialized: true
+    exact_package: {package_id: K0b-F15-exact-measurement, invocation_profile: deep, invocations: 36}
+  K0b-B01-binary-forecast-reconciliation:
+    selected: accept_candidate_and_authorize_forecast_reconciliation
+    materialized: true
+    reconciliation_result: pass_with_additive_F15_pressure_exposed
+
+approval_gate:
+  exact_reviewed_three_plan_scope: pass
+  design_budget: pass_at_owner_authorized_14_of_14
+  binary_forecast_reconciliation: pass
+  F15_non_overlapping_budget: pass
+  exact_executor_binding: blocked
+  checkpoint_hard_limit: blocked
+  overall: blocked_no_approval_receipt
+
+required_next_owner_inputs:
+  - Exact K0b adapter/model/provider-egress binding plus authority for its independent review; the observed Codex CLI binary alone is insufficient.
+  - An effective K0b-D03 narrowing that satisfies the aggregate phase hard limit, or a new explicit choice of another registered checkpoint-policy owner route.
+
+explicit_non_authorizations:
+  - approval_receipt_creation
+  - K0b_runtime_code_contract_migration_or_physical_invocation
+  - threshold_or_policy_reinterpretation
+  - canonical_fixture_or_excluded_root_access
+  - commit_push_merge_deploy_or_release

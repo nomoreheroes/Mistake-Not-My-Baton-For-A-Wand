@@ -1,0 +1,73 @@
+manifest_id: k0b-00-shared-artifact-event-review-input-r1
+schema_version: 1
+review_round: 1
+mode: fresh_context_read_only_inputs_typed_review_output_only
+appointed_by: W0_via_root
+appointed_at: "2026-09-02T16:06:22.9077878+03:00"
+reviewer_assignment:
+  actor_id: /root/review_k0b_shared_artifact_event_r1
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_architecture_delta_rereview_v1
+  must_not_have_authored_any_plan_version: true
+  inherited_author_context: false
+
+exact_plan:
+  path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+  plan_id: k0b-00-shared-artifact-event-plane-delta
+  version: "1.1.0"
+  sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240
+baseline:
+  path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+  version: "1.1.0"
+  sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+
+required_revision_inputs:
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-plan-v1.0.0.md, version: "1.0.0", sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a, role: immutable_reviewed_snapshot}
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-review-input-r0.yaml, review_round: 0, sha256: 538e45e4f354dac7e64471586c0e1245a41dae7da5a33febcef0f71c229eb869}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r0.yaml, review_round: 0, sha256: 333d728699c9d2cb903be470aa6275cd085e91afecf68f445d20560605e312c0, recommendation: revise}
+  - {path: new pipeline/evidence/k0b-00-shared-artifact-event-revision-input-r1.yaml, version: "1.0.0", sha256: c8b41fdac2bdbce52e9c7c833eb27949b0ac8d73214548a57a002672849f6524}
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, version: 1, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, version: "1.2.0", sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.0.0", sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, role: provisional_sibling_compatibility_input_not_approved_authority}
+  - {path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml, version: 1, sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724}
+  - {path: new pipeline/evidence/k0a-03-validation-v1.yaml, version: "1.0.0", sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158}
+  - {path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, version: "1.0.0", sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b}
+
+review_rubric:
+  - verify_F_01_seed_inclusive_checkpoint_and_pack_arithmetic_and_forecast_variance_blocker
+  - verify_F_02_K0b_D03_is_activated_unresolved_without_owner_option_selection
+  - verify_revision_is_bounded_to_findings_and_did_not_expand_scope_or_change_unaffected_ownership
+  - recheck_exact_hashes_all_18_categories_21_event_profile_and_complexity_sub_budgets
+  - recheck_schema_migration_compiler_projection_checkpoint_replay_reconciliation_abort_compatibility_observability_security_and_acceptance_coherence
+  - recheck_K0b_D01_D02_D04_and_forecast_reconciliation_remain_blocking_where_required
+  - issue_explicit_pass_or_typed_finding_for_each_machine_and_reviewer_judgment_category
+
+required_output:
+  path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml
+  format: YAML
+  allowed_content: prior_finding_dispositions_typed_findings_evidence_refs_proposed_dispositions_and_recommendation_only
+  recommendation_enum: [approve, approve_with_changes, revise, narrow, block]
+  owner_approval: forbidden
+  plan_edit: forbidden
+  other_file_edits: forbidden
+
+forbidden_inputs:
+  - author_conversation_transcript
+  - hidden_author_summary
+  - author_input_manifest
+  - prior_reviewer_conversation_or_hidden_context
+  - research/old-swarm
+  - projects/swarm_content
+  - canonical_fixture_content
+  - K0b_runtime_contract_migration_prompt_or_code
+  - unpinned_external_or_provider_state

@@ -1,0 +1,265 @@
+state_id: pipeline-v2-program-state
+schema_version: 1
+projection_version: "1.0.0"
+generated_at: "2026-09-08T12:31:49.7967285+03:00"
+status: governance_remediation_ready_for_containing_commit
+
+projection_profile:
+  path: new pipeline/state/state-projection-profile-v1.yaml
+  sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d
+
+baseline:
+  pre_remediation_HEAD: a031ee56a36cf794646643b67270c6e0f7092e08
+  pre_remediation_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  D0_05_status: complete_on_containing_commit
+  containing_commit_rule: this_projection_and_its_complete_hash_reachable_graph_must_be_tracked_by_the_same_commit
+  commit_SHA_self_embedding: forbidden
+
+active_authority:
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  K0b_01_governance_direction: {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1}
+  K0b_01_plan: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  frozen_draft_triage: {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+
+supporting_review_evidence:
+  K0b_01_v1_2_r1_dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml, sha256: c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de}
+  K0b_01_v1_2_r1_ledger_append: {path: new pipeline/evidence/k0b-01-r1-review-ledger-append-v1.yaml, sha256: e2eb12a33f7277d9ac9db893042da5fa44b7658b52d2c588106394d05d8c409e}
+  scoped_review_result: two_r1_approvals_for_exact_plan_v1_2_with_zero_open_findings
+  remaining_review_calls: 0
+
+root_plan_status:
+  architecture_plan:
+    path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
+    sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9
+    internal_label: DRAFT
+    effective_status: active_hash_bound_baseline_with_superseding_K0b_deltas
+    superseded_sections:
+      - section: 18.3
+        stale_statement: adapter_selects_a_concrete_Claude_or_Codex_launch_method
+        effective_successor: {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  development_plan:
+    path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+    internal_label: draft_for_owner_disposition_and_Foundation_start
+    effective_status: active_hash_bound_baseline_with_successor_work_item_authorities
+    missing_manual_VSCode_wording: true
+    effective_successor: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+
+work_items:
+  - sequence: 1
+    work_item_id: D0-01
+    status: complete
+    authority_path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml
+    authority_sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b
+    open_gate_ids: []
+  - sequence: 2
+    work_item_id: D0-02
+    status: complete
+    authority_path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml
+    authority_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4
+    effective_status_source: final_K0b_00_and_completed_layer_gate_usage_supersede_the_internal_ready_for_owner_disposition_label
+    open_gate_ids: []
+  - sequence: 3
+    work_item_id: D0-03_D0-04
+    status: complete
+    authority_path: new pipeline/receipts/d0-04-legacy-relocation.yaml
+    authority_sha256: 87d259ff0ccd016b7056e76321da7de0aa07f9a69df46a127eddd224f001f8ab
+    open_gate_ids: []
+  - sequence: 4
+    work_item_id: D0-05
+    status: complete_on_containing_commit
+    authority_path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml
+    authority_sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1
+    open_gate_ids: [G-D005-CONTAINING-COMMIT]
+  - sequence: 5
+    work_item_id: D0-06
+    status: complete
+    authority_path: new pipeline/receipts/d0-06-fixture-reproducibility-v1.yaml
+    authority_sha256: dc3d9dead0e94e96a6c1dc3fd3bae4a06d407f351c34c13d407cf5d7e86dad57
+    open_gate_ids: []
+  - sequence: 6
+    work_item_id: K0a-00
+    status: architecture_complete
+    authority_path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml
+    authority_sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34
+    open_gate_ids: []
+  - sequence: 7
+    work_item_id: K0a-01
+    status: implemented_validated
+    authority_path: new pipeline/evidence/k0a-01-corrective-validation-v2.yaml
+    authority_sha256: 4fe090ec2ed41310c519cd848daf6b9bc993420945cbd32552cc65d6c3fd405f
+    open_gate_ids: []
+  - sequence: 8
+    work_item_id: K0a-02
+    status: implemented_validated
+    authority_path: new pipeline/evidence/k0a-02-validation-v1.yaml
+    authority_sha256: 3c2385d28e3851631537ffc120ae49e5d019caab0e5a0e6b812e9384b6e38e9b
+    open_gate_ids: []
+  - sequence: 9
+    work_item_id: K0a-03
+    status: implemented_validated
+    authority_path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml
+    authority_sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166
+    supporting_review: {path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, recommendation: approve}
+    open_gate_ids: []
+  - sequence: 10
+    work_item_id: K0b-00
+    status: architecture_complete
+    authority_path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    authority_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+    open_gate_ids: []
+  - sequence: 11
+    work_item_id: K0b-01
+    status: planning_remediation
+    authority_path: new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    authority_sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
+    open_gate_ids:
+      - G-D005-CONTAINING-COMMIT
+      - G-K0B01-BINARY-SIZE
+      - G-K0B01-HUMAN-SIGNOFF
+      - G-K0B01-IMPLEMENTATION-DISPOSITION
+      - G-K0B01-IMPLEMENTATION-LEDGER
+      - G-K0B01-STATE-RENDERER
+      - G-K0B01-TOOLCHAIN
+  - sequence: 12
+    work_item_id: K0b-02
+    status: blocked
+    authority_path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    authority_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+    open_gate_ids: [G-K0B02-K0B01-COMPLETE, G-K0B02-SINGLE-SOURCE-CONFIRMATION]
+  - sequence: 13
+    work_item_id: K0b-03
+    status: blocked
+    authority_path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    authority_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+    open_gate_ids: [G-K0B03-K0B01-COMPLETE, G-K0B03-UNTRUSTED-SHAPES]
+  - sequence: 14
+    work_item_id: K0b-04
+    status: blocked
+    authority_path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    authority_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+    open_gate_ids: [G-K0B04-F15-ATTESTATION-LIMIT, G-K0B04-PREREQUISITES]
+  - sequence: 15
+    work_item_id: K0b-05
+    status: blocked
+    authority_path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    authority_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+    open_gate_ids: [G-K0B05-F15-COMPLETE]
+  - sequence: 16
+    work_item_id: N1
+    status: blocked
+    authority_path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md
+    authority_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d
+    open_gate_ids: [G-N1-K0B-COMPLETE, G-N1-POLICY-LIMITS]
+
+open_gates:
+  - gate_id: G-D005-CONTAINING-COMMIT
+    owner: workspace_owner
+    status: ready
+    blocks: [D0-05, K0b-01]
+    closure_condition: this_state_and_the_complete_hash_reachable_governance_graph_are_in_the_same_validated_commit
+  - gate_id: G-K0B01-BINARY-SIZE
+    owner: workspace_owner
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: select_K0b_B02_and_recalculate_the_size_stressed_reference_without_threshold_storage_credit_or_third_phase_change
+  - gate_id: G-K0B01-HUMAN-SIGNOFF
+    owner: workspace_owner
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity
+  - gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+    owner: workspace_owner
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets
+  - gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    owner: Pipeline_governance
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist
+  - gate_id: G-K0B01-STATE-RENDERER
+    owner: Pipeline_governance
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: deterministic_renderer_and_projection_equivalence_check_exist
+  - gate_id: G-K0B01-TOOLCHAIN
+    owner: Pipeline_governance
+    status: open_blocking
+    blocks: [K0b-01_implementation]
+    closure_condition: toolchain_and_CI_manifest_pins_Python_SQLite_lint_format_import_root_and_one_validation_entry_point
+  - gate_id: G-K0B02-K0B01-COMPLETE
+    owner: K0b-01
+    status: blocked_by_predecessor
+    blocks: [K0b-02]
+    closure_condition: K0b_01_completion_receipt_exists
+  - gate_id: G-K0B02-SINGLE-SOURCE-CONFIRMATION
+    owner: workspace_owner
+    status: future_open
+    blocks: [K0b-02]
+    closure_condition: confirm_single_JSON_registry_and_projection_ownership_before_K0b_02
+  - gate_id: G-K0B03-K0B01-COMPLETE
+    owner: K0b-01
+    status: blocked_by_predecessor
+    blocks: [K0b-03]
+    closure_condition: K0b_01_completion_receipt_exists
+  - gate_id: G-K0B03-UNTRUSTED-SHAPES
+    owner: K0b-03
+    status: future_open
+    blocks: [K0b-03_F10]
+    closure_condition: shape_entropy_JWT_Bearer_provider_token_base64_and_split_line_detectors_exist_and_scanner_is_documented_as_hygiene
+  - gate_id: G-K0B04-F15-ATTESTATION-LIMIT
+    owner: K0b-04
+    status: future_open
+    blocks: [K0b-04_F15_conclusion]
+    closure_condition: F15_conclusion_states_the_manual_transcript_and_model_attestation_limit
+  - gate_id: G-K0B04-PREREQUISITES
+    owner: K0b-04
+    status: blocked_by_predecessors
+    blocks: [K0b-04]
+    closure_condition: K0b_01_K0b_02_and_K0b_03_required_gates_are_complete
+  - gate_id: G-K0B05-F15-COMPLETE
+    owner: K0b-05
+    status: blocked_by_predecessor
+    blocks: [K0b-05]
+    closure_condition: exact_F15_phase_and_post_F15_closure_are_complete
+  - gate_id: G-N1-K0B-COMPLETE
+    owner: N1
+    status: blocked_by_predecessor
+    blocks: [N1]
+    closure_condition: K0b_completion_and_owner_continue_or_pause_decision_exist
+  - gate_id: G-N1-POLICY-LIMITS
+    owner: Pipeline_governance
+    status: future_open
+    blocks: [N1]
+    closure_condition: context_and_failure_receipt_limits_are_versioned_policy_values_not_function_defaults
+
+status_index:
+  - path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
+    sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
+    embedded_status: approved_for_zero_call_implementation
+    effective_status: non_authoritative
+    superseded_by:
+      - {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+      - {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+  - path: new pipeline/evidence/k0b-01-validation-v1.yaml
+    sha256: 8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f
+    embedded_status: validated_zero_call_implementation_candidate
+    effective_status: non_authoritative_superseded_draft_evidence
+    superseded_by:
+      - {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+      - {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+  - path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+    embedded_status: r1_review_candidate
+    effective_status: superseded_by_owner_directed_v1_3_for_future_implementation
+    retained_evidence: exact_subject_of_two_valid_r1_approvals
+    superseded_by:
+      - {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+
+scope:
+  implementation_authority: none
+  runtime_authority: none
+  remaining_design_review_model_calls: 0
+  forbidden_roots_access_authorized: false
+  push_PR_deploy_release_authorized: false

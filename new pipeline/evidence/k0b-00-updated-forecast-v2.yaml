@@ -1,0 +1,132 @@
+record_id: k0b-00-updated-forecast-v2
+schema_version: 1
+version: "2.0.0"
+created_at: "2026-09-03T19:10:57.1250970+03:00"
+status: owner_selected_D03_phase_partition_below_hard_pending_independent_review
+work_item_id: K0b-00
+overlay_scope: Supersedes v1 for the explicit D03 checkpoint-phase partition, its publication counts, pack arithmetic, threshold status, derived full-route pack totals, and the already owner-approved design-call cap of 24; physical invocation counts, binary seed arithmetic, and all other D0 rows remain unchanged.
+
+authority:
+  base_forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, schema_version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  prior_overlay: {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, version: "1.0.0", sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  D03_owner_disposition: {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, version: "1.0.0", sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  author_input: {path: new pipeline/evidence/k0b-00-d03-checkpoint-phase-partition-author-input-v1.yaml, sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83}
+
+unchanged_counting_rules:
+  design_calls_are_not_checkpointed: true
+  runtime_model_invocation_replay_points: {nominal: 2, worst_case: 4}
+  planning_unique_bytes_per_replay_point: {nominal: 16384, worst_case: 65536}
+  publisher_eligible_minutes_per_runtime_invocation: {nominal: 1, worst_case: 3}
+  window_formula: max(ceil(total_replay_points / 10), ceil(publisher_eligible_runtime_minutes / 5), ceil(new_db_bytes / 33554432))
+  trigger_overlap_credit_before_measurement: forbidden_and_zero
+  checkpoint_rounding: ceil_to_whole_MiB
+  pack_delta_factor: 1.0
+  phase_pack_formula: rounded_cumulative_checkpoint_bytes_times_publications_owned_by_that_checkpoint_phase
+
+invocation_and_binary_budget:
+  design: {package_id: K0b-plan-deltas, nominal: 6, original_worst_case: 12, owner_authorized_effective_cap: 24, completed_before_this_D03_author: 16, checkpointed: false}
+  operational: {package_id: K0b-runtime-operational, nominal: 16, worst_case: 30, checkpointed: true}
+  F15: {package_id: K0b-F15-exact-measurement, nominal: 36, worst_case: 36, exact_required_attempts: 36, checkpointed: true, overlaps_operational: false}
+  phase_total_invocations: {nominal: 58, effective_worst_case: 90, checkpointed_nominal: 52, checkpointed_worst_case: 66}
+  note: The v1 owner-authorized design cap of 14 was later extended to 24; design calls remain uncheckpointed and do not alter the retained runtime 16/30 plus exact F15 36 physical-call arithmetic.
+  binary_seed_count: {nominal: 6, worst_case: 12}
+  binary_seed_bytes_nested: {nominal: 2236416, worst_case: 4472832}
+
+checkpoint_phase_partition:
+  checkpoint_chain: fixture
+  same_project_chain: true
+  phase_membership_compiled_before_effect: true
+  one_invocation_trigger_checkpoint_and_publication_in_exactly_one_phase: true
+  phase_reclassification_or_cross_phase_credit: forbidden
+  phases:
+    - checkpoint_phase_id: K0b-runtime-operational
+      membership: all_16_30_non_F15_physical_model_invocations_and_evidence_plus_pre_F15_K0b_01_through_K0b_04_activity
+      terminal_boundary: sealed_reconciled_checkpoint_before_F15
+    - checkpoint_phase_id: K0b-F15-exact-measurement
+      membership: exact_36_F15_attempts_direct_measurement_evidence_and_deterministic_post_F15_K0b_04_K0b_05_closure
+      entry_boundary: terminal_sealed_K0b-runtime-operational_checkpoint
+      terminal_boundary: K0b_05_owner_program_checkpoint
+      additional_physical_model_invocations_after_entry: 0
+
+phase_forecasts:
+  K0b-runtime-operational:
+    invocation_counts: {nominal: 16, worst_case: 30}
+    publication_window_derivation:
+      nominal: {model_points: 32, human_points: 6, tool_points: 16, total_points: 54, publisher_eligible_minutes: 16, by_points: 6, by_minutes: 4, by_db_bytes: 1, window_limit: 6}
+      worst_case: {model_points: 120, human_points: 12, tool_points: 40, total_points: 172, publisher_eligible_minutes: 90, by_points: 18, by_minutes: 18, by_db_bytes: 1, window_limit: 18}
+    publication_triggers:
+      nominal: {run_end: 4, human_wait_or_exit: 2, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 6, total: 14}
+      worst_case: {run_end: 8, human_wait_or_exit: 4, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 18, total: 34}
+    checkpoint_growth_mib:
+      replay_unique: {nominal: 0.5, worst_case: 7.5}
+      asserted_fixed_non_binary: {nominal: 4, worst_case: 8}
+      prior_unrounded_in_fixture_chain: {nominal: 2.09375, worst_case: 5.5}
+      binary_seed_nested: {nominal: 2.1328125, worst_case: 4.265625}
+      cumulative_unrounded: {nominal: 8.7265625, worst_case: 25.265625}
+    cumulative_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    publications: {nominal: 14, worst_case: 34}
+    no_delta_phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    publication_batches_at_cap_12: {nominal: 2, worst_case: 3}
+    largest_batch_bytes: {nominal: 113246208, worst_case: 327155712}
+    threshold_status: {checkpoint: below_warning, phase_pack_nominal: below_warning, phase_pack_worst: above_warning_below_hard}
+    worst_phase_pack_margin_below_hard_bytes: 146800640
+  K0b-F15-exact-measurement:
+    invocation_counts: {nominal: 36, worst_case: 36, exact_required_attempts: 36}
+    publication_window_derivation:
+      nominal: {model_points: 72, other_points: 0, total_points: 72, publisher_eligible_minutes: 36, by_points: 8, by_minutes: 8, by_db_bytes: 1, window_limit: 8}
+      worst_case: {model_points: 144, other_points: 0, total_points: 144, publisher_eligible_minutes: 108, by_points: 15, by_minutes: 22, by_db_bytes: 1, window_limit: 22}
+    explicit_boundary_triggers: {run_end: 1, human_wait_or_exit: 1, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, total: 4}
+    publication_triggers:
+      nominal: {boundary_triggers: 4, window_limit: 8, total: 12}
+      worst_case: {boundary_triggers: 4, window_limit: 22, total: 26}
+    additive_F15_replay_unique_bytes: {nominal: 1179648, worst_case: 9437184}
+    cumulative_unrounded_checkpoint_mib: {nominal: 9.8515625, worst_case: 34.265625}
+    cumulative_checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    publications: {nominal: 12, worst_case: 26}
+    no_delta_phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+    publication_batches_at_cap_12: {nominal: 1, worst_case: 3}
+    largest_batch_bytes: {nominal: 125829120, worst_case: 440401920}
+    threshold_status: {checkpoint: below_warning, phase_pack_nominal: below_warning, phase_pack_worst: above_warning_below_hard}
+    worst_phase_pack_margin_below_hard_bytes: 119537664
+    worst_publications_at_current_checkpoint_before_hard: 29
+
+combined_chain_observability_not_a_phase_gate:
+  publications: {nominal: 26, worst_case: 60}
+  no_delta_pack_bytes: {nominal: 257949696, worst_case: 1881145344}
+  rule: Report cumulative chain cost and clean-clone performance, but do not silently merge two owner-approved non-overlapping phase packs into one per-phase threshold denominator.
+
+threshold_reconciliation:
+  checkpoint_hard_bytes: 104857600
+  phase_pack_warning_bytes: 536870912
+  phase_pack_hard_bytes: 1073741824
+  max_publications_per_run_or_batch: 12
+  every_checkpoint_strictly_below_hard: true
+  every_worst_batch_strictly_below_warning: true
+  every_phase_pack_strictly_below_hard: true
+  D03_selected_route: narrow_or_checkpoint_batching
+  D03_specialization: explicit_non_overlapping_checkpoint_phase_partition
+  D03_forecast_status: pass_pending_exact_addendum_and_independent_review
+
+derived_full_route_totals_overlay:
+  base_llm_invocations: {nominal: 288, worst_case: 722}
+  revised_llm_invocations: {nominal: 324, effective_worst_case: 770}
+  v1_revised_ungated_no_delta_upper_bound_bytes: {nominal: 14845739008, worst_case: 262840254464}
+  v2_revised_ungated_no_delta_upper_bound_bytes: {nominal: 14883487744, worst_case: 262666190848}
+  expected_delta_factor: 1.0_no_credit
+  policy_reachable_total: pending_addendum_review_D03_can_close_without_threshold_change
+
+fail_closed_conditions:
+  - unclassified_duplicate_or_cross_phase_invocation_trigger_checkpoint_or_publication
+  - F15_starts_before_operational_terminal_seal_and_reconciliation
+  - any_phase_has_more_than_its_compiled_publication_bound
+  - any_non_F15_physical_model_invocation_after_the_operational_phase_seal
+  - any_F15_phase_boundary_trigger_count_above_four_or_total_publications_above_29
+  - any_checkpoint_or_phase_pack_reaches_its_hard_limit
+  - any_overlap_compression_dedup_or_cross_phase_credit_without_separate_measurement_and_owner_review
+  - any_change_to_exact_36_F15_attempts_runtime_16_30_or_binary_seed_arithmetic
+
+explicit_limits:
+  - This is planning evidence, not an implementation contract, review, approval receipt, or physical-call authority.
+  - It does not change the checkpoint policy, hard thresholds, storage backend, existing three reviewed plans, canonical fixture, or runtime call budgets.
+  - Clean-clone restore time, cumulative object count, chain bytes, publication p95, and measured pack delta remain mandatory future evidence even though each planning phase pack is below hard.

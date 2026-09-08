@@ -1,0 +1,61 @@
+manifest_id: k0b-00-s-author-input-v1
+schema_version: 1
+version: "1.0.0"
+purpose: Exact source set for the third K0b-00 delta-plan author invocation; no review or runtime implementation authority.
+author_invocation_id: k0b-00-author-s-v1
+author_actor_id: /root
+author_role: architecture_delta_plan_author
+started_at: "2026-09-02T16:27:04.0036193+03:00"
+
+target:
+  path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+  plan_id: k0b-00-s-layer-delta
+  version: "1.0.0"
+  baseline_path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  baseline_version: "1.2.0"
+  baseline_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, version: 1, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {path: new pipeline/registry/approval-envelope/v1.schema.yaml, version: 1, sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, version: "1.2.0", sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f}
+  - {path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, version: "1.1.0", sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.0.0", sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, role: provisional_sibling_compatibility_input_not_approved_authority}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, role: independently_reviewed_provisional_sibling_compatibility_input_not_owner_approved}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, version: 1, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, recommendation: approve, owner_approval: false}
+  - {path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml, version: 1, sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1}
+  - {path: new pipeline/evidence/k0a-03-validation-v1.yaml, version: "1.0.0", sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158}
+  - {path: new pipeline/reviews/k0a-03-independent-review-v1.yaml, version: "1.0.0", sha256: a3aa93d4e6296a38e75f9a6c79ac0b69e1df59407692dc73fd32c9aa1a1dad43}
+  - {path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, version: "1.0.0", sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b}
+  - {path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml, version: "1.0.0", sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166}
+  - {path: new pipeline/worksheets/k0a-00-budget-reference-v1.yaml, version: "1.0.0", sha256: eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9}
+
+authoring_rules:
+  - delta_only_against_the_hash_bound_K0a_S_baseline_and_its_binding_disposition
+  - all_18_gate_categories_present_or_reasoned_NA
+  - preserve_F00_real_S0_route_and_raw_proposal_harness_validation_semantics
+  - S_owns_semantic_route_revision_and_freeze_policy_not_compiler_execution_or_persistence
+  - no_contract_migration_prompt_runtime_fixture_or_projection_implementation
+  - one_plan_one_S_layer_with_one_S0_and_zero_S_workers
+  - exact_fixture_route_reviewer_and_barrier_semantics_for_assigned_K0b_scenarios
+  - explicit_complexity_routing_roster_failure_invocation_and_human_budgets
+  - binary_NA_requires_executable_no_binary_persistence_boundary
+  - K0b_D01_D02_D04_and_activated_D03_must_remain_unresolved
+  - sibling_delta_review_recommendation_is_not_owner_approval
+  - no_independent_review_in_this_author_invocation
+
+excluded_inputs:
+  - author_conversation_transcript_as_future_reviewer_input
+  - research/old-swarm
+  - projects/swarm_content
+  - canonical_fixture_content_or_modification
+  - old_pipeline_content_not_already_normalized_in_the_approved_baseline
+  - K0b_contracts_migrations_prompts_or_runtime_code
+  - unpinned_current_product_or_provider_state

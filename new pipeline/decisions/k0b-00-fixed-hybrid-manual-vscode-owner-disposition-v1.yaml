@@ -1,0 +1,99 @@
+document_id: pipeline-v2.k0b-00.fixed-hybrid-manual-vscode-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T17:06:02.1997468+03:00"
+scope: K0b physical model executor route and fixed role partition
+status: selected_pending_exact_model_and_residual_risk_confirmation
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-03
+  owner_statement: "Fixed hybrid + manual_VSCode_UI"
+
+authority:
+  extension_only_constraint: {path: new pipeline/decisions/k0b-00-extension-only-executor-owner-clarification-v1.yaml, sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314}
+  review_budget_extension: {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  historical_K0a_manual_extension_disposition: {path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml, sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166, authority_in_K0b: evidence_only_not_inherited}
+  historical_K0a_validation: {path: new pipeline/evidence/k0a-03-validation-v1.yaml, sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, authority_in_K0b: evidence_only_not_inherited}
+  historical_K0a_profile_loader: {path: new pipeline/harness/k0a03/profile.py, sha256: b719d5528d76bf8a4b818bd0b1c5ab4772f37e9229d70e116d182f6f10e7211e, authority_in_K0b: candidate_identifiers_only}
+
+selected_route:
+  executor_profile_id: k0b-fixed-hybrid-manual-vscode-ui-v1
+  execution_mode: manual_VSCode_UI
+  transport_class: installed_Visual_Studio_Code_extensions_only
+  fixed_role_partition: true
+  mid_invocation_switch: forbidden
+  F15_extension_or_model_switch: forbidden_for_all_36_attempts
+  retry_with_other_extension: forbidden
+  direct_API_SDK_or_Pipeline_managed_provider_key: forbidden
+
+fixed_partition:
+  anthropic_claude_code:
+    owns:
+      - all_36_F15_S0_attempts
+      - every_other_physical_S0_route_proposal
+      - every_physical_Layer0_non_nominal_fallback_proposal
+      - fixture.alpha0.primary_reviewer
+      - fixture.alpha0.adversarial_reviewer
+    reason: These roles make or evaluate routing, fallback, revision, or barrier decisions and are safety-critical or cross-attempt comparable.
+  openai_chatgpt:
+    owns:
+      - fixture_workers_whose_validated_output_cannot_select_routes_capabilities_events_approvals_or_side_effects
+    reason: ChatGPT is limited to non-routing, non-comparative content outputs behind exact deterministic validation.
+  unclassified_or_dynamic_role: blocked_before_handoff
+  role_reallocation_without_new_owner_disposition: forbidden
+
+manual_handoff_protocol:
+  preparation:
+    - Harness renders canonical bounded context and exact output schema.
+    - Operator verifies extension ID, installed version, selected model, role partition, new-chat state, and capability banner before paste.
+    - Operator pastes only the exact rendered request into a new extension conversation.
+  acceptance:
+    - Operator exports or copies the complete extension-visible transcript and raw response without editing.
+    - Harness hashes exact input, output, transcript, extension/model facts, timing, and capture-completeness fields.
+    - Deterministic validation rejects unknown fields, tool requests, capability claims, route widening, wrong model, or incomplete transcript.
+  switch_boundary: only_after_prior_invocation_is_accepted_and_replay_evidence_is_persisted_before_the_next_prepare
+  concurrent_manual_extension_sessions: forbidden
+  transcript_or_model_identity_not_verifiable: fail_closed
+
+capability_policy:
+  actor_tools_shell_filesystem_database_git_network_plugins_MCP_web_and_computer_use: forbidden
+  manual_UI_enforcement:
+    Claude: permission_requests_must_be_denied_and_any_tool_request_fails_the_attempt
+    ChatGPT: read_only_or_stricter_UI_mode_plus_any_tool_request_fails_the_attempt
+  proven_machine_disabled_in_manual_UI: false
+  no_forbidden_effect_is_not_equivalent_to_no_tool_request: true
+  F15_tool_request_disposition: failed_attempt_and_forbidden_capability_evidence
+
+candidate_exact_bindings_requiring_owner_confirmation:
+  Claude:
+    extension_id: anthropic.claude-code
+    extension_version: 2.1.259
+    model_identifier: claude-opus-4-6
+    model_profile: k0b-claude-opus-4-6-manual-ui-tools-contract-forbidden-v1
+    origin: K0a validated identifier carried only as a candidate; current manual UI selection must be visibly confirmed before each attempt.
+  ChatGPT:
+    extension_id: openai.chatgpt
+    extension_version: 26.825.51511
+    model_identifier: gpt-5.6-sol
+    model_profile: k0b-chatgpt-gpt-5.6-sol-manual-ui-read-only-v1
+    origin: K0a validated identifier carried only as a candidate; K0b authority requires explicit confirmation.
+
+remaining_owner_confirmations_before_exact_profile_authoring:
+  - confirm_candidate_model_and_extension_bindings_exactly_as_listed_or_supply_replacements
+  - explicitly_accept_manual_UI_residual_risk_that_tools_are_contract_forbidden_and_operator_denied_but_not_proved_absent_from_the_UI_tool_registry
+
+budget_effect:
+  design_invocations_consumed_by_this_owner_materialization: 0
+  effective_cap: 24
+  remaining: 10
+
+explicit_non_authorizations:
+  - treating_this_selection_as_a_complete_hash_bound_executor_profile
+  - physical_model_invocation
+  - inferred_residual_risk_acceptance
+  - direct_provider_API_or_automatic_model_fallback
+  - K0b_runtime_code_contract_migration_or_fixture_modification
+  - commit_push_merge_deploy_or_release

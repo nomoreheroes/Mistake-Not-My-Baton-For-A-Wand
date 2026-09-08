@@ -1,0 +1,141 @@
+{
+  "package_id": "pipeline-v2.k0b01.alpha0-kernel-contract-package",
+  "package_version": "1.0.0",
+  "profile": "Alpha0",
+  "authority": {
+    "implementation_disposition_sha256": "cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc",
+    "k0b01_plan_sha256": "028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f",
+    "final_k0b00_disposition_sha256": "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d",
+    "scope_sha256": "e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde",
+    "phase_policy_sha256": "ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8",
+    "forecast_sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a",
+    "reconciliation_sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb",
+    "executor_profile_sha256": "125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d"
+  },
+  "source_registries": {
+    "event_profile": "new pipeline/registry/alpha0/event-profile-v1.yaml",
+    "subscription_terminal_profile": "new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml",
+    "s_routing_profile": "new pipeline/registry/alpha0/s-routing-profile-v1.yaml",
+    "resource_budget_policy": "new pipeline/registry/resource-budget-policy/v1.yaml",
+    "resource_budget_reference_cases": "new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml"
+  },
+  "schema_contracts": {
+    "event_registry_entry": {
+      "id": "pipeline-v2.event-registry-entry",
+      "version": 1,
+      "required_fields": ["event_type", "event_version", "payload_schema_id", "payload_schema_version", "payload_schema_sha256", "producer_owner", "route_ref", "allowed_subscribers", "terminal_policy", "fields_consumed", "activation_work_item", "replay_semantics", "idempotency_scope", "terminal_disposition"],
+      "additional_properties": false
+    },
+    "subscription_terminal_entry": {
+      "id": "pipeline-v2.subscription-terminal-entry",
+      "version": 1,
+      "required_fields": ["route_id", "kind", "subscribers", "terminal_policy", "fields_read", "activation_work_item"],
+      "additional_properties": false
+    },
+    "s_route_entry": {
+      "id": "pipeline-v2.s-route-profile",
+      "version": 1,
+      "proposal_schema": {"id": "pipeline-v2.s-route-proposal", "version": 2},
+      "required_fields": ["route_id", "predicate", "disposition", "target", "barrier_ref", "call_class", "allowed_checkpoint_phase", "predecessor_seal_required", "capabilities", "allowed_events"],
+      "additional_properties": false
+    },
+    "s_revision_owner_proposal": {
+      "id": "pipeline-v2.s-revision-owner-proposal",
+      "version": 1,
+      "required_fields": ["revision_owner_zero_role_id", "producer_invocation_id", "minimal_replay_required"],
+      "additional_properties": false
+    },
+    "s_route_freeze_policy": {
+      "id": "pipeline-v2.s-route-freeze-policy",
+      "version": 1,
+      "required_fields": ["freeze_on", "terminal_outcomes", "resume_requires_same_bindings"],
+      "additional_properties": false
+    },
+    "compiled_profile_record": {
+      "id": "pipeline-v2.compiled-profile-record",
+      "version": 1,
+      "required_fields": ["compiler_id", "compiler_version", "compiler_hashes", "source_hashes", "outputs", "aggregate_digest"],
+      "additional_properties": false
+    },
+    "resource_budget_case": {
+      "id": "pipeline-v2.resource-budget-case",
+      "version": 1,
+      "required_fields": ["case_id", "profile", "graph_completeness", "packages", "checkpoint_phases", "binary_payload_budgets", "expected_reference_result"],
+      "additional_properties": false
+    },
+    "resource_budget_result": {
+      "id": "pipeline-v2.resource-budget-result",
+      "version": 1,
+      "required_fields": ["case_id", "package_calls", "total_calls", "human_attention", "binary_payload", "checkpoint_phases", "checkpoint_phase_order", "cumulative_observable_phase_pack_bytes"],
+      "additional_properties": false
+    },
+    "model_execution_receipt_ref": {
+      "id": "pipeline-v2.model-execution-receipt-ref",
+      "version": 1,
+      "required_fields": ["invocation_id", "selection_receipt_sha256", "executor_profile_sha256", "extension_id", "extension_version", "selected_model_identity", "transcript_sha256", "validation_result_sha256"],
+      "additional_properties": false
+    },
+    "artifact_publication_request": {"id": "pipeline-v2.artifact-publication-request", "version": 2},
+    "artifact_version_record": {"id": "pipeline-v2.artifact-version-record", "version": 2},
+    "event_envelope": {"id": "pipeline-v2.event-envelope", "version": 2},
+    "event_delivery_snapshot": {"id": "pipeline-v2.event-delivery-snapshot", "version": 2},
+    "key_decision_record": {"id": "pipeline-v2.key-decision-record", "version": 1}
+  },
+  "exact_event_types": [
+    "command.received",
+    "run.started",
+    "artifact.version_created",
+    "handoff.ready",
+    "run.completed",
+    "run.blocked",
+    "run.abort_requested",
+    "run.aborted",
+    "artifact.published",
+    "projection.requested",
+    "projection.written",
+    "projection.failed",
+    "revision.requested",
+    "gate.passed",
+    "approval.requested",
+    "approval.granted",
+    "approval.rejected",
+    "error.schema_mismatch",
+    "error.tool_failure",
+    "error.security_policy",
+    "meta.incident_detected"
+  ],
+  "retained_f00_event_types": ["command.received", "run.started", "artifact.version_created", "handoff.ready", "run.completed"],
+  "exact_s_route_ids": [
+    "s.alpha0.compiled_nominal.v1",
+    "s.alpha0.layer0_fallback.v1",
+    "s.alpha0.f04.parallel_review.v1",
+    "s.alpha0.f05.revision.v1",
+    "s.alpha0.blocked.v1"
+  ],
+  "required_compiler_outputs": [
+    "compiled_artifact_event_profile",
+    "compiled_event_reachability_graph",
+    "compiled_subscription_terminal_snapshot",
+    "compiled_s_route_table_v2",
+    "compiled_fanout_barrier_profile",
+    "compiled_resource_forecast",
+    "compiled_checkpoint_phase_partition_v1",
+    "compiled_checkpoint_publication_budget_v2"
+  ],
+  "checkpoint_phase_order": ["K0b-runtime-operational", "K0b-F15-exact-measurement"],
+  "f15_boundary_trigger_ids": [
+    "k0b.f15.boundary.entry_gate",
+    "k0b.f15.boundary.program_owner_wait_or_exit",
+    "k0b.f15.boundary.exit_gate",
+    "k0b.f15.boundary.top_level_run_end"
+  ],
+  "capability_policy": {
+    "physical_model_calls": 0,
+    "tools": [],
+    "network": false,
+    "runtime_phase_activation": false,
+    "checkpoint_publication": false,
+    "projection_write": false,
+    "allowed_payload_encoding": "canonical-json-utf8-v1"
+  }
+}

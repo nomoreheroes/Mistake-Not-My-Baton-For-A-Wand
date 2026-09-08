@@ -1,0 +1,61 @@
+manifest_id: k0b-00-shared-control-revision-input-r2
+schema_version: 1
+version: "1.0.0"
+purpose: Exact owner-authorized bounded author input for shared-control delta revision v1.2.0 after rereview r1; no review, architecture approval, or implementation authority.
+author_invocation_id: k0b-00-revision-author-shared-control-r2
+author_actor_id: /root
+author_role: architecture_delta_revision_author
+started_at: "2026-09-03T11:08:23.3518245+03:00"
+
+target:
+  path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md
+  plan_id: k0b-00-shared-control-plane-delta
+  target_version: "1.2.0"
+
+baseline:
+  path: new pipeline/reviews/sources/k0b-00-shared-control-plan-v1.1.0.md
+  version: "1.1.0"
+  sha256: 0e22dd506e9846dd0f0bda8290c6ddb9e061d7e6794a5e092ce630752b9f6ddd
+
+required_inputs:
+  - {path: new pipeline/reviews/sources/k0b-00-shared-control-review-input-r1.yaml, review_round: 1, sha256: 07d8f336a2b584e3f9735371c476a4ed30935bd8465bbfdc1b9ff2cca9e3c0c8}
+  - {path: new pipeline/reviews/k0b-00-shared-control-review-r1.yaml, review_round: 1, sha256: 1f8a291312d98429f755f79e0137fbde49f56ca98f2bf6b8430637888455dd4b, recommendation: revise}
+  - {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, version: "1.0.0", sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2, status: approved}
+  - {path: new pipeline/evidence/k0b-00-shared-control-revision-input-r1.yaml, version: "1.0.0", sha256: 5fbcf9ef4839faa9535abf00484b177a419e3fa968e8c81ba8df0c72f3dc6b63}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, role: independently_reviewed_provisional_sibling_compatibility_input_not_owner_approved}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, version: 1, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, recommendation: approve, owner_approval: false}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, role: independently_reviewed_provisional_sibling_compatibility_input_not_owner_approved}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, version: 1, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, recommendation: approve, owner_approval: false}
+
+required_finding_disposition:
+  finding_id: F-02
+  prior_status: partially_repaired_but_unresolved_in_plan_v1_1_0
+  required_change: >-
+    Replace the section 15 positive completion reference
+    running|waiting -> completing -> completed with the closed paths
+    running -> completing -> completed and
+    waiting -> running -> completing -> completed. Keep waiting -> completing
+    undeclared and require it to fail closed.
+
+revision_rules:
+  - revise_only_the_remaining_F02_reference_case_and_owner_authorized_budget_metadata
+  - keep_plan_id_and_path_and_bump_version_only_from_1_1_0_to_1_2_0
+  - preserve_byte_exact_v1_1_0_snapshot_at_the_hash_bound_baseline_path
+  - record_the_exact_budget_disposition_and_effective_6_14_invocation_envelope
+  - preserve_resolved_F01_active_K0b_D03_semantics_and_exhaustive_state_graph
+  - preserve_all_other_passing_gate_categories_ownership_and_sibling_hashes
+  - do_not_select_K0b_D01_D02_D03_D04_or_binary_forecast_owner_options
+  - do_not_modify_S_or_shared_artifact_event_sibling_deltas
+  - create_no_contract_registry_migration_prompt_runtime_fixture_projection_checkpoint_or_physical_call_implementation
+  - no_independent_rereview_in_this_author_revision_invocation
+  - no_further_return_after_r2_without_new_owner_budget_disposition
+
+excluded_inputs:
+  - author_conversation_transcript_as_future_reviewer_input
+  - research/old-swarm
+  - projects/swarm_content
+  - canonical_fixture_content_or_modification
+  - unpinned_external_or_provider_state
+  - any_owner_decision_beyond_the_exact_budget_extension

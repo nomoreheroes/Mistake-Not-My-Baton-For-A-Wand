@@ -1,0 +1,89 @@
+record_id: k0b-01-implementation-owner-disposition-v1
+schema_version: 1
+decision: approved_for_zero_call_implementation
+recorded_at: "2026-09-07T11:54:50.9257043+03:00"
+actor:
+  actor_id: workspace_owner
+  role: human_project_owner
+  authentication_ref: null
+authority:
+  mode: conversational
+  ref: current_conversation_owner_continue_after_exact_next_step_2026_09_07
+  owner_message: "ок, давай продолжим"
+  interpretation: Proceed with the immediately preceding stated next step: bind the exact K0b-01 plan and implement only its zero-call scope.
+
+bindings:
+  base_git_commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  base_git_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  final_K0b00_disposition:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+  K0b01_plan:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    version: "1.0.0"
+    sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f
+
+approved_scope:
+  work_item_id: K0b-01
+  checkpoint_budget_phase: K0b-runtime-operational
+  physical_model_calls: {nominal: 0, worst_case: 0}
+  implementation_session: current_conversation_after_this_record_is_materialized
+  capabilities:
+    - exact_forward_schema_v3_to_v4_migration
+    - closed_minimal_Alpha_event_subscription_terminal_and_S_routing_registry_sources
+    - deterministic_registry_routing_and_resource_budget_compilers
+    - fail_closed_layer_plan_binary_payload_budget_validator
+    - generated_temporary_database_migration_contract_reference_and_negative_tests
+    - deterministic_K0b01_validation_evidence
+
+exact_allowed_implementation_write_set:
+  - new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json
+  - new pipeline/registry/alpha0/event-profile-v1.yaml
+  - new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml
+  - new pipeline/registry/alpha0/s-routing-profile-v1.yaml
+  - new pipeline/registry/resource-budget-policy/v1.yaml
+  - new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml
+  - new pipeline/harness/migrations/0004_k0b01.sql
+  - new pipeline/harness/k0b01/__init__.py
+  - new pipeline/harness/k0b01/store.py
+  - new pipeline/harness/k0b01/contract.py
+  - new pipeline/harness/k0b01/compiler.py
+  - new pipeline/harness/k0b01/budget.py
+  - new pipeline/tests/foundation/test_k0b01_migration.py
+  - new pipeline/tests/contracts/test_k0b01_contracts.py
+  - new pipeline/tests/contracts/test_k0b01_routing_compiler.py
+  - new pipeline/tests/contracts/test_k0b01_resource_budget.py
+  - new pipeline/evidence/k0b-01-validation-v1.yaml
+
+mandatory_controls:
+  - Verify every bound input hash before implementation and again at exit.
+  - Preserve all pre-existing user changes and every K0a/K0b-00 hash-bound byte.
+  - Keep HEAD and base tree unchanged; create no commit, push, branch, merge, PR, deploy, or release.
+  - Use only generated temporary databases and synthetic records; never read or use the canonical fixture.
+  - Keep K0b-01 zero-call and deterministic; do not activate either checkpoint-budget phase.
+  - Preserve exactly two ordered checkpoint-budget phases, four exact F15 boundary trigger IDs, unchanged thresholds, and zero credit arithmetic.
+  - Stop on any need to widen the exact write set, change a bound hash, access a forbidden root, or invoke a model/API/network capability.
+
+non_authorizations:
+  - physical_model_call_or_manual_VSCode_dispatch
+  - independent_review_or_design_invocation_budget
+  - direct_provider_API_REST_SDK_Responses_API_or_credentials
+  - runtime_phase_activation_checkpoint_projection_Git_publication_or_product_effect
+  - K0b02_K0b03_K0b04_K0b05_N1_or_later_implementation
+  - threshold_raise_storage_migration_CAS_LFS_external_backend_third_phase_or_credit
+  - canonical_fixture_read_write_run_or_runtime_use
+  - projects_swarm_read_run_or_modification
+  - research_old_swarm_read_or_modification
+  - edit_of_any_hash_bound_K0a_or_K0b00_input
+  - commit_push_merge_PR_deploy_release_or_readiness_claim
+
+stale_conditions:
+  - K0b01_plan_sha256_changes
+  - final_K0b00_disposition_sha256_changes
+  - base_HEAD_or_tree_changes
+  - exact_write_set_widens
+  - zero_call_scope_or_checkpoint_phase_partition_changes
+
+limitations:
+  - Conversational actor authentication and a stable external message identifier are unavailable.
+  - This record authorizes deterministic implementation only and is not an independent review or completion receipt.

@@ -1,0 +1,67 @@
+"""Public deterministic K0b-01 contract, compiler, and migration surface."""
+
+from .budget import (
+    BinaryPayloadBudgetError,
+    BudgetError,
+    BudgetLimitExceeded,
+    IncompleteGraph,
+    ReferenceMismatch,
+    compile_resource_budget,
+    prove_reference_equivalence,
+    validate_binary_payload_budget,
+)
+from .compiler import (
+    COMPILER_ID,
+    COMPILER_VERSION,
+    CompiledRegistryBundle,
+    CompilerError,
+    ReachabilityError,
+    RoutingError,
+    compile_registry_bundle,
+    compile_registry_bytes,
+)
+from .contract import (
+    CHECKPOINT_PHASE_ORDER,
+    EXACT_EVENT_TYPES,
+    EXACT_ROUTE_IDS,
+    F15_TRIGGER_IDS,
+    PINNED_PACKAGE_SHA256,
+    ContractBundle,
+    ContractError,
+    ContractHashMismatch,
+    ContractValidationError,
+    load_contract_bundle,
+)
+from .store import BackupReceipt, K0B01_MIGRATION_SHA256, K0b01Store
+
+__all__ = [
+    "BackupReceipt",
+    "BinaryPayloadBudgetError",
+    "BudgetError",
+    "BudgetLimitExceeded",
+    "CHECKPOINT_PHASE_ORDER",
+    "COMPILER_ID",
+    "COMPILER_VERSION",
+    "CompiledRegistryBundle",
+    "CompilerError",
+    "ContractBundle",
+    "ContractError",
+    "ContractHashMismatch",
+    "ContractValidationError",
+    "EXACT_EVENT_TYPES",
+    "EXACT_ROUTE_IDS",
+    "F15_TRIGGER_IDS",
+    "IncompleteGraph",
+    "K0B01_MIGRATION_SHA256",
+    "K0b01Store",
+    "PINNED_PACKAGE_SHA256",
+    "ReachabilityError",
+    "ReferenceMismatch",
+    "RoutingError",
+    "compile_registry_bundle",
+    "compile_registry_bytes",
+    "compile_resource_budget",
+    "load_contract_bundle",
+    "prove_reference_equivalence",
+    "validate_binary_payload_budget",
+]

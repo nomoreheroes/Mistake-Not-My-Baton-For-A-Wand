@@ -1,0 +1,173 @@
+scope_id: k0b-00-operational-alpha0-delta-scope-v2
+schema_version: 1
+version: "2.0.0"
+status: D03_policy_scope_revision_pending_three_v2_plan_reviews_and_owner_approval
+program_phase: K0b
+work_item: K0b-00
+
+revision_authority:
+  predecessor: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  owner_disposition: {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+  independent_finding: {path: new pipeline/reviews/k0b-00-d03-checkpoint-phase-partition-review-r0.yaml, recommendation: revise, sha256: 814745fd7a4026bc5f8f20f1bebb511c44656d43a19c634ea6df86be062e2107}
+  policy_overlay: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, version: "1.0.0", sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+
+entry_gate:
+  k0a03_commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  k0a03_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  external_rereview: {path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, verdict: approve, open_findings: 0}
+  physical_f00: {run_id: run-e636df51c38b47f9aade2c8cf3104475, state: completed, physical_model_invocations: 3, tool_calls_observed: 0, pipeline_network_calls: 0, limitation: all_three_roles_used_the_ChatGPT_binding}
+
+architecture_deltas:
+  - plan_id: k0b-00-shared-control-plane-delta-v2
+    owner: W1_Kernel_shared_control_plane
+    output_path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+    revision_from: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  - plan_id: k0b-00-shared-artifact-event-plane-delta-v2
+    owner: W1_Kernel_shared_artifact_event_plane
+    output_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+    revision_from: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  - plan_id: k0b-00-s-layer-delta-v2
+    owner: S_S0
+    output_path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+    revision_from: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+
+planning_authority:
+  allowed_now:
+    - exact_K0b_policy_overlay_and_scope_v2
+    - three_separately_authored_v2_delta_plans
+    - three_fresh_context_v2_reviews
+    - updated_D03_forecast_reconciliation_and_addendum
+    - owner_approval_request_and_hash_bound_receipts
+    - design_invocation_ledger_entries
+  forbidden_until_all_three_v2_plan_reviews_and_owner_approval:
+    - K0b_SQL_migrations_contracts_or_registries_implementation
+    - K0b_runtime_prompt_or_fixture_behavior
+    - checkpoint_or_projection_publication
+    - physical_model_invocations
+
+operational_target:
+  environment: committed_independent_fixture_clone_not_canonical_fixture_worktree
+  scenarios: [F01, F02, F03, F04, F05, F07, F09, F10, F13a, F15]
+  readiness_claim: operational_Alpha0_fixture_only_after_K0b04
+  next_program_decision: K0b05_continue_to_N1_or_pause_program
+  real_product_project: forbidden
+
+implementation_packages_after_approval:
+  K0b01: {scope: forward_migrations_registry_and_resource_budget_compilers_and_minimal_Alpha_events, checkpoint_budget_phase: K0b-runtime-operational, physical_model_calls: 0, gate: migration_contract_and_reference_equivalence_tests}
+  K0b02: {scope: projection_outbox_checkpoint_publisher_replay_materializer_and_crash_reconciliation, checkpoint_budget_phase: K0b-runtime-operational, physical_model_calls: 0, gate: foundation_and_clean_clone_replay_tests}
+  K0b03: {scope: repository_worktree_path_tool_egress_secret_process_guards_and_abort_compatibility, checkpoint_budget_phase: K0b-runtime-operational, physical_model_calls: 0, gate: security_and_recovery_tests}
+  K0b04:
+    scope: assigned_fixture_scenarios_F15_and_checkpoint_cost_matrix
+    pre_F15_checkpoint_budget_phase: K0b-runtime-operational
+    pre_F15_non_F15_physical_model_budget: {nominal: 16, worst_case: 30}
+    F15_checkpoint_budget_phase: K0b-F15-exact-measurement
+    F15_physical_model_calls: {nominal: 36, worst_case: 36, exact_required: 36}
+    post_F15_physical_model_calls: 0
+    gate: Alpha0_dispatcher_security_storage_proof
+  K0b05:
+    scope: deterministic_kernel_to_N1_feasibility_forecast_and_owner_decision_from_sealed_F15_evidence
+    checkpoint_budget_phase: K0b-F15-exact-measurement
+    physical_model_calls: 0
+    separate_top_level_run: false
+    gate: program_checkpoint
+
+checkpoint_budget_phase_partition:
+  policy_overlay: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  project_checkpoint_chain: fixture
+  exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  chronological_contiguous_non_overlapping_exhaustive: true
+  phase_membership_compiled_before_first_runtime_effect: true
+  K0b-runtime-operational:
+    starts_after: K0a_fixture_chain_head
+    ends_at: sealed_reconciled_checkpoint_before_first_F15_submit
+    physical_model_calls: {nominal: 16, worst_case: 30, all_non_F15: true}
+    publications: {nominal: 14, worst_case: 34}
+    checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+  K0b-F15-exact-measurement:
+    starts_after: verified_operational_terminal_seal
+    ends_at: terminal_K0b05_owner_program_disposition_and_same_top_level_run_end
+    physical_model_calls: {nominal: 36, worst_case: 36, exact_F15: 36, non_F15: 0}
+    window_publications: {nominal: 8, worst_case: 22}
+    boundary_publication_triggers: 4
+    publications: {nominal: 12, worst_case: 26, hard_cap_at_current_checkpoint: 29}
+    checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+  F15_boundary_trigger_IDs:
+    - k0b.f15.boundary.entry_gate
+    - k0b.f15.boundary.program_owner_wait_or_exit
+    - k0b.f15.boundary.exit_gate
+    - k0b.f15.boundary.top_level_run_end
+  any_fifth_trigger_post_F15_non_F15_model_call_or_phase_overlap: block_and_reforecast_before_effect
+
+minimal_alpha_event_profile:
+  retained_from_K0a: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+  added_for_K0b: [run.blocked, run.abort_requested, run.aborted, artifact.published, projection.requested, projection.written, projection.failed, revision.requested, gate.passed, approval.requested, approval.granted, approval.rejected, error.schema_mismatch, error.tool_failure, error.security_policy, meta.incident_detected]
+  terminal_policies_before_M1: {errors: block_run_and_enqueue_human, meta_incident: persist_incident_and_enqueue_W5}
+  forbidden_families: [dialogue, distributed_lease_scheduler, general_retry_or_dead_letter, budget_optimizer_or_escalation_FSM, cache_or_scale, full_domain_layer_events]
+
+cross_plan_boundaries:
+  phase_policy_and_membership: {owner: shared_control_plane, persistence_owner: shared_artifact_event_plane, semantic_route_owner: none}
+  checkpoint_phase_seal: {request_and_admission_owner: shared_control_plane, snapshot_outbox_Git_and_result_owner: shared_artifact_event_plane, S_role: none}
+  validated_control_transition_request: {producer: shared_control_plane, consumer: shared_artifact_event_plane}
+  compiled_route_decision: {semantic_owner: S, compiler_and_execution_owner: shared_control_plane, persistence_owner: shared_artifact_event_plane}
+  validated_route_proposal: {producer: S_or_Layer0, validator_and_scheduler: shared_control_plane, persistence_owner: shared_artifact_event_plane}
+  projection_intent_and_pair: {request_owner: shared_control_plane, outbox_projector_and_hash_owner: shared_artifact_event_plane}
+  abort_and_reconciliation: {run_state_owner: shared_control_plane, event_and_persistence_owner: shared_artifact_event_plane, route_freeze_owner: S}
+
+repository_boundary:
+  pipeline_Git: read_only_during_fixture_runtime
+  canonical_fixture: immutable_source_and_never_runtime_writer
+  scenario_fixture: new_independent_clone_with_coordination_worktree
+  checkpoint_path: .pipeline/history/pipeline-checkpoint.sqlite3
+  checkpoint_writer: harness_only_in_coordination_worktree
+  task_worktrees: sparse_exclude_history_runtime_and_backups
+  Q_primary_worktree: exclude_entire_dot_pipeline_tree
+  projects_swarm: not_read_not_run_not_modified
+  research_old_swarm: not_read_not_modified
+
+budget_authorities:
+  plan_production:
+    package_id: K0b-plan-deltas
+    invocation_profile: light
+    invocations: {nominal: 6, original_worst_case: 12, effective_owner_cap: 24, completed_before_v2_sequence: 18}
+    v2_sequence: three_separate_authors_plus_three_fresh_context_reviewers_ordinals_19_through_24
+    return_margin_after_success: 0
+  operational_phase: {package_id: K0b-runtime-operational, invocation_profile: standard, invocations: {nominal: 16, worst_case: 30}, all_calls_before_F15: true}
+  F15_phase: {package_id: K0b-F15-exact-measurement, invocation_profile: deep, invocations: {nominal: 36, worst_case: 36, exact: 36}, non_overlapping_with_operational: true}
+  checkpoint_policy_base: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  checkpoint_policy_overlay: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  worst_case_delta_factor_before_measurement: 1.0
+  overlap_or_cross_phase_credit: 0
+
+binary_payload_scope:
+  control_plane: N_A_by_contract_no_binary_persistence
+  S: N_A_by_contract_no_binary_persistence
+  artifact_event_plane: {applicable_classes: [SQLite_checkpoint, synthetic_page_churn_and_BLOB_measurement_inputs], logical_seed_count: {nominal: 6, worst_case: 12}, seed_bytes_nested: {nominal: 2236416, worst_case: 4472832}, requires_full_machine_readable_budget_and_D0_reconciliation: true}
+
+owner_decisions_and_status:
+  K0b-D01: reviewed_fixed_hybrid_manual_VSCode_profile_and_residual_risk_accepted_exact_model_receipts_required_pre_dispatch
+  K0b-D02: v1_hash_approval_superseded_pending_three_v2_plan_reviews_and_new_exact_approval
+  K0b-D03: exact_policy_scope_partition_selected_pending_three_v2_plan_reviews
+  K0b-D04: closed_separate_exact_deep_F15_36_36_no_operational_credit
+  K0b-B01: closed_seed_arithmetic_reconciled
+
+explicit_exclusions:
+  - K0b01_or_later_implementation_before_v2_architecture_approval
+  - projects_swarm_or_any_real_product_run
+  - research_import_or_legacy_payload_access
+  - direct_provider_API
+  - canonical_fixture_modification
+  - release_N1_contract_full_M_or_automatic_self_change
+  - CAS_LFS_external_checkpoint_backend_or_threshold_raise
+  - third_checkpoint_budget_phase_or_post_F15_non_F15_model_call
+
+exit_gate:
+  - policy_overlay_scope_v2_and_three_v2_plans_are_hash_bound
+  - three_v2_plans_each_cover_all_18_required_categories
+  - three_separate_v2_authors_and_three_fresh_context_reviews_resolve_in_the_ledger
+  - review_findings_have_dispositions_with_no_unresolved_blocker
+  - each_checkpoint_and_checkpoint_budget_phase_is_strictly_below_hard_without_credit
+  - cross_plan_phase_membership_trigger_publisher_seal_and_replay_ownership_is_consistent
+  - owner_approval_hash_binds_scope_policy_three_plans_reviews_forecast_executor_and_decisions
+  - no_K0b_runtime_contract_migration_fixture_checkpoint_or_physical_call_exists_before_gate

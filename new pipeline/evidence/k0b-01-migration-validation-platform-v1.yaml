@@ -1,0 +1,45 @@
+record_id: k0b-01-migration-validation-platform-v1
+schema_version: 1
+version: "1.0.0"
+observed_at: "2026-09-07T18:45:40.7907359+03:00"
+work_item_id: K0b-01
+status: local_read_only_planning_observation
+
+validation_matrix:
+  exact_supported_rows:
+    - platform: Windows-2022Server-10.0.20348-SP0
+      architecture: AMD64
+      python_implementation: CPython
+      python_version: 3.12.7
+      python_distribution: Anaconda
+      sqlite_library_version: 3.45.3
+      sqlite_python_module_version: 2.6.0
+  unlisted_platform_python_or_SQLite_combination: unsupported_until_separate_hash_bound_conformance_evidence
+
+required_connection_configuration:
+  journal_mode: WAL
+  synchronous: FULL
+  busy_timeout_ms: 5000
+  recursive_triggers: true
+  legacy_alter_table: false
+  foreign_keys_before_rebuild_transaction: false
+  foreign_keys_after_rebuild_commit: true
+  wal_checkpoint_before_backup: TRUNCATE
+
+observation_command:
+  command: python_read_only_sqlite3_sys_and_platform_version_query
+  exit_code: 0
+  filesystem_writes: 0
+  database_writes: 0
+  network_or_API_calls: 0
+  model_calls: 0
+
+interpretation:
+  - This record pins the only mandatory K0b-01 migration validation row.
+  - The future implementation may add a platform row only under separate exact evidence; it may not silently claim portability.
+  - Runtime migration remains unauthorized by this observation.
+
+non_authorizations:
+  - no_migration_contract_or_runtime_implementation
+  - no_canonical_fixture_or_forbidden_root_access
+  - no_commit_push_PR_deploy_or_release

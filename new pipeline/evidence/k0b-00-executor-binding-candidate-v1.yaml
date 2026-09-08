@@ -1,0 +1,73 @@
+record_id: k0b-00-executor-binding-candidate-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T12:02:39.7095343+03:00"
+status: incomplete_candidate_no_physical_call_authority
+work_item_id: K0b-00
+runtime_started: false
+
+authority:
+  owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  selected_route: separately_pinned_harness_adapter
+  control_plan: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  S_plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+
+required_binding_fields:
+  executor_profile_id: pending_exact_adapter_profile
+  executor_version: pending_exact_adapter_version
+  model_id: pending_owner_pin
+  capability_policy:
+    required: deny_all_actor_tools_shell_filesystem_database_git_network_plugins_MCP_and_web
+    enforcement_status: not_implemented_or_reviewed
+  egress_policy:
+    required: one_owner_pinned_model_provider_channel_only
+    exact_destination_and_credential_scope: pending
+  transcript_evidence_profile:
+    required: complete_JSONL_plus_exact_input_output_bytes_usage_tool_events_and_zero_tool_call_validation
+    implementation_status: pending
+  sha256: pending_adapter_artifact_hash
+
+locally_observed_transport_candidate:
+  observation_mode: version_help_and_file_hash_only_no_model_invocation
+  executable_path: 'C:\Users\Administrator\.vscode\extensions\openai.chatgpt-26.825.51511-win32-x64\bin\windows-x86_64\codex.exe'
+  executable_version: codex-cli_0.151.0-alpha.7.2
+  executable_size_bytes: 313790256
+  executable_sha256: 24a37127b8298b7bf96ca9b1d51a63c0685d561d1596f052bec73f734ed524b5
+  available_relevant_arguments: ["exec", "--json", "--ephemeral", "--ignore-user-config", "--ignore-rules", "--sandbox", "read-only", "--model", "--output-schema", "--output-last-message"]
+  documented_zero_tools_switch: false
+  direct_use_as_K0b_binding: forbidden
+  reason: Read-only sandbox limits writes but does not prove that actor tool calls are technically disabled; the selected route requires a separately pinned adapter and reviewed enforcement profile.
+
+candidate_adapter_requirements:
+  input:
+    - exact canonical invocation envelope bytes and sha256
+    - exact model_id and provider route
+    - output JSON schema path version and sha256
+    - empty actor tool registry enforced before transport dispatch
+    - exact cwd environment allowlist timeout and resource limits
+  output:
+    - raw response bytes and sha256
+    - validated typed response bytes and sha256
+    - complete JSONL transport transcript and sha256
+    - usage latency provider model and parameter facts
+    - machine proof that tool request count equals zero
+  failure_policy:
+    - fail_before_dispatch_on_any_missing_or_changed_binding
+    - fail_on_any_tool_request_or_unverifiable_transcript
+    - no_fallback_model_provider_executable_or_capability
+    - no_mid_invocation_retry_or_adapter_switch
+  implementation_location: future_K0b_contract_and_harness_scope_only_after_architecture_approval
+  implementation_created_by_this_record: false
+
+closure_requirements:
+  - Owner pins the exact model ID and permitted provider egress destination.
+  - A concrete adapter profile supplies every required field and an artifact SHA-256.
+  - Independent evidence reviews the exact adapter profile and zero-tool enforcement.
+  - Approval materialization hash-binds the reviewed adapter profile; executable observation alone is insufficient.
+
+explicit_non_authorizations:
+  - treating_the_K0a_manual_extension_disposition_as_K0b_authority
+  - direct_Codex_CLI_model_invocation
+  - residual_risk_acceptance_by_inference
+  - adapter_runtime_code_or_contract_creation_in_K0b_00
+  - physical_F15_or_other_K0b_call

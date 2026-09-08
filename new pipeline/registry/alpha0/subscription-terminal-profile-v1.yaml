@@ -1,0 +1,29 @@
+{
+  "registry_id": "pipeline-v2.alpha0.subscription-terminal-profile",
+  "version": "1.0.0",
+  "profile": "Alpha0",
+  "routes": [
+    {"route_id":"alpha0.control.command","kind":"subscriber","subscribers":["shared_control.command_admission"],"terminal_policy":null,"fields_read":["command_id","profile","authority_refs"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.run_lifecycle","kind":"subscriber","subscribers":["shared_control.run_controller"],"terminal_policy":null,"fields_read":["run_id","state","state_revision"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.artifact_lifecycle","kind":"subscriber","subscribers":["shared_control.artifact_gate"],"terminal_policy":null,"fields_read":["artifact_version_id","owner","content_sha256"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.handoff","kind":"subscriber","subscribers":["shared_control.handoff_gate"],"terminal_policy":null,"fields_read":["artifact_version_id","consumer_contract_id","delivery_snapshot_id"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.terminal.run_completed","kind":"terminal","subscribers":[],"terminal_policy":"observational_terminal","fields_read":["run_id","terminal_sequence"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.terminal.blocked_human","kind":"terminal","subscribers":[],"terminal_policy":"block_run_and_enqueue_human","fields_read":["run_id","reason_code","evidence_refs"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.abort","kind":"subscriber","subscribers":["shared_control.abort_controller"],"terminal_policy":null,"fields_read":["run_id","expected_revision","reason_code"],"activation_work_item":"K0b-03"},
+    {"route_id":"alpha0.terminal.run_aborted","kind":"terminal","subscribers":[],"terminal_policy":"aborted_terminal","fields_read":["run_id","terminal_sequence","reconciliation_status"],"activation_work_item":"K0b-03"},
+    {"route_id":"alpha0.artifact_event.projection","kind":"subscriber","subscribers":["shared_artifact_event.projection_outbox"],"terminal_policy":null,"fields_read":["decision_version_id","projection_profile_hash","pair_stem"],"activation_work_item":"K0b-02"},
+    {"route_id":"alpha0.control.projection_result","kind":"subscriber","subscribers":["shared_control.projection_gate"],"terminal_policy":null,"fields_read":["outbox_item_id","pair_sha256","result"],"activation_work_item":"K0b-02"},
+    {"route_id":"alpha0.control.revision","kind":"subscriber","subscribers":["shared_control.revision_router"],"terminal_policy":null,"fields_read":["artifact_version_id","consumer_id","reason_code"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.gate","kind":"subscriber","subscribers":["shared_control.gate_controller"],"terminal_policy":null,"fields_read":["gate_id","subject_id","evidence_refs"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.human.owner_gate","kind":"subscriber","subscribers":["human_project_owner"],"terminal_policy":null,"fields_read":["approval_id","scope_hash","decision_enum"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.control.approval_result","kind":"subscriber","subscribers":["shared_control.approval_controller"],"terminal_policy":null,"fields_read":["approval_id","decision","actor_id","authority_hash"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.terminal.error_human","kind":"terminal","subscribers":[],"terminal_policy":"block_run_and_enqueue_human","fields_read":["run_id","error_code","evidence_refs"],"activation_work_item":"K0b-01"},
+    {"route_id":"alpha0.terminal.incident_w5","kind":"terminal","subscribers":[],"terminal_policy":"persist_incident_and_enqueue_W5","fields_read":["run_id","incident_id","evidence_refs"],"activation_work_item":"K0b-01"}
+  ],
+  "f00_exception": {
+    "event_type": "handoff.ready",
+    "subscriber": "bootstrap_sink",
+    "terminal_policy": "fixture_terminal",
+    "allowed_only_under_contract_sha256": "5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6"
+  }
+}

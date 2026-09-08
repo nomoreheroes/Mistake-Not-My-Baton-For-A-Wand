@@ -1,0 +1,141 @@
+{
+  "reference_set_id": "pipeline-v2.resource-budget-reference-cases",
+  "version": "1.0.0",
+  "authority": {
+    "k0a_worksheet_sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9",
+    "d0_forecast_sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840",
+    "k0b_forecast_sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a",
+    "k0b_reconciliation_sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+  },
+  "cases": [
+    {
+      "case_id": "k0a-bootstrap-reference-v1",
+      "profile": "K0a",
+      "graph_completeness": {"route": true, "fanout": true, "retry": true, "dialogue": true},
+      "packages": [
+        {
+          "package_id": "K0a-plan-bootstrap",
+          "invocation_profile": "light",
+          "call_nodes": [
+            {"node_id":"three_plan_authors","call_class":"model","nominal":3,"worst_case":9},
+            {"node_id":"three_fresh_reviewers","call_class":"model","nominal":3,"worst_case":9}
+          ],
+          "human_attention": {"profile":"standard","sessions_nominal":1,"sessions_worst_case":2,"blocking_decisions_nominal":1,"blocking_decisions_worst_case":3,"active_minutes_nominal":20,"active_minutes_worst_case":60,"max_single_session_minutes":30,"batchable_requests":true}
+        },
+        {
+          "package_id": "K0a-runtime-F00",
+          "invocation_profile": "light",
+          "call_nodes": [
+            {"node_id":"S0","call_class":"model","nominal":1,"worst_case":2},
+            {"node_id":"synthetic_Layer0","call_class":"model","nominal":1,"worst_case":2},
+            {"node_id":"fixture_worker","call_class":"model","nominal":1,"worst_case":2}
+          ],
+          "human_attention": {"profile":"light","sessions_nominal":0,"sessions_worst_case":0,"blocking_decisions_nominal":0,"blocking_decisions_worst_case":0,"active_minutes_nominal":0,"active_minutes_worst_case":0,"max_single_session_minutes":30,"batchable_requests":true}
+        }
+      ],
+      "checkpoint_phases": [
+        {
+          "phase_id":"K0a",
+          "publisher_available":false,
+          "members":["K0a-01","K0a-02","K0a-03"],
+          "replay_points":{"nominal":12,"worst_case":42},
+          "publisher_eligible_minutes":{"nominal":6,"worst_case":18},
+          "new_db_bytes":{"nominal":0,"worst_case":0},
+          "fixed_trigger_counts":{"nominal":0,"worst_case":0},
+          "checkpoint_components_bytes":{"nominal":[98304,2097152],"worst_case":[1572864,4194304]}
+        }
+      ],
+      "binary_payload_budgets": [
+        {"owner":"shared_control_plane","mode":"N/A","contract_prohibits_binary_persistence":true,"references_budgeted_payload_only":true,"proof_ref":"k0a-control-plan"},
+        {"owner":"shared_artifact_event_plane","mode":"N/A","contract_prohibits_binary_persistence":true,"references_budgeted_payload_only":true,"proof_ref":"k0a-F00-contract"},
+        {"owner":"S","mode":"N/A","contract_prohibits_binary_persistence":true,"references_budgeted_payload_only":true,"proof_ref":"k0a-S-plan"}
+      ],
+      "expected_reference_result": {
+        "case_id":"k0a-bootstrap-reference-v1",
+        "package_calls":{"K0a-plan-bootstrap":{"nominal":6,"worst_case":18},"K0a-runtime-F00":{"nominal":3,"worst_case":6}},
+        "total_calls":{"nominal":9,"worst_case":24},
+        "human_attention":{"sessions_nominal":1,"sessions_worst_case":2,"blocking_decisions_nominal":1,"blocking_decisions_worst_case":3,"active_minutes_nominal":20,"active_minutes_worst_case":60},
+        "binary_payload":{"nominal_new_bytes":0,"worst_case_new_bytes":0},
+        "checkpoint_phases":{"K0a":{"window_publications":{"nominal":2,"worst_case":5},"publications":{"nominal":0,"worst_case":0},"checkpoint_bytes":{"nominal":3145728,"worst_case":6291456},"phase_pack_bytes":{"nominal":0,"worst_case":0},"checkpoint_status":{"nominal":"below_warning","worst_case":"below_warning"},"phase_pack_status":{"nominal":"publisher_unavailable","worst_case":"publisher_unavailable"},"batches":{"nominal":0,"worst_case":0},"largest_batch_bytes":{"nominal":0,"worst_case":0}}},
+        "checkpoint_phase_order":["K0a"],
+        "cumulative_observable_phase_pack_bytes":{"nominal":0,"worst_case":0}
+      }
+    },
+    {
+      "case_id": "k0b-approved-two-phase-reference-v1",
+      "profile": "K0b",
+      "graph_completeness": {"route": true, "fanout": true, "retry": true, "dialogue": true},
+      "packages": [
+        {
+          "package_id":"K0b-plan-deltas",
+          "invocation_profile":"light",
+          "budget_escalation_authority":"k0b-final-disposition-design-history-reference_only",
+          "call_nodes":[{"node_id":"approved_design_reference","call_class":"model","nominal":6,"worst_case":24}],
+          "human_attention":{"profile":"light","sessions_nominal":1,"sessions_worst_case":1,"blocking_decisions_nominal":1,"blocking_decisions_worst_case":2,"active_minutes_nominal":30,"active_minutes_worst_case":30,"max_single_session_minutes":30,"batchable_requests":true}
+        },
+        {
+          "package_id":"K0b-runtime-operational",
+          "invocation_profile":"standard",
+          "call_nodes":[
+            {"node_id":"K0b-01","call_class":"deterministic","nominal":0,"worst_case":0},
+            {"node_id":"K0b-02","call_class":"deterministic","nominal":0,"worst_case":0},
+            {"node_id":"K0b-03","call_class":"deterministic","nominal":0,"worst_case":0},
+            {"node_id":"K0b-04-pre-F15","call_class":"model","nominal":16,"worst_case":30}
+          ],
+          "human_attention":{"profile":"standard","sessions_nominal":1,"sessions_worst_case":3,"blocking_decisions_nominal":2,"blocking_decisions_worst_case":4,"active_minutes_nominal":30,"active_minutes_worst_case":120,"max_single_session_minutes":60,"batchable_requests":false}
+        },
+        {
+          "package_id":"K0b-F15-exact-measurement",
+          "invocation_profile":"deep",
+          "deep_budget_authority":"k0b-D04-exact-36",
+          "call_nodes":[
+            {"node_id":"K0b-04-F15","call_class":"model","nominal":36,"worst_case":36},
+            {"node_id":"K0b-04-post-F15","call_class":"deterministic","nominal":0,"worst_case":0},
+            {"node_id":"K0b-05","call_class":"deterministic","nominal":0,"worst_case":0}
+          ],
+          "human_attention":{"profile":"standard","sessions_nominal":0,"sessions_worst_case":0,"blocking_decisions_nominal":0,"blocking_decisions_worst_case":0,"active_minutes_nominal":0,"active_minutes_worst_case":0,"max_single_session_minutes":60,"batchable_requests":false}
+        }
+      ],
+      "checkpoint_phases": [
+        {
+          "phase_id":"K0b-runtime-operational",
+          "publisher_available":true,
+          "members":["K0b-01","K0b-02","K0b-03","K0b-04-pre-F15"],
+          "replay_points":{"nominal":54,"worst_case":172},
+          "publisher_eligible_minutes":{"nominal":16,"worst_case":90},
+          "new_db_bytes":{"nominal":2236416,"worst_case":4472832},
+          "fixed_trigger_counts":{"nominal":8,"worst_case":16},
+          "checkpoint_components_bytes":{"nominal":[524288,4194304,2195456,2236416],"worst_case":[7864320,8388608,5767168,4472832]}
+        },
+        {
+          "phase_id":"K0b-F15-exact-measurement",
+          "publisher_available":true,
+          "members":["K0b-04-F15","K0b-04-post-F15","K0b-05"],
+          "replay_points":{"nominal":72,"worst_case":144},
+          "publisher_eligible_minutes":{"nominal":36,"worst_case":108},
+          "new_db_bytes":{"nominal":1179648,"worst_case":9437184},
+          "fixed_trigger_counts":{"nominal":4,"worst_case":4},
+          "checkpoint_components_bytes":{"nominal":[9150464,1179648],"worst_case":[26492928,9437184]}
+        }
+      ],
+      "binary_payload_budgets": [
+        {"owner":"shared_control_plane","mode":"N/A","contract_prohibits_binary_persistence":true,"references_budgeted_payload_only":true,"proof_ref":"k0b-control-v2"},
+        {"owner":"S","mode":"N/A","contract_prohibits_binary_persistence":true,"references_budgeted_payload_only":true,"proof_ref":"k0b-S-v2"},
+        {"owner":"shared_artifact_event_plane","mode":"applicable","payload_classes_and_media_types":["SQLite_checkpoint:application/vnd.sqlite3","synthetic_measurement_seed:application/octet-stream"],"nominal_object_count":6,"worst_case_object_count":12,"assumed_mean_object_bytes":372736,"hard_per_object_bytes":1048576,"nominal_aggregate_new_bytes":2236416,"worst_case_aggregate_new_bytes":4472832,"policy_permitted_maximum_aggregate_bytes":12582912,"runtime_aggregate_limit_bytes":12582912,"checkpoint_publication_count":60,"pessimistic_pack_amplification":1,"exact_forecast_ref":"new pipeline/evidence/k0b-00-updated-forecast-v3.yaml","exact_forecast_sha256":"ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"}
+      ],
+      "expected_reference_result": {
+        "case_id":"k0b-approved-two-phase-reference-v1",
+        "package_calls":{"K0b-plan-deltas":{"nominal":6,"worst_case":24},"K0b-runtime-operational":{"nominal":16,"worst_case":30},"K0b-F15-exact-measurement":{"nominal":36,"worst_case":36}},
+        "total_calls":{"nominal":58,"worst_case":90},
+        "human_attention":{"sessions_nominal":2,"sessions_worst_case":4,"blocking_decisions_nominal":3,"blocking_decisions_worst_case":6,"active_minutes_nominal":60,"active_minutes_worst_case":150},
+        "binary_payload":{"nominal_new_bytes":2236416,"worst_case_new_bytes":4472832},
+        "checkpoint_phases":{
+          "K0b-runtime-operational":{"window_publications":{"nominal":6,"worst_case":18},"publications":{"nominal":14,"worst_case":34},"checkpoint_bytes":{"nominal":9437184,"worst_case":27262976},"phase_pack_bytes":{"nominal":132120576,"worst_case":926941184},"checkpoint_status":{"nominal":"below_warning","worst_case":"below_warning"},"phase_pack_status":{"nominal":"below_warning","worst_case":"above_warning"},"batches":{"nominal":2,"worst_case":3},"largest_batch_bytes":{"nominal":113246208,"worst_case":327155712}},
+          "K0b-F15-exact-measurement":{"window_publications":{"nominal":8,"worst_case":22},"publications":{"nominal":12,"worst_case":26},"checkpoint_bytes":{"nominal":10485760,"worst_case":36700160},"phase_pack_bytes":{"nominal":125829120,"worst_case":954204160},"checkpoint_status":{"nominal":"below_warning","worst_case":"below_warning"},"phase_pack_status":{"nominal":"below_warning","worst_case":"above_warning"},"batches":{"nominal":1,"worst_case":3},"largest_batch_bytes":{"nominal":125829120,"worst_case":440401920}}
+        },
+        "checkpoint_phase_order":["K0b-runtime-operational","K0b-F15-exact-measurement"],
+        "cumulative_observable_phase_pack_bytes":{"nominal":257949696,"worst_case":1881145344}
+      }
+    }
+  ]
+}

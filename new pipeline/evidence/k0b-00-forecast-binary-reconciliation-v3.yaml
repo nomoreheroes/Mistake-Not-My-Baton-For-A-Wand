@@ -1,0 +1,110 @@
+record_id: k0b-00-forecast-binary-reconciliation-v3
+schema_version: 1
+version: "3.0.0"
+created_at: "2026-09-03T19:32:07.9387926+03:00"
+status: policy_scope_and_D03_arithmetic_reconciled_pending_three_v2_plan_reviews
+work_item_id: K0b-00
+runtime_started: false
+
+authority:
+  base_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  K0b_policy_overlay: {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  scope_v2: {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  forecast_v3: {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  prior_reconciliation: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f}
+  owner_revision_disposition: {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+
+review_F01_disposition:
+  finding: unauthorized_per_checkpoint_phase_threshold_reinterpretation
+  repair: explicit_owner_approved_K0b_policy_overlay_and_scope_v2
+  threshold_unit: per_fixture_project_chain_and_exact_checkpoint_budget_phase
+  phase_count_and_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  arbitrary_batch_or_third_phase: forbidden
+  result: resolved_pending_v2_plan_reviews
+
+review_F02_disposition:
+  finding: unsupported_zero_post_F15_call_chronology
+  exact_allocation:
+    K0b01: 0_model_calls
+    K0b02: 0_model_calls
+    K0b03: 0_model_calls
+    K0b04_pre_F15: all_operational_16_30_model_call_budget
+    K0b04_F15: exact_36_model_calls
+    K0b04_post_F15: 0_model_calls_deterministic
+    K0b05: 0_model_calls_deterministic_same_top_level_run_segment
+  operational_seal_before_first_F15_submit: required
+  result: resolved_pending_v2_plan_reviews
+
+review_F03_disposition:
+  finding: unproved_four_boundary_trigger_cap
+  exact_stable_trigger_IDs:
+    - k0b.f15.boundary.entry_gate
+    - k0b.f15.boundary.program_owner_wait_or_exit
+    - k0b.f15.boundary.exit_gate
+    - k0b.f15.boundary.top_level_run_end
+  separate_K0b05_run_or_fifth_boundary_trigger: forbidden_and_blocks_before_effect
+  result: resolved_pending_v2_plan_reviews
+
+review_F04_disposition:
+  finding: cross_plan_staleness
+  successor_scope: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+  successor_plans: [new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, new pipeline/architecture/k0b-00-s-layer-delta-v2.md]
+  required_reviews: three_separate_fresh_context_approve_with_zero_blocking_findings
+  result: in_progress_not_closed_by_this_record
+
+preserved_B01_D04_and_call_budget:
+  binary_seed_count: {nominal: 6, worst_case: 12}
+  binary_seed_bytes: {nominal: 2236416, worst_case: 4472832}
+  operational_model_calls: {nominal: 16, worst_case: 30, all_before_F15: true}
+  F15_model_calls: {nominal: 36, worst_case: 36, exact: 36, overlap_credit: 0}
+  design_calls: {nominal: 6, effective_cap: 24, checkpointed: false}
+  full_route_calls: {nominal: 324, effective_worst_case: 770}
+
+phase_arithmetic:
+  K0b-runtime-operational:
+    checkpoint: {unrounded_MiB: {nominal: 8.7265625, worst_case: 25.265625}, bytes: {nominal: 9437184, worst_case: 27262976}}
+    publications: {nominal: 14, worst_case: 34}
+    phase_pack: {formula_nominal: 9437184*14, nominal: 132120576, formula_worst: 27262976*34, worst_case: 926941184}
+    batches: {nominal: 2, worst_case: 3, largest_worst_bytes: 327155712}
+    hard_margin_bytes: 146800640
+  K0b-F15-exact-measurement:
+    checkpoint: {unrounded_MiB: {nominal: 9.8515625, worst_case: 34.265625}, bytes: {nominal: 10485760, worst_case: 36700160}}
+    window_publications: {nominal: 8, worst_case: 22}
+    exact_boundary_triggers: 4
+    publications: {nominal: 12, worst_case: 26, absolute_max_at_worst_checkpoint: 29}
+    phase_pack: {formula_nominal: 10485760*12, nominal: 125829120, formula_worst: 36700160*26, worst_case: 954204160}
+    batches: {nominal: 1, worst_case: 3, largest_worst_bytes: 440401920}
+    hard_margin_bytes: 119537664
+
+policy_checks:
+  checkpoint_hard_bytes: 104857600
+  warning_bytes: 536870912
+  phase_pack_hard_bytes: 1073741824
+  batch_cap: 12
+  checkpoint_result: pass_strictly_below_hard
+  batch_result: pass_strictly_below_warning
+  two_phase_pack_result: pass_each_strictly_below_hard
+  factor: 1.0
+  all_credit: 0
+
+chain_and_full_route_observability:
+  publications_sum: {nominal: 26, worst_case: 60}
+  pack_sum: {nominal: 257949696, worst_case: 1881145344}
+  full_route_no_delta_upper_bound: {nominal: 14883487744, worst_case: 262666190848}
+  cumulative_chain_metrics_remain_required: true
+  clean_clone_and_publication_p95_gates_remain_required: true
+
+gate_result:
+  F01_policy_scope_authority: pass_pending_reviews
+  F02_chronology_call_allocation: pass_pending_reviews
+  F03_trigger_identity_cap: pass_pending_reviews
+  F04_three_plan_replacement: in_progress
+  D03_arithmetic: pass
+  D03_closed: false
+  closure_condition: three_v2_plan_reviews_approve_zero_blocking_findings_then_exact_owner_K0b_approval
+
+explicit_non_authorizations:
+  - runtime_contract_migration_fixture_checkpoint_projection_or_physical_model_call
+  - threshold_raise_storage_migration_third_phase_or_credit
+  - in_place_change_to_historical_v1_or_v2_records
+  - K0b_approval_or_D03_closure_by_this_record_alone

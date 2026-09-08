@@ -1,0 +1,90 @@
+document_id: pipeline-v2.k0b-01.plan-v1.1-review-budget-supplement
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T16:17:19.3563425+03:00"
+work_item_id: K0b-01
+status: selected_bounded_design_review_budget_not_dispatched
+
+authority:
+  final_K0b_00_owner_disposition:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+  owner_direction:
+    path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml
+    sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39
+
+baseline_exact_K0b_00_forecast:
+  path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+  sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a
+  calls:
+    design: {nominal: 6, effective_worst_case_cap: 24, checkpointed: false}
+    K0b_runtime_operational: {nominal: 16, worst_case: 30, checkpointed: true}
+    K0b_F15_exact_measurement: {nominal: 36, worst_case: 36, exact_required: 36, checkpointed: true}
+    total: {nominal: 58, effective_worst_case: 90}
+
+supplemental_package:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  class: design_time_light_review_package
+  checkpointed: false
+  physical_model_calls: {nominal: 2, worst_case: 4}
+  nominal_allocation:
+    migration_plan_review_r0: 1
+    compiler_and_budget_plan_review_r0: 1
+  worst_case_only_allocation:
+    migration_plan_review_r1_after_blocking_r0: 1
+    compiler_and_budget_plan_review_r1_after_blocking_r0: 1
+  per_stream_maximum_calls: 2
+  return_depth_per_stream: 1
+  light_profile_limit: {nominal_cap: 12, worst_case_cap: 20, result: within_limit}
+  implementation_or_runtime_calls: {nominal: 0, worst_case: 0}
+  call_credit_to_or_from_other_packages: 0
+
+derived_totals_after_supplement:
+  formula_nominal: 58+2
+  formula_effective_worst_case: 90+4
+  total_calls: {nominal: 60, effective_worst_case: 94}
+  design_calls: {nominal: 8, effective_worst_case_cap: 28, checkpointed: false}
+  K0b_runtime_operational_unchanged: {nominal: 16, worst_case: 30}
+  K0b_F15_exact_measurement_unchanged: {nominal: 36, worst_case: 36, exact_required: 36}
+  checkpoint_publication_forecast_changed: false
+  binary_forecast_changed: false
+  two_checkpoint_phase_partition_changed: false
+
+dispatch_controls:
+  transport: manual_VSCode_UI_only
+  provider_API: forbidden
+  exact_manual_model_and_model_ID_pre_dispatch_receipt: required_for_each_call
+  ledger_compliant_unique_invocation_ID_before_dispatch: required_for_each_call
+  visible_transcript_and_extension_profile_controls: required
+  frozen_draft_as_authoritative_review_input: forbidden
+  r1_without_blocking_r0: forbidden
+  parallel_dispatch: not_required
+  unused_capacity_disposition: expire_without_credit_or_reallocation
+  expired_K0b_00_design_ordinals_29_30: unavailable
+
+human_only_stage:
+  follows: both_terminal_model_review_streams
+  model_calls: 0
+  capacity_budget_and_reviewer_identity: pending_explicit_assignment
+  signoff_output: required_before_any_implementation_authority
+
+session_consumption:
+  model_calls_used: 0
+  review_outputs_created: 0
+  ledger_entries_created: 0
+  pre_dispatch_receipts_created: 0
+
+hard_stops:
+  - stale_or_missing_plan_review_input_or_authority_hash
+  - missing_ledger_entry_or_exact_manual_model_and_model_ID_receipt
+  - provider_API_or_model_fallback_required
+  - either_stream_would_exceed_two_calls
+  - request_to_credit_unused_capacity_to_runtime_F15_or_another_package
+  - request_to_treat_the_frozen_draft_as_reviewed_implementation
+
+non_authorizations:
+  - no_review_dispatch_by_this_evidence_record
+  - no_implementation_or_runtime_authority
+  - no_checkpoint_phase_activation_or_publication
+  - no_canonical_fixture_or_forbidden_directory_access
+  - no_commit_push_PR_deploy_or_release

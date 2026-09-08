@@ -1,0 +1,57 @@
+manifest_id: k0b-00-shared-artifact-event-revision-input-r1
+schema_version: 1
+version: "1.0.0"
+purpose: Exact source set and bounded authority for the first K0b-00 shared artifact/event author revision.
+author_invocation_id: k0b-00-revision-author-shared-artifact-event-r1
+author_actor_id: /root
+author_role: architecture_delta_plan_revision_author
+started_at: "2026-09-02T16:02:22.8488048+03:00"
+
+target:
+  path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+  plan_id: k0b-00-shared-artifact-event-plane-delta
+  from_version: "1.0.0"
+  from_sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a
+  to_version: "1.1.0"
+baseline:
+  path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md
+  version: "1.1.0"
+  sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860
+
+required_inputs:
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-plan-v1.0.0.md, version: "1.0.0", sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a, role: immutable_reviewed_snapshot}
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-review-input-r0.yaml, review_round: 0, sha256: 538e45e4f354dac7e64471586c0e1245a41dae7da5a33febcef0f71c229eb869}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r0.yaml, review_round: 0, sha256: 333d728699c9d2cb903be470aa6275cd085e91afecf68f445d20560605e312c0, recommendation: revise}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.0.0", sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, role: provisional_sibling_compatibility_input_not_approved_authority}
+
+required_finding_dispositions:
+  F-01:
+    required_change: Include accumulated measurement seed bytes in checkpoint and repeated phase-pack arithmetic, or provide an explicit testable non-overlap derivation; retain forecast variance as unresolved pending owner route and reconciliation.
+    permitted_scope: version_metadata_section_13_arithmetic_and_dependent_acceptance_or_risk_wording_only
+  F-02:
+    required_change: Mark K0b-D03 activated and unresolved now because the pinned planning-worst phase-pack forecast is already above_warning; compiler verification is not the activation condition and no owner option may be selected.
+    permitted_scope: version_metadata_sections_13_16_18_and_directly_dependent_wording_only
+
+revision_rules:
+  - preserve_all_unaffected_v1_0_0_bytes_and_meaning
+  - no_shared_control_or_scope_envelope_edit
+  - no_new_owner_decision_or_implicit_disposition
+  - no_contract_migration_prompt_runtime_fixture_projection_or_checkpoint_implementation
+  - preserve_all_18_gate_categories_and_declared_line_budgets
+  - retain_K0b_D01_D02_D04_as_unresolved_blockers
+  - retain_binary_forecast_variance_and_updated_forecast_reconciliation_as_preimplementation_blockers
+  - update_plan_version_and_exact_arithmetic_consistently
+  - no_independent_review_in_this_author_revision_invocation
+
+excluded_inputs:
+  - research/old-swarm
+  - projects/swarm_content
+  - canonical_fixture_content_or_modification
+  - K0b_runtime_contract_migration_prompt_or_code
+  - unpinned_external_or_provider_state

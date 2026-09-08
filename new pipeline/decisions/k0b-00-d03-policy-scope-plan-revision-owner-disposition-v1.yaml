@@ -1,0 +1,98 @@
+document_id: pipeline-v2.k0b-00.d03-policy-scope-plan-revision-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T19:31:09.1017052+03:00"
+scope: Bounded repair of independently reviewed K0b-D03 phase-partition findings
+status: authorized_exact_six_call_revision_sequence
+work_item_id: K0b-00
+
+provenance:
+  mode: conversational_owner_selection_plus_independent_finding_materialization
+  actor_id: owner
+  role: project_owner
+  owner_statement: "пошли по рекомендованному тобой пути"
+  selected_path: explicit_policy_and_scope_authority_for_two_real_ordered_K0b_checkpoint_budget_phases
+
+authority:
+  initial_D03_owner_disposition: {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  rejected_addendum: {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md, sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896}
+  independent_review: {path: new pipeline/reviews/k0b-00-d03-checkpoint-phase-partition-review-r0.yaml, recommendation: revise, sha256: 814745fd7a4026bc5f8f20f1bebb511c44656d43a19c634ea6df86be062e2107}
+  review_input: {path: new pipeline/reviews/sources/k0b-00-d03-checkpoint-phase-partition-review-input-r0.yaml, sha256: 08f21efdd2c1aa7b65a6b566684ed051520290b48e1355359d39568abd018a74}
+  design_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 35, K0b_entries: 18, sha256: 256e08d9a04e2b0e32f471251a214294df7d75b2b2675427de37173d30c785f7}
+
+objective_findings_accepted_for_repair:
+  - {finding_id: F-01, repair: create_explicit_K0b_policy_overlay_and_scope_v2_defining_checkpoint_budget_phase_as_the_threshold_unit}
+  - {finding_id: F-02, repair: bind_all_non_F15_physical_calls_before_the_operational_seal_and_zero_post_F15_model_calls_in_revised_plans}
+  - {finding_id: F-03, repair: enumerate_four_stable_F15_boundary_trigger_IDs_and_block_any_fifth}
+  - {finding_id: F-04, repair: replace_affected_plan_authority_with_separately_authored_and_reviewed_v2_plan_hashes}
+
+authorized_policy_and_scope_change:
+  base_program_phase: K0b
+  new_policy_overlay_id: k0b-checkpoint-budget-phase-partition-v1
+  threshold_unit: owner_approved_ordered_checkpoint_budget_phase_within_one_project_checkpoint_chain
+  exact_units: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  phase_count_cap: 2
+  chronological_contiguous_non_overlapping_and_exhaustive: true
+  threshold_bytes_unchanged: true
+  storage_backend_unchanged: true
+  same_fixture_project_chain: true
+  cumulative_chain_metrics_and_clean_clone_gate_preserved: true
+  scope_envelope_successor: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+
+required_chronology_and_trigger_allocation:
+  all_16_30_non_F15_physical_calls: K0b-runtime-operational_before_terminal_seal
+  K0b_01_K0b_02_K0b_03_and_pre_F15_K0b_04: K0b-runtime-operational
+  exact_36_F15_calls_and_direct_measurement_evidence: K0b-F15-exact-measurement
+  deterministic_post_F15_K0b_04_and_K0b_05: K0b-F15-exact-measurement
+  post_F15_physical_model_calls: 0
+  top_level_run_rule: K0b_04_F15_and_K0b_05_program_disposition_are_one_contiguous_top_level_run_segment_after_the_operational_seal
+  F15_boundary_trigger_IDs:
+    - k0b.f15.boundary.entry_gate
+    - k0b.f15.boundary.program_owner_wait_or_exit
+    - k0b.f15.boundary.exit_gate
+    - k0b.f15.boundary.top_level_run_end
+  any_other_boundary_trigger: block_and_reforecast_before_effect
+
+authorized_new_outputs:
+  cross_cutting_control_author:
+    - new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml
+    - new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+    - new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+    - new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+    - new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md
+    - new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+  artifact_event_author:
+    - new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  S_author:
+    - new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+  separate_author_inputs_review_inputs_reviews_and_ledger_entries: required
+
+versioning_and_staleness:
+  v1_scope_three_plans_D03_addendum_and_v2_forecast_records: immutable_historical_evidence
+  prior_D02_exact_plan_approval: superseded_for_D03_route_pending_three_v2_reviews
+  v2_plan_files_are_new_files_not_in_place_rewrites: true
+  final_authority_requires_three_v2_review_recommendations_approve_with_zero_blocking_findings: true
+  any_non_approve_or_new_scope_conflict: pause_and_request_new_owner_budget
+
+design_budget:
+  effective_cap: 24
+  completed_before_revision_sequence: 18
+  remaining: 6
+  exact_sequence:
+    - {ordinal: 19, role: author, target: shared_control_v2_plus_cross_cutting_D03_outputs}
+    - {ordinal: 20, role: independent_reviewer, target: shared_control_v2_plus_cross_cutting_D03_outputs}
+    - {ordinal: 21, role: author, target: shared_artifact_event_v2}
+    - {ordinal: 22, role: independent_reviewer, target: shared_artifact_event_v2}
+    - {ordinal: 23, role: author, target: S_v2}
+    - {ordinal: 24, role: independent_reviewer, target: S_v2}
+  return_margin_after_success: 0
+
+explicit_non_authorizations:
+  - in_place_edit_of_any_v1_scope_plan_forecast_reconciliation_addendum_or_review
+  - runtime_code_contract_migration_prompt_fixture_projection_checkpoint_or_physical_invocation
+  - checkpoint_threshold_increase_storage_migration_or_external_backend
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - more_than_six_additional_design_invocations
+  - commit_push_merge_deploy_or_release

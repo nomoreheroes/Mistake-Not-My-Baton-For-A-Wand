@@ -1,0 +1,73 @@
+manifest_id: k0b-00-shared-artifact-event-d03-v2-revision-input-r2
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-04T12:20:41.4370768+03:00"
+status: closed_exact_revision_author_input
+work_item_id: K0b-00
+review_round: 2
+
+invocation:
+  invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r2
+  role: author
+  actor_id: /root
+  provider: openai
+  model: gpt-5.6-sol
+  profile: codex_root_k0b_shared_artifact_event_D03_successor_revision_r2
+  package_id: K0b-plan-deltas
+  budget_cap: 30
+  completed_before_this_invocation: 24
+  ordinal_if_completed: 25
+
+exact_reviewed_predecessor:
+  snapshot_path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.1.0.md
+  live_plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  version: "2.1.0"
+  sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614
+
+allowed_inputs:
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r1.yaml, sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r1.yaml, recommendation: revise, blocking_findings: 1, sha256: 6b47f481f26b08174e43bdf7ffc15933def142c6b795dbd5b7d0f17de85900fa}
+  - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0}
+  - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v2.yaml, sha256: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, recommendation: approve, sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b}
+  - {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 41, K0b_entries: 24, sha256: e763bee35b744f2d6d72a64247539ba3bbb065581944e64fc6ea1af0b8709f29}
+
+required_revision:
+  finding_id: F-02
+  target_location: section_16_architecture_acceptance
+  exact_result: >-
+    Bind the artifact/event rereview to ordinal 26, S successor author/review
+    to ordinals 27/28, and any 29/30 use only to the final conditional
+    typed-finding reserve. Preserve the resolved F-01 selector and every other
+    v2.1 contract and byte except necessary version, input and budget-authority
+    metadata.
+  authorized_metadata:
+    - version_2_1_0_to_2_2_0
+    - revision_input_reference_to_this_manifest
+    - return_budget_authority_reference_to_v2
+    - section_12_and_18_ordinal_alignment_to_v2_authority
+
+allowed_writes:
+  - new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  - append_one_revision_author_entry_to_new_pipeline/ledgers/design-invocations.yaml
+
+forbidden_inputs_and_actions:
+  - research/old-swarm
+  - projects/swarm
+  - canonical_fixture_content_or_modification
+  - unlisted_repository_or_external_state
+  - any_change_beyond_F_02_and_authorized_metadata
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call
+  - S_v2_authoring_or_independent_review
+  - commit_push_merge_deploy_release_or_owner_approval
+
+stop_conditions:
+  - any_input_or_snapshot_hash_mismatch
+  - any_change_to_resolved_F_01_or_D03_contracts
+  - need_for_more_than_ordinals_25_and_26_for_this_return

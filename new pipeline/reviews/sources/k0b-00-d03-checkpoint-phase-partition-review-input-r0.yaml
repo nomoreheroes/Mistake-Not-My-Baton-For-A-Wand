@@ -1,0 +1,100 @@
+manifest_id: k0b-00-d03-checkpoint-phase-partition-review-input-r0
+schema_version: 1
+review_round: 0
+mode: fresh_context_read_only_inputs_typed_review_output_only
+appointed_by: W0_via_root
+appointed_at: "2026-09-03T19:19:00.3748671+03:00"
+work_item_id: K0b-00
+
+reviewer_assignment:
+  actor_id: /root/k0b_d03_partition_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_D03_checkpoint_phase_partition_review_v1
+  must_not_have_authored_any_reviewed_output: true
+  inherited_author_context: false
+
+exact_addendum:
+  path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md
+  version: "1.0.0"
+  sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+
+exact_D03_outputs:
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, version: "2.0.0", sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, version: "2.0.0", sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f}
+
+authorship_evidence:
+  - {path: new pipeline/evidence/k0b-00-d03-checkpoint-phase-partition-author-input-v1.yaml, sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 34, K0b_entries: 17, sha256: fd66e76701e706ef63f2ea8e07b975f1ae8780a7902c15151db7b6a33acc9b2c}
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, recommendation: approve, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, recommendation: approve, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, recommendation: approve, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+  - {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  - {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+  - {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  - {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  - {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  - {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, recommendation: approve, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+  - {path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+
+review_rubric:
+  - Verify every pinned input hash before substantive review and stop on mismatch.
+  - Decide explicitly whether the existing policy and K0b scope permit two separately gated checkpoint phases inside the same K0b fixture chain, or whether this is an invalid renaming of one K0b phase/batches that requires policy or scope revision.
+  - Verify the owner-selected route is an explicit registered narrow_or_checkpoint_batching specialization and does not silently raise thresholds, change storage, claim compression/delta/overlap credit, or hide cumulative chain growth.
+  - Verify the two phases are chronologically and semantically exhaustive: all non-F15 physical model calls finish before the operational seal; F15 has exactly 36 calls; post-F15 K0b-04/K0b-05 is deterministic with zero model calls.
+  - Verify any need for a post-seal non-F15 model call, a fifth F15 boundary trigger, publication 30, unclassified trigger, or overlapping membership invalidates the forecast before effect.
+  - Independently recompute replay points, window limits, trigger counts, checkpoint rounding, phase packs, batch counts, margins, combined observability totals, effective 24-call design cap, and full-route totals.
+  - Verify operational 926941184 and F15 954204160 worst packs are each strictly below 1073741824, checkpoints below 104857600, and largest batches below 536870912 under factor 1.0 and zero credit.
+  - Verify compiler outputs, ownership, publisher/outbox sequencing, seals, replay/reconciliation, crash consistency, idempotency, duplicate suppression, abort, late results, compatibility, observability, security, and acceptance are single-valued and consistent with all three plans.
+  - Verify all 18 scoped Layer Architecture Gate categories are present and the addendum stays within 350 non-empty lines.
+  - Verify the addendum is legitimately an external D03 route specialization rather than an unreviewed fourth layer plan or a semantic change that makes the existing plan/scope hashes stale.
+  - Verify v2 supersession preserves B01 seed arithmetic, D04 exact F15 and operational call budgets, historical v1 evidence, and no implementation or physical-call authority.
+  - Report typed blocking findings for any unsupported policy interpretation, chronological gap, underestimated trigger/call allocation, arithmetic error, cross-plan conflict, or non-falsifiable acceptance claim.
+
+required_output:
+  path: new pipeline/reviews/k0b-00-d03-checkpoint-phase-partition-review-r0.yaml
+  format: YAML
+  maximum_non_empty_lines: 500
+  required_sections:
+    - reviewer_identity_conflict_and_timestamps
+    - exact_manifest_addendum_and_output_hashes
+    - input_hash_verification
+    - policy_scope_and_owner_route_judgment
+    - chronology_membership_and_trigger_judgment
+    - independent_arithmetic_recalculation
+    - compiler_publisher_replay_failure_compatibility_and_security_checks
+    - all_18_gate_category_checks
+    - budget_authorship_and_non_authorization_checks
+    - findings_external_blockers_and_recommendation
+  recommendation_enum: [approve, approve_with_changes, revise, narrow, block]
+  owner_approval: forbidden
+  author_file_edit: forbidden
+  ledger_edit: forbidden
+  other_file_edit: forbidden
+
+forbidden_inputs_and_actions:
+  - author_conversation_transcript_hidden_summary_or_private_reasoning
+  - prior_reviewer_conversation_or_hidden_context
+  - research/old-swarm
+  - projects/swarm_content_or_execution
+  - canonical_fixture_content
+  - runtime_contract_registry_migration_prompt_fixture_projection_checkpoint_or_code
+  - provider_API_network_call_or_unpinned_external_state
+  - physical_model_invocation
+  - owner_decision_or_risk_acceptance
+  - editing_any_file_except_the_required_review_output

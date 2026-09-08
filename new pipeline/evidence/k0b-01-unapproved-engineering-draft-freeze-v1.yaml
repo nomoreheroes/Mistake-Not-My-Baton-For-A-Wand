@@ -1,0 +1,87 @@
+document_id: pipeline-v2.k0b-01.unapproved-engineering-draft-freeze
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T16:17:19.3563425+03:00"
+work_item_id: K0b-01
+status: frozen_non_authoritative_engineering_draft
+
+workspace_binding:
+  required_HEAD: a031ee56a36cf794646643b67270c6e0f7092e08
+  observed_HEAD: a031ee56a36cf794646643b67270c6e0f7092e08
+  required_HEAD_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  observed_HEAD_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  final_K0b_00_owner_disposition:
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+  original_K0b_01_plan:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f
+
+correction:
+  cause: assistant_misinterpreted_continue_as_implementation_authority
+  owner_clarification: continue_meant_propose_solution_options_for_each_blocker_with_tradeoffs
+  owner_selected_treatment: preserve_and_freeze_as_non_authoritative_engineering_draft
+  implementation_authority_existed: false
+  implementation_authority_created_by_this_record: false
+  runtime_authority_created_by_this_record: false
+  validation_or_readiness_claim_created_by_this_record: false
+
+invalid_authority_record:
+  path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
+  sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
+  disposition: invalid_as_owner_authority
+  reason: binds_an_incorrect_interpretation_of_the_owner_statement
+  permitted_use: provenance_of_the_corrected_mistake_only
+
+technical_evidence_with_invalid_authority_binding:
+  path: new pipeline/evidence/k0b-01-validation-v1.yaml
+  sha256: 8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f
+  disposition: non_authoritative_draft_evidence
+  permitted_use: preserved_historical_engineering_context_only
+  forbidden_claims: [owner_approved, plan_conformant, implementation_complete, runtime_ready]
+
+frozen_artifacts:
+  - {role: invalid_implementation_owner_disposition, path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml, sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc}
+  - {role: non_authoritative_validation_draft, path: new pipeline/evidence/k0b-01-validation-v1.yaml, sha256: 8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f}
+  - {role: contract_package_draft, path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json, sha256: fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654}
+  - {role: event_profile_draft, path: new pipeline/registry/alpha0/event-profile-v1.yaml, sha256: ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2}
+  - {role: terminal_profile_draft, path: new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml, sha256: 62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab}
+  - {role: routing_profile_draft, path: new pipeline/registry/alpha0/s-routing-profile-v1.yaml, sha256: 0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf}
+  - {role: resource_budget_policy_draft, path: new pipeline/registry/resource-budget-policy/v1.yaml, sha256: 3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9}
+  - {role: resource_budget_reference_cases_draft, path: new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml, sha256: f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1}
+  - {role: forward_migration_draft, path: new pipeline/harness/migrations/0004_k0b01.sql, sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a}
+  - {role: harness_package_draft, path: new pipeline/harness/k0b01/__init__.py, sha256: e029a9aa3699ac7f159ebdfd21880455a4bcd98727a5e06ae54273a400efdb59}
+  - {role: contract_loader_draft, path: new pipeline/harness/k0b01/contract.py, sha256: 12ea694ffdf21d2396d1831d78df4fe2f95f06b90051a66ce9e1121403f75898}
+  - {role: routing_compiler_draft, path: new pipeline/harness/k0b01/compiler.py, sha256: 3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5}
+  - {role: budget_compiler_draft, path: new pipeline/harness/k0b01/budget.py, sha256: d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71}
+  - {role: store_adapter_draft, path: new pipeline/harness/k0b01/store.py, sha256: 8efbab7e3395874150289f4edfca4ed5d5e913d7550a911396128260fb18f05a}
+  - {role: contract_tests_draft, path: new pipeline/tests/contracts/test_k0b01_contracts.py, sha256: 777e27bc6c0ccec71828ff20a952cf15853bb4686a9667e90051d3b60ba4c4e9}
+  - {role: routing_tests_draft, path: new pipeline/tests/contracts/test_k0b01_routing_compiler.py, sha256: 2816e2bac8df9b7f14fad38270d527906ed2c6651114a8b21498661314cf0b6a}
+  - {role: budget_tests_draft, path: new pipeline/tests/contracts/test_k0b01_resource_budget.py, sha256: 2d30b21391b2bda0fe0788e7fcb07320dc166cac7df7345099c789265d5dd103}
+  - {role: migration_tests_draft, path: new pipeline/tests/foundation/test_k0b01_migration.py, sha256: 46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987}
+
+freeze_rules:
+  complete_file_hash_count: 18
+  preserve_bytes: true
+  edit_or_delete_without_new_explicit_owner_direction: forbidden
+  execute_import_activate_or_use_as_review_truth: forbidden
+  copy_into_future_authoritative_implementation_without_revalidation: forbidden
+  reviewer_treatment: exclude_as_authoritative_evidence
+  source_of_truth_for_K0b_01: future_exact_hash_bound_plan_and_owner_authority_only
+
+session_activity:
+  physical_model_calls: 0
+  provider_API_calls: 0
+  independent_reviews_launched: 0
+  runtime_activations: 0
+  checkpoint_or_projection_publications: 0
+  design_invocation_ledger_edits: 0
+
+non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_or_fixture_implementation
+  - no_physical_model_or_provider_API_call
+  - no_independent_review_dispatch_by_this_record
+  - no_canonical_fixture_read_write_or_runtime_use
+  - no_projects_swarm_read_run_or_modification
+  - no_research_old_swarm_read_or_modification
+  - no_commit_push_PR_deploy_or_release

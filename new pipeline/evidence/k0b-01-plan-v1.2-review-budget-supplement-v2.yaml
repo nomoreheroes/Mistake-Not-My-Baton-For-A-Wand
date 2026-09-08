@@ -1,0 +1,99 @@
+document_id: pipeline-v2.k0b-01.plan-v1.2-review-budget-supplement
+schema_version: 1
+version: "2.0.0"
+recorded_at: "2026-09-07T18:45:40.7907359+03:00"
+work_item_id: K0b-01
+status: r0_consumed_r1_exactly_allocated_human_attention_complete
+
+supersession:
+  prior: {path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217}
+  scope: adds_missing_human_attention_facts_reconciles_r0_consumption_and_agent_transport
+  prior_bytes_changed: false
+
+authority:
+  final_K0b_00_owner_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  owner_continuation: {path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc}
+  agent_review_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  r0_reconciliation: {path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd}
+
+baseline_K0b_forecast:
+  forecast: {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  human_source: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  model_calls:
+    design: {nominal: 6, effective_worst_case: 24, checkpointed: false}
+    K0b_runtime_operational: {nominal: 16, worst_case: 30, checkpointed: true}
+    K0b_F15_exact_measurement: {nominal: 36, worst_case: 36, checkpointed: true}
+    total: {nominal: 58, effective_worst_case: 90}
+  human_attention:
+    envelope_profile: high_attention
+    sessions: {nominal: 2, worst_case: 4}
+    blocking_decisions: {nominal: 3, worst_case: 6}
+    active_minutes: {nominal: 60, worst_case: 150}
+    max_single_session_minutes: 60
+
+supplemental_review_package:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  covers: [K0b_01_plan_v1_1_r0_reviews, K0b_01_plan_v1_2_r1_reviews]
+  invocation_profile: light
+  model_calls: {nominal: 2, worst_case: 4, checkpointed: false}
+  human_attention:
+    profile: standard
+    sessions: {nominal: 1, worst_case: 2}
+    blocking_decisions: {nominal: 1, worst_case: 3}
+    active_minutes: {nominal: 30, worst_case: 90}
+    max_single_session_minutes: 60
+    batchable_requests: true
+    included_work:
+      - one_owner_review_batch_covering_two_r0_outputs_nominally
+      - one_revision_decision_and_two_r1_output_checks_in_the_worst_case
+    excluded_work: future_human_only_final_signoff_requires_separate_identity_and_capacity_record
+
+derived_combined_K0b_totals:
+  model_calls:
+    formula_nominal: 58+2
+    formula_effective_worst_case: 90+4
+    total: {nominal: 60, effective_worst_case: 94}
+  human_attention:
+    sessions: {formula: 2+1_and_4+2, nominal: 3, worst_case: 6}
+    blocking_decisions: {formula: 3+1_and_6+3, nominal: 4, worst_case: 9}
+    active_minutes: {formula: 60+30_and_150+90, nominal: 90, worst_case: 240}
+    max_single_session_minutes: 60
+    envelope_profile: high_attention
+  runtime_call_counts_changed: false
+  checkpoint_publications_or_bytes_changed: false
+  binary_forecast_changed: false
+  two_checkpoint_phase_partition_changed: false
+  cross_package_phase_or_metric_credit: 0
+
+consumption_and_remaining_allocation:
+  r0:
+    dispatched: 2
+    terminal: 2
+    calls_consumed: 2
+    outputs: [migration_r0_revise_5_blockers, compiler_budget_r0_revise_3_blockers]
+  r1:
+    exact_remaining_calls: 2
+    migration_r1: 1
+    compiler_budget_r1: 1
+    model: gpt-5.6-sol
+    model_ID: gpt-5.6-sol
+    transport: Codex_collaboration_fresh_context_subagent
+  after_two_r1_dispatches:
+    total_package_calls: 4
+    remaining_calls: 0
+    additional_return_review_or_correction_model_call: forbidden
+
+dispatch_controls:
+  exact_revised_plan_review_input_and_pre_dispatch_receipt_hashes: required
+  direct_provider_API_REST_SDK_or_managed_credentials: forbidden
+  additional_subagents_by_reviewers: forbidden
+  output_write_allowlist: one_exact_review_output_per_reviewer
+  expired_K0b_00_ordinals_29_30_reuse: forbidden
+  unused_capacity_credit_or_transfer: forbidden
+
+non_authorizations:
+  - no_implementation_or_runtime_authority
+  - no_human_only_signoff_or_capacity_inference
+  - no_runtime_F15_checkpoint_or_binary_credit
+  - no_canonical_fixture_or_forbidden_root_access
+  - no_commit_push_PR_deploy_or_release

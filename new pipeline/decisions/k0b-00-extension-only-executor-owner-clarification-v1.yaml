@@ -1,0 +1,48 @@
+document_id: pipeline-v2.k0b-00.extension-only-executor-owner-clarification
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T17:02:29.5275406+03:00"
+scope: K0b physical model transport planning
+status: approved_scope_constraint
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_clarification_2026-09-03
+  owner_statement: "Только еще на стадии планирования мы решили, что не будем использовать API на этом этапе, будем пользоваться расширениями в Visual Studio Code"
+
+authority:
+  owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  review_budget_extension: {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  executor_gap_candidate: {path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43}
+  scope_envelope: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+
+binding_constraint:
+  allowed_transport_class: installed_Visual_Studio_Code_extensions_only
+  allowed_extension_families:
+    - extension_id: anthropic.claude-code
+      observed_installed_candidate_version: 2.1.259
+      permitted_form: extension_UI_or_extension_bundled_native_executor_under_exact_adapter_profile
+    - extension_id: openai.chatgpt
+      observed_installed_candidate_version: 26.825.51511
+      permitted_form: extension_UI_or_extension_bundled_native_executor_under_exact_adapter_profile
+  extension_internal_provider_transport: allowed_only_as_an_opaque_extension_owned_channel
+  Pipeline_managed_provider_API_key: forbidden
+  Pipeline_direct_REST_SDK_or_Responses_API_integration: forbidden
+  arbitrary_provider_endpoint_or_model_fallback: forbidden
+
+decision_effect:
+  - Remove the direct OpenAI Responses/API adapter from K0b-D01 candidates.
+  - Do not reinterpret an extension-bundled executable as authority by itself; exact extension version, executable hash, model, capabilities, transcript profile, and adapter behavior still require binding and review.
+  - K0a extension approval is evidence but does not automatically authorize K0b.
+  - The owner must still select the exact extension profile used for F15 and other physical K0b calls.
+
+explicit_non_authorizations:
+  - direct_provider_API_integration
+  - Pipeline_managed_provider_credentials
+  - physical_model_invocation
+  - K0b_runtime_code_contract_migration_or_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

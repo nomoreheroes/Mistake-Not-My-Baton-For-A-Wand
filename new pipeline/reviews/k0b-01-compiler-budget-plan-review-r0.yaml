@@ -1,0 +1,201 @@
+review_id: k0b-01-compiler-budget-plan-review-r0
+schema_version: 1
+work_item_id: K0b-01
+review_round: 0
+
+reviewer_identity_independence_and_timestamps:
+  invocation_id: k0b-01-review-compiler-budget-plan-r0
+  reviewer_actor_id: /root/k0b01_compiler_budget_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  started_at: "2026-09-07T18:22:00+03:00"
+  completed_at: "2026-09-07T18:26:32.2234190+03:00"
+  fresh_context: true
+  authored_reviewed_plan: false
+  inherited_author_context: false
+  conflicts_disclosed: []
+  additional_agent_or_model_calls: 0
+  network_provider_API_or_external_state_access: false
+  implementation_runtime_or_test_execution: false
+  review_mode: independent_read_only_hash_bound_plan_review
+
+exact_input_hash_verification:
+  result: pass
+  complete_file_SHA256_verified_before_substantive_review: true
+  pre_dispatch_receipt:
+    path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-pre-dispatch-v1.yaml
+    expected_sha256: 971be9b0805f8a8c50765669e7c224333ab8c36b3976d9a35e794f21bd0054f7
+    observed_sha256: 971be9b0805f8a8c50765669e7c224333ab8c36b3976d9a35e794f21bd0054f7
+    match: true
+  review_input:
+    path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r0.yaml
+    expected_sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7
+    observed_sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7
+    match: true
+  allowed_inputs:
+    - {role: review_candidate, expected_sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, observed_sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, match: true}
+    - {role: final_K0b_00_disposition, expected_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, observed_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, match: true}
+    - {role: K0b_01_plan_v1, expected_sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f, observed_sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f, match: true}
+    - {role: K0b_01_v1_1_owner_direction, expected_sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39, observed_sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39, match: true}
+    - {role: review_budget_supplement, expected_sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217, observed_sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217, match: true}
+    - {role: exact_agent_review_executor_owner_override, expected_sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871, observed_sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871, match: true}
+    - {role: unapproved_draft_exclusion_record, expected_sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, observed_sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, match: true}
+    - {role: layer_architecture_gate, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, observed_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, match: true}
+    - {role: full_route_forecast, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, observed_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, match: true}
+    - {role: base_checkpoint_policy, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, observed_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, match: true}
+    - {role: K0b_phase_overlay, expected_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, observed_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, match: true}
+    - {role: canonical_hash_profile, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, observed_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, match: true}
+    - {role: K0b_phase_addendum, expected_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, observed_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, match: true}
+    - {role: shared_control_plan, expected_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, observed_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, match: true}
+    - {role: shared_artifact_event_plan, expected_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, observed_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, match: true}
+    - {role: S_plan, expected_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, observed_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, match: true}
+    - {role: exact_K0b_forecast, expected_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, observed_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, match: true}
+    - {role: exact_K0b_reconciliation, expected_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, observed_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, match: true}
+
+event_schema_registry_and_reachability_analysis:
+  schema_file_count: 21
+  one_self_contained_file_per_event: required
+  external_or_shared_schema_refs: forbidden
+  unknown_fields: rejected_at_every_closed_object_boundary
+  retained_F00_event_count: 5
+  retained_F00_types: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+  catalog_closure_design: pass
+  per_event_reachability_proof: fail
+  analysis: The plan names all 21 types and requires each future entry to bind producer/bootstrap owner, subscriber or terminal outcome, consumed fields, activation owner, replay, idempotency, and terminal disposition. It does not provide the 21-row normative registry mapping needed to prove those properties for each event independently.
+
+route_fanout_barrier_and_activation_analysis:
+  exact_route_count: 5
+  route_ids: [s.alpha0.compiled_nominal.v1, s.alpha0.layer0_fallback.v1, s.alpha0.f04.parallel_review.v1, s.alpha0.f05.revision.v1, s.alpha0.blocked.v1]
+  F04_members: [fixture.alpha0.primary_reviewer, fixture.alpha0.adversarial_reviewer]
+  F04_barrier: all_required
+  F05_revision_owner_zero_role_id: fixture.alpha0.upstream_zero
+  F05_producer_invocation_separate: true
+  activation_barriers_declared: true
+  direct_handoff_dynamic_membership_actor_selected_policy_rejected: true
+  result: pass
+
+compiler_receipt_and_aggregate_manifest_analysis:
+  receipt_count: 2
+  receipts: [registry_and_routing, resource_and_budget]
+  aggregate_manifest_count: 1
+  aggregate_manifest_binds_sources_compilers_authorities_canonicalization_diagnostics: true
+  exact_output_family_count: 8
+  output_families: [compiled_artifact_event_profile, compiled_event_reachability_graph, compiled_subscription_terminal_snapshot, compiled_s_route_table_v2, compiled_fanout_barrier_profile, compiled_resource_forecast, compiled_checkpoint_phase_partition_v1, compiled_checkpoint_publication_budget_v2]
+  exclusive_receipt_output_ownership: not_specified
+  result: fail
+  analysis: The aggregate set is exact, but the plan never normatively partitions the eight families between the two receipts or defines cross-receipt dependency order. Both compiler descriptions touch phase/budget facts, so overlap or an uncovered family cannot be ruled out.
+
+canonicalization_and_determinism_analysis:
+  canonical_profile: canonical-yaml-v1
+  byte_identity_independent_of_working_directory_locale_time_absolute_paths_and_input_ordering: required
+  source_and_compiler_hash_pinning: required
+  runtime_patching: forbidden
+  stale_pins: fail_closed
+  diagnostics_bound: true
+  result: pass
+
+independent_oracle_and_reference_equivalence_analysis:
+  literal_expected_outputs_separate_from_complete_input_graphs: true
+  production_may_read_expected_outputs: false
+  oracle_test_only_module: true
+  production_helpers_constants_receipt_builders_or_output_builders_forbidden_to_oracle: true
+  independent_integer_ceiling_rounding_threshold_phase_and_graph_logic: required
+  negative_vector_coverage: adequate
+  result: pass
+
+independent_budget_phase_and_threshold_recalculation:
+  invocation_calls:
+    baseline: {nominal: 58, effective_worst_case: 90}
+    supplemental_reviews: {nominal: 2, worst_case: 4, checkpointed: false}
+    recomputed_combined: {nominal: 60, effective_worst_case: 94}
+    stated_combined: {nominal: 60, effective_worst_case: 94}
+    match: true
+    K0b_01_runtime: {nominal: 0, worst_case: 0, match: true}
+    credit: 0
+  human_attention:
+    result: not_recomputable
+    reason: >-
+      The supplemental review package declares a light invocation profile but supplies none of the mandatory package-scoped human-attention fields: nominal/worst sessions, decisions, active minutes, maximum single session, and batchability.
+  K0b_runtime_operational:
+    replay_points: {nominal: 54, worst_case: 172}
+    window_publications: {nominal: 6, worst_case: 18}
+    total_publications: {nominal: 14, worst_case: 34}
+    unrounded_checkpoint_MiB: {nominal: 8.7265625, worst_case: 25.265625}
+    rounded_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    hard_margin_bytes_worst: 146800640
+    match: true
+  K0b_F15_exact_measurement:
+    replay_points: {nominal: 72, worst_case: 144}
+    publication_window: {nominal: 8, worst_case: 22}
+    boundary_triggers: 4
+    total_publications: {nominal: 12, worst_case: 26}
+    unrounded_checkpoint_MiB: {nominal: 9.8515625, worst_case: 34.265625}
+    rounded_checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+    hard_margin_bytes_worst: 119537664
+    match: true
+  binary_seed: {count_nominal: 6, count_worst_case: 12, bytes_nominal: 2236416, bytes_worst_case: 4472832, match: true}
+  observable_phase_pack_sum: {nominal: 257949696, worst_case: 1881145344, match: true}
+  phase_count: 2
+  phase_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  no_third_phase: true
+  strict_thresholds:
+    checkpoint_bytes_less_than: 104857600
+    phase_pack_bytes_less_than: 1073741824
+    warning_bytes: 536870912
+    max_publications_per_batch: 12
+    publication_p95_seconds_less_than: 10
+    clean_clone_restore_seconds_less_than: 120
+    unchanged: true
+  arithmetic_result: pass
+  completeness_result: fail
+
+scope_non_authorization_and_frozen_draft_exclusion:
+  frozen_artifact_count: 18
+  frozen_artifacts_inspected_or_used_as_truth: false
+  canonical_fixture_accessed: false
+  research_old_swarm_accessed: false
+  projects_swarm_accessed: false
+  implementation_runtime_or_provider_effect: false
+  owner_approval_issued: false
+  plan_ledger_receipt_or_review_input_edited: false
+  only_output_path_written: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml
+  result: pass
+
+findings_external_blockers_and_recommendation:
+  findings:
+    - finding_id: K0B01-CB-R0-F01
+      type: incomplete_event_graph_fact
+      severity: blocking
+      blocking: true
+      status: open
+      rubric_area: event_schema_registry_and_reachability
+      finding: The candidate specifies the shape of a future registry but contains no normative per-event producer, subscriber-or-terminal, consumed-field owner, activation owner, replay, idempotency, and terminal-disposition matrix for all 21 events.
+      required_disposition: Add a hash-bound 21-row normative event registry table to the reviewed plan inputs and demonstrate no dangling edge or undeclared family without relying on frozen draft files.
+    - finding_id: K0B01-CB-R0-F02
+      type: compiler_receipt_overlap_or_gap
+      severity: blocking
+      blocking: true
+      status: open
+      rubric_area: compiler_receipts_and_aggregate_manifest
+      finding: The exact eight aggregate output families are listed, but exclusive producer-receipt ownership and allowed cross-receipt dependency order are not defined; phase and budget facts appear in both compiler responsibilities.
+      required_disposition: Define a disjoint exhaustive eight-family-to-receipt ownership map, the dependency direction between receipts, and aggregate rejection rules for overlap, omission, or cycles.
+    - finding_id: K0B01-CB-R0-F03
+      type: incomplete_human_attention_budget_fact
+      severity: blocking
+      blocking: true
+      status: open
+      rubric_area: independent_budget_recalculation
+      finding: The added K0b01-plan-v1.1-independent-reviews package has invocation counts but omits the mandatory package-scoped human-attention fields required by D0-02, so human-attention totals and tier compliance cannot be independently recomputed.
+      required_disposition: Add nominal/worst sessions, blocking decisions, active minutes, maximum single-session minutes, and batchable_requests for the supplemental package, then recompute affected totals.
+  open_blocking_finding_count: 3
+  open_non_blocking_finding_count: 0
+  external_blockers:
+    - both independent review streams must reach terminal approval with zero open blocking findings
+    - exact human-only review and signoff remains required after both model reviews
+    - a separate exact-hash-bound K0b-01 implementation owner disposition remains required
+  recommendation: revise
+  recommendation_reason: Three open blocking findings prevent approval even though all pinned hashes and stated byte/call arithmetic reconcile.
+  owner_approval: forbidden_and_not_issued

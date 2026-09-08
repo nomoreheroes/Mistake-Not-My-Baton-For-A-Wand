@@ -1,0 +1,89 @@
+manifest_id: k0b-00-d03-checkpoint-phase-partition-author-input-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T19:09:34.4520713+03:00"
+status: closed_exact_author_input
+work_item_id: K0b-00
+
+invocation:
+  invocation_id: k0b-00-author-d03-checkpoint-phase-partition-v1
+  role: author
+  actor_id: /root
+  provider: openai
+  model: gpt-5.6-sol
+  profile: codex_root_k0b_d03_checkpoint_partition_author_v1
+  package_id: K0b-plan-deltas
+  budget_cap: 24
+  completed_before_this_invocation: 16
+  ordinal_if_completed: 17
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+  - {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  - {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+  - {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  - {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  - {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  - {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+  - {path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 33, K0b_entries: 16, sha256: 741822a40bb8222c48992bc0ac1bd0f9552b5c2c1a15f4e78cd9290f6296dcbb}
+
+author_task:
+  ordered_outputs:
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, maximum_non_empty_lines: 240}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, maximum_non_empty_lines: 200}
+    - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md, version: "1.0.0", maximum_non_empty_lines: 350}
+  requirements:
+    - Materialize the exact owner-selected non-overlapping checkpoint phase partition without changing threshold bytes, storage backend, runtime call counts, or the three reviewed plan hashes.
+    - Preserve one fixture project checkpoint chain and cumulative checkpoint growth while applying the existing hard phase-pack threshold independently to two explicitly compiled checkpoint_phase_id values.
+    - Bind every invocation, trigger, checkpoint, publication, replay point, and evidence record to exactly one phase before the first runtime effect; unknown or conflicting membership blocks.
+    - Require every non-F15 physical model invocation to complete before the operational phase seal; after F15 starts, K0b-04/K0b-05 closure is deterministic and may add no physical model call.
+    - Forecast operational at 14/34 publications and 9437184/27262976 checkpoint bytes, producing 132120576/926941184-byte phase packs.
+    - Forecast F15 at 8/22 window publications plus four explicit boundary triggers, 12/26 total publications, and 10485760/36700160 cumulative checkpoint bytes, producing 125829120/954204160-byte phase packs.
+    - Invalidate the forecast and block if the F15 phase needs more than four boundary triggers, any post-F15 non-F15 model call, or more than 29 total worst-case publications.
+    - Retain publication batch cap 12, pack delta factor 1.0, zero overlap/compression/dedup/cross-phase credit, exact F15 36/36, and runtime operational 16/30 without overlap.
+    - Define compiler outputs, publisher sequencing, boundary seal, replay/reconciliation, crash consistency, idempotency, duplicate suppression, abort, late-result fencing, compatibility, observability, security, and falsifiable acceptance.
+    - Demonstrate each checkpoint and phase pack is strictly below hard and each worst batch is below warning; retain clean-clone and cumulative-chain operational evidence requirements.
+    - Make v2 forecast supersede v1 only for D03 partition and derived full-route pack totals; preserve the reconciled B01 seed arithmetic and D04 invocation totals.
+    - Treat the addendum as a reviewed external D03 owner-route specialization of the existing three plans, not a silent rewrite, fourth layer plan, runtime contract, or approval receipt.
+    - Surface exact manual model-selection receipts and final K0b approval as remaining gates; do not revive the accepted manual-UI residual-risk blocker.
+
+allowed_writes:
+  - new pipeline/evidence/k0b-00-updated-forecast-v2.yaml
+  - new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml
+  - new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md
+  - append_one_author_entry_to_new_pipeline/ledgers/design-invocations.yaml_after_addendum_hash_exists
+
+forbidden_inputs_and_actions:
+  - research/old-swarm
+  - projects/swarm
+  - canonical_fixture_content_or_modification
+  - unlisted_repository_or_external_state
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - physical_model_invocation
+  - direct_provider_API
+  - editing_the_scope_envelope_or_any_of_the_three_reviewed_delta_plans
+  - independent_review_in_this_author_invocation
+  - commit_push_merge_deploy_or_release
+
+stop_conditions:
+  - any_allowed_input_hash_mismatch
+  - any_phase_worst_pack_at_or_above_1073741824
+  - any_checkpoint_at_or_above_104857600
+  - any_need_for_unmeasured_credit_threshold_change_storage_migration_or_plan_rewrite
+  - any_ambiguous_cross_phase_membership_or_trigger_ownership

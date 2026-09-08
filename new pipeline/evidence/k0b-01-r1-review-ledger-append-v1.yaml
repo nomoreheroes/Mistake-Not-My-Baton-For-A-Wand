@@ -1,0 +1,70 @@
+record_id: k0b-01-r1-review-ledger-append-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T19:17:32.1041115+03:00"
+work_item_id: K0b-01
+status: append_only_completed_r1_review_entries_validated
+
+authority:
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  owner_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  owner_continuation: {path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc}
+  dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml, sha256: c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de}
+  ledger_schema: {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+
+ledger_transition:
+  path: new pipeline/ledgers/design-invocations.yaml
+  before_append_sha256: 55ae4cd0c142e3faf5c74048dd7d5c64bb76da0dfba5a61ac41e7297b3d4fcf0
+  before_append_evidence: {path: new pipeline/evidence/k0b-01-r0-review-ledger-append-v1.yaml, sha256: 0296d938e4135a9d2a764b920ba087c866e471abcdc76fdcdf37755b38a7313d}
+  after_append_sha256: b07d05ff29721089d404e827369e8fdf5143610fe69a4f467715406cc93288ee
+  before_entries: 47
+  appended_entries: 2
+  after_entries: 49
+  unique_invocation_IDs: 49
+  duplicate_invocation_IDs: 0
+  schema_validation: pass
+  append_only_interpretation: successor_activity_does_not_rewrite_any_historical_hash_claim
+
+appended_records:
+  - invocation_id: k0b-01-review-migration-plan-r1
+    purpose: revision_review
+    actor_id: /root/k0b01_migration_review_r1
+    model: gpt-5.6-sol
+    input_manifest_sha256: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7
+    output_sha256: be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6
+    recommendation: approve
+    open_blocking_findings: 0
+    prior_r0_blocking_findings_closed: 5
+    evidence_qualification: none
+  - invocation_id: k0b-01-review-compiler-budget-plan-r1
+    purpose: revision_review
+    actor_id: /root/k0b01_compiler_budget_review_r1
+    model: gpt-5.6-sol
+    input_manifest_sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495
+    output_sha256: e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d
+    recommendation: approve
+    open_blocking_findings: 0
+    prior_r0_blocking_findings_closed: 3
+    evidence_qualification: none
+
+budget_closeout:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  authorized_worst_case_calls: 4
+  completed_calls: 4
+  remaining_calls: 0
+  further_independent_model_review_without_new_owner_budget_authority: forbidden
+  runtime_or_F15_credit: 0
+
+gate_state:
+  two_r1_approvals_with_zero_open_findings: true
+  design_review_gate: passed
+  human_only_review_and_explicit_signoff: pending
+  K0b_01_implementation_authority: absent
+  later_exact_hash_bound_implementation_owner_disposition: required
+
+non_authorizations:
+  - no_K0b_01_runtime_code_contract_schema_registry_migration_or_fixture_implementation
+  - no_more_model_reviews_under_the_exhausted_package_budget
+  - no_human_only_signoff_claim
+  - no_API_physical_runtime_checkpoint_projection_or_fixture_effect
+  - no_commit_push_PR_deploy_or_release

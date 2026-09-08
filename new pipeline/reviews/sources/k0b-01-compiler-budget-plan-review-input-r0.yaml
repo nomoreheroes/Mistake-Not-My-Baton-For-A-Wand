@@ -1,0 +1,97 @@
+manifest_id: k0b-01-compiler-budget-plan-review-input-r0
+schema_version: 1
+review_round: 0
+work_item_id: K0b-01
+status: ready_for_exact_authorized_agent_dispatch
+mode: independent_read_only_plan_review_fresh_context_agent_typed_output_only
+prepared_at: "2026-09-07T16:17:19.3563425+03:00"
+
+dispatch_binding:
+  invocation_ID: k0b-01-review-compiler-budget-plan-r0
+  reviewer_actor_ID: /root/k0b01_compiler_budget_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  exact_pre_dispatch_receipt_path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-pre-dispatch-v1.yaml
+  exact_pre_dispatch_receipt_binding: created_after_this_manifest_hash_and_before_dispatch
+  transport: Codex_collaboration_fresh_context_subagent
+  provider_API: forbidden
+  dispatch_authorized_by_this_manifest: true_under_exact_owner_override_and_receipt
+  inherited_author_context: false
+  reviewer_must_not_have_authored_reviewed_plan: true
+
+exact_review_candidate:
+  path: new pipeline/architecture/k0b-01-planning-package-v1.1.md
+  version: "1.1.0"
+  sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429
+
+authority_and_scope_inputs:
+  - {role: final_K0b_00_disposition, path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  - {role: K0b_01_plan_v1, path: new pipeline/architecture/k0b-01-planning-package-v1.md, sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f}
+  - {role: K0b_01_v1_1_owner_direction, path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml, sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39}
+  - {role: review_budget_supplement, path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217}
+  - {role: exact_agent_review_executor_owner_override, path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  - {role: unapproved_draft_exclusion_record, path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+  - {role: layer_architecture_gate, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {role: full_route_forecast, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {role: base_checkpoint_policy, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {role: K0b_phase_overlay, path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  - {role: canonical_hash_profile, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {role: K0b_phase_addendum, path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  - {role: shared_control_plan, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {role: shared_artifact_event_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}
+  - {role: S_plan, path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md, sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3}
+  - {role: exact_K0b_forecast, path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  - {role: exact_K0b_reconciliation, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+
+review_rubric:
+  - Verify every allowed complete-file hash before substantive review and block on any mismatch.
+  - Verify the exact 21-schema list is closed, one-file-per-event, independently resolvable without network/shared refs, strict about unknown fields, and compatible with the five retained F00 event types.
+  - Prove each event has a producer/bootstrap owner, subscriber or terminal outcome, consumed-field ownership, activation owner, replay/idempotency semantics, and no dangling edge or undeclared event family.
+  - Verify the exact five S routes, fixed F04 two-reviewer all_required barrier, F05 revision-owner separation, activation barriers, and rejection of direct handoff/dynamic membership/actor-selected policy.
+  - Verify two genuinely separate compiler receipts plus one aggregate manifest bind source hashes, compiler hashes/versions, authorities, canonicalization, diagnostics, and exactly eight output families.
+  - Verify deterministic byte identity across working directory, locale, time, absolute paths, and input ordering; runtime patching and stale pins must fail closed.
+  - Verify the independent test oracle has no production calculation-helper/constants/receipt-builder dependency and production compilation cannot read expected outputs.
+  - Independently recompute invocation, human-attention, binary per-object/aggregate, publication-window, MiB rounding, phase-pack, margin, trigger, seed, and no-credit arithmetic from the authoritative inputs.
+  - Verify exact two-phase chronology and values, K0b-01 runtime 0/0, review package 2/4 non-checkpointed, combined 60/94 design-inclusive totals, no third phase, no credit, and unchanged strict thresholds.
+  - Verify frozen contract/registry/compiler/test/evidence files are unavailable and non-authoritative; do not inspect them or use their content to validate the plan.
+  - Return a blocking finding for schema ambiguity, incomplete graph/budget fact, oracle coupling, receipt overlap/gap, arithmetic mismatch, phase variance, hidden credit, or any runtime/provider effect.
+
+required_output:
+  path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml
+  format: YAML
+  maximum_non_empty_lines: 600
+  required_sections:
+    - reviewer_identity_independence_and_timestamps
+    - exact_input_hash_verification
+    - event_schema_registry_and_reachability_analysis
+    - route_fanout_barrier_and_activation_analysis
+    - compiler_receipt_and_aggregate_manifest_analysis
+    - canonicalization_and_determinism_analysis
+    - independent_oracle_and_reference_equivalence_analysis
+    - independent_budget_phase_and_threshold_recalculation
+    - scope_non_authorization_and_frozen_draft_exclusion
+    - findings_external_blockers_and_recommendation
+  recommendation_enum: [approve, approve_with_changes, revise, narrow, block]
+  approval_requirement: approve_with_zero_open_blocking_findings
+  owner_approval: forbidden
+  author_plan_edit: forbidden
+  ledger_or_pre_dispatch_receipt_edit: forbidden
+  other_file_edit: forbidden
+
+bounded_return:
+  r1_allowed: only_if_r0_has_open_blocking_findings_and_plan_is_revised_and_rehashed
+  maximum_additional_calls_for_this_stream: 1
+  unused_capacity_credit_or_transfer: forbidden
+
+forbidden_inputs_and_actions:
+  - frozen_engineering_draft_files_other_than_the_exclusion_record
+  - canonical_fixture_content_or_path_access
+  - research/old-swarm
+  - projects/swarm_content_or_execution
+  - provider_API_network_or_unpinned_external_state
+  - implementation_or_runtime_code_execution
+  - any_additional_agent_or_model_dispatch
+  - owner_decision_or_human_signoff
+  - editing_any_file_except_the_future_required_review_output
+  - commit_push_PR_deploy_or_release

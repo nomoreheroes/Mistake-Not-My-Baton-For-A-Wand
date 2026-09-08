@@ -1,0 +1,274 @@
+review_id: k0b-00-shared-artifact-event-review-r0
+schema_version: 1
+review_round: 0
+review_type: independent_fresh_context_layer_architecture_delta_review
+status: completed_with_blocking_findings
+started_at: "2026-09-02T15:39:28.9472550+03:00"
+completed_at: "2026-09-02T15:45:53.1805677+03:00"
+
+reviewer:
+  actor_id: /root/review_k0b_shared_artifact_event_r0
+  execution_agent: /root/k0b_artifact_event_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_architecture_delta_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  authored_any_reviewed_plan_version: false
+  owner_approval: false
+  conflict_declaration: >-
+    No conflict. The reviewer did not author any current or prior version of the
+    reviewed plan, received no author conversation transcript or hidden author
+    summary, relied only on the hash-verified manifest-authorized read-only inputs,
+    did not inspect forbidden inputs, and did not edit the plan, contracts, runtime,
+    fixture, ledger, or any existing file.
+
+input_manifest:
+  path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-review-input-r0.yaml
+  sha256: 538e45e4f354dac7e64471586c0e1245a41dae7da5a33febcef0f71c229eb869
+  manifest_id: k0b-00-shared-artifact-event-review-input-r0
+  mode_observed: fresh_context_read_only_inputs_typed_review_output_only
+
+reviewed_plan:
+  plan_id: k0b-00-shared-artifact-event-plane-delta
+  path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md
+  version: "1.0.0"
+  declared_sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a
+  actual_sha256_at_review_start: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a
+  actual_sha256_at_review_completion: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a
+  hash_match: true
+
+input_hash_verification:
+  result: pass
+  verified_count: 15
+  mismatches: []
+  inputs:
+    - {role: exact_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, expected_sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a, actual_sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a, result: pass}
+    - {role: baseline, path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, expected_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, actual_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, expected_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, actual_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, expected_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, actual_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, actual_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, actual_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, actual_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, actual_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, expected_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, actual_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, expected_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f, actual_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0a-00-s-layer-v1.md, expected_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, result: pass}
+    - {role: provisional_sibling_compatibility_input_not_approved_authority, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, expected_sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, actual_sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, result: pass}
+    - {role: allowed_input, path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml, expected_sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724, actual_sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0a-03-validation-v1.yaml, expected_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, actual_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, expected_sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, actual_sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, result: pass}
+
+section_and_complexity_counts:
+  count_method: non_empty_full_file_lines_including_tables_and_section_headings
+  required_numbered_sections: 18
+  actual_numbered_sections: 18
+  additional_scope_envelope_sections: 1
+  section_presence_result: pass
+  complexity_tier: shared_plane
+  full_file_non_empty_lines: 206
+  full_file_cap: 800
+  full_file_result: pass
+  routing: {section: 4, actual_non_empty_lines: 14, cap: 105, result: pass}
+  roster: {section: 8, actual_non_empty_lines: 13, cap: 55, result: pass}
+  failure_recovery: {section: 9, actual_non_empty_lines: 20, cap: 105, result: pass}
+  current_deterministic_components: 7
+  current_artifact_event_plane_llm_workers: 0
+  deferred_interface_groups: 11
+  artifact_types: 2
+  alpha0_event_types: 21
+  assigned_scenarios: 10
+
+machine_checks:
+  exact_plan_baseline_scope_gate_forecast_policy_and_allowed_input_hashes:
+    result: pass
+    evidence: input_hash_verification
+  delta_only_one_shared_artifact_event_plane:
+    result: pass
+    evidence: reviewed_plan.Scope_envelope_and_sections_1_2
+  all_18_required_categories_present:
+    result: pass
+    evidence: section_and_complexity_counts
+  exact_21_event_alpha0_profile:
+    result: pass
+    evidence: reviewed_plan.sections_5_and_15_plus_scope_envelope.minimal_alpha_event_profile
+  producer_subscriber_terminal_ownership_closed:
+    result: pass
+    evidence: reviewed_plan.sections_2_4_5_and_14_plus_inherited_K0a_terminal_bindings
+    note: The compiler must reject unknown or dangling subscribers and incomplete terminal policies; retained F00 bindings remain hash-bound and error/meta terminals match the common scope.
+  canonical_schema_forward_migration_boundary:
+    result: pass
+    evidence: reviewed_plan.section_3
+  compiler_output_and_cross_plane_ownership_boundary:
+    result: pass
+    evidence: reviewed_plan.section_2_and_provisional_sibling.sections_2_5_6
+  projection_outbox_crash_consistency_and_pair_readiness:
+    result: pass
+    evidence: reviewed_plan.sections_3_4_6_9_and_15
+  checkpoint_publisher_reconciliation_and_duplicate_suppression:
+    result: pass
+    evidence: reviewed_plan.sections_3_4_6_9_and_15
+  replay_reconciliation_abort_compatibility:
+    result: pass
+    evidence: reviewed_plan.sections_3_4_9_10_15_and_17
+  binary_payload_budget_field_presence:
+    result: pass
+    evidence: reviewed_plan.section_13
+  binary_payload_budget_arithmetic_and_D0_reconciliation:
+    result: fail
+    finding_refs: [F-01]
+  checkpoint_and_phase_pack_threshold_enum_use:
+    result: pass
+    evidence: reviewed_plan.section_13_and_checkpoint_budget_policy.threshold_status_schema
+  checkpoint_warning_activation_and_owner_route:
+    result: fail
+    finding_refs: [F-02]
+  security_egress_repository_and_secret_controls:
+    result: pass
+    evidence: reviewed_plan.sections_7_10_11_15_and_18
+  observability_and_falsifiable_acceptance:
+    result: pass
+    evidence: reviewed_plan.sections_15_and_16
+  K0b_D01_D02_D04_explicit_unresolved_blockers:
+    result: pass
+    evidence: reviewed_plan.sections_12_16_and_18
+  complexity_and_section_sub_budgets:
+    result: pass
+    evidence: section_and_complexity_counts
+  review_return_limit:
+    result: pass
+    evidence: review_round_0_initial_review
+  no_K0b_runtime_contract_migration_prompt_fixture_or_projection_implementation_authorized_or_embedded:
+    result: pass
+    evidence: reviewed_plan.Scope_envelope_and_sections_3_16_18_plus_scope_envelope.planning_authority
+    scope_note: This verifies the reviewed bytes and manifest-authorized package boundary; unlisted workspace inventory was intentionally not inspected.
+  design_ledger_resolution:
+    result: deferred_to_root_after_review_hash
+    evidence: The appointing instruction reserves ledger append and final receipt assembly to root.
+  owner_approval_envelope:
+    result: not_applicable_at_independent_review_stage
+    evidence: Owner approval is expressly forbidden to this reviewer.
+
+reviewer_judgment:
+  ownership_overlap_is_resolved_safely_by_contract:
+    result: explicit_pass
+    rationale: >-
+      S owns semantic route meaning and freeze decisions; shared control owns the
+      generic compiler, scheduling, ordering, and request policy; this plane owns
+      canonical artifact/event definitions, durable persistence, projections, and
+      checkpoint publication. The provisional sibling agrees that it never writes
+      checkpoint or projection bytes.
+  current_roster_is_minimal_and_deferred_roster_is_honest:
+    result: explicit_pass
+    rationale: >-
+      Seven deterministic components cover validation, atomic write, subscription,
+      projection, checkpoint, replay/reconciliation, and compatibility. The plane
+      has zero LLM workers and defers product catalogs, dialogue, generalized retry,
+      distributed publication, external storage, scale, and M subscribers.
+  tests_and_evidence_can_falsify_the_architecture:
+    result: explicit_pass
+    rationale: >-
+      The plan requires exact graph/reference checks, fault injection at DB,
+      projection, snapshot, Git, migration, backup, and restore boundaries,
+      duplicate/conflict cases, clean-clone F13a, security negatives, and raw
+      storage measurements. Missing telemetry blocks the affected claim.
+  implementation_scope_is_unambiguous_and_sufficient:
+    result: explicit_pass_with_blocking_budget_preconditions
+    rationale: >-
+      Plane-owned work across K0b-01 through K0b-05 and forbidden cross-plane or
+      product effects are clear. Implementation remains correctly prohibited until
+      the two findings below and all declared owner blockers are dispositioned.
+  security_replay_and_failure_routes_are_coherent:
+    result: explicit_pass
+    rationale: >-
+      Durable intents/results, exact hashes and Git footer reconciliation, new-path
+      restore, immutable history, fail-closed root/path/tool checks, quarantine, and
+      abort-without-rollback form a coherent recovery model with typed blocking for
+      unknown state.
+
+findings:
+  - finding_id: F-01
+    category: binary_payload_budget_arithmetic_and_forecast_variance
+    type: incorrect_budget_derivation
+    severity: high
+    blocking: true
+    disposition_status: unresolved
+    summary: >-
+      The candidate checkpoint-size and phase-pack figures copy the D0 K0b
+      zero-binary forecast while also adding persistent BLOB measurement seeds, so
+      the complete binary budget understates each full checkpoint and its repeated
+      Git publication amplification.
+    evidence:
+      - ref: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md#13-binary-payload-budget-and-D0-reconciliation
+        fact: The plan first persists 2,236,416 nominal and 4,472,832 worst-case seed bytes but retains checkpoint sizes 7,340,032 and 22,020,096 and pack totals 102,760,448 and 748,683,264.
+      - ref: new pipeline/decisions/d0-01-full-route-forecast.yaml#phase_forecast.K0b
+        fact: D0 derives its 6.59375/21.0 MiB unrounded K0b checkpoints with binary_nominal and binary_worst_case both zero, then rounds them to 7/21 MiB.
+      - ref: new pipeline/decisions/d0-02-layer-architecture-gate.yaml#binary_payload_budget.variance_rule
+        fact: Any changed assumption or number blocks the gate and requires a reconciliation receipt; per-object and aggregate limits are independently fail-closed.
+      - ref: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md#9.5.1
+        fact: A binary-producing plan must reconcile all numeric variance before the first payload and use pessimistic publication amplification.
+    arithmetic:
+      seed_nominal_bytes: 2236416
+      seed_worst_case_bytes: 4472832
+      D0_nominal_unrounded_checkpoint_mib: 6.59375
+      D0_worst_unrounded_checkpoint_mib: 21.0
+      seed_inclusive_nominal_unrounded_checkpoint_mib: 8.7265625
+      seed_inclusive_worst_unrounded_checkpoint_mib: 25.265625
+      seed_inclusive_ceil_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+      seed_inclusive_no_delta_phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+      publication_counts: {nominal: 14, worst_case: 34}
+      corrected_threshold_status: {nominal: {checkpoint: below_warning, phase_pack: below_warning}, worst_case: {checkpoint: below_warning, phase_pack: above_warning}}
+    proposed_disposition: >-
+      Revise section 13 so the checkpoint and phase-pack arithmetic includes the
+      accumulated seed bytes (or supplies a different, explicit and testable
+      non-overlap derivation), then pin an updated forecast and reconciliation
+      receipt and retain the forecast-variance owner route as a blocker before
+      K0b-01/K0b-02 or any seed/checkpoint creation.
+
+  - finding_id: F-02
+    category: K0b_D03_activation_semantics
+    type: activated_owner_decision_misclassified_as_conditional
+    severity: high
+    blocking: true
+    disposition_status: unresolved
+    summary: >-
+      K0b-D03 is already activated by the plan's own pinned planning-worst
+      above-warning phase-pack forecast, but sections 13 and 18 defer activation
+      until a future compiler confirms the same scope.
+    evidence:
+      - ref: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml#owner_decisions_required_before_implementation.K0b-D03-checkpoint-budget-route
+        fact: The declared activation is any measured or forecast crossing.
+      - ref: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md#13-binary-payload-budget-and-D0-reconciliation
+        fact: The plan explicitly reports planning-worst phase_pack above_warning while saying K0b-D03 becomes applicable only when the compiler confirms the scope.
+      - ref: new pipeline/registry/checkpoint-budget-policy/v1.yaml#forecast_semantics
+        fact: Warning status begins at utilization greater than or equal to 0.5 and downstream continuation after threshold status requires an owner route.
+      - ref: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md#9.5.1
+        fact: A forecast at or above warning creates a mandatory owner route before continuation.
+    impact: >-
+      Leaving the decision conditional permits architecture approval or early
+      implementation to represent an already-triggered threshold route as dormant,
+      contrary to the common scope and parent policy. The corrected F-01 arithmetic
+      remains above warning in the worst case, so the activation does not disappear.
+    proposed_disposition: >-
+      Mark K0b-D03 activated and unresolved now, without selecting an owner option;
+      require its exact owner disposition and forecast-reconciliation binding before
+      the affected implementation/continuation gate. If compiler confirmation is
+      intended to be the activation condition, change the common scope and parent
+      policy through an owner-governed revision rather than silently delaying it in
+      this plan.
+
+finding_summary:
+  total: 2
+  blocking: 2
+  high: 2
+  medium: 0
+  low: 0
+  unresolved: 2
+
+recommendation: revise
+recommendation_rationale: >-
+  The architecture is otherwise well bounded, coherent, and falsifiable, but the
+  applicable binary budget is numerically understated and the already-triggered
+  K0b-D03 owner route is misclassified. Both defects affect mandatory Layer
+  Architecture Gate conditions and must be corrected and dispositioned before this
+  exact plan can be recommended for approval or implementation.

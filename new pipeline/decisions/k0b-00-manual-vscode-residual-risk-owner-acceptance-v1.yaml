@@ -1,0 +1,78 @@
+document_id: pipeline-v2.k0b-00.manual-vscode-residual-risk-owner-acceptance
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T17:41:09.4582665+03:00"
+scope: K0b fixed-hybrid manual Visual Studio Code UI executor residual risks
+status: accepted_with_mandatory_controls
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-03
+  owner_statement: "риски принимаю"
+
+exact_authority:
+  executor_profile: {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, version: "1.0.0", sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  independent_review: {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, review_round: 0, recommendation: approve, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+  fixed_hybrid_selection: {path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888}
+  manual_model_selection_procedure: {path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8}
+  extension_inventory: {path: new pipeline/evidence/k0b-00-vscode-extension-inventory-v1.yaml, sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c}
+
+accepted_residual_risks:
+  - risk_id: K0b-RISK-MANUAL-UI-TOOL-EXPOSURE
+    accepted_fact: >-
+      The manual extension UI cannot provide machine-verifiable proof that its
+      complete tool registry is empty even though actor tools and tool effects
+      are forbidden by the reviewed executor contract.
+    mandatory_controls:
+      - operator_denies_every_tool_request
+      - any_tool_request_even_if_denied_fails_the_attempt_and_is_recorded
+      - any_observed_tool_effect_freezes_execution_as_a_security_incident
+  - risk_id: K0b-RISK-MANUAL-UI-HIDDEN-TRANSCRIPT
+    accepted_fact: >-
+      Operator-captured extension-visible input, response, conversation, and UI
+      evidence cannot prove completeness of hidden provider context or internal
+      provider transcript state.
+    mandatory_controls:
+      - capture_and_hash_the_complete_extension_visible_conversation
+      - declare_capture_completeness_as_manual_UI_visible_only
+      - preserve_the_typed_hidden_context_gap_without_claiming_reproducibility
+      - edited_redacted_or_incomplete_visible_capture_blocks_acceptance
+
+decision_effect:
+  profile_external_blocker_resolved: owner_residual_risk_acceptance_for_manual_UI_tool_exposure_and_transcript_completeness_gap
+  profile_bytes_changed: false
+  independent_review_result_changed: false
+  controls_waived: false
+  physical_dispatch_authorized: false
+  K0b_D01_status: profile_and_residual_risk_components_satisfied_pending_exact_manual_model_selection_receipts_and_other_K0b_gates
+
+not_accepted_or_inferred:
+  - any_future_alias_unversioned_label_or_incomplete_model_identity_gap
+  - silent_model_alias_extension_or_provider_drift
+  - tool_requests_tool_effects_or_unrestricted_extension_capabilities
+  - incomplete_edited_or_redacted_visible_evidence
+  - direct_provider_API_SDK_or_Pipeline_managed_credentials
+  - weakening_of_the_reviewed_profile_or_its_mandatory_controls
+
+remaining_blockers:
+  - exact_hash_bound_manual_model_selection_receipt_for_each_active_extension_slot
+  - separate_owner_acceptance_if_a_future_receipt_has_an_alias_or_model_identity_capture_gap
+  - K0b_D03_checkpoint_hard_stop_resolution
+  - exact_hash_bound_K0b_architecture_approval
+  - future_runtime_contract_and_harness_conformance_after_K0b_00_approval
+
+budget_effect:
+  design_invocations_consumed: 0
+  effective_design_invocation_cap: 24
+  completed_design_invocations: 16
+  remaining_design_invocations: 8
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - runtime_code_contract_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

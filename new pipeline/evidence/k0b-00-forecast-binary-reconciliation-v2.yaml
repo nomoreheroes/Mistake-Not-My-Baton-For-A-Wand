@@ -1,0 +1,135 @@
+record_id: k0b-00-forecast-binary-reconciliation-v2
+schema_version: 1
+version: "2.0.0"
+created_at: "2026-09-03T19:10:57.1250970+03:00"
+status: D03_phase_partition_reconciled_pending_addendum_independent_review
+work_item_id: K0b-00
+runtime_started: false
+
+authority:
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  prior_reconciliation: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, version: "1.0.0", sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  D03_owner_disposition: {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  updated_forecast: {path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, version: "2.0.0", sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d}
+  reviewed_artifact_event_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+
+supersession:
+  replaces_record_for_D03_and_derived_pack_totals_only: k0b-00-forecast-binary-reconciliation-v1
+  B01_binary_seed_reconciliation_preserved: true
+  D04_exact_F15_package_reconciliation_preserved: true
+  reviewed_three_plan_hashes_preserved: true
+  checkpoint_thresholds_and_storage_backend_preserved: true
+
+decision_materialization:
+  K0b-B01-binary-forecast-reconciliation:
+    selected_option: accept_candidate_and_authorize_forecast_reconciliation
+    logical_seed_count: {nominal: 6, worst_case: 12}
+    seed_bytes_nested_in_each_checkpoint: {nominal: 2236416, worst_case: 4472832}
+    result: pass_unchanged_from_v1
+  K0b-D04-F15-invocation-budget-reconciliation:
+    selected_option: approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast
+    package_id: K0b-F15-exact-measurement
+    invocations: {nominal: 36, worst_case: 36, exact: 36}
+    operational_package: {nominal: 16, worst_case: 30}
+    overlap_or_credit_reuse: false
+    result: pass_unchanged_from_v1
+  K0b-D03-checkpoint-budget-route:
+    registered_route: narrow_or_checkpoint_batching
+    specialization: explicit_non_overlapping_checkpoint_phase_partition
+    checkpoint_phases: [K0b-runtime-operational, K0b-F15-exact-measurement]
+    same_fixture_project_chain: true
+    cumulative_checkpoint_growth_visible: true
+    each_invocation_trigger_checkpoint_and_publication_has_exactly_one_phase: true
+    phase_membership_frozen_before_effect: true
+    cross_phase_credit_or_reclassification: forbidden
+    all_non_F15_physical_model_calls_complete_before_operational_seal: true
+    post_F15_K0b_04_K0b_05_model_calls: 0
+    F15_boundary_trigger_cap: 4
+    result: arithmetic_pass_pending_addendum_independent_review
+
+phase_arithmetic_checks:
+  K0b-runtime-operational:
+    nominal_checkpoint: {formula: ceil(8.7265625_MiB), bytes: 9437184}
+    worst_checkpoint: {formula: ceil(25.265625_MiB), bytes: 27262976}
+    nominal_publications: {formula: 4_run_end + 2_human + 2_gate + 6_window, result: 14}
+    worst_publications: {formula: 8_run_end + 4_human + 4_gate + 18_window, result: 34}
+    nominal_phase_pack: {formula: 9437184 * 14, result: 132120576}
+    worst_phase_pack: {formula: 27262976 * 34, result: 926941184}
+    hard_margin_bytes: 146800640
+    batches_at_cap_12: {nominal: 2, worst_case: 3}
+    largest_worst_batch: {formula: 27262976 * 12, result: 327155712}
+  K0b-F15-exact-measurement:
+    nominal_checkpoint: {formula: ceil(9.8515625_MiB), bytes: 10485760}
+    worst_checkpoint: {formula: ceil(34.265625_MiB), bytes: 36700160}
+    nominal_window: {formula: max(ceil(72/10),ceil(36/5),ceil(new_db_bytes/33554432)), result: 8}
+    worst_window: {formula: max(ceil(144/10),ceil(108/5),ceil(new_db_bytes/33554432)), result: 22}
+    boundary_triggers: {run_end: 1, human_wait_or_exit: 1, asserted_migration_or_gate: 2, result: 4}
+    nominal_publications: {formula: 8_window + 4_boundary, result: 12}
+    worst_publications: {formula: 22_window + 4_boundary, result: 26}
+    nominal_phase_pack: {formula: 10485760 * 12, result: 125829120}
+    worst_phase_pack: {formula: 36700160 * 26, result: 954204160}
+    hard_margin_bytes: 119537664
+    batches_at_cap_12: {nominal: 1, worst_case: 3}
+    largest_worst_batch: {formula: 36700160 * 12, result: 440401920}
+
+policy_checks:
+  checkpoint_hard_bytes: 104857600
+  phase_pack_warning_bytes: 536870912
+  phase_pack_hard_bytes: 1073741824
+  max_publications_per_run_or_batch: 12
+  largest_checkpoint_bytes: 36700160
+  largest_batch_bytes: 440401920
+  largest_phase_pack_bytes: 954204160
+  largest_checkpoint_strictly_below_hard: true
+  largest_batch_strictly_below_warning: true
+  both_phase_packs_strictly_below_hard: true
+  pack_delta_factor: 1.0
+  overlap_compression_dedup_or_cross_phase_credit: 0
+  result: pass
+
+trigger_and_membership_reconciliation:
+  operational_retains_prior_trigger_forecast_without_subtraction: true
+  F15_adds_four_explicit_boundary_triggers: true
+  combined_publications: {nominal: 26, worst_case: 60}
+  duplicate_trigger_credit_claimed: false
+  unclassified_trigger: blocks_before_publication
+  invocation_or_publication_in_both_phases: blocks_as_security_and_budget_conflict
+  non_F15_model_call_after_operational_seal: invalidates_forecast_and_blocks
+  F15_boundary_triggers_above_four_or_publications_above_29: invalidates_forecast_and_blocks
+  explanation: The two phase forecasts conservatively retain the full operational trigger count and add explicit F15 boundaries; passing does not depend on trigger overlap or subtracting a shared event.
+
+derived_totals:
+  prior_single_K0b_phase_pack: {nominal: 220200960, worst_case: 2055208960, worst_status: above_hard}
+  partitioned_observable_chain_pack_sum: {nominal: 257949696, worst_case: 1881145344, threshold_role: observability_only_not_per_phase_gate}
+  operational_phase_pack: {nominal: 132120576, worst_case: 926941184, worst_status: above_warning_below_hard}
+  F15_phase_pack: {nominal: 125829120, worst_case: 954204160, worst_status: above_warning_below_hard}
+  full_route_no_delta_upper_bound_v2: {nominal: 14883487744, worst_case: 262666190848}
+  design_invocation_effective_cap: 24
+  full_route_invocations_v2: {nominal: 324, effective_worst_case: 770}
+
+gate_result:
+  binary_variance_reconciled: true
+  F15_non_overlapping_budget_reconciled: true
+  D03_owner_route_exact: true
+  D03_arithmetic_below_hard: true
+  D03_addendum_independently_reviewed: false
+  D03_closure_status: pending_exact_addendum_and_independent_review
+  K0b_00_approval_receipt_allowed_by_this_record_alone: false
+  remaining_D03_blocking_reasons:
+    - Exact compiler/publisher/replay/abort/compatibility contracts must be bound by the addendum hash.
+    - A fresh-context reviewer must approve the exact addendum plus these transitively bound forecast records.
+
+future_operational_evidence_not_forecast_credit:
+  - clean_clone_restore_seconds_below_policy_hard
+  - publication_p95_seconds_below_policy_hard
+  - cumulative_fixture_chain_bytes_and_object_count
+  - measured_pack_delta_factor_without_retroactive_forecast_credit
+  - phase_membership_and_boundary_seal_compiler_conformance
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - runtime_implementation_contract_registry_migration_prompt_fixture_projection_or_checkpoint_code
+  - checkpoint_threshold_raise_or_storage_migration
+  - changing_the_three_reviewed_plan_hashes_or_scope_envelope
+  - architecture_approval_receipt
+  - canonical_fixture_modification

@@ -1,0 +1,186 @@
+envelope_id: k0b-00-final-architecture-package-owner-disposition-v1
+schema_version: 1
+approval_type: layer_architecture_plan
+actor:
+  actor_id: workspace_owner
+  role: human_project_owner
+  authentication_ref: null
+approved_at: "2026-09-04T13:28:00.8822307+03:00"
+authority_ref: current_conversation_exact_K0b_00_owner_decision_2026_09_04
+decision: approved
+records:
+  - {role: active_architecture_plan, path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {role: active_development_plan, path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {role: layer_architecture_gate, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {role: base_full_route_forecast, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {role: base_checkpoint_budget_policy, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {role: canonical_hash_profile, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {role: design_invocation_ledger_schema, path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {role: approval_envelope_schema, path: new pipeline/registry/approval-envelope/v1.schema.yaml, sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54}
+  - {role: K0b_checkpoint_budget_policy_overlay, path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  - {role: K0b_scope_envelope_v2, path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  - {role: K0b_updated_forecast_v3, path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  - {role: K0b_forecast_binary_reconciliation_v3, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  - {role: K0b_checkpoint_phase_partition_addendum_v2, path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  - {role: shared_control_plan, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {role: shared_control_final_review, path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b}
+  - {role: shared_artifact_event_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}
+  - {role: shared_artifact_event_final_review, path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r2.yaml, sha256: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1}
+  - {role: S_plan, path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md, sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3}
+  - {role: S_final_review, path: new pipeline/reviews/k0b-00-s-d03-v2-review-r0.yaml, sha256: 4368ee7f4373f59772d293780ea47b4e63f359545d1e090c21c5da11a47506a2}
+  - {role: fixed_hybrid_manual_VSCode_executor_profile, path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  - {role: executor_profile_independent_review, path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+  - {role: initial_K0b_owner_disposition, path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  - {role: plan_budget_extension_owner_disposition, path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+  - {role: review_budget_extension_owner_disposition, path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  - {role: extension_only_executor_owner_clarification, path: new pipeline/decisions/k0b-00-extension-only-executor-owner-clarification-v1.yaml, sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314}
+  - {role: fixed_hybrid_manual_VSCode_owner_disposition, path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888}
+  - {role: manual_model_selection_owner_clarification, path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8}
+  - {role: manual_VSCode_residual_risk_owner_acceptance, path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+  - {role: D03_checkpoint_phase_partition_owner_disposition, path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732}
+  - {role: D03_policy_scope_plan_revision_owner_disposition, path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+  - {role: D03_successor_return_budget_owner_disposition_superseded_allocation, path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0}
+  - {role: D03_successor_return_budget_owner_disposition_effective, path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v2.yaml, sha256: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0}
+  - {role: pre_disposition_design_invocation_ledger, path: new pipeline/ledgers/design-invocations.yaml, sha256: ed27ca29236d48178550ebfeb1e1c5e58f76b237aad42ed2d66fbb721ed150c2}
+approved_scope:
+  work_item_id: K0b-00
+  package: exact_hash_bound_K0b_00_architecture_package
+  status_after_disposition: layer_architecture_gate_complete
+  D03_architecture_status_after_disposition: complete
+  runtime_started: false
+  owner_decision_quote: |-
+    Если все перечисленные hashes совпадают, ledger/schema согласованы, три финальных independent review имеют recommendation=approve и ноль открытых blocking findings, я утверждаю точный K0b-00 architecture package.
+
+    Подтверждаю dispositions:
+    - K0b-D01: fixed hybrid + manual_VSCode_UI; API не используется; модель и model ID выбираются вручную перед каждым dispatch и фиксируются в pre-dispatch receipt;
+    - K0b-D02: approve;
+    - K0b-D03: narrow_or_checkpoint_batching с двумя точными последовательными checkpoint-budget phases;
+    - K0b-D04: approve separate exact/deep F15 measurement package and updated forecast;
+    - K0b-B01: accept candidate and authorize forecast reconciliation.
+
+    Это approval:
+    - закрывает K0b-00 Layer Architecture Gate и архитектурную часть K0b-D03;
+    - подтверждает три финальных плана только с перечисленными hashes;
+    - аннулирует неиспользованный условный design reserve ordinals 29/30;
+    - не переносит этот резерв в runtime или F15;
+    - разрешает только переход к отдельному планированию K0b-01 после завершения этой сессии.
+  preconditions_verified:
+    listed_complete_file_sha256_values: {matched: 16, required: 16, result: pass}
+    pre_disposition_ledger_sha256: {expected: ed27ca29236d48178550ebfeb1e1c5e58f76b237aad42ed2d66fbb721ed150c2, actual: ed27ca29236d48178550ebfeb1e1c5e58f76b237aad42ed2d66fbb721ed150c2, result: pass}
+    ledger_schema: {entries: 45, K0b_entries: 28, duplicate_invocation_ids: 0, result: pass}
+    owner_disposition_requires_design_invocation_entry: false
+  confirmed_dispositions:
+    K0b-D01:
+      decision: fixed_hybrid_plus_manual_VSCode_UI
+      direct_API: forbidden
+      model_selection: manual_before_each_dispatch
+      binding: exact_pre_dispatch_receipt_including_model_and_model_ID
+      architecture_status: approved
+      runtime_status: conditional_not_authorized_by_this_record
+    K0b-D02:
+      decision: approve
+      bound_plan_count: 3
+      bound_only_to_exact_hashes_in_records: true
+    K0b-D03:
+      decision: narrow_or_checkpoint_batching
+      checkpoint_budget_phases:
+        exact_count: 2
+        exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+        chronological_contiguous_non_overlapping_exhaustive: true
+      thresholds_or_storage_changed: false
+      architecture_status: complete
+    K0b-D04:
+      decision: approve_separate_exact_deep_F15_measurement_package_and_updated_forecast
+      F15_physical_model_calls: {nominal: 36, worst_case: 36, exact_required: 36}
+      operational_package_credit: 0
+    K0b-B01:
+      decision: accept_candidate_and_authorize_forecast_reconciliation
+      reconciliation: exact_v3_hash_bound_and_accepted
+  final_plan_review_gate:
+    shared_control:
+      review_role: shared_control_final_review
+      recommendation: approve
+      open_findings: 0
+      open_blocking_findings: 0
+      categories_present: 18
+      line_budget: {tier: shared_plane, non_empty: 122, cap: 800, routing: {actual: 5, cap: 95}, roster: {actual: 11, cap: 55}, failure_recovery: {actual: 14, cap: 95}, result: pass}
+    shared_artifact_event:
+      review_role: shared_artifact_event_final_review
+      recommendation: approve
+      open_findings: 0
+      open_blocking_findings: 0
+      categories_present: 18
+      line_budget: {tier: shared_plane, non_empty: 141, cap: 800, routing: {actual: 12, cap: 105}, roster: {actual: 11, cap: 55}, failure_recovery: {actual: 14, cap: 105}, result: pass}
+    S:
+      review_role: S_final_review
+      recommendation: approve
+      open_findings: 0
+      open_blocking_findings: 0
+      categories_present: 18
+      line_budget: {tier: narrow, non_empty: 129, cap: 500, routing: {actual: 13, cap: 95}, roster: {actual: 9, cap: 45}, failure_recovery: {actual: 16, cap: 95}, result: pass}
+    aggregate: {plans: 3, approvals: 3, open_findings: 0, open_blocking_findings: 0, result: pass}
+  executor_profile_gate:
+    profile_review_recommendation: approve
+    profile_findings: 0
+    owner_residual_risk_acceptance: accepted_with_mandatory_controls
+    architecture_result: pass
+    exact_manual_model_selection_receipts: pending_runtime_prerequisite_before_each_dispatch
+    physical_dispatch_authorized: false
+  design_reserve_disposition:
+    effective_design_invocation_cap: 30
+    completed_K0b_design_invocations: 28
+    unused_conditional_ordinals: [29, 30]
+    disposition: expired_unused_at_this_exact_K0b_00_architecture_package_disposition
+    ledger_entries_created_for_owner_disposition: 0
+    carry_forward_to_runtime_F15_K0b01_or_other_package: forbidden
+  immutable_status_supersession:
+    rule: This final hash-bound owner disposition semantically supersedes stale status=pending fields in immutable bound inputs.
+    source_files_rewritten: false
+    source_hashes_changed: false
+    rewrite_required: false
+    rationale: Rewriting status-only fields would invalidate the reviewed complete-file hashes and is neither required nor authorized.
+  authorized_next_action:
+    only: separate_K0b_01_planning_session_after_this_session_completes
+    implementation_authority: none
+  remaining_runtime_prerequisites:
+    - separate_hash_bound_K0b_01_plan_and_scope_authority_before_implementation
+    - implement_and_verify_forward_migrations_routing_and_resource_budget_compilers_and_minimal_Alpha_events_under_separate_authority
+    - compiler_reference_equivalence_and_fail_closed_layer_plan_binary_budget_validation
+    - exact_hash_bound_manual_model_and_model_ID_pre_dispatch_receipt_before_every_physical_dispatch
+    - preserve_fixed_role_partition_extension_version_profile_UI_evidence_and_visible_transcript_controls
+    - implement_and_verify_checkpoint_phase_membership_predecessor_seals_four_trigger_allowlist_publication_caps_and_no_credit_arithmetic
+    - future_runtime_contract_harness_security_replay_crash_abort_and_clean_clone_conformance_evidence
+    - no_physical_calls_until_the_relevant_later_K0b_package_and_all_pre_dispatch_gates_authorize_them
+  non_authorizations:
+    - no_K0b_01_or_later_implementation_in_this_session_or_by_this_record
+    - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_behavior
+    - no_physical_model_invocation
+    - no_direct_provider_API_REST_SDK_Responses_API_or_Pipeline_managed_provider_credentials
+    - no_static_or_inferred_model_or_model_ID_and_no_dispatch_without_the_exact_manual_pre_dispatch_receipt
+    - no_extension_provider_model_role_or_capability_fallback_and_no_mid_invocation_switch
+    - no_threshold_increase_storage_migration_CAS_LFS_external_backend_third_checkpoint_budget_phase_or_arbitrary_batch_as_phase
+    - no_post_F15_non_F15_physical_model_call_and_no_operational_call_credit_for_F15
+    - no_carry_forward_or_reallocation_of_unused_design_ordinals_29_or_30
+    - no_new_author_or_independent_review_invocation_and_no_owner_disposition_ledger_entry
+    - no_edit_of_hash_bound_scope_policy_forecast_reconciliation_addendum_plan_review_profile_or_prior_decision_bytes
+    - no_canonical_fixture_read_write_or_runtime_use
+    - no_projects_swarm_read_run_or_modification
+    - no_research_old_swarm_read_or_modification
+    - no_real_product_project_run_or_product_readiness_claim
+    - no_continue_to_N1_pause_program_or_release_decision
+    - no_commit_push_merge_PR_deploy_or_release
+provenance:
+  mode: conversational_only
+  source_ref: current_thread_exact_owner_decision_2026_09_04
+  limitations:
+    - actor_authentication_unavailable_before_approval_runtime
+    - stable_external_message_identifier_not_exposed
+    - exact_owner_message_timestamp_not_exposed_separate_recording_timestamp_used
+    - Git_authorship_not_cryptographically_linked_to_conversational_actor
+integrity:
+  profile: canonical-yaml-v1
+  profile_version: 1
+  profile_ref: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+  excluded_field_path: integrity.canonical_payload_sha256
+  canonical_payload_sha256: "7c417c4ef96904a3a4b651688941c88c6ae6e35933fedd1377c02e732e1281ba"
+  external_complete_file_binding_ref: null

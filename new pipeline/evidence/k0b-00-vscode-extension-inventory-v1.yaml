@@ -1,0 +1,67 @@
+record_id: k0b-00-vscode-extension-inventory-v1
+schema_version: 1
+version: "1.0.0"
+observed_at: "2026-09-03T17:09:09.4968673+03:00"
+status: local_read_only_observation_no_model_invocation
+work_item_id: K0b-00
+
+observation_scope:
+  filesystem_root: 'C:\Users\Administrator\.vscode\extensions'
+  operations: [installed_directory_listing, file_size, SHA-256, executable_version, executable_help, settings_schema_search]
+  physical_model_invocations: 0
+  configuration_writes: 0
+
+extensions:
+  Claude:
+    extension_id: anthropic.claude-code
+    extension_version: 2.1.259
+    native_executable:
+      path: 'C:\Users\Administrator\.vscode\extensions\anthropic.claude-code-2.1.259-win32-x64\resources\native-binary\claude.exe'
+      bytes: 219715232
+      sha256: 85429000ec9b80082613e9ecd2e0d3b2276c9d5b22a681936575d2c4c2f342ed
+      reported_version: 2.1.259_Claude_Code
+    package_manifest:
+      path: 'C:\Users\Administrator\.vscode\extensions\anthropic.claude-code-2.1.259-win32-x64\package.json'
+      bytes: 17968
+      sha256: 08715864345ed364565494cd8f60840e4e3d463006a0102f5ad1cb7690b4924b
+    settings_schema:
+      path: 'C:\Users\Administrator\.vscode\extensions\anthropic.claude-code-2.1.259-win32-x64\claude-code-settings.schema.json'
+      bytes: 238730
+      sha256: ef7388b61c9271b16e2dd249e9b1e2b6ccdded72e7bc4e8dbd3450e404a62c6f
+    capability_observations:
+      bundled_CLI_tools_empty_disables_all_tools: true
+      manual_UI_exposes_exact_zero_tools_control: not_observed
+      UI_permission_mode_manual_available: true
+      settings_permission_deny_rules_available: true
+      exact_complete_built_in_tool_denyset_observed: false
+      model_can_be_selected_manually: true
+  ChatGPT:
+    extension_id: openai.chatgpt
+    extension_version: 26.825.51511
+    native_executable:
+      path: 'C:\Users\Administrator\.vscode\extensions\openai.chatgpt-26.825.51511-win32-x64\bin\windows-x86_64\codex.exe'
+      bytes: 313790256
+      sha256: 24a37127b8298b7bf96ca9b1d51a63c0685d561d1596f052bec73f734ed524b5
+      reported_version: codex-cli_0.151.0-alpha.7.2
+    package_manifest:
+      path: 'C:\Users\Administrator\.vscode\extensions\openai.chatgpt-26.825.51511-win32-x64\package.json'
+      bytes: 7461
+      sha256: 8ab1e0eebcd3f531f8eb7daca7b14260d936a9aa9ea94d2d6307e56de186835b
+    capability_observations:
+      read_only_sandbox_available: true
+      JSONL_and_output_schema_available_in_bundled_CLI: true
+      manual_UI_exposes_exact_zero_tools_control: not_observed
+      documented_zero_tools_switch_in_bundled_CLI: false
+      model_can_be_selected_manually: true
+
+interpretation_limits:
+  - Bundled CLI capability is evidence about the extension distribution, not proof that the manual VS Code UI exposes the same switch.
+  - File hashes identify the local installation bytes but do not identify a manually selected model or hidden provider state.
+  - No extension or model is authorized by this inventory.
+  - UI screenshots, model selection receipts, and exported transcripts do not exist yet and are not fabricated.
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - direct_provider_API_or_Pipeline_managed_credentials
+  - extension_configuration_change
+  - K0b_runtime_implementation

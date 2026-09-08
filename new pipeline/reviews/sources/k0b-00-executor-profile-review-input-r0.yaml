@@ -1,0 +1,99 @@
+manifest_id: k0b-00-executor-profile-review-input-r0
+schema_version: 1
+review_round: 0
+mode: fresh_context_read_only_inputs_typed_review_output_only
+appointed_by: W0_via_root
+appointed_at: "2026-09-03T17:18:30.0000000+03:00"
+work_item_id: K0b-00
+
+reviewer_assignment:
+  actor_id: /root/k0b_executor_profile_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_fixed_hybrid_manual_vscode_executor_profile_review_v1
+  must_not_have_authored_the_reviewed_profile: true
+  inherited_author_context: false
+
+exact_profile:
+  path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml
+  profile_id: k0b-fixed-hybrid-manual-vscode-ui-v1
+  version: "1.0.0"
+  sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d
+
+authorship_evidence:
+  - {path: new pipeline/evidence/k0b-00-executor-profile-author-input-v1.yaml, sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 32, K0b_entries: 15, sha256: b8713fe86a621949a61b68b7e3c5997366a4a833c386a63cc9d6fa8fe4635b5e}
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  - {path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, recommendation: approve, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, recommendation: approve, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, recommendation: approve, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+  - {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  - {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  - {path: new pipeline/decisions/k0b-00-extension-only-executor-owner-clarification-v1.yaml, sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314}
+  - {path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888}
+  - {path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8}
+  - {path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43}
+  - {path: new pipeline/evidence/k0b-00-vscode-extension-inventory-v1.yaml, sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+  - {path: new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml, sha256: 870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166}
+  - {path: new pipeline/evidence/k0a-03-validation-v1.yaml, sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158}
+
+review_rubric:
+  - Verify every exact input hash before substantive review and stop on mismatch.
+  - Verify the profile implements K0b-D01 as separately_pinned_harness_adapter on manual Visual Studio Code UI only, with no direct API path.
+  - Verify the fixed Claude safety and ChatGPT fixture-worker role partition is closed, unclassified roles block, and fallback or mid-invocation switching is forbidden.
+  - Verify model identity is selected manually before dispatch and bound by an exact hashed receipt rather than statically selected by the author.
+  - Verify all 36 F15 attempts lock one Claude extension and one manually selected UI model identity; drift invalidates comparability without hidden restart credit.
+  - Verify extension identity, capability, egress, transcript, schema-validation, replay, duplicate, crash, abort, late-result, compatibility, observability, and security contracts are single-valued.
+  - Verify manual-UI limitations are not overstated: denied effects are not proof of zero exposed tools, visible capture is not proof of complete hidden transcript, and both gaps remain explicit pre-dispatch blockers pending owner acceptance.
+  - Verify exact D01 fields are present and profile SHA-256 is bound externally without impossible self-reference.
+  - Verify D03 remains a separate hard-stop blocker and the profile neither closes it nor authorizes runtime work, physical calls, fixtures, contracts, migrations, prompts, projections, checkpoints, or canonical-fixture changes.
+  - Verify authorship ledger entry resolves to the exact author-input and profile hashes and the effective 24-call design budget leaves 9 calls before this review and 8 after it.
+  - Distinguish approval of this exact review-candidate contract from owner residual-risk acceptance, K0b architecture approval, or dispatch authorization.
+  - Report explicit machine checks, independent judgment, typed findings, blockers, and one recommendation.
+
+required_output:
+  path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml
+  format: YAML
+  maximum_non_empty_lines: 500
+  required_sections:
+    - reviewer_identity_and_conflict_declaration
+    - exact_manifest_and_profile_hashes
+    - input_hash_verification
+    - authorship_and_budget_checks
+    - D01_and_owner_decision_checks
+    - fixed_role_and_manual_model_selection_checks
+    - F15_reproducibility_checks
+    - capability_egress_transcript_and_residual_risk_checks
+    - state_replay_duplicate_crash_abort_and_compatibility_checks
+    - observability_security_scope_and_non_authorization_checks
+    - machine_checks
+    - reviewer_judgment
+    - findings_and_external_blockers
+    - recommendation
+  recommendation_enum: [approve, approve_with_changes, revise, narrow, block]
+  owner_approval: forbidden
+  profile_edit: forbidden
+  ledger_edit: forbidden
+  other_file_edits: forbidden
+
+forbidden_inputs:
+  - author_conversation_transcript
+  - hidden_author_summary_or_private_reasoning
+  - prior_reviewer_conversation_or_hidden_context
+  - research/old-swarm
+  - projects/swarm_content_or_execution
+  - canonical_fixture_content
+  - K0b_runtime_contract_registry_migration_prompt_fixture_projection_checkpoint_or_code
+  - provider_API_network_call_or_unpinned_external_state

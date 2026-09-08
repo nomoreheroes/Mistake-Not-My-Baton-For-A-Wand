@@ -1,0 +1,74 @@
+{
+  "policy_id": "pipeline-v2.resource-budget-policy",
+  "version": "1.0.0",
+  "compiler_id": "pipeline-v2.k0b01.resource-budget-compiler",
+  "compiler_version": "1.0.0",
+  "authority": {
+    "d0_gate_sha256": "1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4",
+    "d0_forecast_sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840",
+    "base_checkpoint_policy_sha256": "8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3",
+    "k0b_phase_policy_sha256": "ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8",
+    "k0b_forecast_sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a",
+    "k0b_reconciliation_sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+  },
+  "required_graph_sections": ["route", "fanout", "retry", "dialogue"],
+  "call_classes": {
+    "deterministic": {"counts_as_model_call": false},
+    "model": {"counts_as_model_call": true}
+  },
+  "invocation_tiers": {
+    "light": {"nominal_max": 12, "worst_case_max": 20},
+    "standard": {"nominal_max": 30, "worst_case_max": 50},
+    "deep": {"nominal_max": null, "worst_case_max": null, "exact_counts_and_owner_authority_required": true}
+  },
+  "human_attention_required_fields": ["profile", "sessions_nominal", "sessions_worst_case", "blocking_decisions_nominal", "blocking_decisions_worst_case", "active_minutes_nominal", "active_minutes_worst_case", "max_single_session_minutes", "batchable_requests"],
+  "human_attention_tiers": {
+    "light": {"sessions_max":1,"blocking_decisions_max":2,"active_minutes_max":30,"max_single_session_minutes":30},
+    "standard": {"sessions_max":3,"blocking_decisions_max":6,"active_minutes_max":120,"max_single_session_minutes":60},
+    "high_attention": {"sessions_max":null,"blocking_decisions_max":null,"active_minutes_max":null,"max_single_session_minutes":90,"owner_capacity_authority_required":true}
+  },
+  "binary_payload_required_fields": ["payload_classes_and_media_types", "nominal_object_count", "worst_case_object_count", "assumed_mean_object_bytes", "hard_per_object_bytes", "nominal_aggregate_new_bytes", "worst_case_aggregate_new_bytes", "policy_permitted_maximum_aggregate_bytes", "runtime_aggregate_limit_bytes", "checkpoint_publication_count", "pessimistic_pack_amplification", "exact_forecast_ref", "exact_forecast_sha256"],
+  "binary_not_applicable_required_fields": ["mode", "contract_prohibits_binary_persistence", "references_budgeted_payload_only", "proof_ref"],
+  "checkpoint": {
+    "mib_bytes": 1048576,
+    "max_checkpoint_bytes": 104857600,
+    "phase_pack_warning_bytes": 536870912,
+    "max_phase_pack_bytes": 1073741824,
+    "publication_batch_cap": 12,
+    "max_publication_p95_seconds": 10,
+    "max_clean_clone_restore_seconds": 120,
+    "window_replay_point_divisor": 10,
+    "window_minutes_divisor": 5,
+    "window_db_bytes_divisor": 33554432,
+    "planning_delta_factor_numerator": 1,
+    "planning_delta_factor_denominator": 1,
+    "all_credit": 0
+  },
+  "k0b_checkpoint_phase_order": ["K0b-runtime-operational", "K0b-F15-exact-measurement"],
+  "k0b_work_item_membership": {
+    "K0b-01": "K0b-runtime-operational",
+    "K0b-02": "K0b-runtime-operational",
+    "K0b-03": "K0b-runtime-operational",
+    "K0b-04-pre-F15": "K0b-runtime-operational",
+    "K0b-04-F15": "K0b-F15-exact-measurement",
+    "K0b-04-post-F15": "K0b-F15-exact-measurement",
+    "K0b-05": "K0b-F15-exact-measurement"
+  },
+  "k0b_call_allocation": {
+    "K0b-01": {"nominal": 0, "worst_case": 0},
+    "K0b-02": {"nominal": 0, "worst_case": 0},
+    "K0b-03": {"nominal": 0, "worst_case": 0},
+    "K0b-04-pre-F15": {"nominal": 16, "worst_case": 30},
+    "K0b-04-F15": {"nominal": 36, "worst_case": 36},
+    "K0b-04-post-F15": {"nominal": 0, "worst_case": 0},
+    "K0b-05": {"nominal": 0, "worst_case": 0}
+  },
+  "f15_boundary_trigger_ids": [
+    "k0b.f15.boundary.entry_gate",
+    "k0b.f15.boundary.program_owner_wait_or_exit",
+    "k0b.f15.boundary.exit_gate",
+    "k0b.f15.boundary.top_level_run_end"
+  ],
+  "f15_publication_limits": {"forecast_worst_case": 26, "maximum_strictly_below_hard_at_approved_checkpoint": 29, "unconditional_block_at_or_above": 30},
+  "forbidden": ["unknown_graph_value", "phase_overlap", "phase_gap", "phase_reorder", "phase_reopen", "third_phase", "arbitrary_batch_as_phase", "post_operational_seal_non_F15_call", "post_F15_model_call", "fifth_F15_boundary_trigger", "threshold_raise", "storage_change", "credit"]
+}

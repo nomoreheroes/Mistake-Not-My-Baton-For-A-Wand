@@ -1,0 +1,78 @@
+document_id: pipeline-v2.k0b-01.governance-remediation-owner-direction
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T12:18:12.3949869+03:00"
+work_item_id: K0b-01
+status: approved_governance_remediation_only
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  source_ref: current_thread_owner_direction_2026_09_08
+  external_audit_input:
+    path: C:/Users/Administrator/.codex/attachments/3a5f73f2-14d2-49a0-8e8b-37ac4a4f25aa/pasted-text.txt
+    sha256: 8c796d6fd4e0f6f0d2763940c54cc31f8d7b50f8f905ac2a441d2a00e5b42eb8
+    repository_artifact: false
+  owner_statement: >-
+    Считайте приложенный аудит новой owner direction. Отменяю ограничения
+    HEAD must remain a031ee56a36cf794646643b67270c6e0f7092e08 и no commit для
+    governance remediation. Разрешаю read-only reuse-триаж ровно 18 frozen artifacts,
+    подготовку K0b-01 plan v1.3 и state/status governance, а затем exact-scope commit
+    всего hash-reachable graph, включая frozen artifacts без изменения их байтов, если
+    этого требует reachability. Runtime implementation, новые model/API calls,
+    push/PR/deploy и доступ к canonical fixture, research/old-swarm и projects/swarm
+    по-прежнему запрещены.
+
+prior_bindings:
+  base_HEAD_at_direction: a031ee56a36cf794646643b67270c6e0f7092e08
+  base_tree_at_direction: fbda92274880ea684bebacc6bb58e12a40084d07
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  frozen_draft_manifest: {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, exact_artifact_count: 18}
+  reviewed_plan_v1_2: {path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff}
+  migration_r1: {path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml, sha256: be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6, recommendation: approve, open_blocking_findings: 0}
+  compiler_budget_r1: {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml, sha256: e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d, recommendation: approve, open_blocking_findings: 0}
+  pre_remediation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, sha256: b07d05ff29721089d404e827369e8fdf5143610fe69a4f467715406cc93288ee, entries: 49}
+
+supersession:
+  fixed_HEAD_requirement:
+    prior_value: a031ee56a36cf794646643b67270c6e0f7092e08
+    disposition: superseded_for_the_exact_governance_commit_authorized_here
+  no_commit_rule:
+    disposition: superseded_for_one_exact_scope_hash_reachable_governance_commit
+  all_other_prior_hash_scope_and_non_authorization_rules:
+    disposition: retained_unless_explicitly_changed_here
+
+authorized_now:
+  - preserve_this_owner_direction_as_governance_evidence
+  - verify_complete_file_hashes_of_exactly_the_18_frozen_artifacts
+  - read_exactly_those_18_frozen_artifacts_for_reuse_triage_only
+  - create_a_file_by_file_reuse_triage_without_editing_or_executing_frozen_bytes
+  - create_K0b_01_planning_package_v1_3_as_a_successor_without_editing_v1_2
+  - create_state_and_status_governance_that_exposes_authority_hashes_and_open_gates
+  - calculate_the_exact_hash_reachable_commit_set
+  - include_unchanged_frozen_artifacts_when_required_to_avoid_dangling_hash_references
+  - create_one_exact_scope_governance_remediation_commit
+  - allow_HEAD_to_advance_only_to_that_commit
+
+commit_gate:
+  required_before_commit:
+    - all_18_frozen_artifact_hashes_match_the_freeze_manifest
+    - frozen_artifact_bytes_remain_unchanged_after_triage
+    - plan_v1_3_and_state_status_governance_parse_and_resolve
+    - every_committed_path_hash_reference_resolves_without_a_dangling_target
+    - commit_set_excludes_forbidden_roots_runtime_cache_and_unrelated_user_changes
+    - staged_diff_check_and_staged_path_inventory_pass
+  commit_count_authorized: 1
+  push_or_remote_side_effect_authorized: false
+
+explicit_non_authorizations:
+  - no_edit_delete_move_execute_import_activate_or_runtime_use_of_the_18_frozen_artifacts
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_test_or_runtime_execution
+  - no_new_model_agent_independent_review_or_provider_API_call
+  - no_canonical_fixture_read_write_search_or_runtime_use
+  - no_research_old_swarm_read_search_or_modification
+  - no_projects_swarm_read_search_run_or_modification
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim

@@ -1,0 +1,77 @@
+document_id: pipeline-v2.k0b-00.owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T12:02:39.7095343+03:00"
+scope: K0b-00 architecture package and pre-runtime reconciliation only
+status: recorded_with_required_materialization
+work_item_id: K0b-00
+K0b_00_complete: false
+runtime_started: false
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-03
+  historical_request:
+    path: new pipeline/evidence/k0b-00-owner-disposition-request-v1.yaml
+    sha256: e646e8a4e356367de296f006d4a4ca28c43e72f6ef7f3ac58c01a3394b211849
+
+exact_reviewed_scope:
+  scope_envelope: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  shared_control_plan: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  shared_control_review: {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, recommendation: approve}
+  shared_artifact_event_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  shared_artifact_event_review: {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, recommendation: approve}
+  S_plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  S_review: {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, recommendation: approve}
+  design_invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 31, sha256: 867c2bb332c45c0c4bddd674f4436e6571bff4e222677c5dce294aebeb96ff23}
+  plan_budget_disposition: {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+
+owner_dispositions:
+  - decision_id: K0b-D01-runtime-executor-binding
+    selected_option: separately_pinned_harness_adapter
+    disposition: accepted
+    closure_status: pending_exact_hash_bound_adapter_profile
+    effect: No physical K0b model invocation is authorized until every required executor field is exact and the adapter profile has independent review evidence.
+  - decision_id: K0b-D02-three-plan-scope
+    selected_option: approve
+    disposition: accepted
+    closure_status: closed_for_exact_hashes_above
+    effect: The three reviewed plans and K0b-01 through K0b-05 boundaries are approved without scope modification, subject to the remaining pre-runtime blockers.
+  - decision_id: K0b-D03-checkpoint-budget-route
+    selected_option: narrow_or_checkpoint_batching
+    disposition: accepted
+    closure_status: pending_exact_compiled_boundary_and_updated_threshold_check
+    effect: Existing hard limits remain unchanged; compiler output must enforce an exact batching boundary and must still fail closed on aggregate phase-pack hard status.
+  - decision_id: K0b-D04-F15-invocation-budget-reconciliation
+    selected_option: approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast
+    disposition: accepted
+    closure_status: pending_non_overlapping_package_and_updated_forecast
+    effect: F15 retains exactly 36 physical attempts in a separate package with no reuse of the K0b-runtime-operational 16/30 credit.
+  - decision_id: K0b-B01-binary-forecast-reconciliation
+    selected_option: accept_candidate_and_authorize_forecast_reconciliation
+    disposition: accepted
+    closure_status: pending_updated_forecast_and_reconciliation_receipt
+    accepted_candidate:
+      checkpoint_publications: {nominal: 14, worst_case: 34}
+      seed_inclusive_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+      seed_inclusive_phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+      delta_factor: 1.0
+    effect: The reviewed binary candidate is the base K0b runtime component; the updated forecast must additionally expose, not hide, the separate F15 replay/publication pressure.
+
+materialization_rules:
+  D01_required_fields: [executor_profile_id, executor_version, model_id, capability_policy, egress_policy, transcript_evidence_profile, sha256]
+  F15_package_profile_rule: Exact 36/36 calls exceeds the standard nominal cap of 30, so the separate package must carry an explicit deep invocation budget.
+  no_hidden_credit: true
+  no_threshold_change: true
+  no_reviewed_plan_hash_change: true
+  no_approval_receipt_until_all_exact_records_exist: true
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - K0b_runtime_contract_registry_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

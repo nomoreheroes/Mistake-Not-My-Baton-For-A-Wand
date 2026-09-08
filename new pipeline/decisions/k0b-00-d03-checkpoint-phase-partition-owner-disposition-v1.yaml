@@ -1,0 +1,118 @@
+document_id: pipeline-v2.k0b-00.d03-checkpoint-phase-partition-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T19:08:54.6054080+03:00"
+scope: K0b-D03 checkpoint phase-pack hard-stop resolution
+status: selected_pending_hash_bound_author_and_independent_review
+work_item_id: K0b-00
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-03
+  owner_statement: "пошли по рекомендованному тобой пути"
+  selected_recommendation: split_checkpoint_accounting_between_K0b_runtime_operational_and_K0b_F15_exact_measurement
+
+authority:
+  scope_envelope: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  prior_owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  prior_forecast: {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+  prior_reconciliation: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a}
+
+selected_route:
+  registered_owner_route: narrow_or_checkpoint_batching
+  specialization: explicit_non_overlapping_checkpoint_phase_partition
+  checkpoint_chain: fixture
+  threshold_scope: per_checkpoint_phase_within_the_same_project_chain
+  threshold_bytes_unchanged: {checkpoint_hard: 104857600, phase_pack_hard: 1073741824, warning: 536870912}
+  publication_batch_cap_unchanged: 12
+  pack_delta_factor: 1.0
+  measured_overlap_compression_or_dedup_credit: 0
+
+partition_contract:
+  phases:
+    - checkpoint_phase_id: K0b-runtime-operational
+      membership: all_16_30_non_F15_physical_model_invocations_and_their_checkpointed_evidence_plus_pre_F15_K0b_01_through_K0b_04_activity
+      invocation_package: K0b-runtime-operational
+      invocation_budget: {nominal: 16, worst_case: 30}
+      predecessor: K0a_fixture_chain_head
+      successor: K0b-F15-exact-measurement
+    - checkpoint_phase_id: K0b-F15-exact-measurement
+      membership: exactly_36_F15_attempts_their_direct_request_response_validation_measurement_evidence_and_deterministic_post_F15_K0b_04_K0b_05_closure
+      invocation_package: K0b-F15-exact-measurement
+      invocation_budget: {nominal: 36, worst_case: 36, exact_required_attempts: 36}
+      predecessor: terminal_sealed_K0b-runtime-operational_checkpoint
+      successor: terminal_K0b_05_owner_program_checkpoint
+      additional_physical_model_invocations_after_F15_starts: 0
+  one_invocation_or_publication_belongs_to_exactly_one_phase: true
+  phase_membership_compiled_before_first_runtime_effect: true
+  phase_reclassification_after_first_effect: forbidden
+  cross_phase_publication_or_budget_credit: forbidden
+  F15_starts_only_after_operational_phase_is_terminal_sealed_and_reconciled: true
+  all_non_F15_physical_model_invocations_complete_before_F15_starts: true
+  post_F15_K0b_04_K0b_05_processing_is_deterministic_and_adds_no_model_call: true
+  same_project_chain_cumulative_checkpoint_bytes_remain_visible: true
+  no_new_product_scope_or_runtime_call_credit: true
+
+conservative_no_delta_forecast_bounds:
+  K0b-runtime-operational:
+    checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    publications: {nominal: 14, worst_case: 34}
+    phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    worst_case_margin_below_hard_bytes: 146800640
+    batches: {nominal: 2, worst_case: 3}
+  K0b-F15-exact-measurement:
+    cumulative_checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    required_window_publications: {nominal: 8, worst_case: 22}
+    explicit_boundary_trigger_publications: {run_end: 1, human_wait_or_exit: 1, asserted_migration_or_gate: 2, total: 4}
+    publications: {nominal: 12, worst_case: 26}
+    phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+    worst_case_margin_below_hard_bytes: 119537664
+    batches: {nominal: 1, worst_case: 3}
+  combined_chain_observability_only_not_a_per_phase_gate:
+    publications: {nominal: 26, worst_case: 60}
+    no_delta_pack_bytes: {nominal: 257949696, worst_case: 1881145344}
+
+required_materialization:
+  - closed_exact_author_input_with_all_authority_hashes
+  - updated_forecast_v2_with_separate_phase_formulas_and_no_credit
+  - forecast_binary_reconciliation_v2_superseding_only_the_D03_status_and_derived_totals
+  - checkpoint_phase_partition_architecture_addendum_with_compiler_publisher_replay_crash_abort_compatibility_security_and_acceptance_contracts
+  - fresh_context_independent_review_of_the_exact_addendum_and_transitively_bound_forecast_records
+  - design_invocation_ledger_author_and_reviewer_entries
+
+acceptance_conditions:
+  - each_checkpoint_phase_worst_pack_is_strictly_below_1073741824
+  - each_checkpoint_is_strictly_below_104857600
+  - each_publication_batch_has_at_most_12_publications_and_is_below_warning
+  - F15_phase_has_at_most_29_publications_at_36700160_bytes_per_checkpoint
+  - F15_phase_has_exactly_36_model_calls_and_zero_additional_post_F15_model_calls
+  - more_than_four_F15_boundary_triggers_invalidates_the_forecast_and_blocks
+  - exact_36_F15_attempts_and_their_non_overlap_with_runtime_16_30_are_preserved
+  - no_overlap_delta_compression_dedup_or_cross_phase_credit_is_claimed
+  - clean_clone_restore_and_cumulative_chain_metrics_remain_mandatory_operational_evidence
+  - any_unclassified_trigger_or_phase_membership_blocks_before_effect
+
+reviewed_plan_treatment:
+  existing_three_plan_hashes_are_not_modified_by_this_owner_disposition: true
+  addendum_must_be_compatible_with_their_external_D03_owner_route_boundary: true
+  objective_conflict_requires_stop_and_explicit_plan_revision_authority: true
+  silent_phase_pack_reinterpretation: forbidden
+
+budget_effect:
+  design_invocations_consumed_by_owner_materialization: 0
+  effective_design_invocation_cap: 24
+  completed_before_D03_author: 16
+  authorized_D03_calls: {author: 1, fresh_context_reviewer: 1}
+  remaining_after_successful_author_and_review: 6
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - K0b_runtime_code_contract_registry_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - threshold_increase_storage_migration_or_external_backend
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

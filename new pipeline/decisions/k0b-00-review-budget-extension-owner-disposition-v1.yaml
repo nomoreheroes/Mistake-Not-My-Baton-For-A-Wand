@@ -1,0 +1,58 @@
+document_id: pipeline-v2.k0b-00.review-budget-extension-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-03T16:58:42.6079529+03:00"
+scope: K0b-00 D01 executor binding and D03 checkpoint-route resolution only
+status: approved
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-03
+  owner_statement: "По п.2. - разрешаю увеличить лимит ревью сразу на 10 единиц"
+  normalized_interpretation: >-
+    Add ten review-related design invocations to the effective K0b-plan-deltas
+    ceiling. The allowance includes the revision-author calls required to
+    produce exact reviewable D01/D03 inputs and their independent review calls;
+    it does not authorize runtime or physical measurement invocations.
+
+authority:
+  prior_budget_disposition: {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+  current_materialization: {path: new pipeline/evidence/k0b-00-owner-disposition-materialization-v1.yaml, sha256: 52a87541d03923bbd8a10b645350a8b20d322cf04af97427bb4febe328ffe7e7}
+  executor_gap_candidate: {path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43}
+  design_invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 31, K0b_entries: 14, sha256: 867c2bb332c45c0c4bddd674f4436e6571bff4e222677c5dce294aebeb96ff23}
+
+budget_disposition:
+  package_id: K0b-plan-deltas
+  original_forecast: {nominal: 6, worst_case: 12}
+  prior_owner_authorized_effective_cap: 14
+  additional_review_related_invocations: 10
+  new_effective_cap: 24
+  actual_completed_at_disposition: 14
+  remaining_after_disposition: 10
+  eligible_work:
+    - exact_separately_pinned_harness_adapter_profile_authoring
+    - fresh_context_independent_review_of_exact_executor_profile
+    - D03_narrowing_or_alternative_registered_route_analysis
+    - affected_plan_amendment_authoring_when_required
+    - fresh_context_independent_review_of_each_changed_exact_plan_or_route_record
+    - bounded_revision_return_for_a_finding_within_the_remaining_allowance
+  accounting_rule: Every completed model invocation must be appended to the design ledger with exact input and output hashes before an approval receipt can cite it.
+  carry_forward_to_runtime_or_other_phase: forbidden
+  substitution_for_F15_or_K0b_runtime_calls: forbidden
+
+limits_not_waived:
+  - The Layer Architecture Gate fresh-context and exact-hash requirements remain mandatory.
+  - This budget does not itself authorize a third return on a plan already at its global return limit; such work requires a new explicitly scoped amendment/version route.
+  - This budget does not select an executor, model, provider, egress destination, threshold increase, storage migration, or D03 narrowing mechanism.
+  - No physical model invocation may occur until D01 is fully hash-bound and approved.
+  - The current checkpoint hard stop remains active until an effective owner route is reviewed and bound.
+
+explicit_non_authorizations:
+  - K0b_runtime_code_contract_registry_migration_prompt_fixture_or_checkpoint_implementation
+  - physical_F15_or_other_runtime_invocations
+  - modification_of_the_canonical_fixture
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

@@ -1,0 +1,84 @@
+document_id: pipeline-v2.k0b-01.agent-review-executor-owner-override
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T18:19:20.5697705+03:00"
+work_item_id: K0b-01
+status: approved_exact_two_r0_design_review_dispatches
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  source_ref: current_thread_owner_instruction_2026_09_07
+  owner_statement: "это какой-то нерациональный способ, запусти агентов просто с этой моделью"
+  interpreted_model: gpt-5.6-sol
+
+authority_bindings:
+  final_K0b_00_owner_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  K0b_01_plan_v1_1: {path: new pipeline/architecture/k0b-01-planning-package-v1.1.md, sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429}
+  prior_owner_direction: {path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml, sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39}
+  review_budget_supplement: {path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217}
+
+exact_override:
+  scope: K0b_01_plan_v1_1_two_initial_independent_design_reviews_only
+  superseded_fields:
+    - prior_owner_direction.review_execution_profile.transport
+    - prior_owner_direction.review_execution_profile.exact_manual_model_and_model_ID_pre_dispatch_receipt_before_every_call
+    - review_budget_supplement.dispatch_controls.transport
+    - review_budget_supplement.dispatch_controls.exact_manual_model_and_model_ID_pre_dispatch_receipt
+    - K0b_01_plan_v1_1.review_sequence.manual_VSCode_UI_transport_for_these_two_r0_reviews
+  replacement_transport: Codex_collaboration_fresh_context_subagent
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  selection_mechanism: exact_orchestrator_spawn_model_override
+  UI_model_selection_or_screen_capture_required: false
+  exact_hash_bound_agent_pre_dispatch_receipt_required: true
+  direct_provider_API_REST_SDK_or_managed_credentials: forbidden
+  fresh_context: true
+  inherited_author_context: false
+  one_agent_per_review_stream: true
+  subagent_may_spawn_additional_agents: false
+
+authorized_dispatches:
+  - invocation_id: k0b-01-review-migration-plan-r0
+    actor_id: /root/k0b01_migration_review_r0
+    review_input_path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r0.yaml
+    required_output_path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml
+    review_round: 0
+  - invocation_id: k0b-01-review-compiler-budget-plan-r0
+    actor_id: /root/k0b01_compiler_budget_review_r0
+    review_input_path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r0.yaml
+    required_output_path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml
+    review_round: 0
+
+budget_effect:
+  selected_review_package: {nominal: 2, worst_case: 4}
+  authorized_and_consumed_if_both_dispatch: 2
+  worst_case_r1_reserve_untouched: 2
+  runtime_or_F15_call_credit: 0
+  checkpointed: false
+  expired_K0b_00_ordinals_29_30_reused: false
+
+ledger_rule:
+  invocation_IDs_are_reserved_before_dispatch: true
+  incomplete_pending_entries_in_design_invocation_ledger: forbidden_by_schema
+  completed_entry_append: required_after_each_terminal_review_output_exists
+  invented_completed_at_or_output_sha256: forbidden
+
+scope_preservation:
+  K0b_00_runtime_manual_VSCode_profile_changed: false
+  future_runtime_dispatch_prerequisites_changed: false
+  K0b_01_implementation_authority_created: false
+  human_only_review_stage_changed: false
+  frozen_engineering_draft_authority_changed: false
+
+explicit_non_authorizations:
+  - no_r1_dispatch_without_a_blocking_r0_and_separate_revised_hash_bound_input
+  - no_runtime_model_dispatch_or_runtime_profile_transport_change
+  - no_direct_provider_API_REST_SDK_or_managed_credentials
+  - no_implementation_runtime_contract_schema_registry_migration_or_fixture_change
+  - no_canonical_fixture_read_write_or_runtime_use
+  - no_projects_swarm_read_run_or_modification
+  - no_research_old_swarm_read_or_modification
+  - no_commit_push_PR_deploy_or_release

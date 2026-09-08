@@ -1,0 +1,196 @@
+package_id: k0b-00-owner-disposition-request-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T11:50:25.8091419+03:00"
+status: blocked_pending_exact_owner_dispositions
+work_item_id: K0b-00
+K0b_00_complete: false
+runtime_started: false
+architecture_approval_receipts_created: false
+unresolved_review_findings: []
+
+entry_gate:
+  commit: a031ee56a36cf794646643b67270c6e0f7092e08
+  tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  external_rereview:
+    path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml
+    sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b
+    verdict: approve
+    open_findings: 0
+
+authority:
+  architecture_plan: {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  development_plan: {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, version: "0.13", sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  gate_contract: {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, schema_version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, schema_version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, schema_version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  approval_schema: {path: new pipeline/registry/approval-envelope/v1.schema.yaml, schema_version: 1, sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54}
+  canonical_hash_profile: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, version: 1, sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992}
+  scope_envelope: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  design_invocation_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 31, sha256: 867c2bb332c45c0c4bddd674f4436e6571bff4e222677c5dce294aebeb96ff23}
+  design_budget_disposition: {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, version: "1.0.0", sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2}
+
+exact_plans_and_reviews:
+  - plan_id: k0b-00-shared-control-plane-delta
+    plan: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+    current_author_invocation_ref: k0b-00-revision-author-shared-control-r2
+    final_reviewer_invocation_ref: k0b-00-review-shared-control-r2
+    final_review: {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, review_round: 2, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, recommendation: approve}
+    findings: {initial: 2, round_1: 1, final_unresolved: 0}
+    complexity: {tier: shared_plane, cap: 800, actual_non_empty_lines: 169, routing: {actual: 14, cap: 95}, roster: {actual: 13, cap: 55}, failure_recovery: {actual: 17, cap: 95}}
+  - plan_id: k0b-00-shared-artifact-event-plane-delta
+    plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+    current_author_invocation_ref: k0b-00-revision-author-shared-artifact-event-r1
+    final_reviewer_invocation_ref: k0b-00-review-shared-artifact-event-r1
+    final_review: {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, review_round: 1, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, recommendation: approve}
+    findings: {initial: 2, final_unresolved: 0}
+    complexity: {tier: shared_plane, cap: 800, actual_non_empty_lines: 206, routing: {actual: 14, cap: 105}, roster: {actual: 13, cap: 55}, failure_recovery: {actual: 20, cap: 105}}
+  - plan_id: k0b-00-s-layer-delta
+    plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+    current_author_invocation_ref: k0b-00-revision-author-s-r1
+    final_reviewer_invocation_ref: k0b-00-review-s-r1
+    final_review: {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, review_round: 1, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, recommendation: approve}
+    findings: {initial: 3, final_unresolved: 0}
+    complexity: {tier: narrow, cap: 500, actual_non_empty_lines: 157, routing: {actual: 15, cap: 95}, roster: {actual: 10, cap: 45}, failure_recovery: {actual: 18, cap: 95}}
+
+architecture_review_gate:
+  plans_present: 3
+  each_plan_has_18_categories: true
+  fresh_context_final_reviews_present: 3
+  final_review_recommendations: [approve, approve, approve]
+  unresolved_review_findings: 0
+  cross_plan_ownership_consistent: true
+  event_profile_types: 21
+  implementation_files_created: false
+  result: pass_pending_owner_decisions_and_approval
+
+budget_and_payload:
+  design_package:
+    package_id: K0b-plan-deltas
+    profile: light
+    invocations: {nominal: 6, base_worst_case: 12, owner_authorized_worst_case: 14, actual: 14, remaining: 0}
+    result: pass_at_exact_owner_authorized_limit
+    further_design_invocation: forbidden_without_new_owner_budget_disposition
+  runtime_package:
+    package_id: K0b-runtime-operational
+    profile: standard
+    invocations: {nominal: 16, worst_case: 30, actual: 0}
+    execution_status: blocked_not_started
+  binary_candidate:
+    applicability: required_for_shared_artifact_event_plane
+    control_plane: N_A_zero_binary_persistence
+    S: N_A_zero_binary_persistence
+    checkpoint_count: {nominal: 14, worst_case: 34}
+    measurement_seed_count: {nominal: 6, worst_case: 12}
+    rounded_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    aggregate_phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    maximum_phase_pack_bytes: 1073741824
+    threshold_status: {nominal: below_warning, worst_case: above_warning}
+    D0_current_binary_classification: zero
+    variance_status: unresolved
+
+owner_decision_requests:
+  - decision_id: K0b-D01-runtime-executor-binding
+    status: unresolved
+    question: Select and hash-bind the only permitted real-LLM executor profile for K0b physical calls.
+    options:
+      - option: manual_extension_handoff_v1
+        consequence: requires a new K0b-specific exact extension/version/model/capability/transcript binding; K0a authority is not inherited
+      - option: separately_pinned_harness_adapter
+        consequence: requires a reviewed exact adapter/executor profile before any physical call
+      - option: narrow_and_pause_before_physical_F15
+        consequence: permits no physical K0b call and leaves F15 plus any real-LLM scenario blocked
+    required_fields_if_not_pause: [executor_profile_id, executor_version, model_id, capability_policy, egress_policy, transcript_evidence_profile, sha256]
+    selected_option: null
+  - decision_id: K0b-D02-three-plan-scope
+    status: unresolved
+    question: Approve, narrow, or reject the exact three plan/review pairs and K0b-01 through K0b-05 work-item boundaries.
+    options:
+      - option: approve
+        consequence: preserves the exact reviewed hashes above; other blockers still prevent implementation
+      - option: narrow
+        consequence: changed plan/scope hashes become stale and require a new explicitly budgeted review cycle
+      - option: reject
+        consequence: K0b-00 stops with no implementation authority
+    selected_option: null
+  - decision_id: K0b-D03-checkpoint-budget-route
+    status: activated_and_unresolved_now
+    activation_evidence: planning_worst_phase_pack_is_above_warning
+    question: Select the storage/batching route required by the already-crossed planning-worst warning threshold.
+    options:
+      - option: narrow_or_checkpoint_batching
+        consequence: keep current hard limits but reduce per-window pack pressure through an exact compiled boundary
+      - option: raise_threshold_with_evidence
+        consequence: requires evidence-backed policy/forecast revision and cannot weaken the hard-stop invariant silently
+      - option: migrate_checkpoint_storage
+        consequence: expands storage architecture and requires a separately reviewed migration plan before affected implementation
+      - option: pause
+        consequence: no checkpoint/BLOB implementation or affected continuation
+    selected_option: null
+  - decision_id: K0b-D04-F15-invocation-budget-reconciliation
+    status: unresolved
+    question: Reconcile the required 36 F15 attempts with the 30-call runtime worst-case envelope before any physical invocation.
+    options:
+      - option: approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast
+        consequence: preserves the 36-attempt oracle but requires an exact non-overlapping package and revised forecast
+      - option: revise_hypothesis_matrix_and_thresholds_before_execution
+        consequence: requires a new pre-execution hypothesis/threshold disposition and cannot use post-hoc results
+      - option: pause
+        consequence: F15 and dependent Alpha-0 readiness remain blocked
+    selected_option: null
+  - decision_id: K0b-B01-binary-forecast-reconciliation
+    status: required_supporting_disposition_unresolved
+    question: Reconcile the D0 binary-zero K0b row with the reviewed seed-inclusive artifact/checkpoint candidate budget.
+    options:
+      - option: accept_candidate_and_authorize_forecast_reconciliation
+        consequence: binds the reviewed 132120576/926941184-byte candidate and requires an updated forecast plus reconciliation receipt
+      - option: narrow_binary_scope_and_recalculate
+        consequence: changes the artifact/event implementation boundary and makes affected plan/scope hashes stale
+      - option: reject_or_pause
+        consequence: K0b-01/02 binary and checkpoint implementation remains blocked
+    selected_option: null
+
+cross_decision_constraints:
+  - K0b-D02_approve_does_not_close_K0b-D01_D03_D04_or_K0b-B01
+  - K0b-D01_non_pause_requires_an_exact_hash_bound_executor_record_not_a_provider_name_or_prose_only
+  - K0b-D03_raise_or_migrate_requires_separately_reviewed_policy_forecast_or_storage_changes
+  - K0b-D04_separate_package_must_not_reuse_the_16_30_runtime_credit_or_hide_calls
+  - K0b-B01_accept_requires_updated_D0_forecast_and_a_reconciliation_receipt_before_K0b-01_or_K0b-02
+  - any_narrow_or_modified_plan_scope_invalidates_the_current_exact_D02_approval_candidate
+  - no_decision_authorizes_runtime_until_one_exact_approval_envelope_hash_binds_all_required_records
+
+approval_materialization_after_owner_response:
+  required_decisions: [K0b-D01-runtime-executor-binding, K0b-D02-three-plan-scope, K0b-D03-checkpoint-budget-route, K0b-D04-F15-invocation-budget-reconciliation, K0b-B01-binary-forecast-reconciliation]
+  approval_type: layer_architecture_plan
+  decision_if_exact_scope_approved: approved_with_overrides
+  exact_records_to_bind:
+    - scope_envelope
+    - shared_control_plan_and_final_review
+    - shared_artifact_event_plan_and_final_review
+    - S_plan_and_final_review
+    - design_invocation_ledger
+    - design_budget_disposition
+    - executor_binding_or_pause_disposition
+    - checkpoint_budget_route
+    - F15_budget_reconciliation
+    - binary_forecast_reconciliation
+  canonical_hash_profile: canonical-yaml-v1
+  receipt_creation_status: forbidden_until_all_selected_options_and_required_exact_records_exist
+
+explicit_non_authorizations:
+  - inferred_owner_choice_or_default_selection
+  - K0b-01_or_later_implementation
+  - physical_model_invocation
+  - contract_registry_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_release_or_product_readiness_claim
+
+owner_response_template:
+  K0b-D01-runtime-executor-binding: null
+  K0b-D02-three-plan-scope: null
+  K0b-D03-checkpoint-budget-route: null
+  K0b-D04-F15-invocation-budget-reconciliation: null
+  K0b-B01-binary-forecast-reconciliation: null
+  rationale_or_overrides: null

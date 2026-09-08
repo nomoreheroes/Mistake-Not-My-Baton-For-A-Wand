@@ -1,0 +1,102 @@
+record_id: k0b-00-forecast-binary-reconciliation-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T12:02:39.7095343+03:00"
+status: reconciled_with_new_checkpoint_hard_block
+work_item_id: K0b-00
+runtime_started: false
+
+authority:
+  base_forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+  reviewed_binary_candidate: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, section: 13}
+  updated_forecast: {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, version: "1.0.0", sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e}
+
+decision_materialization:
+  K0b-B01-binary-forecast-reconciliation:
+    selected_option: accept_candidate_and_authorize_forecast_reconciliation
+    reviewed_candidate_hash_unchanged: true
+    D0_binary_zero_variance_exposed: true
+    exact_seed_counts: {nominal: 6, worst_case: 12}
+    exact_nested_seed_bytes: {nominal: 2236416, worst_case: 4472832}
+    reviewed_base_phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    result: pass
+  K0b-D04-F15-invocation-budget-reconciliation:
+    selected_option: approve_separate_exact_or_deep_F15_measurement_package_and_update_forecast
+    package_id: K0b-F15-exact-measurement
+    invocation_profile: deep
+    invocations: {nominal: 36, worst_case: 36, exact: 36}
+    non_overlapping_with_runtime_operational_16_30: true
+    updated_phase_invocations: {nominal: 58, worst_case: 80, checkpointed_nominal: 52, checkpointed_worst_case: 66}
+    hidden_or_post_hoc_credit: false
+    result: pass
+  K0b-D03-checkpoint-budget-route:
+    selected_option: narrow_or_checkpoint_batching
+    compiled_batch_cap_candidate: 12
+    largest_worst_case_batch_bytes: 440401920
+    per_batch_status: below_warning
+    updated_aggregate_phase_pack_bytes: {nominal: 220200960, worst_case: 2055208960}
+    updated_aggregate_worst_status: above_hard
+    result: fail_closed_pending_effective_narrowing_or_new_owner_route
+
+arithmetic_checks:
+  nominal_model_points: {formula: 52 * 2, result: 104}
+  worst_model_points: {formula: 66 * 4, result: 264}
+  nominal_replay_unique_bytes: {formula: 52 * 2 * 16384, result: 1703936}
+  worst_replay_unique_bytes: {formula: 66 * 4 * 65536, result: 17301504}
+  nominal_checkpoint_bytes: {formula: ceil(9.8515625_MiB), result: 10485760}
+  worst_checkpoint_bytes: {formula: ceil(34.265625_MiB), result: 36700160}
+  nominal_phase_pack_bytes: {formula: 10485760 * 21, result: 220200960}
+  worst_phase_pack_bytes: {formula: 36700160 * 56, result: 2055208960}
+  batch_cap_boundary:
+    fourteen_worst_checkpoints: 513802240
+    fifteen_worst_checkpoints: 550502400
+    warning_bytes: 536870912
+    strict_below_warning_max_by_size: 14
+    final_cap_after_policy_per_run_limit: 12
+
+variance_table:
+  - field: K0b_plan_design_calls_worst
+    base: 12
+    reviewed_or_owner_bound: 14
+    updated: 14
+    status: reconciled_by_plan_budget_disposition
+  - field: K0b_F15_physical_calls
+    base: hidden_inside_runtime_16_30_but_required_36
+    reviewed_or_owner_bound: separate_exact_36
+    updated: separate_deep_36_36
+    status: reconciled_without_credit_reuse
+  - field: K0b_binary_seed_bytes
+    base: 0
+    reviewed_or_owner_bound: {nominal: 2236416, worst_case: 4472832}
+    updated: unchanged_reviewed_seed_component
+    status: reconciled
+  - field: K0b_checkpoint_publications
+    base: {nominal: 14, worst_case: 34}
+    reviewed_or_owner_bound: {nominal: 14, worst_case: 34}
+    updated: {nominal: 21, worst_case: 56}
+    status: changed_due_to_separate_F15_replay_windows
+  - field: K0b_phase_pack_bytes
+    base: {nominal: 102760448, worst_case: 748683264}
+    reviewed_or_owner_bound: {nominal: 132120576, worst_case: 926941184}
+    updated: {nominal: 220200960, worst_case: 2055208960}
+    status: updated_worst_above_hard
+
+gate_result:
+  forecast_update_present: true
+  binary_variance_reconciled: true
+  F15_budget_reconciled: true
+  selected_batch_boundary_materialized: true
+  selected_batching_route_closes_policy_hard_status: false
+  K0b_00_approval_receipt_allowed_now: false
+  blocking_reasons:
+    - K0b-D01 lacks an exact reviewed hash-bound adapter/model profile.
+    - K0b-D03 batching keeps each batch below warning but the current-policy K0b aggregate remains above hard after the required F15 replay pressure is included.
+
+explicit_non_authorizations:
+  - modification_of_the_bound_D0_forecast_or_checkpoint_policy
+  - threshold_increase_or_phase_scope_reinterpretation
+  - physical_model_invocation
+  - runtime_implementation_or_migration
+  - architecture_approval_receipt

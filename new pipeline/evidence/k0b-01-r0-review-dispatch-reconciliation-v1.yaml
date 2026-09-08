@@ -1,0 +1,82 @@
+record_id: k0b-01-r0-review-dispatch-reconciliation-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T18:32:10.1004623+03:00"
+work_item_id: K0b-01
+status: two_terminal_r0_reviews_with_open_blockers_and_evidence_qualifications
+
+authority:
+  owner_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  review_budget: {path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217}
+
+dispatches:
+  - invocation_id: k0b-01-review-migration-plan-r0
+    actor_id: /root/k0b01_migration_review_r0
+    model: gpt-5.6-sol
+    model_ID: gpt-5.6-sol
+    pre_dispatch_receipt: {path: new pipeline/evidence/k0b-01-migration-plan-review-pre-dispatch-v1.yaml, sha256: b78cdf71bab469f11bb0b544677e3b26f1fb77c836f4de46c69abcdda576edcd}
+    review_input: {path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r0.yaml, sha256: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66}
+    review_output: {path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml, sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2}
+    reviewer_reported_started_at: "2026-09-07T18:20:00+03:00"
+    reviewer_reported_completed_at: "2026-09-07T18:26:03.2318593+03:00"
+    recommendation: revise
+    open_blocking_findings: 5
+  - invocation_id: k0b-01-review-compiler-budget-plan-r0
+    actor_id: /root/k0b01_compiler_budget_review_r0
+    model: gpt-5.6-sol
+    model_ID: gpt-5.6-sol
+    pre_dispatch_receipt: {path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-pre-dispatch-v1.yaml, sha256: 971be9b0805f8a8c50765669e7c224333ab8c36b3976d9a35e794f21bd0054f7}
+    review_input: {path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r0.yaml, sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7}
+    normalized_review_output: {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml, sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c}
+    reviewer_reported_started_at: "2026-09-07T18:22:00+03:00"
+    reviewer_reported_completed_at: "2026-09-07T18:26:32.2234190+03:00"
+    recommendation: revise
+    open_blocking_findings: 3
+
+evidence_qualifications:
+  migration_started_at:
+    status: inconsistent_preserved_not_invented
+    receipt_created_at: "2026-09-07T18:21:30.0822289+03:00"
+    reviewer_reported_started_at: "2026-09-07T18:20:00+03:00"
+    finding: reviewer_reported_start_precedes_the_required_pre_dispatch_receipt
+    treatment: preserve_self_reported_value_in_review_and_ledger_with_explicit_conflict_declaration
+    exact_dispatch_start_claim: unavailable
+    review_content_or_recommendation_invalidated: false
+  compiler_output_yaml_normalization:
+    status: deterministic_syntax_only_normalization
+    reviewer_reported_output_sha256_before_normalization: 3c06eb05dda0a46a52560d27761f776bed6587b461859e4ca8cd27191cc2337f
+    parser_failure: unquoted_plain_scalar_contained_mapping_colon_at_original_line_118
+    exact_change: convert_reason_plain_scalar_to_folded_scalar_without_text_change
+    normalized_output_sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c
+    semantic_text_changed: false
+    finding_count_recommendation_or_review_reasoning_changed: false
+    normalized_YAML_parse_result: pass
+    additional_model_call_used: false
+
+budget_reconciliation:
+  package_budget: {nominal: 2, worst_case: 4}
+  r0_calls_dispatched: 2
+  r0_calls_terminal: 2
+  nominal_budget_consumed: 2
+  r1_reserve_remaining: 2
+  r1_dispatched: 0
+  direct_provider_API_calls: 0
+  runtime_or_F15_calls: 0
+  checkpointed_calls: 0
+  call_credit: 0
+
+gate_result:
+  migration_review: revise_with_5_open_blocking_findings
+  compiler_budget_review: revise_with_3_open_blocking_findings
+  implementation_entry_gate: closed
+  r1_entry_gate: blocked_until_plan_revision_and_new_exact_hash_bound_review_inputs_and_receipts
+  human_only_signoff_stage: not_started
+
+scope_evidence:
+  additional_agents_spawned_by_reviewers: 0
+  files_written_by_reviewers: 2_exact_review_outputs
+  implementation_runtime_contract_schema_registry_migration_or_fixture_changes: 0
+  canonical_fixture_access: 0
+  projects_swarm_access: 0
+  research_old_swarm_access: 0
+  commit_push_PR_deploy_or_release: 0

@@ -1,0 +1,80 @@
+document_id: pipeline-v2.k0b-01.plan-v1.2-owner-continuation
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T18:45:40.7907359+03:00"
+work_item_id: K0b-01
+status: approved_planning_revision_and_bounded_r1_reviews
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  source_ref: current_thread_owner_instruction_2026_09_07
+  owner_statement: "продолжай по плану"
+  interpreted_next_action: revise_plan_to_close_all_r0_blockers_then_run_the_two_budgeted_r1_reviews
+
+authority:
+  final_K0b_00_owner_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  plan_v1_1: {path: new pipeline/architecture/k0b-01-planning-package-v1.1.md, sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429}
+  prior_owner_direction: {path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml, sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39}
+  agent_review_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  migration_r0_review: {path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml, sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2, recommendation: revise, open_blocking_findings: 5}
+  compiler_budget_r0_review: {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml, sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c, recommendation: revise, open_blocking_findings: 3}
+  r0_dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd}
+  r0_ledger_append_evidence: {path: new pipeline/evidence/k0b-01-r0-review-ledger-append-v1.yaml, sha256: 0296d938e4135a9d2a764b920ba087c866e471abcdc76fdcdf37755b38a7313d}
+
+authorized_now:
+  - materialize_K0b_01_planning_package_v1_2_without_editing_v1_1
+  - materialize_review_budget_supplement_v2_with_complete_human_attention_facts
+  - prepare_two_exact_r1_review_inputs_and_agent_pre_dispatch_receipts
+  - dispatch_exactly_two_fresh_context_gpt_5_6_sol_r1_review_agents
+  - append_completed_r1_ledger_entries_after_terminal_outputs
+
+required_r0_closure:
+  migration:
+    - exact_complete_FK_and_table_owned_schema_object_inventory
+    - single_valued_SQLite_create_copy_drop_rename_recreate_sequence
+    - canonical_typed_historical_content_digest_and_payload_byte_rule
+    - separate_backup_file_hash_from_logical_source_backup_equivalence
+    - exact_hash_bound_K0a_reader_set_and_typed_v4_rejection
+    - exact_validation_platform_SQLite_journal_synchronous_and_fault_boundaries
+  compiler_budget:
+    - normative_21_row_event_owner_subscriber_fields_activation_replay_idempotency_terminal_matrix
+    - disjoint_exhaustive_eight_output_family_receipt_ownership_and_dependency_map
+    - complete_package_scoped_review_human_attention_facts_and_recomputed_totals
+
+r1_budget:
+  package: K0b01-plan-v1.1-independent-reviews
+  original_budget: {nominal: 2, worst_case: 4}
+  r0_consumed: 2
+  r1_authorized_remaining: 2
+  allocation: {migration_r1: 1, compiler_budget_r1: 1}
+  further_model_calls_after_two_r1: 0
+  runtime_or_F15_credit: 0
+  expired_K0b_00_ordinals_29_30_reuse: forbidden
+
+r1_execution:
+  transport: Codex_collaboration_fresh_context_subagent
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  exact_hash_bound_agent_pre_dispatch_receipt: required
+  direct_provider_API_REST_SDK_or_managed_credentials: forbidden
+  additional_agents_or_returns: forbidden
+
+implementation_gate:
+  state: closed
+  opens_by_this_record: false
+  still_requires:
+    - both_r1_reviews_approve_with_zero_open_blocking_findings
+    - separate_human_only_review_and_signoff
+    - separate_exact_hash_bound_K0b_01_implementation_owner_disposition
+
+explicit_non_authorizations:
+  - no_runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_access_to_frozen_engineering_draft_as_authoritative_input
+  - no_canonical_fixture_read_write_or_runtime_use
+  - no_projects_swarm_read_run_or_modification
+  - no_research_old_swarm_read_or_modification
+  - no_API_or_any_model_call_beyond_the_exact_two_r1_reviews
+  - no_commit_push_PR_deploy_or_release

@@ -1,0 +1,25 @@
+{
+  "registry_id": "pipeline-v2.alpha0.s-routing-profile",
+  "version": "1.0.0",
+  "profile": "Alpha0",
+  "routes": [
+    {"route_id":"s.alpha0.compiled_nominal.v1","predicate":"exact_machine_known_outcome_and_all_guards_true","disposition":"compiled_nominal","target":"compiled_exact_target","barrier_ref":null,"call_class":"deterministic_zero_call","allowed_checkpoint_phase":"K0b-runtime-operational","predecessor_seal_required":false,"capabilities":[],"allowed_events":["gate.passed","handoff.ready"]},
+    {"route_id":"s.alpha0.layer0_fallback.v1","predicate":"registered_ambiguous_or_non_nominal_case_and_all_guards_true","disposition":"dispatcher_required","target":"fixture.alpha0.layer0_fallback","barrier_ref":null,"call_class":"non_F15_physical_pre_seal","allowed_checkpoint_phase":"K0b-runtime-operational","predecessor_seal_required":false,"capabilities":["bounded_text_input","bounded_schema_conforming_text_output"],"allowed_events":[]},
+    {"route_id":"s.alpha0.f04.parallel_review.v1","predicate":"exact_F04_compatible_reviewer_snapshot","disposition":"parallel_review","target":"fixture.alpha0.review_barrier","barrier_ref":"f04.alpha0.all_required.v1","call_class":"non_F15_physical_pre_seal","allowed_checkpoint_phase":"K0b-runtime-operational","predecessor_seal_required":false,"capabilities":["bounded_text_input","bounded_schema_conforming_text_output"],"allowed_events":["gate.passed","revision.requested"]},
+    {"route_id":"s.alpha0.f05.revision.v1","predicate":"accepted_existing_version_and_registered_consumer_revision","disposition":"owner_resolved","target":"fixture.alpha0.upstream_zero","barrier_ref":null,"call_class":"deterministic_zero_call","allowed_checkpoint_phase":"K0b-runtime-operational","predecessor_seal_required":false,"capabilities":[],"allowed_events":["revision.requested"]},
+    {"route_id":"s.alpha0.blocked.v1","predicate":"missing_stale_conflicting_forbidden_incompatible_or_phase_fenced_input","disposition":"blocked_input","target":null,"barrier_ref":null,"call_class":"deterministic_zero_call","allowed_checkpoint_phase":"K0b-runtime-operational","predecessor_seal_required":false,"capabilities":[],"allowed_events":["run.blocked"]}
+  ],
+  "barriers": [
+    {"barrier_id":"f04.alpha0.all_required.v1","policy":"all_required","members":["fixture.alpha0.primary_reviewer","fixture.alpha0.adversarial_reviewer"],"deduplicate_by":"member_role_and_logical_result_identity","dynamic_membership":false}
+  ],
+  "revision_owner_rule": {
+    "revision_owner_zero_role_id": "fixture.alpha0.upstream_zero",
+    "producer_invocation_id": "distinct_required_runtime_value",
+    "minimal_replay_required": true
+  },
+  "freeze_policy": {
+    "freeze_on": ["missing_phase_admission","stale_partition","operational_sealed","abort_or_reconciliation_pending","late_result","forbidden_capability"],
+    "terminal_outcomes": ["aborted","blocked_reconciliation","blocked_semantic","blocked_revision"],
+    "resume_requires_same_bindings": true
+  }
+}

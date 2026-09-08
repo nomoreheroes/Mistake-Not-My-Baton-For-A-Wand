@@ -1,0 +1,86 @@
+record_id: k0b-01-r1-review-dispatch-reconciliation-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-07T19:15:18.5091754+03:00"
+work_item_id: K0b-01
+status: two_terminal_r1_reviews_approve_with_zero_open_findings
+
+authority:
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  owner_executor_override: {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871}
+  owner_continuation: {path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc}
+  review_budget_v2: {path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml, sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34}
+  reviewed_plan: {path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff}
+
+dispatches:
+  - invocation_id: k0b-01-review-migration-plan-r1
+    actor_id: /root/k0b01_migration_review_r1
+    model: gpt-5.6-sol
+    model_ID: gpt-5.6-sol
+    call_ordinal_in_package: 3
+    pre_dispatch_receipt: {path: new pipeline/evidence/k0b-01-migration-plan-review-r1-pre-dispatch-v1.yaml, sha256: 96bc93ee9d733fd3a65a24d539d85286143dae9d7536f27d023f656ffe225a32}
+    receipt_created_at: "2026-09-07T18:57:19.7030627+03:00"
+    review_input: {path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r1.yaml, sha256: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7}
+    review_output: {path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml, sha256: be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6}
+    reviewer_reported_started_at: "2026-09-07T16:08:07.2686461Z"
+    reviewer_reported_completed_at: "2026-09-07T16:08:20.0233082Z"
+    receipt_precedes_started_at: true
+    YAML_parse: pass
+    output_normalization: none
+    prior_r0_blocking_findings_closed: 5
+    open_blocking_findings: 0
+    open_non_blocking_findings: 0
+    recommendation: approve
+  - invocation_id: k0b-01-review-compiler-budget-plan-r1
+    actor_id: /root/k0b01_compiler_budget_review_r1
+    model: gpt-5.6-sol
+    model_ID: gpt-5.6-sol
+    call_ordinal_in_package: 4
+    pre_dispatch_receipt: {path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-r1-pre-dispatch-v1.yaml, sha256: 43b75d10193757b2018b155f8b00d06625b6d6ecdced85b56c60ebd2e23b409e}
+    receipt_created_at: "2026-09-07T18:57:19.7030627+03:00"
+    review_input: {path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r1.yaml, sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495}
+    review_output: {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml, sha256: e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d}
+    reviewer_reported_started_at: "2026-09-07T16:02:47.040Z"
+    reviewer_reported_completed_at: "2026-09-07T16:07:53.164Z"
+    receipt_precedes_started_at: true
+    YAML_parse: pass
+    output_normalization: none
+    prior_r0_blocking_findings_closed: 3
+    open_blocking_findings: 0
+    open_non_blocking_findings: 0
+    recommendation: approve
+
+budget_reconciliation:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  package_budget: {nominal: 2, worst_case: 4}
+  r0_calls_consumed: 2
+  r1_calls_consumed: 2
+  total_calls_consumed: 4
+  calls_remaining: 0
+  direct_provider_API_calls: 0
+  runtime_or_F15_calls: 0
+  checkpointed_calls: 0
+  call_credit_or_reallocation: 0
+  further_independent_model_review_without_new_owner_budget_authority: forbidden
+
+gate_result:
+  migration_review: approve_with_zero_open_findings
+  compiler_budget_review: approve_with_zero_open_findings
+  prior_r0_blockers_closed: 8
+  review_output_reconciliation: pass
+  implementation_entry_gate: closed
+  next_stage: separate_human_only_review_and_explicit_signoff
+  human_only_signoff_claimed: false
+  later_exact_hash_bound_implementation_owner_disposition_required: true
+
+scope_evidence:
+  additional_agents_spawned_by_reviewers: 0
+  output_files_written_by_reviewers: 2_exact_review_outputs
+  root_semantic_normalization_of_outputs: 0
+  implementation_runtime_contract_schema_registry_migration_or_fixture_changes: 0
+  canonical_fixture_access: 0
+  projects_swarm_access: 0
+  research_old_swarm_access: 0
+  physical_model_or_API_calls: 0
+  runtime_or_test_execution: 0
+  commit_push_PR_deploy_or_release: 0

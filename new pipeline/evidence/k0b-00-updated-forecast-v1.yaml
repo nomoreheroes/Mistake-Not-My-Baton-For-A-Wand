@@ -1,0 +1,125 @@
+record_id: k0b-00-updated-forecast-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T12:02:39.7095343+03:00"
+status: owner_selected_forecast_overlay_with_new_hard_block
+work_item_id: K0b-00
+overlay_scope: Replaces only the K0b phase row and derived full-route totals of the bound D0 forecast; all other D0 rows and assumptions remain unchanged.
+
+authority:
+  base_forecast: {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, schema_version: 2, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  checkpoint_policy: {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, version: 1, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  reviewed_artifact_event_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240}
+  reviewed_S_plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  owner_disposition: {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, version: "1.0.0", sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045}
+
+counting_rules:
+  design_calls_are_not_checkpointed: true
+  runtime_model_invocation_replay_points: {nominal: 2, worst_case: 4}
+  planning_unique_bytes_per_replay_point: {nominal: 16384, worst_case: 65536}
+  publisher_eligible_minutes_per_runtime_invocation: {nominal: 1, worst_case: 3}
+  window_formula: max(ceil(total_replay_points / 10), ceil(publisher_eligible_runtime_minutes / 5), ceil(new_db_bytes / 33554432))
+  trigger_overlap_credit_before_measurement: forbidden
+  checkpoint_rounding: ceil_to_whole_MiB
+  pack_delta_factor: 1.0
+
+K0b_phase_overlay:
+  checkpoint_chain: fixture
+  packages:
+    - package_id: K0b-plan-deltas
+      scope: design
+      invocation_profile: light
+      invocations: {nominal: 6, base_worst_case: 12, owner_authorized_worst_case: 14, actual: 14}
+      checkpointed: false
+    - package_id: K0b-runtime-operational
+      scope: K0b-01_through_K0b-05_except_F15_physical_attempts
+      invocation_profile: standard
+      invocations: {nominal: 16, worst_case: 30}
+      checkpointed: true
+      F15_credit_reuse: forbidden
+    - package_id: K0b-F15-exact-measurement
+      scope: F15_twelve_pinned_cases_times_three_attempts
+      invocation_profile: deep
+      profile_reason: 36 nominal calls exceeds the standard nominal cap of 30 and therefore needs an explicit deep budget.
+      invocations: {nominal: 36, worst_case: 36, exact_required_attempts: 36}
+      checkpointed: true
+      overlaps_K0b_runtime_operational: false
+      retry_or_replacement_credit: none
+      human_attention:
+        additive_sessions: {nominal: 0, worst_case: 0}
+        additive_blocking_decisions: {nominal: 0, worst_case: 0}
+        additive_active_minutes: {nominal: 0, worst_case: 0}
+        rationale: Pre-execution approval and post-execution disposition remain in existing K0b gates; the 36 attempts themselves are unattended and add no invented human value.
+  llm_invocations:
+    nominal_formula: 6_design + 16_operational + 36_F15
+    nominal: 58
+    worst_case_formula: 14_design + 30_operational + 36_F15
+    worst_case: 80
+    checkpointed_nominal: 52
+    checkpointed_worst_case: 66
+  retained_non_model_triggers:
+    estimated_runs_per_phase: {nominal: 4, worst_case: 8}
+    human_wait_or_exit: {nominal: 2, worst_case: 4}
+    external_tool_interactions: {nominal: 8, worst_case: 20}
+    asserted_irreversible_boundaries: {nominal: 0, worst_case: 0}
+    asserted_migration_or_gate: {nominal: 2, worst_case: 4}
+    rationale: Separating the F15 physical calls does not create a new work item, owner wait, tool interaction, or top-level run; those boundaries were already in K0b-05.
+  publication_window_derivation:
+    nominal: {llm_points: 104, human_points: 6, tool_points: 16, side_effect_points: 0, total_points: 126, publisher_eligible_minutes: 52, by_points: 13, by_minutes: 11, by_db_bytes: 1, window_limit: 13}
+    worst_case: {llm_points: 264, human_points: 12, tool_points: 40, side_effect_points: 0, total_points: 316, publisher_eligible_minutes: 198, by_points: 32, by_minutes: 40, by_db_bytes: 1, window_limit: 40}
+  publication_trigger_counts:
+    nominal: {run_end: 4, human_wait_or_exit: 2, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 2, window_limit: 13, total: 21}
+    worst_case: {run_end: 8, human_wait_or_exit: 4, asserted_irreversible_boundaries: 0, asserted_migration_or_gate: 4, window_limit: 40, total: 56}
+  checkpoint_growth_mib:
+    replay_unique: {nominal: 1.625, worst_case: 16.5}
+    asserted_fixed_non_binary: {nominal: 4, worst_case: 8}
+    prior_unrounded_in_fixture_chain: {nominal: 2.09375, worst_case: 5.5}
+    pre_binary_unrounded: {nominal: 7.71875, worst_case: 30.0}
+    binary_seed_nested: {nominal: 2.1328125, worst_case: 4.265625}
+    seed_inclusive_unrounded: {nominal: 9.8515625, worst_case: 34.265625}
+  checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+  checkpoint_publications_per_phase: {nominal: 21, worst_case: 56}
+  no_delta_phase_pack_bytes: {nominal: 220200960, worst_case: 2055208960}
+  threshold_status:
+    nominal: {checkpoint: below_warning, phase_pack: below_warning}
+    worst_case: {checkpoint: below_warning, phase_pack: above_hard}
+  execution_condition: blocked_pending_D01_exact_binding_and_D03_effective_narrowing_or_other_owner_route
+
+binary_candidate_reconciliation:
+  accepted_reviewed_base_component:
+    logical_seed_count: {nominal: 6, worst_case: 12}
+    seed_bytes_nested_in_each_checkpoint: {nominal: 2236416, worst_case: 4472832}
+    reviewed_checkpoint_bytes_before_separate_F15_replay_growth: {nominal: 9437184, worst_case: 27262976}
+    reviewed_phase_pack_bytes_before_separate_F15_replay_growth: {nominal: 132120576, worst_case: 926941184}
+  additive_F15_effect:
+    replay_unique_bytes: {nominal: 1179648, worst_case: 9437184}
+    publication_window_increase: {nominal: 7, worst_case: 22}
+    explanation: The accepted seed arithmetic is unchanged; the larger final checkpoint and pack are caused by separately budgeted F15 replay points and mandatory publication windows, not additional binary seeds.
+  D0_binary_zero_replaced_for_K0b_overlay: true
+
+D03_batching_candidate:
+  warning_bytes: 536870912
+  hard_bytes: 1073741824
+  policy_max_publications_per_run: 12
+  max_worst_checkpoints_strictly_below_warning_by_size: 14
+  compiled_pack_batch_publication_cap: 12
+  cap_formula: min(policy_max_publications_per_run, max_count_strictly_below_warning)
+  largest_worst_case_batch_bytes: 440401920
+  batches_required: {nominal: 2, worst_case: 5}
+  per_batch_threshold_status: below_warning
+  aggregate_phase_pack_status_after_batching: above_hard
+  disposition_result: selected_route_is_not_yet_sufficient
+  reason: Batching bounds each individual pack batch but does not erase or discount the 2055208960-byte no-delta aggregate attributed to the same fixture K0b phase under the current policy.
+
+derived_full_route_totals_overlay:
+  base_llm_invocations: {nominal: 288, worst_case: 722}
+  revised_llm_invocations: {nominal: 324, worst_case: 760}
+  base_ungated_no_delta_upper_bound_bytes: {nominal: 14728298496, worst_case: 261533728768}
+  revised_ungated_no_delta_upper_bound_bytes: {nominal: 14845739008, worst_case: 262840254464}
+  expected_delta_factor: unknown_until_K0b_measurement
+  policy_reachable_total: blocked_by_K0b_updated_worst_case_hard_status
+
+explicit_limits:
+  - This overlay is planning evidence, not an implementation contract or approval receipt.
+  - It does not modify the base D0 forecast or checkpoint policy and cannot silently redefine phase_pack as per_batch_pack.
+  - It does not authorize a physical call, runtime implementation, threshold increase, storage migration, or hidden overlap credit.

@@ -1,0 +1,171 @@
+review_id: k0b-00-s-d03-v2-review-r0
+review_round: 0
+review_identity_and_conflict_declaration:
+  actor_id: /root/k0b_s_d03_v2_review_r0
+  manifest_assignment_actor_id: /root/k0b_S_d03_v2_review_r0
+  provider: openai
+  model: gpt-5.6-terra
+  profile: k0b_independent_S_D03_successor_review_v2
+  invocation_id: k0b-00-review-s-d03-v2-r0
+  appointed_by: W0_via_root
+  appointed_at: "2026-09-04T12:33:10.8895703+03:00"
+  completed_at: "2026-09-04T12:37:44.5669117+03:00"
+  fresh_context: true
+  inherited_author_context: false
+  authored_any_reviewed_plan_version: false
+  owner_approval_issued: false
+  conflict_declaration: >-
+    No conflict known. I authored none of the reviewed S plan versions and used
+    only the hash-verified manifest-listed files. I did not access author
+    conversation or summary, prior-reviewer private context, forbidden roots,
+    canonical fixture content, unlisted repository/runtime/provider state, or
+    external state; I created only this typed review record.
+
+hash_verification:
+  result_at_start: pass
+  result_at_completion: pass
+  manifest_bound_input_count: 25
+  extra_review_manifest_verified: true
+  mismatches: []
+  review_manifest:
+    path: new pipeline/reviews/sources/k0b-00-s-d03-v2-review-input-r0.yaml
+    expected_sha256: 3fa043af146ed049a0659e86fe96d8a28aa9970ac11c032d801cddd69475a2e9
+    sha256_at_start: 3fa043af146ed049a0659e86fe96d8a28aa9970ac11c032d801cddd69475a2e9
+    sha256_at_completion: 3fa043af146ed049a0659e86fe96d8a28aa9970ac11c032d801cddd69475a2e9
+    judgment: pass
+  reviewed_plan:
+    path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+    plan_id: k0b-00-s-layer-delta-v2
+    version: "2.0.0"
+    expected_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3
+    sha256_at_start: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3
+    sha256_at_completion: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3
+    judgment: pass
+  allowed_inputs:
+    - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, expected_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, sha256_at_start: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, sha256_at_completion: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+    - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, expected_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, sha256_at_start: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, sha256_at_completion: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+    - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, sha256_at_start: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, sha256_at_completion: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+    - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, sha256_at_start: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, sha256_at_completion: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+    - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, expected_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, sha256_at_start: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, sha256_at_completion: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+    - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, expected_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, sha256_at_start: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, sha256_at_completion: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+    - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, expected_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, sha256_at_start: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, sha256_at_completion: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+    - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, expected_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, sha256_at_start: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, sha256_at_completion: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+    - {path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, expected_sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b, sha256_at_start: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b, sha256_at_completion: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b}
+    - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, expected_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, sha256_at_start: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, sha256_at_completion: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r2.yaml, expected_sha256: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1, sha256_at_start: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1, sha256_at_completion: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1}
+    - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, sha256_at_start: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, sha256_at_completion: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+    - {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, expected_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, sha256_at_start: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, sha256_at_completion: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+    - {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, expected_sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, sha256_at_start: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, sha256_at_completion: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, expected_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, sha256_at_start: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, sha256_at_completion: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, expected_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, sha256_at_start: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, sha256_at_completion: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+    - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, expected_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, sha256_at_start: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, sha256_at_completion: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+    - {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, expected_sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7, sha256_at_start: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7, sha256_at_completion: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+    - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v2.yaml, expected_sha256: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0, sha256_at_start: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0, sha256_at_completion: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0}
+    - {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, expected_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, sha256_at_start: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, sha256_at_completion: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+    - {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, expected_sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, sha256_at_start: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, sha256_at_completion: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+    - {path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, expected_sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3, sha256_at_start: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3, sha256_at_completion: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+    - {path: new pipeline/evidence/k0b-00-s-d03-v2-author-input.yaml, expected_sha256: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7, sha256_at_start: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7, sha256_at_completion: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7}
+    - {path: new pipeline/ledgers/design-invocations.yaml, expected_sha256: 5f377b7ba5c0140d1f30ec923317315e413fb4b573d3b9f344f3b76d4816e71c, sha256_at_start: 5f377b7ba5c0140d1f30ec923317315e413fb4b573d3b9f344f3b76d4816e71c, sha256_at_completion: 5f377b7ba5c0140d1f30ec923317315e413fb4b573d3b9f344f3b76d4816e71c}
+
+typed_findings: []
+
+gate_judgments:
+  mechanical_validation:
+    numbered_sections: {actual: 18, required: 18, judgment: pass}
+    line_budgets: {tier: narrow, full_non_empty: 129, full_cap: 500, routing_non_empty: 13, routing_cap: 95, roster_non_empty: 9, roster_cap: 45, failure_recovery_non_empty: 16, failure_recovery_cap: 95, judgment: pass}
+    exact_roster_and_routes: {S0_dispatchers: 1, S_workers: 0, route_ids: [s.alpha0.compiled_nominal.v1, s.alpha0.layer0_fallback.v1, s.alpha0.f04.parallel_review.v1, s.alpha0.f05.revision.v1, s.alpha0.blocked.v1], judgment: pass}
+    exact_F04: {external_reviewers: [fixture.alpha0.primary_reviewer, fixture.alpha0.adversarial_reviewer], barrier: all_required, one_deduplicated_valid_terminal_result_per_member: required, quorum_first_success_substitution_dynamic_membership: forbidden, judgment: pass}
+    exact_F05: {schedulable_owner: fixture.alpha0.upstream_zero, producer_invocation: lineage_only, minimal_replay_graph_owner: shared_control, judgment: pass}
+    F00_and_event_profile: {historical_real_S0_call_preserved: true, raw_output_only: s0_route_proposal, K0b_compiled_nominal_S0_calls: 0, public_event_types: 21, judgment: pass}
+  passing_v1_1_preservation:
+    judgment: pass
+    rationale: >-
+      The successor retains the v1.1 FSM, closed semantic schemas and compiler
+      boundary, one-S0/zero-worker roster, five exact routes, F00 exception,
+      F04 duplicate/barrier semantics, F05 role-versus-lineage split, freeze,
+      replay, abort, crash, compatibility, security, binary N/A, evidence and
+      fixture-only scope. Its only semantic additions are D03 phase-admission
+      guards/call chronology and already approved decision-status updates.
+  ownership_and_manual_receipt_boundary:
+    judgment: pass
+    rationale: >-
+      S supplies semantic profile and proposal meaning only. Control exclusively
+      compiles, validates, schedules, fences calls, phases and triggers; the
+      artifact/event plane exclusively persists records, uniqueness, outbox,
+      publisher, checkpoint and seal evidence. Manual VS Code is a
+      control-admitted, artifact/event-persisted receipt boundary; S receives
+      receipt validity only and cannot select a model, extension, transport or
+      provider.
+  D03_chronology_triggers_and_arithmetic:
+    judgment: pass
+    evidence: {non_F15_calls: "16 nominal / 30 worst, terminal before operational seal", F15: "exactly 36 after verified seal", post_F15_S_or_model_calls: 0, trigger_ids: [k0b.f15.boundary.entry_gate, k0b.f15.boundary.program_owner_wait_or_exit, k0b.f15.boundary.exit_gate, k0b.f15.boundary.top_level_run_end], fifth_trigger_or_separate_K0b05_run: block_before_effect, operational_pack_worst: 926941184, F15_pack_worst: 954204160, hard_limit: 1073741824, credit: 0}
+  failure_recovery_and_security:
+    judgment: pass
+    rationale: >-
+      Missing, stale, cyclic, incompatible, overlapping and widening inputs
+      block; identical duplicates return their original logical result while
+      conflicting identity/bytes/causation blocks with incident evidence; late
+      proposals cannot revive a frozen or aborted route; replay is minimal and
+      immutable; compatibility is fail-closed; injection, tools, filesystem,
+      network and binary payloads are excluded.
+  binary_budget:
+    judgment: pass
+    applicability: N/A
+    evidence: {S_attributable_binary_objects_nominal_and_worst: 0, S_attributable_binary_bytes_nominal_and_worst: 0, forbidden: [BLOB, base64, opaque_bytes, media, archives, checkpoint_projection_bodies, raw_provider_tool_streams, filesystem_handles]}
+  decisions_and_non_authorization:
+    judgment: pass
+    rationale: >-
+      D01 is the separately pinned fixed-hybrid manual-UI binding with required
+      per-dispatch receipt; D02 retains three distinct planes; D03 remains
+      pending this review plus final owner approval; D04 is a separately
+      approved exact F15 measurement allocation without operational credit; and
+      B01 remains reconciled fixture-only seed evidence. The plan infers none
+      of these as runtime, D03-closure or owner-approval authority.
+  evidence_and_consumption:
+    judgment: pass
+    rationale: >-
+      The plan requires durable control validation/scheduling and artifact/event
+      records, phase admission, F04 barrier, F05 lineage/replay and freeze
+      records. It rejects stored files, transcripts, model self-report and
+      filename presence as proof of consumption.
+  ledger_and_return_budget:
+    judgment: pass
+    evidence: {K0b_entries_at_review_start: 27, ordinal_27: k0b-00-author-s-d03-v2, ordinal_27_manifest_sha256: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7, ordinal_27_plan_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, this_review_ordinal: 28, effective_cap: 30, reserve: "29/30 only for one typed non-approve corrective author/reviewer pair; otherwise expires"}
+  categories:
+    - {category: 1, name: purpose_boundaries_non_goals_applicability, judgment: pass}
+    - {category: 2, name: dispatcher_deterministic_harness_worker_boundary, judgment: pass}
+    - {category: 3, name: state_machine_invariants_terminal_states, judgment: pass}
+    - {category: 4, name: input_events_guards_routing_fanout_barriers_fast_paths, judgment: pass}
+    - {category: 5, name: output_events_subscribers_terminal_policy_cross_layer_contracts, judgment: pass}
+    - {category: 6, name: artifact_types_ownership_versioning_lineage_key_decision_projections, judgment: pass}
+    - {category: 7, name: context_query_allowlists_trust_provenance_prompt_injection, judgment: pass}
+    - {category: 8, name: current_worker_roster_inputs_outputs_capabilities_stop_conditions, judgment: pass}
+    - {category: 9, name: failure_taxonomy_revision_ownership_invalidation_replay_recovery_abort, judgment: pass}
+    - {category: 10, name: hitl_autonomy_approvals_dialogue_rules, judgment: pass}
+    - {category: 11, name: tools_side_effects_security_egress_repository_boundaries, judgment: pass}
+    - {category: 12, name: context_scale_sharding_invocation_and_human_budgets, judgment: pass}
+    - {category: 13, name: binary_payload_budget_or_proved_not_applicable, judgment: pass}
+    - {category: 14, name: downstream_consumers_and_actual_consumption, judgment: pass}
+    - {category: 15, name: structural_contract_behavioral_fixture_real_project_scenarios, judgment: pass}
+    - {category: 16, name: evidence_package_and_readiness_criteria, judgment: pass}
+    - {category: 17, name: old_pipeline_migration_note, judgment: pass}
+    - {category: 18, name: risks_open_decisions_deferred_capabilities, judgment: pass}
+
+evidence_refs:
+  reviewed_plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md, version: "2.0.0", sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3}
+  passing_predecessor_and_review: {plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}, review: {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}}
+  reviewed_siblings: {control: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}, artifact_event: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}}
+  D03_authorities: {base_policy: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, overlay: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, scope_v2: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, forecast_v3: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, reconciliation_v3: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, addendum_v2: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  executor_and_risk: {profile: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, review: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, residual_risk_acceptance: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+  author_manifest_and_ledger: {author_input: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7, ledger: 5f377b7ba5c0140d1f30ec923317315e413fb4b573d3b9f344f3b76d4816e71c}
+
+recommendation:
+  value: approve
+  rationale: >-
+    All 25 manifest-bound inputs and the supplied review manifest matched at
+    start and completion. The exact S successor preserves the passing v1.1
+    contracts, passes every mechanical and 18-category judgment, maintains
+    exclusive semantic/control/artifact ownership, and exactly binds the D03
+    phase fence, chronology, trigger, F15, receipt, binary and ledger rules.
+    This is an independent review recommendation only; it is not owner
+    approval, D03 closure, runtime authority or permission for a physical call.

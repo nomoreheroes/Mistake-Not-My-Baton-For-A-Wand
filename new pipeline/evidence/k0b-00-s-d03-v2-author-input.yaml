@@ -1,0 +1,78 @@
+manifest_id: k0b-00-s-d03-v2-author-input
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-04T12:29:02.5547689+03:00"
+status: closed_exact_author_input
+work_item_id: K0b-00
+
+invocation:
+  invocation_id: k0b-00-author-s-d03-v2
+  role: author
+  actor_id: /root
+  provider: openai
+  model: gpt-5.6-sol
+  profile: codex_root_k0b_S_D03_successor_author_v2
+  package_id: K0b-plan-deltas
+  budget_cap: 30
+  completed_before_this_invocation: 26
+  ordinal_if_completed: 27
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/decisions/d0-01-full-route-forecast.yaml, sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, recommendation: approve, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, version: "2.0.0", sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, recommendation: approve, sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, version: "2.2.0", sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r2.yaml, recommendation: approve, sha256: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1}
+  - {path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3}
+  - {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  - {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7}
+  - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v2.yaml, sha256: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0}
+  - {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d}
+  - {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, recommendation: approve, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8}
+  - {path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 43, K0b_entries: 26, sha256: 61e3ebfc977afc07240cc140ab72bf2c21a107161390ef7c50b47affc797cb56}
+
+authoring_requirements:
+  - Create one new S v2 successor file; do not edit the passing S v1.1 plan or review.
+  - Preserve every passing v1.1 semantic contract except the exact D03 phase-fence/call-chronology additions and updated decision statuses.
+  - Cover all 18 Layer Architecture Gate categories within the narrow 500 and routing/roster/failure sub-budgets.
+  - Retain exactly one S0 semantic dispatcher, zero S workers, exact route identities, exact external F04 reviewers with all_required, F05 upstream-zero ownership and exact 21-event profile.
+  - Keep control as compiler/scheduler/phase/call/trigger/budget owner and artifact/event as exclusive persistence/outbox/publisher/checkpoint/seal owner; S owns only semantic routes, revision meaning and freeze policy.
+  - Define S semantic schemas and compiler-consumed source profiles without creating contracts/registries/migrations.
+  - Consume control-owned phase binding/fence only as a guard: all non-F15 physical calls are before operational seal, F15 is exactly 36 after seal, post-F15 K0b-04/K0b-05 has zero model calls and no S invocation, and S cannot create triggers or a separate run.
+  - Preserve F00 one real S0 call as historical exception; K0b compiled nominal has zero S0 call, registered fallback uses Layer0 through control only.
+  - Define replay/reconciliation, duplicate/late-result, abort/compatibility, observability, security and falsifiable acceptance with binary N/A.
+  - Treat manual VS Code model/extension receipts as control/artifact evidence only; S cannot select a model, extension, transport, provider or static model ID.
+  - Bind design ordinals 27/28 and conditional reserve 29/30 exactly; do not claim D03/final owner/runtime approval.
+
+allowed_writes:
+  - new pipeline/architecture/k0b-00-s-layer-delta-v2.md
+  - append_one_author_entry_to_new_pipeline/ledgers/design-invocations.yaml
+
+forbidden_inputs_and_actions:
+  - research/old-swarm
+  - projects/swarm
+  - canonical_fixture_content_or_modification
+  - unlisted_repository_or_external_provider_state
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call
+  - editing_any_v1_plan_review_or_D03_cross_cutting_output
+  - changing_control_or_artifact_event_v2
+  - independent_review_in_this_author_invocation
+  - model_provider_transport_phase_trigger_call_budget_threshold_storage_or_seed_selection
+  - commit_push_merge_deploy_release_or_owner_approval
+
+stop_conditions:
+  - any_allowed_input_hash_mismatch
+  - sibling_v2_review_not_approve
+  - any_semantic_ownership_or_passing_v1_regression
+  - need_for_calls_beyond_ordinal_28_without_a_typed_review_finding

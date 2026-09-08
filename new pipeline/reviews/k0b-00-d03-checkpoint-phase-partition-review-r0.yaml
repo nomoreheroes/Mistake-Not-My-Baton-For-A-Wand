@@ -1,0 +1,328 @@
+review_id: k0b-00-d03-checkpoint-phase-partition-review-r0
+schema_version: 1
+review_round: 0
+review_type: independent_fresh_context_D03_checkpoint_phase_partition_review
+status: completed_with_blocking_findings
+work_item_id: K0b-00
+started_at: "2026-09-03T19:21:40.1861697+03:00"
+completed_at: "2026-09-03T19:25:06.3256480+03:00"
+
+reviewer_identity_conflict_and_timestamps:
+  actor_id: /root/k0b_d03_partition_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_D03_checkpoint_phase_partition_review_v1
+  appointed_by: W0_via_root
+  fresh_context: true
+  inherited_author_context: false
+  authored_any_reviewed_output: false
+  author_actor_id: /root
+  reviewer_differs_from_author: true
+  started_at: "2026-09-03T19:21:40.1861697+03:00"
+  completed_at: "2026-09-03T19:25:06.3256480+03:00"
+  conflict_declaration: >-
+    No conflict known. The reviewer did not author the addendum or either v2
+    evidence record and received no author conversation, hidden summary,
+    private reasoning, or prior-reviewer private context. Review used only the
+    28 hash-verified manifest-authorized files. Forbidden roots, canonical
+    fixture content, implementation files, provider/network state, and
+    physical model execution were not accessed.
+
+exact_manifest_addendum_and_output_hashes:
+  review_manifest:
+    path: new pipeline/reviews/sources/k0b-00-d03-checkpoint-phase-partition-review-input-r0.yaml
+    manifest_id: k0b-00-d03-checkpoint-phase-partition-review-input-r0
+    expected_sha256: 08f21efdd2c1aa7b65a6b566684ed051520290b48e1355359d39568abd018a74
+    actual_sha256_at_review_start: 08f21efdd2c1aa7b65a6b566684ed051520290b48e1355359d39568abd018a74
+    result: pass
+  exact_addendum:
+    path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md
+    version: "1.0.0"
+    expected_sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+    actual_sha256_at_review_start: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+    actual_sha256_at_review_completion: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+    result: pass
+  exact_D03_outputs:
+    - path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml
+      version: "2.0.0"
+      expected_sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d
+      actual_sha256_at_review_start: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d
+      actual_sha256_at_review_completion: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d
+      result: pass
+    - path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml
+      version: "2.0.0"
+      expected_sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f
+      actual_sha256_at_review_start: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f
+      actual_sha256_at_review_completion: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f
+      result: pass
+
+input_hash_verification:
+  result: pass
+  exact_input_count: 28
+  verified_before_substantive_review: true
+  mismatches: []
+  inputs:
+    - {role: exact_addendum, path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md, expected_sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896, actual_sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896, result: pass}
+    - {role: exact_D03_output, path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, expected_sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d, actual_sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d, result: pass}
+    - {role: exact_D03_output, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, expected_sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f, actual_sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f, result: pass}
+    - {role: authorship_evidence, path: new pipeline/evidence/k0b-00-d03-checkpoint-phase-partition-author-input-v1.yaml, expected_sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83, actual_sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83, result: pass}
+    - {role: authorship_evidence, path: new pipeline/ledgers/design-invocations.yaml, expected_sha256: fd66e76701e706ef63f2ea8e07b975f1ae8780a7902c15151db7b6a33acc9b2c, actual_sha256: fd66e76701e706ef63f2ea8e07b975f1ae8780a7902c15151db7b6a33acc9b2c, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, expected_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, actual_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, expected_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, actual_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, actual_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, actual_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, actual_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, actual_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/design-invocation-ledger/v1.schema.yaml, expected_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, actual_sha256: 7f0b9ffbfed3596ad52d80d5d88b737e573c878d077b24dd7df14cba0c35205b, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, expected_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, actual_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, expected_sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af, actual_sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, expected_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, actual_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, expected_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, actual_sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, expected_sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, actual_sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, expected_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, actual_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, expected_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, actual_sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, expected_sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045, actual_sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, expected_sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2, actual_sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, expected_sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc, actual_sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, expected_sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e, actual_sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, expected_sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a, actual_sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, expected_sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732, actual_sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, expected_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, actual_sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, expected_sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, actual_sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, expected_sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3, actual_sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3, result: pass}
+
+policy_scope_and_owner_route_judgment:
+  registered_route_selected: narrow_or_checkpoint_batching
+  threshold_bytes_changed: false
+  storage_backend_changed: false
+  compression_delta_overlap_or_dedup_credit: 0
+  cumulative_chain_growth_disclosed: true
+  current_policy_threshold_scope: per_project_checkpoint_chain
+  current_D0_phase_identity: K0b
+  proposed_new_threshold_unit: checkpoint_phase_id_within_K0b
+  judgment: invalid_threshold_denominator_reinterpretation_requires_policy_and_scope_change
+  result: fail
+  rationale: >-
+    The policy says threshold scope is always per_project_checkpoint_chain, and
+    the bound D0 forecast defines K0b as the phase row in the fixture chain.
+    The prior owner disposition requires batching while retaining aggregate
+    phase-pack hard-stop enforcement; v1 reconciliation explicitly says
+    batching does not erase the same-K0b aggregate and forbids phase-scope
+    reinterpretation. A later owner record may select a registered route but
+    cannot make two newly named checkpoint_phase_id values independent policy
+    denominators without an explicit policy/scope amendment and affected-plan
+    review. Treating the 1.881 GiB combined chain sum as observability-only is
+    therefore threshold gaming under the currently pinned authority.
+
+chronology_membership_and_trigger_judgment:
+  proposed_partition_is_non_overlapping_on_its_own_terms: true
+  chronology_declared:
+    operational_seal_before_F15: true
+    all_non_F15_calls_before_seal: true
+    F15_calls_exact: 36
+    post_F15_K0b_04_K0b_05_model_calls: 0
+  chronology_supported_by_existing_plans: false
+  rationale: >-
+    The reviewed control plan allocates K0b-runtime-operational 16/30 across
+    K0b-01 through K0b-05 and says exact per-scenario allocation must be
+    compiled later. The development plan places F15 inside K0b-04 and a
+    kernel-to-N1 feasibility forecast plus owner decision in K0b-05. No pinned
+    pre-addendum plan proves that every non-F15 call finishes before F15 or
+    that all post-F15 K0b-04/K0b-05 work is zero-model deterministic.
+  trigger_cap_declared: 4
+  trigger_cap_supported_by_exhaustive_identity_map: false
+  trigger_gap: >-
+    The four counts are only one run-end, one human wait/exit, and two gates.
+    They do not enumerate stable trigger identities for the F15-containing
+    K0b-04 boundary and the separate post-F15 K0b-05 work-item/run, wait, and
+    program checkpoint. Because overlap credit is zero and sealed-phase credit
+    is forbidden, a fifth boundary cannot be assumed away.
+  invalidation_conditions_present:
+    post_seal_non_F15_model_call: true
+    fifth_F15_boundary_trigger: true
+    F15_publication_30: true
+    unclassified_trigger: true
+    overlapping_membership: true
+  result: fail
+
+independent_arithmetic_recalculation:
+  rules:
+    replay_points_per_call: {nominal: 2, worst_case: 4}
+    bytes_per_replay_point: {nominal: 16384, worst_case: 65536}
+    checkpoint_rounding: ceil_to_whole_MiB
+    pack_delta_factor: 1.0
+    publication_batch_cap: 12
+  operational:
+    model_points: {nominal: 32, worst_case: 120}
+    total_points: {nominal: 54, worst_case: 172}
+    window_limit: {nominal: 6, worst_case: 18}
+    checkpoint_unrounded_MiB: {nominal: 8.7265625, worst_case: 25.265625}
+    checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    publications: {nominal: 14, worst_case: 34}
+    phase_pack_bytes: {nominal: 132120576, worst_case: 926941184}
+    batches_at_cap_12: {nominal: 2, worst_case: 3}
+    largest_worst_batch_bytes: 327155712
+    worst_pack_margin_below_hard_bytes: 146800640
+  F15:
+    model_points: {nominal: 72, worst_case: 144}
+    window_limit: {nominal: 8, worst_case: 22}
+    boundary_triggers_assumed: 4
+    checkpoint_unrounded_MiB: {nominal: 9.8515625, worst_case: 34.265625}
+    checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    publications: {nominal: 12, worst_case: 26}
+    phase_pack_bytes: {nominal: 125829120, worst_case: 954204160}
+    batches_at_cap_12: {nominal: 1, worst_case: 3}
+    largest_worst_batch_bytes: 440401920
+    worst_pack_margin_below_hard_bytes: 119537664
+    max_publications_strictly_below_hard_at_worst_checkpoint: 29
+  conditional_partition_threshold_checks:
+    operational_checkpoint_below_104857600: true
+    F15_checkpoint_below_104857600: true
+    operational_pack_below_1073741824: true
+    F15_pack_below_1073741824: true
+    operational_largest_batch_below_536870912: true
+    F15_largest_batch_below_536870912: true
+    result: arithmetic_pass_only_if_two_denominators_are_authorized
+  current_policy_aggregate_checks:
+    prior_single_K0b_phase_pack_worst_bytes: 2055208960
+    proposed_combined_observability_worst_bytes: 1881145344
+    combined_excess_over_hard_bytes: 807403520
+    result: fail_above_hard_under_current_K0b_phase_scope
+  preserved_and_derived_totals:
+    binary_seed_count: {nominal: 6, worst_case: 12}
+    binary_seed_bytes: {nominal: 2236416, worst_case: 4472832}
+    operational_calls: {nominal: 16, worst_case: 30}
+    F15_calls: {nominal: 36, worst_case: 36}
+    design_effective_cap: 24
+    K0b_calls: {nominal: 58, effective_worst_case: 90}
+    full_route_calls: {nominal: 324, effective_worst_case: 770}
+    combined_pack_bytes: {nominal: 257949696, worst_case: 1881145344}
+    full_route_no_delta_bytes: {nominal: 14883487744, worst_case: 262666190848}
+    arithmetic_result: pass
+
+compiler_publisher_replay_failure_compatibility_and_security_checks:
+  compiler_outputs_and_single_ownership: pass_on_addendum_terms
+  immutable_pre_effect_membership_and_unknown_or_overlap_rejection: pass
+  one_publisher_and_committed_outbox_sequence: pass
+  seal_predecessor_and_successor_admission: pass
+  replay_and_reconciliation: pass
+  crash_consistency_and_no_blind_retry: pass
+  idempotency_and_duplicate_suppression: pass
+  abort_and_late_result_fencing: pass
+  security_egress_and_repository_boundaries: pass
+  compatibility_with_current_policy_and_three_plans: fail
+  acceptance_falsifiability: fail_due_to_unproved_chronology_and_trigger_cap
+  overall_result: fail
+
+all_18_gate_category_checks:
+  addendum_non_empty_lines: 66
+  maximum_non_empty_lines: 350
+  numbered_sections_present: 18
+  checks:
+    - {id: 1, category: purpose_boundaries_non_goals_applicability, present: true, judgment: fail, finding: F-01}
+    - {id: 2, category: dispatcher_deterministic_harness_worker_boundary, present: true, judgment: pass}
+    - {id: 3, category: state_machine_invariants_terminal_states, present: true, judgment: pass}
+    - {id: 4, category: input_events_guards_routing_fanout_barriers_fast_paths, present: true, judgment: fail, finding: F-03}
+    - {id: 5, category: output_events_subscribers_terminal_policy_cross_layer_contracts, present: true, judgment: pass}
+    - {id: 6, category: artifact_types_ownership_versioning_lineage_key_decision_projections, present: true, judgment: pass}
+    - {id: 7, category: context_query_allowlists_trust_provenance_prompt_injection, present: true, judgment: pass}
+    - {id: 8, category: current_worker_roster_inputs_outputs_capabilities_stop_conditions, present: true, judgment: pass}
+    - {id: 9, category: failure_taxonomy_revision_ownership_invalidation_replay_recovery_abort, present: true, judgment: pass}
+    - {id: 10, category: hitl_autonomy_approvals_dialogue_rules, present: true, judgment: fail, finding: F-03}
+    - {id: 11, category: tools_side_effects_security_egress_repository_boundaries, present: true, judgment: pass}
+    - {id: 12, category: context_scale_sharding_invocation_and_human_budgets, present: true, judgment: fail, finding: F-01}
+    - {id: 13, category: binary_payload_budget_or_proved_not_applicable, present: true, judgment: pass_conditional_on_authorized_denominator}
+    - {id: 14, category: downstream_consumers_and_actual_consumption, present: true, judgment: pass}
+    - {id: 15, category: structural_contract_behavioral_fixture_real_project_scenarios, present: true, judgment: fail, finding: F-02}
+    - {id: 16, category: evidence_package_and_readiness_criteria, present: true, judgment: fail, finding: F-01}
+    - {id: 17, category: old_pipeline_migration_note, present: true, judgment: pass}
+    - {id: 18, category: risks_open_decisions_deferred_capabilities, present: true, judgment: fail, finding: F-04}
+  result: all_present_but_not_all_satisfactory
+
+budget_authorship_and_non_authorization_checks:
+  ledger_entries_before_this_review: 34
+  ledger_K0b_entries_before_this_review: 17
+  author_invocation_id: k0b-00-author-d03-checkpoint-phase-partition-v1
+  author_ordinal_within_effective_K0b_design_cap: 17
+  author_input_hash_matches: true
+  author_output_hash_matches: true
+  this_review_ordinal_if_ledgered: 18
+  effective_design_cap: 24
+  remaining_after_this_review_if_ledgered: 6
+  reviewer_ledger_append_performed_here: false
+  reviewer_ledger_append_authority: external_to_this_review_output
+  B01_seed_arithmetic_preserved: true
+  D04_exact_F15_and_operational_budgets_preserved: true
+  v1_evidence_preserved_as_historical_provenance: true
+  review_approval: not_granted
+  owner_approval: not_issued
+  D03_closure: not_granted
+  K0b_approval: not_granted
+  implementation_authority: not_granted
+  physical_model_call_authority: not_granted
+
+findings_external_blockers_and_recommendation:
+  findings:
+    - finding_id: F-01
+      type: policy_scope_reinterpretation
+      severity: blocker
+      status: open
+      summary: >-
+        Applying the 1 GiB limit independently to two new checkpoint phases
+        inside the existing K0b phase is not authorized by the pinned policy,
+        base forecast, scope, or prior owner disposition.
+      required_disposition: >-
+        Either revise and approve the policy/scope/affected plan hashes to make
+        checkpoint_phase_id an explicit threshold unit, or retain one K0b
+        denominator and choose genuine narrowing, storage, threshold, or pause.
+    - finding_id: F-02
+      type: chronological_and_call_allocation_gap
+      severity: blocker
+      status: open
+      summary: >-
+        Zero post-F15 non-F15 calls and completion of all 16/30 operational
+        calls before the seal are asserted but not established by the reviewed
+        K0b-01 through K0b-05 plans.
+      required_disposition: >-
+        Produce an exact reviewed per-work-item/per-scenario call allocation and
+        execution order, revising affected plans if this narrows their semantics.
+    - finding_id: F-03
+      type: underestimated_or_unproved_boundary_trigger_allocation
+      severity: blocker
+      status: open
+      summary: >-
+        The four-trigger F15 cap lacks an exhaustive stable-ID mapping for the
+        K0b-04 F15 boundary and post-F15 K0b-05 run, wait, and program gate.
+      required_disposition: >-
+        Enumerate every mandatory trigger and prove a non-overlapping total at
+        or below four; otherwise reforecast before effect.
+    - finding_id: F-04
+      type: cross_plan_compatibility_and_staleness
+      severity: blocker
+      status: open
+      summary: >-
+        The addendum changes the phase accounting unit and operational
+        chronology while the three unchanged plans still bind one K0b phase,
+        14/34 publications per K0b phase, and unallocated 16/30 calls across
+        K0b-01 through K0b-05.
+      required_disposition: >-
+        Obtain explicit plan-revision authority and fresh reviews for every
+        affected exact plan, or redesign the route without changing those semantics.
+  finding_summary: {total: 4, blocking: 4, high: 0, medium: 0, low: 0}
+  external_blockers_not_review_findings:
+    - {blocker_id: EXT-POLICY-APPROVAL, type: owner_policy_approval, status: unresolved, blocking: true, detail: checkpoint-budget-policy v1 remains proposed_for_owner_approval with owner_approval.status pending}
+    - {blocker_id: EXT-D01-MODEL-RECEIPTS, type: pre_dispatch_binding, status: unresolved, blocking: true, detail: exact hash-bound manual model-selection receipts remain required for active extension slots}
+    - {blocker_id: EXT-K0B-OWNER-APPROVAL, type: architecture_gate, status: unresolved, blocking: true, detail: no exact hash-bound K0b owner approval is supplied or issued by this review}
+    - {blocker_id: EXT-RUNTIME-CONFORMANCE, type: future_implementation_evidence, status: unresolved, blocking: true, detail: implementation and physical calls remain separately unauthorized}
+  recommendation:
+    value: revise
+    applies_only_to:
+      addendum_sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896
+      forecast_v2_sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d
+      reconciliation_v2_sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f
+    rationale: >-
+      Conditional arithmetic is correct, and the addendum is strong on
+      compiler, publisher, replay, failure, security, and non-authorization
+      mechanics. It cannot be approved because its pass depends on a new
+      threshold denominator, unsupported zero-call chronology, and an
+      unproved four-trigger cap that conflict with current pinned authority.

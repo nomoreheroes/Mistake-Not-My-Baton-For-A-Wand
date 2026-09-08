@@ -1,0 +1,67 @@
+manifest_id: k0b-00-s-layer-revision-input-r1
+schema_version: 1
+version: "1.0.0"
+purpose: Exact bounded author input for S delta revision v1.1.0 after independent review r0; no review, approval, or implementation authority.
+author_invocation_id: k0b-00-revision-author-s-r1
+author_actor_id: /root
+author_role: architecture_delta_revision_author
+started_at: "2026-09-02T18:50:53.3706581+03:00"
+
+target:
+  path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+  plan_id: k0b-00-s-layer-delta
+  target_version: "1.1.0"
+
+baseline:
+  path: new pipeline/reviews/sources/k0b-00-s-layer-plan-v1.0.0.md
+  version: "1.0.0"
+  sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04
+
+required_inputs:
+  - {path: new pipeline/reviews/sources/k0b-00-s-layer-review-input-r0.yaml, version: 1, sha256: bc09d3818f94c1b6224096c1d3054691b83de00f62633dd76a592c483346cd21}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r0.yaml, version: 1, sha256: 44bea1556895584b67ec4e8098f8bce9a97e3901b84b723ad9cda7f3ff7b3da1, recommendation: revise}
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, version: "0.16", sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, version: 2, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, version: "1.0.0", sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  - {path: new pipeline/architecture/k0a-00-s-layer-v1.md, version: "1.2.0", sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.0.0", sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, role: provisional_sibling_compatibility_input_not_approved_authority}
+  - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, version: "1.1.0", sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, role: independently_reviewed_provisional_sibling_compatibility_input_not_owner_approved}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, version: 1, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, recommendation: approve, owner_approval: false}
+
+required_finding_dispositions:
+  - finding_id: F-01
+    required_change: >-
+      Make F05 single-valued by separating revision_owner_zero_role_id from
+      producer_invocation_id, treating the latter as lineage evidence only,
+      requiring control to validate both and schedule the exact upstream zero,
+      and leaving deeper-worker selection to that zero's compiled route.
+  - finding_id: F-02
+    required_change: >-
+      Split F04 duplicates so a byte-identical same-member same-causation
+      duplicate returns the original logical result without a second count or
+      barrier block, while conflicting identity reuse blocks and emits incident
+      evidence; S consumes the deduplicated logical result set.
+  - finding_id: F-03
+    required_change: >-
+      Add the exact compiled-nominal handoff to scheduled or route_frozen after
+      the control-owned freeze guard and require positive/frozen reference cases.
+
+revision_rules:
+  - revise_only_the_three_independent_review_findings_F01_F02_F03
+  - keep_plan_id_and_path_and_bump_version_only_from_1_0_0_to_1_1_0
+  - preserve_byte_exact_v1_0_0_snapshot_at_the_hash_bound_baseline_path
+  - preserve_K0a_F00_binding_and_all_previously_passing_gate_categories
+  - preserve_one_S0_zero_S_workers_exact_21_event_profile_and_all_line_budgets
+  - preserve_S_control_artifact_event_ownership_and_no_side_effect_boundary
+  - do_not_select_K0b_D01_D02_D03_D04_or_binary_forecast_owner_route
+  - do_not_modify_shared_control_or_shared_artifact_event_sibling_deltas
+  - create_no_contract_registry_migration_prompt_runtime_fixture_projection_checkpoint_or_physical_call_implementation
+  - no_independent_rereview_in_this_author_revision_invocation
+
+excluded_inputs:
+  - author_conversation_transcript_as_future_reviewer_input
+  - research/old-swarm
+  - projects/swarm_content
+  - canonical_fixture_content_or_modification
+  - unpinned_external_or_provider_state
+  - any_owner_decision_not_present_in_the_required_inputs

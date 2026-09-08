@@ -1,0 +1,264 @@
+profile_id: k0b-fixed-hybrid-manual-vscode-ui-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-03T17:10:06.0184189+03:00"
+status: review_candidate_pre_dispatch_blocked
+work_item_id: K0b-00
+profile_class: separately_pinned_manual_handoff_adapter
+
+authorship:
+  invocation_id: k0b-00-author-executor-profile-v1
+  author_input: {path: new pipeline/evidence/k0b-00-executor-profile-author-input-v1.yaml, sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee}
+
+authority:
+  scope_envelope: {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a}
+  control_plan: {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, version: "1.2.0", sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af}
+  S_plan: {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, version: "1.1.0", sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  fixed_hybrid_owner_disposition: {path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888}
+  manual_model_selection_clarification: {path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8}
+  extension_inventory: {path: new pipeline/evidence/k0b-00-vscode-extension-inventory-v1.yaml, sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c}
+
+D01_binding_fields:
+  executor_profile_id: k0b-fixed-hybrid-manual-vscode-ui-v1
+  executor_version: "1.0.0"
+  model_id:
+    source: exact_manual_model_selection_receipt
+    profile_static_value: null
+    required_at_dispatch: true
+    receipt_field: model_identity.extension_reported_model_identifier_or_exact_UI_label
+    receipt_sha256_required: true
+  capability_policy: k0b-manual-ui-deny-all-actor-tools-v1
+  egress_policy: k0b-extension-owned-provider-channel-only-v1
+  transcript_evidence_profile: k0b-manual-ui-visible-transcript-and-screen-proof-v1
+  sha256:
+    meaning: complete_file_SHA-256_of_this_profile
+    binding_location: external_author_ledger_review_and_future_approval_records
+    self_embedded_value: forbidden_to_avoid_self_reference
+
+extension_slots:
+  Claude_safety_slot:
+    extension_id: anthropic.claude-code
+    observed_candidate_version: 2.1.259
+    observed_native_executable_sha256: 85429000ec9b80082613e9ecd2e0d3b2276c9d5b22a681936575d2c4c2f342ed
+    observed_package_manifest_sha256: 08715864345ed364565494cd8f60840e4e3d463006a0102f5ad1cb7690b4924b
+    invocation_surface: manual_Visual_Studio_Code_UI
+    static_model_id: null
+    model_binding: required_manual_selection_receipt
+  ChatGPT_fixture_worker_slot:
+    extension_id: openai.chatgpt
+    observed_candidate_version: 26.825.51511
+    observed_native_executable_sha256: 24a37127b8298b7bf96ca9b1d51a63c0685d561d1596f052bec73f734ed524b5
+    observed_package_manifest_sha256: 8ab1e0eebcd3f531f8eb7daca7b14260d936a9aa9ea94d2d6307e56de186835b
+    invocation_surface: manual_Visual_Studio_Code_UI
+    static_model_id: null
+    model_binding: required_manual_selection_receipt
+  any_other_extension_or_installation: forbidden
+
+fixed_role_partition:
+  Claude_safety_slot:
+    - all_36_F15_S0_attempts
+    - every_other_physical_S0_route_proposal
+    - every_physical_Layer0_non_nominal_fallback_proposal
+    - fixture.alpha0.primary_reviewer
+    - fixture.alpha0.adversarial_reviewer
+  ChatGPT_fixture_worker_slot:
+    - fixture_workers_whose_validated_output_cannot_select_routes_capabilities_events_approvals_or_side_effects
+  unclassified_dynamic_or_conflicting_role: blocked
+  partition_digest_rule: canonical_hash_of_sorted_role_to_slot_mapping
+  owner_change_required_for_reallocation: true
+
+manual_model_selection_receipt:
+  schema_id: k0b-manual-model-selection-receipt-v1
+  creation_boundary: after_profile_approval_before_first_physical_invocation_of_the_bound_slot
+  required_fields:
+    receipt_id: stable_unique_ID
+    executor_profile_id: must_equal_k0b-fixed-hybrid-manual-vscode-ui-v1
+    executor_profile_sha256: exact_complete_file_hash
+    extension_slot: exact_enum
+    extension_id: exact_enum
+    extension_version: exact_observed_value
+    extension_installation_evidence_sha256: deterministic_inventory_or_bundle_receipt
+    UI_model_label_exact: non_empty_operator_captured_text
+    extension_reported_model_identifier: string_or_null
+    model_identity_capture_completeness: complete_or_typed_gap
+    model_identity_gap_code: null_or_exact_enum
+    selected_at: RFC3339_timestamp
+    actor_id: authenticated_or_conversational_operator_ID
+    applicable_package_id: exact_K0b_package
+    applicable_run_id: stable_ID_or_null_before_run_creation
+    role_partition_sha256: exact_partition_digest
+    UI_preflight_evidence_sha256: exact_screen_or_export_evidence_hash
+    transcript_capture_profile: must_equal_profile_value
+    canonical_payload_sha256: canonical_yaml_v1_excluding_own_hash_field
+  identity_rules:
+    prefer_extension_reported_full_model_identifier: true
+    alias_or_UI_label_only: typed_capture_gap_requires_owner_acceptance
+    blank_default_auto_latest_or_unreadable_selection: blocked
+    provider_fallback_or_silent_substitution: forbidden
+    receipt_reuse_across_changed_extension_profile_or_partition: forbidden
+
+model_locking:
+  F15:
+    selection_slot: Claude_safety_slot
+    selection_receipts_required: 1
+    attempts_bound: 36
+    same_UI_label_identifier_extension_version_and_profile_hash: required
+    model_or_extension_change_after_attempt_zero: invalidate_remaining_batch_authority
+    completed_attempts_after_drift: preserved_as_non_comparable_evidence
+    restart_credit: forbidden_without_new_owner_budget_disposition
+  other_Claude_safety_calls:
+    lock_scope: exact_K0b_runtime_package
+    substitution: forbidden
+  ChatGPT_fixture_workers:
+    lock_scope: exact_K0b_runtime_package
+    substitution: forbidden
+
+manual_handoff_state_machine:
+  states: [unbound, selected, prepared, awaiting_UI, captured, validating, accepted, failed, fenced]
+  transitions:
+    - unbound_to_selected_after_valid_selection_receipt
+    - selected_to_prepared_after_exact_context_and_schema_hashes
+    - prepared_to_awaiting_UI_after_operator_preflight
+    - awaiting_UI_to_captured_after_raw_visible_output_and_evidence_capture
+    - captured_to_validating_once
+    - validating_to_accepted_after_all_checks
+    - selected_or_prepared_or_awaiting_UI_or_captured_or_validating_to_failed_on_exact_failure
+    - any_non_terminal_to_fenced_on_abort_or_stale_attempt
+  undeclared_transition: reject
+  concurrent_active_manual_handoffs: 1
+  next_prepare_requires_prior_accepted_or_terminally_failed_and_reconciled: true
+  operator_edit_of_rendered_input_or_raw_output: forbidden
+
+capability_policy:
+  policy_id: k0b-manual-ui-deny-all-actor-tools-v1
+  actor_capabilities_allowed: [bounded_text_input, bounded_schema_conforming_text_output]
+  actor_capabilities_forbidden:
+    - tools
+    - shell_or_process
+    - filesystem_or_workspace_read_write
+    - database_or_Git
+    - network_or_web_as_an_actor_tool
+    - MCP_connectors_plugins_skills_or_subagents
+    - computer_use_file_upload_image_or_audio_input
+    - provider_model_extension_or_permission_change
+    - credentials_or_secret_access
+  UI_controls:
+    Claude: manual_permission_mode_and_operator_denial_of_every_tool_request
+    ChatGPT: read_only_or_stricter_available_UI_mode_and_operator_denial_of_every_tool_request
+  machine_proof_tools_absent_from_manual_UI_registry: unavailable
+  any_tool_request_even_if_denied: fail_attempt_and_record_forbidden_capability_evidence
+  any_observed_tool_effect: security_incident_freeze_and_owner_escalation
+  residual_risk_acceptance_required_before_dispatch: true
+
+egress_policy:
+  policy_id: k0b-extension-owned-provider-channel-only-v1
+  permitted: selected_installed_extension_own_opaque_provider_channel_for_one_bound_model_call
+  forbidden:
+    - direct_REST_or_SDK
+    - Pipeline_managed_provider_API_key
+    - arbitrary_endpoint_proxy_gateway_or_fallback
+    - web_MCP_plugin_connector_or_browser_egress
+    - cross_extension_context_or_transcript_transfer
+  destination_capture_completeness: extension_managed_channel_typed_gap
+  provider_hidden_context_and_state: typed_gap
+
+transcript_evidence_profile:
+  profile_id: k0b-manual-ui-visible-transcript-and-screen-proof-v1
+  before_call:
+    - exact rendered input bytes and SHA-256
+    - extension ID version and installation evidence
+    - manual model selection receipt and SHA-256
+    - new_conversation_visible_state evidence
+    - UI capability_or_permission_state evidence
+  after_call:
+    - exact extension-visible raw response bytes and SHA-256
+    - complete operator-captured visible conversation evidence and SHA-256
+    - model label and reported identifier evidence
+    - visible tool request count and denied_or_effect status
+    - timestamps duration and visible usage if available
+    - deterministic schema_semantic_and_authority validation result
+  capture_completeness: manual_UI_visible_only
+  gap_code: manual_UI_no_machine_verifiable_complete_internal_transcript_or_hidden_provider_context
+  edited_redacted_or_incomplete_visible_capture: block
+
+validation_and_duplicate_suppression:
+  logical_identity: invocation_id_plus_attempt_number_plus_request_sha256_plus_selection_receipt_sha256
+  exact_duplicate_capture: return_original_validation_result_without_new_logical_attempt
+  reused_identity_with_different_bytes_model_or_extension: security_conflict
+  response_checks:
+    - UTF-8_and_size_limit
+    - exact_output_schema_no_unknown_fields
+    - semantic_route_and_role_constraints
+    - zero_visible_tool_requests
+    - exact_extension_model_partition_and_attempt_binding
+    - prompt_injection_and_secret_policy
+  failed_validation_retry: only_under_separately_compiled_runtime_retry_budget
+  provider_or_model_substitution_retry: forbidden
+
+crash_recovery_abort_and_late_results:
+  crash_before_UI_submit: no_physical_attempt_if_submission_not_observed_otherwise_unknown_and_block
+  crash_after_submit_before_capture: effect_unknown_block_no_blind_retry
+  crash_after_capture_before_validation: validate_same_immutable_capture
+  abort_before_submit: fence_without_call
+  abort_after_submit: cannot_roll_back_call_fence_result_and_preserve_evidence
+  late_or_wrong_conversation_result: preserve_rejected_evidence_no_state_transition
+  resume: requires_same_profile_extension_selection_receipt_partition_and_request_hashes
+
+compatibility_and_staleness:
+  stale_on:
+    - executor_profile_file_hash_change
+    - extension_ID_version_installation_or_manifest_hash_change
+    - role_partition_digest_change
+    - manual_model_selection_receipt_change
+    - selected_UI_model_label_or_reported_identifier_change
+    - transcript_or_capability_policy_change
+    - reviewed_control_S_or_scope_hash_change
+  changed_binding: new_selection_or_profile_decision_and_revalidation_required
+  alias_drift: block_or_typed_gap_with_explicit_owner_acceptance_never_silent
+
+observability_and_security:
+  record:
+    - state_transition_and_operator_ID
+    - extension_slot_ID_version_and_evidence_hash
+    - model_selection_receipt_ID_hash_and_capture_completeness
+    - request_response_visible_transcript_and_UI_evidence_hashes
+    - validation_tool_request_duplicate_abort_and_gap_dispositions
+    - latency_and_visible_usage_without_fabricated_values
+  never_record: [provider_credentials, secrets, unrestricted_screen_content, unrelated_repository_or_conversation_content]
+  repository_boundary: Pipeline_and_canonical_fixture_read_only_no_projects_swarm_or_research_old_swarm
+  secret_or_wrong_root_evidence: freeze_and_block
+
+F15_acceptance:
+  exact_attempts: 36
+  cases: 12
+  attempts_per_case: 3
+  same_Claude_selection_receipt_for_every_attempt: required
+  forbidden_transition_capability_or_event_count: 0
+  oracle_matching_initial_choices_minimum: 34
+  per_case_correct_minimum: 2
+  model_extension_profile_or_prompt_drift: invalidate_comparability_and_block
+
+profile_review_acceptance:
+  - Every authority path and SHA-256 resolves.
+  - Required D01 fields and manual model binding rule are complete and unambiguous.
+  - Role partition is exhaustive for physical K0b actors and F15 is single-slot locked.
+  - Manual handoff has closed states, crash reconciliation, duplicate suppression, abort fencing, and compatibility rules.
+  - Direct API, tool effects, fallback, hidden credit, runtime implementation, and forbidden roots remain excluded.
+  - Reviewer reports approve with zero blocking findings for this exact profile hash.
+
+pre_dispatch_blockers:
+  - owner_residual_risk_acceptance_for_manual_UI_tool_exposure_and_transcript_completeness_gap
+  - exact_manual_model_selection_receipt_for_each_active_extension_slot
+  - independently_approved_exact_profile_hash
+  - K0b_D03_checkpoint_hard_stop_resolution
+  - future_runtime_contract_and_harness_conformance_evidence_after_K0b_00_approval
+
+explicit_non_authorizations:
+  - physical_model_invocation
+  - architecture_approval_receipt
+  - runtime_code_contract_migration_prompt_fixture_projection_or_checkpoint_implementation
+  - direct_provider_API_or_credentials
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

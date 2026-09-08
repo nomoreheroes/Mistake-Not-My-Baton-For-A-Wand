@@ -1,0 +1,287 @@
+review_id: k0b-01-migration-plan-review-r0
+schema_version: 1
+work_item_id: K0b-01
+review_round: 0
+
+reviewer_identity_independence_and_timestamps:
+  invocation_id: k0b-01-review-migration-plan-r0
+  reviewer_actor_id: /root/k0b01_migration_review_r0
+  role: independent_migration_plan_reviewer
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  fresh_context: true
+  reviewed_plan_authored_by_reviewer: false
+  additional_agent_model_or_network_calls: 0
+  started_at: "2026-09-07T18:20:00+03:00"
+  completed_at: "2026-09-07T18:26:03.2318593+03:00"
+
+exact_input_hash_verification:
+  status: pass
+  algorithm: sha256_complete_file
+  mismatches: []
+  inputs:
+    - {role: pre_dispatch_receipt, path: "new pipeline/evidence/k0b-01-migration-plan-review-pre-dispatch-v1.yaml", expected: b78cdf71bab469f11bb0b544677e3b26f1fb77c836f4de46c69abcdda576edcd, observed: b78cdf71bab469f11bb0b544677e3b26f1fb77c836f4de46c69abcdda576edcd, status: match}
+    - {role: review_input, path: "new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r0.yaml", expected: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66, observed: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66, status: match}
+    - {role: review_candidate, path: "new pipeline/architecture/k0b-01-planning-package-v1.1.md", expected: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, observed: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, status: match}
+    - {role: final_K0b_00_disposition, path: "new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml", expected: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, observed: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, status: match}
+    - {role: K0b_01_plan_v1, path: "new pipeline/architecture/k0b-01-planning-package-v1.md", expected: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f, observed: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f, status: match}
+    - {role: K0b_01_v1_1_owner_direction, path: "new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml", expected: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39, observed: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39, status: match}
+    - {role: review_budget_supplement, path: "new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml", expected: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217, observed: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217, status: match}
+    - {role: exact_agent_review_executor_owner_override, path: "new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml", expected: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871, observed: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871, status: match}
+    - {role: unapproved_draft_exclusion_record, path: "new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml", expected: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, observed: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, status: match}
+    - {role: K0b_scope_envelope, path: "new pipeline/architecture/k0b-00-scope-envelope-v2.yaml", expected: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, observed: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, status: match}
+    - {role: shared_control_plan, path: "new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md", expected: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, observed: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, status: match}
+    - {role: shared_artifact_event_plan, path: "new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md", expected: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, observed: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, status: match}
+    - {role: historical_schema_0001, path: "new pipeline/harness/migrations/0001_k0a01.sql", expected: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3, observed: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3, status: match}
+    - {role: historical_schema_0002, path: "new pipeline/harness/migrations/0002_k0a02.sql", expected: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b, observed: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b, status: match}
+    - {role: historical_schema_0003, path: "new pipeline/harness/migrations/0003_k0a03.sql", expected: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b, observed: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b, status: match}
+
+schema_dependency_and_SQLite_swap_analysis:
+  status: fail
+  selected_rebuild_tables: [runs, run_state_transitions, events, event_deliveries]
+  dependency_inventory:
+    runs:
+      outbound_foreign_keys: []
+      inbound_foreign_keys:
+        - run_state_transitions.run_id_to_runs.run_id
+        - deliveries.run_id_to_runs.run_id
+        - replay_points.run_id_to_runs.run_id
+        - artifacts.run_id_to_runs.run_id
+        - artifact_versions.run_id_to_runs.run_id
+        - artifact_version_lineage.run_id_to_runs.run_id
+        - events.run_id_to_runs.run_id
+        - publication_transactions.run_id_to_runs.run_id
+        - actor_proposals.run_id_to_runs.run_id
+        - actor_proposal_consumptions.run_id_to_runs.run_id
+        - sink_acceptances.run_id_to_runs.run_id
+        - readback_gates.run_id_to_runs.run_id
+        - manual_dispatches.run_id_to_runs.run_id
+      composite_foreign_keys: []
+      self_referential_foreign_keys: []
+    run_state_transitions:
+      outbound_foreign_keys: [run_state_transitions.run_id_to_runs.run_id]
+      inbound_foreign_keys: []
+      composite_foreign_keys: []
+      self_referential_foreign_keys: []
+    events:
+      outbound_foreign_keys:
+        - events.run_id_to_runs.run_id
+        - events.initiated_by_invocation_id_run_id_to_physical_invocations.invocation_id_run_id
+        - events.artifact_version_id_run_id_to_artifact_versions.artifact_version_id_run_id
+      inbound_foreign_keys:
+        - deliveries.triggering_event_id_run_id_to_events.event_id_run_id
+        - event_deliveries.event_id_to_events.event_id
+        - publication_transactions.version_created_event_id_run_id_to_events.event_id_run_id
+        - publication_transactions.handoff_event_id_run_id_to_events.event_id_run_id
+        - sink_acceptances.handoff_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.command_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.started_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.version_created_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.handoff_event_id_run_id_to_events.event_id_run_id
+      composite_foreign_keys:
+        - events.initiated_by_invocation_id_run_id_to_physical_invocations.invocation_id_run_id
+        - events.artifact_version_id_run_id_to_artifact_versions.artifact_version_id_run_id
+        - events.caused_by_event_id_run_id_to_events.event_id_run_id
+        - deliveries.triggering_event_id_run_id_to_events.event_id_run_id
+        - publication_transactions.version_created_event_id_run_id_to_events.event_id_run_id
+        - publication_transactions.handoff_event_id_run_id_to_events.event_id_run_id
+        - sink_acceptances.handoff_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.command_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.started_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.version_created_event_id_run_id_to_events.event_id_run_id
+        - readback_gates.handoff_event_id_run_id_to_events.event_id_run_id
+      self_referential_foreign_keys:
+        - events.caused_by_event_id_run_id_to_events.event_id_run_id
+    event_deliveries:
+      outbound_foreign_keys: [event_deliveries.event_id_to_events.event_id]
+      inbound_foreign_keys: [sink_acceptances.event_delivery_id_to_event_deliveries.event_delivery_id]
+      composite_foreign_keys: []
+      self_referential_foreign_keys: []
+  closure_assessment: >-
+    Rebuilding exactly the four selected tables can be feasible without copying an outside table,
+    but only if the migration pins a SQLite-safe algorithm that keeps external child definitions
+    pointing at the final table names and defers enforcement until all four final parents exist.
+    The candidate does not provide that algorithm.
+  required_single_valued_order: >-
+    Not supplied by the candidate. It must specify connection-level PRAGMA state before BEGIN,
+    BEGIN IMMEDIATE, creation and copy order for all four staging tables, the exact child-first
+    drop order event_deliveries then run_state_transitions then events then runs, the exact
+    parent-first final rename order runs then events then run_state_transitions then
+    event_deliveries, recreation order for indexes and table-owned triggers, checks, and commit.
+    It must also state whether foreign_keys is disabled before the transaction or
+    defer_foreign_keys is enabled inside it, and prove the chosen method on the supported SQLite
+    version. Renaming old parents as an intermediate step is unsafe because SQLite can rewrite
+    external child FK targets to the temporary names.
+  verdict: blocking_ambiguity_and_incomplete_dependency_procedure
+
+historical_preservation_analysis:
+  status: fail
+  preserved_categories_claimed:
+    - every_F00_ID_and_value
+    - profile_and_state
+    - event_type_and_version
+    - subscriber_and_terminal_policy
+    - lineage_and_revision
+    - payload_text_bytes_and_digests
+    - timestamps
+    - uniqueness_relations
+    - row_counts
+  strengths:
+    - Copy without coercion or default substitution is explicitly required.
+    - Pre/post table counts, content digest, integrity checks, FK checks, and exact F00 graph readback are required before commit.
+    - Historical migrations and K0a contracts are immutable.
+  gaps:
+    - >-
+      The canonical content digest is not specified as an algorithm: table order, column order,
+      SQLite storage class tags, NULL framing, integer encoding, text encoding, BLOB framing, and
+      row ordering are not pinned. Therefore equal-digest historical preservation is not yet
+      independently reproducible or falsifiable.
+    - >-
+      Payload "byte string" preservation is asserted for a TEXT column but the plan does not pin
+      comparison as length(CAST(payload_json AS BLOB)) plus hex(CAST(payload_json AS BLOB)), or an
+      equivalent byte-level rule. Value equality alone does not establish the stated byte claim.
+    - >-
+      "same or stricter historical semantics" is too broad: a stricter constraint can reject a
+      historical value or future F00 operation. The plan must require exact historical constraints
+      except for enumerated vocabulary widening.
+  verdict: blocking_unfalsifiable_preservation_claim
+
+backup_restore_idempotency_and_old_reader_analysis:
+  status: fail
+  backup:
+    assessment: partially_specified
+    verified_properties: [new_explicit_path, path_exclusions, independent_open, integrity, content_identity]
+    gap: >-
+      "verify its byte/content identity" does not select a criterion. SQLite Backup API output is
+      a logical snapshot and need not have the same complete-file bytes as the live source. The
+      plan must distinguish the backup artifact's own recorded SHA-256 from logical content
+      equality to the source and pin both checks without requiring physical file equality.
+  restore:
+    assessment: adequate_at_plan_level_after_backup_criterion_is_fixed
+    constraints: [verified_backup_only, distinct_new_path_only, no_down_migration, no_destructive_in_place_restore]
+  idempotency:
+    assessment: adequate_at_plan_level
+    rule: exact_v4_identity_and_hash_yields_no_op_otherwise_block
+  migration_row_and_user_version_order:
+    assessment: adequate_at_plan_level
+    rule: insert_exactly_one_v4_row_then_set_user_version_4_then_verify_before_commit
+  old_reader_rejection:
+    assessment: blocking_not_falsifiable_from_pinned_inputs
+    gap: >-
+      The plan requires every K0a reader to reject v4 but identifies no pinned K0a reader
+      implementations, versions, entry points, or expected typed rejection. A temporary v4 database
+      is sufficient as data, but generated databases and synthetic rows alone cannot prove behavior
+      of unspecified reader code.
+
+failure_atomicity_and_testability_analysis:
+  status: fail
+  transaction_atomicity_intent: one_BEGIN_IMMEDIATE_transaction_with_all_post_copy_checks_before_commit
+  required_fault_points_present:
+    - before_backup_creation
+    - after_backup_verification
+    - before_and_after_each_of_four_table_copy_swap_boundaries
+    - before_v4_migration_row_insert
+    - after_v4_migration_row_insert
+    - immediately_before_commit
+  exact_outcome_requirement_present: live_database_exact_v3_or_complete_v4_never_partial
+  blocking_gaps:
+    - >-
+      "each of the four table-copy/swap boundaries" is not single-valued: copy and swap are
+      separate operations, and the plan supplies neither exact statement labels nor the concrete
+      order needed to map injections to every mutation boundary.
+    - >-
+      Connection loss/process termination tests must pin journal mode, synchronous durability
+      assumptions, SQLite version, and reopening/recovery procedure; otherwise "exact v3 or
+      complete v4" is platform/configuration dependent rather than falsifiable.
+  synthetic_only_testability:
+    testable_with_generated_temporary_databases_and_synthetic_rows:
+      - schema_and_content_preflight
+      - all_FK_shapes_and_self_reference
+      - copy_swap_rollback_and_post_commit_recovery
+      - backup_and_distinct_new_path_restore
+      - idempotency_and_migration_order
+      - historical_value_row_count_uniqueness_and_graph_preservation
+      - forbidden_path_and_symlink_or_reparse_negatives_on_each_supported_platform
+    not_testable_with_generated_temporary_databases_and_synthetic_rows_only:
+      - requirement: every_K0a_reader_rejects_v4
+        additional_pinned_input_needed: exact_historical_reader_implementations_and_expected_rejection_contract
+
+scope_non_authorization_and_frozen_draft_exclusion:
+  status: pass
+  forbidden_scope_absent:
+    - canonical_fixture_product_or_checkpoint_path_access
+    - down_migration
+    - destructive_in_place_restore
+    - runtime_emitter_consumer_or_dispatcher
+    - projection_or_checkpoint_persistence
+    - K0a_or_K0b_00_byte_edit
+  frozen_draft_treatment: unavailable_non_authoritative_not_inspected
+  reviewed_inputs_limited_to_hash_bound_manifest_set: true
+  implementation_runtime_or_test_execution_performed: false
+  files_edited_other_than_required_output: []
+
+findings_external_blockers_and_recommendation:
+  findings:
+    - id: K0B01-MIG-R0-001
+      type: schema_dependency_sqlite_swap_ambiguity
+      severity: critical
+      blocking: true
+      status: open
+      summary: The plan omits the complete FK inventory and a single-valued SQLite-safe four-table create-copy-drop-rename-recreate order.
+      required_change: >-
+        Add the full inventory recorded in this review; pin supported SQLite behavior and exact
+        PRAGMA state; specify staging definitions, copy order, child-first drops, parent-first
+        renames, index/trigger recreation, postchecks, and commit with no unsafe old-parent rename.
+    - id: K0B01-MIG-R0-002
+      type: historical_preservation_falsifiability
+      severity: critical
+      blocking: true
+      status: open
+      summary: The content digest and byte-preservation rules lack a canonical typed serialization and exact byte comparison.
+      required_change: >-
+        Pin a canonical per-cell digest format including storage classes, NULLs, ordering, framing,
+        encodings, and BLOB/TEXT bytes; require exact historical constraints except enumerated widening.
+    - id: K0B01-MIG-R0-003
+      type: backup_identity_ambiguity
+      severity: high
+      blocking: true
+      status: open
+      summary: Backup byte identity is ambiguous and may be infeasible for SQLite Backup API output.
+      required_change: >-
+        Separate and pin the backup file's own hash from logical source/backup content equality and
+        do not require physical file-byte equality to the source.
+    - id: K0B01-MIG-R0-004
+      type: old_reader_rejection_untestable
+      severity: high
+      blocking: true
+      status: open
+      summary: Universal K0a reader rejection is not testable because no reader artifacts or rejection contract are pinned.
+      required_change: >-
+        Enumerate and hash every in-scope K0a reader implementation/entry point and specify the exact
+        unsupported-schema result; otherwise narrow the claim to a pinned reader set.
+    - id: K0B01-MIG-R0-005
+      type: failure_atomicity_platform_ambiguity
+      severity: high
+      blocking: true
+      status: open
+      summary: Fault boundaries and durable recovery assumptions are not exact enough to prove only complete v3 or v4 outcomes.
+      required_change: >-
+        Name every injectable SQL/adapter boundary and pin journal mode, synchronous assumptions,
+        supported SQLite versions/platforms, process-loss method, reopen recovery, and exact v3/v4 fingerprints.
+  open_blocking_finding_count: 5
+  closed_blocking_finding_count: 0
+  external_blockers:
+    - id: K0B01-MIG-EXT-001
+      blocking: true
+      status: open
+      summary: Exact K0a reader artifacts and rejection behavior are absent from the allowed hash-bound input set.
+    - id: K0B01-MIG-EXT-002
+      blocking: true
+      status: open
+      summary: Supported SQLite versions, platform matrix, and durability configuration are not pinned by the candidate.
+  recommendation: revise
+  rationale: >-
+    The four-table closure appears potentially feasible, and the intended safety envelope is strong,
+    but five open blocking findings leave dependency order, preservation, backup identity, old-reader
+    rejection, and crash atomicity materially ambiguous. Approval is forbidden with open blockers.

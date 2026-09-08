@@ -1,0 +1,85 @@
+manifest_id: k0b-00-shared-artifact-event-d03-v2-revision-input-r1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-04T12:11:13.4398287+03:00"
+status: closed_exact_revision_author_input
+work_item_id: K0b-00
+review_round: 1
+
+invocation:
+  invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r1
+  role: author
+  actor_id: /root
+  provider: openai
+  model: gpt-5.6-sol
+  profile: codex_root_k0b_shared_artifact_event_D03_successor_revision_r1
+  package_id: K0b-plan-deltas
+  budget_cap: 30
+  completed_before_this_invocation: 22
+  ordinal_if_completed: 23
+
+exact_reviewed_predecessor:
+  snapshot_path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.0.0.md
+  live_plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  version: "2.0.0"
+  sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f
+
+allowed_inputs:
+  - {path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9}
+  - {path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d}
+  - {path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4}
+  - {path: new pipeline/evidence/k0b-00-shared-artifact-event-d03-v2-author-input.yaml, sha256: 0e761b267d34c8630037edb7d85d215d110a52e069ed490b75d0b5643c2623db}
+  - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r0.yaml, sha256: d91facd5d4f547b2cba16597ae0322d0322bbf4a52504c62210d67f05391e343}
+  - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r0.yaml, recommendation: revise, blocking_findings: 1, sha256: 1ee407cad615a4190ae40a8c5e2ed2decaa74d4219b0d92f7bee688c8a07098d}
+  - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0}
+  - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, recommendation: approve, sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b}
+  - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0}
+  - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, recommendation: approve, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7}
+  - {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8}
+  - {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+  - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+  - {path: new pipeline/ledgers/design-invocations.yaml, entries: 39, K0b_entries: 22, sha256: 037b9658d474a2a21f8183a24fad73678dee7f6d5abb960b2955710976aba283}
+
+required_revision:
+  finding_id: F-01
+  target_location: section_4_artifact_event_publication_route
+  exact_semantic_result: >-
+    One artifact publication atomically persists its artifact version and only
+    its control-admitted required event subset. Every selected event must come
+    from the immutable exact 21-event compiled profile and receive its
+    applicable immutable subscriber and terminal snapshots. An event outside
+    the profile, an unadmitted event, or an incomplete selector rejects the
+    entire mutation.
+  preserve:
+    - all_other_v2_0_0_bytes_except_authorized_metadata
+    - exact_21_event_catalog_without_addition_or_removal
+    - all_D03_phase_trigger_call_budget_and_arithmetic_contracts
+    - control_artifact_event_S_ownership_and_all_passing_v1_1_contracts
+  authorized_metadata:
+    - version_2_0_0_to_2_1_0
+    - author_input_reference_to_this_manifest
+    - owner_budget_authority_hash
+    - design_budget_ordinals_23_through_30_description
+
+allowed_writes:
+  - new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  - append_one_revision_author_entry_to_new_pipeline/ledgers/design-invocations.yaml
+
+forbidden_inputs_and_actions:
+  - research/old-swarm
+  - projects/swarm
+  - canonical_fixture_content_or_modification
+  - any_unlisted_repository_or_external_state
+  - any_change_outside_exact_F_01_and_authorized_metadata
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call
+  - S_v2_authoring_or_independent_review
+  - commit_push_merge_deploy_release_or_owner_approval
+
+stop_conditions:
+  - any_input_or_snapshot_hash_mismatch
+  - any_required_change_beyond_exact_F_01_or_metadata
+  - any_D03_or_passing_contract_regression
+  - need_for_more_than_the_authorized_r1_author_and_rereview_pair

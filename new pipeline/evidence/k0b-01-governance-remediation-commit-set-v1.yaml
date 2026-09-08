@@ -1,0 +1,217 @@
+record_id: k0b-01-governance-remediation-commit-set-v1
+schema_version: 1
+version: \"1.0.0\"
+recorded_at: \"2026-09-08T12:59:18.904197+03:00\"
+work_item_id: K0b-01
+status: ready_for_exact_stage_and_containing_commit
+
+authority:
+  owner_direction: {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1}
+  final_K0b_00_disposition: {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  plan_v1_3: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  reuse_triage: {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e}
+  state: {path: new pipeline/state/state.yaml, sha256: 8f8f3a966b5a6f6e3a6e5634af58808715b36ed5f393755cd037c7a9511105d9}
+  human_state_projection: {path: new pipeline/state/STATE.md, sha256: 4fe00138b342c36da973cad34f3600c303963b0050a9020039ecdbbe093dc1da}
+
+reachability:
+  edge_types: [explicit_repository_path, exact_SHA_256_content_reference]
+  path_order: ascending_UTF_8_bytes
+  forbidden_prefix_check_precedes_every_filesystem_probe: true
+  root_count_excluding_this_record: 8
+  roots:
+    - new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    - new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml
+    - new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    - new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml
+    - new pipeline/ledgers/design-invocations.yaml
+    - new pipeline/state/state-projection-profile-v1.yaml
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  reachable_existing_node_count_before_this_record: 243
+  changed_reachable_path_count_before_this_record: 134
+  changed_nonreachable_path_count: 0
+  forbidden_path_references_skipped_without_access: 5
+  prospective_bare_paths_and_directories_are_not_treated_as_hash_bound_targets: true
+  historical_path_hash_pairs_are_preserved_as_snapshot_claims_and_are_not_reinterpreted_as_current_path_hashes: true
+
+validation:
+  pre_remediation_HEAD: a031ee56a36cf794646643b67270c6e0f7092e08
+  pre_remediation_tree: fbda92274880ea684bebacc6bb58e12a40084d07
+  active_state_authority_path_hash_pairs: {checked: 17, matched: 17, mismatched: 0}
+  frozen_manifest: {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+  frozen_artifacts: {checked: 18, matched: 18, mismatched: 0, bytes_edited: 0}
+  state_YAML_parse: pass
+  work_item_sequences_unique_and_sorted: pass
+  open_gate_IDs_unique_and_sorted: pass
+  STATE_md_work_item_and_gate_rows_equal_state_yaml: pass
+  runtime_or_test_execution: 0
+  new_model_agent_review_or_API_calls: 0
+
+exact_commit_set:
+  entry_count_excluding_this_record: 134
+  this_record_inclusion: required_without_self_hash
+  total_path_count_including_this_record: 135
+  canonical_entry_bytes: UTF_8_of_each_sorted_entry_as_sha256_two_spaces_path_LF
+  canonical_entry_set_sha256_excluding_this_record: 64e910fe7d67a9630f9bf44542fcd9912dd29f02ff911b4c003f76b2e9577984
+  pre_stage_status_counts: {untracked: 133, modified_tracked: 1}
+  category_counts_excluding_this_record:
+    architecture: 15
+    contracts: 1
+    decisions: 17
+    evidence: 38
+    harness: 6
+    ledgers: 1
+    registry: 6
+    reviews: 43
+    state: 3
+    tests: 4
+  entries_excluding_this_record:
+    - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v1.md, sha256: ca472f20201363e088d51d8e4b45c4f91b675d9346d8226189266d39d69e8896, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml, sha256: 125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, sha256: c1e9eb94c639cb2e54e0d1b922b1e541557fc83370449578142a112f47381fd0, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md, sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, sha256: 8048df9a4b7726f1ad021ef569e02cd938e3fff47883664652185cade3c651af, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-01-planning-package-v1.1.md, sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4, pre_stage_status: untracked}
+    - {path: new pipeline/architecture/k0b-01-planning-package-v1.md, sha256: 028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f, pre_stage_status: untracked}
+    - {path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json, sha256: fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-d03-checkpoint-phase-partition-owner-disposition-v1.yaml, sha256: ddb37be73c667be61e893b5063c2f35aac27a5284cfa064d44dcab3826930732, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-d03-policy-scope-plan-revision-owner-disposition-v1.yaml, sha256: 0725cc34cf660ab821fc2cb08fd748df7a17e63c51c6d14844cc2c56671af6f7, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v2.yaml, sha256: d4fb22d5c980ccf9dd7b946cf60af6e3f9e9e3c0a07ae06303c123ca68978ba0, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-extension-only-executor-owner-clarification-v1.yaml, sha256: 9e46d5613eae9bb19bbc42178969e4563e30c6aec0de7bb7abd0577d21527314, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-fixed-hybrid-manual-vscode-owner-disposition-v1.yaml, sha256: a69e0777de448dd28091d35e41c4c2ed368c7bfe3a29f91f09af233a6e4bf888, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-manual-model-selection-owner-clarification-v1.yaml, sha256: 9b52238f517741d8248e4f3630d609d1a96d94716acc95e573790d5cab84c0e8, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-manual-vscode-residual-risk-owner-acceptance-v1.yaml, sha256: 7c5c2504656f96387afb20232c184121f83364e8a369419cdf3a25566850c0e3, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-owner-disposition-v1.yaml, sha256: 7429b487bf8af6dfab91cb6e1d48545b32354cfcbd69b76f06073b08a1066045, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-plan-budget-extension-owner-disposition-v1.yaml, sha256: 04bce6414afa08408445b5c91e55113bde78773e57dd15fc01159dc6d7c246d2, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-01-agent-review-executor-owner-override-v1.yaml, sha256: 3be1ec60f5656f16fe6297cc0012bec820a1528064741d363e5369f50f8dc871, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml, sha256: 364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml, sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-01-plan-v1.1-owner-direction-v1.yaml, sha256: 4ce0f4dd6b776cf55c238a8b6268e89143e49173d5da926c0d2cd1ca6c555c39, pre_stage_status: untracked}
+    - {path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-d03-checkpoint-phase-partition-author-input-v1.yaml, sha256: a78dedb2f0216094f798819ac8114088c03582621492ebf99785a9249da1da83, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-executor-binding-candidate-v1.yaml, sha256: d399f14ad903801252efb6113fe3c73ef072fc1247d287bfa85faf7d56718b43, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-executor-profile-author-input-v1.yaml, sha256: b1ad5f80b728c49f6a4162041ec5d87d307875f184bb6015b42de9ee69ecc8ee, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v1.yaml, sha256: ed4dd7b39e26e7ddba3a1bb0cc5ec184e2f92c1b92bede1bcbf5cf1d30ce126a, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v2.yaml, sha256: 92fc9a0ebebe999590769ab2a60dda86731100e1f6fc0961167d01271c02c35f, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-owner-disposition-materialization-v1.yaml, sha256: 52a87541d03923bbd8a10b645350a8b20d322cf04af97427bb4febe328ffe7e7, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-owner-disposition-request-v1.yaml, sha256: e646e8a4e356367de296f006d4a4ca28c43e72f6ef7f3ac58c01a3394b211849, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-s-author-input-v1.yaml, sha256: 9e9f348d0b9f162f998abd7e861d34d66b56ac370e01b1d8afd87503a1c7d9d2, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-s-d03-v2-author-input.yaml, sha256: dfc0c885b5b5cd0f2780e7c3baa6e6d55d50ba4bdc1cabd047fc11d300ff8bf7, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-s-layer-revision-input-r1.yaml, sha256: 217cfaa78b5b916c7621e39623d6d0c3364ca50adabfe73af8be34d4f7f970d2, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-artifact-event-author-input-v1.yaml, sha256: 60f6a9134b2b36c41dee05264a0a4c975281ca46dee2e3b21e3196a6acd5b98e, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-artifact-event-d03-v2-author-input.yaml, sha256: 0e761b267d34c8630037edb7d85d215d110a52e069ed490b75d0b5643c2623db, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-artifact-event-d03-v2-revision-input-r1.yaml, sha256: de7f37090e678847b68e799523acdc484e43bca4e5b9603fa1684bb118e0a092, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-artifact-event-d03-v2-revision-input-r2.yaml, sha256: d0e83798d6fd5b92d23ee443693fa441e11050eaab01e511fac8d812ac294be2, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-artifact-event-revision-input-r1.yaml, sha256: c8b41fdac2bdbce52e9c7c833eb27949b0ac8d73214548a57a002672849f6524, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-control-author-input-v1.yaml, sha256: d2da7a78e7e8dc46d04bf3a6c74f1e079f58aea766192283053571beeb653c97, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-control-d03-v2-author-input.yaml, sha256: fa7965ed72984b39cce118bd1cc283be7970122c78386787720b1cfe340de595, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-control-revision-input-r1.yaml, sha256: 5fbcf9ef4839faa9535abf00484b177a419e3fa968e8c81ba8df0c72f3dc6b63, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-shared-control-revision-input-r2.yaml, sha256: 7d6c08d1c21c21c894bbbab7af83a99043ecc752dd1fdc6f2a8e8168a807c4b2, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v1.yaml, sha256: bf833b14b560a0ae4619207bb7620ad97555f2081cc497fda46ac0f3fe0d316e, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v2.yaml, sha256: 8122405a989aca205633917d692202733be02378acb4f1d74d90ebac0071c89d, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-00-vscode-extension-inventory-v1.yaml, sha256: 002e70d275d4fbf7f243f95d330b74f595a7882fd8c76e09e38df0f89398fa0c, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-pre-dispatch-v1.yaml, sha256: 971be9b0805f8a8c50765669e7c224333ab8c36b3976d9a35e794f21bd0054f7, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-r1-pre-dispatch-v1.yaml, sha256: 43b75d10193757b2018b155f8b00d06625b6d6ecdced85b56c60ebd2e23b409e, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml, sha256: 3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-migration-plan-review-pre-dispatch-v1.yaml, sha256: b78cdf71bab469f11bb0b544677e3b26f1fb77c836f4de46c69abcdda576edcd, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-migration-plan-review-r1-pre-dispatch-v1.yaml, sha256: 96bc93ee9d733fd3a65a24d539d85286143dae9d7536f27d023f656ffe225a32, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-migration-validation-platform-v1.yaml, sha256: 509abcbea93182aa641cd048815cee0ffbae4d9a818264e162cb458d35d71f76, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-plan-v1.1-review-budget-supplement-v1.yaml, sha256: b79adb397cedccf5a72ea6d78e2d4a3c87cab977cf9b1c53c64c97470a02f217, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml, sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-r0-review-ledger-append-v1.yaml, sha256: 0296d938e4135a9d2a764b920ba087c866e471abcdc76fdcdf37755b38a7313d, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml, sha256: c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-r1-review-ledger-append-v1.yaml, sha256: e2eb12a33f7277d9ac9db893042da5fa44b7658b52d2c588106394d05d8c409e, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/k0b-01-validation-v1.yaml, sha256: 8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f, pre_stage_status: untracked}
+    - {path: new pipeline/harness/k0b01/__init__.py, sha256: e029a9aa3699ac7f159ebdfd21880455a4bcd98727a5e06ae54273a400efdb59, pre_stage_status: untracked}
+    - {path: new pipeline/harness/k0b01/budget.py, sha256: d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71, pre_stage_status: untracked}
+    - {path: new pipeline/harness/k0b01/compiler.py, sha256: 3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5, pre_stage_status: untracked}
+    - {path: new pipeline/harness/k0b01/contract.py, sha256: 12ea694ffdf21d2396d1831d78df4fe2f95f06b90051a66ce9e1121403f75898, pre_stage_status: untracked}
+    - {path: new pipeline/harness/k0b01/store.py, sha256: 8efbab7e3395874150289f4edfca4ed5d5e913d7550a911396128260fb18f05a, pre_stage_status: untracked}
+    - {path: new pipeline/harness/migrations/0004_k0b01.sql, sha256: 7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a, pre_stage_status: untracked}
+    - {path: new pipeline/ledgers/design-invocations.yaml, sha256: b07d05ff29721089d404e827369e8fdf5143610fe69a4f467715406cc93288ee, pre_stage_status: modified_tracked}
+    - {path: new pipeline/registry/alpha0/event-profile-v1.yaml, sha256: ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2, pre_stage_status: untracked}
+    - {path: new pipeline/registry/alpha0/s-routing-profile-v1.yaml, sha256: 0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf, pre_stage_status: untracked}
+    - {path: new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml, sha256: 62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab, pre_stage_status: untracked}
+    - {path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, pre_stage_status: untracked}
+    - {path: new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml, sha256: f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1, pre_stage_status: untracked}
+    - {path: new pipeline/registry/resource-budget-policy/v1.yaml, sha256: 3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-d03-checkpoint-phase-partition-review-r0.yaml, sha256: 814745fd7a4026bc5f8f20f1bebb511c44656d43a19c634ea6df86be062e2107, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-executor-profile-review-r0.yaml, sha256: 3d1de40087201a4bc32c41e962e8f4b5392ada11466dc53d413b5988d11c85b8, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-s-d03-v2-review-r0.yaml, sha256: 4368ee7f4373f59772d293780ea47b4e63f359545d1e090c21c5da11a47506a2, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-s-layer-review-r0.yaml, sha256: 44bea1556895584b67ec4e8098f8bce9a97e3901b84b723ad9cda7f3ff7b3da1, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-s-layer-review-r1.yaml, sha256: 605b7ccbe1f35da880c6cc6cfde79b8534a7c018d5970668c8ce6057276922b7, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r0.yaml, sha256: 1ee407cad615a4190ae40a8c5e2ed2decaa74d4219b0d92f7bee688c8a07098d, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r1.yaml, sha256: 6b47f481f26b08174e43bdf7ffc15933def142c6b795dbd5b7d0f17de85900fa, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r2.yaml, sha256: 8cf7e835e65def7a18a93470fe6cb4cb3153cc30df78e258d488e4feb00e84b1, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r0.yaml, sha256: 333d728699c9d2cb903be470aa6275cd085e91afecf68f445d20560605e312c0, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-control-d03-v2-review-r0.yaml, sha256: 761169695ac2253875d968cee8d171eceee1922127a878b004a3e857db48127b, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-control-review-r0.yaml, sha256: 7404e383404a578e9d909997213efbec61f2d49e641fd453835ab8e39af81cc8, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-control-review-r1.yaml, sha256: 1f8a291312d98429f755f79e0137fbde49f56ca98f2bf6b8430637888455dd4b, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-00-shared-control-review-r2.yaml, sha256: f9725905ee763dff666511d3197d7c0ca341c9274ed57ed803852146e46a8635, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml, sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml, sha256: e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml, sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml, sha256: be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-d03-checkpoint-phase-partition-review-input-r0.yaml, sha256: 08f21efdd2c1aa7b65a6b566684ed051520290b48e1355359d39568abd018a74, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-executor-profile-review-input-r0.yaml, sha256: babbfa47d144477103a966ae04cde1af0afd66ca64ec101b71417744a0f2486b, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-s-d03-v2-review-input-r0.yaml, sha256: 3fa043af146ed049a0659e86fe96d8a28aa9970ac11c032d801cddd69475a2e9, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-s-layer-plan-v1.0.0.md, sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-s-layer-review-input-r0.yaml, sha256: bc09d3818f94c1b6224096c1d3054691b83de00f62633dd76a592c483346cd21, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-s-layer-review-input-r1.yaml, sha256: 64d795ed9ea1c780bec288c17959c8ff15482ac93c3318875ceed0376b1e3a33, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.0.0.md, sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.1.0.md, sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r0.yaml, sha256: d91facd5d4f547b2cba16597ae0322d0322bbf4a52504c62210d67f05391e343, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r1.yaml, sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r2.yaml, sha256: 21d774fb1855dcc20b2aad69836d3b3489e602838f55f27375d6bd8c724d6dd7, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-plan-v1.0.0.md, sha256: f953aa6a7ad6ee947e0a5ce0b9fc0759dcd91b3a0b52e2cb4bc8d2fe7b558c4a, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-review-input-r0.yaml, sha256: 538e45e4f354dac7e64471586c0e1245a41dae7da5a33febcef0f71c229eb869, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-review-input-r1.yaml, sha256: 80b0c8e0ed39f07125c2110b2b3143390db2d93d7c8d615e279762ca879c7a36, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-d03-v2-review-input-r0.yaml, sha256: d24c08fabd8a7400db574a01b622a513dac8758b764ebc2b70d3b4a11b90048d, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-plan-v1.0.0.md, sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-plan-v1.1.0.md, sha256: 0e22dd506e9846dd0f0bda8290c6ddb9e061d7e6794a5e092ce630752b9f6ddd, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-review-input-r0.yaml, sha256: 25ecbe09c56052d6f6287228d0e45fc18c76e3fc6c96650b37dee47e51ee2980, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-review-input-r1.yaml, sha256: 07d8f336a2b584e3f9735371c476a4ed30935bd8465bbfdc1b9ff2cca9e3c0c8, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-00-shared-control-review-input-r2.yaml, sha256: e1bee663f8c4bda4b2f36f798f4e05294a3f1b32fe4f74ac341bbb60f594c3fb, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r0.yaml, sha256: 0e0836feaba7bb327b5bc096710cbd371e7a0a4f3fe92914203c5d770e578da7, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r1.yaml, sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r0.yaml, sha256: e21b6cb5d724ce28b1d4c96a6d52358b79bf680e50c0d23b3c8cef44c6096d66, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r1.yaml, sha256: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7, pre_stage_status: untracked}
+    - {path: new pipeline/state/STATE.md, sha256: 4fe00138b342c36da973cad34f3600c303963b0050a9020039ecdbbe093dc1da, pre_stage_status: untracked}
+    - {path: new pipeline/state/state-projection-profile-v1.yaml, sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d, pre_stage_status: untracked}
+    - {path: new pipeline/state/state.yaml, sha256: 8f8f3a966b5a6f6e3a6e5634af58808715b36ed5f393755cd037c7a9511105d9, pre_stage_status: untracked}
+    - {path: new pipeline/tests/contracts/test_k0b01_contracts.py, sha256: 777e27bc6c0ccec71828ff20a952cf15853bb4686a9667e90051d3b60ba4c4e9, pre_stage_status: untracked}
+    - {path: new pipeline/tests/contracts/test_k0b01_resource_budget.py, sha256: 2d30b21391b2bda0fe0788e7fcb07320dc166cac7df7345099c789265d5dd103, pre_stage_status: untracked}
+    - {path: new pipeline/tests/contracts/test_k0b01_routing_compiler.py, sha256: 2816e2bac8df9b7f14fad38270d527906ed2c6651114a8b21498661314cf0b6a, pre_stage_status: untracked}
+    - {path: new pipeline/tests/foundation/test_k0b01_migration.py, sha256: 46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987, pre_stage_status: untracked}
+
+post_stage_requirements:
+  - staged_path_set_equals_the_134_entries_plus_this_record
+  - git_diff_cached_check_passes
+  - all_18_frozen_index_blob_bytes_match_the_freeze_manifest
+  - containing_commit_has_exactly_one_parent_equal_to_pre_remediation_HEAD
+  - no_forbidden_cache_or_unrelated_path_is_staged
+
+non_authorizations:
+  - no_runtime_contract_registry_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - no_test_or_runtime_execution
+  - no_new_model_agent_review_or_provider_API_call
+  - no_forbidden_root_access
+  - no_push_PR_deploy_release_or_remote_side_effect
+  - no_product_readiness_or_implementation_complete_claim

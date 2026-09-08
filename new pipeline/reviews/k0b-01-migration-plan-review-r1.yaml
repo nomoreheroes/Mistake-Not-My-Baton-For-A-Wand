@@ -1,0 +1,361 @@
+review_id: k0b-01-migration-plan-review-r1
+schema_version: 1
+work_item_id: K0b-01
+review_round: 1
+
+reviewer_identity_independence_and_timestamps:
+  invocation_id: k0b-01-review-migration-plan-r1
+  task_id: k0b01_migration_review_r1
+  reviewer_actor_id: /root/k0b01_migration_review_r1
+  role: independent_migration_plan_revision_reviewer
+  provider: openai
+  model: gpt-5.6-sol
+  model_id: gpt-5.6-sol
+  fresh_context: true
+  reviewed_plan_authored_by_reviewer: false
+  additional_agent_model_or_network_calls: 0
+  review_method: static_design_review_only
+  runtime_execution_or_tests_performed: false
+  started_at: "2026-09-07T16:08:07.2686461Z"
+  completed_at: "2026-09-07T16:08:20.0233082Z"
+
+exact_input_hash_verification:
+  status: pass
+  algorithm: sha256_complete_file
+  mismatches: []
+  inputs:
+    - role: pre_dispatch_receipt
+      path: new pipeline/evidence/k0b-01-migration-plan-review-r1-pre-dispatch-v1.yaml
+      expected: 96bc93ee9d733fd3a65a24d539d85286143dae9d7536f27d023f656ffe225a32
+      observed: 96bc93ee9d733fd3a65a24d539d85286143dae9d7536f27d023f656ffe225a32
+      status: match
+    - role: review_input
+      path: new pipeline/reviews/sources/k0b-01-migration-plan-review-input-r1.yaml
+      expected: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7
+      observed: 74d37170390563c8182e6328fd52de23054d88261adff1cc730d3a985feedbe7
+      status: match
+    - role: review_candidate
+      path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+      expected: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+      observed: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+      status: match
+    - role: owner_continuation
+      path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml
+      expected: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc
+      observed: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc
+      status: match
+    - role: plan_v1_1
+      path: new pipeline/architecture/k0b-01-planning-package-v1.1.md
+      expected: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429
+      observed: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429
+      status: match
+    - role: migration_r0
+      path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml
+      expected: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2
+      observed: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2
+      status: match
+    - role: r0_reconciliation
+      path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml
+      expected: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd
+      observed: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd
+      status: match
+    - role: review_budget_v2
+      path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml
+      expected: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34
+      observed: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34
+      status: match
+    - role: final_K0b_00_disposition
+      path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+      expected: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+      observed: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+      status: match
+    - role: K0b_scope_envelope
+      path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml
+      expected: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde
+      observed: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde
+      status: match
+    - role: shared_control_plan
+      path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md
+      expected: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3
+      observed: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3
+      status: match
+    - role: shared_artifact_event_plan
+      path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+      expected: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce
+      observed: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce
+      status: match
+    - role: validation_platform
+      path: new pipeline/evidence/k0b-01-migration-validation-platform-v1.yaml
+      expected: 509abcbea93182aa641cd048815cee0ffbae4d9a818264e162cb458d35d71f76
+      observed: 509abcbea93182aa641cd048815cee0ffbae4d9a818264e162cb458d35d71f76
+      status: match
+    - role: migration_0001
+      path: new pipeline/harness/migrations/0001_k0a01.sql
+      expected: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+      observed: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3
+      status: match
+    - role: migration_0002
+      path: new pipeline/harness/migrations/0002_k0a02.sql
+      expected: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b
+      observed: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b
+      status: match
+    - role: migration_0003
+      path: new pipeline/harness/migrations/0003_k0a03.sql
+      expected: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b
+      observed: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b
+      status: match
+    - role: K0a01_reader
+      path: new pipeline/harness/k0a01/store.py
+      expected: 06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925
+      observed: 06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925
+      status: match
+    - role: K0a02_reader
+      path: new pipeline/harness/k0a02/store.py
+      expected: 4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55
+      observed: 4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55
+      status: match
+    - role: K0a03_reader
+      path: new pipeline/harness/k0a03/store.py
+      expected: bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7
+      observed: bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7
+      status: match
+    - role: frozen_draft_exclusion
+      path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml
+      expected: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66
+      observed: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66
+      status: match
+
+prior_finding_closure_matrix:
+  - id: K0B01-MIG-R0-001
+    prior_severity: critical
+    prior_blocking: true
+    disposition: closed
+    evidence:
+      - Plan v1.2 section 3 enumerates every internal and external FK incident to the four rebuilt tables and the exact one-index, eleven-trigger owned-object set derived from migrations 0001 through 0003.
+      - Plan v1.2 section 4 fixes final-name staging references, forbids old-parent rename, and specifies create, copy, child-first drop, parent-first rename, object recreation, verification, and commit order.
+      - Foreign keys are disabled and read back before BEGIN IMMEDIATE, then re-enabled and checked after commit on the sole supported SQLite 3.45.3 row.
+  - id: K0B01-MIG-R0-002
+    prior_severity: critical
+    prior_blocking: true
+    disposition: closed
+    evidence:
+      - Plan v1.2 section 5 defines the binary digest header, table and column ordering, length framing, PK-tuple row ordering, storage-class tags, integer and real encodings, exact UTF-8 and BLOB payloads, and row-count framing.
+      - Historical projections exclude only explicitly manifested v4 additions and separately compare payload_json and fields_read_json byte length and hex values.
+      - Section 3 removes the prior same-or-stricter ambiguity and permits changes only to the enumerated CHECK vocabulary locations while requiring exact F00 behavior elsewhere.
+  - id: K0B01-MIG-R0-003
+    prior_severity: high
+    prior_blocking: true
+    disposition: closed
+    evidence:
+      - Plan v1.2 section 6 expressly rejects source-to-backup physical-byte equality as a norm.
+      - It separately records the closed backup artifact hash, verifies that hash on reread, and requires independently reopened backup schema/content equivalence with the source.
+      - Restore is verified-backup-only, targets a distinct validated new path, and forbids down migration and in-place restore.
+  - id: K0B01-MIG-R0-004
+    prior_severity: high
+    prior_blocking: true
+    disposition: closed
+    evidence:
+      - Plan v1.2 section 8 narrows the claim to three complete-file-hash-bound reader implementations and their initialize entry points.
+      - Static inspection confirms each entry point raises MigrationError with exact text unsupported schema version 4 when user_version is 4.
+      - The required synthetic-v4 tests assert the exact type/message and unchanged database/file set without authorizing any K0a edit.
+  - id: K0B01-MIG-R0-005
+    prior_severity: high
+    prior_blocking: true
+    disposition: closed
+    evidence:
+      - Plan v1.2 sections 2 and 7 pin Windows Server 2022, AMD64, CPython 3.12.7 Anaconda, sqlite module 2.6.0, SQLite 3.45.3, WAL, synchronous FULL, and exact reopen recovery.
+      - Deterministic B, T, C, D, R, S, M, and V boundary IDs cover backup, transaction entry, each table copy/drop/rename, schema objects, migration row, user_version, verification, and immediately-before-commit.
+      - Ordinary exceptions are required at every boundary and process termination at post-mutation boundaries, with exact-v3 rollback or complete-v4 success assertions including schema, content, FK graph, WAL/SHM, and restore checks.
+prior_finding_closure_totals:
+  prior_open_blocking_findings: 5
+  closed_in_r1: 5
+  still_open: 0
+  replaced: 0
+
+dependency_schema_object_and_swap_algorithm_analysis:
+  status: pass
+  rebuilt_tables: [runs, run_state_transitions, events, event_deliveries]
+  migration_derived_inventory:
+    runs_external_children:
+      - actor_proposal_consumptions.run_id
+      - actor_proposals.run_id
+      - artifact_version_lineage.run_id
+      - artifact_versions.run_id
+      - artifacts.run_id
+      - deliveries.run_id
+      - manual_dispatches.run_id
+      - publication_transactions.run_id
+      - readback_gates.run_id
+      - replay_points.run_id
+      - sink_acceptances.run_id
+    events_external_children:
+      - deliveries.triggering_event_id_and_run_id
+      - publication_transactions.handoff_event_id_and_run_id
+      - publication_transactions.version_created_event_id_and_run_id
+      - readback_gates.command_event_id_and_run_id
+      - readback_gates.started_event_id_and_run_id
+      - readback_gates.version_created_event_id_and_run_id
+      - readback_gates.handoff_event_id_and_run_id
+      - sink_acceptances.handoff_event_id_and_run_id
+    event_deliveries_external_children:
+      - sink_acceptances.event_delivery_id
+    run_state_transitions_external_children: []
+    internal_edges:
+      - run_state_transitions.run_id_to_runs.run_id
+      - events.run_id_to_runs.run_id
+      - events.caused_by_event_id_and_run_id_to_events.event_id_and_run_id
+      - event_deliveries.event_id_to_events.event_id
+    events_outbound_external_edges:
+      - events.initiated_by_invocation_id_and_run_id_to_physical_invocations.invocation_id_and_run_id
+      - events.artifact_version_id_and_run_id_to_artifact_versions.artifact_version_id_and_run_id
+    rebuilt_table_explicit_indexes: [events_run_type_idx]
+    rebuilt_table_triggers:
+      - event_deliveries_immutable_delete
+      - event_delivery_snapshot_immutable
+      - event_delivery_state_transition_is_exact
+      - events_immutable_delete
+      - events_immutable_update
+      - run_completed_event_requires_gate
+      - run_identity_immutable
+      - run_state_transitions_immutable_delete
+      - run_state_transitions_immutable_update
+      - runs_k0a02_blocks_completed_insert
+      - runs_k0a02_requires_completion_gate
+  inventory_matches_plan_v1_2: true
+  swap_algorithm:
+    foreign_keys_off_before_begin: true
+    staging_references_use_final_names: true
+    old_parent_rename_forbidden: true
+    create_order: [runs, events, run_state_transitions, event_deliveries]
+    copy_order: [runs, events, run_state_transitions, event_deliveries]
+    child_first_drop_order: [event_deliveries, run_state_transitions, events, runs]
+    parent_first_rename_order: [runs, events, run_state_transitions, event_deliveries]
+    owned_object_recreation_after_final_names: true
+    external_sqlite_schema_byte_comparison_before_commit: true
+    exact_final_v4_schema_fingerprint_required: true
+    integrity_and_foreign_key_checks_before_and_after_commit: true
+    assessment: single_valued_and_SQLite_3_45_3_safe_at_plan_level
+  constraint_preservation:
+    exact_F00_branches_required: true
+    permissive_same_or_stricter_language_removed: true
+    only_enumerated_CHECK_vocabulary_locations_may_change: true
+    enumerated_locations:
+      - runs.profile
+      - runs.state
+      - run_state_transitions.from_state
+      - run_state_transitions.to_state
+      - events.event_type
+      - events.event_version
+      - event_deliveries.subscriber_id
+      - event_deliveries.terminal_policy
+      - event_deliveries.state
+    external_schema_objects_must_be_byte_identical: true
+
+historical_digest_backup_and_restore_analysis:
+  status: pass
+  canonical_digest:
+    profile: pipeline-v2.sqlite-content-digest-v1
+    table_order: UTF8_name_bytes
+    column_order: pragma_table_info_cid
+    row_order: lexicographic_binary_complete_declared_primary_key_tuple
+    framing: unsigned_64_bit_big_endian_lengths_and_counts
+    storage_classes: [NULL, INTEGER, REAL, TEXT, BLOB]
+    integer_encoding: signed_64_bit_twos_complement_big_endian
+    real_encoding: IEEE_754_binary64_big_endian_NaN_forbidden
+    text_encoding: exact_UTF8_invalid_encoding_blocks
+    blob_encoding: raw_bytes
+    historical_projection_is_explicit_not_discovered: true
+    payload_json_byte_check: length_cast_blob_and_hex_cast_blob
+    fields_read_json_byte_check: length_cast_blob_and_hex_cast_blob
+    independently_reproducible: true
+  additional_historical_checks:
+    - row_counts
+    - primary_key_sets
+    - unique_key_sets
+    - foreign_key_edge_tuples
+    - state_revisions
+    - exact_F00_graph_readback
+  backup:
+    backup_artifact_hash_separate_from_source_physical_hash: true
+    independently_reopened_logical_schema_and_content_match: true
+    backup_hash_stable_on_reread: true
+    second_live_source_digest_before_mutation_required: true
+  restore:
+    verified_backup_only: true
+    distinct_verified_new_path: true
+    reopened_and_reverified: true
+    destructive_in_place_restore: forbidden
+    down_migration: forbidden
+
+fault_platform_and_K0a_reader_analysis:
+  status: pass
+  supported_matrix:
+    exact_row_count: 1
+    operating_system: Windows_Server_2022_10_0_20348
+    architecture: AMD64
+    python: CPython_3_12_7_Anaconda
+    sqlite_python_module: 2.6.0
+    sqlite_library: 3.45.3
+    unlisted_rows: unsupported_without_separate_hash_bound_conformance_evidence
+  connection_and_recovery:
+    journal_mode: WAL
+    synchronous: FULL
+    busy_timeout_ms: 5000
+    recursive_triggers: true
+    legacy_alter_table: false
+    checkpoint_before_backup: TRUNCATE_zero_busy_frames
+    reopen_recovery_without_blind_retry: true
+    exact_outcomes: [exact_v3_after_precommit_failure, complete_v4_success_control]
+    boundary_set_named_and_testable: true
+  reader_rejection:
+    - reader: K0a01Store
+      entry_point: K0a01Store.initialize()
+      schema_version: 1
+      result_for_v4: 'MigrationError("unsupported schema version 4")'
+      K0a_edit_required: false
+    - reader: K0a02Store
+      entry_point: K0a02Store.initialize()
+      schema_version: 2
+      result_for_v4: 'MigrationError("unsupported schema version 4")'
+      K0a_edit_required: false
+    - reader: K0a03Store
+      entry_point: K0a03Store.initialize()
+      schema_version: 3
+      result_for_v4: 'MigrationError("unsupported schema version 4")'
+      K0a_edit_required: false
+  exact_reader_claim_is_falsifiable: true
+
+scope_and_non_authorization_analysis:
+  status: pass
+  planning_only: true
+  consistent_with_final_K0b_00_authority: true
+  final_K0b_00_authorizes_separate_K0b_01_planning_only: true
+  owner_continuation_authorizes_v1_2_and_two_bounded_r1_reviews_only: true
+  implementation_gate_opened: false
+  later_gate_requirements_preserved:
+    - both_r1_reviews_approve_with_zero_open_blocking_findings
+    - separate_human_only_review_and_signoff
+    - later_exact_hash_bound_implementation_owner_disposition
+  forbidden_inputs_used: []
+  canonical_fixture_accessed: false
+  research_old_swarm_accessed: false
+  projects_swarm_accessed: false
+  frozen_engineering_draft_or_tests_accessed: false
+  frozen_draft_exclusion_record_used_only_to_confirm_exclusion: true
+  runtime_code_contract_schema_registry_migration_or_fixture_implemented: false
+  implementation_runtime_or_test_execution_performed: false
+  files_edited_other_than_required_output: []
+  commit_push_PR_deploy_or_release_performed: false
+
+findings_external_blockers_and_recommendation:
+  findings: []
+  open_finding_count: 0
+  open_blocking_finding_count: 0
+  closed_prior_blocking_finding_count: 5
+  external_blockers: []
+  recommendation: approve
+  rationale: >-
+    Plan v1.2 closes all five migration r0 blockers with a hash-bound, single-valued,
+    SQLite-3.45.3-specific migration design and independently falsifiable preservation,
+    backup, reader-compatibility, and crash-recovery requirements. It remains planning-only,
+    uses no forbidden source, and creates no implementation or runtime authority.

@@ -1,0 +1,82 @@
+document_id: pipeline-v2.k0b-00.d03-successor-return-budget-owner-disposition
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-04T12:08:50.9413213+03:00"
+scope: K0b-00 artifact-event F-01 correction plus completion of the D03 three-plan successor sequence
+status: approved
+
+provenance:
+  mode: conversational_only
+  actor_id: owner
+  role: project_owner
+  source_ref: current_thread_owner_response_2026-09-04
+  owner_statement: "Разрешаю увеличить лимит до 30 на указанных условиях и если потребуется еще"
+  normalized_interpretation: >-
+    Increase the exact K0b-plan-deltas effective design-invocation cap from 24
+    to 30. Use ordinals 23/24 for the bounded artifact/event F-01 author return
+    and independent rereview, then 25/26 for the separate S successor author
+    and independent review. Ordinals 27-30 are conditional reserve only for a
+    concrete typed non-approve finding in this same K0b-00 successor package.
+    No invocation may be spent speculatively, substituted for runtime, or
+    carried to another package. Any need above 30 must first be materialized as
+    another exact owner budget record despite the owner's stated willingness.
+
+hash_bound_basis:
+  prior_budget_authority: {path: new pipeline/decisions/k0b-00-review-budget-extension-owner-disposition-v1.yaml, sha256: 6a9bbf74f7b759ef8a96ce69d0e901bdd7387281cf39c6227267d96e4d814edc}
+  reviewed_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, version: "2.0.0", sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f}
+  review_input: {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r0.yaml, sha256: d91facd5d4f547b2cba16597ae0322d0322bbf4a52504c62210d67f05391e343}
+  review: {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r0.yaml, recommendation: revise, blocking_findings: 1, sha256: 1ee407cad615a4190ae40a8c5e2ed2decaa74d4219b0d92f7bee688c8a07098d}
+  design_ledger: {path: new pipeline/ledgers/design-invocations.yaml, entries: 39, K0b_entries: 22, sha256: 037b9658d474a2a21f8183a24fad73678dee7f6d5abb960b2955710976aba283}
+
+budget_disposition:
+  package_id: K0b-plan-deltas
+  prior_effective_cap: 24
+  new_effective_cap: 30
+  additional_invocations: 6
+  completed_at_disposition: 22
+  exact_primary_sequence:
+    - {ordinal: 23, invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r1, purpose: correct_only_review_F_01_and_bind_budget_authority}
+    - {ordinal: 24, invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r1, purpose: fresh_context_rereview_of_exact_revision}
+    - {ordinal: 25, invocation_id: k0b-00-author-s-d03-v2, purpose: separate_S_D03_successor_authoring}
+    - {ordinal: 26, invocation_id: k0b-00-review-s-d03-v2-r0, purpose: fresh_context_review_of_exact_S_successor}
+  conditional_reserve:
+    ordinals: [27, 28, 29, 30]
+    permitted_only_for: bounded_author_and_fresh_reviewer_return_pair_addressing_a_typed_non_approve_finding_from_ordinal_24_or_26
+    maximum_pairs: 2
+    unused_credit: expires_at_exact_K0b_00_architecture_package_disposition
+  accounting_rule: Every completed author or review invocation is appended to the design ledger with exact input/output hashes before the next dependent author or approval record.
+  carry_forward_to_runtime_or_other_phase: forbidden
+  substitution_for_F15_or_K0b_runtime_calls: forbidden
+
+authorized_artifact_event_change:
+  plan_path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md
+  finding_id: F-01
+  version_change: 2.0.0_to_2.1.0
+  exact_semantic_result: >-
+    One artifact publication atomically persists its artifact version and only
+    the control-admitted required event subset selected from the immutable
+    exact 21-event compiled profile, with each selected event receiving its
+    applicable immutable subscriber and terminal snapshots. An event outside
+    that profile, an unadmitted event, or an incomplete selector blocks before
+    mutation. The change must preserve all D03 arithmetic and every other
+    passing v2 contract.
+  allowed_metadata_changes:
+    - plan_version_to_2_1_0
+    - revision_input_hash_binding
+    - this_budget_authority_hash_binding
+    - design_budget_ordinals_and_conditional_reserve_description
+
+limits_not_waived:
+  - Fresh-context review and exact input/output hashes remain mandatory.
+  - The author cannot disposition its own finding or issue owner approval.
+  - Artifact/event v2 must recommend approve before S authoring starts.
+  - No static runtime model ID is inferred; manual dispatch receipts remain pending pre-dispatch.
+  - Policy thresholds, storage, factor, seeds, phase identities, call chronology and trigger cardinality remain unchanged.
+
+explicit_non_authorizations:
+  - runtime_code_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call
+  - owner_approval_or_automatic_D03_closure
+  - canonical_fixture_modification
+  - reading_or_modifying_research/old-swarm
+  - running_or_modifying_projects/swarm
+  - commit_push_merge_deploy_or_release

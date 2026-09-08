@@ -1,0 +1,58 @@
+receipt_id: k0b-01-compiler-budget-plan-review-r1-pre-dispatch-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-07T18:57:19.7030627+03:00"
+work_item_id: K0b-01
+status: exact_ready_for_single_terminal_budget_dispatch
+
+authority:
+  owner_continuation: {path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc}
+  review_budget_v2: {path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml, sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34}
+  review_candidate: {path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff}
+
+dispatch:
+  invocation_id: k0b-01-review-compiler-budget-plan-r1
+  task_name: k0b01_compiler_budget_review_r1
+  canonical_actor_id: /root/k0b01_compiler_budget_review_r1
+  purpose: revision_review
+  review_round: 1
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  model_selection_source: exact_spawn_agent_model_parameter
+  execution_surface: Codex_collaboration_subagent
+  fork_turns: none
+  inherited_author_context: false
+  direct_provider_API_REST_SDK_or_managed_credentials: false
+  review_input: {path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r1.yaml, sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495}
+  required_output: {path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml, format: YAML}
+
+controls:
+  additional_subagents_or_model_calls: forbidden
+  network_web_API_plugins_connectors_or_external_state: forbidden
+  implementation_runtime_or_test_execution: forbidden
+  file_write_allowlist: [new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml]
+  frozen_draft_canonical_fixture_projects_swarm_research_old_swarm_access: forbidden
+
+budget_binding:
+  package_id: K0b01-plan-v1.1-independent-reviews
+  package_call_ordinal: 4
+  call_cost: 1
+  calls_consumed_before: 3
+  calls_remaining_after: 0
+  checkpointed: false
+  runtime_or_F15_credit: 0
+
+ledger_binding:
+  invocation_ID_reserved_unique_before_dispatch: true
+  pending_incomplete_ledger_entry_created: false
+  completed_entry_required_after_terminal_output: true
+
+hard_stop:
+  - any_hash_model_actor_task_or_output_path_mismatch
+  - output_path_exists_before_dispatch
+  - need_for_any_forbidden_input_action_or_additional_agent
+
+receipt_hash_binding:
+  complete_file_SHA256: external_dispatch_record_and_future_completed_ledger_evidence
+  self_embedded_hash: forbidden

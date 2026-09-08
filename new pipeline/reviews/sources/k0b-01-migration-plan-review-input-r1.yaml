@@ -1,0 +1,89 @@
+manifest_id: k0b-01-migration-plan-review-input-r1
+schema_version: 1
+review_round: 1
+work_item_id: K0b-01
+status: ready_for_exact_authorized_agent_dispatch
+mode: independent_fresh_context_revision_review_typed_output_only
+
+dispatch_binding:
+  invocation_ID: k0b-01-review-migration-plan-r1
+  reviewer_actor_ID: /root/k0b01_migration_review_r1
+  provider: openai
+  model: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  transport: Codex_collaboration_fresh_context_subagent
+  fork_turns: none
+  inherited_author_context: false
+  direct_provider_API: forbidden
+  exact_pre_dispatch_receipt_path: new pipeline/evidence/k0b-01-migration-plan-review-r1-pre-dispatch-v1.yaml
+
+exact_review_candidate:
+  path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+  version: "1.2.0"
+  sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+
+revision_authority_and_prior_finding:
+  - {role: owner_continuation, path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc}
+  - {role: plan_v1_1, path: new pipeline/architecture/k0b-01-planning-package-v1.1.md, sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429}
+  - {role: migration_r0, path: new pipeline/reviews/k0b-01-migration-plan-review-r0.yaml, sha256: 7446b15de247d14ee6c717f709ca46e3e7904ebd9ded77dc3dc63e53db5fdad2}
+  - {role: r0_reconciliation, path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd}
+  - {role: review_budget_v2, path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml, sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34}
+
+allowed_authority_and_schema_inputs:
+  - {role: final_K0b_00_disposition, path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+  - {role: K0b_scope_envelope, path: new pipeline/architecture/k0b-00-scope-envelope-v2.yaml, sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde}
+  - {role: shared_control_plan, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3}
+  - {role: shared_artifact_event_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce}
+  - {role: validation_platform, path: new pipeline/evidence/k0b-01-migration-validation-platform-v1.yaml, sha256: 509abcbea93182aa641cd048815cee0ffbae4d9a818264e162cb458d35d71f76}
+  - {role: migration_0001, path: new pipeline/harness/migrations/0001_k0a01.sql, sha256: 9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3}
+  - {role: migration_0002, path: new pipeline/harness/migrations/0002_k0a02.sql, sha256: 7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b}
+  - {role: migration_0003, path: new pipeline/harness/migrations/0003_k0a03.sql, sha256: 0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b}
+  - {role: K0a01_reader, path: new pipeline/harness/k0a01/store.py, sha256: 06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925}
+  - {role: K0a02_reader, path: new pipeline/harness/k0a02/store.py, sha256: 4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55}
+  - {role: K0a03_reader, path: new pipeline/harness/k0a03/store.py, sha256: bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7}
+  - {role: frozen_draft_exclusion, path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66}
+
+review_rubric:
+  - Verify every complete-file hash before substantive review; stop on any mismatch.
+  - Re-enumerate foreign keys and schema objects from exact migrations 0001-0003 and compare to v1.2 sections 3-4.
+  - Decide whether foreign_keys OFF before BEGIN, final-name staging references, no old-parent rename, child-first drop, parent-first rename, external sqlite_schema byte comparison, and postchecks form a single-valued SQLite 3.45.3-safe algorithm.
+  - Verify only enumerated CHECK vocabularies change and every F00 trigger/constraint branch remains exact.
+  - Independently assess canonical content digest framing, PK ordering, storage-class encodings, payload/fields JSON byte checks, and historical projection exclusions for reproducibility and completeness.
+  - Verify backup artifact hashing is separate from logical source/backup equality and restore is exact, new-path, and non-destructive.
+  - Verify every exception/process-loss boundary, WAL/FULL assumptions, recovery procedure, and exact v3-or-v4 assertion is named and testable on the one supported matrix row.
+  - Verify the three exact K0a reader hashes/entry points already produce the specified typed version-4 rejection without any K0a edit.
+  - Map each prior finding K0B01-MIG-R0-001 through 005 to closed, still-open, or replaced; any residual ambiguity is blocking.
+  - Confirm scope remains planning-only and the frozen draft/fixture/forbidden roots were neither needed nor used.
+
+required_output:
+  path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml
+  format: YAML
+  maximum_non_empty_lines: 550
+  required_sections:
+    - reviewer_identity_independence_and_timestamps
+    - exact_input_hash_verification
+    - prior_finding_closure_matrix
+    - dependency_schema_object_and_swap_algorithm_analysis
+    - historical_digest_backup_and_restore_analysis
+    - fault_platform_and_K0a_reader_analysis
+    - scope_and_non_authorization_analysis
+    - findings_external_blockers_and_recommendation
+  recommendation_enum: [approve, approve_with_changes, revise, narrow, block]
+  approval_requirement: approve_with_zero_open_blocking_findings
+  other_file_edit: forbidden
+
+terminal_budget:
+  call_ordinal_in_package: 3
+  calls_remaining_after_dispatch: 1_reserved_for_compiler_budget_r1
+  any_migration_r2_or_correction_model_call: forbidden
+
+forbidden_inputs_and_actions:
+  - frozen_engineering_draft_files_other_than_exclusion_record
+  - canonical_fixture_content
+  - research/old-swarm
+  - projects/swarm
+  - network_API_external_or_unpinned_state
+  - implementation_runtime_or_test_execution
+  - additional_agents_or_model_calls
+  - editing_any_file_except_required_output
+  - commit_push_PR_deploy_or_release

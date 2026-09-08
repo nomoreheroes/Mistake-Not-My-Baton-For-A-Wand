@@ -1,0 +1,389 @@
+review_id: k0b-00-s-layer-review-r0
+schema_version: 1
+review_round: 0
+review_type: independent_fresh_context_layer_architecture_delta_review
+status: completed_with_findings
+started_at: "2026-09-02T18:33:57.8615072+03:00"
+completed_at: "2026-09-02T18:47:52.6366150+03:00"
+
+reviewer:
+  actor_id: /root/review_k0b_s_r0
+  execution_agent: /root/k0b_s_review_r0
+  provider: openai
+  model: gpt-5.6-sol
+  profile: k0b_independent_s_architecture_delta_review_v1
+  fresh_context: true
+  inherited_author_context: false
+  authored_any_reviewed_plan_version: false
+  owner_approval: false
+  conflict_declaration: >-
+    No conflict. The reviewer authored no version of the reviewed plan, received
+    no author conversation transcript, hidden author summary, author input
+    manifest, prior reviewer private context, or canonical fixture content, used
+    only the hash-verified manifest-authorized inputs, did not inspect forbidden
+    directories, runtime contracts, migrations, prompts, fixture code, or any
+    unlisted file, and edited only this new review record.
+
+input_manifest:
+  path: new pipeline/reviews/sources/k0b-00-s-layer-review-input-r0.yaml
+  sha256: bc09d3818f94c1b6224096c1d3054691b83de00f62633dd76a592c483346cd21
+  manifest_id: k0b-00-s-layer-review-input-r0
+  mode_observed: fresh_context_read_only_inputs_typed_review_output_only
+
+reviewed_plan:
+  plan_id: k0b-00-s-layer-delta
+  path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md
+  version: "1.0.0"
+  declared_sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04
+  actual_sha256_at_review_start: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04
+  actual_sha256_at_review_completion: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04
+  hash_match: true
+
+baseline:
+  path: new pipeline/architecture/k0a-00-s-layer-v1.md
+  version: "1.2.0"
+  declared_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+  actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77
+  hash_match: true
+
+input_hash_verification:
+  result: pass
+  verified_count: 17
+  mismatches: []
+  inputs:
+    - {role: exact_plan, path: new pipeline/architecture/k0b-00-s-layer-delta-v1.md, expected_sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04, actual_sha256: b09f15a57c0dce104e2aaedd4730396984a9a1b3977b8de5c4a56f0bee72cc04, result: pass}
+    - {role: baseline, path: new pipeline/architecture/k0a-00-s-layer-v1.md, expected_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, actual_sha256: 9daf44b49451f5261d618ca183cb50d6c793b608e03caeca2c07788068d55a77, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md, expected_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, actual_sha256: f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9, result: pass}
+    - {role: allowed_input, path: new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md, expected_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, actual_sha256: 679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, actual_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, result: pass}
+    - {role: allowed_input, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, actual_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, actual_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, result: pass}
+    - {role: allowed_input, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, actual_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0b-00-scope-envelope-v1.yaml, expected_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, actual_sha256: fe63742498a8192c7f67c5d430eb8c466d3621d873e3486115102510e7ca779a, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0a-00-shared-control-plane-v1.md, expected_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f, actual_sha256: 8ba07c56d850b85c2dac8c24a5fa8f18e3a677a45c90b496b86e057921f4a93f, result: pass}
+    - {role: allowed_input, path: new pipeline/architecture/k0a-00-shared-artifact-event-plane-v1.md, expected_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, actual_sha256: 671b238c2dfd76f2b37d4ba3ff9db3a5b67ce5e4295483e0d202e060f57e5860, result: pass}
+    - {role: provisional_sibling_compatibility_input_not_approved_authority, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md, expected_sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, actual_sha256: 351ed7c1d498bfdb20995a4e7688236950dfbb260fa8d3131fae78aae4712823, result: pass}
+    - {role: independently_reviewed_provisional_sibling_compatibility_input_not_owner_approved, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md, expected_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, actual_sha256: 750d0bc8124faf59559bde60d320b6bc694dafe0755514312b57004172408240, result: pass}
+    - {role: sibling_review_recommendation_not_owner_approval, path: new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml, expected_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, actual_sha256: 616506ba0535b88dd5039c4e819f3b2d4a7258db47ebd5227e66fb09d828eb0b, result: pass}
+    - {role: allowed_input, path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml, expected_sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1, actual_sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1, result: pass}
+    - {role: allowed_input, path: new pipeline/evidence/k0a-03-validation-v1.yaml, expected_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, actual_sha256: 86e40712ac2d8bfc31156f90531f7975f1d9f9dfb17d08e998f93ab5c1ebe158, result: pass}
+    - {role: allowed_input, path: new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml, expected_sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, actual_sha256: 65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b, result: pass}
+
+section_and_complexity_checks:
+  count_method: non_empty_full_file_lines_including_tables_and_section_headings
+  required_numbered_sections: 18
+  actual_numbered_sections: 18
+  additional_scope_envelope_sections: 1
+  section_presence_result: pass
+  complexity_tier: narrow
+  full_file_non_empty_lines: 154
+  full_file_cap: 500
+  full_file_result: pass
+  routing: {section: 4, actual_non_empty_lines: 15, declared_plan_budget: 45, gate_cap: 95, result: pass}
+  roster: {section: 8, actual_non_empty_lines: 10, declared_plan_budget: 12, gate_cap: 45, result: pass}
+  failure_recovery: {section: 9, actual_non_empty_lines: 17, declared_plan_budget: 32, gate_cap: 95, result: pass}
+  current_S_dispatchers: 1
+  current_S_workers: 0
+  canonical_route_ids: 5
+  canonical_semantic_schema_identities: 4
+  F04_external_reviewer_role_ids: 2
+  alpha0_event_types_referenced_from_exact_scope: 21
+  public_S_event_types: 0
+  assigned_scenarios: 10
+
+budget_checks:
+  plan_production_invocations:
+    package_id: K0b-plan-deltas
+    profile: light
+    declared: {nominal: 6, worst_case: 12}
+    tier_limits: {nominal_max: 12, worst_case_max: 20}
+    result: pass
+  runtime_invocations:
+    package_id: K0b-runtime-operational
+    profile: standard
+    declared: {nominal: 16, worst_case: 30}
+    tier_limits: {nominal_max: 30, worst_case_max: 50}
+    result: pass_with_K0b_D04_blocker
+    blocker: F15_requires_36_physical_attempts_and_must_be_reconciled_before_any_call
+  plan_human_attention:
+    profile: light
+    sessions: {nominal: 1, worst_case: 1}
+    blocking_decisions: {nominal: 1, worst_case: 2}
+    active_minutes: {nominal: 30, worst_case: 30}
+    max_single_session_minutes: 30
+    batchable_requests: true
+    result: pass
+  binary_payload_budget:
+    applicability: "N/A"
+    nominal_objects_and_bytes: 0
+    worst_case_objects_and_bytes: 0
+    contract_prohibits_binary_persistence: true
+    producer_budgeted_payload_reference_only: true
+    result: pass
+
+rubric_checks:
+  exact_plan_baseline_scope_gate_forecast_policy_and_allowed_input_hashes:
+    result: pass
+    evidence: input_hash_verification
+  delta_only_one_S_layer_one_S0_zero_S_workers_and_all_18_categories:
+    result: pass
+    evidence: section_and_complexity_checks
+  binding_K0a_F00_real_S0_raw_proposal_harness_validation_and_evidence_semantics:
+    result: pass
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#4-input-events-guards-routing-fan-out-barriers-and-fast-paths
+      - new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml#binding_disposition
+      - new pipeline/evidence/k0a-03-validation-v1.yaml#real_f00
+  S_semantic_route_revision_and_freeze_ownership_without_side_effect_drift:
+    result: finding
+    finding_refs: [F-01]
+  closed_schema_identities_and_deterministic_compiler_boundary:
+    result: finding
+    finding_refs: [F-01, F-03]
+  exact_F04_roles_and_all_required_barrier_without_peer_visibility_or_dynamic_roster:
+    result: finding
+    finding_refs: [F-02]
+    passed_subclaims:
+      - exact_role_ids_are_fixture_alpha0_primary_reviewer_and_fixture_alpha0_adversarial_reviewer
+      - membership_is_immutable
+      - policy_is_all_required
+      - peer_visibility_is_forbidden
+      - dynamic_roster_and_substitution_are_forbidden
+  F05_owner_resolution_minimal_replay_abort_reconciliation_and_freeze:
+    result: finding
+    finding_refs: [F-01]
+    passed_subclaims:
+      - control_computes_minimal_descendant_subgraph
+      - evidence_is_not_deleted
+      - abort_freeze_is_monotonic
+      - resume_requires_control_owned_reconciliation_and_matching_pins
+  no_public_S_events_exact_21_event_profile_and_terminal_policies:
+    result: pass
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#5-output-events-subscribers-terminal-policy-and-cross-plane-handoffs
+      - new pipeline/architecture/k0b-00-scope-envelope-v1.yaml#minimal_alpha_event_profile
+  context_trust_provenance_injection_security_egress_repository_and_binary_NA:
+    result: pass
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#7-contextquery-allowlists-trust-provenance-and-prompt-injection
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#11-tools-side-effects-security-egress-and-repository-boundaries
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#13-binary-payload-budget-or-proved-na
+  failure_crash_idempotency_duplicate_late_result_compatibility_observability_and_acceptance:
+    result: finding
+    finding_refs: [F-02, F-03]
+    passed_subclaims:
+      - identical_S_proposal_duplicate_returns_original_disposition
+      - conflicting_S_proposal_duplicate_blocks_and_records_incident_evidence
+      - late_result_cannot_unfreeze_or_revive_run
+      - compatibility_is_exact_and_fail_closed
+      - crash_acceptance_is_falsifiable
+      - observability_fields_are_bounded_and_raw
+  complexity_routing_roster_failure_invocation_human_attention_and_F15_thresholds:
+    result: pass_with_declared_external_blocker
+    evidence: section_and_complexity_checks_and_budget_checks
+    external_blocker: K0b-D04
+  K0b_D01_D02_D04_activated_D03_and_binary_variance_unresolved:
+    result: pass
+    unresolved: [K0b-D01, K0b-D02, K0b-D03, K0b-D04, binary_forecast_reconciliation]
+    owner_option_selected: false
+  cross_plan_inconsistency_is_surfaced_not_silently_resolved:
+    result: pass
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#18-risks-open-decisions-blockers-and-deferred-capabilities
+      - new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md#18-risks-open-decisions-and-deferred-capabilities
+    note: >-
+      The S plan explicitly reports that the provisional control delta still
+      describes K0b-D03 as conditional while the reviewed artifact/event delta
+      and the planning-worst forecast make it activated now. The S plan chooses
+      no owner route.
+  no_runtime_contract_registry_migration_prompt_fixture_projection_checkpoint_or_physical_call_implementation:
+    result: pass
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#scope-envelope
+      - new pipeline/architecture/k0b-00-scope-envelope-v1.yaml#planning_authority
+    scope_note: >-
+      This judgment covers the reviewed plan bytes and manifest-authorized
+      package boundary. Unlisted workspace inventory was intentionally not read.
+  explicit_judgment_for_every_gate_category:
+    result: pass
+    evidence: layer_architecture_gate_categories
+
+layer_architecture_gate_categories:
+  - {category: 1, name: purpose_boundaries_non_goals_applicability, judgment: explicit_pass, evidence: reviewed_plan.section_1}
+  - {category: 2, name: dispatcher_deterministic_harness_worker_boundary, judgment: explicit_pass, evidence: reviewed_plan.section_2}
+  - {category: 3, name: state_machine_invariants_terminal_states, judgment: finding, finding_refs: [F-03], evidence: reviewed_plan.section_3}
+  - {category: 4, name: input_events_guards_routing_fanout_barriers_fast_paths, judgment: finding, finding_refs: [F-01, F-02, F-03], evidence: reviewed_plan.section_4}
+  - {category: 5, name: output_events_subscribers_terminal_policy_cross_layer_contracts, judgment: explicit_pass, evidence: reviewed_plan.section_5}
+  - {category: 6, name: artifact_types_ownership_versioning_lineage_key_decisions, judgment: finding, finding_refs: [F-01], evidence: reviewed_plan.section_6}
+  - {category: 7, name: context_query_allowlists_trust_provenance_prompt_injection, judgment: explicit_pass, evidence: reviewed_plan.section_7}
+  - {category: 8, name: current_roster_inputs_outputs_capabilities_stop_conditions, judgment: explicit_pass, evidence: reviewed_plan.section_8}
+  - {category: 9, name: failure_revision_invalidation_replay_recovery_abort, judgment: finding, finding_refs: [F-01, F-02], evidence: reviewed_plan.section_9}
+  - {category: 10, name: hitl_autonomy_approvals_dialogue, judgment: explicit_pass, evidence: reviewed_plan.section_10}
+  - {category: 11, name: tools_side_effects_security_egress_repository_boundaries, judgment: explicit_pass, evidence: reviewed_plan.section_11}
+  - {category: 12, name: context_scale_invocation_and_human_budgets, judgment: explicit_pass_with_external_K0b_D04_blocker, evidence: reviewed_plan.section_12}
+  - {category: 13, name: binary_payload_budget_or_proved_not_applicable, judgment: explicit_pass, evidence: reviewed_plan.section_13}
+  - {category: 14, name: downstream_consumers_and_actual_consumption, judgment: finding, finding_refs: [F-01], evidence: reviewed_plan.section_14}
+  - {category: 15, name: structural_contract_behavioral_fixture_real_project_scenarios, judgment: finding, finding_refs: [F-01, F-02, F-03], evidence: reviewed_plan.section_15}
+  - {category: 16, name: evidence_observability_acceptance_readiness, judgment: explicit_pass_with_review_findings_and_external_gate_conditions, evidence: reviewed_plan.section_16}
+  - {category: 17, name: migration_note_from_K0a_and_old_pipeline, judgment: explicit_pass, evidence: reviewed_plan.section_17}
+  - {category: 18, name: risks_open_decisions_blockers_deferred_capabilities, judgment: explicit_pass, evidence: reviewed_plan.section_18}
+
+reviewer_judgment:
+  ownership_overlap_is_resolved_safely_by_contract:
+    result: finding
+    finding_refs: [F-01]
+    rationale: >-
+      Route meaning, generic compilation/execution, and persistence are cleanly
+      divided, but the F05 owner target is not. The plan alternates between an
+      upstream zero role and the historical producer invocation, leaving the
+      authority boundary and scheduled target ambiguous.
+  current_roster_is_minimal_and_deferred_roster_is_honest:
+    result: explicit_pass
+    rationale: >-
+      The current S roster is exactly one S0 and zero S workers. Layer0 fallback
+      and both F04 reviewers are explicitly external fixture actors, while
+      generalized dispatch, dialogue, retries, leases, scale, and M remain
+      deferred.
+  tests_and_evidence_can_falsify_the_architecture:
+    result: explicit_pass_with_required_finding_repairs
+    rationale: >-
+      The compiler reference cases, F04 member/barrier evidence, F05 lineage and
+      replay graph, freeze/crash/duplicate probes, F15 oracle matrix, and security
+      negatives are falsifiable. F-01 through F-03 must first make the expected
+      owner, duplicate, and state-transition outcomes single-valued.
+  implementation_scope_is_unambiguous_and_sufficient:
+    result: finding
+    finding_refs: [F-01, F-02, F-03]
+    rationale: >-
+      Package and repository scope are bounded, but three central behavioral
+      outcomes currently admit incompatible implementations. The findings can
+      be repaired without widening K0b or selecting an owner decision.
+  security_replay_and_failure_routes_are_coherent:
+    result: finding
+    finding_refs: [F-01, F-02]
+    rationale: >-
+      Freeze, late-result fencing, compatibility, and fail-closed security are
+      coherent. F05 repair ownership and F04 identical-versus-conflicting
+      duplicate handling remain inconsistent with the parent/sibling boundaries.
+
+findings:
+  - finding_id: F-01
+    type: ambiguous_revision_owner_and_target_contract
+    severity: high
+    blocking: true
+    affected_gate_categories: [4, 6, 9, 14, 15]
+    statement: >-
+      F05 does not define one implementable revision-owner target. The route
+      table says S resolves the producing upstream zero, but the following
+      paragraph says S resolves semantic ownership to the producer invocation
+      of the invalidated artifact version, and later sections say only that S
+      names a semantic owner before control compiles replay. A historical
+      producer invocation is evidence and identity, not necessarily the
+      upstream-zero dispatcher role that the parent F05 route and provisional
+      control delta require control to schedule. The current
+      pipeline-v2.s-revision-owner-proposal identity has no stated field split
+      that disambiguates those meanings.
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#2-dispatcher-deterministic-harness-compiler-and-plane-boundaries
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#4-input-events-guards-routing-fan-out-barriers-and-fast-paths
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#6-artifacts-ownership-versioning-lineage-and-key-decisions
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#9-failure-taxonomy-revision-replay-recovery-abort-and-duplicates
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#14-downstream-consumers-and-proof-of-actual-consumption
+      - new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md#204-skeleton-end-to-end-scenarios-on-committed-fixture
+      - new pipeline/architecture/k0b-00-shared-control-plane-delta-v1.md#4-inputs-guards-routing-branches-fan-out-barriers-and-fast-paths
+    impact: >-
+      Implementations could schedule the historical producer, schedule an
+      upstream-zero dispatcher, or bypass that dispatcher and let control replay
+      directly. Those choices assign semantic repair authority differently and
+      cannot all satisfy the same closed compiler/reference tests.
+    proposed_disposition: >-
+      Revise the F05 contract to name exactly one scheduled revision owner. If
+      the intended parent-compatible route is the upstream zero, require separate
+      fields such as revision_owner_zero_role_id and producer_invocation_id, make
+      the latter lineage evidence only, state that control validates both and
+      schedules the exact zero role, and state who selects any deeper worker.
+      If S is intentionally being granted different ownership, route that change
+      through an explicit parent/scope owner decision instead of inferring it.
+
+  - finding_id: F-02
+    type: contradictory_F04_duplicate_result_semantics
+    severity: high
+    blocking: true
+    affected_gate_categories: [4, 9, 15]
+    statement: >-
+      F04 duplicate handling is not single-valued. Section 4 permits the
+      all_required barrier after one valid terminal result from each immutable
+      member. Section 9 groups any duplicate reviewer result with missing and
+      incompatible results and says completion remains blocked. The reviewed
+      artifact/event sibling instead requires a matching duplicate to return the
+      original result and only a non-matching duplicate to block. The S plan's
+      later duplicate rule is limited to proposals and does not repair the
+      reviewer-result conflict.
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#4-input-events-guards-routing-fan-out-barriers-and-fast-paths
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#9-failure-taxonomy-revision-replay-recovery-abort-and-duplicates
+      - new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v1.md#9-failure-taxonomy-invalidation-replay-recovery-abort-and-duplicate-suppression
+      - new pipeline/reviews/k0b-00-shared-artifact-event-review-r1.yaml#machine_checks
+    impact: >-
+      The same identical redelivery can either preserve a satisfiable barrier or
+      permanently block it, so F04 idempotency, crash recovery, and acceptance
+      evidence cannot be compiled to one deterministic result.
+    proposed_disposition: >-
+      Split reviewer duplicates explicitly: an identical duplicate with the same
+      member, identity, canonical bytes, and causation returns the original
+      terminal disposition, contributes no second count, and does not prevent
+      all_required satisfaction; reuse with different bytes, member, or causation
+      is a blocker and incident. State that S consumes the deduplicated logical
+      result set or define the equivalent exact boundary.
+
+  - finding_id: F-03
+    type: incomplete_compiled_nominal_semantic_transition
+    severity: medium
+    blocking: true
+    affected_gate_categories: [3, 4, 15]
+    statement: >-
+      The normative semantic state machine ends the compiled nominal branch at
+      compiled_nominal, while the route table separately says control schedules
+      that branch without an S0 or Layer0 call. No explicit semantic edge or
+      closed handoff maps compiled_nominal to scheduled or route_frozen, even
+      though every transition is said to be control-validated and freeze must
+      prevent new deliveries.
+    evidence_refs:
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#3-semantic-state-machine-invariants-and-terminal-states
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#4-input-events-guards-routing-fan-out-barriers-and-fast-paths
+      - new pipeline/architecture/k0b-00-s-layer-delta-v1.md#16-evidence-observability-acceptance-and-readiness-criteria
+    impact: >-
+      A closed graph compiler must either invent an undeclared transition or
+      treat the primary fast path as terminal, and implementations can disagree
+      about whether a concurrent freeze is checked before scheduling.
+    proposed_disposition: >-
+      Add the exact compiled-nominal handoff to the semantic graph, for example
+      compiled_nominal to scheduled or route_frozen after the control-owned
+      freeze guard, or explicitly declare compiled_nominal a terminal S
+      disposition and define one closed control transition table with the same
+      outcomes. Add positive and frozen negative reference cases.
+
+finding_summary:
+  total: 3
+  blocking: 3
+  high: 2
+  medium: 1
+  low: 0
+  unresolved: 3
+
+external_gate_conditions_not_review_findings:
+  unresolved: [K0b-D01, K0b-D02, K0b-D03, K0b-D04, binary_forecast_reconciliation]
+  owner_option_selected: false
+  implementation_authorized: false
+  owner_approval_issued: false
+
+recommendation: revise
+recommendation_rationale: >-
+  The plan is correctly bounded to one S layer, preserves the approved F00
+  semantics, meets all line and roster budgets, uses no public S event, binds the
+  exact 21-event profile, and honestly preserves every external K0b decision and
+  forecast blocker. Revision is required because F05 ownership, F04 duplicate
+  handling, and the compiled-nominal state handoff are not yet single-valued
+  closed contracts. The proposed repairs are narrow and do not require choosing
+  K0b-D01/D02/D03/D04, reconciling the binary forecast, or widening scope. This
+  recommendation is not owner approval and authorizes no implementation.

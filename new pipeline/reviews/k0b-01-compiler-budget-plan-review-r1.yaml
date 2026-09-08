@@ -1,0 +1,373 @@
+review_id: k0b-01-compiler-budget-plan-review-r1
+schema_version: 1
+work_item_id: K0b-01
+review_round: 1
+review_type: terminal_budget_independent_design_review
+
+reviewer_identity_independence_and_timestamps:
+  invocation_id: k0b-01-review-compiler-budget-plan-r1
+  task_id: k0b01_compiler_budget_review_r1
+  reviewer_actor_id: /root/k0b01_compiler_budget_review_r1
+  provider: openai
+  model: gpt-5.6-sol
+  model_id: gpt-5.6-sol
+  model_ID: gpt-5.6-sol
+  started_at: "2026-09-07T16:02:47.040Z"
+  completed_at: "2026-09-07T16:07:53.164Z"
+  timestamps_timezone: UTC
+  fresh_context: true
+  fork_turns: none
+  inherited_author_context: false
+  authored_reviewed_plan: false
+  conflicts_disclosed: []
+  additional_agents_or_model_calls: 0
+  network_API_or_external_state_access: false
+  runtime_execution_or_tests: false
+  review_mode: independent_read_only_hash_bound_planning_review
+
+exact_input_hash_verification:
+  result: pass
+  algorithm: SHA-256
+  complete_file_hashes_verified_before_substantive_review: true
+  gate_bindings:
+    - role: pre_dispatch_receipt
+      path: new pipeline/evidence/k0b-01-compiler-budget-plan-review-r1-pre-dispatch-v1.yaml
+      expected_sha256: 43b75d10193757b2018b155f8b00d06625b6d6ecdced85b56c60ebd2e23b409e
+      observed_sha256: 43b75d10193757b2018b155f8b00d06625b6d6ecdced85b56c60ebd2e23b409e
+      match: true
+    - role: review_input
+      path: new pipeline/reviews/sources/k0b-01-compiler-budget-plan-review-input-r1.yaml
+      expected_sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495
+      observed_sha256: 800626104e0699b5516908d454bcbbfedecd34f26ca4286ecd8f69310de69495
+      match: true
+  reviewed_bindings:
+    - {role: review_candidate, path: new pipeline/architecture/k0b-01-planning-package-v1.2.md, expected_sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff, observed_sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff, match: true}
+    - {role: owner_continuation, path: new pipeline/decisions/k0b-01-plan-v1.2-owner-continuation-v1.yaml, expected_sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc, observed_sha256: e1d7c0d60150e1098d065dc5fba915a2db002e4f5dee69469a5bb18c93c293bc, match: true}
+    - {role: plan_v1_1, path: new pipeline/architecture/k0b-01-planning-package-v1.1.md, expected_sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, observed_sha256: 14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429, match: true}
+    - {role: compiler_budget_r0, path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r0.yaml, expected_sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c, observed_sha256: a57b85f422fc5b2002b2f814c4f21eca7d79a69855d1de7b2d6004d4845c096c, match: true}
+    - {role: r0_reconciliation, path: new pipeline/evidence/k0b-01-r0-review-dispatch-reconciliation-v1.yaml, expected_sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd, observed_sha256: 4544812b3f632bcdad469c5672947beaa467dd64f1c89913e435308595b4ecdd, match: true}
+    - {role: review_budget_v2, path: new pipeline/evidence/k0b-01-plan-v1.2-review-budget-supplement-v2.yaml, expected_sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34, observed_sha256: 19a8603578bdf93f2572fcd994ad8012ec34f0be87f9f7aa84f973b08cd70d34, match: true}
+    - {role: final_K0b_00_disposition, path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, expected_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, observed_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d, match: true}
+    - {role: layer_architecture_gate, path: new pipeline/decisions/d0-02-layer-architecture-gate.yaml, expected_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, observed_sha256: 1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4, match: true}
+    - {role: full_route_forecast, path: new pipeline/decisions/d0-01-full-route-forecast.yaml, expected_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, observed_sha256: 7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840, match: true}
+    - {role: base_checkpoint_policy, path: new pipeline/registry/checkpoint-budget-policy/v1.yaml, expected_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, observed_sha256: 8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3, match: true}
+    - {role: K0b_phase_overlay, path: new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml, expected_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, observed_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, match: true}
+    - {role: canonical_hash_profile, path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml, expected_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, observed_sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992, match: true}
+    - {role: K0b_phase_addendum, path: new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md, expected_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, observed_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c, match: true}
+    - {role: shared_control_plan, path: new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md, expected_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, observed_sha256: ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3, match: true}
+    - {role: shared_artifact_event_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, expected_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, observed_sha256: 9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce, match: true}
+    - {role: S_plan, path: new pipeline/architecture/k0b-00-s-layer-delta-v2.md, expected_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, observed_sha256: e40b57493262d40c1eb48157de9dca216702b063cf3ffd5649238cfefe1e8be3, match: true}
+    - {role: exact_K0b_forecast, path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, expected_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, observed_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, match: true}
+    - {role: exact_K0b_reconciliation, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, expected_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, observed_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, match: true}
+    - {role: frozen_draft_exclusion, path: new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml, expected_sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, observed_sha256: 7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66, match: true}
+  mismatches: []
+
+prior_finding_closure_matrix:
+  findings:
+    - finding_id: K0B01-CB-R0-F01
+      prior_severity: blocking
+      disposition: closed
+      blocking_after_revision: false
+      closure_evidence:
+        - plan_v1_2_section_9_contains_exactly_21_normative_rows
+        - every_row_fixes_producer_delivery_or_terminal_fields_activation_replay_and_idempotency
+        - retained_F00_and_Alpha_branches_are_explicit_and_profile_fixed
+        - missing_unknown_dynamic_duplicate_and_twenty_second_event_cases_fail_closed
+      rationale: The formerly absent per-event graph facts are now explicit, complete, immutable, and compiler-rejectable.
+    - finding_id: K0B01-CB-R0-F02
+      prior_severity: blocking
+      disposition: closed
+      blocking_after_revision: false
+      closure_evidence:
+        - plan_v1_2_section_10_assigns_exactly_five_families_to_receipt_A
+        - plan_v1_2_section_10_assigns_exactly_three_families_to_receipt_B
+        - receipt_B_binds_and_consumes_receipt_A_while_A_never_consumes_B
+        - aggregate_rejects_overlap_omission_extra_owner_mismatch_reverse_dependency_and_cycle
+      rationale: The eight output families now have a disjoint exhaustive ownership map and one acyclic dependency direction.
+    - finding_id: K0B01-CB-R0-F03
+      prior_severity: blocking
+      disposition: closed
+      blocking_after_revision: false
+      closure_evidence:
+        - review_budget_supplement_v2_supplies_all_D0_02_required_package_fields
+        - supplemental_standard_profile_is_within_its_nominal_and_worst_case_tier_limits
+        - combined_K0b_human_and_model_totals_recompute_exactly
+        - final_human_only_signoff_is_explicitly_excluded_and_remains_pending
+      rationale: Package-scoped human-attention facts and their combined totals are complete and independently recomputable.
+  prior_finding_count: 3
+  closed_count: 3
+  still_open_count: 0
+  replaced_count: 0
+  result: pass
+
+event_matrix_reachability_and_activation_analysis:
+  normative_event_count: 21
+  unique_event_count: 21
+  schema_version_for_all_rows: 1
+  row_checks:
+    - {event: command.received, producer: control.authenticated_ingress, delivery: s0_control_delivery/control_delivery/pending, fields_read: [run_id, profile, command], activation: "F00 retained; Alpha K0b-04", replay: root_preserved, idempotency_tuple: "(run_id,v1,command_id)", result: pass}
+    - {event: run.started, producer: shared_control.run_fsm, F00_delivery: bootstrap_readback/observational_terminal/observed_terminal, Alpha_delivery: control.run_lifecycle/control_delivery/pending, fields_read: [run_id, state], activation: "F00 retained; Alpha K0b-04", replay: once_per_transition_revision, idempotency_tuple: "(run_id,v1,to_revision)", result: pass}
+    - {event: artifact.version_created, producer: artifact_event.transaction_writer, F00_delivery: bootstrap_readback/observational_terminal/observed_terminal, Alpha_delivery: control.artifact_lifecycle/artifact_delivery/pending, fields_read: [artifact_version_id, artifact_type, content_sha256], activation: "F00 retained; Alpha K0b-04", replay: historical_version_reused, idempotency_tuple: "(run_id,v1,artifact_version_id)", result: pass}
+    - {event: handoff.ready, producer: artifact_event.transaction_writer, F00_delivery: bootstrap_sink/fixture_terminal/pending, Alpha_delivery: control.handoff_delivery/control_delivery/pending, fields_read: [artifact_version_id, profile, route_id], activation: "F00 retained; Alpha K0b-04", replay: new_descendant_only_after_invalidation, idempotency_tuple: "(run_id,v1,artifact_version_id,route_id)", result: pass}
+    - {event: run.completed, producer: shared_control.run_fsm, F00_delivery: bootstrap_readback/observational_terminal/observed_terminal, Alpha_delivery: alpha_observation/observational_terminal/observed_terminal, fields_read: [run_id, state, completion_gate_id], activation: "F00 retained; Alpha K0b-04", replay: terminal_never_replayed_into_same_run, idempotency_tuple: "(run_id,v1,terminal_revision)", result: pass}
+    - {event: run.blocked, producer: shared_control.run_fsm, delivery: human_blocker_queue/block_run_and_enqueue_human/accepted_terminal, fields_read: [run_id, state, block_code, evidence_ref], activation: K0b-04, replay: preserve_blocker, idempotency_tuple: "(run_id,v1,state_revision,block_code)", result: pass}
+    - {event: run.abort_requested, producer: shared_control.abort_coordinator, delivery: control.abort_coordinator/control_delivery/pending, fields_read: [run_id, abort_request_id, reason_code], activation: K0b-03, replay: duplicate_returns_same_fence, idempotency_tuple: "(run_id,v1,abort_request_id)", result: pass}
+    - {event: run.aborted, producer: shared_control.abort_coordinator, delivery: alpha_observation/observational_terminal/observed_terminal, fields_read: [run_id, state, reconciliation_ref], activation: K0b-03, replay: terminal_never_reopens, idempotency_tuple: "(run_id,v1,terminal_revision)", result: pass}
+    - {event: artifact.published, producer: artifact_event.publication_writer, delivery: control.artifact_lifecycle/artifact_delivery/pending, fields_read: [artifact_version_id, publication_transaction_id, content_sha256], activation: K0b-02, replay: same_publication_returned, idempotency_tuple: "(run_id,v1,publication_transaction_id)", result: pass}
+    - {event: projection.requested, producer: artifact_event.transaction_writer, delivery: artifact_event.projector/projection_delivery/pending, fields_read: [decision_version_id, projection_profile_sha256, pair_stem], activation: K0b-02, replay: same_outbox_intent_returned, idempotency_tuple: "(run_id,v1,decision_version_id,projection_profile_sha256)", result: pass}
+    - {event: projection.written, producer: artifact_event.projector, delivery: control.projection_reconciliation/control_delivery/pending, fields_read: [projection_id, yaml_sha256, markdown_sha256], activation: K0b-02, replay: same_verified_pair_returned, idempotency_tuple: "(run_id,v1,projection_id)", result: pass}
+    - {event: projection.failed, producer: artifact_event.projector, delivery: human_blocker_queue/block_run_and_enqueue_human/accepted_terminal, fields_read: [projection_id, failure_code, evidence_ref], activation: K0b-02, replay: failure_preserved, idempotency_tuple: "(run_id,v1,projection_id,failure_code)", result: pass}
+    - {event: revision.requested, producer: shared_control.revision_coordinator, delivery: s.revision_coordinator/s_revision_delivery/pending, fields_read: [artifact_version_id, revision_owner_zero_role_id, reason_code], activation: K0b-04, replay: creates_invalidated_descendants_only, idempotency_tuple: "(run_id,v1,artifact_version_id,request_revision)", result: pass}
+    - {event: gate.passed, producer: shared_control.gate_coordinator, delivery: control.gate_delivery/gate_delivery/pending, fields_read: [gate_id, run_id, state_revision], activation: K0b-04, replay: same_gate_result_returned, idempotency_tuple: "(run_id,v1,gate_id,state_revision)", result: pass}
+    - {event: approval.requested, producer: shared_control.approval_coordinator, delivery: human_approval_queue/human_approval_wait/pending, fields_read: [approval_id, subject_ref, required_role], activation: K0b-04, replay: same_pending_request_returned, idempotency_tuple: "(run_id,v1,approval_id)", result: pass}
+    - {event: approval.granted, producer: control.authenticated_approval_adapter, delivery: control.approval_coordinator/approval_delivery/pending, fields_read: [approval_id, decision_version_id, actor_id], activation: K0b-04, replay: immutable_decision_returned, idempotency_tuple: "(run_id,v1,approval_id,decision_version_id)", result: pass}
+    - {event: approval.rejected, producer: control.authenticated_approval_adapter, delivery: control.approval_coordinator/approval_delivery/pending, fields_read: [approval_id, decision_version_id, reason_code], activation: K0b-04, replay: immutable_decision_returned, idempotency_tuple: "(run_id,v1,approval_id,decision_version_id)", result: pass}
+    - {event: error.schema_mismatch, producer: shared_control.schema_validator, delivery: human_blocker_queue/block_run_and_enqueue_human/accepted_terminal, fields_read: [run_id, error_code, evidence_ref], activation: K0b-04, replay: error_evidence_preserved, idempotency_tuple: "(run_id,v1,source_request_sha256,error_code)", result: pass}
+    - {event: error.tool_failure, producer: shared_control.tool_boundary, delivery: human_blocker_queue/block_run_and_enqueue_human/accepted_terminal, fields_read: [run_id, error_code, evidence_ref], activation: K0b-03, replay: failure_preserved_new_attempt_on_retry, idempotency_tuple: "(run_id,v1,invocation_id,attempt,error_code)", result: pass}
+    - {event: error.security_policy, producer: shared_control.security_monitor, delivery: human_blocker_queue/block_run_and_enqueue_human/accepted_terminal, fields_read: [run_id, error_code, evidence_ref], activation: K0b-03, replay: frozen_evidence_never_suppressed, idempotency_tuple: "(run_id,v1,incident_source_id,error_code)", result: pass}
+    - {event: meta.incident_detected, producer: shared_control.security_monitor, delivery: w5_incident_queue/persist_incident_and_enqueue_W5/accepted_terminal, fields_read: [run_id, incident_id, evidence_ref], activation: K0b-03, replay: incident_preserved, idempotency_tuple: "(run_id,v1,incident_id)", result: pass}
+  exact_producer_for_every_row: true
+  exact_delivery_or_terminal_tuple_for_every_row: true
+  consumed_field_owner_is_fixed_delivery_subscriber_or_terminal_target: true
+  exact_fields_read_for_every_row: true
+  exact_activation_owner_for_every_row: true
+  stable_replay_rule_and_idempotency_tuple_for_every_row: true
+  dangling_dynamic_or_unknown_behavior: rejected
+  retained_F00_analysis:
+    count: 5
+    events: [command.received, run.started, artifact.version_created, handoff.ready, run.completed]
+    historical_subscriber_policy_state_and_fields_read_preserved_by_exact_profile_branch: true
+    Alpha_branch_uses_bootstrap_sink: false
+    bootstrap_sink_occurrences: [{event: handoff.ready, profile: F00_only}]
+    authority_consistency: K0b_00_shared_artifact_event_plan_requires_bootstrap_sink_to_remain_F00_only
+    result: pass
+  terminal_policy_analysis:
+    schema_tool_and_security_errors: block_run_and_enqueue_human
+    incident: persist_incident_and_enqueue_W5
+    downstream_semantic_routing_after_terminal_disposition: forbidden
+    consistent_with_final_K0b_00_authority: true
+    result: pass
+  activation_analysis:
+    K0b_01_runtime_activation: false
+    K0b_02_projection_and_publication_owners_remain_future: true
+    K0b_03_abort_tool_security_and_incident_owners_remain_future: true
+    K0b_04_run_gate_approval_and_revision_owners_remain_future: true
+    static_compilation_only_in_K0b_01: true
+    result: pass
+  result: pass
+
+compiler_receipt_ownership_dependency_and_aggregate_analysis:
+  receipt_count: 2
+  exact_output_family_count: 8
+  receipt_A:
+    receipt_id: registry_and_routing
+    sole_owned_family_count: 5
+    sole_owned_families:
+      - compiled_artifact_event_profile
+      - compiled_event_reachability_graph
+      - compiled_subscription_terminal_snapshot
+      - compiled_s_route_table_v2
+      - compiled_fanout_barrier_profile
+    consumes_receipt_B: false
+  receipt_B:
+    receipt_id: resource_and_budget
+    sole_owned_family_count: 3
+    sole_owned_families:
+      - compiled_resource_forecast
+      - compiled_checkpoint_phase_partition_v1
+      - compiled_checkpoint_publication_budget_v2
+    consumes_exact_receipt_A_complete_file_hash: true
+    consumes_all_five_receipt_A_family_hashes: true
+  dependency_edges: [A_to_B]
+  reverse_dependency: false
+  dependency_cycle: false
+  ownership_intersection: []
+  ownership_union_equals_exact_eight_family_set: true
+  aggregate_accepts_only_after_both_receipts_pass: true
+  aggregate_rejections:
+    overlap: true
+    omission: true
+    extra_family: true
+    owner_mismatch: true
+    missing_or_wrong_B_to_A_binding: true
+    reverse_dependency: true
+    cycle: true
+    stale_authority_compiler_or_schema_hash: true
+    non_pass_diagnostic: true
+  deterministic_compiler_requirements_retained_from_v1_1:
+    canonical_profile: canonical-yaml-v1
+    byte_identity_independent_of_time_locale_working_directory_absolute_path_and_input_order: true
+    source_and_compiler_complete_file_hash_pinning: true
+    runtime_patching: forbidden
+    stale_pins: fail_closed
+    diagnostics_bound: true
+    result: pass
+  independent_oracle_requirements_retained_from_v1_1:
+    literal_expected_outputs_separate_from_complete_input_graphs: true
+    production_reads_or_derives_from_expected_outputs: false
+    oracle_is_test_only_and_separate: true
+    production_helpers_constants_receipt_builders_and_output_builders_forbidden_to_oracle: true
+    independent_integer_ceiling_rounding_threshold_phase_and_graph_logic: true
+    negative_vectors_preserved: true
+    result: pass
+  result: pass
+
+human_attention_model_phase_and_no_credit_recalculation:
+  supplemental_review_package:
+    package_id: K0b01-plan-v1.1-independent-reviews
+    profile: standard
+    model_calls: {nominal: 2, worst_case: 4, checkpointed: false}
+    human_attention:
+      sessions: {nominal: 1, worst_case: 2}
+      blocking_decisions: {nominal: 1, worst_case: 3}
+      active_minutes: {nominal: 30, worst_case: 90}
+      max_single_session_minutes: 60
+      batchable_requests: true
+    D0_02_required_fields_complete: true
+    tier_checks:
+      sessions_worst_case_le_standard_max_3: true
+      blocking_decisions_worst_case_le_standard_max_6: true
+      active_minutes_worst_case_le_standard_max_120: true
+      max_single_session_le_standard_max_60: true
+      batchability_declared: true
+    result: pass
+  combined_K0b:
+    model_calls:
+      baseline: {nominal: 58, effective_worst_case: 90}
+      supplemental: {nominal: 2, worst_case: 4}
+      formula: {nominal: "58+2", effective_worst_case: "90+4"}
+      recomputed: {nominal: 60, effective_worst_case: 94}
+      stated: {nominal: 60, effective_worst_case: 94}
+      match: true
+    human_attention:
+      baseline_sessions: {nominal: 2, worst_case: 4}
+      supplemental_sessions: {nominal: 1, worst_case: 2}
+      combined_sessions: {nominal: 3, worst_case: 6, match: true}
+      baseline_blocking_decisions: {nominal: 3, worst_case: 6}
+      supplemental_blocking_decisions: {nominal: 1, worst_case: 3}
+      combined_blocking_decisions: {nominal: 4, worst_case: 9, match: true}
+      baseline_active_minutes: {nominal: 60, worst_case: 150}
+      supplemental_active_minutes: {nominal: 30, worst_case: 90}
+      combined_active_minutes: {nominal: 90, worst_case: 240, match: true}
+      combined_max_single_session_minutes: 60
+      envelope_profile: high_attention
+      result: pass
+  K0b_runtime_operational:
+    model_calls: {nominal: 16, worst_case: 30}
+    replay_points:
+      nominal_formula: "32+6+16"
+      worst_case_formula: "120+12+40"
+      recomputed: {nominal: 54, worst_case: 172}
+    window_publications: {nominal: 6, worst_case: 18}
+    total_publications: {nominal: 14, worst_case: 34}
+    unrounded_checkpoint_MiB: {nominal: 8.7265625, worst_case: 25.265625}
+    rounded_checkpoint_bytes: {nominal: 9437184, worst_case: 27262976}
+    phase_pack_bytes:
+      nominal_formula: "9437184*14"
+      worst_case_formula: "27262976*34"
+      recomputed: {nominal: 132120576, worst_case: 926941184}
+    hard_margin_bytes_worst: 146800640
+    match: true
+  K0b_F15_exact_measurement:
+    model_calls: {nominal: 36, worst_case: 36, exact: 36}
+    replay_points: {nominal: 72, worst_case: 144}
+    window_publications: {nominal: 8, worst_case: 22}
+    exact_boundary_triggers: 4
+    total_publications: {nominal: 12, worst_case: 26}
+    unrounded_checkpoint_MiB: {nominal: 9.8515625, worst_case: 34.265625}
+    rounded_checkpoint_bytes: {nominal: 10485760, worst_case: 36700160}
+    phase_pack_bytes:
+      nominal_formula: "10485760*12"
+      worst_case_formula: "36700160*26"
+      recomputed: {nominal: 125829120, worst_case: 954204160}
+    hard_margin_bytes_worst: 119537664
+    match: true
+  binary_seed:
+    count: {nominal: 6, worst_case: 12}
+    bytes: {nominal: 2236416, worst_case: 4472832}
+    match: true
+  phase_partition:
+    exact_count: 2
+    exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+    chronological_contiguous_non_overlapping_exhaustive: true
+    third_phase: false
+    observable_phase_pack_sum: {nominal: 257949696, worst_case: 1881145344, match: true}
+  strict_thresholds:
+    checkpoint_bytes_less_than: 104857600
+    phase_pack_bytes_less_than: 1073741824
+    warning_bytes: 536870912
+    max_publications_per_batch: 12
+    publication_p95_seconds_less_than: 10
+    clean_clone_restore_seconds_less_than: 120
+    unchanged: true
+    all_planned_checkpoint_and_phase_pack_values_strictly_below_hard: true
+  no_credit_invariants:
+    overlap_compression_delta_dedup_cross_phase_or_batch_reset_credit: 0
+    F15_to_operational_credit: 0
+    supplemental_review_to_runtime_or_F15_credit: 0
+    unused_design_ordinal_credit_or_transfer: 0
+    K0b_01_runtime_model_calls: {nominal: 0, worst_case: 0}
+    result: pass
+  arithmetic_result: pass
+  completeness_result: pass
+
+scope_and_non_authorization_analysis:
+  planning_only: true
+  consistent_with_final_K0b_00_authority: true
+  final_K0b_00_authorized_next_action_limited_to_separate_K0b_01_planning: true
+  K0b_01_implementation_authority: none
+  runtime_activation_authority: none
+  runtime_code_contract_schema_registry_migration_prompt_projection_checkpoint_or_fixture_created_or_modified: false
+  frozen_engineering_draft:
+    artifact_count: 18
+    inspected_executed_imported_or_used_as_review_truth: false
+  forbidden_inputs:
+    canonical_fixture_accessed: false
+    research_old_swarm_accessed: false
+    projects_swarm_accessed: false
+  review_execution:
+    additional_agents_or_model_calls: 0
+    network_or_provider_API_access: false
+    runtime_or_test_execution: false
+    files_written: [new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml]
+    other_file_edits: 0
+    commit_push_PR_deploy_or_release: false
+  terminal_review_budget:
+    package_id: K0b01-plan-v1.1-independent-reviews
+    call_ordinal_in_package: 4
+    calls_consumed_before_dispatch: 3
+    this_call_cost: 1
+    total_package_calls_after_dispatch: 4
+    calls_remaining_after_dispatch: 0
+    checkpointed: false
+    runtime_or_F15_credit: 0
+    additional_r2_return_or_correction_model_call: forbidden
+    result: pass
+  human_only_signoff:
+    issued_by_this_review: false
+    still_required: true
+    separate_identity_and_capacity_record_required: true
+  implementation_owner_disposition:
+    issued_by_this_review: false
+    still_required: true
+    exact_hash_bound_write_and_validation_set_required: true
+  result: pass
+
+findings_external_blockers_and_recommendation:
+  findings: []
+  open_blocking_finding_count: 0
+  open_non_blocking_finding_count: 0
+  prior_r0_blocking_findings_closed: 3
+  external_blockers:
+    - migration_r1_review_must_also_approve_with_zero_open_blocking_findings
+    - exact_r1_hashes_and_completed_ledger_entries_must_reconcile
+    - separate_human_only_review_and_signoff_with_identity_and_capacity_remains_required
+    - later_exact_hash_bound_K0b_01_implementation_owner_disposition_remains_required
+  recommendation: approve
+  recommendation_reason: >-
+    Plan v1.2 closes all three compiler/budget r0 blockers with a complete fixed 21-event
+    matrix, disjoint exhaustive 5/3 receipt ownership and acyclic dependency, and complete
+    independently reconcilable human/model/phase/no-credit budget facts. No blocking or
+    non-blocking compiler/budget finding remains, and the package remains planning-only.
+  owner_approval: forbidden_and_not_issued
+  implementation_authorization: forbidden_and_not_issued

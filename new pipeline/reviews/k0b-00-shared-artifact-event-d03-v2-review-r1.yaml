@@ -1,0 +1,175 @@
+review_id: k0b-00-shared-artifact-event-d03-v2-review-r1
+review_round: 1
+review_identity_and_conflict_declaration:
+  actor_id: /root/k0b_shared_artifact_event_d03_v2_review_r1
+  provider: openai
+  model: gpt-5.6-terra
+  profile: k0b_independent_shared_artifact_event_D03_successor_rereview_v2
+  invocation_id: k0b-00-review-shared-artifact-event-d03-v2-r1
+  appointed_by: W0_via_root
+  started_at: "2026-09-04T12:13:07.1645978+03:00"
+  completed_at: "2026-09-04T12:16:46.1976893+03:00"
+  fresh_context: true
+  inherited_author_context: false
+  authored_any_reviewed_plan_version: false
+  owner_approval_issued: false
+  conflict_declaration: >-
+    No conflict known. I authored none of the reviewed plan versions and received
+    no author conversation, hidden summary, prior-reviewer private context,
+    forbidden-root or canonical-fixture content, runtime/provider/external state.
+    I read only the hash-verified manifest-listed inputs and created only this
+    typed review record. This is a review recommendation, not owner approval.
+
+hash_verification:
+  manifest:
+    path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r1.yaml
+    expected_sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21
+    actual_sha256_at_start: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21
+    actual_sha256_at_completion: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21
+    result: pass
+  all_21_manifest_listed_inputs:
+    result_at_start: pass
+    result_at_completion: pass
+    verified_count: 21
+    mismatches: []
+  required_start_and_completion_hashes:
+    result: pass
+    artifacts:
+      - {role: reviewed_plan, path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, expected_sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614, sha256_at_start: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614, sha256_at_completion: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614}
+      - {role: immutable_v2_0_0_snapshot, path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.0.0.md, expected_sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f, sha256_at_start: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f, sha256_at_completion: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f}
+      - {role: review_manifest, path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-v2-review-input-r1.yaml, expected_sha256: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21, sha256_at_start: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21, sha256_at_completion: ca93fa40b35ac26812bee856d7fbf2cd50f883de55956935ac21c9ece9a15d21}
+      - {role: design_ledger, path: new pipeline/ledgers/design-invocations.yaml, expected_sha256: 869735439289812a42367bcfd0504f62b68f5a4efe3b6083e0ef60b93506c5e6, sha256_at_start: 869735439289812a42367bcfd0504f62b68f5a4efe3b6083e0ef60b93506c5e6, sha256_at_completion: 869735439289812a42367bcfd0504f62b68f5a4efe3b6083e0ef60b93506c5e6}
+
+prior_finding_disposition:
+  finding_id: F-01
+  prior_type: ambiguous_and_regressive_artifact_event_publication_cardinality
+  prior_severity: high
+  prior_blocking: true
+  disposition: resolved
+  verification: >-
+    Section 4 now requires one artifact publication to atomically persist only
+    its control-admitted required subset, selected from the immutable exact
+    21-event compiled profile. It requires applicable immutable subscriber and
+    terminal snapshots for every selected event, and rejects the whole mutation
+    for outside-profile, unadmitted, or incomplete selection. Section 5 retains
+    exactly 21 semantic event types and immutable terminal policy, so no event
+    catalog, D03, or passing-v1.1 regression remains.
+  evidence: [reviewed_plan.section_4, reviewed_plan.section_5, prior_review.F-01, owner_disposition.authorized_artifact_event_change]
+
+revision_scope_judgment:
+  result: pass
+  exact_byte_diff: >-
+    v2.0.0 to v2.1.0 changes only the version/revision-input/return-budget
+    metadata, the authorized F-01 publication-selector route, and budget text.
+  authorized_change_match: pass
+  D03_and_passing_v1_1_contract_regression: none_found
+  caveat: F-02 identifies an authorized metadata correction that was not made
+
+mechanical_validation:
+  plan_structure:
+    numbered_sections_present: 18
+    required_sections: 18
+    full_file_non_empty_lines: 141
+    full_file_cap: 800
+    routing_non_empty_lines: 12
+    routing_cap: 105
+    roster_non_empty_lines: 11
+    roster_cap: 55
+    failure_recovery_non_empty_lines: 14
+    failure_recovery_cap: 105
+    result: pass
+  event_and_compiler_contract:
+    semantic_event_catalog_entries: 21
+    required_compiler_outputs: 7
+    compiler_outputs_named: [compiled_artifact_event_profile, compiled_event_reachability_graph, compiled_subscription_terminal_snapshot, compiled_projection_checkpoint_profile, compiled_resource_forecast, compiled_checkpoint_phase_partition_v1, compiled_checkpoint_publication_budget_v2]
+    exact_21_catalog_and_selector: pass
+  D03_arithmetic_and_chronology:
+    operational: {checkpoint_bytes_nominal_worst: [9437184, 27262976], publications_nominal_worst: [14, 34], pack_bytes_nominal_worst: [132120576, 926941184], hard_margin_worst: 146800640}
+    F15: {checkpoint_bytes_nominal_worst: [10485760, 36700160], publications_nominal_worst: [12, 26], pack_bytes_nominal_worst: [125829120, 954204160], hard_margin_worst: 119537664}
+    thresholds: {checkpoint_hard: 104857600, pack_warning: 536870912, pack_hard: 1073741824, batch_cap: 12, factor: 1.0, credit: 0}
+    chronology: {operational_calls: "16 nominal / 30 worst and terminal before seal", F15_calls: "exactly 36 after verified seal", post_F15_calls: 0, F15_trigger_ids: [k0b.f15.boundary.entry_gate, k0b.f15.boundary.program_owner_wait_or_exit, k0b.f15.boundary.exit_gate, k0b.f15.boundary.top_level_run_end], fifth_trigger_or_separate_K0b05_run: rejected_before_effect}
+    result: pass
+  budget_authority_and_ledger:
+    cap_30_disposition: >-
+      The owner disposition authorizes ordinal 23 for this bounded F-01 revision
+      author and ordinal 24 for this rereview; 25/26 are reserved for the
+      separate S successor pair. Ordinals 27-30 are conditional typed-finding
+      reserve only, expire at package disposition, and have no runtime or
+      carry-forward authority.
+    ledger_ordinal_23_binding: {invocation_id: k0b-00-revision-author-shared-artifact-event-d03-v2-r1, input_manifest_sha256: de7f37090e678847b68e799523acdc484e43bca4e5b9603fa1684bb118e0a092, revised_plan_sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614, result: pass}
+    plan_budget_metadata_consistency: fail_due_to_F-02
+
+typed_findings:
+  - finding_id: F-02
+    type: stale_and_internally_conflicting_design_budget_acceptance_metadata
+    severity: high
+    blocking: true
+    status: unresolved
+    location: reviewed_plan.section_16.architecture_acceptance
+    observed_text: >-
+      Architecture acceptance requires fresh review of this exact hash at ordinal
+      22 and S v2 review at 23/24.
+    evidence: >-
+      The cap-30 owner disposition and the exact r1 review manifest bind this
+      revision author/rereview to 23/24 and reserve 25/26 for the S successor
+      author/review. Sections 12 and 18 of this same v2.1 plan correctly state
+      23/24, 25/26, and conditional reserve 27-30. Section 16 therefore gives
+      a contradictory and superseded acceptance sequence. Correcting design
+      budget ordinals and conditional-reserve description is expressly authorized
+      metadata, but the required Section 16 correction was omitted.
+    required_disposition: >-
+      Revise only the Section 16 acceptance-budget wording to bind artifact/event
+      rereview to ordinal 24, the S successor author/review to 25/26, and any
+      27-30 use solely to the owner-authorized conditional typed-finding reserve;
+      preserve F-01 and every other v2.1 byte and contract.
+    authority_effect: plan_revision_and_fresh_review_required_before_approval_or_S_successor_authoring; no_owner_approval_issued
+
+gate_judgments:
+  categories:
+    - {category: 1, name: purpose_boundaries_non_goals_applicability, judgment: pass}
+    - {category: 2, name: dispatcher_deterministic_harness_worker_boundary, judgment: pass}
+    - {category: 3, name: state_machine_invariants_terminal_states, judgment: pass}
+    - {category: 4, name: input_events_guards_routing_fanout_barriers_fast_paths, judgment: pass}
+    - {category: 5, name: output_events_subscribers_terminal_policy_cross_layer_contracts, judgment: pass}
+    - {category: 6, name: artifact_types_ownership_versioning_lineage_key_decision_projections, judgment: pass}
+    - {category: 7, name: context_query_allowlists_trust_provenance_prompt_injection, judgment: pass}
+    - {category: 8, name: current_worker_roster_inputs_outputs_capabilities_stop_conditions, judgment: pass}
+    - {category: 9, name: failure_taxonomy_revision_ownership_invalidation_replay_recovery_abort, judgment: pass}
+    - {category: 10, name: hitl_autonomy_approvals_dialogue_rules, judgment: pass}
+    - {category: 11, name: tools_side_effects_security_egress_repository_boundaries, judgment: pass}
+    - {category: 12, name: context_scale_sharding_invocation_and_human_budgets, judgment: blocked_by_F-02}
+    - {category: 13, name: binary_payload_budget_or_proved_not_applicable, judgment: pass}
+    - {category: 14, name: downstream_consumers_and_actual_consumption, judgment: pass}
+    - {category: 15, name: structural_contract_behavioral_fixture_real_project_scenarios, judgment: pass}
+    - {category: 16, name: evidence_package_and_readiness_criteria, judgment: blocked_by_F-02}
+    - {category: 17, name: old_pipeline_migration_note, judgment: pass}
+    - {category: 18, name: risks_open_decisions_deferred_capabilities, judgment: pass}
+  cross_plane:
+    control_compiler_scheduler_phase_trigger_and_budget_ownership: pass
+    artifact_event_exclusive_persistence_projection_outbox_checkpoint_and_seal_ownership: pass
+    S_semantic_route_fallback_revision_and_freeze_ownership: pass
+    outbox_publisher_and_seal_handoff: pass
+    replay_crash_idempotency_duplicate_abort_and_compatibility_boundaries: pass
+    D03_phase_trigger_and_no_credit_contract: pass
+    manual_VSCode_receipt_boundary: pass
+    budget_acceptance_metadata: blocked_by_F-02
+
+evidence_refs:
+  reviewed_plan: {path: new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md, sha256: 1c5bb73a0f7651bddb11774a611d37aec450ca22f13d034db5e5a50046a25614}
+  immutable_v2_0_0_snapshot: {path: new pipeline/reviews/sources/k0b-00-shared-artifact-event-d03-plan-v2.0.0.md, sha256: 15ddefa69e57fd7e74a02e0ff676e2826ec6bd2682ed5f805fccf98b2913273f}
+  prior_review: {path: new pipeline/reviews/k0b-00-shared-artifact-event-d03-v2-review-r0.yaml, sha256: 1ee407cad615a4190ae40a8c5e2ed2decaa74d4219b0d92f7bee688c8a07098d}
+  return_budget_authority: {path: new pipeline/decisions/k0b-00-d03-successor-return-budget-owner-disposition-v1.yaml, sha256: c7a478c982d477692eafa114dd6ed3e45f2b9f574aa0111aecb72e23481752a0}
+  revision_input: {path: new pipeline/evidence/k0b-00-shared-artifact-event-d03-v2-revision-input-r1.yaml, sha256: de7f37090e678847b68e799523acdc484e43bca4e5b9603fa1684bb118e0a092}
+  design_ledger: {path: new pipeline/ledgers/design-invocations.yaml, sha256: 869735439289812a42367bcfd0504f62b68f5a4efe3b6083e0ef60b93506c5e6}
+  D03_authorities: {policy_overlay_sha256: ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8, scope_v2_sha256: e839396d9199fa85e5474b3a45a852e7b6b59d81d6910ae67897f7dffe627cde, forecast_v3_sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a, reconciliation_v3_sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb, addendum_v2_sha256: 838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c}
+
+recommendation:
+  value: revise
+  rationale: >-
+    F-01 is fully resolved, all verified D03 arithmetic, exact-21 selector,
+    ownership, outbox/publisher/seal, replay/recovery, security, acceptance
+    scenarios, and line-budget checks otherwise pass. F-02 leaves an explicit
+    acceptance criterion with superseded ordinal metadata that conflicts with
+    the owner-authorized cap-30 sequence. This high blocking metadata defect
+    requires the bounded plan revision and fresh review; it authorizes neither
+    runtime nor owner approval.
