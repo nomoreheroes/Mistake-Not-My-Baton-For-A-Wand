@@ -1,0 +1,128 @@
+review_id: k0b-01-human-only-review-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-09T11:43:04.8074127+03:00"
+work_item_id: K0b-01
+review_kind: human_only_planning_signoff
+status: approved_with_five_non_blocking_findings
+
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-human-signoff-materialization-approval-request-v1.yaml
+    complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+  separate_owner_confirmation:
+    source_ref: current_thread_owner_confirmation_2026_09_09
+    repeated_complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+    exact_match: true
+    explicit_scope_authorization: true
+    statement: >-
+      Подтверждаю approval-request SHA-256 a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477 и разрешаю ровно описанные materialization человеческого signoff, закрытие только G-K0B01-HUMAN-SIGNOFF, state reconciliation и один exact-scope commit.
+  confirmation_protocol:
+    path: new pipeline/registry/authority-confirmation/v1.yaml
+    sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  baseline_verification:
+    expected_HEAD: 6105e10bee32e9b2d0cb60a2117b3b67481c89ba
+    observed_HEAD: 6105e10bee32e9b2d0cb60a2117b3b67481c89ba
+    expected_tree: 559c0b2f4a3010ea667dc1f4b27fe3ab9a07559e
+    observed_tree: 559c0b2f4a3010ea667dc1f4b27fe3ab9a07559e
+    request_bytes_unchanged: true
+    subject_hashes_unchanged: true
+    stale_conditions_observed: []
+
+exact_subject:
+  K0b_01_plan_v1_3:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
+  inherited_K0b_01_plan_v1_2:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+  selected_K0b_B02_A:
+    path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml
+    sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6
+  K0b_B02_recalculation:
+    path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml
+    sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1
+
+reviewer:
+  identity: workspace_owner
+  capacity: human_project_owner
+  review_date: "2026-09-09"
+  source_ref: current_thread_owner_review_and_identity_messages_2026_09_09
+  mode: conversational_human_attestation
+  cryptographic_identity_authentication: absent_accepted_governance_risk
+
+result:
+  verdict: APPROVE
+  blocking_finding_count: 0
+  blocking_findings: []
+  non_blocking_finding_count: 5
+  exact_planning_basis_approved: true
+  closes_only_gate: G-K0B01-HUMAN-SIGNOFF
+  implementation_authorized: false
+  runtime_authorized: false
+
+verbatim_non_blocking_findings:
+  - finding_id: K0B01-HR-NB01
+    classification: non_blocking
+    text: >-
+      Запас по публикациям — ровно одна. При checkpoint 29 MiB предел 35 публикаций (1,064,304,640); 36 пробивают лимит (1,094,713,344). Аналогично checkpoint может вырасти лишь до 30 MiB. Маржа 3.71% — это не «комфортно», это «одна единица». Стоит зафиксировать 34 как величину, требующую reforecast при любом изменении.
+  - finding_id: K0B01-HR-NB02
+    classification: non_blocking
+    text: >-
+      Обязательство по F15 не квантифицировано. Оба документа корректно требуют независимой проверки второй фазы, но ни в одном авторитетном источнике для F15 нет worst\_case\_object\_count — её new\_db\_bytes worst 9,437,184 заданы напрямую, а не как count × mean (9,437,184 / 372,736 не целое). То есть size-stress для F15 сегодня посчитать нечем. Запас есть: F15 выдерживает checkpoint до 39 MiB (1,063,256,064), 40 MiB пробивают. Это \~4 MiB uplift'а — деферрал не формальность, ему нужен собственный object count.
+  - finding_id: K0B01-HR-NB03
+    classification: non_blocking
+    text: >-
+      Recalculation фиксирует только величину №3 из трёх обязательных по v1.3 §6. Нет assumed\_mean\_object\_bytes, nominal expected и forecast worst-by-count. Значения выводимы (2,236,416 / 6 = 4,472,832 / 12 = 372,736 из reconciliation v3), и mean 372,736 даёт здоровый зазор 1.76× до нового потолка 640 KiB — но в самом артефакте этого не видно.
+  - finding_id: K0B01-HR-NB04
+    classification: non_blocking
+    text: >-
+      Authority-блок recalculation не цитирует собственные входы. Указаны disposition, v1.3, checkpoint policy — но не forecast v3 и не reconciliation v3, откуда физически берутся 22,020,096, 12 и 34. Цепочка идёт через прозаический текст v1.3 §6, который эти хэши тоже не называет. Не dangling reference, но разрыв трассируемости для hard-budget чисел.
+  - finding_id: K0B01-HR-NB05
+    classification: non_blocking
+    text: >-
+      G-K0B01-STATE-RENDERER существует только в state-проекции. Единственное место в графе — state/state.yaml и STATE.md, а v1.3 §2 прямо объявляет проекции «governance navigation aids; authority remains the cited complete-file hashes». При этом список из семи предпосылок в v1.3 §11 renderer не содержит. По собственному правилу плана этот блокирующий gate не подкреплён авторитетом. Направление ошибки консервативное (лишний блокер, не лишнее разрешение), проекции сейчас взаимно согласованы, поэтому не blocking — но в implementation disposition стоит перечислить все пять gates и дать renderer'у авторитетную запись.
+
+required_carry_forward_without_reclassification:
+  - finding_id: K0B01-HR-NB01
+    obligation: >-
+      Preserve 34 as an exact reforecast-sensitive publication input and require
+      a new exact calculation after any budget-input change.
+  - finding_id: K0B01-HR-NB02
+    obligation: >-
+      Establish authoritative F15 worst-case object count before F15 size-stress
+      or second-phase completion claims.
+  - finding_id: K0B01-HR-NB03
+    obligation: >-
+      Include all three v1.3 section 6 quantities and assumed mean object bytes
+      in future budget inputs and evidence.
+  - finding_id: K0B01-HR-NB04
+    obligation: >-
+      Bind exact forecast-v3 and reconciliation-v3 provenance paths and hashes
+      for the hard-budget input values in the later authority graph.
+  - finding_id: K0B01-HR-NB05
+    obligation: >-
+      Give G-K0B01-STATE-RENDERER an authoritative record and enumerate all five
+      current K0b-01 gates in the later implementation disposition.
+
+verbatim_approval_statement: >-
+  В целом: I approve the exact K0b-01 planning package v1.3 and selected K0b-B02-A outcome as the planning basis for a later separately authorized implementation disposition. This signoff closes only G-K0B01-HUMAN-SIGNOFF and does not authorize implementation, runtime execution, model/API calls, fixture access, push, PR, deploy, or release.
+
+scope_effect:
+  G_K0B01_HUMAN_SIGNOFF: closes_on_authorized_containing_commit
+  remaining_K0b_01_open_prerequisites:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+    - G-K0B01-IMPLEMENTATION-LEDGER
+    - G-K0B01-STATE-RENDERER
+    - G-K0B01-TOOLCHAIN
+  planning_basis_for_later_disposition: approved
+  implementation_authority: none
+  runtime_authority: none
+
+non_authorizations:
+  - no_change_to_review_subject_bytes
+  - no_closure_of_any_gate_other_than_G_K0B01_HUMAN_SIGNOFF
+  - no_runtime_code_contract_schema_registry_migration_prompt_fixture_projection_checkpoint_or_compiler_implementation
+  - no_frozen_artifact_or_forbidden_root_access
+  - no_model_agent_independent_review_physical_model_provider_API_or_external_network_call
+  - no_push_PR_merge_deploy_release_or_remote_side_effect

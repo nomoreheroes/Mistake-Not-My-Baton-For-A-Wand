@@ -1,10 +1,10 @@
 # Pipeline v2 state projection
 
-Machine source: [state.yaml](state.yaml) `6f428ba277e0`
+Machine source: [state.yaml](state.yaml) `4cc897e39b6d`
 
 Projection profile: [state-projection-profile-v1.yaml](state-projection-profile-v1.yaml) `7032748afe3e`
 
-Program status: `K0b_01_planning_with_open_prerequisites`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 and the canonical-payload verifier gate are closed. Runtime and implementation authority remain absent.
+Program status: `K0b_01_planning_approved_with_open_implementation_prerequisites`. D0-05, K0b-B02, the canonical-payload verifier gate, and K0b-01 human-only planning signoff are closed. Four K0b-01 implementation prerequisites remain open; runtime and implementation authority remain absent.
 
 ## Active authority
 
@@ -29,7 +29,7 @@ Program status: `K0b_01_planning_with_open_prerequisites`. D0-05 is complete in 
 - Frozen-draft reuse triage: [k0b-01-frozen-draft-reuse-triage-v1.yaml](../evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml) `3976909ee305`
 - Frozen-draft triage clarification: [k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml](../evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml) `2956de3d9485`
 
-Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml) `c1438f246cb3` and [r1 ledger append](../evidence/k0b-01-r1-review-ledger-append-v1.yaml) `e2eb12a33f72`. They preserve two approvals with zero open findings for the exact v1.2 hash; they do not approve v1.3. Remaining review calls: `0`.
+Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml) `c1438f246cb3` and [r1 ledger append](../evidence/k0b-01-r1-review-ledger-append-v1.yaml) `e2eb12a33f72` preserve two approvals with zero open findings for the exact v1.2 hash. [Human-only review](../reviews/k0b-01-human-only-review-v1.yaml) `522c3b0e5227` approves exact v1.3 and selected K0b-B02-A with zero blocking and five non-blocking findings carried forward. Remaining review calls: `0`.
 
 ## Root-plan status
 
@@ -50,7 +50,7 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 | 8 | K0a-02 | implemented_validated | [k0a-02-validation-v1.yaml](../evidence/k0a-02-validation-v1.yaml) `3c2385d28e38` | none |
 | 9 | K0a-03 | implemented_validated | [k0a-03-manual-extension-owner-disposition-v1.yaml](../decisions/k0a-03-manual-extension-owner-disposition-v1.yaml) `870979d78a26` | none |
 | 10 | K0b-00 | architecture_complete | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | none |
-| 11 | K0b-01 | planning_remediation | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-K0B01-HUMAN-SIGNOFF, G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-IMPLEMENTATION-LEDGER, G-K0B01-STATE-RENDERER, G-K0B01-TOOLCHAIN |
+| 11 | K0b-01 | planning_approved_implementation_blocked | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-IMPLEMENTATION-LEDGER, G-K0B01-STATE-RENDERER, G-K0B01-TOOLCHAIN |
 | 12 | K0b-02 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B02-K0B01-COMPLETE, G-K0B02-SINGLE-SOURCE-CONFIRMATION |
 | 13 | K0b-03 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B03-K0B01-COMPLETE, G-K0B03-UNTRUSTED-SHAPES |
 | 14 | K0b-04 | blocked | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | G-K0B04-F15-ATTESTATION-LIMIT, G-K0B04-PREREQUISITES |
@@ -61,7 +61,6 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 | gate | owner | status | blocks | closure condition |
 |---|---|---|---|---|
-| G-K0B01-HUMAN-SIGNOFF | workspace_owner | open_blocking | K0b-01_implementation | human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity |
 | G-K0B01-IMPLEMENTATION-DISPOSITION | workspace_owner | open_blocking | K0b-01_implementation | later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets |
 | G-K0B01-IMPLEMENTATION-LEDGER | Pipeline_governance | open_blocking | K0b-01_implementation | separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist |
 | G-K0B01-STATE-RENDERER | Pipeline_governance | open_blocking | K0b-01_implementation | deterministic_renderer_and_projection_equivalence_check_exist |
@@ -78,6 +77,7 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Closed gates
 
+- `G-K0B01-HUMAN-SIGNOFF`: closed by [human-only review](../reviews/k0b-01-human-only-review-v1.yaml) `522c3b0e5227` and [closure evidence](../evidence/k0b-01-human-signoff-gate-closure-v1.yaml) `34354f8dc56f`. Verdict: `APPROVE`; blocking findings: `0`; non-blocking findings carried forward: `5`.
 - `G-D0-CANONICAL-HASH-PROFILE-VERIFIER`: closed through the authorized implement-and-validate route. The fixed 27-vector suite and 10 test methods pass; all 6 primary claims and 4 derivative occurrences match with zero discrepancies.
 - `G-D005-CONTAINING-COMMIT`: closed by commit `45536507a469403b4878d273b661fe3a1d2c9573`, tree `00fa73a15dc6b402b00af0426d54f02c7f8c0b64`.
 - `G-K0B01-BINARY-SIZE`: closed by K0b-B02-A. The selected runtime-phase pack is `1,033,895,936` bytes with `39,845,888` bytes of margin under the unchanged `1 GiB` phase limit.
@@ -92,4 +92,4 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Effective scope
 
-K0b-B02 and the D0 canonical-payload verifier remediation are complete. New approval envelopes may use canonical-payload verification only when bound to the exact original profile, status successor, verifier contract, toolchain, and implementation hashes. Two-step exact-hash authority confirmation and prospective r0/r1 model-family diversity remain active governance rules. Historical reviews remain scoped evidence and are not retroactively invalidated. There is no K0b-01 runtime or implementation authority, and the five K0b-01 prerequisites remain open. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
+K0b-B02, D0 canonical-payload verifier remediation, and human-only K0b-01 planning signoff are complete. The five non-blocking human findings remain mandatory carry-forward inputs: publication count `34` is reforecast-sensitive; F15 needs an authoritative worst-case object count; future budget evidence must expose all three §6 quantities and mean size; forecast-v3/reconciliation-v3 hard-budget inputs need exact hash provenance; and the later implementation disposition must give the state-renderer gate authoritative support while enumerating all five gates present at review time. Four K0b-01 prerequisites remain open. There is no K0b-01 runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.

@@ -1,0 +1,76 @@
+record_id: k0b-01-human-signoff-commit-set-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-09T11:43:04.8074127+03:00"
+status: ready_for_exact_stage_and_containing_commit
+
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-human-signoff-materialization-approval-request-v1.yaml
+    complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+  separate_owner_confirmation:
+    source_ref: current_thread_owner_confirmation_2026_09_09
+    repeated_complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+    exact_match: true
+  materialized_human_review:
+    path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+    sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140
+  gate_closure:
+    path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml
+    sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd
+
+pre_commit_baseline:
+  HEAD: 6105e10bee32e9b2d0cb60a2117b3b67481c89ba
+  tree: 559c0b2f4a3010ea667dc1f4b27fe3ab9a07559e
+  expected_parent_count: 1
+
+exact_commit_set:
+  entry_count_excluding_this_record: 5
+  this_record_inclusion: required_without_self_hash
+  total_path_count_including_this_record: 6
+  canonical_entry_bytes: UTF_8_of_each_sorted_entry_as_sha256_two_spaces_path_LF
+  canonical_entry_set_sha256_excluding_this_record: e2e5b86c7b72bb731979e08d6d00be02c4c79e612c1c3e2cb20f83498257fbf5
+  entries_excluding_this_record:
+    - {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd, pre_stage_status: untracked}
+    - {path: new pipeline/requests/k0b-01-human-signoff-materialization-approval-request-v1.yaml, sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477, pre_stage_status: untracked}
+    - {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140, pre_stage_status: untracked}
+    - {path: new pipeline/state/STATE.md, sha256: 4dd32ef494fb2193f1808c72a9fe7764d89f8fbd5e3fb8c41fab5a0b924ffed1, pre_stage_status: modified_tracked}
+    - {path: new pipeline/state/state.yaml, sha256: 4cc897e39b6d20da3cbc1785fd2915b9fde65c490e7ba2a336ccdc2c76928ec5, pre_stage_status: modified_tracked}
+
+validation:
+  request_complete_file_SHA_256_match: pass
+  separate_owner_confirmation_exact_match: pass
+  request_stale_conditions: none_observed
+  baseline_HEAD_and_tree: pass
+  exact_review_subject_hashes: pass
+  reviewer_identity_capacity_date_and_verdict_present: pass
+  blocking_finding_count: 0
+  non_blocking_finding_count: 5
+  request_to_review_verbatim_finding_equivalence: pass
+  findings_carried_forward_without_reclassification: pass
+  state_machine_and_human_projection_equivalence: pass
+  closed_gate_count_in_this_change: 1
+  closed_gate_id: G-K0B01-HUMAN-SIGNOFF
+  remaining_K0b_01_open_prerequisites: 4
+  implementation_authority_after_transition: none
+  runtime_authority_after_transition: none
+  runtime_test_model_API_network_or_product_execution: 0
+  forbidden_root_or_frozen_artifact_access: 0
+
+post_stage_requirements:
+  - staged_path_set_equals_the_five_entries_plus_this_record
+  - git_diff_cached_check_passes
+  - every_staged_entry_hash_matches
+  - containing_commit_has_exactly_one_parent_equal_to_pre_commit_HEAD
+  - containing_commit_path_set_equals_the_exact_six_paths
+  - no_forbidden_cache_runtime_frozen_or_unrelated_path_is_staged
+
+non_authorizations:
+  - no_change_to_review_subject_bytes
+  - no_closure_of_any_gate_other_than_G_K0B01_HUMAN_SIGNOFF
+  - no_runtime_code_contract_schema_registry_migration_prompt_fixture_projection_checkpoint_or_compiler_implementation
+  - no_implementation_disposition_or_implementation_budget_authority
+  - no_frozen_K0b_01_artifact_or_forbidden_root_access
+  - no_model_agent_independent_review_physical_model_provider_API_external_network_or_dependency_change
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+  - no_product_readiness_implementation_complete_or_runtime_complete_claim

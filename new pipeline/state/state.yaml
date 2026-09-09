@@ -1,8 +1,8 @@
 state_id: pipeline-v2-program-state
 schema_version: 1
 projection_version: "1.0.0"
-generated_at: "2026-09-08T19:28:03.5597472+03:00"
-status: K0b_01_planning_with_open_prerequisites
+generated_at: "2026-09-09T11:43:04.8074127+03:00"
+status: K0b_01_planning_approved_with_open_implementation_prerequisites
 
 projection_profile:
   path: new pipeline/state/state-projection-profile-v1.yaml
@@ -44,7 +44,10 @@ active_authority:
 supporting_review_evidence:
   K0b_01_v1_2_r1_dispatch_reconciliation: {path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml, sha256: c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de}
   K0b_01_v1_2_r1_ledger_append: {path: new pipeline/evidence/k0b-01-r1-review-ledger-append-v1.yaml, sha256: e2eb12a33f7277d9ac9db893042da5fa44b7658b52d2c588106394d05d8c409e}
+  K0b_01_v1_3_human_only_review: {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140, recommendation: APPROVE, blocking_findings: 0, non_blocking_findings: 5}
+  K0b_01_human_signoff_gate_closure: {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd}
   scoped_review_result: two_r1_approvals_for_exact_plan_v1_2_with_zero_open_findings
+  v1_3_human_review_result: approve_with_five_non_blocking_findings_carried_forward
   remaining_review_calls: 0
 
 root_plan_status:
@@ -131,11 +134,10 @@ work_items:
     open_gate_ids: []
   - sequence: 11
     work_item_id: K0b-01
-    status: planning_remediation
+    status: planning_approved_implementation_blocked
     authority_path: new pipeline/architecture/k0b-01-planning-package-v1.3.md
     authority_sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
     open_gate_ids:
-      - G-K0B01-HUMAN-SIGNOFF
       - G-K0B01-IMPLEMENTATION-DISPOSITION
       - G-K0B01-IMPLEMENTATION-LEDGER
       - G-K0B01-STATE-RENDERER
@@ -172,11 +174,6 @@ work_items:
     open_gate_ids: [G-N1-K0B-COMPLETE, G-N1-POLICY-LIMITS]
 
 open_gates:
-  - gate_id: G-K0B01-HUMAN-SIGNOFF
-    owner: workspace_owner
-    status: open_blocking
-    blocks: [K0b-01_implementation]
-    closure_condition: human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity
   - gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
     owner: workspace_owner
     status: open_blocking
@@ -244,6 +241,12 @@ open_gates:
     closure_condition: context_and_failure_receipt_limits_are_versioned_policy_values_not_function_defaults
 
 closed_gates:
+  - gate_id: G-K0B01-HUMAN-SIGNOFF
+    status: closed
+    closure_evidence:
+      human_only_review: {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140, verdict: APPROVE, blocking_findings: 0, non_blocking_findings: 5}
+      gate_closure: {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd}
+      carry_forward_finding_ids: [K0B01-HR-NB01, K0B01-HR-NB02, K0B01-HR-NB03, K0B01-HR-NB04, K0B01-HR-NB05]
   - gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
     status: closed
     closure_evidence:
@@ -298,6 +301,9 @@ status_index:
 scope:
   implementation_authority: none
   runtime_authority: none
+  K0b_01_human_signoff_status: complete_approve_with_five_non_blocking_findings
+  K0b_01_human_signoff_carry_forward_ids: [K0B01-HR-NB01, K0B01-HR-NB02, K0B01-HR-NB03, K0B01-HR-NB04, K0B01-HR-NB05]
+  K0b_01_remaining_open_prerequisites: 4
   K0b_B02_status: complete
   canonical_payload_verification_status: active_machine_verified
   canonical_payload_historical_claims_status: 6_primary_and_4_derivative_matches_with_zero_discrepancies

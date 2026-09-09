@@ -1,0 +1,60 @@
+record_id: k0b-01-human-signoff-gate-closure-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-09T11:43:04.8074127+03:00"
+work_item_id: K0b-01
+gate_id: G-K0B01-HUMAN-SIGNOFF
+status: closes_on_authorized_containing_commit
+
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-human-signoff-materialization-approval-request-v1.yaml
+    complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+  separate_owner_confirmation:
+    source_ref: current_thread_owner_confirmation_2026_09_09
+    repeated_complete_file_sha256: a72833f74a5e02f027269cb6e0d96a0fa1c1e9226a459523bb9ec45bc2f87477
+    exact_match: true
+  human_only_review:
+    path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+    sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140
+
+closure_check:
+  exact_plan_v1_3_reviewed: true
+  inherited_plan_v1_2_reviewed: true
+  selected_K0b_B02_A_reviewed: true
+  K0b_B02_recalculation_reviewed: true
+  reviewer_identity_present: true
+  reviewer_capacity_present: true
+  review_mode: human_only
+  verdict: APPROVE
+  blocking_finding_count: 0
+  non_blocking_finding_count: 5
+  non_blocking_findings_retained_without_reclassification: true
+  result: pass
+
+effective_result:
+  gate_status: closed
+  effective_when: >-
+    This closure record, the human-only review, the unchanged approval request,
+    and the reconciled state projections are tracked by the single authorized
+    containing commit.
+  planning_basis_for_later_implementation_disposition: approved
+  required_carry_forward_finding_ids:
+    - K0B01-HR-NB01
+    - K0B01-HR-NB02
+    - K0B01-HR-NB03
+    - K0B01-HR-NB04
+    - K0B01-HR-NB05
+  remaining_K0b_01_open_prerequisites:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+    - G-K0B01-IMPLEMENTATION-LEDGER
+    - G-K0B01-STATE-RENDERER
+    - G-K0B01-TOOLCHAIN
+
+non_effects:
+  - does_not_close_any_other_gate
+  - does_not_edit_or_supersede_plan_v1_3_plan_v1_2_K0b_B02_or_its_recalculation
+  - does_not_resolve_or_reclassify_any_of_the_five_non_blocking_findings
+  - does_not_create_implementation_or_runtime_authority
+  - does_not_authorize_frozen_artifact_or_forbidden_root_access
+  - does_not_authorize_model_API_network_push_PR_deploy_or_release_actions
