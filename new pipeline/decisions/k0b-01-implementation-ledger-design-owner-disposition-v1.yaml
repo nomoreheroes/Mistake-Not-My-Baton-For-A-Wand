@@ -1,0 +1,154 @@
+disposition_id: k0b-01-implementation-ledger-design-owner-disposition-v1
+schema_version: 1
+decision_type: governance_design_only
+decision: approved
+status_after_disposition: G-K0B01-IMPLEMENTATION-LEDGER_open_design_authority_only
+gate_closed: false
+implementation_authority: none
+runtime_authority: none
+
+authority_confirmation:
+  protocol: {path: new pipeline/registry/authority-confirmation/v1.yaml, sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd}
+  approved_request: {path: new pipeline/requests/k0b-01-technical-prerequisites-design-materialization-approval-request-v1.yaml, complete_file_sha256: 8409d0250a0c2482702656360d70cba9a2ebe1616fd3942f36ce51009c7598c7}
+  owner_confirmation_source_ref: current_conversation_separate_owner_message_2026_09_09
+  repeated_confirmation_sha256: 8409d0250a0c2482702656360d70cba9a2ebe1616fd3942f36ce51009c7598c7
+  exact_hash_match: pass
+  baseline_and_stale_conditions: pass
+  authorized_scope_match: pass
+  residual_risk:
+    accepted_for_conversational_governance: true
+    statement: >-
+      Exact hash repetition binds the confirmation to the request bytes but
+      does not cryptographically authenticate conversational identity.
+
+baseline:
+  HEAD: 23619f42774b0bd07d69ecc3b5530fc879f81b25
+  tree: 259188a91923c084d95b24114c1fdbc77b7fc176
+  bound_planning_package: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  bound_human_review: {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140}
+  bound_human_signoff: {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd}
+
+selected_design:
+  architecture: immutable_YAML_event_records_with_deterministic_non_authoritative_index
+  canonical_authority: immutable_event_records
+  generated_index_authoritative: false
+  storage_service_or_database_required: false
+  git_history_alone_is_sufficient_ledger: false
+
+governance_contract:
+  lifecycle_states: [declared, authorized, materialized, validated, committed, credited]
+  additional_states: [rejected, superseded, stale]
+  semantic_separation:
+    declared_is_authorized: false
+    authorized_is_materialized: false
+    materialized_is_validated: false
+    validated_is_committed: false
+    committed_is_credited: false
+    committed_is_runtime_authorized: false
+  immutable_event_minimum_fields:
+    - schema_profile_version
+    - event_id
+    - unit_id
+    - gate_id
+    - checkpoint_budget_phase
+    - event_type_and_resulting_state
+    - predecessor_event_reference_and_SHA_256
+    - dependency_references
+    - approval_request_path_and_complete_file_SHA_256
+    - exact_confirmation_source_and_repeated_SHA_256
+    - artifact_paths_and_complete_file_SHA_256_values
+    - evidence_paths_and_complete_file_SHA_256_values
+    - budget_snapshot_and_input_provenance
+    - zero_credit_stale_rejection_or_supersession_reason_when_applicable
+  transition_rules:
+    self_authorization: forbidden
+    materialized_without_prior_exact_hash_authority: forbidden
+    skipped_required_state: forbidden
+    mutation_or_replacement_of_prior_event: forbidden
+    missing_incomplete_or_ambiguous_evidence: zero_credit
+    unknown_event_unit_gate_phase_or_profile: fail_closed
+    broken_predecessor_or_dependency_reference: fail_closed
+  checkpoint_rules:
+    exact_phase_count: 2
+    exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+    phases_chronological_contiguous_non_overlapping_exhaustive: true
+    predecessor_seal_and_zero_credit_rules_preserved: true
+
+budget_and_reforecast_requirements:
+  provenance_sources:
+    updated_forecast_v3: {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    forecast_binary_reconciliation_v3: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  hard_budget_inputs_requiring_field_level_path_hash_provenance: [22020096, 12, 34]
+  literal_presence_of_22020096_in_the_two_v3_sources_claimed: false
+  field_level_source_or_derivation_for_22020096: unresolved_required_before_gate_closure
+  runtime_phase_publications_34:
+    reforecast_sensitive: true
+    any_input_change_marks_dependent_forecast_and_claims_stale: true
+    stale_claim_receives_credit: false
+  required_budget_snapshot_fields:
+    - assumed_mean_object_bytes
+    - nominal_expected_bytes
+    - forecast_worst_by_count_bytes
+    - size_stressed_bytes
+  F15_worst_case_object_count:
+    authoritative_value_available_by_this_disposition: false
+    required_before_F15_size_stress_or_phase_completion_claim: true
+    missing_claim_result: rejected_zero_credit
+
+initial_population_requirement:
+  scope: complete_approved_K0b_01_baseline_without_rewriting_frozen_sources
+  must_represent_historical_human_signoff: true
+  human_signoff_remains_closed: true
+  inferred_or_unproven_events_allowed: false
+  missing_baseline_event_behavior: gate_remains_open
+
+future_implementation_scope_not_authorized_here:
+  - materialize_event_record_directories_or_files
+  - materialize_ledger_schema_validator_or_index_builder
+  - materialize_positive_or_negative_fixtures
+  - import_or_rewrite_frozen_K0b_01_artifacts
+  - install_or_update_dependencies
+
+closure_criteria:
+  - a_later_exact_hash_bound_authority_approves_the_physical_ledger_scope
+  - event_format_schema_validator_and_deterministic_index_builder_physically_exist
+  - validator_enforces_all_lifecycle_transition_authority_dependency_and_zero_credit_rules
+  - approved_K0b_01_baseline_and_closed_HUMAN_SIGNOFF_are_completely_represented
+  - every_artifact_and_evidence_reference_uses_exact_path_and_complete_file_SHA_256
+  - inputs_22020096_12_34_have_exact_field_level_v3_provenance_or_an_explicit_hash_bound_derivation
+  - every_budget_snapshot_contains_assumed_mean_and_all_three_required_size_results
+  - budget_input_changes_propagate_stale_status_and_zero_credit_until_exact_recalculation
+  - F15_claims_fail_closed_until_authoritative_worst_case_object_count_exists
+  - positive_and_negative_validation_fixtures_pass_under_the_closed_TOOLCHAIN
+  - a_separate_gate_closure_artifact_binds_the_authority_implementation_and_evidence_hashes
+
+dependencies:
+  design_authority_is_independent_of_toolchain_closure: true
+  physical_validation_requires_closed_TOOLCHAIN: true
+  ledger_core_required_before_final_STATE_RENDERER_evidence_registration: true
+  implementation_disposition_must_close_last: true
+
+human_review_findings_preserved_without_reclassification:
+  - runtime_phase_publications_34_is_reforecast_sensitive
+  - authoritative_F15_worst_case_object_count_required_before_size_stress_or_phase_completion
+  - assumed_mean_object_bytes_and_three_v1_3_section_6_size_results_required
+  - inputs_22020096_12_34_require_exact_v3_forecast_and_reconciliation_provenance
+  - STATE_RENDERER_requires_independent_authority_and_final_disposition_must_list_all_five_gates
+
+five_gate_inventory_required_in_later_implementation_disposition:
+  - G-K0B01-HUMAN-SIGNOFF
+  - G-K0B01-TOOLCHAIN
+  - G-K0B01-IMPLEMENTATION-LEDGER
+  - G-K0B01-STATE-RENDERER
+  - G-K0B01-IMPLEMENTATION-DISPOSITION
+
+retained_non_authorizations:
+  - no_gate_closure
+  - no_implementation_disposition
+  - no_runtime_code_contract_schema_registry_migration_prompt_fixture_checkpoint_or_projection
+  - no_frozen_K0b_01_artifact_change
+  - no_subagent_review_model_API_or_physical_model_call
+  - no_commit_push_or_PR
+
+integrity:
+  complete_file_sha256: external_post_materialization

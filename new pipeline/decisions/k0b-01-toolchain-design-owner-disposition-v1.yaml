@@ -1,0 +1,132 @@
+disposition_id: k0b-01-toolchain-design-owner-disposition-v1
+schema_version: 1
+decision_type: governance_design_only
+decision: approved
+status_after_disposition: G-K0B01-TOOLCHAIN_open_design_authority_only
+gate_closed: false
+implementation_authority: none
+runtime_authority: none
+
+authority_confirmation:
+  protocol: {path: new pipeline/registry/authority-confirmation/v1.yaml, sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd}
+  approved_request: {path: new pipeline/requests/k0b-01-technical-prerequisites-design-materialization-approval-request-v1.yaml, complete_file_sha256: 8409d0250a0c2482702656360d70cba9a2ebe1616fd3942f36ce51009c7598c7}
+  owner_confirmation_source_ref: current_conversation_separate_owner_message_2026_09_09
+  repeated_confirmation_sha256: 8409d0250a0c2482702656360d70cba9a2ebe1616fd3942f36ce51009c7598c7
+  exact_hash_match: pass
+  baseline_and_stale_conditions: pass
+  authorized_scope_match: pass
+  residual_risk:
+    accepted_for_conversational_governance: true
+    statement: >-
+      Exact hash repetition binds the confirmation to the request bytes but
+      does not cryptographically authenticate conversational identity.
+
+baseline:
+  HEAD: 23619f42774b0bd07d69ecc3b5530fc879f81b25
+  tree: 259188a91923c084d95b24114c1fdbc77b7fc176
+  bound_planning_package: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  bound_human_review: {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140}
+  bound_human_signoff: {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd}
+
+selected_design:
+  architecture: repository_native_exactly_locked_single_normative_execution_path
+  purpose: >-
+    Define one reproducible execution path for later validators, calculators,
+    ledger tooling, state rendering, and projection checks.
+  normative_path_count: 1
+  optional_secondary_environment_is_non_normative: true
+  committed_interpreter_binary_required: false
+  floating_dependency_or_container_tag_allowed: false
+
+governance_contract:
+  exact_pinning_required:
+    - runtime_name_version_and_distribution
+    - package_manager_version
+    - manifest_and_lock_format
+    - every_dependency_version_and_source_integrity
+    - bootstrap_source_or_image_digest_when_applicable
+  execution_environment_required:
+    - supported_OS_and_architecture_matrix
+    - UTF_8_text
+    - LF_normative_output
+    - deterministic_locale_timezone_sorting_and_final_newline
+    - declared_network_policy
+    - declared_treatment_of_tool_and_bootstrap_binaries_under_hard_budget
+  canonical_commands_required:
+    - bootstrap
+    - validate
+    - test
+    - render
+    - check
+  behavior:
+    version_lock_or_input_hash_mismatch: fail_closed_nonzero_exit
+    missing_required_input: fail_closed_nonzero_exit
+    unsupported_environment: fail_closed_nonzero_exit
+    diagnostic_output_is_not_normative_evidence: true
+    normative_outputs_require_complete_file_SHA_256: true
+
+budget_and_reforecast_requirements:
+  provenance_sources:
+    updated_forecast_v3: {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    forecast_binary_reconciliation_v3: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+  hard_budget_inputs_requiring_field_level_path_hash_provenance: [22020096, 12, 34]
+  literal_presence_of_22020096_in_the_two_v3_sources_claimed: false
+  field_level_source_or_derivation_for_22020096: unresolved_required_before_gate_closure
+  runtime_phase_publications_34:
+    reforecast_sensitive: true
+    immutable_constant: false
+  any_budget_input_change:
+    prior_calculation_status: stale
+    new_exact_calculation_required: true
+  required_calculation_fields:
+    - assumed_mean_object_bytes
+    - nominal_expected_bytes
+    - forecast_worst_by_count_bytes
+    - size_stressed_bytes
+  F15_worst_case_object_count:
+    authoritative_value_available_by_this_disposition: false
+    required_before_F15_size_stress_or_phase_completion_claim: true
+    missing_behavior: fail_closed
+
+future_implementation_scope_not_authorized_here:
+  - select_and_bind_exact_physical_tool_versions
+  - materialize_manifest_lockfile_or_bootstrap
+  - implement_CLI_validator_calculator_or_CI
+  - install_or_update_dependencies
+  - execute_runtime_or_physical_model_calls
+
+closure_criteria:
+  - a_later_exact_hash_bound_authority_approves_the_physical_toolchain_scope
+  - all_runtime_package_manager_dependency_and_source_versions_are_exactly_pinned
+  - supported_platform_network_locale_encoding_rounding_unit_and_budget_treatment_policies_are_explicit
+  - canonical_commands_exist_and_reject_every_declared_mismatch_fail_closed
+  - two_clean_workdirs_produce_byte_identical_normative_outputs_and_matching_complete_file_hashes
+  - budget_validation_enforces_exact_provenance_reforecast_invalidation_and_all_four_required_size_fields
+  - F15_claims_are_blocked_until_authoritative_worst_case_object_count_exists
+  - positive_and_negative_validation_evidence_exists
+  - a_separate_gate_closure_artifact_binds_the_authority_implementation_and_evidence_hashes
+
+human_review_findings_preserved_without_reclassification:
+  - runtime_phase_publications_34_is_reforecast_sensitive
+  - authoritative_F15_worst_case_object_count_required_before_size_stress_or_phase_completion
+  - assumed_mean_object_bytes_and_three_v1_3_section_6_size_results_required
+  - inputs_22020096_12_34_require_exact_v3_forecast_and_reconciliation_provenance
+  - STATE_RENDERER_requires_independent_authority_and_final_disposition_must_list_all_five_gates
+
+five_gate_inventory_required_in_later_implementation_disposition:
+  - G-K0B01-HUMAN-SIGNOFF
+  - G-K0B01-TOOLCHAIN
+  - G-K0B01-IMPLEMENTATION-LEDGER
+  - G-K0B01-STATE-RENDERER
+  - G-K0B01-IMPLEMENTATION-DISPOSITION
+
+retained_non_authorizations:
+  - no_gate_closure
+  - no_implementation_disposition
+  - no_runtime_code_contract_schema_registry_migration_prompt_fixture_checkpoint_or_projection
+  - no_frozen_K0b_01_artifact_change
+  - no_subagent_review_model_API_or_physical_model_call
+  - no_commit_push_or_PR
+
+integrity:
+  complete_file_sha256: external_post_materialization
