@@ -1,0 +1,79 @@
+record_id: d0-canonical-yaml-v1-commit-set-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T19:28:03.5597472+03:00"
+status: ready_for_exact_stage_and_containing_commit
+
+authority:
+  approval_request:
+    path: new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+    complete_file_sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+  separate_owner_confirmation:
+    source_ref: current_thread_owner_confirmation_2026_09_08
+    repeated_complete_file_sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+    exact_match: true
+  materialized_owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+
+pre_commit_baseline:
+  HEAD: b8159e14a39b192e79a30e9fd739f179d17f3964
+  tree: be1315783c84153aeeab3057736afbb203afb235
+  expected_parent_count: 1
+
+exact_commit_set:
+  entry_count_excluding_this_record: 15
+  this_record_inclusion: required_without_self_hash
+  total_path_count_including_this_record: 16
+  canonical_entry_bytes: UTF_8_of_each_sorted_entry_as_sha256_two_spaces_path_LF
+  canonical_entry_set_sha256_excluding_this_record: 48e128c87588f7b606065714cdb52202f24d4aa41883df458786aed2e5e3cddb
+  entries_excluding_this_record:
+    - {path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml, sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml, sha256: 221518dce7f928c09d59cbb216ecb247cbf68bfc7408fc805f954a94022b05e2, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml, sha256: 1e80b1f3dbd45e4e2691b898b39490834e647c32701795f3631146435b8060a9, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml, sha256: cc88ba85a81b892e043d5d3cab265de2a39b5397a14ccfee894b3f35343c05d1, pre_stage_status: untracked}
+    - {path: new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml, sha256: 4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888, pre_stage_status: untracked}
+    - {path: new pipeline/harness/governance/__init__.py, sha256: d96155366c02d26006d28f343a0099abfe1d2cdc15ac9360ae0b71899d2d8c57, pre_stage_status: untracked}
+    - {path: new pipeline/harness/governance/canonical_yaml.py, sha256: 23476796d955e3d5329d1b908fe00f32e48b75c1cfa4d01c48c4c74253437a17, pre_stage_status: untracked}
+    - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml, sha256: 88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894, pre_stage_status: untracked}
+    - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml, sha256: e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6, pre_stage_status: untracked}
+    - {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml, sha256: 43f2778ebd28b0cbc44dead6752dd0b1d493acd42649ff0a9ec3e0fcb2e4ea0f, pre_stage_status: untracked}
+    - {path: new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml, sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11, pre_stage_status: untracked}
+    - {path: new pipeline/state/STATE.md, sha256: ff5aa03cc14157d165fb714647a42f99b2452e08f15346c3e76a87aa0726154c, pre_stage_status: modified_tracked}
+    - {path: new pipeline/state/state.yaml, sha256: 6f428ba277e086f0b2cb9afd7609f6cab49b463ca07211462672cf866bde6d87, pre_stage_status: modified_tracked}
+    - {path: new pipeline/tests/governance/canonical_yaml_v1_vectors.json, sha256: 803d3178a5df5c177baf39f4ab5257510827aa761e510993fd3d1f846bac6e8f, pre_stage_status: untracked}
+    - {path: new pipeline/tests/governance/test_canonical_yaml_v1.py, sha256: 50fa3a5438f5b5aa6ff78ef605ba4547569454e64c3ad20b28316df0f51221d3, pre_stage_status: untracked}
+
+validation:
+  request_complete_file_SHA_256_match: pass
+  request_confirmation_exact_match: pass
+  request_stale_conditions: none_observed
+  baseline_HEAD_and_tree: pass
+  verifier_contract_and_toolchain_binding: pass
+  new_and_modified_governance_YAML_and_JSON_parse: pass
+  fixed_vector_and_unit_test_result: {test_methods: 10, failures: 0, errors: 0, result: pass}
+  known_primary_claim_reconciliation: {matched: 6, mismatched: 0, result: pass}
+  known_derivative_claim_reconciliation: {matched: 4, discrepant: 0, result: pass}
+  original_profile_schema_claim_and_derivative_bytes_modified: 0
+  state_canonical_gate_transition_and_path_hash_references: pass
+  K0b_01_open_prerequisites_preserved: 5
+  runtime_model_API_remote_or_product_execution: 0
+  forbidden_root_or_frozen_artifact_access: 0
+
+post_stage_requirements:
+  - staged_path_set_equals_the_fifteen_entries_plus_this_record
+  - git_diff_cached_check_passes
+  - every_staged_entry_hash_matches
+  - containing_commit_has_exactly_one_parent_equal_to_pre_commit_HEAD
+  - containing_commit_path_set_equals_the_exact_sixteen_paths
+  - no_forbidden_cache_runtime_frozen_or_unrelated_path_is_staged
+
+non_authorizations:
+  - no_K0b_01_Alpha_migration_routing_resource_budget_or_remaining_event_implementation
+  - no_frozen_K0b_01_artifact_access_edit_import_execution_or_activation
+  - no_canonical_fixture_research_old_swarm_or_projects_swarm_access
+  - no_dependency_download_install_or_upgrade
+  - no_model_agent_independent_review_provider_API_or_external_network_call
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+  - no_broader_K0b_01_toolchain_gate_closure
+  - no_product_runtime_or_implementation_readiness_claim

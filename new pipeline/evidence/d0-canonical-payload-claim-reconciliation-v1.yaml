@@ -1,0 +1,110 @@
+record_id: d0-canonical-payload-claim-reconciliation-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T19:18:42.3923287+03:00"
+status: complete_all_known_claims_machine_verified_and_reconciled
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+  verifier_contract:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml
+    sha256: e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6
+  claim_inventory:
+    path: new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml
+    sha256: 221518dce7f928c09d59cbb216ecb247cbf68bfc7408fc805f954a94022b05e2
+
+verifier_binding:
+  implementation:
+    path: new pipeline/harness/governance/canonical_yaml.py
+    sha256: 23476796d955e3d5329d1b908fe00f32e48b75c1cfa4d01c48c4c74253437a17
+  toolchain:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml
+    sha256: 43f2778ebd28b0cbc44dead6752dd0b1d493acd42649ff0a9ec3e0fcb2e4ea0f
+  fixed_vectors:
+    path: new pipeline/tests/governance/canonical_yaml_v1_vectors.json
+    sha256: 803d3178a5df5c177baf39f4ab5257510827aa761e510993fd3d1f846bac6e8f
+    vector_count: 27
+  test_module:
+    path: new pipeline/tests/governance/test_canonical_yaml_v1.py
+    sha256: 50fa3a5438f5b5aa6ff78ef605ba4547569454e64c3ad20b28316df0f51221d3
+  exact_test_result: 10_tests_passed_0_failed_0_errors
+
+execution:
+  mode: local_deterministic_read_only_reconciliation
+  source_files_read: exactly_6_primary_claim_files_plus_1_derivative_evidence_file
+  source_files_written: 0
+  network_subprocess_database_model_provider_API_or_product_runtime_calls: 0
+  forbidden_root_or_frozen_artifact_access: 0
+
+primary_results:
+  - claim_id: d0_decision_baseline_approval
+    path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml
+    complete_file_sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b
+    excluded_field_path: integrity.canonical_payload_sha256
+    declared_sha256: ab1c9415a83226ac337032c452966a829614d81f0e5a11ab92acd2904fe5ffba
+    computed_sha256: ab1c9415a83226ac337032c452966a829614d81f0e5a11ab92acd2904fe5ffba
+    outcome: verified_match
+  - claim_id: k0a_layer_architecture_approval
+    path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml
+    complete_file_sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34
+    excluded_field_path: integrity.canonical_payload_sha256
+    declared_sha256: af1c96d273584174427871627ebaf1cf736439fafdab9777092a899fbd22b34d
+    computed_sha256: af1c96d273584174427871627ebaf1cf736439fafdab9777092a899fbd22b34d
+    outcome: verified_match
+  - claim_id: k0b_final_architecture_owner_disposition
+    path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    complete_file_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+    excluded_field_path: integrity.canonical_payload_sha256
+    declared_sha256: 7c417c4ef96904a3a4b651688941c88c6ae6e35933fedd1377c02e732e1281ba
+    computed_sha256: 7c417c4ef96904a3a4b651688941c88c6ae6e35933fedd1377c02e732e1281ba
+    outcome: verified_match
+  - claim_id: k0a_shared_control_plan_receipt
+    path: new pipeline/receipts/k0a-00-shared-control-plane-approval-v1.yaml
+    complete_file_sha256: f89e3b579c99947ffe33d7e5415fa48430979ae7030afac2c19cbb3176d3ba40
+    excluded_field_path: receipt_sha256
+    declared_sha256: 86bead7065f52a7cd08dd080638fe69dddaa0df1d0ec58d28234e101bf97d3f1
+    computed_sha256: 86bead7065f52a7cd08dd080638fe69dddaa0df1d0ec58d28234e101bf97d3f1
+    outcome: verified_match
+  - claim_id: k0a_shared_artifact_event_plan_receipt
+    path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml
+    complete_file_sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724
+    excluded_field_path: receipt_sha256
+    declared_sha256: 508b42ef0ac182b897a4f8806a9d8a359292a306f95b79b0f8c65a177e720ee4
+    computed_sha256: 508b42ef0ac182b897a4f8806a9d8a359292a306f95b79b0f8c65a177e720ee4
+    outcome: verified_match
+  - claim_id: k0a_S_plan_receipt
+    path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml
+    complete_file_sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1
+    excluded_field_path: receipt_sha256
+    declared_sha256: ee440eddc859c52dd636a7b19bbb9ff26ebae762baa587837b4813d44ff075b9
+    computed_sha256: ee440eddc859c52dd636a7b19bbb9ff26ebae762baa587837b4813d44ff075b9
+    outcome: verified_match
+
+derivative_results:
+  source:
+    path: new pipeline/evidence/k0a-00-approval-validation-v1.yaml
+    complete_file_sha256: 30a76087a1973f5d5bcee883243d35b68f5ad3a90021568b3d7bd2d5f9cfc912
+  occurrences:
+    - {occurrence_id: shared_control_plane, primary_claim_id: k0a_shared_control_plan_receipt, outcome: match_primary_declared_value}
+    - {occurrence_id: shared_artifact_event_plane, primary_claim_id: k0a_shared_artifact_event_plan_receipt, outcome: match_primary_declared_value}
+    - {occurrence_id: S, primary_claim_id: k0a_S_plan_receipt, outcome: match_primary_declared_value}
+    - {occurrence_id: approval_envelope, primary_claim_id: k0a_layer_architecture_approval, outcome: match_primary_declared_value}
+
+summary:
+  primary_claims_checked: 6
+  primary_verified_matches: 6
+  primary_mismatches: 0
+  derivative_occurrences_checked: 4
+  derivative_matches: 4
+  derivative_discrepancies: 0
+  unclassified_claims_or_occurrences: 0
+  historical_source_files_edited: 0
+  complete_file_SHA_256_authority_changed: false
+
+disposition:
+  all_known_existing_canonical_payload_claims: machine_verified
+  mismatch_successor_records_required: 0
+  silent_recalculation_or_source_rewrite: false
+  prospective_profile_activation_eligible_after_validation_binding: true

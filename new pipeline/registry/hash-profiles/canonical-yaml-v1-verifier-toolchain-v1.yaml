@@ -1,0 +1,46 @@
+profile_id: canonical-yaml-v1-verifier-toolchain-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T18:54:46.9560385+03:00"
+status: pinned_for_exact_validation_environment
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+  verifier_contract:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml
+    sha256: e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6
+
+runtime:
+  implementation: CPython
+  version: 3.12.7
+  bytecode_generation_during_validation: forbidden
+
+dependencies:
+  - distribution: ruamel.yaml
+    version: 0.18.6
+    purpose: YAML_1_2_safe_compose_and_event_stream
+  - distribution: ruamel.yaml.clib
+    version: 0.2.8
+    purpose: installed_ruamel_yaml_acceleration_dependency
+  - distribution: Python_standard_library
+    version: CPython_3.12.7
+    purpose: SHA_256_Unicode_NFC_JSON_CLI_and_unittest
+
+local_implementation:
+  RFC_8785_serializer:
+    path: new pipeline/harness/governance/canonical_yaml.py
+    external_JCS_dependency: none
+  dependency_download_install_or_upgrade: forbidden
+  network_resolution: forbidden
+  PyYAML_as_verifier_parser: forbidden
+
+validation_command: >-
+  python -B -m unittest discover -s "new pipeline/tests/governance"
+  -p "test_canonical_yaml_v1.py" -v
+
+scope_limit:
+  closes_broader_G_K0B01_TOOLCHAIN: false
+  authorizes_other_runtime_or_tests: false
+  future_environment_change_requires_revalidation: true

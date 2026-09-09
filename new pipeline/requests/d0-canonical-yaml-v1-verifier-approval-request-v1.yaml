@@ -1,0 +1,301 @@
+request_id: d0-canonical-yaml-v1-verifier-approval-request-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T18:44:38.9432254+03:00"
+created_by: /root
+status: non_authorizing_awaiting_exact_SHA_256_owner_confirmation
+
+purpose: >-
+  Request exact owner authority to implement and validate a fail-closed machine
+  verifier for the existing canonical-yaml-v1 profile, reconcile every known
+  historical self-hash claim without rewriting its source bytes, activate the
+  profile prospectively through an immutable successor, close
+  G-D0-CANONICAL-HASH-PROFILE-VERIFIER, update state, and create one exact-scope commit.
+
+selection_provenance:
+  owner_choice: A_implement_and_validate_current_canonical_yaml_v1
+  source_ref: current_thread_owner_choice_A_2026_09_08
+  choice_by_itself_authorizes_implementation: false
+  authority_requires_this_request_exact_hash_confirmation: true
+
+authority_protocol:
+  profile:
+    path: new pipeline/registry/authority-confirmation/v1.yaml
+    sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  request_before_confirmation: non_authorizing
+  abbreviated_or_inferred_confirmation: forbidden
+
+baseline:
+  HEAD: b8159e14a39b192e79a30e9fd739f179d17f3964
+  tree: be1315783c84153aeeab3057736afbb203afb235
+  remediation_gate:
+    path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml
+    sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3
+  canonical_profile:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+    sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+  canonical_profile_human_projection:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1.md
+    sha256: 21058957d8d6984b1597e72bd672290b229709729bfde9b753770a4eeb27bec7
+  approval_envelope_schema:
+    path: new pipeline/registry/approval-envelope/v1.schema.yaml
+    sha256: 0a4a48a69f30708fc7fbb144636fb6cc5b953cf5d5b7be829eef7b885e000b54
+  program_state:
+    path: new pipeline/state/state.yaml
+    sha256: 51315537486618c718ba6fbcca70eb23bf6f89829c5a67d6d8c679e87f9a0b2d
+  program_state_human_projection:
+    path: new pipeline/state/STATE.md
+    sha256: d59de3efb55e791833e51ac16e25e23c0b9d26113b1b67899cd98bf7dae03c19
+
+known_claim_inventory_baseline:
+  primary_self_hash_claim_count: 6
+  derivative_claim_occurrence_count: 4
+  schema_requirement_count: 1
+  primary_claims:
+    - path: new pipeline/receipts/d0-01-decision-baseline-approval.yaml
+      complete_file_sha256: 3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b
+      excluded_field_path: integrity.canonical_payload_sha256
+    - path: new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml
+      complete_file_sha256: 98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34
+      excluded_field_path: integrity.canonical_payload_sha256
+    - path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+      complete_file_sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d
+      excluded_field_path: integrity.canonical_payload_sha256
+    - path: new pipeline/receipts/k0a-00-shared-control-plane-approval-v1.yaml
+      complete_file_sha256: f89e3b579c99947ffe33d7e5415fa48430979ae7030afac2c19cbb3176d3ba40
+      excluded_field_path: receipt_sha256
+    - path: new pipeline/receipts/k0a-00-shared-artifact-event-plane-approval-v1.yaml
+      complete_file_sha256: b27167212c566771a15e77eca6bed30332b36d63daeac27cfb613db6ce614724
+      excluded_field_path: receipt_sha256
+    - path: new pipeline/receipts/k0a-00-s-layer-approval-v1.yaml
+      complete_file_sha256: d93c9fef26093a019b02657e72478fdd979bd0e09b2c625ea22a30868cd66ec1
+      excluded_field_path: receipt_sha256
+  derivative_evidence:
+    path: new pipeline/evidence/k0a-00-approval-validation-v1.yaml
+    complete_file_sha256: 30a76087a1973f5d5bcee883243d35b68f5ad3a90021568b3d7bd2d5f9cfc912
+    expected_occurrences: 4
+
+requested_implementation_contract:
+  input:
+    accepted_media_type: application_yaml
+    encoding: UTF_8
+    byte_order_mark: rejected
+    document_count: exactly_one
+    yaml_version: "1.2"
+    schema: core
+    parser: ruamel_yaml_safe_compose_with_preconstruction_event_and_node_validation
+  reject_before_hash:
+    - malformed_or_multiple_YAML_documents
+    - duplicate_mapping_keys_before_or_after_NFC_normalization
+    - merge_keys
+    - aliases_or_anchors
+    - explicit_or_implicit_tags_outside_the_YAML_1_2_core_JSON_compatible_set
+    - non_string_mapping_keys
+    - timestamp_binary_set_or_other_non_JSON_values
+    - non_finite_numbers
+    - Unicode_surrogates
+    - missing_ambiguous_or_non_mapping_excluded_field_path
+  excluded_field_path:
+    external_representation: dot_separated_ASCII_identifier_segments
+    segment_pattern: "^[A-Za-z_][A-Za-z0-9_]*$"
+    traversal: exact_mapping_key_per_segment_before_NFC_normalization
+    exactly_one_path_per_invocation: true
+    target_must_exist: true
+    delete_leaf_only_and_retain_parent_mapping: true
+    currently_required_paths:
+      - receipt_sha256
+      - integrity.canonical_payload_sha256
+  normalization:
+    strings_and_mapping_keys: Unicode_NFC
+    normalized_key_collision: rejected
+    recursive_copy_without_input_mutation: required
+  number_domain:
+    integers: exact_IEEE_754_binary64_safe_integer_range_only
+    minimum_integer: -9007199254740991
+    maximum_integer: 9007199254740991
+    floats: finite_IEEE_754_binary64_only
+    negative_zero_serialization: "0"
+    other_numeric_types: rejected
+  canonical_encoding:
+    standard: RFC_8785_JSON_Canonicalization_Scheme
+    object_key_order: lexicographic_UTF_16_code_units
+    number_serialization: ECMAScript_JSON_number_serialization_shortest_round_trip
+    string_escaping: RFC_8785
+    output: UTF_8_without_BOM_or_trailing_newline
+  digest:
+    algorithm: SHA_256
+    representation: lowercase_hex_64
+  public_surface:
+    - parse_validate_and_normalize_yaml_bytes
+    - canonicalize_validated_value
+    - calculate_canonical_payload_sha256
+    - verify_declared_canonical_payload_sha256
+    - typed_fail_closed_error_codes
+    - local_read_only_CLI_for_one_file_and_one_excluded_path
+  side_effects:
+    input_file_write: forbidden
+    repository_write_from_verifier_or_CLI: forbidden
+    network_subprocess_database_model_or_API_access: forbidden
+
+toolchain_boundary:
+  validation_environment:
+    Python: 3.12.7
+    ruamel_yaml: 0.18.6
+    ruamel_yaml_clib: 0.2.8
+  RFC_8785_implementation: repository_local_no_external_JCS_dependency
+  dependency_download_install_or_upgrade: forbidden
+  PyYAML_as_verifier_parser: forbidden
+  exact_versions_recorded_in_versioned_verifier_toolchain_manifest: required
+  broader_K0b_01_toolchain_gate_closed_by_this_scope: false
+
+reference_vector_requirements:
+  storage: test_only_JSON_not_consumed_by_production_verifier
+  each_vector_fields:
+    - vector_id
+    - input_UTF_8_bytes_as_base64
+    - excluded_field_path
+    - expected_canonical_UTF_8_bytes_as_base64_or_null
+    - expected_SHA_256_or_null
+    - expected_error_code_or_null
+  positive_coverage:
+    - profile_six_declared_reference_tests
+    - RFC_8785_object_key_UTF_16_order_and_string_escaping
+    - RFC_8785_number_boundaries_exponents_rounding_and_negative_zero
+    - block_and_flow_YAML_equivalence
+    - empty_parent_retention_after_exclusion
+  negative_coverage:
+    - duplicate_pre_and_post_NFC_keys
+    - aliases_anchors_merge_and_custom_tags
+    - non_string_keys_timestamp_binary_set_and_non_finite_values
+    - malformed_UTF_8_BOM_multiple_documents_and_surrogates
+    - missing_ambiguous_or_invalid_excluded_paths
+    - integers_outside_safe_binary64_range
+  oracle_separation: expected_outputs_must_not_be_generated_by_the_production_verifier_during_tests
+
+claim_reconciliation_policy:
+  source_file_bytes_must_remain_unchanged: true
+  primary_claim_outcomes:
+    verified_match:
+      effect: canonical_claim_is_machine_verified
+    mismatch:
+      effect:
+        - preserve_original_claim_and_complete_file_bytes_as_history
+        - record_declared_and_computed_values_in_immutable_successor_evidence
+        - mark_original_canonical_claim_as_not_valid_for_future_verification
+        - do_not_substitute_the_computed_value_into_the_historical_file
+  derivative_evidence_outcomes:
+    match_primary_declared_value: record_match
+    mismatch_primary_declared_value: record_derivative_discrepancy
+  complete_file_SHA_256_authority:
+    affected_by_canonical_claim_match_or_mismatch: false
+    reapproval_or_invalidation_inferred_by_verifier: forbidden
+  gate_may_close_when:
+    - verifier_and_all_reference_vectors_pass
+    - all_six_primary_claims_have_exact_machine_results
+    - all_four_derivative_occurrences_are_reconciled
+    - every_mismatch_is_explicit_and_no_historical_file_is_rewritten
+    - prospective_status_successor_binds_verifier_toolchain_vectors_inventory_reconciliation_and_validation_hashes
+  unresolved_or_unclassified_claim: blocks_commit_and_gate_closure
+
+requested_exact_write_set_after_matching_confirmation:
+  create:
+    - new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml
+    - new pipeline/harness/governance/__init__.py
+    - new pipeline/harness/governance/canonical_yaml.py
+    - new pipeline/tests/governance/canonical_yaml_v1_vectors.json
+    - new pipeline/tests/governance/test_canonical_yaml_v1.py
+    - new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml
+    - new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-commit-set-v1.yaml
+  modify:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  include_unchanged_or_new_request:
+    - new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+  total_commit_path_count: 16
+  all_other_paths: forbidden
+
+authorized_validation_after_matching_confirmation:
+  static:
+    - parse_all_created_or_modified_YAML_and_JSON
+    - verify_every_new_repository_path_hash_reference
+    - verify_original_profile_schema_six_primary_claim_files_and_derivative_evidence_complete_file_hashes
+    - verify_state_and_STATE_projection_equivalence
+    - verify_UTF_8_without_BOM_and_LF_for_new_text_files
+  deterministic_execution:
+    command: >-
+      python -B -m unittest discover -s "new pipeline/tests/governance"
+      -p "test_canonical_yaml_v1.py" -v
+    allowed_test_file_count: 1
+    allowed_production_module_scope:
+      - new pipeline/harness/governance/__init__.py
+      - new pipeline/harness/governance/canonical_yaml.py
+    generated_temporary_files: system_temporary_directory_only
+    repository_cache_or_generated_file_creation: forbidden
+    network_model_API_database_product_runtime_or_subprocess: forbidden
+  reconciliation:
+    execute_verifier_read_only_on_exactly_the_six_primary_claim_files: true
+    inspect_exactly_the_one_derivative_evidence_file: true
+    rewrite_any_input: false
+  commit_gate:
+    - all_tests_pass
+    - all_known_claim_occurrences_are_classified
+    - no_original_profile_schema_claim_or_derivative_file_bytes_change
+    - gate_closure_and_status_successor_hash_graph_resolves
+    - exact_staged_path_set_has_16_paths
+    - git_diff_cached_check_passes
+
+requested_commit_authority_after_matching_confirmation:
+  commit_count: 1
+  exact_scope_only: true
+  expected_parent: b8159e14a39b192e79a30e9fd739f179d17f3964
+  commit_message: "governance: implement and validate canonical-yaml-v1 verifier"
+  commit_if_validation_fails_or_claim_is_unclassified: forbidden
+  push_PR_merge_deploy_release: forbidden
+
+explicitly_excluded:
+  - edit_delete_move_or_reformat_the_original_canonical_yaml_v1_profile_or_projection
+  - edit_delete_move_or_reformat_the_approval_envelope_schema
+  - edit_delete_move_or_reformat_any_primary_claim_or_derivative_evidence_input
+  - silent_recalculation_or_replacement_of_a_historical_canonical_claim
+  - inference_that_a_canonical_mismatch_invalidates_complete_file_SHA_256_authority
+  - runtime_contract_schema_registry_data_migration_prompt_projection_checkpoint_or_fixture_implementation
+  - K0b_01_Alpha_migration_routing_or_resource_budget_implementation
+  - closure_of_G_K0B01_TOOLCHAIN_or_any_other_K0b_01_prerequisite
+  - canonical_fixture_research_old_swarm_or_projects_swarm_access
+  - any_frozen_K0b_01_artifact_read_edit_import_execution_or_activation
+  - dependency_download_install_or_upgrade
+  - new_model_agent_independent_review_or_provider_API_call
+  - product_runtime_database_external_product_or_remote_execution
+  - filesystem_ACL_or_ownership_change
+  - push_PR_merge_deploy_release_or_remote_side_effect
+
+confirmation_protocol_for_this_request:
+  authority_before_confirmation: none
+  accepted_confirmation_format: >-
+    Подтверждаю approval-request SHA-256 <exact_lowercase_64_hex> и разрешаю
+    ровно описанные canonical-yaml-v1 verifier implementation, validation,
+    reconciliation, gate closure и один exact-scope commit.
+  required_hash_subject: complete_file_bytes_of_this_request
+  comparison: exact_lowercase_hex_equality
+  separate_owner_message_required: true
+  abbreviated_hash: forbidden
+  inferred_confirmation_from_A_ok_yes_continue_or_prior_messages: forbidden
+  authority_if_hash_mismatch_or_baseline_change: none
+
+stale_conditions:
+  - this_request_bytes_change
+  - HEAD_differs_from_b8159e14a39b192e79a30e9fd739f179d17f3964_before_materialization
+  - any_baseline_or_claim_inventory_input_complete_file_hash_changes
+  - requested_write_validation_reconciliation_or_commit_scope_changes
+  - any_explicit_non_authorization_is_relaxed
+  - owner_confirmation_does_not_repeat_the_exact_complete_file_SHA_256
+
+request_integrity:
+  complete_file_SHA_256: supplied_after_materialization
+  self_hash_embedding: forbidden

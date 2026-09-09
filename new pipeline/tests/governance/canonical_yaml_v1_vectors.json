@@ -1,0 +1,223 @@
+{
+  "profile_id": "canonical-yaml-v1",
+  "vector_schema_version": 1,
+  "oracle": "fixed_test_only_values_not_generated_by_production_verifier",
+  "vectors": [
+    {
+      "vector_id": "map_order_block",
+      "input_UTF_8_bytes_as_base64": "ejogMQpyZWNlaXB0X3NoYTI1NjogMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAphOiB0ZXN0Cg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJhIjoidGVzdCIsInoiOjF9",
+      "expected_SHA_256_or_null": "43e59ef26637e8cb9fa79fc3b7718e41fe5b4f98c7d1e2e0253986b262269a6f",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "map_order_flow",
+      "input_UTF_8_bytes_as_base64": "e2E6IHRlc3QsIHJlY2VpcHRfc2hhMjU2OiAiMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsIHo6IDF9DQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJhIjoidGVzdCIsInoiOjF9",
+      "expected_SHA_256_or_null": "43e59ef26637e8cb9fa79fc3b7718e41fe5b4f98c7d1e2e0253986b262269a6f",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "nested_exclusion",
+      "input_UTF_8_bytes_as_base64": "aW50ZWdyaXR5OgogIGNhbm9uaWNhbF9wYXlsb2FkX3NoYTI1NjogMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAogIHJldGFpbmVkOiB0cnVlCm5hbWU6IGRlbW8K",
+      "excluded_field_path": "integrity.canonical_payload_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJpbnRlZ3JpdHkiOnsicmV0YWluZWQiOnRydWV9LCJuYW1lIjoiZGVtbyJ9",
+      "expected_SHA_256_or_null": "1004292c24224c758af3ae1558aa9856a5cb903ae1ba7fe644b1fae1649a9234",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "nfc_strings_and_keys",
+      "input_UTF_8_bytes_as_base64": "ImVcdTAzMDEiOiAiQVx1MDMwYSIKcmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAK",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyLDqSI6IsOFIn0=",
+      "expected_SHA_256_or_null": "b2292a8f175fcae2732e984ba5d1242e7f5c78e4eb81bea97c3338b021fe5406",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "rfc8785_numbers",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKdmFsdWVzOiBbMzMzMzMzMzMzLjMzMzMzMzI5LCAxLjBlKzMwLCA0LjUwLCAyZS0zLCAxZS0yNywgLTAuMCwgMWUtNiwgMWUtNywgMWUyMCwgMWUyMV0K",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJ2YWx1ZXMiOlszMzMzMzMzMzMuMzMzMzMzMywxZSszMCw0LjUsMC4wMDIsMWUtMjcsMCwwLjAwMDAwMSwxZS03LDEwMDAwMDAwMDAwMDAwMDAwMDAwMCwxZSsyMV19",
+      "expected_SHA_256_or_null": "3ab0b5f05d7e74d9b92a187ac6a85ff22d2795c777b588c58a14e90b2ea53b3e",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "utf16_key_order",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKIlxyIjogQ1IKIjEiOiBvbmUKIlx1MDA4MCI6IGNvbnRyb2wKIlx1MDBmNiI6IG8KIlx1MjBhYyI6IGV1cm8KIlxVMDAwMWY2MDAiOiBlbW9qaQoiXHVmYjMzIjogaGVicmV3Cg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJcciI6IkNSIiwiMSI6Im9uZSIsIsKAIjoiY29udHJvbCIsIsO2IjoibyIsIteT1rwiOiJoZWJyZXciLCLigqwiOiJldXJvIiwi8J+YgCI6ImVtb2ppIn0=",
+      "expected_SHA_256_or_null": "f8b189dc39ba029c81a06ab68ac5b41e0f45136efd5254989def55dd89fffd1e",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "string_escaping",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKczogImxpbmVcblwiXFxcdTAwMDEiCg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJzIjoibGluZVxuXCJcXFx1MDAwMSJ9",
+      "expected_SHA_256_or_null": "35e881820a1f64aba1bffe7cbdb852fdd594d9494a92f6affa01c76042c3a4ac",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "empty_parent_retained",
+      "input_UTF_8_bytes_as_base64": "aW50ZWdyaXR5OgogIGNhbm9uaWNhbF9wYXlsb2FkX3NoYTI1NjogMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMAp2YWx1ZTogbnVsbAo=",
+      "excluded_field_path": "integrity.canonical_payload_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": "eyJpbnRlZ3JpdHkiOnt9LCJ2YWx1ZSI6bnVsbH0=",
+      "expected_SHA_256_or_null": "0e0fbbb3a2c7ea21e91f94543404f26deee4bd562b02ea8faf286e106582a0c2",
+      "expected_error_code_or_null": null
+    },
+    {
+      "vector_id": "duplicate_raw",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKYTogMQphOiAyCg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "DUPLICATE_KEY"
+    },
+    {
+      "vector_id": "duplicate_after_nfc",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKIsOpIjogMQoiZVx1MDMwMSI6IDIK",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "NORMALIZED_KEY_COLLISION"
+    },
+    {
+      "vector_id": "undefined_alias",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKeDogKm1pc3NpbmcK",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "ALIAS_FORBIDDEN"
+    },
+    {
+      "vector_id": "anchor",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKeDogJmEgMQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "ANCHOR_FORBIDDEN"
+    },
+    {
+      "vector_id": "merge_key",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKPDw6IHthOiAxfQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "MERGE_KEY_FORBIDDEN"
+    },
+    {
+      "vector_id": "custom_tag",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKeDogIWN1c3RvbSB2YWx1ZQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "TAG_FORBIDDEN"
+    },
+    {
+      "vector_id": "non_string_key",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKMTogdmFsdWUK",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "NON_STRING_KEY"
+    },
+    {
+      "vector_id": "timestamp",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKd2hlbjogMjAyNi0wOS0wOAo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "TAG_FORBIDDEN"
+    },
+    {
+      "vector_id": "binary",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKcGF5bG9hZDogISFiaW5hcnkgU0dWc2JHOD0K",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "TAG_FORBIDDEN"
+    },
+    {
+      "vector_id": "set",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKaXRlbXM6ICEhc2V0IHthLCBifQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "TAG_FORBIDDEN"
+    },
+    {
+      "vector_id": "non_finite",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKeDogLmluZgo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "NON_FINITE_NUMBER"
+    },
+    {
+      "vector_id": "invalid_utf8",
+      "input_UTF_8_bytes_as_base64": "a2V5OiD/Cg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "UTF8_DECODE"
+    },
+    {
+      "vector_id": "utf8_bom",
+      "input_UTF_8_bytes_as_base64": "77u/cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAK",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "BOM_FORBIDDEN"
+    },
+    {
+      "vector_id": "multiple_documents",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKLS0tCnJlY2VpcHRfc2hhMjU2OiAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwCg==",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "DOCUMENT_COUNT"
+    },
+    {
+      "vector_id": "missing_excluded_field",
+      "input_UTF_8_bytes_as_base64": "YTogMQo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "EXCLUDED_PATH_MISSING"
+    },
+    {
+      "vector_id": "non_mapping_excluded_parent",
+      "input_UTF_8_bytes_as_base64": "aW50ZWdyaXR5OiAzCg==",
+      "excluded_field_path": "integrity.canonical_payload_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "EXCLUDED_PATH_NON_MAPPING"
+    },
+    {
+      "vector_id": "invalid_excluded_path",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAK",
+      "excluded_field_path": "bad..path",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "EXCLUDED_PATH_SYNTAX"
+    },
+    {
+      "vector_id": "integer_outside_safe_range",
+      "input_UTF_8_bytes_as_base64": "cmVjZWlwdF9zaGEyNTY6IDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAKeDogOTAwNzE5OTI1NDc0MDk5Mgo=",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "INTEGER_RANGE"
+    },
+    {
+      "vector_id": "empty_document",
+      "input_UTF_8_bytes_as_base64": "",
+      "excluded_field_path": "receipt_sha256",
+      "expected_canonical_UTF_8_bytes_as_base64_or_null": null,
+      "expected_SHA_256_or_null": null,
+      "expected_error_code_or_null": "DOCUMENT_COUNT"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+document_id: pipeline-v2.d0-canonical-yaml-v1-verifier-owner-disposition-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T18:54:46.9560385+03:00"
+status: approved_exact_verifier_implementation_validation_reconciliation_and_gate_closure
+
+provenance:
+  mode: conversational_only
+  actor_id: workspace_owner
+  role: human_project_owner
+  authentication_ref: null
+  confirmation_source_ref: current_thread_owner_confirmation_2026_09_08
+  confirmation_statement: >-
+    Подтверждаю approval-request SHA-256
+    76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+    и разрешаю ровно описанные canonical-yaml-v1 verifier implementation,
+    validation, reconciliation, gate closure и один exact-scope commit.
+  limitations:
+    - stable_external_message_identifier_not_exposed
+    - conversational_actor_identity_not_cryptographically_authenticated
+    - Git_authorship_not_cryptographically_linked_to_conversational_actor
+
+two_step_authority_binding:
+  protocol:
+    path: new pipeline/registry/authority-confirmation/v1.yaml
+    sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  request:
+    path: new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+    complete_file_sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+    status_before_confirmation: non_authorizing_awaiting_exact_SHA_256_owner_confirmation
+  separate_confirmation_received: true
+  confirmation_repeated_complete_lowercase_SHA_256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+  comparison: exact_lowercase_hex_equality
+  comparison_result: match
+  request_bytes_changed_after_confirmation: false
+  baseline_HEAD_at_confirmation: b8159e14a39b192e79a30e9fd739f179d17f3964
+  authority_effect: exact_request_scope_only
+
+decision:
+  selected_route: implement_and_validate_current_canonical_yaml_v1
+  implementation_contract: exactly_as_defined_by_the_confirmed_request
+  historical_claim_treatment:
+    matching_claim: machine_verified
+    mismatching_claim: immutable_successor_reconciliation_without_source_rewrite
+    complete_file_SHA_256_authority_affected: false
+    automatic_reapproval_or_invalidation: forbidden
+  gate_closure_requires_every_confirmed_request_commit_gate_to_pass: true
+
+approved_write_set:
+  create:
+    - new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml
+    - new pipeline/harness/governance/__init__.py
+    - new pipeline/harness/governance/canonical_yaml.py
+    - new pipeline/tests/governance/canonical_yaml_v1_vectors.json
+    - new pipeline/tests/governance/test_canonical_yaml_v1.py
+    - new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml
+    - new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml
+    - new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml
+    - new pipeline/evidence/d0-canonical-yaml-v1-commit-set-v1.yaml
+  modify:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  include_unchanged_request:
+    - new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+  total_commit_path_count: 16
+  all_other_paths: forbidden
+
+validation_authority:
+  exact_unittest_command: >-
+    python -B -m unittest discover -s "new pipeline/tests/governance"
+    -p "test_canonical_yaml_v1.py" -v
+  read_only_reconciliation_inputs: exactly_the_six_primary_claim_files_and_one_derivative_evidence_file_in_the_request
+  dependency_download_install_or_upgrade: forbidden
+  model_agent_review_provider_API_product_runtime_or_remote_execution: forbidden
+
+commit_authority:
+  commit_count: 1
+  expected_parent: b8159e14a39b192e79a30e9fd739f179d17f3964
+  exact_scope_only: true
+  commit_message: "governance: implement and validate canonical-yaml-v1 verifier"
+  commit_if_validation_fails_or_claim_is_unclassified: forbidden
+  push_PR_merge_deploy_release: forbidden
+
+retained_non_authorizations:
+  - no_edit_delete_move_or_reformat_of_any_baseline_profile_schema_claim_or_derivative_input
+  - no_silent_historical_hash_replacement
+  - no_K0b_01_Alpha_migration_routing_resource_budget_or_other_runtime_implementation
+  - no_closure_of_any_other_K0b_01_prerequisite
+  - no_canonical_fixture_research_old_swarm_projects_swarm_or_frozen_K0b_01_access
+  - no_dependency_download_install_or_upgrade
+  - no_new_model_agent_independent_review_or_provider_API_call
+  - no_product_runtime_database_external_product_or_remote_execution
+  - no_filesystem_ACL_or_ownership_change
+  - no_push_PR_merge_deploy_release_or_remote_side_effect
+
+stale_conditions:
+  - request_complete_file_sha256_differs
+  - pre_commit_HEAD_differs_from_expected_parent
+  - any_request_baseline_or_claim_input_hash_differs
+  - exact_write_or_validation_scope_differs
+  - any_retained_non_authorization_is_relaxed
+
+integrity:
+  complete_file_SHA_256: supplied_by_commit_set_evidence
+  self_hash_embedding: forbidden

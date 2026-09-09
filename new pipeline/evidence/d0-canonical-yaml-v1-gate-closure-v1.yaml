@@ -1,0 +1,56 @@
+record_id: d0-canonical-yaml-v1-gate-closure-v1
+schema_version: 1
+version: "1.0.0"
+recorded_at: "2026-09-08T19:22:21.8727864+03:00"
+gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
+status: closes_on_authorized_containing_commit
+
+immutable_gate:
+  path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml
+  sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3
+  embedded_status: open_blocking
+  bytes_edited: false
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+  confirmed_request:
+    path: new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+    complete_file_sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+
+closure_route:
+  selected: implement_and_validate
+  profile_status_successor:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml
+    sha256: 88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894
+  validation:
+    path: new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml
+    sha256: 4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888
+  reconciliation:
+    path: new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml
+    sha256: 1e80b1f3dbd45e4e2691b898b39490834e647c32701795f3631146435b8060a9
+
+minimum_result_checklist:
+  versioned_machine_verifier_matches_declared_profile: pass
+  positive_and_negative_reference_vectors: {result: pass, vectors: 27}
+  existing_claims_reconciled_without_silent_recalculation: {result: pass, primary: 6, derivative: 4, mismatches: 0}
+  immutable_hash_bound_profile_status_successor: pass
+  original_profile_schema_claim_and_derivative_bytes_unchanged: pass
+  unclassified_claims: 0
+
+effective_result:
+  gate_status: closed
+  effective_when: this_record_and_its_complete_hash_reachable_graph_are_in_the_single_authorized_containing_commit
+  new_approval_envelopes_may_rely_on_canonical_payload_verification: true
+  required_binding_for_new_use:
+    - original_canonical_yaml_v1_profile_path_and_hash
+    - canonical_yaml_v1_status_v2_path_and_hash
+    - exact_verifier_contract_toolchain_and_implementation_hashes
+  existing_complete_file_SHA_256_bindings: unaffected
+
+non_effects:
+  - does_not_edit_the_original_gate_or_profile
+  - does_not_close_G_K0B01_TOOLCHAIN_or_any_other_K0b_01_prerequisite
+  - does_not_authorize_K0b_01_runtime_Alpha_migrations_or_compilers
+  - does_not_create_model_API_product_runtime_or_remote_authority

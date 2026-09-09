@@ -1,8 +1,8 @@
 state_id: pipeline-v2-program-state
 schema_version: 1
 projection_version: "1.0.0"
-generated_at: "2026-09-08T17:45:18.3303728+03:00"
-status: K0b_01_planning_with_open_prerequisites_and_D0_hash_gate
+generated_at: "2026-09-08T19:28:03.5597472+03:00"
+status: K0b_01_planning_with_open_prerequisites
 
 projection_profile:
   path: new pipeline/state/state-projection-profile-v1.yaml
@@ -25,6 +25,14 @@ active_authority:
   governance_hardening_owner_disposition: {path: new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml, sha256: 06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8}
   authority_confirmation_profile: {path: new pipeline/registry/authority-confirmation/v1.yaml, sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd}
   canonical_hash_profile_remediation_gate: {path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml, sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3}
+  canonical_yaml_v1_verifier_owner_disposition: {path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml, sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc}
+  canonical_yaml_v1_verifier_contract: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml, sha256: e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6}
+  canonical_yaml_v1_verifier_toolchain: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml, sha256: 43f2778ebd28b0cbc44dead6752dd0b1d493acd42649ff0a9ec3e0fcb2e4ea0f}
+  canonical_yaml_v1_status_successor: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml, sha256: 88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894}
+  canonical_yaml_v1_validation: {path: new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml, sha256: 4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888}
+  canonical_payload_claim_inventory: {path: new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml, sha256: 221518dce7f928c09d59cbb216ecb247cbf68bfc7408fc805f954a94022b05e2}
+  canonical_payload_claim_reconciliation: {path: new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml, sha256: 1e80b1f3dbd45e4e2691b898b39490834e647c32701795f3631146435b8060a9}
+  canonical_yaml_v1_gate_closure: {path: new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml, sha256: cc88ba85a81b892e043d5d3cab265de2a39b5397a14ccfee894b3f35343c05d1}
   D0_02_external_approval_backlink: {path: new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml, sha256: d0d2a81dff49194e70a9b9b79805478e9bc9caf94d73b26a6c1feba3d996b13b}
   design_review_independence_profile: {path: new pipeline/registry/design-review-independence/v2.yaml, sha256: 8e99106881905e56bc505c3a9cb6037562eab62e7585abac29039d4d99ba9cc3}
   K0b_01_plan: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
@@ -164,11 +172,6 @@ work_items:
     open_gate_ids: [G-N1-K0B-COMPLETE, G-N1-POLICY-LIMITS]
 
 open_gates:
-  - gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
-    owner: workspace_owner
-    status: open_blocking
-    blocks: [new_approval_envelopes_relying_on_canonical_payload_verification]
-    closure_condition: later_exact_hash_bound_owner_disposition_selects_and_completes_implement_and_validate_or_retire_and_supersede
   - gate_id: G-K0B01-HUMAN-SIGNOFF
     owner: workspace_owner
     status: open_blocking
@@ -241,6 +244,14 @@ open_gates:
     closure_condition: context_and_failure_receipt_limits_are_versioned_policy_values_not_function_defaults
 
 closed_gates:
+  - gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
+    status: closed
+    closure_evidence:
+      route: implement_and_validate
+      owner_disposition: {path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml, sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc}
+      profile_status_successor: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml, sha256: 88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894}
+      validation: {path: new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml, sha256: 4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888}
+      gate_closure: {path: new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml, sha256: cc88ba85a81b892e043d5d3cab265de2a39b5397a14ccfee894b3f35343c05d1}
   - gate_id: G-D005-CONTAINING-COMMIT
     status: closed
     closure_evidence:
@@ -260,8 +271,8 @@ status_index:
   - path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
     sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
     embedded_status: proposed_for_owner_approval
-    effective_status: open_blocking_remediation_gate
-    effective_status_evidence: {path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml, sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3}
+    effective_status: active_machine_verified
+    effective_status_evidence: {path: new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml, sha256: 88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894}
   - path: new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml
     sha256: cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc
     embedded_status: approved_for_zero_call_implementation
@@ -288,7 +299,9 @@ scope:
   implementation_authority: none
   runtime_authority: none
   K0b_B02_status: complete
-  canonical_payload_verification_status: blocked_pending_profile_remediation
+  canonical_payload_verification_status: active_machine_verified
+  canonical_payload_historical_claims_status: 6_primary_and_4_derivative_matches_with_zero_discrepancies
+  new_approval_envelope_canonical_payload_use: allowed_only_with_exact_original_profile_status_successor_verifier_contract_toolchain_and_implementation_hash_bindings
   complete_file_SHA_256_bindings_status: unaffected
   authority_confirmation_protocol: active_prospective
   review_model_family_diversity_policy: active_prospective

@@ -1,0 +1,61 @@
+record_id: canonical-yaml-v1-status-v2
+schema_version: 1
+version: "2.0.0"
+created_at: "2026-09-08T19:22:21.8727864+03:00"
+status: active_machine_verified_prospectively_on_containing_commit
+
+immutable_subject:
+  profile_id: canonical-yaml-v1
+  profile_version: 1
+  path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+  sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+  embedded_status: proposed_for_owner_approval
+  bytes_edited: false
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+  verifier_contract:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml
+    sha256: e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6
+  toolchain:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml
+    sha256: 43f2778ebd28b0cbc44dead6752dd0b1d493acd42649ff0a9ec3e0fcb2e4ea0f
+
+machine_verifier:
+  package_initializer: {path: new pipeline/harness/governance/__init__.py, sha256: d96155366c02d26006d28f343a0099abfe1d2cdc15ac9360ae0b71899d2d8c57}
+  implementation: {path: new pipeline/harness/governance/canonical_yaml.py, sha256: 23476796d955e3d5329d1b908fe00f32e48b75c1cfa4d01c48c4c74253437a17}
+  fixed_vectors: {path: new pipeline/tests/governance/canonical_yaml_v1_vectors.json, sha256: 803d3178a5df5c177baf39f4ab5257510827aa761e510993fd3d1f846bac6e8f, count: 27}
+  tests: {path: new pipeline/tests/governance/test_canonical_yaml_v1.py, sha256: 50fa3a5438f5b5aa6ff78ef605ba4547569454e64c3ad20b28316df0f51221d3, result: 10_passed}
+
+evidence:
+  claim_inventory: {path: new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml, sha256: 221518dce7f928c09d59cbb216ecb247cbf68bfc7408fc805f954a94022b05e2}
+  claim_reconciliation: {path: new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml, sha256: 1e80b1f3dbd45e4e2691b898b39490834e647c32701795f3631146435b8060a9}
+  validation: {path: new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml, sha256: 4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888}
+
+effective_status:
+  original_embedded_status: historical_unchanged
+  effective_profile_status: active_machine_verified
+  effective_when: this_record_is_present_in_the_authorized_containing_commit
+  allowed_prospective_use:
+    - canonical_payload_generation_under_the_exact_verifier_contract
+    - canonical_payload_verification_under_the_exact_verifier_contract
+    - new_approval_envelopes_bound_to_the_original_profile_hash_and_this_status_successor
+  future_verifier_contract_toolchain_or_profile_change: requires_new_hash_bound_successor_and_revalidation
+
+historical_claim_disposition:
+  primary_claims: 6
+  verified_matches: 6
+  mismatches: 0
+  derivative_occurrences: 4
+  derivative_matches: 4
+  derivative_discrepancies: 0
+  source_bytes_changed: false
+  complete_file_SHA_256_authority_changed: false
+
+scope_limits:
+  broader_G_K0B01_TOOLCHAIN_closed: false
+  other_K0b_01_prerequisites_closed: false
+  runtime_implementation_authority_created: false
+  model_API_or_remote_authority_created: false

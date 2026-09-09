@@ -1,0 +1,137 @@
+contract_id: canonical-yaml-v1-verifier-contract-v1
+schema_version: 1
+version: "1.0.0"
+created_at: "2026-09-08T18:54:46.9560385+03:00"
+status: approved_implementation_contract
+
+authority:
+  owner_disposition:
+    path: new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml
+    sha256: b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc
+  confirmed_request:
+    path: new pipeline/requests/d0-canonical-yaml-v1-verifier-approval-request-v1.yaml
+    complete_file_sha256: 76011cae993903374f3f8a52fa0853239645cd68a450a9e87187009549454c11
+  canonical_profile:
+    path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
+    sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
+  remediation_gate:
+    path: new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml
+    sha256: ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3
+
+input_contract:
+  Python_type: bytes
+  character_encoding: UTF_8_strict
+  byte_order_mark: forbidden
+  YAML_document_count: 1
+  YAML_version: "1.2"
+  YAML_schema: core
+  parser_mode: safe_compose
+
+preconstruction_rejections:
+  malformed_YAML: YAML_SYNTAX
+  zero_or_multiple_documents: DOCUMENT_COUNT
+  alias: ALIAS_FORBIDDEN
+  anchor: ANCHOR_FORBIDDEN
+  merge_key: MERGE_KEY_FORBIDDEN
+  tag_outside_allowed_core_set: TAG_FORBIDDEN
+  non_string_mapping_key: NON_STRING_KEY
+  duplicate_raw_mapping_key: DUPLICATE_KEY
+  duplicate_NFC_normalized_mapping_key: NORMALIZED_KEY_COLLISION
+
+allowed_node_tags:
+  - tag:yaml.org,2002:map
+  - tag:yaml.org,2002:seq
+  - tag:yaml.org,2002:str
+  - tag:yaml.org,2002:null
+  - tag:yaml.org,2002:bool
+  - tag:yaml.org,2002:int
+  - tag:yaml.org,2002:float
+
+JSON_value_contract:
+  allowed:
+    - null
+    - boolean
+    - UTF_8_Unicode_string_without_surrogates
+    - safe_binary64_integer
+    - finite_binary64_float
+    - array_of_allowed_values
+    - string_keyed_object_of_allowed_values
+  integer_minimum: -9007199254740991
+  integer_maximum: 9007199254740991
+  negative_zero_canonical_form: "0"
+  rejected_error_codes:
+    integer_outside_safe_range: INTEGER_RANGE
+    non_finite_number: NON_FINITE_NUMBER
+    unsupported_value: NON_JSON_VALUE
+    Unicode_surrogate: UNICODE_SURROGATE
+
+excluded_field_path_contract:
+  input_type: string
+  grammar: dot_separated_ASCII_identifier_segments
+  segment_pattern: "^[A-Za-z_][A-Za-z0-9_]*$"
+  path_count_per_invocation: 1
+  traversal_order: before_NFC_normalization
+  every_parent_must_be_mapping: true
+  target_must_exist: true
+  operation: delete_leaf_on_recursive_copy_and_retain_parent_mapping
+  allowed_current_calling_contract_values:
+    - receipt_sha256
+    - integrity.canonical_payload_sha256
+  errors:
+    invalid_grammar: EXCLUDED_PATH_SYNTAX
+    missing_target: EXCLUDED_PATH_MISSING
+    non_mapping_parent: EXCLUDED_PATH_NON_MAPPING
+
+normalization_contract:
+  strings: Unicode_NFC
+  mapping_keys: Unicode_NFC
+  recursive_input_mutation: forbidden
+  normalized_key_collision: NORMALIZED_KEY_COLLISION
+
+RFC_8785_contract:
+  null_boolean_array_and_object: exact_RFC_8785
+  object_key_order: ascending_UTF_16_code_units
+  string_escaping: ECMAScript_JSON_string_serialization_required_by_RFC_8785
+  number_serialization: shortest_round_trip_ECMAScript_JSON_number_serialization
+  fixed_decimal_range: absolute_value_at_least_1e_minus_6_and_less_than_1e21
+  exponent_form_outside_fixed_range: true
+  positive_exponent_plus_sign: required
+  exponent_leading_zero: forbidden
+  output_encoding: UTF_8
+  byte_order_mark: forbidden
+  trailing_newline: forbidden
+
+digest_contract:
+  algorithm: SHA_256
+  representation: lowercase_hex_64
+  comparison: constant_time_digest_comparison
+
+public_API:
+  module: harness.governance.canonical_yaml
+  symbols:
+    - CanonicalYamlError
+    - VerificationResult
+    - parse_validate_and_normalize_yaml_bytes
+    - canonicalize_validated_value
+    - calculate_canonical_payload_sha256
+    - verify_declared_canonical_payload_sha256
+    - main
+  CLI:
+    invocation: python -B -m harness.governance.canonical_yaml FILE --exclude FIELD_PATH --expected SHA256
+    output: one_JSON_object_to_stdout
+    exit_zero: declared_hash_matches
+    exit_one: declared_hash_mismatch
+    exit_two: validation_or_usage_error
+
+side_effect_contract:
+  input_or_repository_write: forbidden
+  network_subprocess_database_model_API_or_external_product_access: forbidden
+  stdout: CLI_result_only
+  stderr: CLI_validation_or_usage_error_only
+
+reference_test_contract:
+  production_verifier_may_read_expected_vector_outputs: false
+  fixed_test_only_vectors: required
+  profile_declared_positive_and_negative_behaviors: all_required
+  RFC_8785_key_string_and_number_edges: required
+  all_typed_error_codes: required

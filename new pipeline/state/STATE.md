@@ -1,10 +1,10 @@
 # Pipeline v2 state projection
 
-Machine source: [state.yaml](state.yaml) `513155374866`
+Machine source: [state.yaml](state.yaml) `6f428ba277e0`
 
 Projection profile: [state-projection-profile-v1.yaml](state-projection-profile-v1.yaml) `7032748afe3e`
 
-Program status: `K0b_01_planning_with_open_prerequisites_and_D0_hash_gate`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 is closed at the planning level. The canonical-payload verification gate is open; runtime and implementation authority remain absent.
+Program status: `K0b_01_planning_with_open_prerequisites`. D0-05 is complete in containing commit `45536507a469403b4878d273b661fe3a1d2c9573`. K0b-B02 and the canonical-payload verifier gate are closed. Runtime and implementation authority remain absent.
 
 ## Active authority
 
@@ -14,6 +14,13 @@ Program status: `K0b_01_planning_with_open_prerequisites_and_D0_hash_gate`. D0-0
 - Governance-hardening owner disposition: [pipeline-v2-governance-hardening-owner-disposition-v1.yaml](../decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml) `06fdeda5f0cf`
 - Two-step authority-confirmation profile: [v1.yaml](../registry/authority-confirmation/v1.yaml) `b597423cb206`
 - Canonical hash-profile remediation gate: [d0-canonical-hash-profile-remediation-gate-v1.yaml](../decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml) `ad24abd94653`
+- Canonical YAML verifier owner disposition: [d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml](../decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml) `b00d66e41d50`
+- Canonical YAML verifier contract: [canonical-yaml-v1-verifier-contract-v1.yaml](../registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml) `e091a9efb5d8`
+- Canonical YAML verifier toolchain: [canonical-yaml-v1-verifier-toolchain-v1.yaml](../registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml) `43f2778ebd28`
+- Canonical YAML effective-status successor: [canonical-yaml-v1-status-v2.yaml](../registry/hash-profiles/canonical-yaml-v1-status-v2.yaml) `88881da22308`
+- Canonical YAML validation: [d0-canonical-yaml-v1-validation-v1.yaml](../evidence/d0-canonical-yaml-v1-validation-v1.yaml) `4a4798989fef`
+- Canonical claim reconciliation: [d0-canonical-payload-claim-reconciliation-v1.yaml](../evidence/d0-canonical-payload-claim-reconciliation-v1.yaml) `1e80b1f3dbd4`
+- Canonical verifier gate closure: [d0-canonical-yaml-v1-gate-closure-v1.yaml](../evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml) `cc88ba85a81b`
 - D0-02 external-approval backlink: [d0-02-external-approval-backlink-v1.yaml](../evidence/d0-02-external-approval-backlink-v1.yaml) `d0d2a81dff49`
 - Prospective design-review independence profile: [v2.yaml](../registry/design-review-independence/v2.yaml) `8e9910688190`
 - K0b-01 plan: [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b`
@@ -54,7 +61,6 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 | gate | owner | status | blocks | closure condition |
 |---|---|---|---|---|
-| G-D0-CANONICAL-HASH-PROFILE-VERIFIER | workspace_owner | open_blocking | new_approval_envelopes_relying_on_canonical_payload_verification | later_exact_hash_bound_owner_disposition_selects_and_completes_implement_and_validate_or_retire_and_supersede |
 | G-K0B01-HUMAN-SIGNOFF | workspace_owner | open_blocking | K0b-01_implementation | human_only_review_approves_exact_plan_v1_3_and_selected_K0b_B02_with_identity_and_capacity |
 | G-K0B01-IMPLEMENTATION-DISPOSITION | workspace_owner | open_blocking | K0b-01_implementation | later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets |
 | G-K0B01-IMPLEMENTATION-LEDGER | Pipeline_governance | open_blocking | K0b-01_implementation | separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist |
@@ -72,12 +78,13 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Closed gates
 
+- `G-D0-CANONICAL-HASH-PROFILE-VERIFIER`: closed through the authorized implement-and-validate route. The fixed 27-vector suite and 10 test methods pass; all 6 primary claims and 4 derivative occurrences match with zero discrepancies.
 - `G-D005-CONTAINING-COMMIT`: closed by commit `45536507a469403b4878d273b661fe3a1d2c9573`, tree `00fa73a15dc6b402b00af0426d54f02c7f8c0b64`.
 - `G-K0B01-BINARY-SIZE`: closed by K0b-B02-A. The selected runtime-phase pack is `1,033,895,936` bytes with `39,845,888` bytes of margin under the unchanged `1 GiB` phase limit.
 
 ## Superseded and frozen records
 
-- [canonical-yaml-v1.yaml](../registry/hash-profiles/canonical-yaml-v1.yaml) `46597d916fdc` remains byte-unchanged with embedded status `proposed_for_owner_approval`; its effective status is an open blocking remediation gate. Existing complete-file hashes are unaffected, while canonical-payload claims remain unverified by a repository machine verifier.
+- [canonical-yaml-v1.yaml](../registry/hash-profiles/canonical-yaml-v1.yaml) `46597d916fdc` remains byte-unchanged with embedded status `proposed_for_owner_approval`; [canonical-yaml-v1-status-v2.yaml](../registry/hash-profiles/canonical-yaml-v1-status-v2.yaml) `88881da22308` makes its effective status `active_machine_verified`. Existing complete-file hashes are unaffected. All 6 known primary claims and 4 derivative occurrences were machine-verified without rewriting historical sources.
 - [k0b-01-implementation-owner-disposition-v1.yaml](../decisions/k0b-01-implementation-owner-disposition-v1.yaml) `cdb87a83b5bc` is non-authoritative.
 - [k0b-01-validation-v1.yaml](../evidence/k0b-01-validation-v1.yaml) `8a0485b0821b` is non-authoritative superseded draft evidence.
 - [k0b-01-planning-package-v1.2.md](../architecture/k0b-01-planning-package-v1.2.md) `f6c297a11134` remains the exact subject of two valid r1 approvals but is superseded by v1.3 for future implementation.
@@ -85,4 +92,4 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Effective scope
 
-K0b-B02 is complete. Two-step exact-hash authority confirmation and prospective r0/r1 model-family diversity are active governance rules. Historical reviews remain scoped evidence and are not retroactively invalidated. There is no runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
+K0b-B02 and the D0 canonical-payload verifier remediation are complete. New approval envelopes may use canonical-payload verification only when bound to the exact original profile, status successor, verifier contract, toolchain, and implementation hashes. Two-step exact-hash authority confirmation and prospective r0/r1 model-family diversity remain active governance rules. Historical reviews remain scoped evidence and are not retroactively invalidated. There is no K0b-01 runtime or implementation authority, and the five K0b-01 prerequisites remain open. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
