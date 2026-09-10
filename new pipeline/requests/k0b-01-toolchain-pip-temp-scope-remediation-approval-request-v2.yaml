@@ -1,0 +1,140 @@
+request_id: k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2
+schema_version: 1
+request_type: exact_scope_stale_remediation_retry_and_original_scope_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-09"
+
+purpose: >-
+  Replace the stale v1 cleanup authority after its pre-delete guard transiently
+  observed one allowlisted directory as nonempty. No deletion occurred. This v2
+  request authorizes a race-safe non-recursive retry and, only after successful
+  remediation, the unchanged remaining download and original implementation
+  scope.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+
+bound_requests:
+  original_implementation_and_validation:
+    path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    complete_file_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae
+  stale_remediation_v1:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    complete_file_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+    retained_as_incident_evidence: true
+    authority_reuse: forbidden
+
+baseline:
+  required_HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  required_tracked_changes: 0
+  expected_untracked_files_after_this_request_creation:
+    - new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml
+  expected_python_process_count: 0
+
+stale_v1_attempt:
+  cleanup_started: false
+  directories_deleted: 0
+  guard_result: stopped_before_first_delete
+  observed_conflict: C:/Users/Administrator/AppData/Local/Temp/2/pip-metadata-_f_93arv_transiently_reported_nonempty
+  subsequent_inventory:
+    pip_prefixed_directory_count: 30
+    nonempty_directory_count: 0
+    python_process_count: 0
+  disclosure_required_in_final_validation_evidence: true
+
+exact_cleanup_scope_after_confirmation_only:
+  allowlist_source:
+    request_path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    request_complete_file_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+    field: exact_cleanup_scope_after_confirmation_only.exact_directories
+    exact_entry_count: 30
+  temp_root: C:/Users/Administrator/AppData/Local/Temp/2
+  operation_per_allowlisted_entry:
+    - resolve_absolute_target_and_require_exact_temp_root_parent
+    - require_exact_allowlisted_leaf_name_with_pip_dash_prefix
+    - if_target_is_missing_record_already_absent_without_failure
+    - if_target_is_an_empty_directory_remove_it_without_Recurse
+    - if_target_contains_any_child_or_is_not_a_directory_stop_without_deleting_that_target_or_any_content
+  postcondition_required_before_resumption:
+    - all_30_allowlisted_directories_are_absent
+    - no_additional_pip_prefixed_directory_exists_below_the_temp_root
+    - no_python_process_exists
+
+approved_wheelhouse_state:
+  source: stale_remediation_v1.approved_wheelhouse_state
+  source_request_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+  expected_exact_file_count: 7
+  every_name_size_and_SHA_256_must_match_before_resumption: true
+
+resumed_download_scope_after_successful_cleanup_only:
+  source: stale_remediation_v1.resumed_download_scope_after_confirmation_only
+  unchanged: true
+  TEMP_and_TMP_must_equal: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse/pip-temp
+  exact_remaining_pins:
+    - colorama==0.4.6
+    - iniconfig==1.1.1
+    - packaging==24.1
+    - pluggy==1.6.0
+    - pygments==2.15.1
+  allowed_hosts: [pypi.org, files.pythonhosted.org]
+  binary_wheels_only: true
+  no_dependencies_no_cache_no_credentials_no_uploads: true
+
+original_scope_resumption_after_successful_cleanup_and_download:
+  source_request_path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+  source_request_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae
+  unchanged_exact_workspace_temp_execution_and_validation_scope: true
+  required_evidence_additions:
+    - original_pip_temp_scope_incident
+    - stale_v1_cleanup_attempt_with_zero_deletions
+    - v2_exact_non_recursive_cleanup_result
+    - TEMP_TMP_rebinding_and_no_out_of_scope_temp_write_proof
+
+stale_conditions:
+  - this_request_file_bytes_or_complete_file_SHA_256_change
+  - either_bound_request_bytes_or_SHA_256_change
+  - HEAD_or_tree_differs_from_the_required_baseline
+  - workspace_status_differs_from_the_three_expected_untracked_requests
+  - any_original_workspace_implementation_target_exists
+  - any_python_process_exists_at_cleanup_start
+  - current_allowlisted_directory_set_differs_from_the_bound_30_entry_set_except_for_already_absent_entries
+  - any_additional_pip_prefixed_temp_root_directory_exists
+  - any_of_the_seven_approved_wheel_names_sizes_or_SHA_256_values_differs
+  - owner_confirmation_omits_or_mismatches_the_exact_lowercase_request_SHA_256
+  - owner_confirmation_does_not_explicitly_authorize_v2_cleanup_TEMP_TMP_download_and_original_scope_resumption
+
+post_scope_state:
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_exact_hash_bound_closure
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+  commit_authority: none
+
+retained_non_authorizations:
+  - no_recursive_delete_of_any_incident_directory
+  - no_delete_of_any_file_or_nonempty_directory_outside_later_original_three_temp_cleanup_targets
+  - no_gate_closure_state_update_commit_stage_push_or_PR
+  - no_global_or_user_environment_modification
+  - no_other_network_host_package_version_or_remote_action
+  - no_runtime_Alpha_migration_routing_or_resource_budget_compiler
+  - no_existing_registry_contract_schema_prompt_fixture_checkpoint_or_runtime_code_change
+  - no_access_to_canonical_fixture_research_old_swarm_or_projects_swarm
+  - no_read_import_execution_copy_or_modification_of_frozen_K0b_01_artifacts
+  - no_existing_project_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+
+confirmation_requirements:
+  separate_owner_message: required
+  exact_complete_file_SHA_256_lowercase_hex_length: 64
+  explicit_authorization_required_for:
+    - v2_exact_non_recursive_cleanup
+    - exact_TEMP_and_TMP_rebinding_inside_the_wheelhouse
+    - exact_remaining_five_wheel_downloads
+    - unchanged_original_scope_resumption_after_successful_remediation
+  abbreviated_hash_or_yes_ok_continue: rejected
+
+integrity:
+  complete_file_SHA_256: external_until_computed

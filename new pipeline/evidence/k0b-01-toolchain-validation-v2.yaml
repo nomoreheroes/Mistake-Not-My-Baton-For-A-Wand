@@ -1,0 +1,200 @@
+evidence_id: k0b-01-toolchain-validation-v2
+schema_version: 1
+evidence_type: completeness_remediation_and_two_environment_validation
+materialized_on: "2026-09-10"
+result: pass
+
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml
+    complete_file_sha256: ce0b19cb99f13d0c2e9e7fbfb8892444cfc879ff6dc79fbd4cadcea79182845a
+  separate_owner_confirmation:
+    source_ref: current_conversation_owner_message_2026_09_10
+    repeated_complete_file_sha256: ce0b19cb99f13d0c2e9e7fbfb8892444cfc879ff6dc79fbd4cadcea79182845a
+    exact_match: true
+    explicit_scope_match: true
+  governing_toolchain_design:
+    path: new pipeline/decisions/k0b-01-toolchain-design-owner-disposition-v1.yaml
+    sha256: 1b4a0271efa1364e1c56a64af9438e55bffcec2b950503f8fb2c3cf03f1bbfa3
+  planning_package_v1_3:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
+  inherited_planning_package_v1_2:
+    path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    sha256: f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff
+  historical_validation_v1:
+    path: new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml
+    sha256: 389c9b0b70f58e435ffc57cb88dd40c012116f8cae43489e2b78d856b896cc5e
+    result: pass_but_not_sufficient_for_closure_before_completeness_remediation
+
+baseline:
+  HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  request_preflight_bound_file_hashes: pass_16_of_16
+  tracked_changes_before_authorized_work: 0
+  exact_temp_targets_absent_before_creation: 3_of_3
+  invalid_external_target_absent: true
+  host_binary_hashes: pass_5_of_5
+
+final_toolchain_files:
+  - {path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json, sha256: 3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0, bytes: 5688}
+  - {path: new pipeline/toolchain/k0b01/requirements-v1.lock, sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6, bytes: 1142}
+  - {path: new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1, sha256: 249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c, bytes: 4912}
+  - {path: new pipeline/toolchain/k0b01/bootstrap.ps1, sha256: 557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5, bytes: 4613}
+  - {path: new pipeline/toolchain/k0b01/invoke.ps1, sha256: 6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197, bytes: 3928}
+  - {path: new pipeline/toolchain/k0b01/validate_toolchain.py, sha256: 86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a, bytes: 14851}
+  - {path: new pipeline/toolchain/k0b01/validate_budget_evidence.py, sha256: 1c231fd91e97c3e7b17b7f8810ea2cd32857a44c18ef163a1da731927ed9c1c2, bytes: 8269}
+  - {path: new pipeline/toolchain/k0b01/test_toolchain.py, sha256: e17f092f952fd4eef418b859497260827f35b240941c12fb91ac897a03ce7213, bytes: 5214}
+  - {path: new pipeline/toolchain/k0b01/test_budget_evidence.py, sha256: e236fad0d86cab39efafaa2dc9c237adc5f66433b4bc09fd471af20480736888, bytes: 5762}
+
+closure_completeness_bindings:
+  manifest_role:
+    value: toolchain_and_ci_prerequisite
+    validation: pass
+    CI_exists_or_has_run_claim: false
+  Python:
+    implementation: CPython
+    version: 3.12.7
+    executable_sha256: 6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0
+    validation: pass
+  SQLite:
+    python_module_version: 2.6.0
+    library_version: 3.45.3
+    extension_module: {filename: _sqlite3.pyd, sha256: da8f0c093caf4462f434615de95cc7a60f6d4595962688df1112e515963b9626}
+    library: {filename: sqlite3.dll, sha256: 0ca33a3cdbd4f54084e64e8ca71ae986f6d738a20d38400470011cd794ec9c02, bytes: 1596176}
+    validation: pass
+  quality_tools:
+    package: ruff
+    version: 0.15.1
+    wheel_sha256: c820fef9dd5d4172a6570e5721704a96c6679b80cf7be41659ed439653f62336
+    lint_command: invoke.ps1_-Command_lint
+    format_check_command: invoke.ps1_-Command_format-check
+    exact_owned_Python_files: 4
+    validation: pass
+  import_root_strategy:
+    value: explicit_entry_point_directory
+    toolchain_root: new pipeline/toolchain/k0b01
+    ambient_PYTHONPATH: forbidden_and_cleared_for_children
+    repository_root_as_implicit_import_root: forbidden
+    frozen_K0b01_provenance_on_import_path: forbidden
+    future_runtime_import_root: requires_separate_exact_owner_authority
+    validation: pass
+  supported_validation_entry_point:
+    value: invoke.ps1_-Command_validate
+    count: 1
+    validation: pass
+
+formatter_remediation:
+  preflight_files_would_reformat: 3
+  preflight_files_already_formatted: 1
+  canonical_formatter: ruff_0_15_1
+  files_after_remediation_already_formatted: 4
+  behavior_change_outside_explicit_validator_and_test_delta: none
+
+wheelhouse:
+  prepared_by: new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1
+  network_hosts: [pypi.org, files.pythonhosted.org]
+  exact_pin_count: 12
+  exact_wheel_count: 12
+  requirement_lock_sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6
+  wheel_set_sha256: bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba
+  every_name_version_and_SHA_256_matches_lock: true
+  binary_only_no_deps_no_cache: true
+  nested_TEMP_and_TMP_rebinding: pass
+  nested_pip_temp_removed: true
+  root_level_pip_prefixed_directories: 0
+
+two_clean_environment_validation:
+  exact_toolchain_source_copy_hash_match_A_and_B: pass_9_of_9
+  other_repository_content_copied_or_traversed: false
+  install_mode: offline_no_index_local_find_links_require_hashes
+  child_TEMP_and_TMP_below_corresponding_environment: true
+  ambient_PYTHONPATH_cleared: true
+  existing_project_tests_collected: false
+  environment_A:
+    bootstrap: {exit_code: 0, output_sha256: a28068973aa664250e5a63bda8d04437e7c9b179c715d6581eed06383bbd770a}
+    lint: {exit_code: 0, output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18}
+    format_check: {exit_code: 0, output_sha256: 177f260a5645724013185e4b140c7045cc39e56c0c97b120f5cb23599f85f0de}
+    pytest: {exit_code: 0, collected: 17, passed: 17, output_sha256: d27450dc46b58a6a153af5ac92c6b7aa3b677bc79c4da30e6f59ea3025dbd6e7}
+    validate: {exit_code: 0, output_sha256: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e}
+    render: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 831c5eadc5d76fcefdf6c41c0272a473a8deaa90551900b7fa95dd2ba80c2953}
+    check: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 1722787c9b5f832448555e0fb682a6a3ccbbcd8c4178b6415b8ab9d056146e4a}
+  environment_B:
+    bootstrap: {exit_code: 0, output_sha256: b9e4cf57baddf01ef83ccd8f5eb7668883aec359ca6472e0e92fc4547968133f}
+    lint: {exit_code: 0, output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18}
+    format_check: {exit_code: 0, output_sha256: 177f260a5645724013185e4b140c7045cc39e56c0c97b120f5cb23599f85f0de}
+    pytest: {exit_code: 0, collected: 17, passed: 17, output_sha256: b0fff169e85489ebd449e48452d7a323d02e6ada81b3428e883d83b894fd4e64}
+    validate: {exit_code: 0, output_sha256: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e}
+    render: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 831c5eadc5d76fcefdf6c41c0272a473a8deaa90551900b7fa95dd2ba80c2953}
+    check: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 1722787c9b5f832448555e0fb682a6a3ccbbcd8c4178b6415b8ab9d056146e4a}
+  normative_validate_output:
+    byte_identical_A_and_B: true
+    complete_file_sha256_A: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e
+    complete_file_sha256_B: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e
+    parsed_result:
+      exit_code: 0
+      package_count: 12
+      profile_id: pipeline-v2.k0b01-toolchain-lock-v1
+      requirements_sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6
+      result: pass
+      sqlite_library_version: 3.45.3
+      sqlite_python_module_version: 2.6.0
+      toolchain_lock_sha256: 3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0
+      wheel_count: 12
+      wheel_set_sha256: bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba
+
+positive_and_negative_test_coverage:
+  retained_prior_tests: 15
+  new_tests: 2
+  total: 17
+  new_coverage:
+    - exact_SQLite_manifest_and_runtime_binary_binding
+    - manifest_role_without_CI_execution_claim
+    - import_root_and_supported_validation_entry_point_bindings
+    - locked_lint_command_success
+    - locked_format_check_command_success
+  retained_negative_coverage:
+    - changed_lock_fails_closed
+    - render_and_check_fail_closed
+    - missing_budget_provenance_rejected
+    - stale_budget_input_digest_rejected
+    - F15_claims_blocked_without_authoritative_object_count
+    - runtime_phase_publications_34_requires_reforecast_sensitive_true
+    - missing_size_fields_rejected
+    - STATE_RENDERER_independence_and_five_gate_inventory_required
+
+prior_incident_disclosures_retained_without_reclassification:
+  - read_only_import_inventory_accidentally_included_frozen_K0b01_import_lines_without_execution_modification_copy_or_use
+  - original_pip_TEMP_TMP_scope_defect_created_30_root_level_transient_directories_without_global_install
+  - remediation_v1_failed_closed_before_delete
+  - remediation_v2_deleted_4_empty_directories_then_failed_closed_at_first_nonempty_directory
+  - remediation_v3_deleted_26_directories_28_files_and_3270164_bytes_with_inventory_SHA_256_462bb607f240f97941709c0dfcb5fa96dcfc7f07b882c90f574a0e634c2230aa
+  - failed_unauthorized_external_patch_target_attempt_created_no_external_file_or_parent
+  - first_approved_wheelhouse_disappeared_before_v4_workspace_write_or_validation
+  - validation_v1_initial_environment_A_inline_probe_quoting_failure_created_no_environment_and_corrected_retry_passed
+  - validation_v1_nonmutating_controller_preflight_corrections_created_no_workspace_or_temp_write
+
+new_preclosure_disclosure:
+  event: closure_preflight_found_manifest_completeness_gap
+  gate_closed_before_remediation: false
+  state_changed_before_remediation: false
+  direct_closure_attempted: false
+  correction: this_exact_confirmed_completeness_remediation_and_validation_v2
+
+cleanup_after_evidence_capture:
+  status_at_materialization: authorized_and_scheduled
+  exact_recursive_targets:
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-closure-v1-wheelhouse
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-closure-v1-a
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-closure-v1-b
+
+effective_result:
+  all_toolchain_closure_criteria: pass
+  gate_closed_by_this_validation_record_alone: false
+  G-K0B01-TOOLCHAIN: remains_open_until_authorized_containing_commit
+  implementation_authority_after_scope_completion: none
+  runtime_authority: none
+  commit_authority: exact_21_path_single_commit_only
+
+integrity:
+  complete_file_sha256: external_post_materialization

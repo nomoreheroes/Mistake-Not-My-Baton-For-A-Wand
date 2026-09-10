@@ -1,0 +1,199 @@
+request_id: k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1
+schema_version: 1
+request_type: exact_scope_temp_remediation_and_original_scope_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-09"
+
+purpose: >-
+  Remediate an unintended pip temporary-directory scope expansion, constrain
+  all resumed pip temporary writes to a child of the approved wheelhouse, and
+  authorize resumption of only the still-unfinished portions of the original
+  exact TOOLCHAIN implementation and validation request. This request does not
+  authorize cleanup, downloads, workspace implementation, execution, or gate
+  closure until separately confirmed by exact complete-file SHA-256.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_sequence:
+    - keep_this_complete_request_file_byte_unchanged
+    - present_its_complete_file_SHA_256_to_the_workspace_owner
+    - receive_the_same_lowercase_64_hex_SHA_256_in_a_separate_owner_message
+    - receive_explicit_authorization_of_exact_cleanup_temp_network_and_resumption_scope
+    - reverify_incident_inventory_process_absence_wheel_hashes_and_workspace_baseline
+    - only_then_remove_the_exact_empty_incident_directories_and_resume
+
+original_authority:
+  request: {path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml, complete_file_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae}
+  owner_confirmation_source_ref: current_conversation_separate_owner_message_2026_09_09
+  exact_confirmation_received: true
+  implementation_status: paused_after_scope_defect_discovery
+  gate_closed: false
+  implementation_authority_outside_remediation_and_resumption_scope: none
+  runtime_authority: none
+
+baseline:
+  required_HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  required_tracked_changes: 0
+  expected_untracked_files_after_this_request_creation:
+    - new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+
+incident:
+  id: K0B01-TOOLCHAIN-PIP-TEMP-SCOPE-01
+  classification: temporary_write_scope_expansion_no_repository_or_user_data_change
+  cause: >-
+    pip download was launched without rebinding TEMP and TMP. pip therefore
+    created transient pip-prefixed directories directly below the operating
+    system temp root instead of inside the approved wheelhouse.
+  detected_before_workspace_implementation: true
+  download_processes_stopped: true
+  python_process_count_at_inventory: 0
+  unintended_directory_count: 30
+  unintended_file_count: 0
+  unintended_total_bytes: 0
+  repository_tracked_changes: 0
+  repository_implementation_files_created: 0
+  disclosure_required_in_final_validation_evidence: true
+
+exact_cleanup_scope_after_confirmation_only:
+  temp_root: C:/Users/Administrator/AppData/Local/Temp/2
+  target_type: empty_directories_only
+  recoverability: not_recoverable_but_contains_no_files_or_user_data
+  exact_directories:
+    - pip-build-tracker-_5enlvzv
+    - pip-build-tracker-fyzgj2lt
+    - pip-download-duysktv8
+    - pip-download-m1y75pt4
+    - pip-metadata-_f_93arv
+    - pip-metadata-0om2pt1p
+    - pip-metadata-3s8g3yoi
+    - pip-metadata-5kjkq7cp
+    - pip-metadata-6h5usw8z
+    - pip-metadata-8e0awp19
+    - pip-metadata-ap0aeglk
+    - pip-metadata-gqj7eit9
+    - pip-metadata-iz984pib
+    - pip-metadata-ky4hwwh4
+    - pip-metadata-nm3mrw0_
+    - pip-metadata-yoy_wrc2
+    - pip-unpack-2dudfuov
+    - pip-unpack-8ow0xja1
+    - pip-unpack-8sxt5op_
+    - pip-unpack-c71s_0z1
+    - pip-unpack-cqd5lt68
+    - pip-unpack-fa34lhvf
+    - pip-unpack-fur4fhyi
+    - pip-unpack-fx2692us
+    - pip-unpack-o8yzt5x3
+    - pip-unpack-ov3chz76
+    - pip-unpack-rne5zig2
+    - pip-unpack-vatjcvyn
+    - pip-unpack-y7qey8t1
+    - pip-unpack-zdhnhg7h
+  mandatory_delete_guards:
+    - resolve_every_target_to_an_absolute_path_below_the_exact_temp_root
+    - require_the_resolved_parent_to_equal_the_exact_temp_root
+    - require_the_leaf_name_to_equal_one_allowlisted_name
+    - require_the_leaf_name_to_start_with_pip_dash
+    - require_each_directory_to_contain_zero_files_and_zero_child_directories
+    - require_no_python_process_before_delete
+    - reject_any_missing_changed_nonempty_or_additional_target_without_deleting_anything
+  delete_operation: remove_only_each_exact_verified_empty_directory_non_recursive
+
+approved_wheelhouse_state:
+  path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+  expected_file_count: 7
+  exact_files:
+    - {name: pip-24.2-py3-none-any.whl, sha256: 2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2, bytes: 1815170}
+    - {name: pytest-9.0.2-py3-none-any.whl, sha256: 711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b, bytes: 374801}
+    - {name: ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl, sha256: 1758ce7d8e1a29d23de54a16ae867abd370f01b5a69e1a3ba75223eaa3ca1a1b, bytes: 115305}
+    - {name: ruamel.yaml-0.18.6-py3-none-any.whl, sha256: 57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636, bytes: 117761}
+    - {name: ruff-0.15.1-py3-none-win_amd64.whl, sha256: c820fef9dd5d4172a6570e5721704a96c6679b80cf7be41659ed439653f62336, bytes: 11599956}
+    - {name: setuptools-75.1.0-py3-none-any.whl, sha256: 35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2, bytes: 1248506}
+    - {name: wheel-0.44.0-py3-none-any.whl, sha256: 2376a90c98cc337d18623527a97c31797bd02bad0033d41547043a1cbfbe448f, bytes: 67059}
+
+resumed_download_scope_after_confirmation_only:
+  environment_rebinding:
+    TEMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse/pip-temp
+    TMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse/pip-temp
+  pip_temp_path_is_a_child_of_the_approved_wheelhouse: true
+  create_only_if_absent: true
+  exact_remaining_pins:
+    - colorama==0.4.6
+    - iniconfig==1.1.1
+    - packaging==24.1
+    - pluggy==1.6.0
+    - pygments==2.15.1
+  inherited_network_constraints:
+    protocol: HTTPS
+    allowed_hosts: [pypi.org, files.pythonhosted.org]
+    binary_wheels_only: true
+    no_dependencies: true
+    no_cache: true
+    no_credentials_tokens_uploads_or_other_remote_writes: true
+  completion_requirements:
+    - exact_total_wheel_count_equals_12
+    - every_wheel_name_version_platform_and_SHA_256_is_recorded
+    - no_file_or_directory_is_created_below_the_temp_root_outside_the_three_original_exact_paths
+    - remove_only_the_nested_pip-temp_directory_after_all_wheel_hashes_are_recorded
+
+original_scope_resumption_after_successful_remediation:
+  authorized: true
+  authority_source: original_request_plus_this_exactly_confirmed_remediation_request
+  unchanged_workspace_target_count: 10
+  unchanged_workspace_targets: refer_to_original_request_exact_workspace_write_scope
+  unchanged_clean_environment_paths:
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b
+  required_changes_to_implementation_semantics:
+    - prepare-wheelhouse_must_rebind_TEMP_and_TMP_to_a_verified_child_of_wheelhouse
+    - validation_evidence_must_disclose_incident_and_exact_remediation_result
+  any_other_original_scope_change: forbidden
+
+stale_conditions:
+  - this_request_file_bytes_or_complete_file_SHA_256_change
+  - original_request_bytes_or_complete_file_SHA_256_change
+  - HEAD_or_tree_differs_from_the_required_baseline
+  - workspace_status_differs_from_the_two_expected_untracked_requests
+  - any_workspace_implementation_target_exists
+  - any_python_process_exists_at_cleanup_start
+  - any_allowlisted_incident_directory_is_missing_nonempty_nested_or_has_a_different_parent
+  - any_additional_pip_prefixed_temp_root_directory_appears_before_cleanup
+  - approved_wheelhouse_file_set_size_or_SHA_256_differs
+  - either_clean_environment_path_exists_before_resumption
+  - owner_confirmation_omits_or_mismatches_the_exact_lowercase_request_SHA_256
+  - owner_confirmation_does_not_explicitly_authorize_exact_cleanup_TEMP_TMP_network_and_original_scope_resumption
+
+post_remediation_and_resumption_state:
+  incident_hidden_or_reclassified: false
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_closure_authority
+  implementation_authority_after_original_scope_completion: exhausted
+  runtime_authority: none
+  commit_authority: none
+
+retained_non_authorizations:
+  - no_delete_outside_the_30_exact_empty_directories_and_later_original_three_temp_paths
+  - no_gate_closure_state_update_commit_stage_push_or_PR
+  - no_global_or_user_environment_modification
+  - no_other_network_host_package_version_or_remote_action
+  - no_runtime_Alpha_migration_routing_or_resource_budget_compiler
+  - no_existing_registry_contract_schema_prompt_fixture_checkpoint_or_runtime_code_change
+  - no_access_to_canonical_fixture_research_old_swarm_or_projects_swarm
+  - no_read_import_execution_copy_or_modification_of_frozen_K0b_01_artifacts
+  - no_existing_project_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+
+confirmation_requirements:
+  separate_owner_message: required
+  exact_complete_file_SHA_256_lowercase_hex_length: 64
+  explicit_authorization_required_for:
+    - exact_cleanup_of_the_30_empty_incident_directories
+    - exact_TEMP_and_TMP_rebinding_inside_the_wheelhouse
+    - exact_remaining_five_wheel_downloads
+    - exact_original_scope_resumption_after_successful_remediation
+  abbreviated_hash_or_yes_ok_continue: rejected
+
+integrity:
+  complete_file_SHA_256: external_until_computed

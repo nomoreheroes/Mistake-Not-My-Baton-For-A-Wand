@@ -1,0 +1,226 @@
+evidence_id: k0b-01-toolchain-validation-v1
+schema_version: 1
+evidence_type: implementation_and_local_validation
+materialized_on: "2026-09-10"
+result: pass
+
+authority:
+  effective_request:
+    path: new pipeline/requests/k0b-01-toolchain-wheelhouse-loss-remediation-approval-request-v5.yaml
+    complete_file_sha256: 4cbdb3d0791a727ee5b693e76e7176bacbf8dd3aecfe0fd964ccb34e8e48080d
+  owner_confirmation:
+    source_ref: current_conversation_separate_owner_message_2026_09_10
+    repeated_sha256: 4cbdb3d0791a727ee5b693e76e7176bacbf8dd3aecfe0fd964ccb34e8e48080d
+    exact_hash_match: pass
+    explicit_scope_match: pass
+  bound_predecessor_requests:
+    - {path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml, sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae}
+    - {path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml, sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29}
+    - {path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml, sha256: faefcdf25acaaff6f2ed0e5b777343abeda936adc5ca7c65365003b5393bb4ea}
+    - {path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v3.yaml, sha256: eef057b4706b4dc8941dac8c1b7fa54e1da0becb1d5797e8edd63743bd798b69}
+    - {path: new pipeline/requests/k0b-01-toolchain-materialization-scope-error-remediation-approval-request-v4.yaml, sha256: 5a4f6e80fa8c05aab2e8cd8dd096a52fea0c4a4c683dbcbb673af13516f36be0}
+
+baseline:
+  HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  tracked_changes_before_materialization: 0
+  invalid_external_target_absent_before_and_after_validation: true
+
+host_provenance:
+  python:
+    implementation: CPython
+    version: 3.12.7
+    executable_sha256: 6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0
+  powershell:
+    version: 5.1.20348.4294
+    executable_sha256: 38f4384643b3fa0de714d2367b712c2e0fa1c89e2cfd131ae6b831ad962b1033
+  git:
+    version: 2.51.2.windows.1
+    executable_sha256: 54194a1af7cfb6730448ce14b8f2c1dddd9f950b7f995dc351c1ed16eb179249
+  platform:
+    os_family: windows
+    architecture: AMD64
+    python_platform: win32
+    tested_host_os: Microsoft Windows NT 10.0.20348.0
+
+materialized_toolchain_files:
+  - {path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json, sha256: 1570481937a07528c0ec831af9d935cf020af593974a35aac21c54b32af98ea1, bytes: 4215, retained_byte_unchanged: true}
+  - {path: new pipeline/toolchain/k0b01/requirements-v1.lock, sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6, bytes: 1142}
+  - {path: new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1, sha256: 249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c, bytes: 4912}
+  - {path: new pipeline/toolchain/k0b01/bootstrap.ps1, sha256: 557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5, bytes: 4613}
+  - {path: new pipeline/toolchain/k0b01/invoke.ps1, sha256: d03466b8ab01023f903ff6b221e7bb211fcc36d3c0e421e3c3067d4978d94d15, bytes: 2666}
+  - {path: new pipeline/toolchain/k0b01/validate_toolchain.py, sha256: 8368ee4733fc1ee6587a4cd82fbfea204c7d3a52bf960feaa659e8bc46016c4a, bytes: 10884}
+  - {path: new pipeline/toolchain/k0b01/validate_budget_evidence.py, sha256: ed582c1b2f06b76eb4d82e4f8c47431d3f0b89b9c182b312a16b1707eb93b9fb, bytes: 8273}
+  - {path: new pipeline/toolchain/k0b01/test_toolchain.py, sha256: dc03fc6ecac1b508b987a0537b265c104d5a740f5933e4e8642b8b758aa26d11, bytes: 3865}
+  - {path: new pipeline/toolchain/k0b01/test_budget_evidence.py, sha256: 7f2d4df9c3923367621afe6a4b40df7a8e7d44be4fa579e31347f0a59d646128, bytes: 5768}
+
+wheelhouse_recreation:
+  reason: exact_approved_wheelhouse_disappeared_before_v4_execution
+  network_hosts_used: [pypi.org, files.pythonhosted.org]
+  download_mode: exact_pins_no_deps_binary_only_no_cache
+  TEMP_and_TMP_rebound_below_wheelhouse: true
+  nested_pip_temp_removed_after_success: true
+  root_level_pip_prefixed_directories_after_recreation: 0
+  wheel_count: 12
+  wheels:
+    - {wheel: colorama-0.4.6-py2.py3-none-any.whl, version: 0.4.6, sha256: 4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6, bytes: 25335}
+    - {wheel: iniconfig-1.1.1-py2.py3-none-any.whl, version: 1.1.1, sha256: 011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3, bytes: 4990}
+    - {wheel: packaging-24.1-py3-none-any.whl, version: 24.1, sha256: 5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124, bytes: 53985}
+    - {wheel: pip-24.2-py3-none-any.whl, version: 24.2, sha256: 2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2, bytes: 1815170}
+    - {wheel: pluggy-1.6.0-py3-none-any.whl, version: 1.6.0, sha256: e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746, bytes: 20538}
+    - {wheel: Pygments-2.15.1-py3-none-any.whl, version: 2.15.1, sha256: db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1, bytes: 1146422}
+    - {wheel: pytest-9.0.2-py3-none-any.whl, version: 9.0.2, sha256: 711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b, bytes: 374801}
+    - {wheel: ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl, version: 0.2.8, sha256: 1758ce7d8e1a29d23de54a16ae867abd370f01b5a69e1a3ba75223eaa3ca1a1b, bytes: 115305}
+    - {wheel: ruamel.yaml-0.18.6-py3-none-any.whl, version: 0.18.6, sha256: 57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636, bytes: 117761}
+    - {wheel: ruff-0.15.1-py3-none-win_amd64.whl, version: 0.15.1, sha256: c820fef9dd5d4172a6570e5721704a96c6679b80cf7be41659ed439653f62336, bytes: 11599956}
+    - {wheel: setuptools-75.1.0-py3-none-any.whl, version: 75.1.0, sha256: 35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2, bytes: 1248506}
+    - {wheel: wheel-0.44.0-py3-none-any.whl, version: 0.44.0, sha256: 2376a90c98cc337d18623527a97c31797bd02bad0033d41547043a1cbfbe448f, bytes: 67059}
+
+clean_environment_validation:
+  source_copy_policy:
+    copied_files: exactly_the_nine_materialized_toolchain_files
+    other_repository_content_traversed_or_copied: false
+    source_copy_hash_match_A_and_B: pass
+  child_process_environment:
+    network: disabled_by_no_index_and_local_find_links
+    TEMP_and_TMP_rebound_below_each_corresponding_environment: true
+    PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+    PYTHONDONTWRITEBYTECODE: "1"
+  canonical_commands:
+    bootstrap: "bootstrap.ps1 -Target <environment> -Wheelhouse <wheelhouse> -HostPython <exact-host-python>"
+    ruff: "ruff check --isolated --no-cache <four exact new Python files>"
+    test: "invoke.ps1 -Command test -PythonPath <environment-python>"
+    validate: "invoke.ps1 -Command validate -PythonPath <environment-python> -Wheelhouse <wheelhouse>"
+    render: "invoke.ps1 -Command render"
+    check: "invoke.ps1 -Command check"
+  environment_A:
+    bootstrap_exit_code: 0
+    ruff: {exit_code: 0, result: pass, output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18}
+    pytest: {exit_code: 0, collected: 15, passed: 15, output_sha256: f08983cb29072da58b6f0c7ea02ae7172268c67fb0d36231da88b3597145900c}
+    validate: {exit_code: 0, result: pass, output_sha256: a5d996ee37728866691592a9f64144b573c4fc08bd45d089b11ce3d524c0ee89}
+    render: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 831c5eadc5d76fcefdf6c41c0272a473a8deaa90551900b7fa95dd2ba80c2953}
+    check: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 1722787c9b5f832448555e0fb682a6a3ccbbcd8c4178b6415b8ab9d056146e4a}
+  environment_B:
+    bootstrap_exit_code: 0
+    ruff: {exit_code: 0, result: pass, output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18}
+    pytest: {exit_code: 0, collected: 15, passed: 15, output_sha256: 0e8201f5102e3c9854f0c30f3466a8d149ebf10a4614931a1f3ece8f3e22767a}
+    validate: {exit_code: 0, result: pass, output_sha256: a5d996ee37728866691592a9f64144b573c4fc08bd45d089b11ce3d524c0ee89}
+    render: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 831c5eadc5d76fcefdf6c41c0272a473a8deaa90551900b7fa95dd2ba80c2953}
+    check: {exit_code: 3, result: prerequisite_not_materialized, output_sha256: 1722787c9b5f832448555e0fb682a6a3ccbbcd8c4178b6415b8ab9d056146e4a}
+  normative_validate_output:
+    byte_identical_A_and_B: true
+    complete_file_sha256_A: a5d996ee37728866691592a9f64144b573c4fc08bd45d089b11ce3d524c0ee89
+    complete_file_sha256_B: a5d996ee37728866691592a9f64144b573c4fc08bd45d089b11ce3d524c0ee89
+    parsed_result:
+      exit_code: 0
+      package_count: 12
+      profile_id: pipeline-v2.k0b01-toolchain-lock-v1
+      requirements_sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6
+      result: pass
+      toolchain_lock_sha256: 1570481937a07528c0ec831af9d935cf020af593974a35aac21c54b32af98ea1
+      wheel_count: 12
+      wheel_set_sha256: bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba
+
+positive_and_negative_coverage:
+  positive:
+    - exact_manifest_lock_runtime_package_and_wheel_validation
+    - byte_deterministic_path_free_normative_output
+    - caller_supplied_synthetic_budget_evidence
+    - four_required_size_fields
+    - exact_v3_path_and_SHA_256_provenance
+  negative:
+    - changed_lock_fails_closed_with_exit_4
+    - render_and_check_fail_closed_with_exit_3
+    - missing_budget_input_provenance_fails_closed
+    - changed_budget_input_makes_prior_calculation_digest_stale
+    - F15_size_stress_and_phase_completion_blocked_without_authoritative_count
+    - runtime_phase_publications_34_rejected_when_not_reforecast_sensitive
+    - each_missing_required_size_field_rejected
+    - missing_STATE_RENDERER_independence_or_five_gate_inventory_rejected
+
+human_review_findings_preserved:
+  runtime_phase_publications_34:
+    reforecast_sensitive: true
+    immutable_constant_claimed: false
+  authoritative_F15_worst_case_object_count:
+    available: false
+    size_stress_or_phase_completion_claim: blocked
+  required_calculation_fields:
+    - assumed_mean_object_bytes
+    - nominal_expected_bytes
+    - forecast_worst_by_count_bytes
+    - size_stressed_bytes
+  exact_provenance_required_for_inputs: [22020096, 12, 34]
+  STATE_RENDERER_independent_authority_required: true
+  later_final_implementation_disposition_gate_inventory:
+    - G-K0B01-HUMAN-SIGNOFF
+    - G-K0B01-TOOLCHAIN
+    - G-K0B01-IMPLEMENTATION-LEDGER
+    - G-K0B01-STATE-RENDERER
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+
+incident_disclosures:
+  read_only_import_inventory_scope:
+    event: accidentally_included_frozen_K0b01_import_declaration_lines
+    executed_modified_copied_or_used: false
+  original_pip_TEMP_TMP_scope_defect:
+    unintended_root_level_directories: 30
+    global_or_user_install: false
+  remediation_v1:
+    result: fail_closed_before_delete
+  remediation_v2:
+    empty_directories_deleted: 4
+    result: fail_closed_at_first_nonempty_directory
+  effective_remediation_v3:
+    directories_deleted: 26
+    files_deleted: 28
+    bytes_deleted: 3270164
+    inventory_sha256: 462bb607f240f97941709c0dfcb5fa96dcfc7f07b882c90f574a0e634c2230aa
+    root_level_pip_prefixed_directories_after_cleanup: 0
+    TEMP_and_TMP_rebinding_for_remaining_downloads: pass
+  failed_external_patch_target_attempt:
+    target: C:/Projects/Administrator/AppData/Local/Temp/2/invalid.txt
+    target_authorized: false
+    file_or_parent_created: false
+    retained_lockfile_created_in_original_scope: true
+  wheelhouse_loss_after_v3:
+    detected_by_v4_preflight: true
+    elevated_read_only_confirmation_of_absence: true
+    workspace_write_or_local_validation_before_v4_stop: none
+    cause: external_or_unknown
+  initial_environment_A_bootstrap_attempt:
+    failure: inline_Python_metadata_probe_quotes_removed_by_Windows_PowerShell
+    environment_target_created: false
+    external_or_global_modification: false
+    correction: quote_free_four_line_metadata_probe_in_two_new_approved_scripts
+    corrected_retry_result: pass
+  nonmutating_controller_preflight_corrections:
+    wrapper_parse_rejections_before_shell_execution: 2
+    read_only_hash_predicate_typo: 1
+    read_only_static_check_invocation_errors: 2
+    workspace_or_temp_write_from_these_checks: none
+    corrected_static_checks: pass
+
+cleanup_after_evidence_capture:
+  status_at_evidence_materialization: authorized_and_scheduled
+  exact_recursive_targets:
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b
+  path_resolution_parent_and_leaf_verification_required: true
+
+scope_result:
+  exact_workspace_targets_materialized: 10
+  existing_tracked_files_modified: 0
+  frozen_K0b01_artifacts_read_imported_executed_copied_or_modified_during_implementation: false
+  existing_project_tests_collected: false
+  global_or_user_environment_modified: false
+  model_API_subagent_or_physical_model_call: false
+  gate_closed: false
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_exact_hash_bound_closure
+  implementation_authority_after_completion: exhausted
+  runtime_authority: none
+  commit_authority: none
+
+integrity:
+  complete_file_sha256: external_post_materialization

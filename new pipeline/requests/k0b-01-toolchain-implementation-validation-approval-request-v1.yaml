@@ -1,0 +1,289 @@
+request_id: k0b-01-toolchain-implementation-validation-approval-request-v1
+schema_version: 1
+request_type: exact_scope_implementation_and_local_validation
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-09"
+
+purpose: >-
+  Request exact-scope authority to materialize and locally validate the
+  repository-native locked implementation of G-K0B01-TOOLCHAIN. This request
+  does not itself authorize writes, downloads, environment creation, execution,
+  gate closure, state updates, or a commit.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_sequence:
+    - keep_this_complete_request_file_byte_unchanged
+    - present_its_complete_file_SHA_256_to_the_workspace_owner
+    - receive_the_same_lowercase_64_hex_SHA_256_in_a_separate_owner_message
+    - receive_explicit_authorization_of_this_exact_scope
+    - reverify_all_baseline_hashes_target_absence_and_other_stale_conditions
+    - only_then_materialize_download_execute_validate_and_record_evidence_within_scope
+
+governing_design_authority:
+  path: new pipeline/decisions/k0b-01-toolchain-design-owner-disposition-v1.yaml
+  complete_file_sha256: 1b4a0271efa1364e1c56a64af9438e55bffcec2b950503f8fb2c3cf03f1bbfa3
+  committed_in: c94fd60fce89ee5888b44839792cf2de52694014
+  gate_status: open_design_authority_only
+  implementation_authority_before_confirmation: none
+  runtime_authority: none
+
+baseline:
+  required_HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  required_worktree_before_confirmation: clean_except_this_request_file
+  bound_authority_and_state:
+    - {path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml, sha256: 544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d}
+    - {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+    - {path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml, sha256: 349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6}
+    - {path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
+    - {path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml, sha256: 522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140}
+    - {path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml, sha256: 34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd}
+    - {path: new pipeline/evidence/k0b-01-human-signoff-commit-set-v1.yaml, sha256: 67d9b187786481a77b55b8eab353017b45f49f7f891dd7bad15af47672a40a5e}
+    - {path: new pipeline/state/state.yaml, sha256: 4cc897e39b6d20da3cbc1785fd2915b9fde65c490e7ba2a336ccdc2c76928ec5}
+    - {path: new pipeline/state/STATE.md, sha256: 4dd32ef494fb2193f1808c72a9fe7764d89f8fbd5e3fb8c41fab5a0b924ffed1}
+    - {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    - {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+
+pre_request_scope_observation:
+  event: >-
+    A read-only import inventory command unintentionally included import lines
+    from new pipeline/harness/k0b01 before the exclusion was applied.
+  execution_of_those_files: false
+  modification_of_those_files: false
+  information_from_those_lines_used_for_this_scope: false
+  corrective_boundary: >-
+    All subsequent discovery used only host metadata and K0a/governance paths;
+    the implementation and validation below must not read, import, execute,
+    copy, or modify new pipeline/harness/k0b01 or any other frozen K0b-01 input.
+
+selected_physical_toolchain:
+  supported_platform:
+    os_family: windows
+    architecture: AMD64
+    normative_shell: Windows_PowerShell_5_1
+    tested_host_OS: Microsoft_Windows_NT_10_0_20348_0
+  host_bootstrap_runtime:
+    implementation: CPython
+    version: 3.12.7
+    distribution_observed: Anaconda_Inc
+    executable_path_observed: C:/ProgramData/anaconda3/python.exe
+    executable_sha256_observed: 6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0
+  shell_provenance:
+    version: 5.1.20348.4294
+    executable_path_observed: C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
+    executable_sha256_observed: 38f4384643b3fa0de714d2367b712c2e0fa1c89e2cfd131ae6b831ad962b1033
+  git_provenance:
+    version: 2.51.2.windows.1
+    executable_path_observed: C:/Program Files/Git/cmd/git.exe
+    executable_sha256_observed: 54194a1af7cfb6730448ce14b8f2c1dddd9f950b7f995dc351c1ed16eb179249
+  exact_python_package_pins:
+    pip: 24.2
+    setuptools: 75.1.0
+    wheel: 0.44.0
+    ruamel.yaml: 0.18.6
+    ruamel.yaml.clib: 0.2.8
+    pytest: 9.0.2
+    ruff: 0.15.1
+    colorama: 0.4.6
+    iniconfig: 1.1.1
+    packaging: 24.1
+    pluggy: 1.6.0
+    pygments: 2.15.1
+  dependency_policy:
+    exact_versions_only: true
+    binary_wheels_only: true
+    source_distributions: forbidden
+    complete_wheel_SHA_256_required: true
+    installation_requires_hashes: true
+    global_or_user_environment_modification: forbidden
+    unpinned_transitive_dependency_resolution: forbidden
+
+exact_workspace_write_scope:
+  operation: create_new_files_only
+  exact_new_file_count_after_confirmation: 10
+  exact_new_files:
+    - new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+    - new pipeline/toolchain/k0b01/requirements-v1.lock
+    - new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1
+    - new pipeline/toolchain/k0b01/bootstrap.ps1
+    - new pipeline/toolchain/k0b01/invoke.ps1
+    - new pipeline/toolchain/k0b01/validate_toolchain.py
+    - new pipeline/toolchain/k0b01/validate_budget_evidence.py
+    - new pipeline/toolchain/k0b01/test_toolchain.py
+    - new pipeline/toolchain/k0b01/test_budget_evidence.py
+    - new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml
+  existing_file_modifications: []
+  deletions: []
+  renames: []
+  state_updates: []
+  gate_closure_artifacts: []
+  commit_or_staging_actions: []
+
+required_file_responsibilities:
+  toolchain-lock-v1.json:
+    - bind_platform_runtime_shell_and_all_exact_package_versions
+    - bind_canonical_commands_exit_codes_encoding_line_endings_locale_timezone_and_sorting
+    - bind_network_temp_directory_and_binary_budget_policies
+    - contain_no_absolute_path_as_a_normative_portable_value
+  requirements-v1.lock:
+    - contain_every_exact_direct_and_transitive_package_pin
+    - contain_the_downloaded_wheel_SHA_256_for_every_pin
+    - be_accepted_by_pip_require_hashes_with_no_index
+  prepare-wheelhouse.ps1:
+    - reject_wrong_host_runtime_platform_or_preexisting_temp_targets
+    - download_only_the_exact_pins_as_binary_wheels_without_cache
+    - compute_and_report_every_wheel_SHA_256
+    - perform_no_install
+  bootstrap.ps1:
+    - accept_only_an_explicit_empty_or_absent_target_directory
+    - create_a_venv_using_the_exact_host_runtime
+    - install_only_from_the_local_wheelhouse_with_no_index_and_require_hashes
+    - never_modify_the_global_or_user_environment
+  invoke.ps1:
+    - expose_bootstrap_validate_test_render_check_and_validate-budget_commands
+    - provide_stable_exit_codes_and_UTF_8_LF_machine_readable_output
+    - make_render_and_check_fail_closed_as_prerequisite_not_materialized
+    - never_read_state_yaml_STATE_md_or_existing_K0b_01_runtime_files
+  validate_toolchain.py:
+    - use_only_the_standard_library
+    - validate_runtime_platform_manifest_lock_package_versions_and_wheel_hashes
+    - emit_deterministic_JSON_without_timestamps_absolute_paths_or_environment_noise
+  validate_budget_evidence.py:
+    - validate_only_an_explicit_caller_supplied_synthetic_or_future_evidence_path
+    - require_assumed_mean_object_bytes_nominal_expected_bytes_forecast_worst_by_count_bytes_and_size_stressed_bytes
+    - require_exact_path_and_SHA_256_provenance_for_inputs_22020096_12_and_34
+    - treat_runtime_phase_publications_34_as_reforecast_sensitive
+    - reject_stale_claims_after_any_budget_input_digest_change
+    - reject_F15_size_stress_or_phase_completion_without_authoritative_worst_case_object_count
+    - perform_no_budget_compilation_or_recalculation
+  test_toolchain.py:
+    - test_manifest_lock_version_hash_determinism_and_fail_closed_behavior
+    - test_render_and_check_prerequisite_not_materialized_exit_behavior
+    - use_only_new_toolchain_files_and_OS_temporary_data
+  test_budget_evidence.py:
+    - use_only_synthetic_OS_temporary_inputs
+    - cover_all_five_human_review_findings_relevant_to_validation
+    - include_positive_missing_provenance_stale_and_missing_F15_authority_cases
+  k0b-01-toolchain-validation-v1.yaml:
+    - bind_this_request_and_the_separate_exact_hash_confirmation
+    - record_host_and_wheel_provenance_complete_file_hashes_commands_and_exit_codes
+    - record_two_clean_environment_result_hashes_and_exact_match_result
+    - record_positive_and_negative_test_results
+    - state_gate_closed_false_and_implementation_and_runtime_authority_none
+
+authorized_network_scope_after_exact_confirmation_only:
+  purpose: acquire_the_exact_pinned_binary_wheels_into_the_exact_temp_wheelhouse
+  protocol: HTTPS
+  allowed_hosts:
+    - pypi.org
+    - files.pythonhosted.org
+  package_names_and_versions: exactly_selected_physical_toolchain_exact_python_package_pins
+  cache: disabled
+  dependency_resolution: disabled_download_each_exact_pin
+  source_distributions: forbidden
+  credentials_or_tokens: forbidden
+  uploads_or_other_remote_writes: forbidden
+  any_other_host_or_package: forbidden
+
+exact_temporary_write_scope_after_confirmation_only:
+  required_temp_root: C:/Users/Administrator/AppData/Local/Temp/2
+  exact_paths:
+    wheelhouse: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+    clean_environment_a: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a
+    clean_environment_b: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b
+  path_rules:
+    - resolve_and_compare_each_absolute_path_before_create_copy_or_delete
+    - reject_if_any_exact_target_exists_before_validation
+    - copy_only_the_new_toolchain_files_into_each_clean_environment
+    - do_not_copy_or_traverse_other_repository_content
+  cleanup:
+    removal_after_evidence_capture: authorized
+    recursive_removal_targets: exactly_the_three_paths_above_only
+    preserve_on_scope_or_path_validation_failure: true
+
+execution_and_validation_scope_after_confirmation_only:
+  online_phase:
+    - download_each_exact_binary_wheel_with_no_dependencies_and_no_cache
+    - compute_wheel_SHA_256_values
+    - materialize_requirements-v1.lock_from_exact_pins_and_observed_wheel_hashes
+  offline_phase_per_clean_environment:
+    - create_isolated_venv_from_CPython_3_12_7
+    - install_with_no_index_find_links_and_require_hashes
+    - validate_exact_runtime_and_package_versions
+    - run_ruff_against_only_the_new_Python_toolchain_files
+    - run_pytest_with_plugin_autoload_disabled_against_only_the_two_new_test_files
+    - run_invoke_validate_and_capture_normative_JSON
+    - run_render_and_check_and_require_the_declared_fail_closed_exit_code
+  equivalence:
+    - normalized_validate_output_from_environment_a_and_b_must_be_byte_identical
+    - complete_file_SHA_256_values_of_the_two_outputs_must_match
+  failure_behavior:
+    - stop_before_evidence_claim_on_any_unexpected_exit_or_hash_mismatch
+    - do_not_close_the_gate
+    - report_the_exact_failure_and_remaining_temp_paths
+
+budget_treatment:
+  temporary_wheelhouse_and_venvs:
+    committed: false
+    runtime_publication_or_checkpoint_payload: false
+    excluded_from_runtime_binary_budget: true
+  committed_toolchain_text_and_future_evidence:
+    repository_artifacts: true
+    runtime_binary_payload: false
+  no_threshold_or_checkpoint_phase_change: true
+
+human_review_findings_preserved_without_reclassification:
+  - runtime_phase_publications_34_is_reforecast_sensitive
+  - authoritative_F15_worst_case_object_count_required_before_size_stress_or_phase_completion
+  - assumed_mean_object_bytes_and_three_v1_3_section_6_size_results_required
+  - inputs_22020096_12_34_require_exact_v3_forecast_and_reconciliation_provenance
+  - STATE_RENDERER_requires_independent_authority_and_final_disposition_must_list_all_five_gates
+
+post_execution_state:
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_exact_hash_bound_closure
+  G-K0B01-IMPLEMENTATION-LEDGER: remains_open
+  G-K0B01-STATE-RENDERER: remains_open
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+
+stale_conditions:
+  - this_request_file_bytes_or_complete_file_SHA_256_change
+  - HEAD_or_tree_differs_from_the_required_baseline
+  - any_bound_authority_state_or_provenance_SHA_256_mismatch
+  - any_workspace_target_or_exact_temp_target_exists_before_authorized_materialization
+  - any_worktree_change_other_than_this_exact_request_file
+  - any_exact_host_executable_version_or_SHA_256_mismatch
+  - owner_confirmation_omits_or_mismatches_the_exact_lowercase_request_SHA_256
+  - owner_confirmation_does_not_explicitly_authorize_workspace_network_temp_execution_and_cleanup_scope
+  - any_requested_path_host_package_version_network_host_or_action_expands
+
+retained_non_authorizations:
+  - no_gate_closure_or_state_projection_update
+  - no_implementation_disposition
+  - no_runtime_Alpha_migration_routing_or_resource_budget_compiler
+  - no_existing_registry_contract_schema_prompt_fixture_checkpoint_or_runtime_code_change
+  - no_access_to_canonical_fixture_research_old_swarm_or_projects_swarm
+  - no_read_import_execution_copy_or_modification_of_frozen_K0b_01_artifacts
+  - no_existing_project_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+  - no_global_or_user_dependency_install_or_update
+  - no_commit_stage_push_merge_PR_deploy_or_release
+  - no_third_checkpoint_budget_phase_or_zero_credit_rule_change
+  - no_F15_size_stress_or_phase_completion_claim
+  - no_claim_that_34_is_immutable
+
+confirmation_requirements:
+  separate_owner_message: required
+  exact_complete_file_SHA_256_lowercase_hex_length: 64
+  explicit_authorization_required_for:
+    - exact_workspace_write_scope
+    - exact_temporary_write_and_cleanup_scope
+    - exact_network_download_scope
+    - exact_local_execution_and_validation_scope
+  abbreviated_hash_or_yes_ok_continue: rejected
+
+integrity:
+  complete_file_SHA_256: external_until_computed

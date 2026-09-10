@@ -1,0 +1,174 @@
+request_id: k0b-01-toolchain-materialization-scope-error-remediation-approval-request-v4
+schema_version: 1
+request_type: exact_scope_failed_external_target_attempt_remediation_and_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-10"
+
+purpose: >-
+  Remediate a failed apply-patch attempt that included one unauthorized external
+  target, retain the one correctly created and originally authorized lockfile,
+  and resume only the nine still-unmaterialized workspace targets plus the
+  previously authorized two-environment local validation and evidence scope.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+
+bound_requests:
+  original:
+    path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    complete_file_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae
+  pip_temp_remediation_v1:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    complete_file_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+  pip_temp_remediation_v2:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml
+    complete_file_sha256: faefcdf25acaaff6f2ed0e5b777343abeda936adc5ca7c65365003b5393bb4ea
+  effective_pip_temp_remediation_v3:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v3.yaml
+    complete_file_sha256: eef057b4706b4dc8941dac8c1b7fa54e1da0becb1d5797e8edd63743bd798b69
+
+baseline:
+  required_HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  required_tracked_changes: 0
+  expected_untracked_files_after_this_request_creation:
+    - new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v3.yaml
+    - new pipeline/requests/k0b-01-toolchain-materialization-scope-error-remediation-approval-request-v4.yaml
+    - new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+
+incident:
+  id: K0B01-TOOLCHAIN-PATCH-SCOPE-01
+  cause: agent_generated_patch_contained_an_erroneous_external_target
+  erroneous_target: C:/Projects/Administrator/AppData/Local/Temp/2/invalid.txt
+  target_was_authorized: false
+  apply_patch_result: failed_to_create_parent_directories
+  erroneous_target_exists_after_failure: false
+  external_file_or_parent_created: false
+  correctly_created_original_scope_target:
+    path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+    complete_file_sha256: 1570481937a07528c0ec831af9d935cf020af593974a35aac21c54b32af98ea1
+    bytes: 4215
+    JSON_parse_result: pass
+  HEAD_or_tree_changed: false
+  disclosure_required_in_final_validation_evidence: true
+
+completed_effective_v3_remediation:
+  initial_incident_directories: 30
+  v2_empty_directories_deleted: 4
+  v3_directories_deleted: 26
+  v3_files_deleted: 28
+  v3_deleted_bytes: 3270164
+  v3_inventory_sha256: 462bb607f240f97941709c0dfcb5fa96dcfc7f07b882c90f574a0e634c2230aa
+  root_level_pip_prefixed_directories_after_cleanup: 0
+  final_wheel_count: 12
+  nested_wheelhouse_pip_temp_removed: true
+  remaining_network_downloads: 0
+
+retained_authorized_lockfile:
+  path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+  complete_file_sha256: 1570481937a07528c0ec831af9d935cf020af593974a35aac21c54b32af98ea1
+  bytes: 4215
+  action_after_confirmation: retain_byte_unchanged
+  rewrite_or_reformat: forbidden
+
+exact_remaining_workspace_scope_after_confirmation_only:
+  operation: create_new_files_only
+  exact_new_file_count: 9
+  exact_new_files:
+    - new pipeline/toolchain/k0b01/requirements-v1.lock
+    - new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1
+    - new pipeline/toolchain/k0b01/bootstrap.ps1
+    - new pipeline/toolchain/k0b01/invoke.ps1
+    - new pipeline/toolchain/k0b01/validate_toolchain.py
+    - new pipeline/toolchain/k0b01/validate_budget_evidence.py
+    - new pipeline/toolchain/k0b01/test_toolchain.py
+    - new pipeline/toolchain/k0b01/test_budget_evidence.py
+    - new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml
+  existing_file_modifications: []
+  external_workspace_targets: []
+  every_apply_patch_target_must_resolve_below: C:/Projects/1.Mistake Not My Baton For A Wand
+  invalid_external_target_must_remain_absent: C:/Projects/Administrator/AppData/Local/Temp/2/invalid.txt
+
+wheelhouse_binding:
+  path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+  exact_file_count: 12
+  required_names_versions_and_SHA_256_values: exactly_as_bound_by_retained_authorized_lockfile
+  network_access_remaining: none
+  wheelhouse_rewrite_or_redownload: forbidden
+
+resumed_local_validation_scope_after_confirmation_only:
+  source: original_request_execution_and_validation_scope_plus_effective_v3_TEMP_TMP_rebinding
+  clean_environment_a: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a
+  clean_environment_b: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b
+  both_must_be_absent_before_creation: true
+  all_child_process_TEMP_and_TMP_paths_must_resolve_below_the_corresponding_environment: true
+  install_mode: offline_no_index_find_links_require_hashes
+  test_collection: only_the_two_new_toolchain_test_files
+  existing_project_test_collection: forbidden
+  frozen_K0b_01_read_import_execute_or_copy: forbidden
+  successful_completion_cleanup:
+    recursive_targets:
+      - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+      - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a
+      - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b
+    verify_exact_absolute_parent_and_leaf_before_delete: true
+
+required_validation_evidence_disclosures:
+  - read_only_import_inventory_accidentally_included_K0b01_import_lines_without_execution_or_modification
+  - original_pip_TEMP_TMP_scope_defect
+  - remediation_v1_and_v2_fail_closed_results
+  - effective_v3_inventory_cleanup_and_TEMP_TMP_rebinding
+  - failed_unauthorized_external_patch_target_attempt_with_no_external_file_created
+  - retained_lockfile_exact_SHA_256_and_no_rewrite
+  - twelve_wheel_names_versions_sizes_and_SHA_256_values
+  - two_clean_environment_commands_exit_codes_and_normative_output_hash_equivalence
+  - gate_closed_false_implementation_authority_exhausted_runtime_authority_none
+
+stale_conditions:
+  - this_request_file_bytes_or_complete_file_SHA_256_change
+  - any_bound_request_bytes_or_SHA_256_change
+  - HEAD_or_tree_differs_from_the_required_baseline
+  - workspace_status_differs_from_the_six_expected_untracked_files
+  - retained_lockfile_bytes_SHA_256_or_JSON_parse_result_changes
+  - any_of_the_nine_remaining_workspace_targets_exists
+  - erroneous_external_target_exists
+  - either_clean_environment_path_exists
+  - root_level_pip_prefixed_directory_exists
+  - wheelhouse_file_count_name_version_or_SHA_256_differs_from_the_lockfile
+  - owner_confirmation_omits_or_mismatches_the_exact_lowercase_request_SHA_256
+  - owner_confirmation_does_not_explicitly_authorize_retention_remaining_workspace_scope_validation_and_cleanup
+
+post_scope_state:
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_exact_hash_bound_closure
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+  commit_authority: none
+
+retained_non_authorizations:
+  - no_new_or_changed_path_outside_the_original_nine_remaining_workspace_targets_and_three_temp_cleanup_targets
+  - no_network_access_or_wheel_redownload
+  - no_gate_closure_state_update_commit_stage_push_or_PR
+  - no_global_or_user_environment_modification
+  - no_runtime_Alpha_migration_routing_or_resource_budget_compiler
+  - no_existing_registry_contract_schema_prompt_fixture_checkpoint_or_runtime_code_change
+  - no_access_to_canonical_fixture_research_old_swarm_or_projects_swarm
+  - no_read_import_execution_copy_or_modification_of_frozen_K0b_01_artifacts
+  - no_existing_project_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+
+confirmation_requirements:
+  separate_owner_message: required
+  exact_complete_file_SHA_256_lowercase_hex_length: 64
+  explicit_authorization_required_for:
+    - retention_of_the_exact_existing_lockfile
+    - creation_of_the_nine_exact_remaining_workspace_files
+    - exact_two_environment_offline_execution_and_validation
+    - exact_three_temp_path_cleanup_after_evidence_capture
+  abbreviated_hash_or_yes_ok_continue: rejected
+
+integrity:
+  complete_file_SHA_256: external_until_computed

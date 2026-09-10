@@ -1,0 +1,224 @@
+request_id: k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v3
+schema_version: 1
+request_type: exact_recursive_transient_cleanup_and_original_scope_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-09"
+
+purpose: >-
+  Replace stale remediation v1 and v2 with exact authority to recursively
+  delete only the inventoried pip-transient contents of 26 remaining incident
+  directories, constrain every later pip and pytest temporary write to children
+  of the three approved temp paths, and resume the unchanged original TOOLCHAIN
+  implementation and validation scope.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+
+bound_requests:
+  original:
+    path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    complete_file_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae
+  remediation_v1:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    complete_file_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+    status: stale_zero_deletions
+  remediation_v2:
+    path: new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml
+    complete_file_sha256: faefcdf25acaaff6f2ed0e5b777343abeda936adc5ca7c65365003b5393bb4ea
+    status: stale_after_four_empty_directory_deletions
+  prior_remediation_authority_reuse: forbidden
+
+baseline:
+  required_HEAD: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tree: 4035cb71c5794ecefd50a1d79e2188def39e9bf8
+  required_tracked_changes: 0
+  expected_untracked_files_after_this_request_creation:
+    - new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v1.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v2.yaml
+    - new pipeline/requests/k0b-01-toolchain-pip-temp-scope-remediation-approval-request-v3.yaml
+  expected_python_process_count: 0
+
+remediation_history:
+  original_incident_directory_count: 30
+  v1_deletions: 0
+  v2_deleted_empty_directories:
+    - pip-build-tracker-_5enlvzv
+    - pip-build-tracker-fyzgj2lt
+    - pip-download-duysktv8
+    - pip-download-m1y75pt4
+  remaining_directory_count: 26
+  remaining_child_directory_count: 0
+  remaining_file_count: 28
+  remaining_total_bytes: 3270164
+  contents_classification: pip_generated_metadata_duplicate_wheels_and_partial_zero_byte_downloads_only
+  contains_user_files: false
+  recoverability: recursive_deletion_is_not_recoverable
+  disclosure_required_in_final_validation_evidence: true
+
+exact_remaining_inventory:
+  temp_root: C:/Users/Administrator/AppData/Local/Temp/2
+  directories:
+    pip-metadata-_f_93arv:
+      - {path: METADATA, bytes: 3204, sha256: 5f7a283b75a709fccd481aea42379f083d4f3801753365922e6b0732042515d9}
+    pip-metadata-0om2pt1p:
+      - {path: METADATA, bytes: 6855, sha256: 2e4e592f1befbe2a255415601f722a568b7d37c94aa98aca212fc0dd68c2d81a}
+    pip-metadata-3s8g3yoi:
+      - {path: METADATA, bytes: 26649, sha256: d9d6f79b555ba28ec0934b851dd231b8a571d30b9dc1796738fdecaaa2dd07ea}
+    pip-metadata-5kjkq7cp:
+      - {path: METADATA, bytes: 3624, sha256: 3e1cc2c50c4886c9d9f3bd5c3d47b71dec3d3e186981f94b6dfa94dd68b366a3}
+    pip-metadata-6h5usw8z:
+      - {path: METADATA, bytes: 23941, sha256: 2e05bb4d42605c84e232b195deb428dfd44656bdf5d7edde19cc33976e778dcb}
+    pip-metadata-8e0awp19:
+      - {path: METADATA, bytes: 4811, sha256: 7438c35ee25a095eb7416f84b461c2d74425c5e734ad54c3912453c65244e01c}
+    pip-metadata-ap0aeglk:
+      - {path: METADATA, bytes: 17158, sha256: 7baed29eb50c3b29bdb33ff84e3177bf1bc05784f7685ecdcaa4471c7dd810cc}
+    pip-metadata-gqj7eit9:
+      - {path: METADATA, bytes: 2313, sha256: 3a3c69baae37bab03a835fa8b8a3128f08d69fb513345812beab7c6e5afee041}
+    pip-metadata-iz984pib:
+      - {path: METADATA, bytes: 2451, sha256: d2f1ac4c1a84deadcf8b6fb62630ab4a299fb21e1e8d15466dd7444e6f085efe}
+    pip-metadata-ky4hwwh4:
+      - {path: METADATA, bytes: 7558, sha256: 14131718cc1f40cfecb5eac338037029a519b6392876100afec1e949f023d1ed}
+    pip-metadata-nm3mrw0_:
+      - {path: METADATA, bytes: 2405, sha256: ff8fa814aa515ee66fe6bcdea527295d1c21aba0f3aac81b9c0e59a6031431cb}
+    pip-metadata-yoy_wrc2:
+      - {path: METADATA, bytes: 2275, sha256: 884a5e567a791a1c5877ae3bb8dc079af44917df160c75132fe34a9bbe621a97}
+    pip-unpack-2dudfuov:
+      - {path: pluggy-1.6.0-py3-none-any.whl.metadata, bytes: 4811, sha256: 7438c35ee25a095eb7416f84b461c2d74425c5e734ad54c3912453c65244e01c}
+    pip-unpack-8ow0xja1:
+      - {path: pip-24.2-py3-none-any.whl, bytes: 1815170, sha256: 2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2}
+      - {path: setuptools-75.1.0-py3-none-any.whl, bytes: 1248506, sha256: 35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2}
+      - {path: wheel-0.44.0-py3-none-any.whl, bytes: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    pip-unpack-8sxt5op_:
+      - {path: Pygments-2.15.1-py3-none-any.whl.metadata, bytes: 2451, sha256: d2f1ac4c1a84deadcf8b6fb62630ab4a299fb21e1e8d15466dd7444e6f085efe}
+    pip-unpack-c71s_0z1:
+      - {path: pip-24.2-py3-none-any.whl.metadata, bytes: 3624, sha256: 3e1cc2c50c4886c9d9f3bd5c3d47b71dec3d3e186981f94b6dfa94dd68b366a3}
+    pip-unpack-cqd5lt68:
+      - {path: packaging-24.1-py3-none-any.whl.metadata, bytes: 3204, sha256: 5f7a283b75a709fccd481aea42379f083d4f3801753365922e6b0732042515d9}
+    pip-unpack-fa34lhvf:
+      - {path: ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl.metadata, bytes: 2275, sha256: 884a5e567a791a1c5877ae3bb8dc079af44917df160c75132fe34a9bbe621a97}
+    pip-unpack-fur4fhyi:
+      - {path: wheel-0.44.0-py3-none-any.whl.metadata, bytes: 2313, sha256: 3a3c69baae37bab03a835fa8b8a3128f08d69fb513345812beab7c6e5afee041}
+    pip-unpack-fx2692us:
+      - {path: setuptools-75.1.0-py3-none-any.whl.metadata, bytes: 6855, sha256: 2e4e592f1befbe2a255415601f722a568b7d37c94aa98aca212fc0dd68c2d81a}
+    pip-unpack-o8yzt5x3:
+      - {path: colorama-0.4.6-py2.py3-none-any.whl.metadata, bytes: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    pip-unpack-ov3chz76:
+      - {path: ruamel.yaml-0.18.6-py3-none-any.whl.metadata, bytes: 23941, sha256: 2e05bb4d42605c84e232b195deb428dfd44656bdf5d7edde19cc33976e778dcb}
+    pip-unpack-rne5zig2:
+      - {path: iniconfig-1.1.1-py2.py3-none-any.whl.metadata, bytes: 2405, sha256: ff8fa814aa515ee66fe6bcdea527295d1c21aba0f3aac81b9c0e59a6031431cb}
+    pip-unpack-vatjcvyn:
+      - {path: ruff-0.15.1-py3-none-win_amd64.whl.metadata, bytes: 26649, sha256: d9d6f79b555ba28ec0934b851dd231b8a571d30b9dc1796738fdecaaa2dd07ea}
+    pip-unpack-y7qey8t1:
+      - {path: pytest-9.0.2-py3-none-any.whl.metadata, bytes: 7558, sha256: 14131718cc1f40cfecb5eac338037029a519b6392876100afec1e949f023d1ed}
+    pip-unpack-zdhnhg7h:
+      - {path: colorama-0.4.6-py2.py3-none-any.whl.metadata, bytes: 17158, sha256: 7baed29eb50c3b29bdb33ff84e3177bf1bc05784f7685ecdcaa4471c7dd810cc}
+
+exact_cleanup_scope_after_confirmation_only:
+  allowed_targets: exactly_the_26_directories_in_exact_remaining_inventory
+  mandatory_pre_delete_checks:
+    - no_python_process_exists
+    - each_resolved_target_parent_equals_the_exact_temp_root
+    - each_leaf_name_exactly_matches_the_inventory_key
+    - no_child_directory_exists
+    - complete_relative_file_set_sizes_and_SHA_256_values_match_the_inventory
+    - no_additional_pip_prefixed_directory_exists_below_the_temp_root
+  operation: recursive_force_delete_only_the_26_verified_directories
+  forbidden: delete_any_parent_sibling_unlisted_path_or_wheelhouse_file
+  required_postcondition: no_pip_prefixed_directory_remains_directly_below_the_temp_root
+
+approved_wheelhouse_state:
+  path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse
+  expected_exact_file_count: 7
+  names_sizes_and_SHA_256_source: remediation_v1.approved_wheelhouse_state
+  source_request_sha256: 6ce0fac36f554b566bd2a110dcfdd62e0a688926d37510c00afee9cbc7057f29
+  exact_match_required_before_cleanup_and_download: true
+
+resumed_download_scope_after_successful_cleanup_only:
+  exact_remaining_pins:
+    - colorama==0.4.6
+    - iniconfig==1.1.1
+    - packaging==24.1
+    - pluggy==1.6.0
+    - pygments==2.15.1
+  allowed_hosts: [pypi.org, files.pythonhosted.org]
+  binary_wheels_only: true
+  no_dependencies_no_cache_no_credentials_no_uploads: true
+  process_environment:
+    TEMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse/pip-temp
+    TMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-wheelhouse/pip-temp
+  all_pip_generated_children_must_remain_under_pip_temp: true
+  after_download:
+    exact_wheel_count: 12
+    hash_every_wheel: true
+    remove_only_the_nested_pip-temp_after_hash_capture: true
+
+original_scope_resumption_after_successful_cleanup_and_download:
+  source_request_path: new pipeline/requests/k0b-01-toolchain-implementation-validation-approval-request-v1.yaml
+  source_request_sha256: b3825b8c7238005045b565fdd989b968eb6f6987e8e7cf5ef6192e6c259a24ae
+  exact_workspace_targets_and_validation_semantics_unchanged: true
+  mandatory_process_temp_rebinding:
+    clean_environment_a_children:
+      TEMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a/process-temp
+      TMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-a/process-temp
+    clean_environment_b_children:
+      TEMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b/process-temp
+      TMP: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-toolchain-v1-b/process-temp
+    applies_to:
+      - venv_creation
+      - offline_pip_install
+      - ruff
+      - pytest
+      - all_new_toolchain_commands
+  required_validation_evidence_disclosures:
+    - original_out_of_scope_pip_temp_creation
+    - exact_30_directory_initial_inventory_correction
+    - v1_zero_deletion_failure
+    - v2_four_empty_directory_deletions_then_failure
+    - v3_26_directory_recursive_cleanup
+    - TEMP_TMP_rebinding_and_no_new_root_level_pip_directory_proof
+
+stale_conditions:
+  - this_request_file_bytes_or_complete_file_SHA_256_change
+  - any_bound_request_bytes_or_SHA_256_change
+  - HEAD_or_tree_differs_from_the_required_baseline
+  - workspace_status_differs_from_the_four_expected_untracked_requests
+  - any_original_workspace_implementation_target_exists
+  - any_python_process_exists_at_cleanup_start
+  - exact_remaining_inventory_file_set_size_or_SHA_256_mismatch
+  - any_additional_pip_prefixed_temp_root_directory_exists
+  - any_of_the_seven_wheelhouse_file_names_sizes_or_SHA_256_values_differs
+  - owner_confirmation_omits_or_mismatches_the_exact_lowercase_request_SHA_256
+  - owner_confirmation_does_not_explicitly_authorize_recursive_cleanup_TEMP_TMP_download_and_original_scope_resumption
+
+post_scope_state:
+  G-K0B01-TOOLCHAIN: remains_open_pending_separate_exact_hash_bound_closure
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+  commit_authority: none
+
+retained_non_authorizations:
+  - no_delete_outside_the_26_exact_verified_directories_and_later_original_three_temp_cleanup_targets
+  - no_gate_closure_state_update_commit_stage_push_or_PR
+  - no_global_or_user_environment_modification
+  - no_other_network_host_package_version_or_remote_action
+  - no_runtime_Alpha_migration_routing_or_resource_budget_compiler
+  - no_existing_registry_contract_schema_prompt_fixture_checkpoint_or_runtime_code_change
+  - no_access_to_canonical_fixture_research_old_swarm_or_projects_swarm
+  - no_read_import_execution_copy_or_modification_of_frozen_K0b_01_artifacts
+  - no_existing_project_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+
+confirmation_requirements:
+  separate_owner_message: required
+  exact_complete_file_SHA_256_lowercase_hex_length: 64
+  explicit_authorization_required_for:
+    - recursive_delete_of_the_26_exact_verified_pip_transient_directories
+    - exact_TEMP_and_TMP_rebinding_inside_all_three_approved_temp_paths
+    - exact_remaining_five_wheel_downloads
+    - unchanged_original_scope_resumption_after_successful_remediation
+  abbreviated_hash_or_yes_ok_continue: rejected
+
+integrity:
+  complete_file_SHA_256: external_until_computed
