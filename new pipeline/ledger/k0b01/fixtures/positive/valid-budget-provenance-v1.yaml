@@ -1,0 +1,56 @@
+fixture_version: 2
+scenario: valid_budget_provenance
+operation:
+  type: no_change
+expected:
+  result: pass
+  reason: validated_canonical_population
+budget_inputs:
+  max_publication_bytes:
+    value: 22020096
+    provenance:
+      - path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+        sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a
+        field_path: checkpoint_budget_phase_forecasts.K0b-runtime-operational.checkpoint_unrounded_MiB.total.worst_case;binary_budget_preserved.seed_bytes_nested.worst_case
+      - path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+        sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb
+        field_path: phase_arithmetic.K0b-runtime-operational.checkpoint.unrounded_MiB.worst_case;preserved_B01_D04_and_call_budget.binary_seed_bytes.worst_case
+    derivation: >-
+      for each bound source: checkpoint worst-case MiB * 1048576 - worst-case
+      binary seed bytes = 22020096
+  checkpoint_count:
+    value: 12
+    provenance:
+      - path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+        sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a
+        field_path: binary_budget_preserved.logical_seed_count.worst_case
+      - path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+        sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb
+        field_path: preserved_B01_D04_and_call_budget.binary_seed_count.worst_case
+  runtime_phase_publications:
+    value: 34
+    provenance:
+      - path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+        sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a
+        field_path: checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications.worst_case
+      - path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+        sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb
+        field_path: phase_arithmetic.K0b-runtime-operational.publications.worst_case
+    reforecast_sensitive: true
+calculation_input_sha256: 2cf091c6ee5e346d4f39ed1a9cb30273dc566de5cec83bc120e8299519157c0a
+calculations:
+  assumed_mean_object_bytes: 372736
+  nominal_expected_bytes: 2236416
+  forecast_worst_by_count_bytes: 4472832
+  size_stressed_bytes: 7864320
+claims:
+  f15_size_stress: false
+  phase_completion: false
+governance:
+  state_renderer_independent_authority_required: true
+  final_implementation_disposition_gate_inventory:
+    - G-K0B01-HUMAN-SIGNOFF
+    - G-K0B01-TOOLCHAIN
+    - G-K0B01-IMPLEMENTATION-LEDGER
+    - G-K0B01-STATE-RENDERER
+    - G-K0B01-IMPLEMENTATION-DISPOSITION

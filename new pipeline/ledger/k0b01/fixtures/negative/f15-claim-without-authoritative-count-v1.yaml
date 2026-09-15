@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: f15_claim_without_authoritative_count
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: budget_snapshot.f15_size_stress_claim
+  value: true
+expected:
+  result: fail_closed
+  reason: budget:f15_size_claim

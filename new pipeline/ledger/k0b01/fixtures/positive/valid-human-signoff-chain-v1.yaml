@@ -1,0 +1,7 @@
+fixture_version: 2
+scenario: valid_human_signoff_chain
+operation:
+  type: no_change
+expected:
+  result: pass
+  reason: validated_canonical_population

@@ -1,0 +1,383 @@
+request_id: k0b-01-implementation-ledger-format-remediation-resumption-approval-request-v3
+schema_version: 1
+request_type: exact_scope_format_check_failure_remediation_and_validation_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-14"
+
+purpose: >-
+  Request exact-scope authority to remediate only the two Python files reported
+  by the first clean-redo Ruff format check, resume the remaining production-path
+  validation using the three already-created exact temporary targets without
+  further network or bootstrap, create validation evidence v2 only after every
+  required check passes, and remove exactly those three temporary targets.
+  This file is non-authorizing until its unchanged complete-file SHA-256 and
+  every effective scope below are separately confirmed by the workspace owner.
+
+owner_continue_direction:
+  source_ref: current_conversation_owner_message_2026_09_14_continue_after_format_failure
+  exact_text: продолжай
+  interpretation: direction_to_prepare_this_non_authorizing_request_only
+  does_not_itself_authorize_remediation_validation_evidence_or_cleanup: true
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_sequence:
+    - keep_this_complete_request_file_byte_unchanged
+    - present_its_complete_file_SHA_256_to_the_workspace_owner
+    - receive_the_same_lowercase_64_hex_SHA_256_in_a_separate_owner_message
+    - receive_explicit_authorization_of_every_exact_scope_in_this_request
+    - reverify_the_bound_workspace_and_preserved_temp_baseline
+    - only_then_diagnose_patch_validate_record_evidence_and_cleanup
+
+bound_prior_authorities:
+  original_implementation_request:
+    path: new pipeline/requests/k0b-01-implementation-ledger-implementation-validation-approval-request-v1.yaml
+    sha256: 9ded25bc9226bff008f866198025c8f0382353f78b1e18cbf839146ae1268eb9
+    status: exhausted_rejected_result
+    reuse_as_current_authority: forbidden
+  clean_redo_request_v1:
+    path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-approval-request-v1.yaml
+    sha256: 0e83240b88266a57a1a103538b2a8695c14168fb2e053359005a08cf71fae70a
+    status: failed_closed_exhausted
+    reuse_as_current_authority: forbidden
+  clean_redo_resumption_request_v2:
+    path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml
+    sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3
+    confirmation_source: current_conversation_owner_message_2026_09_14_exact_resumption_confirmation
+    confirmation_hash_repeated_exactly: true
+    status: failed_closed_exhausted
+    reuse_as_current_authority: forbidden
+  rejected_validation_v1:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml
+    sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55
+    status_for_future_closure: rejected_by_owner_not_closure_evidence
+
+scope_incorporation:
+  incorporated_request:
+    path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml
+    sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3
+  rule: >-
+    Incorporate every read boundary, active artifact path, schema and validator
+    requirement, production fixture intent, exact 30-test suite, evidence
+    disclosure, state and gate non-effect, and prohibition from the resumption
+    request and its incorporated clean-redo request, except where the effective
+    remediation delta below replaces temp absence, command order, counts, and
+    exact writable paths.
+  explicitly_not_incorporated_as_current_authority:
+    - either_prior_owner_confirmation
+    - either_prior_command_authority
+    - the_prior_temp_targets_must_be_absent_condition
+    - prior_final_untracked_counts
+    - permission_to_rewrite_any_active_file_other_than_the_three_exact_files_below
+    - permission_for_any_new_event_file
+    - permission_for_any_network_or_bootstrap_action
+
+failure_history_to_preserve:
+  resumption_completed_before_failure:
+    - exact_locked_wheelhouse_preparation_passed_with_12_wheels
+    - clean_environment_A_bootstrap_passed_with_12_packages
+    - clean_environment_B_bootstrap_passed_with_12_packages
+    - closed_toolchain_validation_A_passed
+    - closed_toolchain_validation_B_passed
+    - Ruff_lint_A_passed
+    - Ruff_lint_B_passed
+  stopping_check:
+    command_class: Ruff_format_check_A
+    command: >-
+      C:\Users\Administrator\AppData\Local\Temp\2\pipeline-v2-k0b01-ledger-redo-v1-a\Scripts\ruff.exe
+      format --check --isolated --no-cache --
+      "new pipeline\ledger\k0b01\ledger.py"
+      "new pipeline\ledger\k0b01\test_ledger.py"
+    exit_code: 1
+    output:
+      - "Would reformat: new pipeline\\ledger\\k0b01\\ledger.py"
+      - "Would reformat: new pipeline\\ledger\\k0b01\\test_ledger.py"
+      - "2 files would be reformatted"
+    side_effects:
+      workspace_write_by_command: false
+      formatter_write_mode_used: false
+      environment_B_format_check_started: false
+      tests_started: false
+      evidence_v2_created: false
+      cleanup_started: false
+    disposition:
+      - v2_authority_stopped_fail_closed_and_is_exhausted
+      - the_three_exact_temp_targets_were_preserved_for_diagnosis
+      - no_passing_evidence_may_be_claimed_from_that_attempt
+  request_preparation_read_only_error:
+    class: PowerShell_unquoted_git_revision_argument_encoding
+    failing_argument: HEAD^{tree}
+    result: git_rev_parse_exit_nonzero
+    completed_reads_before_stop: [HEAD_only]
+    workspace_temp_network_or_external_write: none
+    corrected_read_only_inventory_result: pass
+    evidence_v2_disclosure_required: true
+    ledger_event_creation_authorized_or_required: false
+
+baseline_after_failed_v2_scope:
+  required_HEAD: 5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+  required_tree: cfd3b85209e68585de1895236d7f087803722baf
+  required_parent: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tracked_changes: 0
+  required_staged_changes: 0
+  required_untracked_file_count_before_this_request: 56
+  required_untracked_file_count_after_this_request_creation: 57
+  pre_request_manifest:
+    path_count: 56
+    algorithm: >-
+      SHA256_of_UTF8_without_BOM_over_ordinal_path_sorted_lines_each_formatted_as
+      forward_slash_path_vertical_bar_lowercase_SHA256_vertical_bar_decimal_bytes_LF
+    root_sha256: cf0a5107b4bab894c1fc9f0e5d506e7885d18df4ec04c1a9a3f9d0719e1b65cd
+  state_yaml:
+    path: new pipeline/state/state.yaml
+    sha256: f345b46b9011e90f36d533718243cf2dcb55d211c0f32fe89fd77072ff40dc1c
+  STATE_md:
+    path: new pipeline/state/STATE.md
+    sha256: 7a0fcb205b28933c476c62a30d78f72aa254114cf27ca6b38c7c097fc10e4105
+  program_status: K0b_01_planning_approved_with_open_implementation_prerequisites
+  registry_work_item_status: planning_approved_implementation_blocked
+  implementation_authority_before_separate_confirmation: none
+  runtime_authority: none
+
+bound_active_artifact_population:
+  path_set: the_exact_52_active_artifact_paths_in_the_incorporated_v2_scope
+  path_count: 52
+  event_count: 26
+  incident_count: 19
+  implementation_invocation_count: 1
+  fixture_count: 22
+  manifest_algorithm: same_as_baseline_after_failed_v2_scope.pre_request_manifest.algorithm
+  current_manifest_root_sha256: acaa4b47ecae3b71a529bfcd6aa526eb771a78c2e7dd1fd3786c920fe06201e3
+  exact_current_remediation_inputs:
+    schema_profile:
+      path: new pipeline/ledger/k0b01/schema-profile-v1.yaml
+      sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a
+      bytes: 6106
+      writable_after_confirmation: false
+    ledger:
+      path: new pipeline/ledger/k0b01/ledger.py
+      sha256: 79e2a4ca83c70dee35e7997768b5f8645cb9b45b6d776ede93bf6579f39df802
+      bytes: 31001
+      writable_after_confirmation: format_remediation_only
+    tests:
+      path: new pipeline/ledger/k0b01/test_ledger.py
+      sha256: 2bd4095ed79f41ba8e32077589d1c9fc1e40238efa84e9e5e331bdfac8c09a28
+      bytes: 11577
+      writable_after_confirmation: format_remediation_only
+    stale_index:
+      path: new pipeline/ledger/k0b01/index-v1.yaml
+      sha256: 5928d65f26ddf60131fc47a61fa99854d9424ce427886b8a08587ea1fa54a432
+      bytes: 8827
+      writable_after_confirmation: deterministic_build_index_materialization_only
+
+preserved_exact_temp_baseline:
+  rule: >-
+    The three targets are intentionally present under the incorporated failure
+    rule. They may be read, their listed outputs may be overwritten by the same
+    command class, and normal descendants required by the resumed checks may be
+    created only below the corresponding environment. No fourth temp target is
+    authorized.
+  wheelhouse:
+    path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-wheelhouse
+    required_present: true
+    wheel_count: 12
+    manifest_algorithm: same_sorted_name_SHA256_bytes_line_algorithm
+    manifest_root_sha256: 0ed05357f92ee55d9c26d096f582de1a943f9ee57cfeb46a12f30abea503cc3c
+    closed_toolchain_wheel_set_sha256: bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba
+  environment_A:
+    path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-a
+    required_present: true
+    toolchain_validation_output_sha256: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e
+    Ruff_lint_output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18
+    failing_Ruff_format_output_sha256: c1673db51aee3ccd9955e111813ebca057a5eabe9a7a11db04cddbb784a18bc1
+  environment_B:
+    path: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-b
+    required_present: true
+    toolchain_validation_output_sha256: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e
+    Ruff_lint_output_sha256: 82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18
+    Ruff_format_output_required_absent_before_confirmation: true
+
+effective_remediation_scope_after_confirmation_only:
+  exact_read_scope:
+    - every_exact_read_path_in_the_incorporated_v2_scope
+    - this_unchanged_request
+    - the_52_bound_active_artifacts
+    - the_existing_descendants_of_the_three_exact_temp_targets
+  exact_workspace_writes:
+    replace_format_only:
+      - new pipeline/ledger/k0b01/ledger.py
+      - new pipeline/ledger/k0b01/test_ledger.py
+    deterministic_index_replacement_only:
+      - new pipeline/ledger/k0b01/index-v1.yaml
+    create_after_every_required_check_passes_only:
+      - new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+    any_other_workspace_write: forbidden
+  format_remediation_method:
+    diagnostic: >-
+      Run Ruff 0.15.1 format --diff with --isolated and --no-cache in environment
+      A against exactly the two Python files and capture the read-only diff below
+      environment A.
+    workspace_edit: apply_the_captured_formatting_diff_manually_with_apply_patch
+    semantic_change_during_format_remediation: forbidden
+    Ruff_format_write_mode: forbidden
+  new_event_file_count: 0
+  network_actions: forbidden
+  bootstrap_actions: forbidden
+  allowed_dependency_source: existing_bound_wheelhouse_only
+  exact_test_count_per_environment: 30
+  test_target: new pipeline/ledger/k0b01/test_ledger.py
+  pytest_requirements:
+    - PYTHONDONTWRITEBYTECODE_equals_1
+    - PYTEST_DISABLE_PLUGIN_AUTOLOAD_equals_1
+    - python_-B_-I
+    - no_cacheprovider
+    - temp_and_TMP_below_the_corresponding_environment
+  repository_adjacent_python_requirements:
+    - use_only_environment_A_or_environment_B_python
+    - PYTHONDONTWRITEBYTECODE_equals_1
+    - python_-B_-I
+  Ruff_requirements:
+    - version_0_15_1_from_the_bound_environment
+    - isolated
+    - no_cache
+    - lint_check_or_format_check_only_except_the_one_explicit_read_only_diff
+
+required_command_classes_after_confirmation_in_order:
+  - read_only_preflight_current_request_HEAD_tree_status_hash_manifest_temp_and_version_checks
+  - closed_toolchain_validation_A_then_B_using_existing_targets
+  - one_read_only_Ruff_format_diff_in_A_for_exactly_two_files
+  - apply_exact_format_only_patch_to_ledger_and_test
+  - Ruff_lint_A_then_B
+  - Ruff_format_check_A_then_B
+  - pytest_exact_test_file_A_then_B_with_exactly_30_collected_and_passed_tests_each
+  - ledger_validate_A_then_B
+  - ledger_build_index_candidate_A_then_B
+  - compare_candidates_and_materialize_exact_workspace_index
+  - ledger_check_index_A_then_B
+  - closed_toolchain_budget_validation_A_then_B
+  - hash_equivalence_all_YAML_parse_workspace_status_state_and_no_cache_checks
+  - create_and_parse_validation_evidence_v2
+  - cleanup_exact_three_temp_targets_after_success_only
+  - final_read_only_status_state_and_temp_absence_checks
+
+exact_temp_outputs_after_confirmation:
+  environment_A:
+    - toolchain-validation-remediation-v3.json
+    - ruff-format-remediation-v3.diff
+    - ruff-check-remediation-v3.txt
+    - ruff-format-check-remediation-v3.txt
+    - pytest-remediation-v3.txt
+    - ledger-validate-remediation-v3.json
+    - index-candidate-remediation-v3.yaml
+    - index-check-remediation-v3.json
+    - budget-validation-remediation-v3.json
+  environment_B:
+    - toolchain-validation-remediation-v3.json
+    - ruff-check-remediation-v3.txt
+    - ruff-format-check-remediation-v3.txt
+    - pytest-remediation-v3.txt
+    - ledger-validate-remediation-v3.json
+    - index-candidate-remediation-v3.yaml
+    - index-check-remediation-v3.json
+    - budget-validation-remediation-v3.json
+
+validation_evidence_v2_requirements:
+  path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+  creation_condition: only_after_every_required_check_passes_in_both_environments
+  must_bind:
+    - this_unchanged_request_and_its_separate_exact_confirmation
+    - all_three_exhausted_prior_requests_and_the_rejected_validation_v1
+    - all_52_final_active_artifact_path_hash_and_byte_count_values
+    - the_closed_toolchain_design_disposition_budget_sources_and_state_projections
+    - all_required_temp_outputs_before_cleanup
+  must_record:
+    - every_command_from_all_attempts_in_execution_order_with_expanded_arguments_and_exit_codes
+    - both_earlier_read_only_command_failures_and_this_request_preparation_read_only_error
+    - the_Ruff_format_check_A_failure_and_owner_visible_fail_closed_stop
+    - the_read_only_Ruff_diff_and_exact_format_only_workspace_patch
+    - all_12_wheel_names_versions_sizes_and_SHA256_values
+    - no_network_or_bootstrap_action_under_this_request
+    - exactly_30_of_30_production_path_tests_passed_in_A_and_B
+    - Ruff_lint_and_format_check_passed_in_A_and_B
+    - validate_build_index_check_index_and_budget_validation_passed_in_A_and_B
+    - normative_outputs_and_index_candidates_byte_identical_between_environments
+    - workspace_index_byte_identical_to_both_candidates
+    - all_YAML_duplicate_key_forbidden_parse_passed
+    - no_workspace___pycache___pyc_Ruff_cache_pytest_cache_or_other_side_effect
+    - gate_closed_false_and_all_open_gate_statuses_unchanged
+    - state_files_unchanged
+    - implementation_authority_after_scope_completion_exhausted
+    - runtime_authority_none
+    - no_F15_phase_completion_CI_or_runtime_completion_claim
+
+required_post_state_if_successful:
+  active_artifact_count: 52
+  event_count: 26
+  incident_count: 19
+  implementation_invocation_count: 1
+  fixture_count: 22
+  new_file_created_by_confirmed_v3_scope: validation_evidence_v2_only
+  required_final_untracked_file_count: 58
+  preserved_governance_file_count_including_this_request: 5
+  G-K0B01-HUMAN-SIGNOFF: remains_closed
+  G-K0B01-TOOLCHAIN: remains_closed
+  G-K0B01-IMPLEMENTATION-LEDGER: remains_open
+  G-K0B01-STATE-RENDERER: remains_open
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  program_status: K0b_01_planning_approved_with_open_implementation_prerequisites
+  registry_work_item_status: planning_approved_implementation_blocked
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+  exact_temp_targets_after_successful_cleanup: absent_3_of_3
+
+failure_behavior:
+  - stop_on_first_preflight_hash_manifest_scope_parse_lint_format_test_validation_or_equivalence_failure
+  - do_not_repair_after_validation_has_started_without_new_exact_authority
+  - do_not_create_or_claim_passing_validation_evidence_v2_after_any_failure
+  - preserve_the_three_exact_temp_targets_for_owner_visible_diagnosis_after_failure
+  - do_not_clean_any_unlisted_workspace_or_temp_path
+
+stale_conditions:
+  - this_request_bytes_or_SHA256_change
+  - any_bound_prior_governance_file_bytes_or_SHA256_change
+  - HEAD_tree_parent_state_hash_status_or_open_gate_values_change
+  - current_workspace_before_confirmation_is_not_exactly_57_untracked_files_with_no_tracked_or_staged_change
+  - the_pre_request_56_path_manifest_plus_this_request_is_not_exact
+  - any_of_the_52_active_artifact_bytes_change_before_confirmation
+  - any_of_the_three_exact_temp_targets_is_absent_or_its_bound_wheel_or_output_baseline_changes
+  - validation_evidence_v2_exists_before_confirmation
+  - owner_confirmation_omits_or_mismatches_this_complete_lowercase_SHA256
+  - owner_confirmation_does_not_explicitly_authorize_the_complete_effective_scope
+  - any_path_command_test_count_dependency_host_write_or_cleanup_target_expands
+
+retained_non_authorizations:
+  - this_request_is_not_authority_until_separate_exact_hash_confirmation
+  - no_reuse_of_any_exhausted_prior_authority
+  - no_gate_closure_or_gate_closure_evidence
+  - no_state_yaml_or_STATE_md_change
+  - no_staging_commit_amend_push_merge_PR_deploy_release_or_remote_write
+  - no_runtime_authority_or_runtime_product_work
+  - no_state_renderer_or_final_implementation_disposition_work
+  - no_new_event_fixture_schema_or_governance_file_after_this_request
+  - no_network_download_upload_or_other_remote_action
+  - no_bootstrap_dependency_install_or_global_or_user_configuration_change
+  - no_Ruff_format_write_mode
+  - no_existing_project_wide_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+  - no_access_to_frozen_K0b01_sources_canonical_fixture_research_old_swarm_projects_swarm_or_unlisted_tests
+  - no_cleanup_outside_the_three_exact_temp_targets
+  - no_F15_phase_completion_CI_execution_or_runtime_completion_claim
+
+requested_owner_confirmation_format: >-
+  I confirm format-remediation resumption approval-request SHA-256
+  <complete-lowercase-64-hex> and authorize exactly its incorporated read scope,
+  reuse without network or bootstrap of the same three preserved temp targets,
+  one read-only Ruff format diff, format-only manual replacement of ledger.py and
+  test_ledger.py, deterministic replacement of index-v1.yaml, two clean-environment
+  validations with exactly 30 production-path tests in each, validation evidence
+  v2 creation, and cleanup of exactly the same three temp targets; with no event,
+  schema, state, gate, staging, commit, runtime authority, network, or other action.
+
+integrity:
+  complete_file_SHA_256: external_until_computed

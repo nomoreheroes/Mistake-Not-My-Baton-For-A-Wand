@@ -1,0 +1,419 @@
+request_id: k0b-01-implementation-ledger-yaml-final-lf-remediation-approval-request-v5
+schema_version: 1
+request_type: exact_scope_yaml_final_lf_and_predecessor_hash_remediation_then_validation
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-14"
+
+purpose: >-
+  Request exact-scope authority to remove exactly one surplus terminal LF byte
+  from the 26 active event files and 22 active production fixture files that
+  caused the first v4 test environment to fail, cascade the resulting five
+  predecessor SHA-256 changes through the six-event human-signoff lifecycle,
+  resume the complete two-environment validation, deterministically replace the
+  index, create validation evidence v2 only after complete success, and clean
+  exactly the same three preserved temporary targets. This request remains
+  non-authorizing until its unchanged complete-file SHA-256 and every effective
+  scope below are separately confirmed by the workspace owner.
+
+owner_continue_direction:
+  source_ref: current_conversation_owner_message_2026_09_14_continue_after_v4_test_failure
+  exact_text: Продолжи
+  interpretation: direction_to_prepare_this_non_authorizing_request_only
+  does_not_itself_authorize_remediation_validation_evidence_or_cleanup: true
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_sequence:
+    - keep_this_complete_request_file_byte_unchanged
+    - present_its_complete_file_SHA_256_to_the_workspace_owner
+    - receive_the_same_lowercase_64_hex_SHA_256_in_a_separate_owner_message
+    - receive_explicit_authorization_of_every_effective_scope_below
+    - reverify_the_bound_workspace_and_preserved_temp_baseline
+    - only_then_normalize_rehash_validate_record_evidence_and_cleanup
+
+bound_prior_authorities:
+  original_implementation_request:
+    path: new pipeline/requests/k0b-01-implementation-ledger-implementation-validation-approval-request-v1.yaml
+    sha256: 9ded25bc9226bff008f866198025c8f0382353f78b1e18cbf839146ae1268eb9
+    status: exhausted_rejected_result
+  clean_redo_request_v1:
+    path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-approval-request-v1.yaml
+    sha256: 0e83240b88266a57a1a103538b2a8695c14168fb2e053359005a08cf71fae70a
+    status: failed_closed_exhausted
+  clean_redo_resumption_v2:
+    path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml
+    sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3
+    status: failed_closed_exhausted
+  format_remediation_v3:
+    path: new pipeline/requests/k0b-01-implementation-ledger-format-remediation-resumption-approval-request-v3.yaml
+    sha256: d934212717c2ef97ca5726f466da6e4e3d082db076a0ca7c75932bef78c47701
+    status: failed_closed_exhausted
+  format_diff_capture_v4:
+    path: new pipeline/requests/k0b-01-implementation-ledger-format-diff-capture-remediation-approval-request-v4.yaml
+    sha256: 730b638106e779d6ef66fd8760dda06e6c0c7bb32c46b5403f6733f5e939d526
+    confirmation_source: current_conversation_owner_message_2026_09_14_exact_format_diff_capture_confirmation
+    confirmation_hash_repeated_exactly: true
+    status: failed_closed_exhausted
+    reuse_as_current_authority: forbidden
+  rejected_validation_v1:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml
+    sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55
+    status_for_future_closure: rejected_by_owner_not_closure_evidence
+
+scope_incorporation:
+  incorporated_request:
+    path: new pipeline/requests/k0b-01-implementation-ledger-format-diff-capture-remediation-approval-request-v4.yaml
+    sha256: 730b638106e779d6ef66fd8760dda06e6c0c7bb32c46b5403f6733f5e939d526
+  rule: >-
+    Incorporate every exact read boundary, retained governance path, active
+    artifact and test requirement, existing temporary target, closed toolchain
+    result, validation command class, evidence disclosure, cleanup target,
+    state and gate non-effect, and prohibition from v4 and its incorporated
+    predecessors, except where the v5 delta below replaces writable artifact
+    paths, completed command classes, output names, counts, and baseline.
+  explicitly_not_incorporated_as_current_authority:
+    - any_prior_owner_confirmation_or_command_authority
+    - the_consumed_v4_diff_capture_and_validation_authority
+    - any_permission_to_modify_ledger_py_or_test_ledger_py
+    - any_network_bootstrap_dependency_or_environment_change
+    - any_new_event_schema_fixture_governance_or_state_file_after_this_request
+    - prior_preconfirmation_and_final_untracked_counts
+
+v4_execution_history:
+  preflight: {result: pass, stale_conditions: none}
+  Ruff_diff_recapture:
+    wrapper: System.Diagnostics.Process_with_separate_stdout_and_stderr
+    native_exit_code: 1
+    expected_diagnostic_exit: true
+    result: pass
+    stdout_diff: {sha256: 69d5ca4a6b13883934d0a439f1e446a94ee666972087eb5360524d03dd5b9be2, bytes: 2179}
+    stderr_summary: {sha256: d7f0fe3d60c4452ccfe3e74c362508020418c25bd55c01472702f4dfbf6694eb, bytes: 29}
+  exact_format_only_patch:
+    files: [new pipeline/ledger/k0b01/ledger.py, new pipeline/ledger/k0b01/test_ledger.py]
+    semantic_change: false
+    result: applied
+  Ruff_lint_A: {result: pass, exit_code: 0}
+  Ruff_lint_B: {result: pass, exit_code: 0}
+  Ruff_format_check_A: {result: pass, exit_code: 0}
+  Ruff_format_check_B: {result: pass, exit_code: 0}
+  stopping_pytest_A:
+    exact_collected_count: 30
+    passed: 2
+    failed: 28
+    exit_code: 1
+    common_root_cause: active_event_and_fixture_YAML_ends_with_two_LF_bytes
+    first_error: broken-predecessor-v1.yaml:final_LF
+    output: {sha256: d9eb66ea7b76ee9a17f413bdd7b18da7bdb0c3be13b0bb7a78eb8ed93b68b7f2, bytes: 47207}
+    disposition:
+      - v4_authority_stopped_fail_closed_and_is_exhausted
+      - pytest_B_and_all_later_command_classes_were_not_started
+      - no_index_or_validation_evidence_v2_was_created
+      - the_three_exact_temp_targets_were_preserved
+      - no_state_gate_staging_commit_runtime_or_network_effect_occurred
+
+current_workspace_baseline:
+  required_HEAD: 5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+  required_tree: cfd3b85209e68585de1895236d7f087803722baf
+  required_parent: c94fd60fce89ee5888b44839792cf2de52694014
+  required_tracked_changes: 0
+  required_staged_changes: 0
+  required_untracked_file_count_before_this_request: 58
+  required_untracked_file_count_after_this_request_creation: 59
+  pre_request_manifest:
+    path_count: 58
+    algorithm: >-
+      SHA256_of_UTF8_without_BOM_over_ordinal_path_sorted_lines_each_formatted_as
+      forward_slash_path_vertical_bar_lowercase_SHA256_vertical_bar_decimal_bytes_LF
+    root_sha256: 10a80c4c2f7fee0c675a1885cab4bd49a85e9fc30a283ca8436254b6a9cecb4f
+  active_artifact_manifest:
+    path_count: 52
+    root_sha256: 981110f6772eac5ff768c392eceba4ab6f8c7467f1162a52e1f395f05635791c
+  immutable_active_inputs:
+    schema_profile: {path: new pipeline/ledger/k0b01/schema-profile-v1.yaml, sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a, bytes: 6106}
+    ledger: {path: new pipeline/ledger/k0b01/ledger.py, sha256: e6e5e1b6f66dd8fddacaf54865d5e82e33b293d970fee4352ad36b1cd0ea4a5c, bytes: 30965}
+    tests: {path: new pipeline/ledger/k0b01/test_ledger.py, sha256: efc2502f34d67921b893be18a2fb0fde48f21c9cffc353caeca56832417a2434, bytes: 11587}
+    stale_index: {path: new pipeline/ledger/k0b01/index-v1.yaml, sha256: 5928d65f26ddf60131fc47a61fa99854d9424ce427886b8a08587ea1fa54a432, bytes: 8827}
+  state_yaml: {path: new pipeline/state/state.yaml, sha256: f345b46b9011e90f36d533718243cf2dcb55d211c0f32fe89fd77072ff40dc1c}
+  STATE_md: {path: new pipeline/state/STATE.md, sha256: 7a0fcb205b28933c476c62a30d78f72aa254114cf27ca6b38c7c097fc10e4105}
+  program_status: K0b_01_planning_approved_with_open_implementation_prerequisites
+  registry_work_item_status: planning_approved_implementation_blocked
+  implementation_authority_before_separate_confirmation: none
+  runtime_authority: none
+
+exact_48_file_remediation_set:
+  events:
+    - new pipeline/ledger/k0b01/events/0001-human-signoff-declared-v1.yaml
+    - new pipeline/ledger/k0b01/events/0002-human-signoff-authorized-v1.yaml
+    - new pipeline/ledger/k0b01/events/0003-human-signoff-materialized-v1.yaml
+    - new pipeline/ledger/k0b01/events/0004-human-signoff-validated-v1.yaml
+    - new pipeline/ledger/k0b01/events/0005-human-signoff-committed-v1.yaml
+    - new pipeline/ledger/k0b01/events/0006-human-signoff-credited-v1.yaml
+    - new pipeline/ledger/k0b01/events/1001-incident-readonly-import-inventory-v1.yaml
+    - new pipeline/ledger/k0b01/events/1002-incident-pip-temp-initial-v1.yaml
+    - new pipeline/ledger/k0b01/events/1003-incident-pip-remediation-v1-v1.yaml
+    - new pipeline/ledger/k0b01/events/1004-incident-pip-remediation-v2-v1.yaml
+    - new pipeline/ledger/k0b01/events/1005-incident-pip-remediation-v3-v1.yaml
+    - new pipeline/ledger/k0b01/events/1006-incident-external-patch-target-v1.yaml
+    - new pipeline/ledger/k0b01/events/1007-incident-wheelhouse-loss-v1.yaml
+    - new pipeline/ledger/k0b01/events/1008-incident-bootstrap-a-quoting-v1.yaml
+    - new pipeline/ledger/k0b01/events/1009-incident-closure-preflight-gaps-v1.yaml
+    - new pipeline/ledger/k0b01/events/1010-incident-ledger-ruff-argument-typo-v1.yaml
+    - new pipeline/ledger/k0b01/events/1011-incident-ledger-ruff-format-write-v1.yaml
+    - new pipeline/ledger/k0b01/events/1012-incident-ledger-parser-state-defect-v1.yaml
+    - new pipeline/ledger/k0b01/events/1013-incident-ledger-scanner-compatibility-v1.yaml
+    - new pipeline/ledger/k0b01/events/1014-incident-ledger-read-allowlist-omission-v1.yaml
+    - new pipeline/ledger/k0b01/events/1015-incident-ledger-first-complete-test-failures-v1.yaml
+    - new pipeline/ledger/k0b01/events/1016-incident-ledger-environment-b-target-typo-v1.yaml
+    - new pipeline/ledger/k0b01/events/1017-incident-ledger-workspace-pycache-v1.yaml
+    - new pipeline/ledger/k0b01/events/1018-incident-ledger-preflight-state-key-assumption-v1.yaml
+    - new pipeline/ledger/k0b01/events/1019-incident-ledger-hash-display-regex-v1.yaml
+    - new pipeline/ledger/k0b01/events/2001-implementation-ledger-invocation-v1.yaml
+  negative_fixtures:
+    - new pipeline/ledger/k0b01/fixtures/negative/broken-predecessor-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/budget-input-change-without-stale-zero-credit-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/committed-implies-runtime-authority-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/credited-with-ambiguous-evidence-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/credited-with-missing-evidence-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/dependency-sha-mismatch-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/duplicate-event-id-ambiguous-reference-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/event-replacement-mutation-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/f15-claim-without-authoritative-count-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/invalid-phase-order-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/materialized-without-exact-authority-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/missing-required-budget-fields-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/phase-gap-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/phase-overlap-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/predecessor-sha-mismatch-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/self-authorization-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/skipped-required-state-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/unbound-hard-budget-inputs-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/negative/unknown-entity-v1.yaml
+  positive_fixtures:
+    - new pipeline/ledger/k0b01/fixtures/positive/valid-budget-provenance-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/positive/valid-human-signoff-chain-v1.yaml
+    - new pipeline/ledger/k0b01/fixtures/positive/valid-rejected-superseded-stale-v1.yaml
+  exact_count: 48
+  precondition_for_every_file:
+    - UTF8_without_BOM
+    - no_CR_byte
+    - final_three_bytes_match_non_LF_then_LF_then_LF
+  prohibited_paths:
+    - new pipeline/ledger/k0b01/schema-profile-v1.yaml
+    - new pipeline/ledger/k0b01/index-v1.yaml_until_deterministic_build_step
+    - new pipeline/ledger/k0b01/ledger.py
+    - new pipeline/ledger/k0b01/test_ledger.py
+
+authorized_remediation_after_confirmation_only:
+  mechanical_final_LF_normalization:
+    exact_operation: remove_the_last_byte_only_from_each_exact_48_file_when_it_is_the_second_terminal_LF
+    execution_count: once_per_file
+    resulting_ending: exactly_one_LF_and_no_CR_or_BOM
+    any_other_byte_change_in_this_step: forbidden
+  human_lifecycle_predecessor_rehash:
+    exact_order: [0001, 0002, 0003, 0004, 0005, 0006]
+    exact_reference_updates:
+      - child: new pipeline/ledger/k0b01/events/0002-human-signoff-authorized-v1.yaml
+        predecessor: new pipeline/ledger/k0b01/events/0001-human-signoff-declared-v1.yaml
+        old_sha256: 60914f07551f1533310195f0d045e6d98f2e329e63ed067a3d3dfae3ab4763bb
+        new_sha256: 03dfaee252a649fbc3d3721d04967ab546ba96e5b18912d3cc0398fcdd814a81
+      - child: new pipeline/ledger/k0b01/events/0003-human-signoff-materialized-v1.yaml
+        predecessor: new pipeline/ledger/k0b01/events/0002-human-signoff-authorized-v1.yaml
+        old_sha256: 59f78c085e15598d4d50c3fedf403fa3c6eca04ef620f0e1d638e196b16d6d92
+        new_sha256: 540b78478de52c61a5daba603c825221a953b9e97d06c19460b81e232e2a4b31
+      - child: new pipeline/ledger/k0b01/events/0004-human-signoff-validated-v1.yaml
+        predecessor: new pipeline/ledger/k0b01/events/0003-human-signoff-materialized-v1.yaml
+        old_sha256: 92c59ccfa14a2de850854f6647177ee6211f839afe364bc38ce339826aa9f658
+        new_sha256: 39350d48ea7fd684a2578b79c664ea8c7bc7206ba575e7323b9c93803a611095
+      - child: new pipeline/ledger/k0b01/events/0005-human-signoff-committed-v1.yaml
+        predecessor: new pipeline/ledger/k0b01/events/0004-human-signoff-validated-v1.yaml
+        old_sha256: 97619ff6905f7416db915f933a8c6d21d9d58f53db2c8d7020567e78f69ec46e
+        new_sha256: 346512df5f6f4412fbc14dc33173502616d5f6b745bb123925e817e21a8eae60
+      - child: new pipeline/ledger/k0b01/events/0006-human-signoff-credited-v1.yaml
+        predecessor: new pipeline/ledger/k0b01/events/0005-human-signoff-committed-v1.yaml
+        old_sha256: 69438d93f02cec2c999608cbaeb654d08ba915b565f6d0b1475f915a141f2e1a
+        new_sha256: 7de8d31b6801e3eb4ebc6617b2b94ec7839fa1957413626051202c4168853371
+    exact_final_human_chain_hashes:
+      0001: 03dfaee252a649fbc3d3721d04967ab546ba96e5b18912d3cc0398fcdd814a81
+      0002: 540b78478de52c61a5daba603c825221a953b9e97d06c19460b81e232e2a4b31
+      0003: 39350d48ea7fd684a2578b79c664ea8c7bc7206ba575e7323b9c93803a611095
+      0004: 346512df5f6f4412fbc14dc33173502616d5f6b745bb123925e817e21a8eae60
+      0005: 7de8d31b6801e3eb4ebc6617b2b94ec7839fa1957413626051202c4168853371
+      0006: 518a9592d4006ba7f717a07d6cd2129629f6427095cbfd91af16f9dd90e49dd6
+  exact_48_file_post_remediation_manifest:
+    algorithm: same_path_SHA256_bytes_manifest_algorithm_as_current_workspace_baseline
+    root_sha256: a86f9859da81477c217f1876eae4757cd09458c39eae2e105e3eaf6c9c0d23da
+  any_other_workspace_write_before_index_or_evidence: forbidden
+
+preserved_temp_scope:
+  exact_targets:
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-wheelhouse
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-a
+    - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-b
+  reuse_without_network_bootstrap_or_dependency_change: true
+  wheel_count: 12
+  wheel_manifest_root_sha256: 0ed05357f92ee55d9c26d096f582de1a943f9ee57cfeb46a12f30abea503cc3c
+  toolchain_validation_A_and_B_output_sha256: a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e
+  failure_rule: preserve_all_three_exact_targets_for_owner_visible_diagnosis
+  success_cleanup_rule: recursively_remove_exactly_all_three_targets_after_evidence_capture
+
+required_command_classes_after_confirmation_in_order:
+  - read_only_preflight_request_workspace_48_file_manifest_temp_hash_and_absence_checks
+  - remove_exactly_one_surplus_terminal_LF_from_each_of_the_48_exact_files
+  - update_exactly_five_human_lifecycle_predecessor_SHA256_values_in_order
+  - verify_exact_48_file_post_remediation_manifest_and_single_final_LF_contract
+  - Ruff_lint_A_then_B_with_check_isolated_no_cache
+  - Ruff_format_check_A_then_B_with_check_isolated_no_cache
+  - pytest_exact_test_file_A_then_B_with_exactly_30_collected_and_passed_tests_each
+  - ledger_validate_A_then_B
+  - ledger_build_index_candidate_A_then_B
+  - compare_candidates_and_materialize_exact_workspace_index
+  - ledger_check_index_A_then_B
+  - closed_toolchain_budget_validation_A_then_B
+  - hash_equivalence_all_YAML_duplicate_key_parse_workspace_status_state_and_no_cache_checks
+  - create_and_parse_validation_evidence_v2
+  - cleanup_exact_three_temp_targets_after_success_only
+  - final_read_only_status_state_and_temp_absence_checks
+
+execution_policy:
+  Python:
+    allowed_executables:
+      - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-a/Scripts/python.exe
+      - C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-ledger-redo-v1-b/Scripts/python.exe
+    required_flags: [-B, -I]
+    required_environment: {PYTHONDONTWRITEBYTECODE: "1"}
+  pytest:
+    exact_test_file: new pipeline/ledger/k0b01/test_ledger.py
+    exact_test_count_each_environment: 30
+    required_environment: {PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"}
+    required_option: -p no:cacheprovider
+  Ruff:
+    version: 0.15.1
+    common_options: [--isolated, --no-cache]
+    format_write_mode: forbidden
+  TEMP_and_TMP: below_the_corresponding_exact_environment_for_every_child_process
+
+exact_new_temp_outputs:
+  environment_A:
+    - ruff-check-remediation-v5.txt
+    - ruff-format-check-remediation-v5.txt
+    - pytest-remediation-v5.txt
+    - ledger-validate-remediation-v5.json
+    - index-candidate-remediation-v5.yaml
+    - index-check-remediation-v5.json
+    - budget-validation-remediation-v5.json
+  environment_B:
+    - ruff-check-remediation-v5.txt
+    - ruff-format-check-remediation-v5.txt
+    - pytest-remediation-v5.txt
+    - ledger-validate-remediation-v5.json
+    - index-candidate-remediation-v5.yaml
+    - index-check-remediation-v5.json
+    - budget-validation-remediation-v5.json
+
+exact_remaining_workspace_writes_after_normalization:
+  deterministic_index_replacement:
+    path: new pipeline/ledger/k0b01/index-v1.yaml
+    source: byte_identical_environment_A_and_B_index_candidates_only
+  validation_evidence_v2_creation:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+    condition: every_required_check_passed
+  any_other_workspace_write: forbidden
+
+validation_evidence_v2_requirements:
+  must_bind:
+    - this_unchanged_request_and_separate_exact_confirmation
+    - all_five_exhausted_prior_requests_and_rejected_validation_v1
+    - all_52_final_active_artifact_path_hash_and_byte_count_values
+    - the_48_file_normalization_and_human_predecessor_rehash_manifest
+    - closed_toolchain_design_budget_sources_state_projections_and_temp_outputs
+  must_disclose:
+    - every_command_attempt_in_execution_order_with_fully_expanded_arguments_and_exit_codes
+    - all_prior_read_only_checker_wrapper_request_preparation_format_and_test_failures
+    - v4_exact_2_passed_28_failed_test_result_and_root_cause
+    - exact_48_file_one_byte_normalization_and_five_predecessor_hash_updates
+    - all_12_wheel_names_versions_sizes_and_SHA256_values
+    - no_network_bootstrap_dependency_or_environment_change_under_v3_v4_or_v5
+  required_results:
+    - exactly_30_of_30_production_path_tests_passed_in_A
+    - exactly_30_of_30_production_path_tests_passed_in_B
+    - Ruff_lint_and_format_check_passed_in_A_and_B
+    - ledger_validate_build_index_check_index_and_budget_validation_passed_in_A_and_B
+    - normative_outputs_and_index_candidates_byte_identical_between_environments
+    - workspace_index_byte_identical_to_both_candidates
+    - every_active_YAML_parses_with_duplicate_keys_forbidden_and_exactly_one_final_LF
+    - no_workspace_cache_or_other_unapproved_side_effect
+    - gate_closed_false_and_state_files_unchanged
+    - implementation_authority_after_scope_completion_exhausted
+    - runtime_authority_none
+    - no_F15_phase_completion_CI_or_runtime_completion_claim
+
+success_post_state:
+  active_artifact_count: 52
+  event_count: 26
+  incident_count: 19
+  fixture_count: 22
+  required_final_untracked_file_count: 60
+  preserved_governance_file_count_including_this_request: 7
+  exact_temp_targets_after_cleanup: absent_3_of_3
+  G-K0B01-HUMAN-SIGNOFF: remains_closed
+  G-K0B01-TOOLCHAIN: remains_closed
+  G-K0B01-IMPLEMENTATION-LEDGER: remains_open
+  G-K0B01-STATE-RENDERER: remains_open
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  program_status: K0b_01_planning_approved_with_open_implementation_prerequisites
+  registry_work_item_status: planning_approved_implementation_blocked
+  implementation_authority_after_scope_completion: exhausted
+  runtime_authority: none
+
+failure_behavior:
+  - stop_on_first_actual_stale_scope_parse_normalization_rehash_lint_format_test_validation_or_equivalence_failure
+  - do_not_repair_after_normative_validation_starts_without_new_exact_authority
+  - do_not_create_or_claim_passing_validation_evidence_v2_after_any_failure
+  - preserve_the_three_exact_temp_targets_after_failure
+  - do_not_clean_any_unlisted_workspace_or_temp_path
+
+stale_conditions:
+  - this_request_bytes_or_SHA256_change
+  - any_bound_governance_file_bytes_or_SHA256_change
+  - HEAD_tree_parent_state_status_or_gate_values_change
+  - workspace_before_confirmation_is_not_exactly_59_untracked_files_with_no_tracked_or_staged_change
+  - the_pre_request_58_path_manifest_plus_this_request_is_not_exact
+  - any_of_the_52_active_artifact_bytes_change_before_confirmation
+  - the_exact_48_file_scan_no_longer_reports_exactly_two_terminal_LF_bytes_each
+  - any_exact_temp_target_or_bound_wheel_toolchain_output_state_changes
+  - any_v5_temp_output_or_validation_evidence_v2_exists_before_confirmation
+  - owner_confirmation_hash_or_effective_scope_is_incomplete
+  - any_path_command_count_host_write_cleanup_or_side_effect_expands
+
+retained_non_authorizations:
+  - no_authority_before_separate_exact_hash_confirmation
+  - no_reuse_of_any_exhausted_prior_authority
+  - no_new_event_schema_fixture_governance_or_state_file_after_this_request
+  - no_change_to_ledger_py_or_test_ledger_py
+  - no_gate_closure_or_gate_closure_evidence
+  - no_staging_commit_amend_push_merge_PR_deploy_release_or_remote_write
+  - no_runtime_authority_or_runtime_product_work
+  - no_network_bootstrap_dependency_environment_or_configuration_change
+  - no_Ruff_format_write_mode
+  - no_project_wide_or_unlisted_test_collection
+  - no_model_API_subagent_independent_review_or_physical_model_call
+  - no_access_to_frozen_K0b01_sources_canonical_fixture_research_old_swarm_projects_swarm_or_unlisted_tests
+  - no_cleanup_outside_the_three_exact_temp_targets
+  - no_F15_phase_completion_CI_execution_or_runtime_completion_claim
+
+requested_owner_confirmation_format: >-
+  I confirm YAML-final-LF remediation approval-request SHA-256
+  <complete-lowercase-64-hex> and authorize exactly its incorporated read scope,
+  removal of one surplus final LF from the 48 exact event and fixture files,
+  the five exact human-lifecycle predecessor SHA-256 updates, reuse without
+  network or bootstrap of the same three preserved temp targets, validation in
+  both environments with exactly 30 production-path tests in each,
+  deterministic replacement of index-v1.yaml, validation evidence v2 creation,
+  and exact cleanup of those three temp targets; with no change to schema,
+  ledger.py, test_ledger.py, state or gates, no new event, fixture or governance
+  file, no staging, commit, runtime authority, network, Ruff write mode, or any
+  other action.
+
+integrity:
+  complete_file_SHA_256: external_until_computed

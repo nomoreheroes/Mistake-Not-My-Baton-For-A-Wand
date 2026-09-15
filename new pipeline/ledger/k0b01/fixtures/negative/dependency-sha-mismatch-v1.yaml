@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: dependency_sha_mismatch
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: dependencies.0.sha256
+  value: "0000000000000000000000000000000000000000000000000000000000000000"
+expected:
+  result: fail_closed
+  reason: event:dependencies:0:sha256_mismatch

@@ -1,0 +1,234 @@
+evidence_id: k0b-01-implementation-ledger-gate-closure-v1
+schema_version: 1
+created_on: "2026-09-15"
+status: closes_on_authorized_containing_commit
+work_item: K0b-01
+gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+
+authority:
+  effective_request:
+    path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2.yaml
+    complete_file_sha256: bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675
+    bytes: 8766
+  owner_confirmation:
+    source_ref: current_conversation_owner_message_2026_09_15_exact_v2_confirmation
+    repeated_sha256: bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675
+    exact_match: true
+    complete_inherited_scope_authorized: true
+    one_directional_hash_graph_authorized: true
+    exact_commit_path_count: 69
+  confirmation_protocol:
+    path: new pipeline/registry/authority-confirmation/v1.yaml
+    sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+
+rejected_preflight_request:
+  path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+  complete_file_sha256: 3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92
+  bytes: 17045
+  owner_confirmation_exact_match: true
+  disposition: rejected_at_pre_write_preflight_zero_closure_credit
+  blocking_defect: impossible_mutual_complete_file_SHA_256_cycle_between_closure_record_and_final_state_projections
+  workspace_writes_state_changes_staging_or_commit_before_stop: none
+  preserved_unchanged: true
+
+baseline:
+  HEAD: 5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+  tree: cfd3b85209e68585de1895236d7f087803722baf
+  parent: c94fd60fce89ee5888b44839792cf2de52694014
+  tracked_changes_before_closure: 0
+  staged_changes_before_closure: 0
+  untracked_files_before_v1_request: 64
+  untracked_files_before_v2_request: 65
+  untracked_files_after_v2_request: 66
+  pre_transition_state_yaml: {path: new pipeline/state/state.yaml, sha256: f345b46b9011e90f36d533718243cf2dcb55d211c0f32fe89fd77072ff40dc1c}
+  pre_transition_STATE_md: {path: new pipeline/state/STATE.md, sha256: 7a0fcb205b28933c476c62a30d78f72aa254114cf27ca6b38c7c097fc10e4105}
+  pre_transition_gate_status: open_blocking
+  pre_transition_K0b_01_open_prerequisites: 3
+  implementation_authority: none
+  runtime_authority: none
+
+design_basis:
+  planning_package: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  ledger_design_disposition: {path: new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml, sha256: 4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387}
+  closed_toolchain_manifest: {path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json, sha256: 3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0}
+  closed_toolchain_evidence: {path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml, sha256: 060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212}
+  state_projection_profile: {path: new pipeline/state/state-projection-profile-v1.yaml, sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d}
+
+implementation_manifest:
+  root: new pipeline/ledger/k0b01
+  path_count: 52
+  root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff
+  algorithm: SHA256_over_ordinal_path_sorted_forward_path_pipe_sha256_pipe_decimal_bytes_LF_lines
+  full_file_manifest_source:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+    section: active_artifact_manifest
+  components:
+    event_files: 26
+    fixture_files: 22
+    schema_files: 1
+    implementation_files: 1
+    test_files: 1
+    generated_index_files: 1
+  unchanged_during_closure_scope: true
+  deterministic_index:
+    path: new pipeline/ledger/k0b01/index-v1.yaml
+    sha256: ea85c5ddd0eccfcb10f3d5bccdd51b9ef95c73f0ca29faa8a811b03fed33946a
+    authoritative: false
+
+validation_evidence:
+  rejected_v1:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml
+    sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55
+    bytes: 18175
+    closure_credit: 0
+    preserved_unchanged: true
+  accepted_v2:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+    sha256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d
+    bytes: 33211
+    status: validation_pass_scope_complete_gate_unchanged
+    active_manifest_root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff
+    validation_results:
+      Ruff_A: pass
+      Ruff_B: pass
+      production_path_tests_A: 30_of_30_passed
+      production_path_tests_B: 30_of_30_passed
+      ledger_validate_A: pass
+      ledger_validate_B: pass
+      index_A: pass
+      index_B: pass
+      index_workspace_byte_identity: pass
+      budget_A: pass
+      budget_B: pass
+      scoped_invariants_A: pass
+      scoped_invariants_B: pass
+    reused_without_rerun: true
+
+closure_checklist:
+  exact_hash_bound_physical_authority: pass
+  immutable_event_format_exists: pass
+  schema_profile_exists: pass
+  validator_exists: pass
+  deterministic_non_authoritative_index_builder_exists: pass
+  lifecycle_transition_order_enforced: pass
+  self_authorization_forbidden: pass
+  exact_materialization_authority_required: pass
+  dependency_and_predecessor_hashes_enforced: pass
+  missing_or_ambiguous_evidence_zero_credit: pass
+  rejected_superseded_and_stale_states_supported: pass
+  committed_does_not_imply_runtime_authority: pass
+  budget_snapshot_and_field_level_provenance_required: pass
+  budget_input_change_propagates_stale_and_zero_credit: pass
+  F15_claims_fail_closed_without_authoritative_worst_case_count: pass
+  positive_and_negative_fixtures_pass: pass
+  historical_incident_records_exist: pass_19
+  complete_two_environment_validation_exists: pass
+  closure_record_binds_authority_implementation_and_evidence: pass
+
+historical_incident_accounting:
+  event_id_range: 1001_through_1019
+  record_count: 19
+  disposition: disclosed_without_reclassification
+  closure_credit: 0
+
+one_directional_state_transition_contract:
+  hash_graph:
+    - closure_record_binds_pre_transition_state_hashes_and_exact_transition_contract
+    - final_state_yaml_binds_this_closure_record_complete_file_hash
+    - final_STATE_md_binds_final_state_yaml_complete_file_hash
+  closure_record_embeds_final_state_hashes: false
+  containing_commit_SHA_self_embedding: forbidden
+  fixed_generated_at: "2026-09-15T17:03:18.7002452+03:00"
+  state_yaml_delta:
+    - remove_G_K0B01_IMPLEMENTATION_LEDGER_from_K0b_01_open_gate_ids
+    - remove_only_G_K0B01_IMPLEMENTATION_LEDGER_from_open_gates
+    - add_G_K0B01_IMPLEMENTATION_LEDGER_to_closed_gates_with_exact_bindings
+    - set_K0b_01_remaining_open_prerequisites_from_3_to_2
+  STATE_md_delta:
+    - update_machine_source_hash_to_final_state_yaml_hash
+    - remove_only_ledger_gate_from_K0b_01_row_and_open_gate_table
+    - add_ledger_gate_to_closed_gate_section_with_exact_bindings
+    - report_two_K0b_01_prerequisites_remaining
+  state_after_authorized_containing_commit:
+    G-K0B01-HUMAN-SIGNOFF: closed
+    G-K0B01-TOOLCHAIN: closed
+    G-K0B01-IMPLEMENTATION-LEDGER: closed
+    G-K0B01-STATE-RENDERER: open_blocking
+    G-K0B01-IMPLEMENTATION-DISPOSITION: open_blocking_must_close_last
+    K0b_01_status: planning_approved_implementation_blocked
+    remaining_K0b_01_open_prerequisites: 2
+    implementation_authority: none
+    runtime_authority: none
+
+process_attempt_disclosure:
+  - sequence: 1
+    operation: v1_request_baseline_capture
+    issue: PowerShell_interpreted_unquoted_HEAD_tree_revision
+    correction: pass_HEAD_tree_as_literal_argument
+    workspace_effect: none
+  - sequence: 2
+    operation: v1_request_manifest_root_capture
+    issue: host_PowerShell_dotNET_lacked_static_SHA256_HashData
+    correction: use_compatible_SHA256_Create_ComputeHash
+    workspace_effect: none
+  - sequence: 3
+    operation: v1_request_YAML_parse
+    issue: exact_read_scope_list_and_mapping_indentation_conflict
+    correction: add_paths_mapping_key_without_scope_change
+    workspace_effect: v1_request_only_before_owner_confirmation
+  - sequence: 4
+    operation: confirmed_v1_pre_write_preflight
+    issue: impossible_mutual_complete_file_SHA_256_cycle
+    correction: stop_fail_closed_and_prepare_exact_v2
+    workspace_effect: none
+  - sequence: 5
+    operation: v2_request_materialization_and_parse
+    result: pass
+    workspace_effect: v2_request_only_before_owner_confirmation
+  - sequence: 6
+    operation: confirmed_v2_baseline_preflight
+    result: pass
+    workspace_effect: none
+  - sequence: 7
+    operation: pre_stage_projection_check_attempt_1
+    issue: PowerShell_consumed_Markdown_backticks_inside_python_c_assertion_strings
+    result: false_negative_assertions_for_machine_source_and_closed_gate_text
+    workspace_effect: none
+  - sequence: 8
+    operation: pre_stage_projection_check_attempt_2
+    correction: construct_Markdown_backtick_with_chr_96_without_changing_checked_semantics
+    result: pass
+    workspace_effect: none
+
+commit_contract:
+  exact_path_count: 69
+  path_components:
+    active_ledger_files: 52
+    preexisting_governance_history_files: 12
+    rejected_v1_request: 1
+    effective_v2_request: 1
+    this_closure_record: 1
+    state_projections: 2
+  commit_message: "feat(pipeline-v2): establish K0b-01 implementation ledger prerequisite"
+  trailers:
+    Approval-Request-SHA256: bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675
+    Validation-Evidence-SHA256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d
+    Gate-Closure-Evidence-SHA256: external_after_materialization
+  gate_closed_before_commit: false
+  gate_closes_on_authorized_containing_commit: true
+  push_PR_merge_deploy_release_or_remote_write: false
+
+non_effects:
+  active_ledger_files_modified: 0
+  validation_rerun: false
+  Ruff_pytest_ledger_index_or_budget_rerun: false
+  network_bootstrap_dependency_or_temp_target_use: false
+  state_renderer_materialization_or_gate_closure: false
+  implementation_disposition: false
+  runtime_or_implementation_authority: none
+  other_gate_closure: false
+  model_API_or_physical_model_call: false
+  push_PR_merge_deploy_release_or_remote_write: false
+
+integrity:
+  complete_file_sha256: external_post_materialization

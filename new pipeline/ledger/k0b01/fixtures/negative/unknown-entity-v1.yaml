@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: unknown_entity
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: unit_id
+  value: UNKNOWN-UNIT
+expected:
+  result: fail_closed
+  reason: event:unknown_unit

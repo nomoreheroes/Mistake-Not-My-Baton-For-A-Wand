@@ -1,7 +1,7 @@
 state_id: pipeline-v2-program-state
 schema_version: 1
 projection_version: "1.0.0"
-generated_at: "2026-09-10T17:58:32.5081137+03:00"
+generated_at: "2026-09-15T17:03:18.7002452+03:00"
 status: K0b_01_planning_approved_with_open_implementation_prerequisites
 
 projection_profile:
@@ -143,7 +143,6 @@ work_items:
     authority_sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
     open_gate_ids:
       - G-K0B01-IMPLEMENTATION-DISPOSITION
-      - G-K0B01-IMPLEMENTATION-LEDGER
       - G-K0B01-STATE-RENDERER
   - sequence: 12
     work_item_id: K0b-02
@@ -182,11 +181,6 @@ open_gates:
     status: open_blocking
     blocks: [K0b-01_implementation]
     closure_condition: later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets
-  - gate_id: G-K0B01-IMPLEMENTATION-LEDGER
-    owner: Pipeline_governance
-    status: open_blocking
-    blocks: [K0b-01_implementation]
-    closure_condition: separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist
   - gate_id: G-K0B01-STATE-RENDERER
     owner: Pipeline_governance
     status: open_blocking
@@ -253,6 +247,16 @@ closed_gates:
       historical_validation: {path: new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml, sha256: 389c9b0b70f58e435ffc57cb88dd40c012116f8cae43489e2b78d856b896cc5e}
       complete_validation: {path: new pipeline/evidence/k0b-01-toolchain-validation-v2.yaml, sha256: cf48abf5b24c8e21a74d3d90da982611c8246060a2bc4e79e9cdb4a62316336b, environments: 2, tests_per_environment: 17}
       gate_closure: {path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml, sha256: 060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212}
+  - gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    status: closed
+    closure_evidence:
+      approval_request: {path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2.yaml, sha256: bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675}
+      rejected_preflight_request: {path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml, sha256: 3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92, closure_credit: 0}
+      design: {path: new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml, sha256: 4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387}
+      active_manifest: {root: new pipeline/ledger/k0b01, path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+      rejected_validation: {path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml, sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55, closure_credit: 0}
+      complete_validation: {path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml, sha256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d, environments: 2, tests_per_environment: 30}
+      gate_closure: {path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml, sha256: cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f}
   - gate_id: G-D0-CANONICAL-HASH-PROFILE-VERIFIER
     status: closed
     closure_evidence:
@@ -310,7 +314,7 @@ scope:
   K0b_01_human_signoff_status: complete_approve_with_five_non_blocking_findings
   K0b_01_human_signoff_carry_forward_ids: [K0B01-HR-NB01, K0B01-HR-NB02, K0B01-HR-NB03, K0B01-HR-NB04, K0B01-HR-NB05]
   K0b_01_toolchain_status: complete_local_two_environment_validation_CI_not_claimed
-  K0b_01_remaining_open_prerequisites: 3
+  K0b_01_remaining_open_prerequisites: 2
   K0b_B02_status: complete
   canonical_payload_verification_status: active_machine_verified
   canonical_payload_historical_claims_status: 6_primary_and_4_derivative_matches_with_zero_discrepancies

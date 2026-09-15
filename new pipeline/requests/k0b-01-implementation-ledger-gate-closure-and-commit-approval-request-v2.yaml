@@ -1,0 +1,184 @@
+request_id: k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2
+schema_version: 1
+request_type: exact_scope_hash_cycle_correction_and_resumption
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-15"
+
+purpose: >-
+  Correct the impossible mutual complete-file SHA-256 dependency in the
+  confirmed v1 closure request, preserve v1 unchanged as rejected preflight
+  history, and resume the complete v1 gate-closure, state-reconciliation, and
+  single-commit scope with a one-directional hash graph. This request is
+  non-authorizing until its exact complete-file SHA-256 is separately repeated
+  and its complete included scope is explicitly authorized by the workspace
+  owner.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_confirmation:
+    - repeat_this_request_complete_file_SHA_256_exactly
+    - explicitly_authorize_the_complete_scope_inherited_from_v1_and_the_exact_v2_delta
+    - abbreviated_hash_yes_ok_or_continue_is_insufficient
+
+owner_direction_to_prepare_this_correction:
+  source_ref: current_conversation_owner_message_2026_09_15_yes_to_short_v2_request
+  authorized_action_completed_by_materializing_this_file_only: true
+  closure_state_staging_and_commit_authority_before_v2_hash_confirmation: none
+
+confirmed_but_failed_closed_v1:
+  path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+  complete_file_sha256: 3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92
+  bytes: 17045
+  owner_confirmation:
+    source_ref: current_conversation_owner_message_2026_09_15_exact_v1_confirmation
+    repeated_sha256: 3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92
+    exact_match: true
+  preflight_results:
+    baseline_HEAD_tree_state_and_validation_v2: pass
+    exact_52_active_manifest: pass
+    exact_64_preexisting_untracked_manifest: pass
+    writes_state_changes_staging_or_commit_before_stop: none
+  blocking_defect:
+    v1_closure_record_requirement: bind_exact_final_state_projection_hashes
+    v1_state_requirement: bind_closure_record_complete_file_sha256
+    result: impossible_mutual_complete_file_SHA_256_cycle
+  v1_disposition: rejected_at_pre_write_preflight_zero_closure_credit_preserved_unchanged
+
+baseline_before_v2_materialization:
+  HEAD: 5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+  tree: cfd3b85209e68585de1895236d7f087803722baf
+  tracked_changes: 0
+  staged_changes: 0
+  untracked_files: 65
+  exact_64_pre_v1_manifest_root_sha256: 9c9036f06d012ad95ec8c6dd94d72bb3b692896f3d4196f1feca2f8935470a65
+  v1_request_sha256: 3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92
+  state_yaml: {path: new pipeline/state/state.yaml, sha256: f345b46b9011e90f36d533718243cf2dcb55d211c0f32fe89fd77072ff40dc1c}
+  STATE_md: {path: new pipeline/state/STATE.md, sha256: 7a0fcb205b28933c476c62a30d78f72aa254114cf27ca6b38c7c097fc10e4105}
+  validation_v2: {path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml, sha256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d, bytes: 33211}
+  active_ledger_manifest: {path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+
+scope_inheritance:
+  inherit_complete_v1_scope_by_exact_hash: true
+  inherited_sections_include:
+    - owner_directed_process_rule
+    - bound_design_and_closure_condition
+    - reused_validation_without_rerun
+    - exact_active_ledger_manifest
+    - exact_preexisting_untracked_manifest
+    - exact_read_scope_after_confirmation
+    - exact_write_scope_after_confirmation
+    - exact_state_transition_after_closure_record_passes
+    - closure_validation_after_confirmation
+    - failure_behavior
+    - post_execution_state_if_successful
+    - retained_non_authorizations
+  changed_by_v2_only:
+    - closure_record_hash_binding_direction
+    - preserved_v2_request_path_in_commit
+    - exact_commit_path_count_from_68_to_69
+  every_other_v1_input_output_semantic_restriction_and_non_authorization: unchanged
+
+corrected_one_directional_hash_graph:
+  edge_1:
+    source: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    binds:
+      - this_exact_confirmed_v2_request_and_owner_confirmation
+      - rejected_v1_request_and_failed_closed_preflight
+      - pre_transition_state_yaml_and_STATE_md_complete_file_hashes
+      - exact_non_hash_state_transition_contract_from_v1
+      - ledger_design_disposition
+      - exact_52_file_active_manifest_and_root
+      - rejected_validation_v1_with_zero_closure_credit
+      - complete_validation_v2_and_successful_results
+      - exact_69_path_staged_set_and_commit_contract
+    explicitly_does_not_embed:
+      - final_state_yaml_complete_file_sha256
+      - final_STATE_md_complete_file_sha256
+      - containing_commit_SHA
+  edge_2:
+    source: new pipeline/state/state.yaml
+    binds:
+      - final_closure_record_complete_file_sha256
+      - confirmed_v2_request_complete_file_sha256
+      - design_manifest_validation_and_gate_transition_facts
+  edge_3:
+    source: new pipeline/state/STATE.md
+    binds:
+      - final_state_yaml_complete_file_sha256
+    projects: final_state_yaml_without_nondeterministic_fields
+  acyclic_order:
+    - materialize_and_hash_closure_record
+    - materialize_and_hash_state_yaml_with_closure_hash
+    - materialize_STATE_md_with_state_yaml_hash
+    - validate_all_three_files_and_projection_equivalence
+    - stage_exact_set_and_commit
+  final_state_hash_capture:
+    method: pre_commit_and_post_commit_read_only_verification
+    embedded_back_into_closure_record: false
+    reason: avoid_complete_file_hash_cycle
+
+corrected_closure_record_contract:
+  path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+  status_before_commit: closes_on_authorized_containing_commit
+  replace_v1_must_bind_item:
+    remove: exact_final_state_projection_hashes
+    add:
+      - exact_pre_transition_state_projection_hashes
+      - exact_non_hash_state_transition_contract
+  all_other_v1_closure_record_requirements: unchanged
+
+exact_write_scope_after_v2_confirmation:
+  preserve_byte_unchanged:
+    - the_exact_64_preexisting_untracked_files_bound_by_v1
+    - new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+    - this_exact_confirmed_v2_request
+  create_exactly_one_file:
+    - new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+  modify_exactly_two_tracked_files:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  delete_or_rename: forbidden
+  any_other_workspace_write: forbidden
+
+corrected_exact_commit_scope:
+  commit_count: 1
+  exact_path_count: 69
+  path_set_components:
+    active_ledger_manifest: {path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+    exact_preexisting_governance_history_paths: 12
+    rejected_v1_request:
+      - new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+    this_v2_request:
+      - new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2.yaml
+    new_gate_closure_record:
+      - new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    modified_state_projections:
+      - new pipeline/state/state.yaml
+      - new pipeline/state/STATE.md
+  commit_message: "feat(pipeline-v2): establish K0b-01 implementation ledger prerequisite"
+  required_trailers:
+    - Approval-Request-SHA256_with_this_exact_confirmed_v2_hash
+    - Validation-Evidence-SHA256_8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d
+    - Gate-Closure-Evidence-SHA256_with_final_closure_record_hash
+  pre_and_post_commit_checks: inherit_from_v1_with_exact_path_count_69
+  push_PR_merge_deploy_release_or_other_remote_write: forbidden
+
+same_scope_retry_rule:
+  inherit_v1_owner_directed_process_rule: true
+  no_new_hash_approval_for_side_effect_free_invocation_quoting_wrapper_or_compatible_API_retry: true
+  new_approval_required_for_artifact_semantic_dependency_network_runtime_state_gate_staging_commit_or_destructive_scope_expansion: true
+
+post_execution_state_if_successful:
+  G-K0B01-HUMAN-SIGNOFF: remains_closed
+  G-K0B01-TOOLCHAIN: remains_closed
+  G-K0B01-IMPLEMENTATION-LEDGER: closed_on_authorized_containing_commit
+  G-K0B01-STATE-RENDERER: remains_open
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  K0b_01_status: planning_approved_implementation_blocked
+  remaining_K0b_01_open_prerequisites: 2
+  implementation_authority: none
+  runtime_authority: none
+
+integrity:
+  complete_file_sha256: external_post_materialization

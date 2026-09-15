@@ -1,0 +1,9 @@
+fixture_version: 2
+scenario: duplicate_event_id
+operation:
+  type: duplicate_event
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  new_filename: 2999-duplicate-event-id-v1.yaml
+expected:
+  result: fail_closed
+  reason: event:duplicate_event_id

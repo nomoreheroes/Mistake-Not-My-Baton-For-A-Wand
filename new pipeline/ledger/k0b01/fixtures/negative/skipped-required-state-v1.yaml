@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: skipped_required_state
+operation:
+  type: set_event_field
+  event: 0002-human-signoff-authorized-v1.yaml
+  field: resulting_state
+  value: materialized
+expected:
+  result: fail_closed
+  reason: event:skipped_required_state

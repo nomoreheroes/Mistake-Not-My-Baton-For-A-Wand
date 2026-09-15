@@ -1,0 +1,175 @@
+profile_id: pipeline-v2.k0b01-ledger-event-v1
+schema_profile_version: 1
+status: clean_redo_profile_non_authorizing
+
+canonicalization:
+  encoding: UTF-8
+  BOM: forbidden
+  line_endings: LF
+  final_newline_count: 1
+  duplicate_keys: forbidden
+  YAML_anchors_and_aliases: forbidden
+  event_sorting: event_id_then_repository_relative_path
+
+immutability:
+  boundary: first_authorized_containing_commit
+  uncommitted_rejected_draft_replacement: owner_authorized_by_clean_redo_request
+  committed_event_mutation_or_replacement: forbidden
+  later_events: append_only_under_separate_exact_authority
+
+lifecycle:
+  ordered_states: [declared, authorized, materialized, validated, committed, credited]
+  additional_states: [rejected, superseded, stale]
+  no_state_implies_the_next: true
+  committed_implies_runtime_authorized: false
+  self_authorization: forbidden
+  skipped_required_state: forbidden
+  materialization_without_prior_exact_authority: forbidden
+
+checkpoint_budget_phases:
+  exact_order: [K0b-runtime-operational, K0b-F15-exact-measurement]
+  chronological: true
+  contiguous: true
+  non_overlapping: true
+  exhaustive: true
+
+known_gates:
+  - G-K0B01-HUMAN-SIGNOFF
+  - G-K0B01-TOOLCHAIN
+  - G-K0B01-IMPLEMENTATION-LEDGER
+  - G-K0B01-STATE-RENDERER
+  - G-K0B01-IMPLEMENTATION-DISPOSITION
+
+known_event_types:
+  - historical_transition
+  - historical_incident_disclosure
+  - implementation_invocation
+  - transition
+  - rejection
+  - supersession
+  - stale_marker
+
+known_unit_rules:
+  exact_units:
+    - K0B01-HUMAN-SIGNOFF
+    - K0B01-IMPLEMENTATION-LEDGER
+    - K0B01-STATE-RENDERER
+    - K0B01-IMPLEMENTATION-DISPOSITION
+  incident_prefix: K0B01-INCIDENT-
+  unknown_unit: fail_closed
+
+required_event_fields:
+  - schema_profile_version
+  - event_id
+  - unit_id
+  - gate_id
+  - checkpoint_budget_phase
+  - event_type
+  - resulting_state
+  - predecessor
+  - dependencies
+  - materialization_authority
+  - subject_authority
+  - artifacts
+  - evidence
+  - budget_snapshot
+  - credit
+  - reason
+  - historical
+
+reference_contract:
+  digest: SHA-256
+  digest_encoding: lowercase_64_hex
+  repository_paths: relative_forward_slash_only
+  workspace_file_shape: [kind, path, sha256]
+  git_blob_shape: [kind, commit, path, sha256]
+  allowed_workspace_prefixes:
+    - new pipeline/architecture/
+    - new pipeline/decisions/
+    - new pipeline/evidence/
+    - new pipeline/ledger/k0b01/
+    - new pipeline/registry/
+    - new pipeline/requests/
+    - new pipeline/reviews/
+    - new pipeline/state/
+    - new pipeline/toolchain/k0b01/
+  git_blob_allowed_paths:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  missing_incomplete_or_ambiguous_evidence: zero_credit
+  unknown_entity: fail_closed
+  broken_predecessor_or_dependency: fail_closed
+  SHA_256_mismatch: fail_closed
+  duplicate_event_id_or_reference: fail_closed
+
+authority_contract:
+  materialization_fields: [request, confirmation]
+  confirmation_fields: [source, repeated_request_sha256, exact_match, exact_scope_authorized, actor]
+  required_actor: workspace_owner
+  recorder_must_differ_from_actor: true
+  conversation_identity_cryptographically_authenticated: false
+  residual_risk_disclosure_required: true
+  subject_authority_is_separate_from_record_materialization_authority: true
+
+budget_profile:
+  provenance_sources:
+    updated_forecast_v3: {path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    forecast_binary_reconciliation_v3: {path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+    binary_size_recalculation_v1: {path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
+  hard_inputs:
+    max_publication_bytes:
+      value: 22020096
+      source: binary_size_recalculation_v1.selected_inputs.non_binary_worst_bytes
+    worst_case_object_count:
+      value: 12
+      sources:
+        - updated_forecast_v3.binary_budget_preserved.logical_seed_count.worst_case
+        - forecast_binary_reconciliation_v3.preserved_B01_D04_and_call_budget.binary_seed_count.worst_case
+        - binary_size_recalculation_v1.selected_inputs.worst_case_object_count
+    runtime_phase_publications:
+      value: 34
+      sources:
+        - updated_forecast_v3.checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications.worst_case
+        - forecast_binary_reconciliation_v3.phase_arithmetic.K0b-runtime-operational.publications.worst_case
+        - binary_size_recalculation_v1.selected_inputs.K0b_runtime_operational_phase_publications
+      reforecast_sensitive: true
+      changed_input_result: stale_zero_credit
+  required_snapshot_values:
+    assumed_mean_object_bytes: 372736
+    nominal_expected_bytes: 2236416
+    forecast_worst_by_count_bytes: 4472832
+    size_stressed_bytes: 7864320
+    max_publication_bytes: 22020096
+    worst_case_object_count: 12
+    runtime_phase_publications: 34
+  snapshot_input_digest_algorithm: canonical_JSON_SHA_256_of_the_seven_numeric_input_fields
+  F15:
+    authoritative_worst_case_object_count: null
+    size_stress_without_authoritative_count: fail_closed_rejected_zero_credit
+    phase_completion_without_authoritative_count: fail_closed_rejected_zero_credit
+
+index_profile:
+  index_id: pipeline-v2.k0b01-ledger-index-v1
+  authoritative: false
+  grants_authority_credit_or_runtime_effect: false
+  timestamps: forbidden
+  absolute_paths: forbidden
+  current_event_count: 26
+  event_count_is_validator_computed: true
+  sort_order: event_id_then_repository_relative_path
+
+current_population:
+  current_phase: K0b-runtime-operational
+  completes_current_phase: false
+  starts_or_completes_F15: false
+  human_signoff_lifecycle_event_count: 6
+  historical_incident_disclosure_count: 19
+  implementation_invocation_event_count: 1
+  total_event_count: 26
+
+non_authorizations:
+  gate_closure: false
+  state_projection_change: false
+  runtime_authority: false
+  index_authority: false
+  commit_or_remote_effect: false

@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: credited_with_missing_evidence
+operation:
+  type: set_event_field
+  event: 0006-human-signoff-credited-v1.yaml
+  field: evidence
+  value: []
+expected:
+  result: zero_credit
+  reason: zero_credit:missing_evidence

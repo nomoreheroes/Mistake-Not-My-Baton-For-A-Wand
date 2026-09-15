@@ -1,0 +1,9 @@
+fixture_version: 2
+scenario: invalid_phase_order
+operation:
+  type: set_schema_field
+  field: checkpoint_budget_phases.exact_order
+  value: [K0b-F15-exact-measurement, K0b-runtime-operational]
+expected:
+  result: fail_closed
+  reason: schema:phase_order

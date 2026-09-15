@@ -1,0 +1,50 @@
+schema_profile_version: 1
+event_id: 1018-incident-ledger-preflight-state-key-assumption-v1
+unit_id: K0B01-INCIDENT-LEDGER-PREFLIGHT-STATE-KEY-ASSUMPTION
+gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+checkpoint_budget_phase: K0b-runtime-operational
+event_type: historical_incident_disclosure
+resulting_state: declared
+predecessor: null
+dependencies:
+  - {kind: workspace_file, path: new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml, sha256: 4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387}
+materialization_authority:
+  request: {kind: workspace_file, path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml, sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3}
+  confirmation:
+    source: current_conversation_owner_message_2026_09_14_exact_resumption_confirmation
+    repeated_request_sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3
+    exact_match: true
+    exact_scope_authorized: true
+    actor: workspace_owner
+subject_authority: {kind: workspace_file, path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-approval-request-v1.yaml, sha256: 0e83240b88266a57a1a103538b2a8695c14168fb2e053359005a08cf71fae70a}
+artifacts: []
+evidence:
+  - {kind: workspace_file, path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml, sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3}
+budget_snapshot:
+  assumed_mean_object_bytes: 372736
+  nominal_expected_bytes: 2236416
+  forecast_worst_by_count_bytes: 4472832
+  size_stressed_bytes: 7864320
+  max_publication_bytes: 22020096
+  worst_case_object_count: 12
+  runtime_phase_publications: 34
+  input_provenance: {kind: workspace_file, path: new pipeline/ledger/k0b01/schema-profile-v1.yaml, sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a}
+  source_provenance:
+    updated_forecast_v3: {kind: workspace_file, path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    forecast_binary_reconciliation_v3: {kind: workspace_file, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+    binary_size_recalculation_v1: {kind: workspace_file, path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
+  input_sha256: 3ced6adbfd4235b6a853b212a54fdbedb27a6d2ee4b4bf9ada0110ac111e3a95
+  runtime_phase_publications_reforecast_sensitive: true
+  f15_authoritative_worst_case_object_count: null
+  f15_authority: null
+  f15_size_stress_claim: false
+  phase_completion_claim: false
+credit: {eligible: false, value: 0}
+reason: {zero_credit: historical_disclosure_no_credit, stale: null, rejection: null, supersession: null}
+historical:
+  recorder: ledger_materializer
+  classification: clean_redo_fail_closed_read_only_checker_defect_no_reclassification
+  containing_commit: null
+  gate_closed: false
+  implementation_authority: failed_closed_exhausted
+  runtime_authority: none

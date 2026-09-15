@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: self_authorization
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: historical.recorder
+  value: workspace_owner
+expected:
+  result: fail_closed
+  reason: event:self_authorization

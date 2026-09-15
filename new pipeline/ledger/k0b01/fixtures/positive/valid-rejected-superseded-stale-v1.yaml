@@ -1,0 +1,7 @@
+fixture_version: 2
+scenario: valid_rejected_superseded_stale
+operation:
+  type: append_terminal_chains
+expected:
+  result: pass
+  reason: validated_terminal_chains

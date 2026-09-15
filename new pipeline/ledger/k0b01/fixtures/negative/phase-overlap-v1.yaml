@@ -1,0 +1,9 @@
+fixture_version: 2
+scenario: phase_overlap
+operation:
+  type: set_schema_field
+  field: checkpoint_budget_phases.non_overlapping
+  value: false
+expected:
+  result: fail_closed
+  reason: schema:phase_non_overlapping

@@ -1,0 +1,298 @@
+request_id: k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1
+schema_version: 1
+request_type: exact_scope_gate_closure_state_reconciliation_and_single_commit
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-15"
+
+purpose: >-
+  Close only G-K0B01-IMPLEMENTATION-LEDGER by reusing the already successful
+  two-environment validation v2 without rerunning Ruff, pytest, ledger, index,
+  or budget validation; create one closure record, reconcile the two state
+  projections, and create one exact-scope containing commit. This request is
+  non-authorizing until its exact complete-file SHA-256 is separately repeated
+  and its complete scope is explicitly authorized by the workspace owner.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_confirmation:
+    - repeat_this_request_complete_file_SHA_256_exactly
+    - explicitly_authorize_the_complete_included_scope
+    - abbreviated_hash_yes_ok_or_continue_is_insufficient
+
+owner_directed_process_rule:
+  source_ref: current_conversation_owner_message_2026_09_15_process_change_after_repeated_mechanical_failures
+  purpose: prevent_reapproval_loops_for_side_effect_free_technical_errors
+  confirmed_scope_remains_effective_until_objective_completion: true
+  same_scope_technical_retry_without_new_hash_approval_allowed_when:
+    - authorized_inputs_paths_outputs_and_semantics_are_unchanged
+    - failed_attempt_has_no_authoritative_external_state_or_unapproved_write_effect
+    - correction_changes_only_invocation_quoting_wrapper_or_compatible_tool_API_usage
+    - every_attempt_and_correction_is_disclosed_in_the_closure_record
+  new_owner_approval_is_still_required_when:
+    - artifact_set_or_expected_semantics_change
+    - read_or_write_scope_expands
+    - dependency_network_runtime_state_gate_staging_commit_or_destructive_scope_expands
+    - failed_attempt_effects_are_unknown_or_not_reversible
+  same_scope_commit_retry_rule: >-
+    A failed commit invocation may be retried without a new approval only when
+    no commit was created, the exact staged bytes and path set remain unchanged,
+    and the correction is invocation-only. Any created or ambiguous commit
+    stops execution for owner-visible diagnosis.
+
+baseline_before_request_materialization:
+  HEAD: 5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+  tree: cfd3b85209e68585de1895236d7f087803722baf
+  tracked_changes: 0
+  staged_changes: 0
+  untracked_files: 64
+  state_yaml: {path: new pipeline/state/state.yaml, sha256: f345b46b9011e90f36d533718243cf2dcb55d211c0f32fe89fd77072ff40dc1c}
+  STATE_md: {path: new pipeline/state/STATE.md, sha256: 7a0fcb205b28933c476c62a30d78f72aa254114cf27ca6b38c7c097fc10e4105}
+  current_K0b_01_status: planning_approved_implementation_blocked
+  closed_gates: [G-K0B01-HUMAN-SIGNOFF, G-K0B01-TOOLCHAIN]
+  open_gates:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+    - G-K0B01-IMPLEMENTATION-LEDGER
+    - G-K0B01-STATE-RENDERER
+  implementation_authority: none
+  runtime_authority: none
+
+bound_design_and_closure_condition:
+  planning_package: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  ledger_design_disposition: {path: new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml, sha256: 4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387}
+  state_projection_profile: {path: new pipeline/state/state-projection-profile-v1.yaml, sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d}
+  gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+  state_closure_condition: separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist
+  design_closure_requirements:
+    later_exact_hash_bound_physical_authority: satisfied_by_confirmed_implementation_requests
+    event_schema_validator_and_deterministic_index_builder_exist: pass_in_validation_v2
+    lifecycle_authority_dependency_and_zero_credit_rules_enforced: pass_in_validation_v2
+    historical_incident_disclosures_exist: pass_19_records
+    budget_provenance_and_fail_closed_rules: pass_in_validation_v2
+    positive_and_negative_fixtures: pass_30_of_30_in_each_of_two_environments
+    separate_gate_closure_record: to_be_created_by_this_request
+
+reused_validation_without_rerun:
+  rejected_evidence_retained_only:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml
+    sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55
+    bytes: 18175
+    closure_credit: 0
+  complete_validation:
+    path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+    sha256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d
+    bytes: 33211
+    status: validation_pass_scope_complete_gate_unchanged
+    environments: 2
+    production_path_tests_per_environment: 30
+    Ruff: pass_A_and_B
+    ledger_validation: pass_A_and_B
+    index_validation: pass_A_and_B_workspace_identical
+    budget_validation: pass_A_and_B
+    scoped_invariants: pass_A_and_B
+  reuse_is_valid_only_if:
+    - complete_validation_hash_and_bytes_match
+    - exact_52_active_artifact_manifest_matches
+    - exact_64_preexisting_untracked_manifest_matches
+    - HEAD_tree_and_both_state_projection_hashes_match
+    - no_new_tracked_or_staged_change_exists
+  explicitly_forbidden_reruns:
+    - Ruff
+    - pytest
+    - ledger_validate
+    - index_build_or_check
+    - budget_validate
+    - dependency_bootstrap_or_install
+
+exact_active_ledger_manifest:
+  source: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml#active_artifact_manifest
+  path_count: 52
+  root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff
+  algorithm: SHA256_over_ordinal_path_sorted_forward_path_pipe_sha256_pipe_decimal_bytes_LF_lines
+  mutation_under_this_request: forbidden
+
+exact_preexisting_untracked_manifest:
+  path_count: 64
+  root_sha256: 9c9036f06d012ad95ec8c6dd94d72bb3b692896f3d4196f1feca2f8935470a65
+  algorithm: SHA256_over_ordinal_path_sorted_forward_path_pipe_sha256_pipe_decimal_bytes_LF_lines
+  components:
+    active_ledger_files: {path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+    exact_governance_history_files:
+      - {path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml, sha256: 38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55, bytes: 18175}
+      - {path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml, sha256: 8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d, bytes: 33211}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-implementation-validation-approval-request-v1.yaml, sha256: 9ded25bc9226bff008f866198025c8f0382353f78b1e18cbf839146ae1268eb9, bytes: 46246}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-approval-request-v1.yaml, sha256: 0e83240b88266a57a1a103538b2a8695c14168fb2e053359005a08cf71fae70a, bytes: 40125}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-clean-redo-resumption-approval-request-v2.yaml, sha256: 7546dd2c2aced25201cbbf11536486f0be357268ed28b44fc464c47c7dd1dab3, bytes: 19264}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-format-remediation-resumption-approval-request-v3.yaml, sha256: d934212717c2ef97ca5726f466da6e4e3d082db076a0ca7c75932bef78c47701, bytes: 19071}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-format-diff-capture-remediation-approval-request-v4.yaml, sha256: 730b638106e779d6ef66fd8760dda06e6c0c7bb32c46b5403f6733f5e939d526, bytes: 20013}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-yaml-final-lf-remediation-approval-request-v5.yaml, sha256: b5356fe934b4994e6a0c7497fd0b824da754c2ea7a868f340366f911b7d9e946, bytes: 24427}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-fixture-and-alias-remediation-approval-request-v6.yaml, sha256: b08c896fc8beee01f89a687ae5d99f3d7b5e1ed36dba51c3f2085f6d3deb8880, bytes: 19580}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-budget-evidence-remediation-approval-request-v7.yaml, sha256: f5a7c4dba9b3c98ed8693c6519c4f243a34eb7a469bd491fcf091467434c046a, bytes: 23769}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-cli-output-remediation-approval-request-v8.yaml, sha256: 503a32dead26e6be68ae0e23aa18ab3944a396ce7c60081c94322dbc06c75451, bytes: 21012}
+      - {path: new pipeline/requests/k0b-01-implementation-ledger-scoped-invariants-and-evidence-approval-request-v9.yaml, sha256: ced11bd33fed4343254738e86356ff7efa6f95e694e328e7be17463465a78a23, bytes: 21957}
+
+exact_read_scope_after_confirmation:
+  paths:
+    - the_exact_64_preexisting_untracked_files_bound_above
+    - this_exact_confirmed_request
+    - new pipeline/registry/authority-confirmation/v1.yaml
+    - new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    - new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml
+    - new pipeline/state/state-projection-profile-v1.yaml
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+    - new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+    - new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+    - Git_HEAD_tree_index_refs_and_objects_required_for_exact_status_staging_commit_and_post_commit_checks
+  any_other_workspace_root_or_external_path: forbidden
+  old_pipeline_projects_research_product_workspaces_or_external_attachments: forbidden
+
+exact_write_scope_after_confirmation:
+  preserve_byte_unchanged:
+    - all_64_preexisting_untracked_files
+    - this_exact_confirmed_request
+  create_exactly_one_file:
+    - new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+  modify_exactly_two_tracked_files:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  delete_or_rename: forbidden
+  any_other_workspace_write: forbidden
+
+gate_closure_record_contract:
+  path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+  status_before_commit: closes_on_authorized_containing_commit
+  must_bind:
+    - this_exact_confirmed_request_and_owner_confirmation
+    - baseline_HEAD_tree_and_initial_state_hashes
+    - ledger_design_disposition
+    - exact_52_file_active_manifest_and_root
+    - rejected_validation_v1_with_zero_closure_credit
+    - complete_validation_v2_and_all_successful_results
+    - exact_final_state_projection_hashes
+    - exact_68_path_staged_set_and_commit_contract
+  must_record:
+    - every_same_scope_technical_retry_and_effect
+    - no_revalidation_rerun
+    - no_network_bootstrap_temp_target_or_dependency_change
+    - no_runtime_or_implementation_authority
+    - G_K0B01_IMPLEMENTATION_DISPOSITION_must_close_last
+  integrity_complete_file_sha256: external_after_materialization
+
+exact_state_transition_after_closure_record_passes:
+  fixed_generated_at: "2026-09-15T17:03:18.7002452+03:00"
+  state_yaml_delta:
+    - set_generated_at_to_the_fixed_value_above
+    - remove_G_K0B01_IMPLEMENTATION_LEDGER_from_K0b_01_open_gate_ids
+    - remove_only_G_K0B01_IMPLEMENTATION_LEDGER_from_open_gates
+    - add_G_K0B01_IMPLEMENTATION_LEDGER_to_closed_gates_with_request_design_manifest_validation_and_closure_hashes
+    - set_K0b_01_remaining_open_prerequisites_from_3_to_2
+  STATE_md_delta:
+    - update_machine_source_hash_to_final_state_yaml_hash
+    - report_ledger_gate_closed_and_two_K0b_01_prerequisites_remaining
+    - remove_only_the_ledger_gate_from_the_K0b_01_row_and_open_gate_table
+    - add_one_closed_gate_entry_with_manifest_validation_and_closure_hashes
+    - update_effective_scope_from_three_to_two_remaining_prerequisites
+  leave_open:
+    - G-K0B01-STATE-RENDERER
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+  final_gate_rule: G-K0B01-IMPLEMENTATION-DISPOSITION_must_close_last
+  K0b_01_status: remains_planning_approved_implementation_blocked
+  implementation_authority: none
+  runtime_authority: none
+
+closure_validation_after_confirmation:
+  allowed_host_interpreter:
+    path: C:/ProgramData/anaconda3/python.exe
+    required_sha256: 6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0
+    required_version: 3.12.7
+    flags: [-B, -I]
+    purpose: read_only_YAML_parse_hash_and_projection_equivalence_checks_only
+  checks:
+    - confirmed_request_hash_and_scope_match
+    - exact_64_preexisting_manifest_root_matches
+    - exact_52_active_manifest_root_matches_validation_v2
+    - validation_v2_hash_status_counts_and_pass_results_match
+    - closure_record_UTF8_without_BOM_LF_only_one_final_LF_and_duplicate_keys_forbidden
+    - state_yaml_and_STATE_md_UTF8_without_BOM_LF_only_one_final_LF
+    - all_modified_or_new_YAML_files_parse_with_duplicate_keys_forbidden
+    - state_work_item_open_gate_and_open_gate_table_sets_are_equivalent
+    - STATE_md_K0b_01_row_and_open_closed_gate_sections_project_state_yaml
+    - exactly_two_K0b_01_prerequisites_remain_open
+    - only_G_K0B01_IMPLEMENTATION_LEDGER_transitions_open_to_closed
+    - git_diff_check_passes
+    - unstaged_and_staged_path_sets_match_the_current_phase_contract
+  writing_by_validation_process: forbidden
+  network_temp_target_bootstrap_dependency_install_or_cache_creation: forbidden
+
+exact_commit_scope_after_all_checks_pass_only:
+  commit_count: 1
+  exact_path_count: 68
+  path_set_components:
+    active_ledger_manifest: {path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+    exact_preexisting_governance_history_paths: 12
+    this_request:
+      - new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+    new_gate_closure_record:
+      - new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    modified_state_projections:
+      - new pipeline/state/state.yaml
+      - new pipeline/state/STATE.md
+  staged_path_verification: >-
+    Expand the exact 52 paths from validation v2, add the exact 12 paths listed
+    in exact_preexisting_untracked_manifest, then add this request, the closure
+    record, and the two state projections; ordinal-sort and require byte-for-byte
+    equality with git diff --cached --name-only.
+  commit_message: "feat(pipeline-v2): establish K0b-01 implementation ledger prerequisite"
+  required_trailers:
+    - Approval-Request-SHA256_with_this_exact_confirmed_hash
+    - Validation-Evidence-SHA256_8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d
+    - Gate-Closure-Evidence-SHA256_with_final_closure_record_hash
+  pre_commit_checks:
+    - no_unapproved_worktree_path_exists
+    - all_exact_hashes_and_state_equivalence_checks_pass
+    - git_diff_cached_check_passes
+    - staged_path_set_equals_exact_68_path_set
+  post_commit_checks:
+    - commit_parent_equals_5eaf586f7d7c74d1db9d59ddf78beee092b6f23b
+    - commit_path_set_equals_exact_68_path_set
+    - commit_message_and_trailers_match
+    - worktree_and_index_are_clean
+    - G_K0B01_IMPLEMENTATION_LEDGER_is_closed_in_both_state_projections
+  push_PR_merge_deploy_release_or_other_remote_write: forbidden
+
+failure_behavior:
+  - stop_before_state_change_staging_or_commit_if_reused_validation_or_manifest_preconditions_fail
+  - stop_before_staging_or_commit_if_closure_or_state_checks_fail
+  - restore_only_the_two_authorized_state_files_to_their_exact_pre_scope_bytes_if_failure_occurs_before_staging
+  - preserve_the_request_and_owner_visible_closure_diagnostics
+  - do_not_close_any_gate_on_partial_success
+  - apply_owner_directed_same_scope_technical_retry_rule_instead_of_creating_micro_approval_requests
+
+post_execution_state_if_successful:
+  G-K0B01-HUMAN-SIGNOFF: remains_closed
+  G-K0B01-TOOLCHAIN: remains_closed
+  G-K0B01-IMPLEMENTATION-LEDGER: closed_on_authorized_containing_commit
+  G-K0B01-STATE-RENDERER: remains_open
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  K0b_01_status: planning_approved_implementation_blocked
+  remaining_K0b_01_open_prerequisites: 2
+  implementation_authority: none
+  runtime_authority: none
+
+retained_non_authorizations:
+  - no_active_ledger_event_fixture_schema_code_test_index_or_validation_evidence_change
+  - no_new_ledger_event_fixture_or_governance_file_except_the_one_closure_record
+  - no_state_renderer_materialization_or_gate_closure
+  - no_final_implementation_disposition
+  - no_runtime_product_contract_registry_migration_prompt_checkpoint_or_model_call
+  - no_network_bootstrap_dependency_install_Ruff_pytest_ledger_index_or_budget_rerun
+  - no_temp_target_or_cache_creation
+  - no_gate_closure_other_than_G_K0B01_IMPLEMENTATION_LEDGER
+  - no_commit_other_than_the_exact_single_68_path_commit
+  - no_push_PR_merge_deploy_release_or_other_remote_write
+  - no_F15_size_stress_phase_completion_or_CI_execution_claim
+  - no_access_to_old_pipeline_projects_research_product_workspaces_or_external_attachments
+
+integrity:
+  complete_file_sha256: external_post_materialization

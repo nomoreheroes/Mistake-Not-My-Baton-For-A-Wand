@@ -1,0 +1,9 @@
+fixture_version: 2
+scenario: event_replacement_mutation
+operation:
+  type: rename_event
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  new_filename: 2998-renamed-event-v1.yaml
+expected:
+  result: fail_closed
+  reason: event:filename_mismatch

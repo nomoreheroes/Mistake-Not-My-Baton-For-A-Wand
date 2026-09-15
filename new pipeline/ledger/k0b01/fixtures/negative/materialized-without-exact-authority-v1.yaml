@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: materialized_without_exact_authority
+operation:
+  type: set_event_field
+  event: 0003-human-signoff-materialized-v1.yaml
+  field: materialization_authority.confirmation.exact_scope_authorized
+  value: false
+expected:
+  result: fail_closed
+  reason: event:materialized_without_exact_authority

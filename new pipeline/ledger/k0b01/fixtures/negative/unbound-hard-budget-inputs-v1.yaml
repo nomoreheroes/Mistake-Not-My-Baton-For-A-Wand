@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: unbound_hard_budget_inputs
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: budget_snapshot.source_provenance.updated_forecast_v3.sha256
+  value: "0000000000000000000000000000000000000000000000000000000000000000"
+expected:
+  result: fail_closed
+  reason: budget:source:updated_forecast_v3:sha256_mismatch

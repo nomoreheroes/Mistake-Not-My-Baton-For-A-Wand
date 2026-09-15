@@ -1,10 +1,10 @@
 # Pipeline v2 state projection
 
-Machine source: [state.yaml](state.yaml) `f345b46b9011`
+Machine source: [state.yaml](state.yaml) `64648547d15b`
 
 Projection profile: [state-projection-profile-v1.yaml](state-projection-profile-v1.yaml) `7032748afe3e`
 
-Program status: `K0b_01_planning_approved_with_open_implementation_prerequisites`. D0-05, K0b-B02, the canonical-payload verifier gate, K0b-01 human-only planning signoff, and the K0b-01 toolchain gate are closed. Three K0b-01 implementation prerequisites remain open; runtime and implementation authority remain absent.
+Program status: `K0b_01_planning_approved_with_open_implementation_prerequisites`. D0-05, K0b-B02, the canonical-payload verifier gate, K0b-01 human-only planning signoff, the K0b-01 toolchain gate, and the K0b-01 implementation-ledger gate are closed. Two K0b-01 implementation prerequisites remain open; runtime and implementation authority remain absent.
 
 ## Active authority
 
@@ -54,7 +54,7 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 | 8 | K0a-02 | implemented_validated | [k0a-02-validation-v1.yaml](../evidence/k0a-02-validation-v1.yaml) `3c2385d28e38` | none |
 | 9 | K0a-03 | implemented_validated | [k0a-03-manual-extension-owner-disposition-v1.yaml](../decisions/k0a-03-manual-extension-owner-disposition-v1.yaml) `870979d78a26` | none |
 | 10 | K0b-00 | architecture_complete | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | none |
-| 11 | K0b-01 | planning_approved_implementation_blocked | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-IMPLEMENTATION-LEDGER, G-K0B01-STATE-RENDERER |
+| 11 | K0b-01 | planning_approved_implementation_blocked | [k0b-01-planning-package-v1.3.md](../architecture/k0b-01-planning-package-v1.3.md) `4a039d27d13b` | G-K0B01-IMPLEMENTATION-DISPOSITION, G-K0B01-STATE-RENDERER |
 | 12 | K0b-02 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B02-K0B01-COMPLETE, G-K0B02-SINGLE-SOURCE-CONFIRMATION |
 | 13 | K0b-03 | blocked | [PIPELINE_V2_DEVELOPMENT_PLAN.md](../PIPELINE_V2_DEVELOPMENT_PLAN.md) `679a0bfa08d5` | G-K0B03-K0B01-COMPLETE, G-K0B03-UNTRUSTED-SHAPES |
 | 14 | K0b-04 | blocked | [k0b-00-final-architecture-package-owner-disposition-v1.yaml](../decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml) `544a6160fc27` | G-K0B04-F15-ATTESTATION-LIMIT, G-K0B04-PREREQUISITES |
@@ -66,7 +66,6 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 | gate | owner | status | blocks | closure condition |
 |---|---|---|---|---|
 | G-K0B01-IMPLEMENTATION-DISPOSITION | workspace_owner | open_blocking | K0b-01_implementation | later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets |
-| G-K0B01-IMPLEMENTATION-LEDGER | Pipeline_governance | open_blocking | K0b-01_implementation | separate_implementation_invocation_schema_ledger_budget_and_historical_incident_record_exist |
 | G-K0B01-STATE-RENDERER | Pipeline_governance | open_blocking | K0b-01_implementation | deterministic_renderer_and_projection_equivalence_check_exist |
 | G-K0B02-K0B01-COMPLETE | K0b-01 | blocked_by_predecessor | K0b-02 | K0b_01_completion_receipt_exists |
 | G-K0B02-SINGLE-SOURCE-CONFIRMATION | workspace_owner | future_open | K0b-02 | confirm_single_JSON_registry_and_projection_ownership_before_K0b_02 |
@@ -82,6 +81,7 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 - `G-K0B01-HUMAN-SIGNOFF`: closed by [human-only review](../reviews/k0b-01-human-only-review-v1.yaml) `522c3b0e5227` and [closure evidence](../evidence/k0b-01-human-signoff-gate-closure-v1.yaml) `34354f8dc56f`. Verdict: `APPROVE`; blocking findings: `0`; non-blocking findings carried forward: `5`.
 - `G-K0B01-TOOLCHAIN`: closed by the exact [toolchain/CI prerequisite manifest](../toolchain/k0b01/toolchain-lock-v1.json) `3ba58d66cb33`, [two-environment validation v2](../evidence/k0b-01-toolchain-validation-v2.yaml) `cf48abf5b24c`, and [closure evidence](../evidence/k0b-01-toolchain-gate-closure-v1.yaml) `060fc2f7dc8e`. Python, SQLite, Ruff lint/format, import-root strategy, and one validation entry point are pinned; CI existence or execution is not claimed.
+- `G-K0B01-IMPLEMENTATION-LEDGER`: closed by the exact 52-file ledger manifest root `6aba5ae7df35`, [two-environment validation v2](../evidence/k0b-01-implementation-ledger-validation-v2.yaml) `8cf9fa52426c`, and [closure evidence](../evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml) `cd609da26769`. The rejected validation v1 and failed-closed cyclic closure request v1 remain preserved with zero closure credit.
 - `G-D0-CANONICAL-HASH-PROFILE-VERIFIER`: closed through the authorized implement-and-validate route. The fixed 27-vector suite and 10 test methods pass; all 6 primary claims and 4 derivative occurrences match with zero discrepancies.
 - `G-D005-CONTAINING-COMMIT`: closed by commit `45536507a469403b4878d273b661fe3a1d2c9573`, tree `00fa73a15dc6b402b00af0426d54f02c7f8c0b64`.
 - `G-K0B01-BINARY-SIZE`: closed by K0b-B02-A. The selected runtime-phase pack is `1,033,895,936` bytes with `39,845,888` bytes of margin under the unchanged `1 GiB` phase limit.
@@ -96,4 +96,4 @@ Supporting review evidence: [r1 dispatch reconciliation](../evidence/k0b-01-r1-r
 
 ## Effective scope
 
-K0b-B02, D0 canonical-payload verifier remediation, human-only K0b-01 planning signoff, and the K0b-01 toolchain prerequisite are complete. The five non-blocking human findings remain mandatory carry-forward inputs: publication count `34` is reforecast-sensitive; F15 needs an authoritative worst-case object count; future budget evidence must expose all three §6 quantities and mean size; forecast-v3/reconciliation-v3 hard-budget inputs need exact hash provenance; and the later implementation disposition must give the state-renderer gate authoritative support while enumerating all five gates present at review time. Three K0b-01 prerequisites remain open. There is no K0b-01 runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.
+K0b-B02, D0 canonical-payload verifier remediation, human-only K0b-01 planning signoff, the K0b-01 toolchain prerequisite, and the K0b-01 implementation-ledger prerequisite are complete. The five non-blocking human findings remain mandatory carry-forward inputs: publication count `34` is reforecast-sensitive; F15 needs an authoritative worst-case object count; future budget evidence must expose all three §6 quantities and mean size; forecast-v3/reconciliation-v3 hard-budget inputs need exact hash provenance; and the later implementation disposition must give the state-renderer gate authoritative support while enumerating all five gates present at review time. Two K0b-01 prerequisites remain open. There is no K0b-01 runtime or implementation authority. Remaining design-review model calls: `0`. Access to forbidden roots and push, PR, deploy, or release operations are not authorized.

@@ -1,0 +1,9 @@
+fixture_version: 2
+scenario: missing_required_budget_fields
+operation:
+  type: delete_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: budget_snapshot.nominal_expected_bytes
+expected:
+  result: fail_closed
+  reason: budget:fields

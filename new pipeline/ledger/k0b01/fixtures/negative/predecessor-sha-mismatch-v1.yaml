@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: predecessor_sha_mismatch
+operation:
+  type: set_event_field
+  event: 0006-human-signoff-credited-v1.yaml
+  field: predecessor.sha256
+  value: "0000000000000000000000000000000000000000000000000000000000000000"
+expected:
+  result: fail_closed
+  reason: event:predecessor:sha256_mismatch

@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: budget_input_change_without_stale
+operation:
+  type: set_event_field
+  event: 2001-implementation-ledger-invocation-v1.yaml
+  field: budget_snapshot.runtime_phase_publications
+  value: 35
+expected:
+  result: fail_closed
+  reason: budget:reforecast_sensitive_change_not_staled

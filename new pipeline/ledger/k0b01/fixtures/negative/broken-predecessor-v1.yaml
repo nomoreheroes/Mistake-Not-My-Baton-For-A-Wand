@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: broken_predecessor
+operation:
+  type: set_event_field
+  event: 0006-human-signoff-credited-v1.yaml
+  field: predecessor.path
+  value: new pipeline/ledger/k0b01/events/9999-missing-v1.yaml
+expected:
+  result: fail_closed
+  reason: event:predecessor:missing

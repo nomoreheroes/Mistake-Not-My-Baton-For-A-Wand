@@ -1,0 +1,10 @@
+fixture_version: 2
+scenario: committed_implies_runtime_authority
+operation:
+  type: set_event_field
+  event: 0005-human-signoff-committed-v1.yaml
+  field: historical.runtime_authority
+  value: authorized
+expected:
+  result: fail_closed
+  reason: event:runtime_authority_forbidden
