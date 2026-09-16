@@ -1,0 +1,425 @@
+request_id: k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1
+schema_version: 1
+request_type: exact_scope_implementation_validation_ledger_registration_gate_closure_state_and_single_commit
+status: non_authorizing_pending_exact_hash_confirmation
+created_on: "2026-09-15"
+
+purpose: >-
+  Materialize the deterministic K0b-01 state renderer, complete versioned
+  projection profile, read-only equivalence checker, tests and fixtures;
+  validate them under the closed toolchain in two clean environments; register
+  the accepted validation evidence in the closed implementation ledger; close
+  only G-K0B01-STATE-RENDERER; generate the versioned successor STATE.md from
+  state.yaml; and create one exact-scope containing commit. This request is
+  non-authorizing until its exact complete-file SHA-256 is separately repeated
+  and its complete scope is explicitly authorized by the workspace owner.
+
+authority_confirmation_protocol:
+  path: new pipeline/registry/authority-confirmation/v1.yaml
+  sha256: b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd
+  required_confirmation:
+    - repeat_this_request_complete_file_SHA_256_exactly
+    - explicitly_authorize_the_complete_included_scope
+    - abbreviated_hash_yes_ok_or_continue_is_insufficient
+
+owner_directed_process_rule:
+  source_ref: current_conversation_owner_message_2026_09_15_process_change_after_repeated_mechanical_failures
+  confirmed_scope_remains_effective_until_objective_completion: true
+  same_scope_technical_retry_without_new_hash_approval_allowed_when:
+    - authorized_inputs_paths_outputs_and_semantics_are_unchanged
+    - failed_attempt_has_no_authoritative_external_state_or_unapproved_write_effect
+    - correction_changes_only_invocation_quoting_wrapper_or_compatible_tool_API_usage
+    - every_attempt_and_correction_is_disclosed_in_validation_or_closure_evidence_when_it_occurs_before_those_records_freeze_otherwise_in_the_final_execution_report
+  new_owner_approval_is_required_when:
+    - artifact_set_or_expected_semantics_change
+    - read_or_write_scope_expands
+    - dependency_network_runtime_state_gate_staging_commit_or_destructive_scope_expands
+    - failed_attempt_effects_are_unknown_or_not_reversible
+
+baseline:
+  HEAD: 08eee4721b377b5e4dc0ab36b1537c284bf32f3a
+  tree: 39ff41f9636581a3e61e863bf119d19db758d14d
+  tracked_changes: 0
+  staged_changes: 0
+  untracked_files_before_this_request: 0
+  machine_state: {path: new pipeline/state/state.yaml, sha256: 64648547d15ba066a37f7b9ab6efae90a55ca0c68292feefea1267c4a0ff97ea, bytes: 22957}
+  human_state_projection: {path: new pipeline/state/STATE.md, sha256: bb882d38e165cdd7f9e382f0120a76e03f42ba00c35b424af911e5ef5d44a3a4, bytes: 13997}
+  legacy_projection_profile: {path: new pipeline/state/state-projection-profile-v1.yaml, sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d, bytes: 2330}
+  current_K0b_01_status: planning_approved_implementation_blocked
+  closed_gates:
+    - G-K0B01-HUMAN-SIGNOFF
+    - G-K0B01-TOOLCHAIN
+    - G-K0B01-IMPLEMENTATION-LEDGER
+  open_gates:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+    - G-K0B01-STATE-RENDERER
+  implementation_authority: none
+  runtime_authority: none
+
+bound_design_and_dependencies:
+  planning_package: {path: new pipeline/architecture/k0b-01-planning-package-v1.3.md, sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4}
+  state_renderer_design: {path: new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml, sha256: 9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b, bytes: 6936}
+  closed_toolchain_manifest: {path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json, sha256: 3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0, bytes: 5688}
+  closed_toolchain_evidence: {path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml, sha256: 060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212}
+  closed_ledger_evidence: {path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml, sha256: cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f, bytes: 10334}
+  ledger_schema: {path: new pipeline/ledger/k0b01/schema-profile-v1.yaml, sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a, bytes: 6106}
+  ledger_implementation: {path: new pipeline/ledger/k0b01/ledger.py, sha256: e6e5e1b6f66dd8fddacaf54865d5e82e33b293d970fee4352ad36b1cd0ea4a5c, bytes: 30965}
+  ledger_index_before: {path: new pipeline/ledger/k0b01/index-v1.yaml, sha256: ea85c5ddd0eccfcb10f3d5bccdd51b9ef95c73f0ca29faa8a811b03fed33946a, bytes: 14956, event_count: 26}
+  ledger_active_manifest_before: {path_count: 52, root_sha256: 6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff}
+
+selected_physical_design:
+  architecture: validated_state_yaml_as_sole_source_with_fully_generated_committed_STATE_md
+  source_of_truth: new pipeline/state/state.yaml
+  projection: new pipeline/state/STATE.md
+  projection_version_after_transition: "2.0.0"
+  complete_profile: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+  renderer: new pipeline/state/renderer/k0b01/renderer.py
+  check_mode: read_only_byte_and_semantic_equivalence
+  render_mode: explicit_output_only
+  source_mutation: forbidden
+  reverse_or_bidirectional_update: forbidden
+  handwritten_normative_projection_sections: forbidden
+  versioned_successor_authorized_here: true
+  reason_for_successor: >-
+    The design disposition did not claim the legacy handwritten projection was
+    renderer-equivalent. This exact request authorizes projection version 2.0.0
+    and a fully generated successor at the existing authoritative projection
+    path while preserving Git history of the legacy bytes.
+
+projection_v2_document_contract:
+  heading: "# Pipeline v2 state projection"
+  preamble_fields:
+    - repository_relative_source_path
+    - complete_source_SHA_256
+    - repository_relative_profile_path
+    - complete_profile_SHA_256
+    - projection_version
+    - generated_do_not_edit_notice
+  normative_body: complete_source_state_as_one_UTF8_YAML_fenced_block
+  included_source_fields: all_profile_declared_fields
+  excluded_source_fields: []
+  extra_normative_claims: forbidden
+  semantic_equivalence: fenced_YAML_safe_parse_equals_validated_source_document
+  byte_equivalence: complete_projection_bytes_equal_fresh_render_bytes
+  source_byte_requirements:
+    encoding: UTF_8_without_BOM
+    line_endings: LF
+    final_newline_count: 1
+  output_byte_requirements:
+    encoding: UTF_8_without_BOM
+    line_endings: LF
+    final_newline_count: 1
+  nondeterministic_output_fields: forbidden
+  wall_clock_absolute_host_path_environment_or_locale_output: forbidden
+
+profile_v2_contract:
+  exact_top_level_source_field_order: profile_declared_and_fail_closed
+  required_and_forbidden_fields: complete_for_every_profiled_mapping
+  collection_order_and_identifier_fields: complete
+  scalar_null_boolean_integer_string_and_multiline_rendering: complete
+  Markdown_heading_preamble_fence_and_body_order: complete
+  supported_source_schema_versions: [1]
+  supported_projection_versions: ["2.0.0"]
+  unknown_profile_source_or_record_field: fail_closed
+  duplicate_mapping_key_or_identifier: fail_closed
+  broken_repository_reference_or_SHA_256: fail_closed
+  invalid_gate_state_or_work_item_gate_projection: fail_closed
+
+exact_write_scope_after_confirmation:
+  create_exactly_six_renderer_artifacts:
+    - new pipeline/state/renderer/k0b01/renderer.py
+    - new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+    - new pipeline/state/renderer/k0b01/test_renderer.py
+    - new pipeline/state/renderer/k0b01/fixtures/golden/state-v1.yaml
+    - new pipeline/state/renderer/k0b01/fixtures/golden/STATE-v1.md
+    - new pipeline/state/renderer/k0b01/fixtures/negative/cases-v1.yaml
+  create_exactly_one_validation_evidence:
+    - new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+  create_exactly_four_ledger_events:
+    - new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml
+    - new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml
+    - new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml
+    - new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml
+  replace_exactly_one_deterministic_derived_index:
+    - new pipeline/ledger/k0b01/index-v1.yaml
+  create_exactly_one_gate_closure_evidence:
+    - new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+  modify_exactly_two_state_projection_files:
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  preserve_this_request_byte_unchanged:
+    - new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml
+  any_other_workspace_write_delete_or_rename: forbidden
+
+exact_read_scope_after_confirmation:
+  paths:
+    - this_exact_confirmed_request
+    - the_exact_six_renderer_artifacts_after_materialization
+    - new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    - new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml
+    - new pipeline/registry/authority-confirmation/v1.yaml
+    - new pipeline/state/state-projection-profile-v1.yaml
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+    - new pipeline/ledger/k0b01
+    - new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    - new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+    - new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+    - new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+    - new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml
+    - new pipeline/toolchain/k0b01
+    - Git_HEAD_tree_index_refs_and_objects_required_for_status_staging_commit_and_post_commit_checks
+    - the_three_exact_temp_targets_declared_below
+  old_pipeline_projects_research_product_workspaces_external_attachments_or_any_other_path: forbidden
+
+exact_ledger_registration_contract:
+  preserve_byte_unchanged:
+    - new pipeline/ledger/k0b01/schema-profile-v1.yaml
+    - new pipeline/ledger/k0b01/ledger.py
+    - new pipeline/ledger/k0b01/test_ledger.py
+    - all_26_existing_event_files
+    - all_22_existing_fixture_files
+  append_only_event_chain:
+    unit_id: K0B01-STATE-RENDERER
+    gate_id: G-K0B01-STATE-RENDERER
+    checkpoint_budget_phase: K0b-runtime-operational
+    events:
+      - {event_id: 3001-state-renderer-declared-v1, event_type: implementation_invocation, resulting_state: declared, predecessor: null}
+      - {event_id: 3002-state-renderer-authorized-v1, event_type: transition, resulting_state: authorized, predecessor: 3001-state-renderer-declared-v1}
+      - {event_id: 3003-state-renderer-materialized-v1, event_type: transition, resulting_state: materialized, predecessor: 3002-state-renderer-authorized-v1}
+      - {event_id: 3004-state-renderer-validated-v1, event_type: transition, resulting_state: validated, predecessor: 3003-state-renderer-materialized-v1}
+    materialization_authority: this_exact_confirmed_request_and_owner_confirmation
+    subject_authority:
+      declared: state_renderer_design_disposition
+      authorized: this_exact_confirmed_request
+      materialized: exact_six_file_renderer_manifest
+      validated: accepted_validation_evidence_v1
+    credit: {eligible: false, value: 0}
+    runtime_authority: none
+    budget_snapshot: exact_schema_profile_v1_values_and_provenance
+  index_after_registration:
+    path: new pipeline/ledger/k0b01/index-v1.yaml
+    authoritative: false
+    event_count: 30
+    incident_count: 19
+    state_renderer_state: validated
+    deterministic_build_in_A_and_B_must_be_byte_identical: true
+  ledger_active_manifest_after_registration:
+    expected_path_count: 56
+    final_root_sha256: external_after_materialization
+
+exact_locked_dependency_and_network_scope:
+  dependency_manifest: {path: new pipeline/toolchain/k0b01/requirements-v1.lock, sha256: 6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6, package_count: 12}
+  toolchain_manifest: {path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json, sha256: 3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0}
+  wheel_count: 12
+  packages_versions_wheel_names_and_SHA_256: exactly_as_locked
+  protocol: HTTPS
+  allowed_hosts: [pypi.org, files.pythonhosted.org]
+  index_url: https://pypi.org/simple
+  binary_only_no_deps_hash_verified: true
+  credentials_tokens_uploads_other_hosts_packages_or_versions: forbidden
+  network_after_wheel_acquisition: forbidden
+
+exact_temp_scope:
+  wheelhouse: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-wheelhouse
+  clean_environment_A: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-a
+  clean_environment_B: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-b
+  all_three_must_be_absent_before_creation: true
+  nested_TEMP_and_TMP_must_resolve_under_each_corresponding_target: true
+  any_other_temp_target: forbidden
+  cleanup_after_final_evidence_capture_and_commit_preflight: exact_recursive_removal_of_these_three_targets
+
+exact_two_environment_validation:
+  host_bootstrap:
+    executable: C:/ProgramData/anaconda3/python.exe
+    sha256: 6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0
+    version: 3.12.7
+  environments: [A, B]
+  isolation:
+    PYTHONPATH: forbidden
+    python_flags: [-B, -I]
+    pytest_cacheprovider: disabled
+    Ruff_cache: disabled
+    workspace___pycache___or_pytest_cache: forbidden
+  per_environment_required_checks:
+    - closed_toolchain_manifest_and_interpreter_match
+    - Ruff_check_on_renderer_py_and_test_renderer_py
+    - Ruff_format_check_on_renderer_py_and_test_renderer_py
+    - exactly_30_production_path_pytest_cases_pass
+    - golden_fixture_render_is_byte_exact
+    - repeated_render_outputs_are_byte_identical
+    - read_only_check_accepts_the_golden_pair
+    - source_only_change_is_detected
+    - projection_only_change_is_detected
+    - unknown_field_schema_profile_gate_state_and_broken_reference_cases_fail_closed
+    - check_mode_leaves_source_projection_and_worktree_bytes_unchanged
+    - candidate_projection_v2_from_the_authoritative_pre_transition_state_is_identical_between_A_and_B
+  exact_test_inventory:
+    positive_and_determinism_cases: 10
+    fail_closed_negative_cases: 20
+    total_per_environment: 30
+  environment_equivalence:
+    pytest_count_and_result: identical
+    golden_output_sha256: identical
+    authoritative_candidate_output_sha256: identical
+    validation_summary_bytes: identical
+
+validation_evidence_contract:
+  path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+  must_bind:
+    - this_exact_confirmed_request_and_owner_confirmation
+    - state_renderer_design_disposition
+    - exact_six_file_renderer_manifest_and_root_SHA_256
+    - closed_toolchain_manifest_and_all_12_wheels
+    - exact_commands_exit_codes_and_30_of_30_counts_for_A_and_B
+    - Ruff_lint_and_format_results
+    - golden_repeated_render_read_only_and_fail_closed_results
+    - A_B_output_hash_and_byte_equivalence
+    - pre_transition_state_and_projection_hashes
+  must_not_bind_to_avoid_cycles:
+    - ledger_registration_event_hashes_created_after_validation
+    - final_ledger_index_hash_created_after_validation
+    - gate_closure_evidence_hash_created_after_validation
+    - final_state_projection_hashes_created_after_gate_closure_evidence
+  integrity_complete_file_sha256: external_after_materialization
+
+acyclic_finalization_order:
+  steps:
+    - materialize_six_renderer_artifacts
+    - validate_in_A_and_B_and_create_validation_evidence
+    - create_four_append_only_ledger_events_ending_in_validated_and_referencing_validation_evidence
+    - deterministically_rebuild_and_validate_ledger_index_in_A_and_B
+    - create_and_hash_gate_closure_evidence_binding_final_ledger_registration
+    - update_state_yaml_to_projection_v2_and_close_only_STATE_RENDERER_with_closure_hash
+    - generate_STATE_md_from_final_state_yaml_with_renderer_write_mode
+    - run_read_only_equivalence_checks_in_A_and_B
+    - cleanup_the_three_exact_temp_targets
+    - stage_exact_16_path_set_and_create_one_commit
+  forbidden_reverse_hash_edges:
+    - validation_evidence_to_later_ledger_events_or_index
+    - closure_evidence_to_final_state_hashes
+    - state_yaml_to_final_STATE_md_hash
+    - any_file_to_containing_commit_SHA
+
+gate_closure_evidence_contract:
+  path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+  status_before_commit: closes_on_authorized_containing_commit
+  must_bind:
+    - this_exact_confirmed_request_and_owner_confirmation
+    - state_renderer_design_disposition
+    - exact_six_file_renderer_manifest
+    - accepted_validation_evidence_v1
+    - four_exact_ledger_registration_events_and_predecessor_chain
+    - final_deterministic_ledger_index_hash_and_56_file_active_ledger_manifest_root
+    - pre_transition_state_hashes_and_exact_non_hash_state_transition_contract
+    - exact_16_path_staged_set_and_commit_contract
+  must_record:
+    - every_same_scope_technical_retry_and_effect_through_closure_record_freeze
+    - exact_temp_cleanup_contract_and_required_precommit_absence_check
+    - no_runtime_or_implementation_authority
+    - G_K0B01_IMPLEMENTATION_DISPOSITION_remains_open_and_must_close_last
+  must_not_embed:
+    - final_state_yaml_hash
+    - final_STATE_md_hash
+    - containing_commit_SHA
+  integrity_complete_file_sha256: external_after_materialization
+
+exact_state_transition_after_all_validation_and_registration_passes:
+  fixed_generated_at: "2026-09-15T18:18:58.3868017+03:00"
+  state_yaml_delta:
+    - set_projection_version_to_2_0_0
+    - replace_projection_profile_path_and_hash_with_projection_profile_v2
+    - set_generated_at_to_the_fixed_value_above
+    - remove_G_K0B01_STATE_RENDERER_from_K0b_01_open_gate_ids
+    - remove_only_G_K0B01_STATE_RENDERER_from_open_gates
+    - add_G_K0B01_STATE_RENDERER_to_closed_gates_with_request_design_manifest_validation_ledger_and_closure_hashes
+    - set_K0b_01_remaining_open_prerequisites_from_2_to_1
+  STATE_md_delta:
+    - replace_legacy_handwritten_projection_with_exact_renderer_generated_projection_v2
+    - embed_final_state_yaml_complete_file_hash_in_the_generated_preamble
+    - embed_the_complete_final_state_yaml_as_the_only_normative_fenced_YAML_body
+  leave_open:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+  K0b_01_status: remains_planning_approved_implementation_blocked
+  implementation_authority: none
+  runtime_authority: none
+
+exact_commit_scope_after_all_checks_and_cleanup_pass:
+  commit_count: 1
+  exact_path_count: 16
+  exact_paths:
+    - new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+    - new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+    - new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml
+    - new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml
+    - new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml
+    - new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml
+    - new pipeline/ledger/k0b01/index-v1.yaml
+    - new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml
+    - new pipeline/state/STATE.md
+    - new pipeline/state/renderer/k0b01/fixtures/golden/STATE-v1.md
+    - new pipeline/state/renderer/k0b01/fixtures/golden/state-v1.yaml
+    - new pipeline/state/renderer/k0b01/fixtures/negative/cases-v1.yaml
+    - new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+    - new pipeline/state/renderer/k0b01/renderer.py
+    - new pipeline/state/renderer/k0b01/test_renderer.py
+    - new pipeline/state/state.yaml
+  commit_message: "feat(pipeline-v2): establish K0b-01 state renderer prerequisite"
+  required_trailers:
+    - Approval-Request-SHA256_with_this_exact_confirmed_hash
+    - Validation-Evidence-SHA256_with_final_validation_hash
+    - Ledger-Registration-Event-SHA256_with_3004_validated_event_hash
+    - Gate-Closure-Evidence-SHA256_with_final_closure_hash
+  pre_commit_checks:
+    - all_new_and_modified_YAML_parse_with_duplicate_keys_forbidden
+    - all_renderer_ledger_evidence_and_state_hash_bindings_match
+    - final_STATE_md_equals_fresh_render_from_final_state_yaml_in_A_and_B
+    - final_check_mode_passes_read_only_in_A_and_B
+    - active_ledger_validation_and_index_check_pass_in_A_and_B
+    - exact_three_temp_targets_are_absent
+    - git_diff_check_passes
+    - staged_path_set_equals_exact_16_path_set
+  post_commit_checks:
+    - commit_parent_equals_08eee4721b377b5e4dc0ab36b1537c284bf32f3a
+    - commit_path_set_equals_exact_16_path_set
+    - commit_message_and_four_trailers_match
+    - worktree_and_index_are_clean
+    - G_K0B01_STATE_RENDERER_is_closed_in_committed_state_yaml_and_generated_STATE_md
+  push_PR_merge_deploy_release_or_remote_write: forbidden
+
+failure_behavior:
+  - stop_before_ledger_registration_state_change_staging_or_commit_on_renderer_validation_failure
+  - stop_before_state_change_staging_or_commit_on_ledger_registration_or_index_failure
+  - stop_before_staging_or_commit_on_closure_final_projection_cleanup_or_hash_failure
+  - do_not_close_any_gate_or_claim_partial_success
+  - preserve_owner_visible_diagnostics_within_the_exact_evidence_files_when_possible
+  - apply_the_owner_directed_same_scope_retry_rule_instead_of_creating_micro_approval_requests
+
+post_execution_state_if_successful:
+  G-K0B01-HUMAN-SIGNOFF: remains_closed
+  G-K0B01-TOOLCHAIN: remains_closed
+  G-K0B01-IMPLEMENTATION-LEDGER: remains_closed
+  G-K0B01-STATE-RENDERER: closed_on_authorized_containing_commit
+  G-K0B01-IMPLEMENTATION-DISPOSITION: remains_open_and_must_close_last
+  K0b_01_status: planning_approved_implementation_blocked
+  remaining_K0b_01_open_prerequisites: 1
+  projection_version: "2.0.0"
+  implementation_authority: none
+  runtime_authority: none
+
+retained_non_authorizations:
+  - no_change_to_ledger_schema_ledger_py_test_ledger_or_existing_events_and_fixtures
+  - no_ledger_event_state_beyond_validated
+  - no_ledger_credit_runtime_authority_or_index_authority
+  - no_gate_closure_other_than_G_K0B01_STATE_RENDERER
+  - no_final_implementation_disposition
+  - no_K0b_01_runtime_product_contract_registry_migration_prompt_checkpoint_or_model_call
+  - no_existing_project_test_collection
+  - no_temp_network_package_or_version_beyond_the_exact_declared_scope
+  - no_commit_other_than_the_exact_single_16_path_commit
+  - no_push_PR_merge_deploy_release_or_other_remote_write
+  - no_F15_size_stress_phase_completion_or_CI_execution_claim
+  - no_access_to_old_pipeline_projects_research_product_workspaces_or_external_attachments
+
+integrity:
+  complete_file_sha256: external_post_materialization

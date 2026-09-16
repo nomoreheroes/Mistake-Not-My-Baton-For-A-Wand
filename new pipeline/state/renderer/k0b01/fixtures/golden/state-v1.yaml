@@ -1,0 +1,49 @@
+state_id: pipeline-v2-state-renderer-golden-fixture-v1
+schema_version: 1
+projection_version: "2.0.0"
+generated_at: "2026-09-15T00:00:00+03:00"
+status: fixture_only_non_authoritative
+projection_profile:
+  path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+  sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f
+baseline:
+  fixture_profile: {path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml, sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f}
+active_authority:
+  fixture_profile: {path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml, sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f}
+supporting_review_evidence:
+  fixture_status: non_authoritative
+root_plan_status:
+  fixture_profile: {path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml, sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f}
+work_items:
+  - sequence: 1
+    work_item_id: Fixture-01
+    status: blocked
+    authority_path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+    authority_sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f
+    open_gate_ids: [G-FIXTURE-OPEN]
+  - sequence: 2
+    work_item_id: Fixture-02
+    status: complete
+    authority_path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+    authority_sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f
+    open_gate_ids: []
+open_gates:
+  - gate_id: G-FIXTURE-OPEN
+    owner: fixture
+    status: open_blocking
+    blocks: [Fixture-01]
+    closure_condition: fixture_condition
+closed_gates:
+  - gate_id: G-FIXTURE-CLOSED
+    status: closed
+    closure_evidence:
+      fixture_profile: {path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml, sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f}
+status_index:
+  - path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+    sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f
+    embedded_status: active
+    effective_status: fixture_only
+scope:
+  implementation_authority: none
+  runtime_authority: none
+  fixture_only: true

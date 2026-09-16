@@ -1,0 +1,911 @@
+{
+  "evidence_id": "k0b-01-state-renderer-gate-closure-v1",
+  "schema_version": 1,
+  "status": "closes_on_authorized_containing_commit",
+  "gate_id": "G-K0B01-STATE-RENDERER",
+  "authority_confirmation": {
+    "approved_request": {
+      "path": "new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml",
+      "sha256": "0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2"
+    },
+    "owner_confirmation": {
+      "source_ref": "current_conversation_exact_hash_and_full_scope_confirmation",
+      "request_hash_repeated": true,
+      "complete_included_scope_authorized": true,
+      "conversation_identity_cryptographically_authenticated": false,
+      "residual_risk": "Exact conversational approval binds request bytes but does not cryptographically authenticate workspace-owner identity."
+    },
+    "read_only_scope_supplements": {
+      "state_references": {
+        "source_ref": "current_conversation_owner_explicit_permission_reply_to_exact_48_read_only_scope_question",
+        "bound_partial_evidence_sha256": "0f6c3c829cf47d62a30e01c3cf52e50236ed50cf0410feff4678ba10df9ebeac",
+        "exact_path_count": 48,
+        "authorized": true,
+        "content_mutation_authorized": false,
+        "results": [
+          {
+            "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+            "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+            "bytes": 246369
+          },
+          {
+            "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+            "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+            "bytes": 97569
+          },
+          {
+            "path": "new pipeline/architecture/k0b-00-fixed-hybrid-manual-vscode-executor-profile-v1.yaml",
+            "sha256": "125a1e30e4ca69ab812280a40ff57302a5211cd1b888b23a3e6d9a8620c3898d",
+            "bytes": 13465
+          },
+          {
+            "path": "new pipeline/architecture/k0b-01-planning-package-v1.2.md",
+            "sha256": "f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff",
+            "bytes": 23529
+          },
+          {
+            "path": "new pipeline/decisions/d0-02-layer-architecture-gate.yaml",
+            "sha256": "1bf92c755912a95ecf46e691454512f22a48fe97b59a5f7a676ac07e054478c4",
+            "bytes": 15320
+          },
+          {
+            "path": "new pipeline/decisions/d0-canonical-hash-profile-remediation-gate-v1.yaml",
+            "sha256": "ad24abd946533dbbd0e393e57b3b06112d6cd780a89cc7a493229eaf35625ea3",
+            "bytes": 3174
+          },
+          {
+            "path": "new pipeline/decisions/d0-canonical-yaml-v1-verifier-owner-disposition-v1.yaml",
+            "sha256": "b00d66e41d50c29bcc9a158009d17e1f52da94cf8563c532dd8638caf5c373cc",
+            "bytes": 5258
+          },
+          {
+            "path": "new pipeline/decisions/k0a-03-manual-extension-owner-disposition-v1.yaml",
+            "sha256": "870979d78a26106fe24dea4dab6c3bd5ae87f58047d2f4cb35ab48b366fff166",
+            "bytes": 2986
+          },
+          {
+            "path": "new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml",
+            "sha256": "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d",
+            "bytes": 15509
+          },
+          {
+            "path": "new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml",
+            "sha256": "349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6",
+            "bytes": 3465
+          },
+          {
+            "path": "new pipeline/decisions/k0b-01-governance-remediation-owner-direction-v1.yaml",
+            "sha256": "364a6941a216a6f285a63b03f44d218895bf9944a7254eeca5758da649f698d1",
+            "bytes": 4905
+          },
+          {
+            "path": "new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml",
+            "sha256": "4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387",
+            "bytes": 7724
+          },
+          {
+            "path": "new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml",
+            "sha256": "cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc",
+            "bytes": 4536
+          },
+          {
+            "path": "new pipeline/decisions/pipeline-v2-governance-hardening-owner-disposition-v1.yaml",
+            "sha256": "06fdeda5f0cfb84cfef3e5b21a026767d1bb935779f3b550db44611d936dfcc8",
+            "bytes": 5123
+          },
+          {
+            "path": "new pipeline/evidence/d0-02-external-approval-backlink-v1.yaml",
+            "sha256": "d0d2a81dff49194e70a9b9b79805478e9bc9caf94d73b26a6c1feba3d996b13b",
+            "bytes": 1780
+          },
+          {
+            "path": "new pipeline/evidence/d0-canonical-payload-claim-inventory-v1.yaml",
+            "sha256": "221518dce7f928c09d59cbb216ecb247cbf68bfc7408fc805f954a94022b05e2",
+            "bytes": 4945
+          },
+          {
+            "path": "new pipeline/evidence/d0-canonical-payload-claim-reconciliation-v1.yaml",
+            "sha256": "1e80b1f3dbd45e4e2691b898b39490834e647c32701795f3631146435b8060a9",
+            "bytes": 5887
+          },
+          {
+            "path": "new pipeline/evidence/d0-canonical-yaml-v1-gate-closure-v1.yaml",
+            "sha256": "cc88ba85a81b892e043d5d3cab265de2a39b5397a14ccfee894b3f35343c05d1",
+            "bytes": 2599
+          },
+          {
+            "path": "new pipeline/evidence/d0-canonical-yaml-v1-validation-v1.yaml",
+            "sha256": "4a4798989fefbd55d3f34d175ec8a8c80ac5f5f71cdbcc85eb45fefbde5fb888",
+            "bytes": 4668
+          },
+          {
+            "path": "new pipeline/evidence/k0a-01-corrective-validation-v2.yaml",
+            "sha256": "4fe090ec2ed41310c519cd848daf6b9bc993420945cbd32552cc65d6c3fd405f",
+            "bytes": 4417
+          },
+          {
+            "path": "new pipeline/evidence/k0a-02-validation-v1.yaml",
+            "sha256": "3c2385d28e3851631537ffc120ae49e5d019caab0e5a0e6b812e9384b6e38e9b",
+            "bytes": 7990
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-clarification-v1.yaml",
+            "sha256": "2956de3d94856c5299ca0795570b332fc46fb871983dc50de9eb172c1fc4eae4",
+            "bytes": 3290
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-frozen-draft-reuse-triage-v1.yaml",
+            "sha256": "3976909ee3058cc02c993ddf7cf24cfb737f52b7dc566f212e80b82d1a924d5e",
+            "bytes": 12712
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-governance-remediation-commit-set-v1.yaml",
+            "sha256": "0a13fe8688308704aca7e1b5be5e59b9ea4a38ddd6120647c2c153d71e675afc",
+            "bytes": 28870
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml",
+            "sha256": "34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd",
+            "bytes": 2247
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml",
+            "sha256": "38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55",
+            "bytes": 18175
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml",
+            "sha256": "8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d",
+            "bytes": 33211
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml",
+            "sha256": "c1438f246cb3963416b709da97c7e579e6cdde8234de4839b322c8e95a9671de",
+            "bytes": 4605
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-r1-review-ledger-append-v1.yaml",
+            "sha256": "e2eb12a33f7277d9ac9db893042da5fa44b7658b52d2c588106394d05d8c409e",
+            "bytes": 3524
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml",
+            "sha256": "389c9b0b70f58e435ffc57cb88dd40c012116f8cae43489e2b78d856b896cc5e",
+            "bytes": 13312
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-toolchain-validation-v2.yaml",
+            "sha256": "cf48abf5b24c8e21a74d3d90da982611c8246060a2bc4e79e9cdb4a62316336b",
+            "bytes": 11063
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-unapproved-engineering-draft-freeze-v1.yaml",
+            "sha256": "7f29f002e794bfc61e4f6daa610a32c0b5f4219d18291c63df400a9706b01f66",
+            "bytes": 6155
+          },
+          {
+            "path": "new pipeline/evidence/k0b-01-validation-v1.yaml",
+            "sha256": "8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f",
+            "bytes": 10903
+          },
+          {
+            "path": "new pipeline/receipts/d0-01-decision-baseline-approval.yaml",
+            "sha256": "3cff717a14ab3237263fbb3ee058b66d6e2a1cfb85de15b738e24dee4c31b06b",
+            "bytes": 4892
+          },
+          {
+            "path": "new pipeline/receipts/d0-04-legacy-relocation.yaml",
+            "sha256": "87d259ff0ccd016b7056e76321da7de0aa07f9a69df46a127eddd224f001f8ab",
+            "bytes": 4576
+          },
+          {
+            "path": "new pipeline/receipts/d0-06-fixture-reproducibility-v1.yaml",
+            "sha256": "dc3d9dead0e94e96a6c1dc3fd3bae4a06d407f351c34c13d407cf5d7e86dad57",
+            "bytes": 4474
+          },
+          {
+            "path": "new pipeline/receipts/k0a-00-layer-architecture-approval-v1.yaml",
+            "sha256": "98411d2a98ebfb3c941c3790aabb013cdd8572c1c4f090c6b18fb2c8ae9c4b34",
+            "bytes": 4957
+          },
+          {
+            "path": "new pipeline/registry/design-review-independence/v2.yaml",
+            "sha256": "8e99106881905e56bc505c3a9cb6037562eab62e7585abac29039d4d99ba9cc3",
+            "bytes": 2768
+          },
+          {
+            "path": "new pipeline/registry/hash-profiles/canonical-yaml-v1-status-v2.yaml",
+            "sha256": "88881da22308b4ed5cbcdb48a1fbd6669264d45eda00f3b6940176f77404e894",
+            "bytes": 3219
+          },
+          {
+            "path": "new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-contract-v1.yaml",
+            "sha256": "e091a9efb5d80c6727296230d043e508e60b3c5bc1a0f28c35ae8f281f0872f6",
+            "bytes": 4733
+          },
+          {
+            "path": "new pipeline/registry/hash-profiles/canonical-yaml-v1-verifier-toolchain-v1.yaml",
+            "sha256": "43f2778ebd28b0cbc44dead6752dd0b1d493acd42649ff0a9ec3e0fcb2e4ea0f",
+            "bytes": 1576
+          },
+          {
+            "path": "new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml",
+            "sha256": "46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992",
+            "bytes": 1668
+          },
+          {
+            "path": "new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml",
+            "sha256": "3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92",
+            "bytes": 17045
+          },
+          {
+            "path": "new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2.yaml",
+            "sha256": "bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675",
+            "bytes": 8766
+          },
+          {
+            "path": "new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml",
+            "sha256": "ce0b19cb99f13d0c2e9e7fbfb8892444cfc879ff6dc79fbd4cadcea79182845a",
+            "bytes": 20674
+          },
+          {
+            "path": "new pipeline/requests/pipeline-v2-governance-hardening-approval-request-v1.yaml",
+            "sha256": "1569b1ff1588713117b9b974383d18d2b9d34ee9b7f18bece3d2b489dd0108c2",
+            "bytes": 8087
+          },
+          {
+            "path": "new pipeline/reviews/k0a-03-external-rereview-corrected-v1.yaml",
+            "sha256": "65d90b54ff0b8fc7b1cc4b9c6c1e7e8693e0f2656963a9e88e432a6b109fe38b",
+            "bytes": 2265
+          },
+          {
+            "path": "new pipeline/reviews/k0b-01-human-only-review-v1.yaml",
+            "sha256": "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140",
+            "bytes": 8659
+          }
+        ],
+        "all_declared_hashes_match": true
+      },
+      "ledger_references": {
+        "source_ref": "current_conversation_owner_explicit_yes_permission_to_exact_11_read_only_scope_question",
+        "bound_validation_evidence_sha256": "6a99088259b11b111cbcd251d683bf07fca67b5f3155107dbebfe94ba5a64e24",
+        "actor": "workspace_owner",
+        "exact_path_count": 11,
+        "authorized": true,
+        "write_scope_expanded": false
+      }
+    },
+    "no_write_scope_expansion_from_supplements": true
+  },
+  "independent_design": {
+    "path": "new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml",
+    "sha256": "9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"
+  },
+  "baseline": {
+    "HEAD": "08eee4721b377b5e4dc0ab36b1537c284bf32f3a",
+    "tree": "39ff41f9636581a3e61e863bf119d19db758d14d",
+    "machine_state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "64648547d15ba066a37f7b9ab6efae90a55ca0c68292feefea1267c4a0ff97ea",
+      "bytes": 22957
+    },
+    "human_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "bb882d38e165cdd7f9e382f0120a76e03f42ba00c35b424af911e5ef5d44a3a4",
+      "bytes": 13997
+    },
+    "ledger_active_manifest": {
+      "root": "new pipeline/ledger/k0b01",
+      "path_count": 52,
+      "root_sha256": "6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff"
+    }
+  },
+  "selected_physical_design": {
+    "architecture": "validated_state_yaml_as_sole_source_with_fully_generated_committed_STATE_md",
+    "source_of_truth": "new pipeline/state/state.yaml",
+    "projection": "new pipeline/state/STATE.md",
+    "projection_version_after_transition": "2.0.0",
+    "complete_profile": "new pipeline/state/renderer/k0b01/projection-profile-v2.yaml",
+    "renderer": "new pipeline/state/renderer/k0b01/renderer.py",
+    "check_mode": "read_only_byte_and_semantic_equivalence",
+    "render_mode": "explicit_output_only",
+    "source_mutation": "forbidden",
+    "reverse_or_bidirectional_update": "forbidden",
+    "handwritten_normative_projection_sections": "forbidden",
+    "versioned_successor_authorized_here": true,
+    "reason_for_successor": "The design disposition did not claim the legacy handwritten projection was renderer-equivalent. This exact request authorizes projection version 2.0.0 and a fully generated successor at the existing authoritative projection path while preserving Git history of the legacy bytes."
+  },
+  "renderer_manifest": {
+    "path_count": 6,
+    "root_hash_profile": "SHA256(UTF8(sorted repository path + TAB + complete file SHA256 + TAB + decimal bytes + LF))",
+    "root_sha256": "8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96",
+    "files": [
+      {
+        "bytes": 2626,
+        "path": "new pipeline/state/renderer/k0b01/fixtures/golden/STATE-v1.md",
+        "sha256": "4533947bdbccdf5ba6672ca7bb92b1b4ed0dfcdbebd53203f7885baf6c2959da"
+      },
+      {
+        "bytes": 2193,
+        "path": "new pipeline/state/renderer/k0b01/fixtures/golden/state-v1.yaml",
+        "sha256": "7068f302e33325b9c5e56af8142c6e6e13875a35ce1bba09b6aef44da8aa484a"
+      },
+      {
+        "bytes": 2092,
+        "path": "new pipeline/state/renderer/k0b01/fixtures/negative/cases-v1.yaml",
+        "sha256": "01506a5641ea11282bb54d6e7008da7faa25b9fb3d6f649d15c09b0117e7ae70"
+      },
+      {
+        "bytes": 2859,
+        "path": "new pipeline/state/renderer/k0b01/projection-profile-v2.yaml",
+        "sha256": "1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f"
+      },
+      {
+        "bytes": 20730,
+        "path": "new pipeline/state/renderer/k0b01/renderer.py",
+        "sha256": "be2cdf9c06a106c731310f0de61d9b866adc3470aceb44f13e2b383b9e4e517e"
+      },
+      {
+        "bytes": 9002,
+        "path": "new pipeline/state/renderer/k0b01/test_renderer.py",
+        "sha256": "bd3fccd76205d0e4af266f62465d6085904c36e40d84cbee05f390bd53a106b2"
+      }
+    ]
+  },
+  "accepted_validation": {
+    "path": "new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml",
+    "sha256": "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960",
+    "status": "validated_renderer_in_two_clean_environments",
+    "renderer_validation_complete": true,
+    "environments": 2,
+    "tests_per_environment": 30,
+    "positive_and_determinism_per_environment": 10,
+    "negative_per_environment": 20,
+    "A_B_validation_summary_sha256": "5897b889d90cf64905ae4f316769071400dbaea0bca95bc929304d97c8c0a139",
+    "reused_Ruff_pytest": true,
+    "no_repeat_network_bootstrap_Ruff_or_pytest": true
+  },
+  "closed_toolchain": {
+    "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+    "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0"
+  },
+  "ledger_registration": {
+    "unit_id": "K0B01-STATE-RENDERER",
+    "gate_id": "G-K0B01-STATE-RENDERER",
+    "states": [
+      "declared",
+      "authorized",
+      "materialized",
+      "validated"
+    ],
+    "events": [
+      {
+        "event_id": "3001-state-renderer-declared-v1",
+        "resulting_state": "declared",
+        "predecessor": null,
+        "path": "new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml",
+        "sha256": "157d2c04c61f91b3d798f4c0ce84d3d00471597b3f8b70995de51fa67efac2db",
+        "bytes": 3553
+      },
+      {
+        "event_id": "3002-state-renderer-authorized-v1",
+        "resulting_state": "authorized",
+        "predecessor": {
+          "kind": "workspace_file",
+          "path": "new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml",
+          "sha256": "157d2c04c61f91b3d798f4c0ce84d3d00471597b3f8b70995de51fa67efac2db"
+        },
+        "path": "new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml",
+        "sha256": "3617fdee7dc482d78742045d87b4f025526621a8b0ce291a5840e2b3c9ef1a96",
+        "bytes": 3810
+      },
+      {
+        "event_id": "3003-state-renderer-materialized-v1",
+        "resulting_state": "materialized",
+        "predecessor": {
+          "kind": "workspace_file",
+          "path": "new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml",
+          "sha256": "3617fdee7dc482d78742045d87b4f025526621a8b0ce291a5840e2b3c9ef1a96"
+        },
+        "path": "new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml",
+        "sha256": "c74c9074919fa05b46bd415c721c7500ab17bac2f0b96167e2d8468a930fa8d9",
+        "bytes": 4740
+      },
+      {
+        "event_id": "3004-state-renderer-validated-v1",
+        "resulting_state": "validated",
+        "predecessor": {
+          "kind": "workspace_file",
+          "path": "new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml",
+          "sha256": "c74c9074919fa05b46bd415c721c7500ab17bac2f0b96167e2d8468a930fa8d9"
+        },
+        "path": "new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml",
+        "sha256": "b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5",
+        "bytes": 4723
+      }
+    ],
+    "subject_manifest_contract": "3003_subject_authority_references_validation_evidence_containing_the_exact_six_file_manifest_and_its_artifacts_list_binds_all_six_files",
+    "index": {
+      "path": "new pipeline/ledger/k0b01/index-v1.yaml",
+      "sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+      "bytes": 17032,
+      "event_count": 30,
+      "incident_count": 19,
+      "authoritative": false
+    },
+    "active_manifest": {
+      "root": "new pipeline/ledger/k0b01",
+      "path_count": 56,
+      "root_sha256": "a2fb3c09583f08f49e22b93791ae46f93e91b3c72d2fcce24e8580b6209c9674",
+      "algorithm": "SHA256_over_ordinal_path_sorted_forward_path_pipe_sha256_pipe_decimal_bytes_LF_lines"
+    },
+    "preservation": {
+      "baseline_files_preserved_byte_exact_excluding_approved_derived_index": 51,
+      "existing_events": 26,
+      "existing_fixtures": 22,
+      "schema_code_and_tests": 3,
+      "result": "pass"
+    },
+    "new_event_credit": {
+      "eligible": false,
+      "value": 0
+    },
+    "new_event_runtime_authority": "none",
+    "new_event_gate_closed": false,
+    "A_B_index_bytes_identical": true,
+    "A_B_validation_summary_bytes_identical": true,
+    "checks_at_record_freeze": {
+      "ledger_validate_and_build": [
+        {
+          "environment": "A",
+          "commands": [
+            {
+              "argv": [
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\Scripts\\python.exe",
+                "-B",
+                "-I",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+                "validate",
+                "--schema",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+                "--events",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+                "--repository-root",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+                "--output",
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\ledger-validation.json"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "output_sha256": "6a49efd1cc9666be4ebdae60e431ac2420c3c7c713a699893f38449dda3dc8fb",
+              "output_bytes": 217
+            },
+            {
+              "argv": [
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\Scripts\\python.exe",
+                "-B",
+                "-I",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+                "build-index",
+                "--schema",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+                "--events",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+                "--repository-root",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+                "--output",
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\index-candidate-v1.yaml"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "output_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+              "output_bytes": 17032
+            }
+          ],
+          "validation_summary": {
+            "closed_gates": [
+              "G-K0B01-HUMAN-SIGNOFF"
+            ],
+            "credited_event_count": 1,
+            "event_count": 30,
+            "human_signoff_state": "credited",
+            "implementation_invocation_count": 2,
+            "incident_count": 19,
+            "result": "pass",
+            "runtime_authorized": false
+          },
+          "index_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+        },
+        {
+          "environment": "B",
+          "commands": [
+            {
+              "argv": [
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\Scripts\\python.exe",
+                "-B",
+                "-I",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+                "validate",
+                "--schema",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+                "--events",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+                "--repository-root",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+                "--output",
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\ledger-validation.json"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "output_sha256": "6a49efd1cc9666be4ebdae60e431ac2420c3c7c713a699893f38449dda3dc8fb",
+              "output_bytes": 217
+            },
+            {
+              "argv": [
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\Scripts\\python.exe",
+                "-B",
+                "-I",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+                "build-index",
+                "--schema",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+                "--events",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+                "--repository-root",
+                "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+                "--output",
+                "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\index-candidate-v1.yaml"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "output_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+              "output_bytes": 17032
+            }
+          ],
+          "validation_summary": {
+            "closed_gates": [
+              "G-K0B01-HUMAN-SIGNOFF"
+            ],
+            "credited_event_count": 1,
+            "event_count": 30,
+            "human_signoff_state": "credited",
+            "implementation_invocation_count": 2,
+            "incident_count": 19,
+            "result": "pass",
+            "runtime_authorized": false
+          },
+          "index_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+        }
+      ],
+      "index_check": [
+        {
+          "environment": "A",
+          "argv": [
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\Scripts\\python.exe",
+            "-B",
+            "-I",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+            "check-index",
+            "--schema",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+            "--events",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--index",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml",
+            "--output",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-a\\index-check.json"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "output_sha256": "a21974b88fbbd0394298e53fa49aa29894ed3544a8483e276bd7cd963206b120",
+          "summary": {
+            "actual_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+            "expected_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+            "result": "pass"
+          }
+        },
+        {
+          "environment": "B",
+          "argv": [
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\Scripts\\python.exe",
+            "-B",
+            "-I",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py",
+            "check-index",
+            "--schema",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml",
+            "--events",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--index",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml",
+            "--output",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-state-renderer-v1-b\\index-check.json"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "output_sha256": "a21974b88fbbd0394298e53fa49aa29894ed3544a8483e276bd7cd963206b120",
+          "summary": {
+            "actual_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+            "expected_sha256": "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8",
+            "result": "pass"
+          }
+        }
+      ]
+    }
+  },
+  "state_transition_contract": {
+    "source": "new pipeline/state/state.yaml",
+    "projection": "new pipeline/state/STATE.md",
+    "before": {
+      "projection_version": "1.0.0",
+      "K0b_01_open_gate_ids": [
+        "G-K0B01-IMPLEMENTATION-DISPOSITION",
+        "G-K0B01-STATE-RENDERER"
+      ],
+      "remaining_open_prerequisites": 2
+    },
+    "after": {
+      "projection_version": "2.0.0",
+      "projection_profile": {
+        "path": "new pipeline/state/renderer/k0b01/projection-profile-v2.yaml",
+        "sha256": "1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f"
+      },
+      "generated_at": "2026-09-15T18:18:58.3868017+03:00",
+      "K0b_01_open_gate_ids": [
+        "G-K0B01-IMPLEMENTATION-DISPOSITION"
+      ],
+      "remaining_open_prerequisites": 1,
+      "closed_gate_added": "G-K0B01-STATE-RENDERER",
+      "K0b_01_status": "planning_approved_implementation_blocked",
+      "implementation_authority": "none",
+      "runtime_authority": "none"
+    },
+    "only_deltas": [
+      "set_projection_version_to_2_0_0",
+      "replace_projection_profile_path_and_hash_with_projection_profile_v2",
+      "set_generated_at_to_the_fixed_value_above",
+      "remove_G_K0B01_STATE_RENDERER_from_K0b_01_open_gate_ids",
+      "remove_only_G_K0B01_STATE_RENDERER_from_open_gates",
+      "add_G_K0B01_STATE_RENDERER_to_closed_gates_with_request_design_manifest_validation_ledger_and_closure_hashes",
+      "set_K0b_01_remaining_open_prerequisites_from_2_to_1"
+    ],
+    "STATE_md_is_exact_generated_projection_v2": true,
+    "legacy_projection_history_preserved": true,
+    "other_gate_records_and_statuses_unchanged": true
+  },
+  "acyclic_hash_graph": {
+    "validation_evidence_to_later_registration_hashes": false,
+    "closure_to_final_machine_state_hash": false,
+    "closure_to_final_STATE_md_hash": false,
+    "state_to_final_STATE_md_hash": false,
+    "any_artifact_to_containing_commit_SHA": false
+  },
+  "commit_contract": {
+    "commit_count": 1,
+    "exact_path_count": 16,
+    "exact_paths": [
+      "new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml",
+      "new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml",
+      "new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml",
+      "new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml",
+      "new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml",
+      "new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml",
+      "new pipeline/ledger/k0b01/index-v1.yaml",
+      "new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml",
+      "new pipeline/state/STATE.md",
+      "new pipeline/state/renderer/k0b01/fixtures/golden/STATE-v1.md",
+      "new pipeline/state/renderer/k0b01/fixtures/golden/state-v1.yaml",
+      "new pipeline/state/renderer/k0b01/fixtures/negative/cases-v1.yaml",
+      "new pipeline/state/renderer/k0b01/projection-profile-v2.yaml",
+      "new pipeline/state/renderer/k0b01/renderer.py",
+      "new pipeline/state/renderer/k0b01/test_renderer.py",
+      "new pipeline/state/state.yaml"
+    ],
+    "parent": "08eee4721b377b5e4dc0ab36b1537c284bf32f3a",
+    "message": "feat(pipeline-v2): establish K0b-01 state renderer prerequisite",
+    "trailers": {
+      "Approval_Request_SHA256": "0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2",
+      "Validation_Evidence_SHA256": "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960",
+      "Ledger_Registration_Event_SHA256": "b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5",
+      "Gate_Closure_Evidence_SHA256": "complete_file_SHA256_external_after_materialization"
+    }
+  },
+  "mandatory_containing_commit_preconditions": {
+    "final_projection_read_only_byte_and_semantic_check_A_B": "must_pass_after_state_transition_before_cleanup",
+    "all_new_and_modified_YAML_unique_keys": "must_pass",
+    "complete_hash_bindings": "must_match",
+    "exact_three_temp_targets_absent": "must_pass_after_cleanup",
+    "git_diff_check": "must_pass",
+    "exact_16_path_staged_set": "must_match",
+    "gate_effective_only_on_that_single_containing_commit": true
+  },
+  "exact_cleanup_contract": {
+    "targets": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-wheelhouse",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-a",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-state-renderer-v1-b"
+    ],
+    "recursive_removal_authorized": true,
+    "resolve_and_validate_each_absolute_exact_target_before_removal": true,
+    "order": "after_final_evidence_capture_and_read_only_projection_checks_before_exact_staging",
+    "actual_cleanup_results": "verified_at_precommit_and_reported_in_final_execution_report_not_self_embedded",
+    "any_other_target": "forbidden"
+  },
+  "same_scope_attempt_audit": {
+    "prior_attempts_bound_by_validation_evidence": {
+      "path": "new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml",
+      "sha256": "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960",
+      "section": "same_scope_attempts_and_corrections",
+      "attempts": [
+        {
+          "attempt": "initial_source_shape_inventory",
+          "result": "unsupported_scalar_for_existing_section_18_3_float",
+          "correction": "support_existing_number_scalar_in_renderer_shape_inventory",
+          "effects": "authorized_renderer_implementation_only"
+        },
+        {
+          "attempt": "nested_Python_diagnostic_invocation",
+          "result": "PowerShell_quoting_parse_failure",
+          "correction": "compatible_quoting_wrapper",
+          "effects": "none"
+        },
+        {
+          "attempt": "initial_golden_render",
+          "result": "source_shape_mismatch_after_numeric_placeholder_SHA_became_string",
+          "correction": "recalculate_golden_shape_profile_fingerprint_and_profile_hash_references",
+          "effects": "authorized_profile_and_golden_fixture_only"
+        },
+        {
+          "attempt": "second_golden_render",
+          "result": "pass",
+          "exit_code": 0,
+          "effects": "authorized_golden_projection_output"
+        },
+        {
+          "attempt": "first_A_Ruff_lint",
+          "result": "pass",
+          "exit_code": 0,
+          "effects": "none"
+        },
+        {
+          "attempt": "A_Ruff_format_diff",
+          "result": "two_files_require_formatting",
+          "exit_code": 1,
+          "invocation_count": 2,
+          "correction": "capture_read_only_diff_and_apply_exact_format_hunks_with_apply_patch",
+          "effects": "format_only_renderer_py_and_test_renderer_py"
+        },
+        {
+          "attempt": "missing_read_scope_inventory_via_PowerShell_native_python_c",
+          "result": "SyntaxError_due_to_native_double_quote_stripping",
+          "exit_code": 1,
+          "correction": "base64_encoded_same_script_transport",
+          "effects": "none_on_failed_attempt"
+        },
+        {
+          "attempt": "missing_read_scope_inventory_base64_transport",
+          "result": "pass",
+          "exit_code": 0,
+          "effects": "read_source_and_six_artifacts_only_no_referenced_target_reads"
+        },
+        {
+          "attempt": "standalone_golden_capture_first_try_A_and_B",
+          "result": "argparse_unrecognized_split_output_argument",
+          "exit_code": 2,
+          "correction": "parenthesize_temp_path_concatenation_inside_PowerShell_argv_array",
+          "effects": "no_renderer_output_written"
+        },
+        {
+          "attempt": "standalone_golden_capture_second_try_A_and_B",
+          "result": "pass",
+          "exit_code": 0,
+          "effects": "two_projection_outputs_and_capture_JSON_inside_each_exact_temp_target"
+        },
+        {
+          "attempt": "Git_read_only_status_and_diff_preflight",
+          "result": "pass_with_permission_warnings_for_ambient_user_ignore_file",
+          "exit_code": 0,
+          "correction": "none_required_for_read_only_results",
+          "effects": "no_workspace_or_index_write"
+        },
+        {
+          "attempt": "Git_status_and_diff_with_temporary_core_excludesFile_NUL",
+          "result": "fatal_cannot_use_NUL_as_an_exclude_file",
+          "correction": "use_empty_command_local_core_excludesFile_value_and_check_each_exit_code",
+          "effects": "none_no_persistent_Git_configuration_change"
+        },
+        {
+          "attempt": "Git_status_and_diff_with_temporary_empty_core_excludesFile",
+          "result": "pass_tracked_changes_0_staged_changes_0_exact_expected_untracked_paths_8_diff_check_pass",
+          "exit_code": 0,
+          "effects": "none_no_persistent_Git_configuration_change"
+        },
+        {
+          "attempt": "read_sample_event_using_incorrect_existing_filename",
+          "result": "Get_Content_path_not_found",
+          "effects": "none",
+          "correction": "rg_files_locates_existing_0004_human_signoff_validated_filename"
+        },
+        {
+          "attempt": "authoritative_pre_transition_candidate_A_B",
+          "result": "render_twice_and_read_only_check_pass_all_exit_codes_0",
+          "effects": "candidate_source_two_projections_and_capture_JSON_only_within_exact_A_B_temp_targets"
+        },
+        {
+          "attempt": "saved_environment_reuse_verification",
+          "result": "six_artifact_hashes_12_wheel_hashes_and_installed_package_versions_match",
+          "effects": "read_only_no_Ruff_pytest_network_or_bootstrap_repeat"
+        },
+        {
+          "attempt": "canonical_validation_summary_A_B",
+          "result": "byte_identical_SHA256_5897b889d90cf64905ae4f316769071400dbaea0bca95bc929304d97c8c0a139",
+          "effects": "summary_JSON_only_under_A_B_temp_targets"
+        },
+        {
+          "attempt": "replace_validation_evidence_from_PowerShell_default_decoded_Get_Content",
+          "result": "apply_patch_context_verification_failed_due_to_UTF8_non_ASCII_source_reference_decoding",
+          "effects": "none_no_partial_write",
+          "correction": "explicit_UTF8_Get_Content_and_ASCII_source_reference"
+        }
+      ]
+    },
+    "finalization_attempts_after_validation_freeze": [
+      {
+        "attempt": "exact_11_read_only_reference_checks_and_saved_pin_preflight",
+        "result": "pass_all_11_hashes_match",
+        "effects": "read_only"
+      },
+      {
+        "attempt": "four_append_only_ledger_events",
+        "result": "created_exact_3001_to_3004_chain",
+        "effects": "four_authorized_event_paths_only"
+      },
+      {
+        "attempt": "A_B_ledger_validate_and_build_index",
+        "result": "all_exit_codes_0_outputs_byte_identical",
+        "effects": "exact_A_B_temp_outputs_only"
+      },
+      {
+        "attempt": "deterministic_index_replacement",
+        "result": "candidate_identical_in_A_B",
+        "effects": "authorized_index_v1_only"
+      },
+      {
+        "attempt": "A_B_check_index",
+        "result": "all_exit_codes_0_expected_and_actual_hashes_match",
+        "effects": "exact_A_B_temp_outputs_only"
+      }
+    ],
+    "additional_technical_retries_through_closure_freeze": [],
+    "post_freeze_same_scope_retries_disclosure": "final_execution_report"
+  },
+  "remaining_gate": "G-K0B01-IMPLEMENTATION-DISPOSITION",
+  "remaining_gate_must_close_last": true,
+  "retained_non_authorizations": [
+    "no_change_to_ledger_schema_ledger_py_test_ledger_or_existing_events_and_fixtures",
+    "no_ledger_event_state_beyond_validated",
+    "no_ledger_credit_runtime_authority_or_index_authority",
+    "no_gate_closure_other_than_G_K0B01_STATE_RENDERER",
+    "no_final_implementation_disposition",
+    "no_K0b_01_runtime_product_contract_registry_migration_prompt_checkpoint_or_model_call",
+    "no_existing_project_test_collection",
+    "no_temp_network_package_or_version_beyond_the_exact_declared_scope",
+    "no_commit_other_than_the_exact_single_16_path_commit",
+    "no_push_PR_merge_deploy_release_or_other_remote_write",
+    "no_F15_size_stress_phase_completion_or_CI_execution_claim",
+    "no_access_to_old_pipeline_projects_research_product_workspaces_or_external_attachments"
+  ],
+  "integrity": {
+    "complete_file_sha256": "external_post_materialization"
+  }
+}

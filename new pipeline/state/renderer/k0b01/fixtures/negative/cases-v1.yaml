@@ -1,0 +1,24 @@
+fixture_id: pipeline-v2-state-renderer-negative-cases-v1
+schema_version: 1
+status: non_authoritative_test_fixture
+cases:
+  - {case_id: unsupported-source-schema, group: source, expected_error: "source:schema_version"}
+  - {case_id: unsupported-profile-schema, group: profile, expected_error: "profile:schema_version"}
+  - {case_id: unknown-profile-field, group: profile, expected_error: "profile:fields"}
+  - {case_id: unknown-source-field, group: source, expected_error: "source:top_fields"}
+  - {case_id: missing-source-field, group: source, expected_error: "source:top_fields"}
+  - {case_id: duplicate-work-item-id, group: source, expected_error: "source:duplicate_work_item_id"}
+  - {case_id: unsorted-work-item-sequence, group: source, expected_error: "source:sequence_order"}
+  - {case_id: duplicate-open-gate-id, group: source, expected_error: "source:duplicate_open_gate_id"}
+  - {case_id: open-closed-gate-overlap, group: source, expected_error: "source:gate_overlap"}
+  - {case_id: work-item-missing-global-gate, group: source, expected_error: "source:work_item_gate_missing"}
+  - {case_id: invalid-open-gate-status, group: source, expected_error: "source:open_gate_status"}
+  - {case_id: invalid-closed-gate-status, group: source, expected_error: "source:closed_gate_status"}
+  - {case_id: broken-repository-reference, group: source, expected_error: "source:reference_missing"}
+  - {case_id: repository-reference-hash-mismatch, group: source, expected_error: "source:reference_hash"}
+  - {case_id: unknown-work-item-field, group: source, expected_error: "source:work_item_fields"}
+  - {case_id: missing-work-item-field, group: source, expected_error: "source:work_item_fields"}
+  - {case_id: source-only-change, group: projection, expected_error: "projection:byte_mismatch"}
+  - {case_id: projection-only-change, group: projection, expected_error: "projection:byte_mismatch"}
+  - {case_id: extra-normative-claim, group: projection, expected_error: "projection:byte_mismatch"}
+  - {case_id: malformed-projection-fence, group: projection, expected_error: "projection:byte_mismatch"}

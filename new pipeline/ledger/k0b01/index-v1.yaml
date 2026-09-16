@@ -1,4 +1,4 @@
-event_count: 26
+event_count: 30
 events:
   - artifact_count: 0
     checkpoint_budget_phase: K0b-runtime-operational
@@ -338,6 +338,58 @@ events:
     gate_id: G-K0B01-IMPLEMENTATION-LEDGER
     resulting_state: declared
     unit_id: K0B01-IMPLEMENTATION-LEDGER
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3001-state-renderer-declared-v1
+    event_path: new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml
+    event_sha256: 157d2c04c61f91b3d798f4c0ce84d3d00471597b3f8b70995de51fa67efac2db
+    event_type: implementation_invocation
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: declared
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3002-state-renderer-authorized-v1
+    event_path: new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml
+    event_sha256: 3617fdee7dc482d78742045d87b4f025526621a8b0ce291a5840e2b3c9ef1a96
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: authorized
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 6
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3003-state-renderer-materialized-v1
+    event_path: new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml
+    event_sha256: c74c9074919fa05b46bd415c721c7500ab17bac2f0b96167e2d8468a930fa8d9
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: materialized
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 6
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3004-state-renderer-validated-v1
+    event_path: new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml
+    event_sha256: b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: validated
+    unit_id: K0B01-STATE-RENDERER
 generated_index_authoritative: false
 grants_authority_credit_or_runtime_effect: false
 index_id: pipeline-v2.k0b01-ledger-index-v1

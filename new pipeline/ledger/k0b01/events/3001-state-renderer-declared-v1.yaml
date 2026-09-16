@@ -1,0 +1,40 @@
+schema_profile_version: 1
+event_id: 3001-state-renderer-declared-v1
+unit_id: K0B01-STATE-RENDERER
+gate_id: G-K0B01-STATE-RENDERER
+checkpoint_budget_phase: K0b-runtime-operational
+event_type: implementation_invocation
+resulting_state: declared
+predecessor: null
+dependencies:
+  - {"kind":"workspace_file","path":"new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml","sha256":"9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"}
+  - {"kind":"workspace_file","path":"new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml","sha256":"060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212"}
+  - {"kind":"workspace_file","path":"new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml","sha256":"cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f"}
+materialization_authority:
+  request: {"kind":"workspace_file","path":"new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml","sha256":"0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2"}
+  confirmation: {"source":"current_conversation_owner_exact_hash_and_full_state_renderer_request_confirmation","repeated_request_sha256":"0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2","exact_match":true,"exact_scope_authorized":true,"actor":"workspace_owner"}
+subject_authority: {"kind":"workspace_file","path":"new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml","sha256":"9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"}
+artifacts: []
+evidence: [{"kind":"workspace_file","path":"new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml","sha256":"9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"}]
+budget_snapshot:
+  assumed_mean_object_bytes: 372736
+  nominal_expected_bytes: 2236416
+  forecast_worst_by_count_bytes: 4472832
+  size_stressed_bytes: 7864320
+  max_publication_bytes: 22020096
+  worst_case_object_count: 12
+  runtime_phase_publications: 34
+  input_provenance: {kind: workspace_file, path: new pipeline/ledger/k0b01/schema-profile-v1.yaml, sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a}
+  source_provenance:
+    updated_forecast_v3: {kind: workspace_file, path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml, sha256: ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a}
+    forecast_binary_reconciliation_v3: {kind: workspace_file, path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml, sha256: d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb}
+    binary_size_recalculation_v1: {kind: workspace_file, path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml, sha256: 5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1}
+  input_sha256: 3ced6adbfd4235b6a853b212a54fdbedb27a6d2ee4b4bf9ada0110ac111e3a95
+  runtime_phase_publications_reforecast_sensitive: true
+  f15_authoritative_worst_case_object_count: null
+  f15_authority: null
+  f15_size_stress_claim: false
+  phase_completion_claim: false
+credit: {eligible: false, value: 0}
+reason: {"zero_credit":"implementation_invocation_no_credit","stale":null,"rejection":null,"supersession":null}
+historical: {"recorder":"state_renderer_ledger_materializer","classification":"exact_authorized_state_renderer_declared_no_closure","containing_commit":null,"gate_closed":false,"implementation_authority":"exact_technical_renderer_prerequisite_scope_only","runtime_authority":"none"}

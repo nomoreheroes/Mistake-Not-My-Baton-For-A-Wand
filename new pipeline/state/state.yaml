@@ -1,12 +1,12 @@
 state_id: pipeline-v2-program-state
 schema_version: 1
-projection_version: "1.0.0"
-generated_at: "2026-09-15T17:03:18.7002452+03:00"
+projection_version: "2.0.0"
+generated_at: "2026-09-15T18:18:58.3868017+03:00"
 status: K0b_01_planning_approved_with_open_implementation_prerequisites
 
 projection_profile:
-  path: new pipeline/state/state-projection-profile-v1.yaml
-  sha256: 7032748afe3e99d3d3b649e6a5ffbf867f57e188357d1c193134eabb67dcd28d
+  path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+  sha256: 1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f
 
 baseline:
   pre_remediation_HEAD: a031ee56a36cf794646643b67270c6e0f7092e08
@@ -143,7 +143,6 @@ work_items:
     authority_sha256: 4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4
     open_gate_ids:
       - G-K0B01-IMPLEMENTATION-DISPOSITION
-      - G-K0B01-STATE-RENDERER
   - sequence: 12
     work_item_id: K0b-02
     status: blocked
@@ -181,11 +180,6 @@ open_gates:
     status: open_blocking
     blocks: [K0b-01_implementation]
     closure_condition: later_exact_hash_bound_owner_disposition_defines_new_write_and_validation_sets
-  - gate_id: G-K0B01-STATE-RENDERER
-    owner: Pipeline_governance
-    status: open_blocking
-    blocks: [K0b-01_implementation]
-    closure_condition: deterministic_renderer_and_projection_equivalence_check_exist
   - gate_id: G-K0B02-K0B01-COMPLETE
     owner: K0b-01
     status: blocked_by_predecessor
@@ -280,6 +274,20 @@ closed_gates:
       selected_phase_pack_bytes: 1033895936
       phase_margin_bytes: 39845888
 
+  - gate_id: G-K0B01-STATE-RENDERER
+    status: closed
+    closure_evidence:
+      approval_request: {"path":"new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml","sha256":"0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2"}
+      design: {"path":"new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml","sha256":"9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"}
+      renderer_manifest: {"root":"new pipeline/state/renderer/k0b01","path_count":6,"root_sha256":"8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96"}
+      complete_validation: {"path":"new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml","sha256":"5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960","environments":2,"tests_per_environment":30}
+      ledger_registration:
+        validated_event: {"path":"new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml","sha256":"b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5"}
+        index: {"path":"new pipeline/ledger/k0b01/index-v1.yaml","sha256":"2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8","event_count":30}
+        active_manifest: {"root":"new pipeline/ledger/k0b01","path_count":56,"root_sha256":"a2fb3c09583f08f49e22b93791ae46f93e91b3c72d2fcce24e8580b6209c9674"}
+      gate_closure: {"path":"new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml","sha256":"531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"}
+      projection_profile: {"path":"new pipeline/state/renderer/k0b01/projection-profile-v2.yaml","sha256":"1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f"}
+
 status_index:
   - path: new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml
     sha256: 46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992
@@ -314,7 +322,7 @@ scope:
   K0b_01_human_signoff_status: complete_approve_with_five_non_blocking_findings
   K0b_01_human_signoff_carry_forward_ids: [K0B01-HR-NB01, K0B01-HR-NB02, K0B01-HR-NB03, K0B01-HR-NB04, K0B01-HR-NB05]
   K0b_01_toolchain_status: complete_local_two_environment_validation_CI_not_claimed
-  K0b_01_remaining_open_prerequisites: 2
+  K0b_01_remaining_open_prerequisites: 1
   K0b_B02_status: complete
   canonical_payload_verification_status: active_machine_verified
   canonical_payload_historical_claims_status: 6_primary_and_4_derivative_matches_with_zero_discrepancies
