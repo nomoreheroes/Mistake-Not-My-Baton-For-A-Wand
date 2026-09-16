@@ -1,0 +1,730 @@
+document_id: pipeline-v2.k0b-01.final-implementation-owner-disposition-v2
+schema_version: 1
+version: 2.0.0
+recorded_at_UTC: '2026-09-16T14:14:43.365262+00:00'
+work_item_id: K0b-01
+status: approved_bounded_implementation_effective_after_phase_A_containing_commit
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+    complete_file_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+  separate_owner_confirmation:
+    source_ref: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    actor: workspace_owner
+    repeated_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_match: true
+    exact_scope_authorized: true
+    cryptographic_identity_authenticated: false
+  confirmation_protocol:
+    path: new pipeline/registry/authority-confirmation/v1.yaml
+    sha256: "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd"
+  residual_risk: conversational identity is not cryptographically authenticated; exact hash repetition identifies request
+    bytes only
+baseline_verification:
+  HEAD: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+  tree: 978b279e6d92ac6283d4a3b5b7f47e374ab46e2c
+  state_source:
+    path: new pipeline/state/state.yaml
+    sha256: "cb2f19b425974b8e46748d561615e230d3b4ef729c5c7576f47f78b3f6c19f7c"
+    bytes: 24469
+  state_projection:
+    path: new pipeline/state/STATE.md
+    sha256: "5ceace2b0e678c76d71c2cf865c3afefff56d49fcb4e696261c6884abcecf311"
+    bytes: 24902
+  active_ledger_manifest_root:
+    sha256: "a2fb3c09583f08f49e22b93791ae46f93e91b3c72d2fcce24e8580b6209c9674"
+    algorithm: SHA256_of_ordinal_path_sorted_path_pipe_sha256_pipe_bytes_LF
+  renderer_v2_manifest_root:
+    sha256: "8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96"
+    algorithm: SHA256_of_ordinal_path_sorted_path_TAB_sha256_TAB_bytes_LF
+  input_pins_verified: 193
+  new_targets_absent: 66
+  exact_temp_targets_absent: 3
+  index_empty: true
+  unrelated_changes: false
+  active_commit_hooks_or_signing: false
+  stale_conditions: []
+normative_inputs:
+  - path: new pipeline/architecture/k0b-01-planning-package-v1.md
+    sha256: "028aa3e3667ff55f92a732d3b2424c704bdb0eaa81268a49c7505cfaa9a2e85f"
+    bytes: 28364
+  - path: new pipeline/architecture/k0b-01-planning-package-v1.1.md
+    sha256: "14449871269f237cc90fb61a6946a7f92c6f7a93635fd49b8652ce3311319429"
+    bytes: 16605
+  - path: new pipeline/architecture/k0b-01-planning-package-v1.2.md
+    sha256: "f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff"
+    bytes: 23529
+  - path: new pipeline/architecture/k0b-01-planning-package-v1.3.md
+    sha256: "4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4"
+    bytes: 15415
+  - path: new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml
+    sha256: "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d"
+    bytes: 15509
+  - path: new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml
+    sha256: "349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6"
+    bytes: 3465
+  - path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml
+    sha256: "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+    bytes: 3745
+  - path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml
+    sha256: "be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6"
+    bytes: 17687
+  - path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml
+    sha256: "e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d"
+    bytes: 26952
+  - path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+    sha256: "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140"
+    bytes: 8659
+  - path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml
+    sha256: "34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd"
+    bytes: 2247
+  - path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+    sha256: "060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212"
+    bytes: 5972
+  - path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    sha256: "cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f"
+    bytes: 10334
+  - path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+    sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+    bytes: 41773
+independent_planning_reviews:
+  migration_r1:
+    path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml
+    sha256: "be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6"
+    exact_subject: planning_package_v1_2
+    recommendation: approve
+    open_blocking_findings: 0
+  compiler_budget_r1:
+    path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml
+    sha256: "e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d"
+    exact_subject: planning_package_v1_2
+    recommendation: approve
+    open_blocking_findings: 0
+  not_a_model_review_of_v1_3_or_implementation: true
+human_signoff:
+  path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+  sha256: "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140"
+  subject: exact_v1_3_and_selected_B02_A
+  verdict: APPROVE
+  blocking_findings: 0
+  non_blocking_findings: 5
+  carry_forward:
+    classifications: preserve_all_five_as_non_blocking_not_new_reviews
+    IDs:
+      - K0B01-HR-NB01
+      - K0B01-HR-NB02
+      - K0B01-HR-NB03
+      - K0B01-HR-NB04
+      - K0B01-HR-NB05
+    obligations: exact_human_review_required_carry_forward_without_reclassification
+five_gate_inventory:
+  - gate_id: G-K0B01-HUMAN-SIGNOFF
+    initial_status: closed
+    authoritative_evidence: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml
+    evidence_sha256: "34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd"
+    verified_status: closed_in_hash_verified_prestate
+  - gate_id: G-K0B01-TOOLCHAIN
+    initial_status: closed
+    authoritative_evidence: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+    evidence_sha256: "060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212"
+    verified_status: closed_in_hash_verified_prestate
+  - gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    initial_status: closed
+    authoritative_evidence: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+    evidence_sha256: "cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f"
+    verified_status: closed_in_hash_verified_prestate
+  - gate_id: G-K0B01-STATE-RENDERER
+    initial_status: closed
+    authoritative_evidence: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+    evidence_sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+    verified_status: closed_in_hash_verified_prestate
+  - gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+    initial_status: open_blocking
+    proposed_closure: phase_A_containing_commit_after_every_other_K0b_01_gate_is_verified_closed
+effect:
+  closes_only_gate: G-K0B01-IMPLEMENTATION-DISPOSITION
+  gate_closure_effective: only_on_verified_phase_A_containing_commit_after_four_prerequisites_closed
+  implementation_authority: bounded_K0b_01_exact_phase_B_scope_only
+  implementation_entry: verified_phase_A_commit_and_immutable_allocation_and_five_closed_gates
+  implementation_completion: requires_full_phase_B_validation_not_inferred_from_this_disposition
+  runtime_authority: none
+implementation_budget:
+  implementation_package_id: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2
+  implementation_session_id: K0B01-IMPL-V2-SESSION-001
+  authorized_implementation_sessions: 1
+  implementation_session_starts: after_verified_phase_A_containing_commit
+  technical_governance_phase_A_is_not_product_implementation_session: true
+  same_scope_technical_continuations_and_retries: part_of_the_same_bounded_session
+  additional_design_reviews: 0
+  independent_agents_or_review_dispatches: 0
+  physical_runtime_model_calls_nominal: 0
+  physical_runtime_model_calls_worst_case: 0
+  provider_API_calls: 0
+  manual_VSCode_model_dispatches: 0
+  deterministic_local_tools: allowed_only_inside_the_scopes_below
+  ordinary_current_assistant_turns: not_fabricated_as_physical_runtime_or_design_review_receipts
+  model_identity_if_not_observable: unknown
+  exact_model_API_cost_if_not_observable: unknown
+  historical_implementation_invocation_costs_or_ordinals: not_invented_or_reallocated
+  design_runtime_implementation_or_checkpoint_credit: 0
+exact_implementation_write_set:
+  - new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+  - new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+  - new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+  - new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+  - new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+  - new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+  - new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+  - new pipeline/harness/migrations/0004_k0b01_v2.sql
+  - new pipeline/harness/k0b01_v2/__init__.py
+  - new pipeline/harness/k0b01_v2/contract.py
+  - new pipeline/harness/k0b01_v2/canonical.py
+  - new pipeline/harness/k0b01_v2/registry_compiler.py
+  - new pipeline/harness/k0b01_v2/budget_compiler.py
+  - new pipeline/harness/k0b01_v2/binary_budget.py
+  - new pipeline/harness/k0b01_v2/digest.py
+  - new pipeline/harness/k0b01_v2/store.py
+  - new pipeline/harness/k0b01_v2/cli.py
+  - new pipeline/tests/contracts/test_k0b01_v2_contracts.py
+  - new pipeline/tests/contracts/test_k0b01_v2_routing_compiler.py
+  - new pipeline/tests/contracts/test_k0b01_v2_resource_budget.py
+  - new pipeline/tests/foundation/test_k0b01_v2_migration.py
+  - new pipeline/tests/k0b01_v2/independent_oracle.py
+  - new pipeline/tests/k0b01_v2/migration_fault_worker.py
+  - new pipeline/tests/k0b01_v2/fixtures/reference-expected-v1.json
+  - new pipeline/tests/k0b01_v2/fixtures/coverage-catalog-v1.json
+  - new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml
+  - new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+  - new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+  - new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+  - new pipeline/ledger/k0b01/index-v1.yaml
+  - new pipeline/state/state.yaml
+  - new pipeline/state/STATE.md
+exact_implementation_read_scope:
+  inherited_request_path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+  inherited_complete_file_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+  section: read_scope
+  semantic_file_count: 175
+  frozen_hash_only_count: 18
+  no_transitive_expansion: true
+implementation_contract:
+  entry:
+    no_product_write_before_phase_A_commit: true
+    expected_HEAD: exact_observed_verified_phase_A_commit
+    expected_parent_of_phase_A: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+    index_expected: empty
+    workspace_expected: clean_except_in_scope_new_phase_B_files_after_entry
+    all_five_K0b_01_gates: closed
+    final_disposition_and_allocation: committed_hashes_unchanged
+    create_first:
+      - new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+      - new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+    input_manifest: Complete-file pins for exact authority chain, phase-A commit and disposition, preserved K0a migrations/readers/contracts,
+      forecast/reconciliation/B02, closed toolchain, source locators and output/canonicalization/schema identities. Authority
+      hashes belong in this data document, never copied into Python. New source hashes are frozen in validation's artifact
+      manifest before accepted validation; no future/self hash cycle is introduced into the entry manifest.
+    session_entry: Actual start timestamp, actor, observable model identity or unknown, input manifest hash, exact authorized
+      writes and session allocation; no premature end/output/test/cost claim. Immutable after it is referenced.
+  source_contract:
+    event_schemas: exactly_21_self_contained_closed_JSON_Schema_files_from_exact_write_set
+    schema_refs: no_external_network_or_shared_path_sensitive_ref
+    validators: bounded_supported_JSON_Schema_subset_fail_closed_on_unknown_keywords_no_new_dependency
+    canonical_truth_source: new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+    authoritative_event_route_matrix: exact_v1_2_section_6_and_v1_3_single_source_contract
+    retained_F00_types:
+      - command.received
+      - run.started
+      - artifact.version_created
+      - handoff.ready
+      - run.completed
+    total_event_types: 21
+    event_registry_fields: type_version_schema_ID_SHA_producer_subscribers_or_terminal_fields_read_activation_replay_idempotency_disposition
+    retained_F00_branch: exact_historical_package_only_no_Alpha_bootstrap_sink
+    terminal_error_policy: block_run_and_enqueue_human
+    terminal_incident_policy: persist_incident_and_enqueue_W5
+    exactly_five_routes:
+      - s.alpha0.compiled_nominal.v1
+      - s.alpha0.layer0_fallback.v1
+      - s.alpha0.f04.parallel_review.v1
+      - s.alpha0.f05.revision.v1
+      - s.alpha0.blocked.v1
+    F04_members:
+      - fixture.alpha0.primary_reviewer
+      - fixture.alpha0.adversarial_reviewer
+    F04_barrier: all_required
+    F05_revision_owner: fixture.alpha0.upstream_zero
+    F05_owner_and_producer_identity: distinct
+    future_interfaces: compile_static_only_activation_fenced_to_K0b_02_K0b_03_K0b_04
+    Python_embedded_truth_tables_or_authority_SHA_constants: forbidden
+    event_subscription_route_outputs: compiler_outputs_only_not_parallel_authored_inputs
+  compiler_partition:
+    receipt_A: new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+    receipt_A_owns:
+      - compiled_artifact_event_profile
+      - compiled_event_reachability_graph
+      - compiled_subscription_terminal_snapshot
+      - compiled_s_route_table_v2
+      - compiled_fanout_barrier_profile
+    receipt_B: new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+    receipt_B_owns:
+      - compiled_resource_forecast
+      - compiled_checkpoint_phase_partition_v1
+      - compiled_checkpoint_publication_budget_v2
+    receipt_B_binds: accepted_complete_receipt_A_SHA_and_exact_five_A_output_hashes
+    reverse_A_to_B_binding: forbidden
+    aggregate: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+    aggregate_output_families: exactly_eight_no_overlap_omission_or_extra
+    canonicalization: closed_ordinal_order_canonical_JSON_payloads_UTF8_LF_one_final_LF_no_time_locale_absolute_paths
+    deterministic_receipts: real_YAML_with_canonical_payload_hashes_identical_A_and_B_environment_bytes
+    output_persistence: Test compiled payload files remain in exact temp subtrees only. Committed receipts/manifest contain
+      sufficient canonical payload/provenance and hashes to inspect the eight outputs after cleanup, not dangling temp-file
+      authority.
+  budget_inputs:
+    assumed_mean_object_bytes: 372736
+    nominal_object_count: 6
+    worst_case_object_count: 12
+    hard_per_object_bytes: 655360
+    nominal_expected_bytes: 2236416
+    forecast_worst_by_count_bytes: 4472832
+    size_stressed_bytes: 7864320
+    non_binary_worst_bytes: 22020096
+    unrounded_size_stressed_checkpoint_bytes: 29884416
+    rounded_size_stressed_checkpoint_bytes: 30408704
+    runtime_phase_publications: 34
+    size_stressed_phase_pack_bytes: 1033895936
+    phase_margin_bytes: 39845888
+    checkpoint_hard_bytes: 104857600
+    phase_pack_hard_bytes: 1073741824
+    warning_bytes: 536870912
+    publication_batch_cap: 12
+    planning_pack_factor: 1.0_exact
+    all_credit: 0
+    exact_checkpoint_phase_order:
+      - K0b-runtime-operational
+      - K0b-F15-exact-measurement
+    historical_mean_forecasts: match_literal_authoritative_vectors_but_never_credit_size_stress
+    runtime_aggregate_limit: exact_bound_policy_input_no_inferred_or_relaxed_limit
+    actual_objects: enforce_each_object_at_or_below_per_object_limit_and_aggregate_at_or_below_aggregate_limit
+    checkpoint_and_phase_hard: strictly_below_exact_hard_exactly_hard_blocks
+    publication_34: exact_reforecast_sensitive_input_any_change_requires_new_bound_recalculation
+    F15_authoritative_worst_case_object_count: null
+    F15_size_stress_or_phase_completion_without_count: fail_closed_no_claim
+    provenance_required: exact_forecast_v3_reconciliation_v3_B02_recalculation_paths_and_complete_hashes
+    human_attention_and_call_tiers: exact_inherited_plan_package_rules_not_phase_labels_or_missing_as_zero
+    independent_reference_expected_file: new pipeline/tests/k0b01_v2/fixtures/reference-expected-v1.json
+    production_reference_inputs: new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+    independent_oracle: new pipeline/tests/k0b01_v2/independent_oracle.py
+    production_access_to_expected_outputs_or_oracle: forbidden
+  human_signoff_carry_forward:
+    classifications: preserve_all_five_as_non_blocking_not_new_reviews
+    IDs:
+      - K0B01-HR-NB01
+      - K0B01-HR-NB02
+      - K0B01-HR-NB03
+      - K0B01-HR-NB04
+      - K0B01-HR-NB05
+    obligations: exact_human_review_required_carry_forward_without_reclassification
+  migration:
+    new_source_path: new pipeline/harness/migrations/0004_k0b01_v2.sql
+    logical_identity: 0004_k0b01
+    versioned_locator_supersession: Use this new reviewed-plan implementation locator, not frozen 0004_k0b01.sql. The logical
+      v4 identity remains 0004_k0b01; new complete migration hash is derived from the new file and pinned in the implementation
+      evidence.
+    old_migrations: exact_v1_v2_v3_SHA_chain_preserved
+    platform: exact_declared_platform_only_no_portability_claim
+    allowed_runtime_roots:
+      environment_A: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/runtime
+      environment_B: C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/runtime
+    source_backup_restore_scope: disposable_synthetic_DBs_inside_matching_verified_runtime_root_only
+    guard_rejections: equal_or_outside_root_root_identity_mismatch_reparse_escape_missing_parent_source_backup_identity_existing_backup
+    settings_order:
+      busy_timeout_5000_recursive_triggers_ON_legacy_alter_table_OFF_WAL_FULL_readback_checkpoint_TRUNCATE_zero_busy_FK_OFF_before_BEGIN
+    transaction: one_BEGIN_IMMEDIATE_all_rebuild_mutations_and_precommit_verifications
+    rebuild_tables:
+      - runs
+      - events
+      - run_state_transitions
+      - event_deliveries
+    stage_suffix: __k0b01_new
+    staged_foreign_key_targets: final_table_names
+    copy_order:
+      - runs
+      - events
+      - run_state_transitions
+      - event_deliveries
+    copy_columns: explicit_historical_columns_no_SELECT_star_cast_default_or_normalization
+    drop_order:
+      - event_deliveries
+      - run_state_transitions
+      - events
+      - runs
+    rename_order:
+      - runs
+      - events
+      - run_state_transitions
+      - event_deliveries
+    rename_OLD_parents: forbidden
+    existing_owned_schema_objects: exact_events_run_type_idx_and_eleven_v1_2_named_triggers_only
+    new_Alpha_definition_tables:
+      - alpha_contract_bindings
+      - alpha_source_profiles
+      - alpha_compiled_profiles
+      - alpha_compiler_receipts
+      - alpha_compiled_output_families
+      - alpha_human_terminal_queue
+      - alpha_w5_terminal_queue
+    new_owned_object_catalog: Enumerate these seven STRICT tables, their explicitly required constraints and immutable UPDATE/DELETE
+      guards in the new contract package and migration fingerprint; no projection/checkpoint/replay/phase-seal/dispatch persistence
+      and no unspecified extra table, index or trigger.
+    external_FK_SQL: every_v1_2_outside_closure_child_SQL_byte_identical
+    historical_values: all_IDs_types_payload_bytes_hex_lengths_lineage_counts_keys_deliveries_exact
+    backup: SQLite_Backup_API_new_path_independent_reopen_logical_schema_and_digest_own_file_SHA
+    live_source_vs_backup_file_byte_equality: not_required
+    pre_mutation_digest: repeat_after_verified_backup_before_BEGIN
+    digest_profile: exact_v1_2_typed_binary_canonical_streaming_encoding
+    digest_batches_max_rows: 512
+    digest_ordering: complete_typed_primary_key_tuple_binary_order_no_whole_table_sort_or_JSON_snapshot
+    digest_rejections: NaN_invalid_UTF8_missing_PK_duplicate_PK_or_unsupported_types
+    expected_schema_cache: once_per_process_per_exact_SQLite_plus_migration_hash_tuple_v3_v4_metadata_only
+    cross_process_or_disk_schema_cache: forbidden
+    every_initialize: independently_verify_live_schema_settings_migration_rows_integrity_FK_and_digest
+    success: immutable_v4_migration_row_user_version_4_exact_fingerprint_precommit_checks_COMMIT_FK_ON_repeat_checks
+    restore: verified_backup_to_distinct_new_temp_path_only_no_down_migration_or_in_place_restore
+    old_readers:
+      - path: new pipeline/harness/k0a01/store.py
+        sha256: "06a7eb07c17244f1078e6178f91ba2fdb75027703c2ca351ca8d77d17a72c925"
+      - path: new pipeline/harness/k0a02/store.py
+        sha256: "4b14f84388e6b2a603da900eca798ea2341e81b1d0a76b9c116e38d0501daa55"
+      - path: new pipeline/harness/k0a03/store.py
+        sha256: "bd030c0983de68201919b32a59a77299b3098ecdaca42a57eabb2fc01af45bb7"
+    old_reader_expected_exception: MigrationError("unsupported schema version 4")
+    old_reader_test_DB_bytes_before_after: unchanged
+    package_CLI_orchestrator_not_claimed_as_fourth_reader: true
+    exact_exception_fault_count: 39
+    ordered_exception_faults:
+      - B00.before_wal_checkpoint
+      - B01.after_wal_checkpoint
+      - B02.before_backup
+      - B03.after_backup_close
+      - B04.after_backup_verify
+      - T00.before_begin_immediate
+      - T01.after_begin_immediate
+      - C.runs.before
+      - C.runs.after
+      - C.events.before
+      - C.events.after
+      - C.run_state_transitions.before
+      - C.run_state_transitions.after
+      - C.event_deliveries.before
+      - C.event_deliveries.after
+      - D.event_deliveries.before
+      - D.event_deliveries.after
+      - D.run_state_transitions.before
+      - D.run_state_transitions.after
+      - D.events.before
+      - D.events.after
+      - D.runs.before
+      - D.runs.after
+      - R.runs.before
+      - R.runs.after
+      - R.events.before
+      - R.events.after
+      - R.run_state_transitions.before
+      - R.run_state_transitions.after
+      - R.event_deliveries.before
+      - R.event_deliveries.after
+      - S00.before_schema_objects
+      - S01.after_schema_objects
+      - M00.before_migration_row
+      - M01.after_migration_row
+      - M02.after_user_version
+      - V00.before_integrity_checks
+      - V01.after_integrity_checks
+      - T99.immediately_before_commit
+    exact_process_loss_fault_count: 18
+    process_loss_faults:
+      - T01.after_begin_immediate
+      - C.runs.after
+      - C.events.after
+      - C.run_state_transitions.after
+      - C.event_deliveries.after
+      - D.event_deliveries.after
+      - D.run_state_transitions.after
+      - D.events.after
+      - D.runs.after
+      - R.runs.after
+      - R.events.after
+      - R.run_state_transitions.after
+      - R.event_deliveries.after
+      - S01.after_schema_objects
+      - M01.after_migration_row
+      - M02.after_user_version
+      - V01.after_integrity_checks
+      - T99.immediately_before_commit
+    fault_requirements: Every named boundary throws and verifies exact v3 rollback or complete v4, never partial. Each selected
+      process-loss boundary runs in a dedicated pinned-Python child with durable marker outside DB and forced termination
+      of only that child. Recovery, FK/integrity, all owned/external schema objects, historical digests, WAL/SHM and applicable
+      verified-backup restore are checked. Missing/duplicate/reordered/unexercised boundary fails validation.
+    process_scope: pinned_Python_and_exact_new_migration_fault_worker_only
+    background_helper_window: hidden_if_Start_Process_is_used
+  CLI:
+    path: new pipeline/harness/k0b01_v2/cli.py
+    allowed_modes:
+      - validate-inputs
+      - compile-registry
+      - compile-budget
+      - validate-binary
+      - verify-schema
+      - migrate-synthetic
+    outputs: explicit_exact_temp_targets_only
+    dispatch_emission_checkpoint_projection_product_network_or_provider_mode: absent
+  ledger_exit:
+    exact_events:
+      - new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+      - new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+    unit_id: K0B01-IMPLEMENTATION-DISPOSITION
+    states:
+      - materialized
+      - validated
+    predecessor_chain: 4001_then_4002_then_4003_then_4004_exact_frozen_predecessor_SHA
+    event_4003: Reference immutable session-entry and aggregate/artifact evidence under the schema's allowed prefixes. Record
+      the production bundle's exact manifest in validation evidence; do not widen ledger schema prefixes to point directly
+      at harness/contracts/tests.
+    event_4004: accepted_complete_implementation_validation_and_completed_session_receipt
+    future_containing_commit_SHA_or_committed_credited_state: not_embedded_or_claimed
+    runtime_and_budget_credit: none_zero
+    final_event_count: 34
+    final_incident_count: 19
+    final_active_ledger_artifact_count_including_history: 62
+  session_completion:
+    path: new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml
+    required_facts:
+      actual_start_end_actor_model_if_known_input_hashes_exact_writes_all_attempt_counts_output_hashes_validation_and_limitations
+    binds: session_entry_artifact_manifest_receipts_aggregate_validation
+    does_not_bind: own_hash_future_4004_index_final_state_pair_or_containing_commit
+    historical_unknown_costs_model_or_invocation_counts: remain_unknown
+  state_exit:
+    allowed_K0b_01_status: implemented_validated_runtime_not_authorized
+    requires: complete_accepted_plan_conformant_migration_contract_compiler_binary_reference_and_fault_validation
+    no_claim_if_partial_or_failed: true
+    changed_status_scope: K0b_01_implementation_and_its_new_evidence_navigation_only
+    gate_status_changes: none
+    other_work_items_and_future_gate_navigation: preserve_do_not_auto_unblock_or_complete
+    runtime_authority: none
+    projection: generated_only_by_v3_renderer_from_authorized_source
+validation_contract:
+  existing_successful_validation:
+    ledger_v2_Ruff_and_30_tests_in_each_environment: reuse_recorded_evidence_only_do_not_rerun_existing_ledger_tests
+    renderer_v2_Ruff_and_30_tests_in_each_environment: reuse_recorded_evidence_only_do_not_rerun_v2_tests
+    toolchain_tests_or_old_runtime_scenarios: no_rerun_or_dispatch
+  phase_A_each_environment:
+    - closed_toolchain_validate_using_invoke_ps1_Command_validate
+    - Ruff_isolated_no_cache_check_exact_renderer_v3_Python_pair
+    - Ruff_isolated_no_cache_format_check_exact_renderer_v3_Python_pair
+    - exactly_30_v3_production_path_renderer_cases_no_deselection_skip_xfail_or_suppressed_failure
+    - schema_and_synthetic_transition_roundtrip
+    - ledger_validate_with_required_explicit_output_exact_active_event_root
+    - ledger_build_index_explicit_candidate_output
+    - ledger_check_index_explicit_active_index_output
+    - validate_budget_on_frozen_dual_purpose_session_allocation_required_explicit_EvidencePath
+    - scoped_reference_preservation_invariants_only_inside_exact_read_and_write_inventory
+    - after_freeze_actual_final_source_render_check_with_independent_A_B_byte_equivalence
+  phase_B_each_environment:
+    - closed_toolchain_validate_using_invoke_ps1_Command_validate
+    - Ruff_isolated_no_cache_check_exact_new_product_test_and_helper_Python_files
+    - Ruff_isolated_no_cache_format_check_same_exact_Python_files
+    - all_four_exact_implementation_test_modules_all_parameterized_cases_no_silent_deselection
+    - independent_literal_oracle_reference_equivalence_all_bound_cases
+    - exact_39_exception_and_18_process_loss_migration_fault_matrix
+    - all_three_pinned_K0a_reader_rejections
+    - full_21_event_matrix_schemas_reachability_activation_terminal_and_F00_vectors
+    - all_five_routes_F04_F05_no_unknown_dynamic_or_direct_handoff
+    - two_receipts_five_plus_three_partition_stale_tampered_overlap_missing_extra_dependency_fail_closed
+    - two_phase_membership_seals_four_triggers_publications_caps_no_credit_hard_boundaries
+    - binary_actual_object_and_aggregate_stress_vs_mean_exact_limit_and_one_byte_above_vectors
+    - missing_incomplete_unknown_coerced_false_NA_and_F15_without_count_negatives
+    - repeated_compilation_cwd_locale_map_order_temp_root_canonical_byte_equivalence
+    - streaming_digest_PK_type_UTF8_NaN_batch_bound_schema_cache_and_root_reparse_guard_vectors
+    - ledger_validate_build_index_check_index_required_explicit_outputs_exact_active_root
+    - validate_budget_on_same_dual_purpose_session_allocation_and_ledger_internal_validation_of_new_snapshot_fields
+    - exact_preservation_and_all_current_source_reference_hash_invariants
+    - renderer_v3_final_pair_check_and_A_B_output_byte_equivalence
+  phase_B_freeze_order:
+    - freeze_new_sources_inputs_schemas_tests_oracle_entry_and_literal_coverage_catalog
+    - compile_validate_and_compare_receipt_A_then_receipt_B_then_aggregate_in_both_environments
+    - run_complete_implementation_validation_and_capture_preappend_32_event_ledger_checks
+    - freeze_accepted_implementation_validation_with_source_and_output_manifests_not_future_4004_or_index_hashes
+    - freeze_session_completion_binding_entry_manifest_receipts_aggregate_and_validation
+    - append_freeze_4003_then_4004_with_exact_predecessors_and_no_future_containing_commit_SHA
+    - build_compare_replace_34_event_active_index_and_validate_final_ledger_and_new_snapshots_in_both_environments
+    - render_check_final_state_pair_and_preservation_then_capture_postfreeze_tail_in_temp_logs_and_final_report
+    - cleanup_exact_three_targets_stage_exact_55_paths_and_create_verify_second_commit
+  phase_B_validation_evidence_final_ledger_or_state_claim: Do not claim the dependent 34-event ledger/final pair was checked
+    inside an ancestor evidence that its events reference. Evidence must mark these checks as mandatory post-freeze tail;
+    successful observed tail is reported separately.
+  implementation_test_count: Actual collected/executed count is recorded per environment and must match across A/B. No arbitrary
+    30-test cap is applied to the much larger production implementation. The closed coverage catalog enumerates every normative
+    requirement/case/node group and literal vector before accepted validation; missing coverage or any unexecuted mandatory
+    group blocks completion.
+  mechanical_repeats: permitted_record_all_failed_and_successful_attempts_never_claim_first_pass_if_retried
+  optional_Ruff_format_diff: Read-only --diff with separate stdout/stderr capture and expected exit 1 when needed; manual
+    apply_patch corrections only inside exact new uncommitted paths.
+  explicit_CLI_paths_and_outputs: required_no_implicit_wrapper_fallback
+  index_replacement: deterministic_candidate_only_after_comparing_A_B_bytes
+  invariant_scope: exact_listed_paths_and_exact_active_ledger_inventory_not_whole_repository_recursion
+  preservation_before_and_after: all_baseline_SHA_and_length_pins_except_exact_mutable_paths
+  acceptance: no_missing_skipped_xfail_failed_or_fabricated_results
+  limitations: local_two_environment_validation_only_no_CI_portability_readiness_or_runtime_claim
+  acyclic_final_checks: Artifact/validation/evidence hashes are frozen before dependent events, index, closure/source/projection
+    and commit. Final dependent-object checks occur after freezing and are captured in temp logs/final report, not back- written
+    into any ancestor artifact or fabricated into a containing-commit hash.
+versioned_renderer_successor:
+  version: 3.0.0
+  profile_path: new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml
+  renderer_path: new pipeline/state/renderer/k0b01_v3/renderer.py
+  use_v2_renderer_as_non_frozen_versioned_successor_starting_point: allowed
+  old_v2_modification: forbidden
+  schema: Closed recursive, typed source/record schema covering the existing source and both exact authorized transitions.
+    Do not merely append concrete whole- instance shape hashes or hard-code list cardinalities as the source schema. Unknown
+    fields/scalars, duplicate IDs, gate overlap/missing references, path/hash errors and authority/status inconsistencies
+    fail closed.
+  historical_snapshot_references: normal_repository_path_hash_checks_not_special_skip_rules
+  deterministic_projection: One-way source-to-STATE rendering with complete source YAML bytes fenced in Markdown, exact source/profile
+    SHA-256 preamble, UTF-8/LF/one final LF, source timestamps only, no host/locale/time/path leakage, check mode read-only.
+  authority: renderer_does_not_infer_or_grant_implementation_runtime_or_gate_authority
+  modes:
+    - render
+    - check
+  render_output: explicit_required
+  incompatible_future_source_shape: fail_closed_requires_future_versioned_scope
+historical_index_preservation:
+  snapshot_0:
+    path: new pipeline/ledger/k0b01/history/state-renderer-index-at-97a742a0-v1.yaml
+    source: new pipeline/ledger/k0b01/index-v1.yaml
+    source_commit: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+    required_exact_bytes_sha256: "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+    required_exact_length: 17032
+    operation: apply_patch_byte_equivalent_text_copy_before_active_index_changes
+  snapshot_1:
+    path: new pipeline/ledger/k0b01/history/final-disposition-entry-index-v1.yaml
+    source: phase_A_deterministically_built_active_index
+    required_event_count: 32
+    required_hash: computed_after_events_4001_and_4002_freeze
+    operation: apply_patch_byte_equivalent_text_copy_before_closure_and_state_freeze
+  state_renderer_closed_record_change:
+    gate_id: G-K0B01-STATE-RENDERER
+    exact_nested_field: closure_evidence.ledger_registration.index.path
+    old: new pipeline/ledger/k0b01/index-v1.yaml
+    new: new pipeline/ledger/k0b01/history/state-renderer-index-at-97a742a0-v1.yaml
+    digest_and_event_count: unchanged
+    meaning: historical_locator_preservation_not_gate_reopening_or_new_validation
+  new_disposition_closed_record_index_locator: new pipeline/ledger/k0b01/history/final-disposition-entry-index-v1.yaml
+  current_active_index_navigation: may_bind_current_index_outside_historical_closed_gate_records
+  snapshot_mutation_after_containing_commit: forbidden
+historical_format_debt_acceptance:
+  owner_explicit_full_request_acceptance: true
+  exact_files:
+    - path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+      sha256: "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960"
+    - path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+      sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+  retained_as: accepted committed historical prerequisite evidence only
+  new_format_exception: none
+  byte_changes_or_new_validation_credit: none
+  limits: Explicitly retain these two already committed, ruamel-parseable, accepted historical records with unchanged complete
+    hashes as historical prerequisite evidence only. Disclose their naming debt in the final disposition. This is not permission
+    to create new strict-JSON-in-YAML records, not an extra test run or new validation credit, and not a blanket waiver of
+    plan conformance.
+preservation:
+  baseline_ledger_manifest: exact_56_files_from_read_inventory_under_new_pipeline_ledger_k0b01
+  mutable_ledger_exception: new pipeline/ledger/k0b01/index-v1.yaml
+  baseline_ledger_files_preserved_byte_exact: 55
+  existing_event_files_preserved_byte_exact: 30
+  existing_ledger_fixtures_preserved_byte_exact: 22
+  existing_schema_code_tests_preserved_byte_exact: 3
+  renderer_v2_files_preserved_byte_exact: 6
+  frozen_files_preserved_byte_exact: 18
+  all_other_existing_listed_repository_inputs_preserved_byte_exact: true
+  no_frozen_source_import_or_complete_file_copy_or_patch: true
+  conceptual_rederivation: reviewed_plan_only_not_frozen_code
+exact_commits:
+  exact_commit_count: 2
+  phase_A:
+    exact_paths_source: write_scope.phase_A.exact_paths
+    exact_path_count: 18
+    message: 'feat(pipeline-v2): authorize bounded K0b-01 implementation'
+    parent: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+    required_before: all_phase_A_checks_and_actual_final_pair_pass_both_environments
+    establishes: final_prerequisite_gate_closure_and_bounded_phase_B_authority
+  phase_B:
+    exact_paths_source: write_scope.phase_B.exact_paths
+    exact_path_count: 55
+    message: 'feat(pipeline-v2): implement validated K0b-01 Alpha foundation'
+    parent: exact_observed_verified_phase_A_commit
+    required_before: accepted_complete_implementation_evidence_final_pair_checks_preservation_and_three_target_cleanup
+    establishes: validated_static_Alpha_foundation_only_no_runtime_activation
+  staging:
+    command: Git_add_double_dash_exact_explicit_path_array_only
+    preconditions: no_other_staged_paths_or_unrelated_worktree_changes
+    checks: staged_diff_check_exact_name_status_inventory_raw_staged_bytes_and_expected_parent
+    forbidden: broad_add_globs_amend_reset_checkout_force_or_other_staging_paths
+  trailers:
+    - 'Approval-Request-SHA256: complete_current_request_SHA_256'
+    - 'Owner-Confirmation: actual_separate_owner_confirmation_source_ref'
+    - 'Implementation-Package: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2'
+    - 'Runtime-Authority: none'
+  commit_hook_or_signing_effects: Inspect active hooks/config before Git writes; unexpected executable hook, signing/network/external
+    effects block. No ad-hoc bypass, config mutation, extra hook run or unapproved side effect is authorized.
+  post_commit_checks: exact_parent_tree_path_set_trailers_raw_blob_hashes_unchanged_preserved_inputs_clean_index_and_no_unrelated_diff
+  containing_commit_SHA_in_own_files: forbidden
+  push_PR_merge_remote_release_deploy: forbidden
+  temporary_targets_in_commit: forbidden
+technical_retry_rule:
+  duration: valid_exact_scope_until_outcome_not_one_shell_attempt_or_one_assistant_turn
+  allowed: Mechanical quoting, argument passing, ProcessStartInfo/stdout-stderr capture, exit-code handling, read-only probe,
+    compatible wrapper/API invocation and manually corrected new uncommitted files within the same approved semantics, exact
+    paths, locked dependencies, hosts, temp identities, session budget and two-commit contract. Inventory effects before retry;
+    unknown effects block.
+  evidence: record_attempts_before_freeze_and_disclose_post_freeze_repeats_in_final_report
+  not_allowed_without_new_authority: Changed request bytes/baseline, additional semantic requirements or write/read path,
+    third commit, extra implementation session/review/model/API call, dependency/host/network/runtime/gate/threshold/storage
+    expansion or additional destructive target. Do not re-request authority for purely mechanical retries.
+retained_non_authorizations:
+  - no_old_pipeline_projects_research_canonical_fixture_or_external_attachment_access
+  - no_frozen_artifact_edit_delete_move_import_execution_activation_or_authority_reuse
+  - no_existing_ledger_schema_code_test_event_or_fixture_change
+  - no_existing_renderer_v2_or_prior_authority_evidence_change
+  - no_product_implementation_before_phase_A_containing_commit
+  - no_K0b_02_projection_outbox_checkpoint_publisher_replay_phase_seal_or_crash_reconciliation_implementation
+  - no_K0b_03_security_broker_adapter_abort_or_compatibility_runtime_implementation
+  - no_K0b_04_scenario_F15_BLOB_churn_manual_model_dispatch_or_runtime_execution
+  - no_K0b_05_N1_real_product_release_deploy_feasibility_or_readiness_claim
+  - no_provider_API_direct_REST_SDK_Responses_managed_credentials_plugin_or_connector
+  - no_model_or_provider_fallback_inferred_identity_or_cost
+  - no_new_design_review_or_subagent_dispatch_or_call_budget_reallocation
+  - no_threshold_raise_storage_migration_third_phase_credit_or_F15_count_invention
+  - no_gate_closure_other_than_G_K0B01_IMPLEMENTATION_DISPOSITION
+  - no_extra_governance_event_fixture_temp_staging_commit_or_remote_action

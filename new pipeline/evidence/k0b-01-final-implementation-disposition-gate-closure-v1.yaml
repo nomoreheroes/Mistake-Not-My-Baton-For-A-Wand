@@ -1,0 +1,382 @@
+document_id: pipeline-v2.k0b-01.final-implementation-disposition-gate-closure-v1
+schema_version: 1
+version: 1.0.0
+recorded_at_UTC: '2026-09-16T14:30:54.453090+00:00'
+work_item_id: K0b-01
+gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+status: closed_only_on_verified_exact_phase_A_containing_commit
+gate_count_arithmetic_note:
+  pinned_baseline_open: 10
+  exact_authorized_gate_closures: 1
+  derived_after_open: 9
+  derived_after_closed: 8
+  request_counter_metadata: retained_verbatim_as_original_request_not_an_extra_gate_authorization
+  controlling_scope: exact_gate_inventory_and_preservation_of_every_other_gate
+  request_bytes_and_baseline_hashes: unchanged
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+    sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    bytes: 99133
+  separate_owner_confirmation:
+    source_ref: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    repeated_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_equality: true
+    two_phase_scope_authorized: true
+    cryptographic_identity_authenticated: false
+  final_owner_disposition:
+    path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+    sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+    bytes: 42360
+  single_session_allocation:
+    path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+    sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+    bytes: 10379
+  cryptographic_identity_authenticated: false
+prestate:
+  HEAD: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+  tree: 978b279e6d92ac6283d4a3b5b7f47e374ab46e2c
+  source:
+    path: new pipeline/state/state.yaml
+    sha256: "cb2f19b425974b8e46748d561615e230d3b4ef729c5c7576f47f78b3f6c19f7c"
+    bytes: 24469
+  projection:
+    path: new pipeline/state/STATE.md
+    sha256: "5ceace2b0e678c76d71c2cf865c3afefff56d49fcb4e696261c6884abcecf311"
+    bytes: 24902
+  global_open_gate_count: 10
+  global_closed_gate_count: 7
+  K0b_01_remaining_prerequisites: 1
+four_prerequisites:
+  - gate_id: G-K0B01-HUMAN-SIGNOFF
+    status: closed
+    authoritative_evidence:
+      path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml
+      sha256: "34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd"
+      bytes: 2247
+    prestate_record:
+      gate_id: G-K0B01-HUMAN-SIGNOFF
+      status: closed
+      closure_evidence:
+        human_only_review:
+          path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+          sha256: "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140"
+          verdict: APPROVE
+          blocking_findings: 0
+          non_blocking_findings: 5
+        gate_closure:
+          path: new pipeline/evidence/k0b-01-human-signoff-gate-closure-v1.yaml
+          sha256: "34354f8dc56f12f2693a2f02b8bb85b82cd6a03ea05af08641303bc39da783cd"
+        carry_forward_finding_ids:
+          - K0B01-HR-NB01
+          - K0B01-HR-NB02
+          - K0B01-HR-NB03
+          - K0B01-HR-NB04
+          - K0B01-HR-NB05
+    credit: retained_historical_no_new_credit
+  - gate_id: G-K0B01-TOOLCHAIN
+    status: closed
+    authoritative_evidence:
+      path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+      sha256: "060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212"
+      bytes: 5972
+    prestate_record:
+      gate_id: G-K0B01-TOOLCHAIN
+      status: closed
+      closure_evidence:
+        approval_request:
+          path: new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml
+          sha256: "ce0b19cb99f13d0c2e9e7fbfb8892444cfc879ff6dc79fbd4cadcea79182845a"
+        manifest:
+          path: new pipeline/toolchain/k0b01/toolchain-lock-v1.json
+          sha256: "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0"
+          CI_execution_claim: false
+        historical_validation:
+          path: new pipeline/evidence/k0b-01-toolchain-validation-v1.yaml
+          sha256: "389c9b0b70f58e435ffc57cb88dd40c012116f8cae43489e2b78d856b896cc5e"
+        complete_validation:
+          path: new pipeline/evidence/k0b-01-toolchain-validation-v2.yaml
+          sha256: "cf48abf5b24c8e21a74d3d90da982611c8246060a2bc4e79e9cdb4a62316336b"
+          environments: 2
+          tests_per_environment: 17
+        gate_closure:
+          path: new pipeline/evidence/k0b-01-toolchain-gate-closure-v1.yaml
+          sha256: "060fc2f7dc8ee28235f660d10ba2543411d857fcc7729242a6432dfa2588b212"
+    credit: retained_historical_no_new_credit
+  - gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    status: closed
+    authoritative_evidence:
+      path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+      sha256: "cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f"
+      bytes: 10334
+    prestate_record:
+      gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+      status: closed
+      closure_evidence:
+        approval_request:
+          path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v2.yaml
+          sha256: "bdf3ad21d98bdfe5c8b3ca190b8358a64b2b24b81d6a57e515e1398654ac0675"
+        rejected_preflight_request:
+          path: new pipeline/requests/k0b-01-implementation-ledger-gate-closure-and-commit-approval-request-v1.yaml
+          sha256: "3ea71f92afc1bc41ea77c6b01fc056b2b1e9d2de9dbd1ffc0c5ea72931729e92"
+          closure_credit: 0
+        design:
+          path: new pipeline/decisions/k0b-01-implementation-ledger-design-owner-disposition-v1.yaml
+          sha256: "4678da275a604b702790126478dcac7ba7aa66c92b16afb28b6810f2fca7d387"
+        active_manifest:
+          root: new pipeline/ledger/k0b01
+          path_count: 52
+          root_sha256: "6aba5ae7df35df18b917559eed8ac847708c5238810264cf6f14855a215cacff"
+        rejected_validation:
+          path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v1.yaml
+          sha256: "38e7eab70afedb3a007cee8fcabee98d3f668ffd8ffd3cdb7465fc5614f62e55"
+          closure_credit: 0
+        complete_validation:
+          path: new pipeline/evidence/k0b-01-implementation-ledger-validation-v2.yaml
+          sha256: "8cf9fa52426c41246e89af5aa656f6a9433bc0dfa61c0e503cc3e2658733689d"
+          environments: 2
+          tests_per_environment: 30
+        gate_closure:
+          path: new pipeline/evidence/k0b-01-implementation-ledger-gate-closure-v1.yaml
+          sha256: "cd609da26769c6cc12618e48c830b8e9651e190e2d99ca812994395626b4c13f"
+    credit: retained_historical_no_new_credit
+  - gate_id: G-K0B01-STATE-RENDERER
+    status: closed
+    authoritative_evidence:
+      path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+      sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+      bytes: 41773
+    prestate_record:
+      gate_id: G-K0B01-STATE-RENDERER
+      status: closed
+      closure_evidence:
+        approval_request:
+          path: new pipeline/requests/k0b-01-state-renderer-implementation-validation-gate-closure-and-commit-approval-request-v1.yaml
+          sha256: "0883c7ec09e9edab7737fd774dd2623fd6d1425ab72e9943e09fcd397ea3a3e2"
+        design:
+          path: new pipeline/decisions/k0b-01-state-renderer-design-owner-disposition-v1.yaml
+          sha256: "9353a5c04fda68e392f21e3e716930b7e118959051727b7c05cf50ea2128d11b"
+        renderer_manifest:
+          root: new pipeline/state/renderer/k0b01
+          path_count: 6
+          root_sha256: "8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96"
+        complete_validation:
+          path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+          sha256: "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960"
+          environments: 2
+          tests_per_environment: 30
+        ledger_registration:
+          validated_event:
+            path: new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml
+            sha256: "b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5"
+          index:
+            path: new pipeline/ledger/k0b01/index-v1.yaml
+            sha256: "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+            event_count: 30
+          active_manifest:
+            root: new pipeline/ledger/k0b01
+            path_count: 56
+            root_sha256: "a2fb3c09583f08f49e22b93791ae46f93e91b3c72d2fcce24e8580b6209c9674"
+        gate_closure:
+          path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+          sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+        projection_profile:
+          path: new pipeline/state/renderer/k0b01/projection-profile-v2.yaml
+          sha256: "1a3500cff71b9c8b534511b173033ac4371ae97e870d158056b024ee7f95617f"
+    credit: retained_historical_no_new_credit
+planning_and_human_terminal_signoff:
+  - evidence:
+      path: new pipeline/reviews/k0b-01-migration-plan-review-r1.yaml
+      sha256: "be1b636c1b4bd274e629f1f4a6c4576c0a3fa6c287b0dc4ecfe079e4e110d1a6"
+      bytes: 17687
+    subject: planning_package_v1_2
+    blocking_findings: 0
+    terminal: approve
+    not_implementation_review: true
+  - evidence:
+      path: new pipeline/reviews/k0b-01-compiler-budget-plan-review-r1.yaml
+      sha256: "e49263775bbcb54c22bda87b1a655513b349c1ef09fbf74d00fb157c7d70e51d"
+      bytes: 26952
+    subject: planning_package_v1_2
+    blocking_findings: 0
+    terminal: approve
+    not_implementation_review: true
+  - evidence:
+      path: new pipeline/reviews/k0b-01-human-only-review-v1.yaml
+      sha256: "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140"
+      bytes: 8659
+    subject: exact_v1_3_and_B02_A
+    blocking_findings: 0
+    terminal: APPROVE
+    not_implementation_review: true
+renderer_v3:
+  validation:
+    path: new pipeline/evidence/k0b-01-final-disposition-renderer-v3-validation-v1.yaml
+    sha256: "9c5dbc4587811e6340102bd370b8772b9b7554f913e5ba699c94522360c5db6b"
+    bytes: 160005
+  manifest:
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/golden/STATE-v1.md
+      sha256: "4fac2dba512a1a167704b9ebee1b0221092bbeecec6b284c87c50f3743ac35c4"
+      bytes: 2707
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/golden/state-v1.yaml
+      sha256: "29fc347b524876290021780fdaaa7fb017e0eff3c73ddef98ad8d6a3482eef55"
+      bytes: 2271
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/negative/cases-v1.yaml
+      sha256: "73ae4edccbd6d0885be882d7116dd44c761480b7aa1a5ac5f958d7521d3634c7"
+      bytes: 1696
+    - path: new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml
+      sha256: "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7"
+      bytes: 55118
+    - path: new pipeline/state/renderer/k0b01_v3/renderer.py
+      sha256: "4b4b5e84211a9f3cf29d22b8552405641680db2f413fca64ce39d1b03fdadc60"
+      bytes: 18588
+    - path: new pipeline/state/renderer/k0b01_v3/test_renderer.py
+      sha256: "d157106876b863cef54abd0b166d3236bc6c87575f7ba2847529610ef87998ef"
+      bytes: 17281
+  manifest_root: "4a7a95d29e87973cc742309d93a59aebd6fbc0492e8a1b94d1be77b269a7784e"
+  accepted_environments:
+    - A
+    - B
+  tests_passed_each: 30
+  existing_v2_preserved: true
+  actual_final_source_and_projection: mandatory_postfreeze_tail_before_staging_not_bound_here
+ledger_entry:
+  events:
+    - path: new pipeline/ledger/k0b01/events/4001-implementation-disposition-declared-v1.yaml
+      sha256: "92f1f0435b712068cea5f5094af09a7255034ba249d6809248b6f6fc0871cb7d"
+      bytes: 3686
+    - path: new pipeline/ledger/k0b01/events/4002-implementation-disposition-authorized-v1.yaml
+      sha256: "c9b89aa799cf4ecfe7284d301bf17c5cb350edaf86587dad170d4c5955a6e540"
+      bytes: 3900
+  active_index:
+    path: new pipeline/ledger/k0b01/index-v1.yaml
+    sha256: "e63e133e521c87e4e26f03cd577cce42b4e07bd6256d537475ffa782b39782f5"
+    bytes: 18169
+  immutable_snapshots:
+    - path: new pipeline/ledger/k0b01/history/state-renderer-index-at-97a742a0-v1.yaml
+      sha256: "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+      bytes: 17032
+    - path: new pipeline/ledger/k0b01/history/final-disposition-entry-index-v1.yaml
+      sha256: "e63e133e521c87e4e26f03cd577cce42b4e07bd6256d537475ffa782b39782f5"
+      bytes: 18169
+  event_count: 32
+  incident_count: 19
+  implementation_invocation_count: 3
+  runtime_authorized: false
+  A_B_candidate_bytes_equal: true
+  check_index_both: pass
+  subject_authority: new_owner_disposition
+  states:
+    - declared
+    - authorized
+  credit_from_new_events: 0
+transition_contract:
+  only_gate_closed: G-K0B01-IMPLEMENTATION-DISPOSITION
+  other_gates: unchanged_identity_status_and_closure_evidence_except_snapshot_0_locator
+  open_global_gate_count_after: 8
+  closed_global_gate_count_after: 8
+  K0b_01_open_gate_ids_after: []
+  K0b_01_status_after: implementation_authorized_not_started
+  K0b_01_authority_after: new_final_owner_disposition_path_and_hash
+  scope_implementation_authority_after: bounded_K0b_01_exact_phase_B_scope_only_effective_on_phase_A_commit
+  scope_runtime_authority_after: none
+  remaining_K0b_01_prerequisites_after: 0
+  projection_version_after: 3.0.0
+  additional_navigation: new_request_disposition_allocation_v3_validation_closure_profile_and_current_index
+  preserved: root_plans_historical_completion_commits_review_findings_B02_limits_other_work_items_and_non_authorizations
+  generated_at: factual_fixed_source_value_not_renderer_clock
+authorization_effect:
+  implementation: bounded_K0b_01_exact_phase_B_scope_only
+  implementation_budget:
+    implementation_package_id: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2
+    implementation_session_id: K0B01-IMPL-V2-SESSION-001
+    authorized_implementation_sessions: 1
+    implementation_session_starts: after_verified_phase_A_containing_commit
+    technical_governance_phase_A_is_not_product_implementation_session: true
+    same_scope_technical_continuations_and_retries: part_of_the_same_bounded_session
+    additional_design_reviews: 0
+    independent_agents_or_review_dispatches: 0
+    physical_runtime_model_calls_nominal: 0
+    physical_runtime_model_calls_worst_case: 0
+    provider_API_calls: 0
+    manual_VSCode_model_dispatches: 0
+    deterministic_local_tools: allowed_only_inside_the_scopes_below
+    ordinary_current_assistant_turns: not_fabricated_as_physical_runtime_or_design_review_receipts
+    model_identity_if_not_observable: unknown
+    exact_model_API_cost_if_not_observable: unknown
+    historical_implementation_invocation_costs_or_ordinals: not_invented_or_reallocated
+    design_runtime_implementation_or_checkpoint_credit: 0
+  implementation_session_started: false
+  product_materialized: false
+  runtime_authority: none
+  effective_boundary: verified_phase_A_containing_commit_before_any_product_write
+  closes_only: G-K0B01-IMPLEMENTATION-DISPOSITION
+  other_gates: unchanged_except_historical_renderer_index_locator
+  human_non_blocking_findings_carried_forward:
+    classifications: preserve_all_five_as_non_blocking_not_new_reviews
+    IDs:
+      - K0B01-HR-NB01
+      - K0B01-HR-NB02
+      - K0B01-HR-NB03
+      - K0B01-HR-NB04
+      - K0B01-HR-NB05
+    obligations: exact_human_review_required_carry_forward_without_reclassification
+preservation:
+  exact_input_pins_checked_per_environment: 193
+  immutable_pins_preserved: 190
+  frozen_hash_only_preserved: 18
+  baseline_state_pair_preserved_before_transition: true
+  existing_renderer_v2_six_artifacts: byte_unchanged
+  existing_ledger_events_fixtures_schema_code_tests: byte_unchanged
+  scope: exact_pin_inventory_and_exact_authorized_snapshots_only
+  snapshot_0: byte_identical_30_event_index_at_baseline
+  snapshot_1: byte_identical_32_event_entry_index
+  historical_format_debt:
+    exact_files:
+      - path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+        sha256: "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960"
+      - path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+        sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+    issue: strict_JSON_bytes_in_yaml_paths_contrary_to_prospective_plan_format_convention
+    requested_narrow_treatment: Explicitly retain these two already committed, ruamel-parseable, accepted historical records with unchanged complete hashes as historical prerequisite evidence only. Disclose their naming debt in the final disposition. This is not permission to create new strict-JSON-in-YAML records, not an extra test run or new validation credit, and not a blanket waiver of plan conformance.
+    new_records:
+      yaml: real_block_YAML_ruamel_0_18_6_duplicate_keys_forbidden_no_aliases_UTF8_no_BOM_LF_one_final_LF
+      json: strict_JSON_in_json_paths_duplicate_keys_forbidden_UTF8_no_BOM_LF_one_final_LF
+    no_changes_to_the_two_historical_files: true
+  old_pipeline_projects_research_frozen_semantic_reads: none
+historical_format_debt_owner_acceptance:
+  exact_files:
+    - path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+      sha256: "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960"
+    - path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+      sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+  issue: strict_JSON_bytes_in_yaml_paths_contrary_to_prospective_plan_format_convention
+  requested_narrow_treatment: Explicitly retain these two already committed, ruamel-parseable, accepted historical records with unchanged complete hashes as historical prerequisite evidence only. Disclose their naming debt in the final disposition. This is not permission to create new strict-JSON-in-YAML records, not an extra test run or new validation credit, and not a blanket waiver of plan conformance.
+  new_records:
+    yaml: real_block_YAML_ruamel_0_18_6_duplicate_keys_forbidden_no_aliases_UTF8_no_BOM_LF_one_final_LF
+    json: strict_JSON_in_json_paths_duplicate_keys_forbidden_UTF8_no_BOM_LF_one_final_LF
+  no_changes_to_the_two_historical_files: true
+hash_graph:
+  bindings: request_decision_allocation_renderer_validation_events_snapshots_prestate_transition_contract
+  own_hash_final_source_STATE_containing_commit_SHA: not_embedded
+  mandatory_observed_postfreeze_checks:
+    - actual_source_reference_hashes
+    - actual_source_to_STATE_A_B_byte_equivalence
+    - actual_pair_read_only_check_A_and_B
+    - exact_18_staged_paths_raw_blobs_parent_and_commit_verification
+retained_non_authorizations:
+  - no_old_pipeline_projects_research_canonical_fixture_or_external_attachment_access
+  - no_frozen_artifact_edit_delete_move_import_execution_activation_or_authority_reuse
+  - no_existing_ledger_schema_code_test_event_or_fixture_change
+  - no_existing_renderer_v2_or_prior_authority_evidence_change
+  - no_product_implementation_before_phase_A_containing_commit
+  - no_K0b_02_projection_outbox_checkpoint_publisher_replay_phase_seal_or_crash_reconciliation_implementation
+  - no_K0b_03_security_broker_adapter_abort_or_compatibility_runtime_implementation
+  - no_K0b_04_scenario_F15_BLOB_churn_manual_model_dispatch_or_runtime_execution
+  - no_K0b_05_N1_real_product_release_deploy_feasibility_or_readiness_claim
+  - no_provider_API_direct_REST_SDK_Responses_managed_credentials_plugin_or_connector
+  - no_model_or_provider_fallback_inferred_identity_or_cost
+  - no_new_design_review_or_subagent_dispatch_or_call_budget_reallocation
+  - no_threshold_raise_storage_migration_third_phase_credit_or_F15_count_invention
+  - no_gate_closure_other_than_G_K0B01_IMPLEMENTATION_DISPOSITION
+  - no_extra_governance_event_fixture_temp_staging_commit_or_remote_action

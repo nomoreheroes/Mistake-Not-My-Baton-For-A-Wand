@@ -1,0 +1,401 @@
+event_count: 30
+events:
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 0001-human-signoff-declared-v1
+    event_path: new pipeline/ledger/k0b01/events/0001-human-signoff-declared-v1.yaml
+    event_sha256: 03dfaee252a649fbc3d3721d04967ab546ba96e5b18912d3cc0398fcdd814a81
+    event_type: historical_transition
+    evidence_count: 1
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: declared
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 0002-human-signoff-authorized-v1
+    event_path: new pipeline/ledger/k0b01/events/0002-human-signoff-authorized-v1.yaml
+    event_sha256: 540b78478de52c61a5daba603c825221a953b9e97d06c19460b81e232e2a4b31
+    event_type: historical_transition
+    evidence_count: 1
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: authorized
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 0003-human-signoff-materialized-v1
+    event_path: new pipeline/ledger/k0b01/events/0003-human-signoff-materialized-v1.yaml
+    event_sha256: 39350d48ea7fd684a2578b79c664ea8c7bc7206ba575e7323b9c93803a611095
+    event_type: historical_transition
+    evidence_count: 1
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: materialized
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 0004-human-signoff-validated-v1
+    event_path: new pipeline/ledger/k0b01/events/0004-human-signoff-validated-v1.yaml
+    event_sha256: 346512df5f6f4412fbc14dc33173502616d5f6b745bb123925e817e21a8eae60
+    event_type: historical_transition
+    evidence_count: 1
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: validated
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 0005-human-signoff-committed-v1
+    event_path: new pipeline/ledger/k0b01/events/0005-human-signoff-committed-v1.yaml
+    event_sha256: 7de8d31b6801e3eb4ebc6617b2b94ec7839fa1957413626051202c4168853371
+    event_type: historical_transition
+    evidence_count: 1
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: committed
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: true
+    credit_value: 1
+    dependency_count: 4
+    event_id: 0006-human-signoff-credited-v1
+    event_path: new pipeline/ledger/k0b01/events/0006-human-signoff-credited-v1.yaml
+    event_sha256: 518a9592d4006ba7f717a07d6cd2129629f6427095cbfd91af16f9dd90e49dd6
+    event_type: historical_transition
+    evidence_count: 2
+    gate_id: G-K0B01-HUMAN-SIGNOFF
+    resulting_state: credited
+    unit_id: K0B01-HUMAN-SIGNOFF
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1001-incident-readonly-import-inventory-v1
+    event_path: new pipeline/ledger/k0b01/events/1001-incident-readonly-import-inventory-v1.yaml
+    event_sha256: 27f0f97ed524c74b56482371d4d0fa5bfa460d820dd937234bebf605fe7b995d
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-READONLY-IMPORT-INVENTORY
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1002-incident-pip-temp-initial-v1
+    event_path: new pipeline/ledger/k0b01/events/1002-incident-pip-temp-initial-v1.yaml
+    event_sha256: 1897b4d473220cb11225857949f255580091273a90667c13ab7d09a6320b9696
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-PIP-TEMP-INITIAL
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1003-incident-pip-remediation-v1-v1
+    event_path: new pipeline/ledger/k0b01/events/1003-incident-pip-remediation-v1-v1.yaml
+    event_sha256: e9303e67af5ac2361bac4d1e3be12e915257b07292fa8ba28d02e7dc5e91b3f7
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-PIP-REMEDIATION-V1
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1004-incident-pip-remediation-v2-v1
+    event_path: new pipeline/ledger/k0b01/events/1004-incident-pip-remediation-v2-v1.yaml
+    event_sha256: 732652beb331b37cbe58488388c1d2ea4fb11b467fd12059b47c925c7b5e852a
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-PIP-REMEDIATION-V2
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1005-incident-pip-remediation-v3-v1
+    event_path: new pipeline/ledger/k0b01/events/1005-incident-pip-remediation-v3-v1.yaml
+    event_sha256: 8834e7da65664ad9f5f2682dcdbe8a2c5fd892884fb1d7681e7c8d47b15d3f60
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-PIP-REMEDIATION-V3
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1006-incident-external-patch-target-v1
+    event_path: new pipeline/ledger/k0b01/events/1006-incident-external-patch-target-v1.yaml
+    event_sha256: 6314918885eba6ef9c560680ae9e1964309bdec8807a67be8378dcfa601a8363
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-EXTERNAL-PATCH-TARGET
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1007-incident-wheelhouse-loss-v1
+    event_path: new pipeline/ledger/k0b01/events/1007-incident-wheelhouse-loss-v1.yaml
+    event_sha256: 6f83f1ff1b2634ef709558657ab2f759530adc1f8033afeeecb20103830e8baf
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-WHEELHOUSE-LOSS
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1008-incident-bootstrap-a-quoting-v1
+    event_path: new pipeline/ledger/k0b01/events/1008-incident-bootstrap-a-quoting-v1.yaml
+    event_sha256: 2e2865b46f7c543d5a34ec82f4038e7005c2680716ee1d19c31cc76dc5c310fa
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-BOOTSTRAP-A-QUOTING
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1009-incident-closure-preflight-gaps-v1
+    event_path: new pipeline/ledger/k0b01/events/1009-incident-closure-preflight-gaps-v1.yaml
+    event_sha256: df26b81c6cbf89930a2071772935fdcc1eb4434954d56517f9e3100deb10c0da
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-TOOLCHAIN
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-CLOSURE-PREFLIGHT-GAPS
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1010-incident-ledger-ruff-argument-typo-v1
+    event_path: new pipeline/ledger/k0b01/events/1010-incident-ledger-ruff-argument-typo-v1.yaml
+    event_sha256: 5c507ee1142bde2f25029b9bc6a9c988de7296a15a1030f675d1bb1e83475f36
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-RUFF-ARGUMENT-TYPO
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1011-incident-ledger-ruff-format-write-v1
+    event_path: new pipeline/ledger/k0b01/events/1011-incident-ledger-ruff-format-write-v1.yaml
+    event_sha256: 6b6ca0ec7a7f59c60da4e56ec973b16c0d8b87cf97539d88b6440154e1f934a0
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-RUFF-FORMAT-WRITE
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1012-incident-ledger-parser-state-defect-v1
+    event_path: new pipeline/ledger/k0b01/events/1012-incident-ledger-parser-state-defect-v1.yaml
+    event_sha256: c244152ded6a4627026a50601719063e26052ce8d0c87f3e4f0a8727ff39da83
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-PARSER-STATE-DEFECT
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1013-incident-ledger-scanner-compatibility-v1
+    event_path: new pipeline/ledger/k0b01/events/1013-incident-ledger-scanner-compatibility-v1.yaml
+    event_sha256: c2e7c33078206b492806925455b23106cde4cd088deb62423001770ef1f578b0
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-SCANNER-COMPATIBILITY
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1014-incident-ledger-read-allowlist-omission-v1
+    event_path: new pipeline/ledger/k0b01/events/1014-incident-ledger-read-allowlist-omission-v1.yaml
+    event_sha256: 1ad894acb6cf09b9a8af92f5d86c561f99539ed27ac3be0cbbeee17a6909a7ae
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-READ-ALLOWLIST-OMISSION
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1015-incident-ledger-first-complete-test-failures-v1
+    event_path: new pipeline/ledger/k0b01/events/1015-incident-ledger-first-complete-test-failures-v1.yaml
+    event_sha256: 49639ae5a7279738e05c473514948e3be2bdb8393766b7d2bfdb52baa920f9d7
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-FIRST-COMPLETE-TEST-FAILURES
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1016-incident-ledger-environment-b-target-typo-v1
+    event_path: new pipeline/ledger/k0b01/events/1016-incident-ledger-environment-b-target-typo-v1.yaml
+    event_sha256: 8d239015c1ecff225a2ffa4a54fbb6a85f18a5f510a0e20a118595e4adca9103
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-ENVIRONMENT-B-TARGET-TYPO
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1017-incident-ledger-workspace-pycache-v1
+    event_path: new pipeline/ledger/k0b01/events/1017-incident-ledger-workspace-pycache-v1.yaml
+    event_sha256: 934ecdf2d0345903d3a0d388e63f5b6a652fba09b6fc5d5004eeebace461a796
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-WORKSPACE-PYCACHE
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1018-incident-ledger-preflight-state-key-assumption-v1
+    event_path: new pipeline/ledger/k0b01/events/1018-incident-ledger-preflight-state-key-assumption-v1.yaml
+    event_sha256: 705256c451d0208636db66666c27c2eea1cbb9a227b90f7408a091aa51b8a6f3
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-PREFLIGHT-STATE-KEY-ASSUMPTION
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 1019-incident-ledger-hash-display-regex-v1
+    event_path: new pipeline/ledger/k0b01/events/1019-incident-ledger-hash-display-regex-v1.yaml
+    event_sha256: 955ab4dbb1fe30ba0cc8eeecd9d44f124f55b7f2c7b4ae56e6ec48608cec4699
+    event_type: historical_incident_disclosure
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-INCIDENT-LEDGER-HASH-DISPLAY-REGEX
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 1
+    event_id: 2001-implementation-ledger-invocation-v1
+    event_path: new pipeline/ledger/k0b01/events/2001-implementation-ledger-invocation-v1.yaml
+    event_sha256: aa12f248c94594b0cf47e185809a743253fe5223aa60a2be4a8212f98b6944e4
+    event_type: implementation_invocation
+    evidence_count: 1
+    gate_id: G-K0B01-IMPLEMENTATION-LEDGER
+    resulting_state: declared
+    unit_id: K0B01-IMPLEMENTATION-LEDGER
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3001-state-renderer-declared-v1
+    event_path: new pipeline/ledger/k0b01/events/3001-state-renderer-declared-v1.yaml
+    event_sha256: 157d2c04c61f91b3d798f4c0ce84d3d00471597b3f8b70995de51fa67efac2db
+    event_type: implementation_invocation
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: declared
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 0
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3002-state-renderer-authorized-v1
+    event_path: new pipeline/ledger/k0b01/events/3002-state-renderer-authorized-v1.yaml
+    event_sha256: 3617fdee7dc482d78742045d87b4f025526621a8b0ce291a5840e2b3c9ef1a96
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: authorized
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 6
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3003-state-renderer-materialized-v1
+    event_path: new pipeline/ledger/k0b01/events/3003-state-renderer-materialized-v1.yaml
+    event_sha256: c74c9074919fa05b46bd415c721c7500ab17bac2f0b96167e2d8468a930fa8d9
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: materialized
+    unit_id: K0B01-STATE-RENDERER
+  - artifact_count: 6
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 3
+    event_id: 3004-state-renderer-validated-v1
+    event_path: new pipeline/ledger/k0b01/events/3004-state-renderer-validated-v1.yaml
+    event_sha256: b2c90e1c8df649e644032112cf9e2831f30e399b3462a4204480617ca73e98e5
+    event_type: transition
+    evidence_count: 1
+    gate_id: G-K0B01-STATE-RENDERER
+    resulting_state: validated
+    unit_id: K0B01-STATE-RENDERER
+generated_index_authoritative: false
+grants_authority_credit_or_runtime_effect: false
+index_id: pipeline-v2.k0b01-ledger-index-v1
+schema_profile:
+  path: new pipeline/ledger/k0b01/schema-profile-v1.yaml
+  sha256: b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a
+validator:
+  path: new pipeline/ledger/k0b01/ledger.py
+  sha256: e6e5e1b6f66dd8fddacaf54865d5e82e33b293d970fee4352ad36b1cd0ea4a5c

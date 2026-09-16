@@ -1,0 +1,44 @@
+fixture_id: pipeline-v2.state-renderer-v3-negative-cases-v1
+schema_version: 1
+status: synthetic_validation_only_non_authorizing
+cases:
+  - case_id: duplicate_YAML_keys
+    expected: fail_closed_RendererError
+  - case_id: unknown_top_level_field
+    expected: fail_closed_RendererError
+  - case_id: unknown_nested_record_field
+    expected: fail_closed_RendererError
+  - case_id: wrong_schema_version
+    expected: fail_closed_RendererError
+  - case_id: wrong_scalar_type
+    expected: fail_closed_RendererError
+  - case_id: duplicate_work_item_id
+    expected: fail_closed_RendererError
+  - case_id: duplicate_sequence
+    expected: fail_closed_RendererError
+  - case_id: reordered_sequence
+    expected: fail_closed_RendererError
+  - case_id: duplicate_open_gate_id
+    expected: fail_closed_RendererError
+  - case_id: duplicate_closed_gate_id
+    expected: fail_closed_RendererError
+  - case_id: open_closed_gate_overlap
+    expected: fail_closed_RendererError
+  - case_id: missing_work_item_gate
+    expected: fail_closed_RendererError
+  - case_id: K0b_01_gate_inventory_mismatch
+    expected: fail_closed_RendererError
+  - case_id: invalid_gate_status
+    expected: fail_closed_RendererError
+  - case_id: malformed_SHA_scalar
+    expected: fail_closed_RendererError
+  - case_id: missing_reference_file
+    expected: fail_closed_RendererError
+  - case_id: reference_hash_mismatch
+    expected: fail_closed_RendererError
+  - case_id: absolute_or_escaping_reference_path
+    expected: fail_closed_RendererError
+  - case_id: invalid_UTF8_BOM_CRLF_or_final_LF
+    expected: fail_closed_RendererError
+  - case_id: projection_byte_or_embedded_source_mismatch
+    expected: fail_closed_RendererError

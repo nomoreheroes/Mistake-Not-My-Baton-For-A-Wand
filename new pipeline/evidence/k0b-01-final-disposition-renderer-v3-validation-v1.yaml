@@ -1,0 +1,1198 @@
+document_id: pipeline-v2.k0b-01.final-disposition-renderer-v3-validation-v1
+schema_version: 1
+version: 1.0.0
+recorded_at_UTC: '2026-09-16T14:30:19.566248+00:00'
+status: accepted
+result: pass
+work_item_id: K0b-01
+scope: phase_A_new_versioned_renderer_and_frozen_entry_ledger_only
+gate_count_arithmetic_note:
+  request_metadata_retained_verbatim: true
+  request_claimed_baseline_open: 9
+  verified_pinned_baseline_open: 10
+  request_claimed_after_open: 8
+  derived_after_closing_only_authorized_gate: 9
+  verified_baseline_closed: 7
+  derived_after_closed: 8
+  controlling_scope: exact_gate_inventory_close_only_G_K0B01_IMPLEMENTATION_DISPOSITION_preserve_all_other_gates
+  request_bytes_baseline_hashes_gate_identities_and_authorization_scope_changed: false
+  interpretation: derived_counter_typo_not_authority_to_close_an_extra_gate
+  observed_after_freeze: factual_source_generation_assertion_caught_request_counter_typo_before_state_write
+authority:
+  approval_request:
+    path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+    sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    bytes: 99133
+  separate_owner_confirmation:
+    source_ref: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    repeated_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_equality: true
+    two_phase_scope_authorized: true
+    cryptographic_identity_authenticated: false
+  final_owner_disposition:
+    path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+    sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+    bytes: 42360
+  single_session_allocation:
+    path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+    sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+    bytes: 10379
+baseline:
+  repository_root: C:/Projects/1.Mistake Not My Baton For A Wand
+  HEAD: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+  tree: 978b279e6d92ac6283d4a3b5b7f47e374ab46e2c
+  worktree_expected: clean_except_this_request
+  index_expected: empty
+  state_source:
+    path: new pipeline/state/state.yaml
+    sha256: "cb2f19b425974b8e46748d561615e230d3b4ef729c5c7576f47f78b3f6c19f7c"
+    bytes: 24469
+  state_projection:
+    path: new pipeline/state/STATE.md
+    sha256: "5ceace2b0e678c76d71c2cf865c3afefff56d49fcb4e696261c6884abcecf311"
+    bytes: 24902
+  ledger_event_count: 30
+  ledger_incident_count: 19
+  active_ledger_artifact_count: 56
+  active_ledger_manifest_root:
+    sha256: "a2fb3c09583f08f49e22b93791ae46f93e91b3c72d2fcce24e8580b6209c9674"
+    algorithm: SHA256_of_ordinal_path_sorted_path_pipe_sha256_pipe_bytes_LF
+  renderer_v2_artifact_count: 6
+  renderer_v2_manifest_root:
+    sha256: "8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96"
+    algorithm: SHA256_of_ordinal_path_sorted_path_TAB_sha256_TAB_bytes_LF
+  open_K0b_01_gates:
+    - G-K0B01-IMPLEMENTATION-DISPOSITION
+  open_global_gate_count: 9
+  closed_global_gate_count: 7
+  implementation_authority: none
+  runtime_authority: none
+  historical_K0a_fixed_HEAD:
+    previous_value: a031ee56a36cf794646643b67270c6e0f7092e08
+    supersession_requested: exact_two_commits_below_only
+    immutable_K0a_and_K0b_00_inputs: retained_byte_exact
+renderer:
+  projection_version: 3.0.0
+  schema_model: closed_recursive_typed_symbolic_definitions_no_concrete_instance_hashes_or_array_cardinality_pins
+  manifest:
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/golden/STATE-v1.md
+      sha256: "4fac2dba512a1a167704b9ebee1b0221092bbeecec6b284c87c50f3743ac35c4"
+      bytes: 2707
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/golden/state-v1.yaml
+      sha256: "29fc347b524876290021780fdaaa7fb017e0eff3c73ddef98ad8d6a3482eef55"
+      bytes: 2271
+    - path: new pipeline/state/renderer/k0b01_v3/fixtures/negative/cases-v1.yaml
+      sha256: "73ae4edccbd6d0885be882d7116dd44c761480b7aa1a5ac5f958d7521d3634c7"
+      bytes: 1696
+    - path: new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml
+      sha256: "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7"
+      bytes: 55118
+    - path: new pipeline/state/renderer/k0b01_v3/renderer.py
+      sha256: "4b4b5e84211a9f3cf29d22b8552405641680db2f413fca64ce39d1b03fdadc60"
+      bytes: 18588
+    - path: new pipeline/state/renderer/k0b01_v3/test_renderer.py
+      sha256: "d157106876b863cef54abd0b166d3236bc6c87575f7ba2847529610ef87998ef"
+      bytes: 17281
+  manifest_root: "4a7a95d29e87973cc742309d93a59aebd6fbc0492e8a1b94d1be77b269a7784e"
+  manifest_root_profile: ordinal_path_sorted_path_TAB_SHA256_TAB_byte_count_LF
+  unchanged_v2_manifest_root:
+    sha256: "8eb4e28e4faf78f4d9aa488d0128c0058e4fb762ed8cd3e588b0da69d53bce96"
+    algorithm: SHA256_of_ordinal_path_sorted_path_TAB_sha256_TAB_bytes_LF
+  new_yaml_format_checks: pass_no_BOM_CR_aliases_duplicate_keys_or_extra_final_LF
+accepted_per_environment:
+  A:
+    renderer_tests_collected: 30
+    renderer_tests_executed: 30
+    positive: 10
+    negative: 20
+    passed: 30
+    failed: 0
+    skipped: 0
+    xfail: 0
+    accepted_names:
+      - phase-a-toolchain-validate-v2
+      - phase-a-lint-v4
+      - phase-a-format-check-v5
+      - phase-a-pytest-v3
+      - phase-a-ledger-validate-v2
+      - phase-a-ledger-build-index-v2
+      - phase-a-index-entry-check-v2
+      - phase-a-budget-validate-v2
+      - phase-a-preservation-v1
+  B:
+    renderer_tests_collected: 30
+    renderer_tests_executed: 30
+    positive: 10
+    negative: 20
+    passed: 30
+    failed: 0
+    skipped: 0
+    xfail: 0
+    accepted_names:
+      - phase-a-toolchain-validate-v2
+      - phase-a-lint-v4
+      - phase-a-format-check-v5
+      - phase-a-pytest-v3
+      - phase-a-ledger-validate-v2
+      - phase-a-ledger-build-index-v2
+      - phase-a-index-entry-check-v2
+      - phase-a-budget-validate-v2
+      - phase-a-preservation-v1
+renderer_case_contract:
+  cases_per_environment: 30
+  positive_cases: 10
+  negative_cases: 20
+  positive_requirements:
+    - complete_golden_roundtrip
+    - phase_A_transition_schema_and_byte_equivalence
+    - phase_B_transition_schema_and_byte_equivalence
+    - closed_gates_with_immutable_index_snapshots
+    - hash_preamble_and_complete_embedded_source
+    - caller_cwd_independence
+    - locale_independence
+    - source_timestamp_only_output
+    - variable_record_counts_within_closed_typed_schema
+    - read_only_check_and_explicit_render_output
+  negative_requirements:
+    - duplicate_YAML_keys
+    - unknown_top_level_field
+    - unknown_nested_record_field
+    - wrong_schema_version
+    - wrong_scalar_type
+    - duplicate_work_item_id
+    - duplicate_sequence
+    - reordered_sequence
+    - duplicate_open_gate_id
+    - duplicate_closed_gate_id
+    - open_closed_gate_overlap
+    - missing_work_item_gate
+    - K0b_01_gate_inventory_mismatch
+    - invalid_gate_status
+    - malformed_SHA_scalar
+    - missing_reference_file
+    - reference_hash_mismatch
+    - absolute_or_escaping_reference_path
+    - invalid_UTF8_BOM_CRLF_or_final_LF
+    - projection_byte_or_embedded_source_mismatch
+  test_structure: one_named_case_per_requirement_parameterized_subchecks_allowed_no_trivial_mock_only_claim
+  synthetic_reference_files: only_under_environment_target_no_new_workspace_fixtures
+entry_ledger:
+  events:
+    - path: new pipeline/ledger/k0b01/events/4001-implementation-disposition-declared-v1.yaml
+      sha256: "92f1f0435b712068cea5f5094af09a7255034ba249d6809248b6f6fc0871cb7d"
+      bytes: 3686
+    - path: new pipeline/ledger/k0b01/events/4002-implementation-disposition-authorized-v1.yaml
+      sha256: "c9b89aa799cf4ecfe7284d301bf17c5cb350edaf86587dad170d4c5955a6e540"
+      bytes: 3900
+  active_index:
+    path: new pipeline/ledger/k0b01/index-v1.yaml
+    sha256: "e63e133e521c87e4e26f03cd577cce42b4e07bd6256d537475ffa782b39782f5"
+    bytes: 18169
+  immutable_snapshots:
+    - path: new pipeline/ledger/k0b01/history/state-renderer-index-at-97a742a0-v1.yaml
+      sha256: "2d068e42b7a1822fed7b4d81f0cc8d5e85934124f36217775f618bcb1e9e16b8"
+      bytes: 17032
+    - path: new pipeline/ledger/k0b01/history/final-disposition-entry-index-v1.yaml
+      sha256: "e63e133e521c87e4e26f03cd577cce42b4e07bd6256d537475ffa782b39782f5"
+      bytes: 18169
+  event_count: 32
+  incident_count: 19
+  implementation_invocation_count: 3
+  runtime_authorized: false
+  A_B_candidate_bytes_equal: true
+  check_index_both: pass
+  subject_authority: new_owner_disposition
+  states:
+    - declared
+    - authorized
+  credit_from_new_events: 0
+preservation:
+  exact_input_pins_checked_per_environment: 193
+  immutable_pins_preserved: 190
+  frozen_hash_only_preserved: 18
+  baseline_state_pair_preserved_before_transition: true
+  existing_renderer_v2_six_artifacts: byte_unchanged
+  existing_ledger_events_fixtures_schema_code_tests: byte_unchanged
+  scope: exact_pin_inventory_and_exact_authorized_snapshots_only
+  snapshot_0: byte_identical_30_event_index_at_baseline
+  snapshot_1: byte_identical_32_event_entry_index
+  historical_format_debt:
+    exact_files:
+      - path: new pipeline/evidence/k0b-01-state-renderer-validation-v1.yaml
+        sha256: "5d4310add8a05973ed546c82c16eeedb8e5ffd527aad3686005ddbdf6f307960"
+      - path: new pipeline/evidence/k0b-01-state-renderer-gate-closure-v1.yaml
+        sha256: "531d79fa30c563a02404113a811a447c8cd3959b27c4d013311d94016a4df1d2"
+    issue: strict_JSON_bytes_in_yaml_paths_contrary_to_prospective_plan_format_convention
+    requested_narrow_treatment: Explicitly retain these two already committed, ruamel-parseable, accepted historical records with unchanged complete hashes as historical prerequisite evidence only. Disclose their naming debt in the final disposition. This is not permission to create new strict-JSON-in-YAML records, not an extra test run or new validation credit, and not a blanket waiver of plan conformance.
+    new_records:
+      yaml: real_block_YAML_ruamel_0_18_6_duplicate_keys_forbidden_no_aliases_UTF8_no_BOM_LF_one_final_LF
+      json: strict_JSON_in_json_paths_duplicate_keys_forbidden_UTF8_no_BOM_LF_one_final_LF
+    no_changes_to_the_two_historical_files: true
+  old_pipeline_projects_research_frozen_semantic_reads: none
+transition_schema_checks:
+  synthetic_complete_phase_A_and_phase_B_sources: pass_in_A_and_B
+  actual_final_pair: mandatory_postfreeze_tail_not_claimed_here
+  transition_contract:
+    only_gate_closed: G-K0B01-IMPLEMENTATION-DISPOSITION
+    other_gates: unchanged_identity_status_and_closure_evidence_except_snapshot_0_locator
+    open_global_gate_count_after: 8
+    closed_global_gate_count_after: 8
+    K0b_01_open_gate_ids_after: []
+    K0b_01_status_after: implementation_authorized_not_started
+    K0b_01_authority_after: new_final_owner_disposition_path_and_hash
+    scope_implementation_authority_after: bounded_K0b_01_exact_phase_B_scope_only_effective_on_phase_A_commit
+    scope_runtime_authority_after: none
+    remaining_K0b_01_prerequisites_after: 0
+    projection_version_after: 3.0.0
+    additional_navigation: new_request_disposition_allocation_v3_validation_closure_profile_and_current_index
+    preserved: root_plans_historical_completion_commits_review_findings_B02_limits_other_work_items_and_non_authorizations
+    generated_at: factual_fixed_source_value_not_renderer_clock
+  reason: actual source depends on closure which depends on this validation; no back_edge
+technical_attempts:
+  - environment: wheelhouse
+    started_at_UTC: '2026-09-16T14:07:35.0506060Z'
+    finished_at_UTC: '2026-09-16T14:08:20.8678001Z'
+    exit_code: 0
+    stdout_file: acquisition.stdout.log
+    stderr_file: acquisition.stderr.log
+    network_hosts:
+      - pypi.org
+      - files.pythonhosted.org
+    name: acquisition
+    stdout:
+      bytes: 6035
+      sha256: "a6b616ad958923c984902dbf8152cc419beab1170fa7655d6daaadb233fbc689"
+      text: "Collecting pip==24.2\r\n  Downloading pip-24.2-py3-none-any.whl.metadata (3.6 kB)\r\nDownloading pip-24.2-py3-none-any.whl (1.8 MB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pip-24.2-py3-none-any.whl\r\nSuccessfully downloaded pip\r\nCollecting setuptools==75.1.0\r\n  Downloading setuptools-75.1.0-py3-none-any.whl.metadata (6.9 kB)\r\nDownloading setuptools-75.1.0-py3-none-any.whl (1.2 MB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\setuptools-75.1.0-py3-none-any.whl\r\nSuccessfully downloaded setuptools\r\nCollecting wheel==0.44.0\r\n  Downloading wheel-0.44.0-py3-none-any.whl.metadata (2.3 kB)\r\nDownloading wheel-0.44.0-py3-none-any.whl (67 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\wheel-0.44.0-py3-none-any.whl\r\nSuccessfully downloaded wheel\r\nCollecting ruamel.yaml==0.18.6\r\n  Downloading ruamel.yaml-0.18.6-py3-none-any.whl.metadata (23 kB)\r\nDownloading ruamel.yaml-0.18.6-py3-none-any.whl (117 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml-0.18.6-py3-none-any.whl\r\nSuccessfully downloaded ruamel.yaml\r\nCollecting ruamel.yaml.clib==0.2.8\r\n  Downloading ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl.metadata (2.3 kB)\r\nDownloading ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl (115 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl\r\nSuccessfully downloaded ruamel.yaml.clib\r\nCollecting pytest==9.0.2\r\n  Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)\r\nDownloading pytest-9.0.2-py3-none-any.whl (374 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pytest-9.0.2-py3-none-any.whl\r\nSuccessfully downloaded pytest\r\nCollecting ruff==0.15.1\r\n  Downloading ruff-0.15.1-py3-none-win_amd64.whl.metadata (26 kB)\r\nDownloading ruff-0.15.1-py3-none-win_amd64.whl (11.6 MB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruff-0.15.1-py3-none-win_amd64.whl\r\nSuccessfully downloaded ruff\r\nCollecting colorama==0.4.6\r\n  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)\r\nDownloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\colorama-0.4.6-py2.py3-none-any.whl\r\nSuccessfully downloaded colorama\r\nCollecting iniconfig==1.1.1\r\n  Downloading iniconfig-1.1.1-py2.py3-none-any.whl.metadata (2.4 kB)\r\nDownloading iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\iniconfig-1.1.1-py2.py3-none-any.whl\r\nSuccessfully downloaded iniconfig\r\nCollecting packaging==24.1\r\n  Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)\r\nDownloading packaging-24.1-py3-none-any.whl (53 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\packaging-24.1-py3-none-any.whl\r\nSuccessfully downloaded packaging\r\nCollecting pluggy==1.6.0\r\n  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\r\nDownloading pluggy-1.6.0-py3-none-any.whl (20 kB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pluggy-1.6.0-py3-none-any.whl\r\nSuccessfully downloaded pluggy\r\nCollecting pygments==2.15.1\r\n  Downloading Pygments-2.15.1-py3-none-any.whl.metadata (2.5 kB)\r\nDownloading Pygments-2.15.1-py3-none-any.whl (1.1 MB)\r\nSaved c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pygments-2.15.1-py3-none-any.whl\r\nSuccessfully downloaded pygments\r\n{\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"result\":\"pass\",\"wheel_count\":12,\"wheels\":[{\"name\":\"colorama\",\"sha256\":\"4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\",\"size_bytes\":25335,\"wheel\":\"colorama-0.4.6-py2.py3-none-any.whl\"},{\"name\":\"iniconfig\",\"sha256\":\"011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3\",\"size_bytes\":4990,\"wheel\":\"iniconfig-1.1.1-py2.py3-none-any.whl\"},{\"name\":\"packaging\",\"sha256\":\"5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124\",\"size_bytes\":53985,\"wheel\":\"packaging-24.1-py3-none-any.whl\"},{\"name\":\"pip\",\"sha256\":\"2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2\",\"size_bytes\":1815170,\"wheel\":\"pip-24.2-py3-none-any.whl\"},{\"name\":\"pluggy\",\"sha256\":\"e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746\",\"size_bytes\":20538,\"wheel\":\"pluggy-1.6.0-py3-none-any.whl\"},{\"name\":\"pygments\",\"sha256\":\"db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1\",\"size_bytes\":1146422,\"wheel\":\"Pygments-2.15.1-py3-none-any.whl\"},{\"name\":\"pytest\",\"sha256\":\"711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b\",\"size_bytes\":374801,\"wheel\":\"pytest-9.0.2-py3-none-any.whl\"},{\"name\":\"ruamel.yaml\",\"sha256\":\"57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636\",\"size_bytes\":117761,\"wheel\":\"ruamel.yaml-0.18.6-py3-none-any.whl\"},{\"name\":\"ruamel.yaml.clib\",\"sha256\":\"1758ce7d8e1a29d23de54a16ae867abd370f01b5a69e1a3ba75223eaa3ca1a1b\",\"size_bytes\":115305,\"wheel\":\"ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl\"},{\"name\":\"ruff\",\"sha256\":\"c820fef9dd5d4172a6570e5721704a96c6679b80cf7be41659ed439653f62336\",\"size_bytes\":11599956,\"wheel\":\"ruff-0.15.1-py3-none-win_amd64.whl\"},{\"name\":\"setuptools\",\"sha256\":\"35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2\",\"size_bytes\":1248506,\"wheel\":\"setuptools-75.1.0-py3-none-any.whl\"},{\"name\":\"wheel\",\"sha256\":\"2376a90c98cc337d18623527a97c31797bd02bad0033d41547043a1cbfbe448f\",\"size_bytes\":67059,\"wheel\":\"wheel-0.44.0-py3-none-any.whl\"}]}\r\n"
+    stderr:
+      bytes: 616
+      sha256: "aa4c6b5187e8a52a4b02316c91eb0c7a4cfdce4cdea9b9d7ecfe2faa1d97cce4"
+      text: "#< CLIXML\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N=\"SourceId\">1</I64><PR N=\"Record\"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S=\"progress\" RefId=\"1\"><TNRef RefId=\"0\" /><MS><I64 N=\"SourceId\">2</I64><PR N=\"Record\"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>"
+    accepted_final_attempt: false
+  - environment: A
+    name: bootstrap
+    started_at_UTC: '2026-09-16T14:10:44.4730409Z'
+    finished_at_UTC: '2026-09-16T14:11:05.1012132Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\bootstrap.ps1' -Target 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a' -Wheelhouse 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse' -HostPython 'C:\\ProgramData\\anaconda3\\python.exe'"
+    stdout_file: bootstrap.stdout.log
+    stderr_file: bootstrap.stderr.log
+    stdout:
+      bytes: 4069
+      sha256: "dc022677f8094a83858807db1bed1708a92a1f929747ba057b7555a2e1f11441"
+      text: "Looking in links: c:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\colorama-0.4.6-py2.py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 1))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\iniconfig-1.1.1-py2.py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 2))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\packaging-24.1-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 3))\r\nRequirement already satisfied: pip==24.2 in c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\lib\\site-packages (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 4)) (24.2)\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pluggy-1.6.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 5))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pygments-2.15.1-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 6))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pytest-9.0.2-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 7))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml-0.18.6-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 8))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 9))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruff-0.15.1-py3-none-win_amd64.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 10))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\setuptools-75.1.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 11))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\wheel-0.44.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 12))\r\nInstalling collected packages: iniconfig, wheel, setuptools, ruff, ruamel.yaml.clib, pygments, pluggy, packaging, colorama, ruamel.yaml, pytest\r\nSuccessfully installed colorama-0.4.6 iniconfig-1.1.1 packaging-24.1 pluggy-1.6.0 pygments-2.15.1 pytest-9.0.2 ruamel.yaml-0.18.6 ruamel.yaml.clib-0.2.8 ruff-0.15.1 setuptools-75.1.0 wheel-0.44.0\r\n{\"package_count\":12,\"packages\":{\"colorama\":\"0.4.6\",\"iniconfig\":\"1.1.1\",\"packaging\":\"24.1\",\"pip\":\"24.2\",\"pluggy\":\"1.6.0\",\"pygments\":\"2.15.1\",\"pytest\":\"9.0.2\",\"ruamel.yaml\":\"0.18.6\",\"ruamel.yaml.clib\":\"0.2.8\",\"ruff\":\"0.15.1\",\"setuptools\":\"75.1.0\",\"wheel\":\"0.44.0\"},\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: golden-generation-v1
+    started_at_UTC: '2026-09-16T14:16:28.1887282Z'
+    finished_at_UTC: '2026-09-16T14:16:28.6622474Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' render --profile 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\projection-profile-v3.yaml' --source 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\fixtures\\golden\\state-v1.yaml' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\golden-candidate.md'\nexit $LASTEXITCODE"
+    stdout_file: golden-generation-v1.stdout.log
+    stderr_file: golden-generation-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 13
+      sha256: "e74c18491e9572872313e38efb40f40b380fa7530029472c1f47e0109d4019d1"
+      text: "source:YAML\r\n"
+    accepted_final_attempt: false
+  - environment: A
+    name: golden-generation-v2
+    started_at_UTC: '2026-09-16T14:19:19.9170697Z'
+    finished_at_UTC: '2026-09-16T14:19:21.3435918Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' render --profile 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\projection-profile-v3.yaml' --source 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\fixtures\\golden\\state-v1.yaml' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\golden-candidate.md'\nexit $LASTEXITCODE"
+    stdout_file: golden-generation-v2.stdout.log
+    stderr_file: golden-generation-v2.stderr.log
+    stdout:
+      bytes: 273
+      sha256: "35a67653f110ae410848b95c2319ebd8ce87d0a893eb8a7091fa94f0b028b40a"
+      text: "{\"profile_sha256\":\"90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7\",\"projection_sha256\":\"4fac2dba512a1a167704b9ebee1b0221092bbeecec6b284c87c50f3743ac35c4\",\"result\":\"pass\",\"source_sha256\":\"29fc347b524876290021780fdaaa7fb017e0eff3c73ddef98ad8d6a3482eef55\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-budget-validate-v1
+    started_at_UTC: '2026-09-16T14:23:35.7931364Z'
+    finished_at_UTC: '2026-09-16T14:23:38.6391135Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate-budget -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -EvidencePath 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\evidence\\k0b-01-implementation-session-allocation-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-budget-validate-v1.stdout.log
+    stderr_file: phase-a-budget-validate-v1.stderr.log
+    stdout:
+      bytes: 127
+      sha256: "d8c8abbee58b6d1cdd72f61257466cb94c9d86ef3d2c8beb54865dd8f0928238"
+      text: "{\"calculation_input_sha256\":\"4a3e682ccd81f361bf674abde27fecee945057fcf19445da4f5f1b7289da3923\",\"exit_code\":0,\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-budget-validate-v2
+    started_at_UTC: '2026-09-16T14:49:38.5303780Z'
+    finished_at_UTC: '2026-09-16T14:49:39.5210440Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate-budget -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -EvidencePath 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\evidence\\k0b-01-implementation-session-allocation-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-budget-validate-v2.stdout.log
+    stderr_file: phase-a-budget-validate-v2.stderr.log
+    stdout:
+      bytes: 127
+      sha256: "d8c8abbee58b6d1cdd72f61257466cb94c9d86ef3d2c8beb54865dd8f0928238"
+      text: "{\"calculation_input_sha256\":\"4a3e682ccd81f361bf674abde27fecee945057fcf19445da4f5f1b7289da3923\",\"exit_code\":0,\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-format-check-v4
+    started_at_UTC: '2026-09-16T14:27:05.2417979Z'
+    finished_at_UTC: '2026-09-16T14:27:05.8346672Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-format-check-v4.stdout.log
+    stderr_file: phase-a-format-check-v4.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-index-entry-check-v1
+    started_at_UTC: '2026-09-16T14:27:57.5332462Z'
+    finished_at_UTC: '2026-09-16T14:28:06.5778501Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' check-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --index 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\index-entry-check-v1.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-index-entry-check-v1.stdout.log
+    stderr_file: phase-a-index-entry-check-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-index-entry-check-v2
+    started_at_UTC: '2026-09-16T14:50:22.4243052Z'
+    finished_at_UTC: '2026-09-16T14:50:33.6469524Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' check-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --index 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\index-entry-check-v2.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-index-entry-check-v2.stdout.log
+    stderr_file: phase-a-index-entry-check-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-ledger-build-index-v1
+    started_at_UTC: '2026-09-16T14:23:35.4152557Z'
+    finished_at_UTC: '2026-09-16T14:23:44.2107334Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' build-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\index-entry-candidate-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-build-index-v1.stdout.log
+    stderr_file: phase-a-ledger-build-index-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ledger-build-index-v2
+    started_at_UTC: '2026-09-16T14:49:30.7928420Z'
+    finished_at_UTC: '2026-09-16T14:49:37.7311678Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' build-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\index-entry-candidate-v2.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-build-index-v2.stdout.log
+    stderr_file: phase-a-ledger-build-index-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-ledger-validate-v1
+    started_at_UTC: '2026-09-16T14:23:35.1045385Z'
+    finished_at_UTC: '2026-09-16T14:23:44.6123795Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' validate --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\ledger-entry-validation-v1.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-validate-v1.stdout.log
+    stderr_file: phase-a-ledger-validate-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ledger-validate-v2
+    started_at_UTC: '2026-09-16T14:49:20.3781407Z'
+    finished_at_UTC: '2026-09-16T14:49:31.8582487Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' validate --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\ledger-entry-validation-v2.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-validate-v2.stdout.log
+    stderr_file: phase-a-ledger-validate-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-lint-v3
+    started_at_UTC: '2026-09-16T14:27:04.0224271Z'
+    finished_at_UTC: '2026-09-16T14:27:04.4785111Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-lint-v3.stdout.log
+    stderr_file: phase-a-lint-v3.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-preservation-v1
+    started_at_UTC: '2026-09-16T14:28:48.6529701Z'
+    finished_at_UTC: '2026-09-16T14:28:49.9679013Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -c \"import base64;exec(base64.b64decode('ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmZyb20gcnVhbWVsLnlhbWwgaW1wb3J0IFlBTUwKaW1wb3J0IGpzb24saGFzaGxpYixzdGF0CnJvb3Q9UGF0aC5jd2QoKTt5PVlBTUwodHlwPSdzYWZlJyxwdXJlPVRydWUpO3kuYWxsb3dfZHVwbGljYXRlX2tleXM9RmFsc2UKZD15LmxvYWQoKHJvb3QvJ25ldyBwaXBlbGluZS9yZXF1ZXN0cy9rMGItMDEtZmluYWwtaW1wbGVtZW50YXRpb24tZGlzcG9zaXRpb24tYW5kLWJvdW5kZWQtaW1wbGVtZW50YXRpb24tYXBwcm92YWwtcmVxdWVzdC12MS55YW1sJykucmVhZF9ieXRlcygpKQptdXRhYmxlPXsnbmV3IHBpcGVsaW5lL3N0YXRlL3N0YXRlLnlhbWwnLCduZXcgcGlwZWxpbmUvc3RhdGUvU1RBVEUubWQnLCduZXcgcGlwZWxpbmUvbGVkZ2VyL2swYjAxL2luZGV4LXYxLnlhbWwnfQpwaW5zPWRbJ3JlYWRfc2NvcGUnXVsnZXhpc3Rpbmdfc2VtYW50aWNfZmlsZXMnXStkWydyZWFkX3Njb3BlJ11bJ2Zyb3plbl9oYXNoX29ubHlfZmlsZXMnXQpjaGVja3M9W10KZm9yIHBpbiBpbiBwaW5zOgogcD1yb290L3BpblsncGF0aCddO3Jhdz1wLnJlYWRfYnl0ZXMoKTthY3R1YWw9aGFzaGxpYi5zaGEyNTYocmF3KS5oZXhkaWdlc3QoKQogYXNzZXJ0IG5vdCBwLmxzdGF0KCkuc3RfZmlsZV9hdHRyaWJ1dGVzICYgMHg0MDAKIGlmIHBpblsncGF0aCddIG5vdCBpbiBtdXRhYmxlOgogIGFzc2VydCBhY3R1YWw9PXBpblsnc2hhMjU2J10scGluWydwYXRoJ10KICBhc3NlcnQgbGVuKHJhdyk9PXBpblsnYnl0ZXMnXSxwaW5bJ3BhdGgnXQogY2hlY2tzLmFwcGVuZCh7J3BhdGgnOnBpblsncGF0aCddLCdzaGEyNTYnOmFjdHVhbCwnYnl0ZXMnOmxlbihyYXcpLCdwcmVzZXJ2ZWQnOmFjdHVhbD09cGluWydzaGEyNTYnXSwnZXhhY3RfbXV0YWJsZSc6cGluWydwYXRoJ10gaW4gbXV0YWJsZX0pCmZvciBuYW1lIGluICgnc3RhdGUtcmVuZGVyZXItaW5kZXgtYXQtOTdhNzQyYTAtdjEueWFtbCcsJ2ZpbmFsLWRpc3Bvc2l0aW9uLWVudHJ5LWluZGV4LXYxLnlhbWwnKToKIHA9cm9vdC8nbmV3IHBpcGVsaW5lL2xlZGdlci9rMGIwMS9oaXN0b3J5Jy9uYW1lO3Jhdz1wLnJlYWRfYnl0ZXMoKQogYXNzZXJ0IHJhdy5lbmRzd2l0aChiJ1xuJykgYW5kIG5vdCByYXcuZW5kc3dpdGgoYidcblxuJykgYW5kIGInXHInIG5vdCBpbiByYXcKIGlmIG5hbWUuc3RhcnRzd2l0aCgnc3RhdGUtcmVuZGVyZXInKTphc3NlcnQgaGFzaGxpYi5zaGEyNTYocmF3KS5oZXhkaWdlc3QoKT09JzJkMDY4ZTQyYjdhMTgyMmZlZDdiNGQ4MWYwY2M4ZDVlODU5MzQxMjRmMzYyMTc3NzVmNjE4YmNiMWU5ZTE2YjgnCiBlbHNlOmFzc2VydCByYXc9PShyb290LyduZXcgcGlwZWxpbmUvbGVkZ2VyL2swYjAxL2luZGV4LXYxLnlhbWwnKS5yZWFkX2J5dGVzKCkKcHJpbnQoanNvbi5kdW1wcyh7J3Jlc3VsdCc6J3Bhc3MnLCdwaW5zX2NoZWNrZWQnOmxlbihwaW5zKSwnaW1tdXRhYmxlX3ByZXNlcnZlZCc6bGVuKHBpbnMpLTMsJ2Zyb3plbl9oYXNoX29ubHlfcHJlc2VydmVkJzpsZW4oZFsncmVhZF9zY29wZSddWydmcm96ZW5faGFzaF9vbmx5X2ZpbGVzJ10pLCdyZW5kZXJlcl92Ml9wcmVzZXJ2ZWQnOlRydWUsJ3NuYXBzaG90c192ZXJpZmllZCc6Miwnc2NvcGUnOidleGFjdF8xOTNfcGluc19hbmRfdHdvX2F1dGhvcml6ZWRfc25hcHNob3RzX29ubHknLCdmaWxlcyc6Y2hlY2tzfSxzb3J0X2tleXM9VHJ1ZSkpCg=='))\"\nexit $LASTEXITCODE"
+    stdout_file: phase-a-preservation-v1.stdout.log
+    stderr_file: phase-a-preservation-v1.stderr.log
+    stdout:
+      bytes: 41796
+      sha256: "82e0d02f6e475bcff38ed4d9266544a9ae709b06cccb11c4db3a8773881ecea7"
+      parsed_summary:
+        frozen_hash_only_preserved: 18
+        immutable_preserved: 190
+        pins_checked: 193
+        renderer_v2_preserved: true
+        result: pass
+        scope: exact_193_pins_and_two_authorized_snapshots_only
+        snapshots_verified: 2
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-pytest-v1
+    started_at_UTC: '2026-09-16T14:22:07.7555966Z'
+    finished_at_UTC: '2026-09-16T14:22:23.9795377Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\pytest-phase-a-v1' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v1.stdout.log
+    stderr_file: phase-a-pytest-v1.stderr.log
+    stdout:
+      bytes: 11382
+      sha256: "ceacd70716f7814143fac59047a72f87e13a06347d9dd6693e79bfb6ada5a26b"
+      text: ".FFF..................F.......                                           [100%]\r\n================================== FAILURES ===================================\r\n_____________ test_phase_A_transition_schema_and_byte_equivalence _____________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/pytest-phase-a-v1/test_phase_A_transition_schema0')\r\n\r\n    def test_phase_A_transition_schema_and_byte_equivalence(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_a(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:264: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\\\.tmp\\\\pytest-phase-a-v1\\\\test_phase_A_transition_schema0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n_____________ test_phase_B_transition_schema_and_byte_equivalence _____________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/pytest-phase-a-v1/test_phase_B_transition_schema0')\r\n\r\n    def test_phase_B_transition_schema_and_byte_equivalence(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_b(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:274: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\\\.tmp\\\\pytest-phase-a-v1\\\\test_phase_B_transition_schema0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n______________ test_closed_gates_with_immutable_index_snapshots _______________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/pytest-phase-a-v1/test_closed_gates_with_immutab0')\r\n\r\n    def test_closed_gates_with_immutable_index_snapshots(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_a(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:283: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\\\.tmp\\\\pytest-phase-a-v1\\\\test_closed_gates_with_immutab0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n______________ test_fail_closed[K0b_01_gate_inventory_mismatch] _______________\r\n\r\ncase = {'case_id': 'K0b_01_gate_inventory_mismatch', 'expected': 'fail_closed_RendererError'}\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/pytest-phase-a-v1/test_fail_closed_K0b_01_gate_i0')\r\n\r\n    @pytest.mark.parametrize(\"case\", CASES, ids=lambda v: v[\"case_id\"])\r\n    def test_fail_closed(case: dict[str, str], tmp_path: Path) -> None:\r\n        case_id = case[\"case_id\"]\r\n        source = phase_a() if case_id == \"K0b_01_gate_inventory_mismatch\" else load(GOLDEN)\r\n>       path, root = synthetic(source, tmp_path)\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:372: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-a/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\\\.tmp\\\\pytest-phase-a-v1\\\\test_fail_closed_K0b_01_gate_i0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n=========================== short test summary info ===========================\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_phase_A_transition_schema_and_byte_equivalence\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_phase_B_transition_schema_and_byte_equivalence\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_closed_gates_with_immutable_index_snapshots\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_fail_closed[K0b_01_gate_inventory_mismatch]\r\n4 failed, 26 passed in 14.14s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-pytest-v2
+    started_at_UTC: '2026-09-16T14:23:35.7971369Z'
+    finished_at_UTC: '2026-09-16T14:23:56.3315326Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\pytest-phase-a-v2' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v2.stdout.log
+    stderr_file: phase-a-pytest-v2.stderr.log
+    stdout:
+      bytes: 102
+      sha256: "73c9b46d2bd1d4a7b2f3b560877be26a562d690f95e890a8323df453341db9dc"
+      text: "..............................                                           [100%]\r\n30 passed in 18.45s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-pytest-v3
+    started_at_UTC: '2026-09-16T14:27:06.9881547Z'
+    finished_at_UTC: '2026-09-16T14:27:39.4512920Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\.tmp\\renderer-pytest-v3' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v3.stdout.log
+    stderr_file: phase-a-pytest-v3.stderr.log
+    stdout:
+      bytes: 102
+      sha256: "e1de6dca29162370dfa542255516014c02f72e8745fc1d9d8fb62e5dd2d29b87"
+      text: "..............................                                           [100%]\r\n30 passed in 30.24s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-ruff-format-check-v1
+    started_at_UTC: '2026-09-16T14:21:02.5539764Z'
+    finished_at_UTC: '2026-09-16T14:21:03.8512950Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v1.stdout.log
+    stderr_file: phase-a-ruff-format-check-v1.stderr.log
+    stdout:
+      bytes: 164
+      sha256: "527c0107c7050d3bbf2842ee762cd0fc9ebfabe13b1c15fba3b6140d55063759"
+      text: "Would reformat: new pipeline\\state\\renderer\\k0b01_v3\\renderer.py\nWould reformat: new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n2 files would be reformatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ruff-format-check-v2
+    started_at_UTC: '2026-09-16T14:22:08.1054470Z'
+    finished_at_UTC: '2026-09-16T14:22:10.5549841Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v2.stdout.log
+    stderr_file: phase-a-ruff-format-check-v2.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ruff-format-check-v3
+    started_at_UTC: '2026-09-16T14:23:36.0705073Z'
+    finished_at_UTC: '2026-09-16T14:23:40.7123220Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v3.stdout.log
+    stderr_file: phase-a-ruff-format-check-v3.stderr.log
+    stdout:
+      bytes: 124
+      sha256: "e0a0821523c44b847939449c0e501cd3845a9468dc71397638677681d3cd8e9c"
+      text: "Would reformat: new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n1 file would be reformatted, 1 file already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ruff-format-diff-v1
+    started_at_UTC: '2026-09-16T14:21:39.1700866Z'
+    finished_at_UTC: '2026-09-16T14:21:39.5897691Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --diff --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-diff-v1.stdout.log
+    stderr_file: phase-a-ruff-format-diff-v1.stderr.log
+    stdout:
+      bytes: 35305
+      sha256: "b3c36ae300e298634b102e97eda0835b1337c9c36398dc48bd6fef271a12d899"
+      text: "--- new pipeline\\state\\renderer\\k0b01_v3\\renderer.py\n+++ new pipeline\\state\\renderer\\k0b01_v3\\renderer.py\n@@ -63,15 +63,24 @@\n     return value\n \n \n-def validate_schema(schema: Any, depth: int, maximum: int, definitions: dict[str, Any]) -> None:\n+def validate_schema(\n+    schema: Any, depth: int, maximum: int, definitions: dict[str, Any]\n+) -> None:\n     require(depth <= maximum and isinstance(schema, dict), \"profile:schema\")\n     if \"schema_ref\" in schema:\n-        require(set(schema) == {\"schema_ref\"} and schema[\"schema_ref\"] in definitions, \"profile:schema_ref\")\n-        validate_schema(definitions[schema[\"schema_ref\"]], depth + 1, maximum, definitions)\n+        require(\n+            set(schema) == {\"schema_ref\"} and schema[\"schema_ref\"] in definitions,\n+            \"profile:schema_ref\",\n+        )\n+        validate_schema(\n+            definitions[schema[\"schema_ref\"]], depth + 1, maximum, definitions\n+        )\n         return\n     if \"any_of\" in schema:\n         require(set(schema) == {\"any_of\"}, \"profile:union_fields\")\n-        require(isinstance(schema[\"any_of\"], list) and schema[\"any_of\"], \"profile:union\")\n+        require(\n+            isinstance(schema[\"any_of\"], list) and schema[\"any_of\"], \"profile:union\"\n+        )\n         for item in schema[\"any_of\"]:\n             validate_schema(item, depth + 1, maximum, definitions)\n         return\n@@ -80,7 +89,9 @@\n         require(set(schema) == {\"type\", \"properties\", \"required\"}, \"profile:object\")\n         props = schema[\"properties\"]\n         required = schema[\"required\"]\n-        require(isinstance(props, dict) and isinstance(required, list), \"profile:fields\")\n+        require(\n+            isinstance(props, dict) and isinstance(required, list), \"profile:fields\"\n+        )\n         require(all(isinstance(k, str) for k in props), \"profile:field_names\")\n         require(\n             len(required) == len(set(required)) and set(required) <= set(props),\n@@ -92,13 +103,19 @@\n         require(set(schema) == {\"type\", \"items\"}, \"profile:array\")\n         validate_schema(schema[\"items\"], depth + 1, maximum, definitions)\n     else:\n-        require(kind in {\"string\", \"integer\", \"number\", \"boolean\", \"null\"}, \"profile:type\")\n+        require(\n+            kind in {\"string\", \"integer\", \"number\", \"boolean\", \"null\"}, \"profile:type\"\n+        )\n         require(set(schema) <= {\"type\", \"pattern\"}, \"profile:scalar\")\n         if \"pattern\" in schema:\n-            require(kind == \"string\" and schema[\"pattern\"] == SHA.pattern, \"profile:pattern\")\n+            require(\n+                kind == \"string\" and schema[\"pattern\"] == SHA.pattern, \"profile:pattern\"\n+            )\n \n \n-def validate_value(value: Any, schema: dict[str, Any], location: str, definitions: dict[str, Any]) -> None:\n+def validate_value(\n+    value: Any, schema: dict[str, Any], location: str, definitions: dict[str, Any]\n+) -> None:\n     code = f\"source:schema:{location}\"\n     if \"schema_ref\" in schema:\n         validate_value(value, definitions[schema[\"schema_ref\"]], location, definitions)\n@@ -143,19 +160,38 @@\n     require(\n         set(profile)\n         == {\n-            \"profile_id\", \"schema_version\", \"projection_version\", \"status\",\n-            \"repository_paths\", \"limits\", \"source_schema\", \"schema_definitions\", \"reference_contract\",\n-            \"gate_contract\", \"document_contract\", \"canonicalization\", \"cli_contract\",\n+            \"profile_id\",\n+            \"schema_version\",\n+            \"projection_version\",\n+            \"status\",\n+            \"repository_paths\",\n+            \"limits\",\n+            \"source_schema\",\n+            \"schema_definitions\",\n+            \"reference_contract\",\n+            \"gate_contract\",\n+            \"document_contract\",\n+            \"canonicalization\",\n+            \"cli_contract\",\n             \"non_authorizations\",\n         },\n         \"profile:fields\",\n     )\n-    require(profile[\"profile_id\"] == \"pipeline-v2.state-projection-profile-v3\", \"profile:id\")\n-    require(type(profile[\"schema_version\"]) is int and profile[\"schema_version\"] == 1, \"profile:version\")\n-    require(profile[\"projection_version\"] == \"3.0.0\" and profile[\"status\"] == \"active\", \"profile:status\")\n+    require(\n+        profile[\"profile_id\"] == \"pipeline-v2.state-projection-profile-v3\", \"profile:id\"\n+    )\n+    require(\n+        type(profile[\"schema_version\"]) is int and profile[\"schema_version\"] == 1,\n+        \"profile:version\",\n+    )\n+    require(\n+        profile[\"projection_version\"] == \"3.0.0\" and profile[\"status\"] == \"active\",\n+        \"profile:status\",\n+    )\n     paths = profile[\"repository_paths\"]\n     require(\n-        paths == {\n+        paths\n+        == {\n             \"source\": \"new pipeline/state/state.yaml\",\n             \"projection\": \"new pipeline/state/STATE.md\",\n             \"profile\": \"new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml\",\n@@ -163,51 +199,113 @@\n         \"profile:paths\",\n     )\n     limits = profile[\"limits\"]\n-    require(set(limits) == {\"maximum_schema_depth\", \"maximum_source_bytes\"}, \"profile:limits\")\n-    require(all(type(v) is int and v > 0 for v in limits.values()), \"profile:limit_values\")\n+    require(\n+        set(limits) == {\"maximum_schema_depth\", \"maximum_source_bytes\"},\n+        \"profile:limits\",\n+    )\n+    require(\n+        all(type(v) is int and v > 0 for v in limits.values()), \"profile:limit_values\"\n+    )\n     definitions = profile[\"schema_definitions\"]\n     require(isinstance(definitions, dict) and definitions, \"profile:definitions\")\n-    validate_schema(profile[\"source_schema\"], 0, limits[\"maximum_schema_depth\"], definitions)\n+    validate_schema(\n+        profile[\"source_schema\"], 0, limits[\"maximum_schema_depth\"], definitions\n+    )\n     for node in definitions.values():\n         validate_schema(node, 0, limits[\"maximum_schema_depth\"], definitions)\n     refs = profile[\"reference_contract\"]\n-    require(set(refs) == {\"allowed_repository_paths\", \"digest\", \"reparse_points\"}, \"profile:references\")\n-    require(refs[\"digest\"] == \"SHA-256\" and refs[\"reparse_points\"] == \"forbidden\", \"profile:reference_values\")\n+    require(\n+        set(refs) == {\"allowed_repository_paths\", \"digest\", \"reparse_points\"},\n+        \"profile:references\",\n+    )\n+    require(\n+        refs[\"digest\"] == \"SHA-256\" and refs[\"reparse_points\"] == \"forbidden\",\n+        \"profile:reference_values\",\n+    )\n     allowed = refs[\"allowed_repository_paths\"]\n-    require(isinstance(allowed, list) and len(allowed) == len(set(allowed)), \"profile:allowlist\")\n-    require(all(isinstance(p, str) and p.startswith(\"new pipeline/\") for p in allowed), \"profile:allowlist_paths\")\n-    require(profile[\"canonicalization\"] == {\n-        \"encoding\": \"UTF-8-without-BOM\", \"line_endings\": \"LF\", \"final_newline_count\": 1,\n-        \"timestamps\": \"source_values_only\", \"environment_values\": \"forbidden\",\n-    }, \"profile:canonicalization\")\n-    require(profile[\"cli_contract\"] == {\n-        \"modes\": [\"render\", \"check\"], \"render_output\": \"explicit_required\",\n-        \"check_mode_writes\": False, \"success_exit_code\": 0,\n-        \"validation_error_exit_code\": 1, \"invalid_input_exit_code\": 2,\n-    }, \"profile:CLI\")\n-    require(profile[\"document_contract\"] == {\n-        \"heading\": \"# Pipeline v2 state projection\",\n-        \"notice\": \"Generated projection; do not edit this file directly.\",\n-        \"normative_body\": \"complete_source_YAML_bytes\", \"fence\": \"yaml\",\n-    }, \"profile:document\")\n+    require(\n+        isinstance(allowed, list) and len(allowed) == len(set(allowed)),\n+        \"profile:allowlist\",\n+    )\n+    require(\n+        all(isinstance(p, str) and p.startswith(\"new pipeline/\") for p in allowed),\n+        \"profile:allowlist_paths\",\n+    )\n+    require(\n+        profile[\"canonicalization\"]\n+        == {\n+            \"encoding\": \"UTF-8-without-BOM\",\n+            \"line_endings\": \"LF\",\n+            \"final_newline_count\": 1,\n+            \"timestamps\": \"source_values_only\",\n+            \"environment_values\": \"forbidden\",\n+        },\n+        \"profile:canonicalization\",\n+    )\n+    require(\n+        profile[\"cli_contract\"]\n+        == {\n+            \"modes\": [\"render\", \"check\"],\n+            \"render_output\": \"explicit_required\",\n+            \"check_mode_writes\": False,\n+            \"success_exit_code\": 0,\n+            \"validation_error_exit_code\": 1,\n+            \"invalid_input_exit_code\": 2,\n+        },\n+        \"profile:CLI\",\n+    )\n+    require(\n+        profile[\"document_contract\"]\n+        == {\n+            \"heading\": \"# Pipeline v2 state projection\",\n+            \"notice\": \"Generated projection; do not edit this file directly.\",\n+            \"normative_body\": \"complete_source_YAML_bytes\",\n+            \"fence\": \"yaml\",\n+        },\n+        \"profile:document\",\n+    )\n     gates = profile[\"gate_contract\"]\n-    require(set(gates) == {\n-        \"open_statuses\", \"blocked_status\", \"implementation_statuses\",\n-        \"bounded_implementation_authority\", \"five_K0b_01_gate_ids\",\n-        \"closed_record_schemas\", \"validated_status_required_evidence_keys\",\n-    }, \"profile:gate_contract\")\n-    require(len(gates[\"five_K0b_01_gate_ids\"]) == len(set(gates[\"five_K0b_01_gate_ids\"])) == 5, \"profile:five_gates\")\n+    require(\n+        set(gates)\n+        == {\n+            \"open_statuses\",\n+            \"blocked_status\",\n+            \"implementation_statuses\",\n+            \"bounded_implementation_authority\",\n+            \"five_K0b_01_gate_ids\",\n+            \"closed_record_schemas\",\n+            \"validated_status_required_evidence_keys\",\n+        },\n+        \"profile:gate_contract\",\n+    )\n+    require(\n+        len(gates[\"five_K0b_01_gate_ids\"])\n+        == len(set(gates[\"five_K0b_01_gate_ids\"]))\n+        == 5,\n+        \"profile:five_gates\",\n+    )\n     for node in gates[\"closed_record_schemas\"].values():\n         validate_schema(node, 0, limits[\"maximum_schema_depth\"], definitions)\n     return profile, digest(data)\n \n \n def reference(path: Any, sha: Any, root: Path, profile: dict[str, Any]) -> None:\n-    require(isinstance(path, str) and isinstance(sha, str) and SHA.fullmatch(sha) is not None, \"source:reference_shape\")\n-    require(path in profile[\"reference_contract\"][\"allowed_repository_paths\"], \"source:reference_scope\")\n+    require(\n+        isinstance(path, str)\n+        and isinstance(sha, str)\n+        and SHA.fullmatch(sha) is not None,\n+        \"source:reference_shape\",\n+    )\n+    require(\n+        path in profile[\"reference_contract\"][\"allowed_repository_paths\"],\n+        \"source:reference_scope\",\n+    )\n     require(\"\\\\\" not in path and not DRIVE.match(path), \"source:path_style\")\n     posix = PurePosixPath(path)\n-    require(not posix.is_absolute() and \"..\" not in posix.parts and str(posix) == path, \"source:path_escape\")\n+    require(\n+        not posix.is_absolute() and \"..\" not in posix.parts and str(posix) == path,\n+        \"source:path_escape\",\n+    )\n     candidate = root.resolve()\n     for part in posix.parts:\n         candidate /= part\n@@ -215,7 +313,11 @@\n             info = candidate.lstat()\n         except OSError as exc:\n             raise RendererError(\"source:reference_missing\") from exc\n-        require(not stat.S_ISLNK(info.st_mode) and not (getattr(info, \"st_file_attributes\", 0) & 0x400), \"source:reference_reparse\")\n+        require(\n+            not stat.S_ISLNK(info.st_mode)\n+            and not (getattr(info, \"st_file_attributes\", 0) & 0x400),\n+            \"source:reference_reparse\",\n+        )\n     require(candidate.is_file(), \"source:reference_missing\")\n     require(digest(candidate.read_bytes()) == sha, \"source:reference_hash\")\n \n@@ -237,53 +339,114 @@\n     work = source[\"work_items\"]\n     sequence = [w[\"sequence\"] for w in work]\n     ids = [w[\"work_item_id\"] for w in work]\n-    require(len(sequence) == len(set(sequence)) and sequence == sorted(sequence), \"source:sequence\")\n+    require(\n+        len(sequence) == len(set(sequence)) and sequence == sorted(sequence),\n+        \"source:sequence\",\n+    )\n     require(len(ids) == len(set(ids)), \"source:work_item_ids\")\n     opened = [g[\"gate_id\"] for g in source[\"open_gates\"]]\n     closed = [g[\"gate_id\"] for g in source[\"closed_gates\"]]\n-    require(len(opened) == len(set(opened)) and opened == sorted(opened), \"source:open_gate_ids\")\n+    require(\n+        len(opened) == len(set(opened)) and opened == sorted(opened),\n+        \"source:open_gate_ids\",\n+    )\n     require(len(closed) == len(set(closed)), \"source:closed_gate_ids\")\n     require(not set(opened) & set(closed), \"source:gate_overlap\")\n     gates = profile[\"gate_contract\"]\n     for gate in source[\"closed_gates\"]:\n-        require(gate[\"gate_id\"] in gates[\"closed_record_schemas\"], \"source:unknown_closed_gate\")\n-        validate_value(gate, gates[\"closed_record_schemas\"][gate[\"gate_id\"]], \"closed_gate\", profile[\"schema_definitions\"])\n-    require(all(g[\"status\"] in gates[\"open_statuses\"] for g in source[\"open_gates\"]), \"source:open_status\")\n-    require(all(g[\"status\"] == \"closed\" for g in source[\"closed_gates\"]), \"source:closed_status\")\n+        require(\n+            gate[\"gate_id\"] in gates[\"closed_record_schemas\"],\n+            \"source:unknown_closed_gate\",\n+        )\n+        validate_value(\n+            gate,\n+            gates[\"closed_record_schemas\"][gate[\"gate_id\"]],\n+            \"closed_gate\",\n+            profile[\"schema_definitions\"],\n+        )\n+    require(\n+        all(g[\"status\"] in gates[\"open_statuses\"] for g in source[\"open_gates\"]),\n+        \"source:open_status\",\n+    )\n+    require(\n+        all(g[\"status\"] == \"closed\" for g in source[\"closed_gates\"]),\n+        \"source:closed_status\",\n+    )\n     for item in work:\n         item_gates = item[\"open_gate_ids\"]\n-        require(len(item_gates) == len(set(item_gates)) and set(item_gates) <= set(opened), \"source:work_item_gates\")\n+        require(\n+            len(item_gates) == len(set(item_gates)) and set(item_gates) <= set(opened),\n+            \"source:work_item_gates\",\n+        )\n         if item[\"work_item_id\"] == \"K0b-01\":\n             expected = [g for g in opened if g.startswith(\"G-K0B01-\")]\n             require(item_gates == expected, \"source:K0b_01_gates\")\n             scope = source[\"scope\"]\n             require(scope[\"runtime_authority\"] == \"none\", \"source:runtime_authority\")\n-            require(scope[\"K0b_01_remaining_open_prerequisites\"] == len(expected), \"source:prerequisite_count\")\n+            require(\n+                scope[\"K0b_01_remaining_open_prerequisites\"] == len(expected),\n+                \"source:prerequisite_count\",\n+            )\n             status = item[\"status\"]\n             if expected:\n-                require(status == gates[\"blocked_status\"] and scope[\"implementation_authority\"] == \"none\", \"source:blocked_authority\")\n+                require(\n+                    status == gates[\"blocked_status\"]\n+                    and scope[\"implementation_authority\"] == \"none\",\n+                    \"source:blocked_authority\",\n+                )\n             else:\n-                require(status in gates[\"implementation_statuses\"] and scope[\"implementation_authority\"] == gates[\"bounded_implementation_authority\"], \"source:implementation_authority\")\n-                authority = source[\"active_authority\"].get(\"K0b_01_final_implementation_disposition\")\n-                require(isinstance(authority, dict) and item[\"authority_path\"] == authority[\"path\"] and item[\"authority_sha256\"] == authority[\"sha256\"], \"source:authority_consistency\")\n-                require(set(gates[\"five_K0b_01_gate_ids\"]) <= set(closed), \"source:five_gate_inventory\")\n+                require(\n+                    status in gates[\"implementation_statuses\"]\n+                    and scope[\"implementation_authority\"]\n+                    == gates[\"bounded_implementation_authority\"],\n+                    \"source:implementation_authority\",\n+                )\n+                authority = source[\"active_authority\"].get(\n+                    \"K0b_01_final_implementation_disposition\"\n+                )\n+                require(\n+                    isinstance(authority, dict)\n+                    and item[\"authority_path\"] == authority[\"path\"]\n+                    and item[\"authority_sha256\"] == authority[\"sha256\"],\n+                    \"source:authority_consistency\",\n+                )\n+                require(\n+                    set(gates[\"five_K0b_01_gate_ids\"]) <= set(closed),\n+                    \"source:five_gate_inventory\",\n+                )\n                 if status == \"implemented_validated_runtime_not_authorized\":\n-                    require(set(gates[\"validated_status_required_evidence_keys\"]) <= set(source[\"supporting_review_evidence\"]), \"source:missing_implementation_evidence\")\n+                    require(\n+                        set(gates[\"validated_status_required_evidence_keys\"])\n+                        <= set(source[\"supporting_review_evidence\"]),\n+                        \"source:missing_implementation_evidence\",\n+                    )\n \n \n-def render_bytes(*, source_path: Path, profile_path: Path, repository_root: Path) -> tuple[bytes, dict[str, str]]:\n+def render_bytes(\n+    *, source_path: Path, profile_path: Path, repository_root: Path\n+) -> tuple[bytes, dict[str, str]]:\n     data, text = read_text(source_path, \"source\")\n     source = load_yaml(text, \"source\")\n     profile, profile_sha = load_profile(profile_path)\n     require(len(data) <= profile[\"limits\"][\"maximum_source_bytes\"], \"source:size\")\n     require(\"```\" not in text, \"source:fence\")\n     validate_value(source, profile[\"source_schema\"], \"\", profile[\"schema_definitions\"])\n-    require(source[\"schema_version\"] == 1 and source[\"projection_version\"] == profile[\"projection_version\"], \"source:version\")\n-    require(source[\"projection_profile\"] == {\"path\": profile[\"repository_paths\"][\"profile\"], \"sha256\": profile_sha}, \"source:profile_binding\")\n+    require(\n+        source[\"schema_version\"] == 1\n+        and source[\"projection_version\"] == profile[\"projection_version\"],\n+        \"source:version\",\n+    )\n+    require(\n+        source[\"projection_profile\"]\n+        == {\"path\": profile[\"repository_paths\"][\"profile\"], \"sha256\": profile_sha},\n+        \"source:profile_binding\",\n+    )\n     validate_gates(source, profile)\n     walk_references(source, repository_root, profile)\n     for item in source[\"work_items\"]:\n-        reference(item[\"authority_path\"], item[\"authority_sha256\"], repository_root, profile)\n+        reference(\n+            item[\"authority_path\"], item[\"authority_sha256\"], repository_root, profile\n+        )\n     paths = profile[\"repository_paths\"]\n     doc = profile[\"document_contract\"]\n     output = (\n@@ -293,11 +456,25 @@\n         f\"Projection version: `{profile['projection_version']}`\\n\\n{doc['notice']}\\n\\n\"\n         f\"```yaml\\n{text}```\\n\"\n     ).encode(\"utf-8\")\n-    return output, {\"source_sha256\": digest(data), \"profile_sha256\": profile_sha, \"projection_sha256\": digest(output)}\n+    return output, {\n+        \"source_sha256\": digest(data),\n+        \"profile_sha256\": profile_sha,\n+        \"projection_sha256\": digest(output),\n+    }\n \n \n-def check_projection(*, source_path: Path, profile_path: Path, projection_path: Path, repository_root: Path) -> dict[str, str]:\n-    expected, summary = render_bytes(source_path=source_path, profile_path=profile_path, repository_root=repository_root)\n+def check_projection(\n+    *,\n+    source_path: Path,\n+    profile_path: Path,\n+    projection_path: Path,\n+    repository_root: Path,\n+) -> dict[str, str]:\n+    expected, summary = render_bytes(\n+        source_path=source_path,\n+        profile_path=profile_path,\n+        repository_root=repository_root,\n+    )\n     actual, _ = read_text(projection_path, \"projection\")\n     require(actual == expected, \"projection:byte_mismatch\")\n     return summary\n@@ -311,18 +488,32 @@\n         sub.add_argument(\"--source\", type=Path, required=True)\n         sub.add_argument(\"--profile\", type=Path, required=True)\n         sub.add_argument(\"--repository-root\", type=Path, required=True)\n-        sub.add_argument(\"--output\" if mode == \"render\" else \"--projection\", type=Path, required=True)\n+        sub.add_argument(\n+            \"--output\" if mode == \"render\" else \"--projection\", type=Path, required=True\n+        )\n     args = parser.parse_args()\n-    kwargs = {\"source_path\": args.source, \"profile_path\": args.profile, \"repository_root\": args.repository_root}\n+    kwargs = {\n+        \"source_path\": args.source,\n+        \"profile_path\": args.profile,\n+        \"repository_root\": args.repository_root,\n+    }\n     try:\n         if args.command == \"render\":\n-            require(args.output.resolve() not in {args.source.resolve(), args.profile.resolve()}, \"output:input_collision\")\n+            require(\n+                args.output.resolve()\n+                not in {args.source.resolve(), args.profile.resolve()},\n+                \"output:input_collision\",\n+            )\n             output, summary = render_bytes(**kwargs)\n             args.output.parent.mkdir(parents=True, exist_ok=True)\n             args.output.write_bytes(output)\n         else:\n             summary = check_projection(**kwargs, projection_path=args.projection)\n-        print(json.dumps({\"result\": \"pass\", **summary}, sort_keys=True, separators=(\",\", \":\")))\n+        print(\n+            json.dumps(\n+                {\"result\": \"pass\", **summary}, sort_keys=True, separators=(\",\", \":\")\n+            )\n+        )\n         return 0\n     except RendererError as exc:\n         print(str(exc), file=sys.stderr)\n\n--- new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n+++ new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n@@ -20,8 +20,13 @@\n PROFILE = HERE / \"projection-profile-v3.yaml\"\n GOLDEN = HERE / \"fixtures/golden/state-v1.yaml\"\n PROJECTION = HERE / \"fixtures/golden/STATE-v1.md\"\n-REQUEST = REPO / \"new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml\"\n-spec = importlib.util.spec_from_file_location(\"state_renderer_v3_tests\", HERE / \"renderer.py\")\n+REQUEST = (\n+    REPO\n+    / \"new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml\"\n+)\n+spec = importlib.util.spec_from_file_location(\n+    \"state_renderer_v3_tests\", HERE / \"renderer.py\"\n+)\n assert spec and spec.loader\n renderer = importlib.util.module_from_spec(spec)\n spec.loader.exec_module(renderer)\n@@ -56,47 +61,87 @@\n     profile = \"new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml\"\n     source[\"projection_profile\"] = ref(profile)\n     nav = {\n-        \"K0b_01_final_implementation_approval_request\": str(REQUEST.relative_to(REPO).as_posix()),\n-        \"K0b_01_final_implementation_disposition\": request[\"phase_A_contract\"][\"owner_disposition\"][\"path\"],\n-        \"K0b_01_implementation_session_allocation\": request[\"phase_A_contract\"][\"session_allocation\"][\"path\"],\n+        \"K0b_01_final_implementation_approval_request\": str(\n+            REQUEST.relative_to(REPO).as_posix()\n+        ),\n+        \"K0b_01_final_implementation_disposition\": request[\"phase_A_contract\"][\n+            \"owner_disposition\"\n+        ][\"path\"],\n+        \"K0b_01_implementation_session_allocation\": request[\"phase_A_contract\"][\n+            \"session_allocation\"\n+        ][\"path\"],\n         \"K0b_01_renderer_v3_profile\": profile,\n         \"K0b_01_renderer_v3_validation\": \"new pipeline/evidence/k0b-01-final-disposition-renderer-v3-validation-v1.yaml\",\n-        \"K0b_01_final_implementation_gate_closure\": request[\"phase_A_contract\"][\"closure\"][\"path\"],\n+        \"K0b_01_final_implementation_gate_closure\": request[\"phase_A_contract\"][\n+            \"closure\"\n+        ][\"path\"],\n         \"K0b_01_active_ledger_index\": \"new pipeline/ledger/k0b01/index-v1.yaml\",\n     }\n     for key, path in nav.items():\n         source[\"active_authority\"][key] = ref(path)\n-    source[\"open_gates\"] = [g for g in source[\"open_gates\"] if g[\"gate_id\"] != \"G-K0B01-IMPLEMENTATION-DISPOSITION\"]\n+    source[\"open_gates\"] = [\n+        g\n+        for g in source[\"open_gates\"]\n+        if g[\"gate_id\"] != \"G-K0B01-IMPLEMENTATION-DISPOSITION\"\n+    ]\n     for gate in source[\"closed_gates\"]:\n         if gate[\"gate_id\"] == \"G-K0B01-STATE-RENDERER\":\n-            gate[\"closure_evidence\"][\"ledger_registration\"][\"index\"][\"path\"] = request[\"historical_index_preservation\"][\"snapshot_0\"][\"path\"]\n-    if not any(g[\"gate_id\"] == \"G-K0B01-IMPLEMENTATION-DISPOSITION\" for g in source[\"closed_gates\"]):\n-        source[\"closed_gates\"].append({\n-            \"gate_id\": \"G-K0B01-IMPLEMENTATION-DISPOSITION\", \"status\": \"closed\",\n-            \"closure_evidence\": {\n-                \"approval_request\": ref(nav[\"K0b_01_final_implementation_approval_request\"]),\n-                \"owner_disposition\": ref(nav[\"K0b_01_final_implementation_disposition\"]),\n-                \"session_allocation\": ref(nav[\"K0b_01_implementation_session_allocation\"]),\n-                \"renderer_v3_validation\": ref(nav[\"K0b_01_renderer_v3_validation\"]),\n-                \"ledger_entry\": {\n-                    \"authorized_event\": ref(request[\"phase_A_contract\"][\"ledger_entry\"][\"exact_events\"][1]),\n-                    \"index\": ref(request[\"historical_index_preservation\"][\"snapshot_1\"][\"path\"]),\n-                    \"event_count\": 32,\n+            gate[\"closure_evidence\"][\"ledger_registration\"][\"index\"][\"path\"] = request[\n+                \"historical_index_preservation\"\n+            ][\"snapshot_0\"][\"path\"]\n+    if not any(\n+        g[\"gate_id\"] == \"G-K0B01-IMPLEMENTATION-DISPOSITION\"\n+        for g in source[\"closed_gates\"]\n+    ):\n+        source[\"closed_gates\"].append(\n+            {\n+                \"gate_id\": \"G-K0B01-IMPLEMENTATION-DISPOSITION\",\n+                \"status\": \"closed\",\n+                \"closure_evidence\": {\n+                    \"approval_request\": ref(\n+                        nav[\"K0b_01_final_implementation_approval_request\"]\n+                    ),\n+                    \"owner_disposition\": ref(\n+                        nav[\"K0b_01_final_implementation_disposition\"]\n+                    ),\n+                    \"session_allocation\": ref(\n+                        nav[\"K0b_01_implementation_session_allocation\"]\n+                    ),\n+                    \"renderer_v3_validation\": ref(nav[\"K0b_01_renderer_v3_validation\"]),\n+                    \"ledger_entry\": {\n+                        \"authorized_event\": ref(\n+                            request[\"phase_A_contract\"][\"ledger_entry\"][\"exact_events\"][\n+                                1\n+                            ]\n+                        ),\n+                        \"index\": ref(\n+                            request[\"historical_index_preservation\"][\"snapshot_1\"][\n+                                \"path\"\n+                            ]\n+                        ),\n+                        \"event_count\": 32,\n+                    },\n+                    \"gate_closure\": ref(\n+                        nav[\"K0b_01_final_implementation_gate_closure\"]\n+                    ),\n+                    \"projection_profile\": ref(profile),\n                 },\n-                \"gate_closure\": ref(nav[\"K0b_01_final_implementation_gate_closure\"]),\n-                \"projection_profile\": ref(profile),\n-            },\n-        })\n+            }\n+        )\n     for item in source[\"work_items\"]:\n         if item[\"work_item_id\"] == \"K0b-01\":\n             item[\"status\"] = \"implementation_authorized_not_started\"\n             item[\"authority_path\"] = nav[\"K0b_01_final_implementation_disposition\"]\n             item[\"authority_sha256\"] = \"0\" * 64\n             item[\"open_gate_ids\"] = []\n-    source[\"scope\"][\"implementation_authority\"] = \"bounded_K0b_01_exact_phase_B_scope_only\"\n+    source[\"scope\"][\"implementation_authority\"] = (\n+        \"bounded_K0b_01_exact_phase_B_scope_only\"\n+    )\n     source[\"scope\"][\"K0b_01_remaining_open_prerequisites\"] = 0\n     source[\"scope\"][\"K0b_01_implementation_session_budget\"] = 1\n-    source[\"scope\"][\"K0b_01_implementation_session_id\"] = request[\"budget\"][\"implementation_session_id\"]\n+    source[\"scope\"][\"K0b_01_implementation_session_id\"] = request[\"budget\"][\n+        \"implementation_session_id\"\n+    ]\n     source[\"scope\"][\"K0b_01_implementation_status\"] = \"authorized_not_started\"\n     return source\n \n@@ -106,7 +151,9 @@\n     for item in source[\"work_items\"]:\n         if item[\"work_item_id\"] == \"K0b-01\":\n             item[\"status\"] = \"implemented_validated_runtime_not_authorized\"\n-    source[\"scope\"][\"K0b_01_implementation_status\"] = \"implemented_validated_runtime_not_authorized\"\n+    source[\"scope\"][\"K0b_01_implementation_status\"] = (\n+        \"implemented_validated_runtime_not_authorized\"\n+    )\n     nav = {\n         \"K0b_01_implementation_input_manifest\": \"new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml\",\n         \"K0b_01_implementation_session_entry\": \"new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml\",\n@@ -131,7 +178,12 @@\n         if path not in hashes:\n             candidate = root / path\n             candidate.parent.mkdir(parents=True, exist_ok=True)\n-            data = PROFILE.read_bytes() if path == \"new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml\" else (\"synthetic reference only: \" + path + \"\\n\").encode()\n+            data = (\n+                PROFILE.read_bytes()\n+                if path\n+                == \"new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml\"\n+                else (\"synthetic reference only: \" + path + \"\\n\").encode()\n+            )\n             candidate.write_bytes(data)\n             hashes[path] = hashlib.sha256(data).hexdigest()\n         return hashes[path]\n@@ -155,24 +207,57 @@\n \n \n def render(source: Path = GOLDEN, root: Path = REPO) -> tuple[bytes, dict[str, str]]:\n-    return renderer.render_bytes(source_path=source, profile_path=PROFILE, repository_root=root)\n+    return renderer.render_bytes(\n+        source_path=source, profile_path=PROFILE, repository_root=root\n+    )\n \n \n def check(source: Path, root: Path, projection: Path) -> dict[str, str]:\n-    return renderer.check_projection(source_path=source, profile_path=PROFILE, repository_root=root, projection_path=projection)\n+    return renderer.check_projection(\n+        source_path=source,\n+        profile_path=PROFILE,\n+        repository_root=root,\n+        projection_path=projection,\n+    )\n \n \n-def cli(source: Path, root: Path, output: Path, *, cwd: Path, locale: str = \"C\") -> subprocess.CompletedProcess[str]:\n+def cli(\n+    source: Path, root: Path, output: Path, *, cwd: Path, locale: str = \"C\"\n+) -> subprocess.CompletedProcess[str]:\n     env = os.environ.copy()\n     env.pop(\"PYTHONPATH\", None)\n     env[\"LC_ALL\"] = locale\n-    return subprocess.run([sys.executable, \"-B\", \"-I\", str(HERE / \"renderer.py\"), \"render\", \"--profile\", str(PROFILE), \"--source\", str(source), \"--repository-root\", str(root), \"--output\", str(output)], cwd=cwd, env=env, capture_output=True, text=True, check=False)\n+    return subprocess.run(\n+        [\n+            sys.executable,\n+            \"-B\",\n+            \"-I\",\n+            str(HERE / \"renderer.py\"),\n+            \"render\",\n+            \"--profile\",\n+            str(PROFILE),\n+            \"--source\",\n+            str(source),\n+            \"--repository-root\",\n+            str(root),\n+            \"--output\",\n+            str(output),\n+        ],\n+        cwd=cwd,\n+        env=env,\n+        capture_output=True,\n+        text=True,\n+        check=False,\n+    )\n \n \n def test_complete_golden_roundtrip() -> None:\n     output, _ = render()\n     assert output == PROJECTION.read_bytes()\n-    assert check(GOLDEN, REPO, PROJECTION)[\"projection_sha256\"] == hashlib.sha256(output).hexdigest()\n+    assert (\n+        check(GOLDEN, REPO, PROJECTION)[\"projection_sha256\"]\n+        == hashlib.sha256(output).hexdigest()\n+    )\n \n \n def test_phase_A_transition_schema_and_byte_equivalence(tmp_path: Path) -> None:\n@@ -251,8 +336,29 @@\n def test_read_only_check_and_explicit_render_output(tmp_path: Path) -> None:\n     before = (GOLDEN.read_bytes(), PROFILE.read_bytes(), PROJECTION.read_bytes())\n     check(GOLDEN, REPO, PROJECTION)\n-    assert before == (GOLDEN.read_bytes(), PROFILE.read_bytes(), PROJECTION.read_bytes())\n-    result = subprocess.run([sys.executable, \"-B\", \"-I\", str(HERE / \"renderer.py\"), \"render\", \"--profile\", str(PROFILE), \"--source\", str(GOLDEN), \"--repository-root\", str(REPO)], cwd=tmp_path, capture_output=True, check=False)\n+    assert before == (\n+        GOLDEN.read_bytes(),\n+        PROFILE.read_bytes(),\n+        PROJECTION.read_bytes(),\n+    )\n+    result = subprocess.run(\n+        [\n+            sys.executable,\n+            \"-B\",\n+            \"-I\",\n+            str(HERE / \"renderer.py\"),\n+            \"render\",\n+            \"--profile\",\n+            str(PROFILE),\n+            \"--source\",\n+            str(GOLDEN),\n+            \"--repository-root\",\n+            str(REPO),\n+        ],\n+        cwd=tmp_path,\n+        capture_output=True,\n+        check=False,\n+    )\n     assert result.returncode == 2\n \n \n@@ -290,17 +396,23 @@\n     elif case_id == \"missing_work_item_gate\":\n         doc[\"work_items\"][0][\"open_gate_ids\"] = [\"G-MISSING\"]\n     elif case_id == \"K0b_01_gate_inventory_mismatch\":\n-        next(w for w in doc[\"work_items\"] if w[\"work_item_id\"] == \"K0b-01\")[\"open_gate_ids\"] = [doc[\"open_gates\"][0][\"gate_id\"]]\n+        next(w for w in doc[\"work_items\"] if w[\"work_item_id\"] == \"K0b-01\")[\n+            \"open_gate_ids\"\n+        ] = [doc[\"open_gates\"][0][\"gate_id\"]]\n     elif case_id == \"invalid_gate_status\":\n         doc[\"open_gates\"][0][\"status\"] = \"closed\"\n     elif case_id == \"malformed_SHA_scalar\":\n         doc[\"active_authority\"][\"fixture_profile\"][\"sha256\"] = \"invalid\"\n     elif case_id == \"missing_reference_file\":\n-        doc[\"active_authority\"][\"fixture_profile\"][\"path\"] = \"new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json\"\n+        doc[\"active_authority\"][\"fixture_profile\"][\"path\"] = (\n+            \"new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json\"\n+        )\n     elif case_id == \"reference_hash_mismatch\":\n         doc[\"active_authority\"][\"fixture_profile\"][\"sha256\"] = \"f\" * 64\n     elif case_id == \"absolute_or_escaping_reference_path\":\n-        for index, bad in enumerate((\"C:/unapproved/file.yaml\", \"../escape.yaml\", \"new pipeline/unlisted.yaml\")):\n+        for index, bad in enumerate(\n+            (\"C:/unapproved/file.yaml\", \"../escape.yaml\", \"new pipeline/unlisted.yaml\")\n+        ):\n             bad_doc = copy.deepcopy(doc)\n             bad_doc[\"active_authority\"][\"fixture_profile\"][\"path\"] = bad\n             bad_path = tmp_path / (str(index) + \".yaml\")\n@@ -310,7 +422,15 @@\n         return\n     elif case_id == \"invalid_UTF8_BOM_CRLF_or_final_LF\":\n         data = path.read_bytes()\n-        for index, bad in enumerate((b\"\\xff\\n\", b\"\\xef\\xbb\\xbf\" + data, data.replace(b\"\\n\", b\"\\r\\n\"), data[:-1], data + b\"\\n\")):\n+        for index, bad in enumerate(\n+            (\n+                b\"\\xff\\n\",\n+                b\"\\xef\\xbb\\xbf\" + data,\n+                data.replace(b\"\\n\", b\"\\r\\n\"),\n+                data[:-1],\n+                data + b\"\\n\",\n+            )\n+        ):\n             bad_path = tmp_path / (str(index) + \".yaml\")\n             bad_path.write_bytes(bad)\n             with pytest.raises(renderer.RendererError):\n\n"
+    stderr:
+      bytes: 29
+      sha256: "d7f0fe3d60c4452ccfe3e74c362508020418c25bd55c01472702f4dfbf6694eb"
+      text: "2 files would be reformatted\n"
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ruff-lint-v1
+    started_at_UTC: '2026-09-16T14:21:02.0166797Z'
+    finished_at_UTC: '2026-09-16T14:21:03.8886372Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-lint-v1.stdout.log
+    stderr_file: phase-a-ruff-lint-v1.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-ruff-lint-v2
+    started_at_UTC: '2026-09-16T14:22:07.6404231Z'
+    finished_at_UTC: '2026-09-16T14:22:09.7644165Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-lint-v2.stdout.log
+    stderr_file: phase-a-ruff-lint-v2.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-toolchain-validate-v1
+    started_at_UTC: '2026-09-16T14:21:01.9991519Z'
+    finished_at_UTC: '2026-09-16T14:21:03.5606927Z'
+    exit_code: 2
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-toolchain-validate-v1.stdout.log
+    stderr_file: phase-a-toolchain-validate-v1.stderr.log
+    stdout:
+      bytes: 113
+      sha256: "5418b9b83a84ec5ac51c66f44e3604c8513c42fe39cc4e6ca5b14ce3795fca02"
+      text: "{\"command\":\"validate\",\"error\":\"PythonPath and Wheelhouse are required.\",\"exit_code\":2,\"result\":\"invalid_input\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: A
+    name: phase-a-toolchain-validate-v2
+    started_at_UTC: '2026-09-16T14:22:07.7324879Z'
+    finished_at_UTC: '2026-09-16T14:22:12.5297564Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -Wheelhouse 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-toolchain-validate-v2.stdout.log
+    stderr_file: phase-a-toolchain-validate-v2.stderr.log
+    stdout:
+      bytes: 458
+      sha256: "a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e"
+      text: "{\"exit_code\":0,\"package_count\":12,\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"requirements_sha256\":\"6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6\",\"result\":\"pass\",\"sqlite_library_version\":\"3.45.3\",\"sqlite_python_module_version\":\"2.6.0\",\"toolchain_lock_sha256\":\"3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0\",\"wheel_count\":12,\"wheel_set_sha256\":\"bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba\"}\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: bootstrap
+    started_at_UTC: '2026-09-16T14:10:44.4655243Z'
+    finished_at_UTC: '2026-09-16T14:11:05.4137458Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\bootstrap.ps1' -Target 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b' -Wheelhouse 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse' -HostPython 'C:\\ProgramData\\anaconda3\\python.exe'"
+    stdout_file: bootstrap.stdout.log
+    stderr_file: bootstrap.stderr.log
+    stdout:
+      bytes: 4069
+      sha256: "b92c429f73eab40877b30c8d7aa1cd02513708d8607d03f5b997919c87e26cd3"
+      text: "Looking in links: c:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\colorama-0.4.6-py2.py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 1))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\iniconfig-1.1.1-py2.py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 2))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\packaging-24.1-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 3))\r\nRequirement already satisfied: pip==24.2 in c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\lib\\site-packages (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 4)) (24.2)\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pluggy-1.6.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 5))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pygments-2.15.1-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 6))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\pytest-9.0.2-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 7))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml-0.18.6-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 8))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 9))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\ruff-0.15.1-py3-none-win_amd64.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 10))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\setuptools-75.1.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 11))\r\nProcessing c:\\users\\administrator\\appdata\\local\\temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse\\wheel-0.44.0-py3-none-any.whl (from -r C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\requirements-v1.lock (line 12))\r\nInstalling collected packages: iniconfig, wheel, setuptools, ruff, ruamel.yaml.clib, pygments, pluggy, packaging, colorama, ruamel.yaml, pytest\r\nSuccessfully installed colorama-0.4.6 iniconfig-1.1.1 packaging-24.1 pluggy-1.6.0 pygments-2.15.1 pytest-9.0.2 ruamel.yaml-0.18.6 ruamel.yaml.clib-0.2.8 ruff-0.15.1 setuptools-75.1.0 wheel-0.44.0\r\n{\"package_count\":12,\"packages\":{\"colorama\":\"0.4.6\",\"iniconfig\":\"1.1.1\",\"packaging\":\"24.1\",\"pip\":\"24.2\",\"pluggy\":\"1.6.0\",\"pygments\":\"2.15.1\",\"pytest\":\"9.0.2\",\"ruamel.yaml\":\"0.18.6\",\"ruamel.yaml.clib\":\"0.2.8\",\"ruff\":\"0.15.1\",\"setuptools\":\"75.1.0\",\"wheel\":\"0.44.0\"},\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-budget-validate-v1
+    started_at_UTC: '2026-09-16T14:23:36.6203522Z'
+    finished_at_UTC: '2026-09-16T14:23:43.7603008Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate-budget -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -EvidencePath 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\evidence\\k0b-01-implementation-session-allocation-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-budget-validate-v1.stdout.log
+    stderr_file: phase-a-budget-validate-v1.stderr.log
+    stdout:
+      bytes: 127
+      sha256: "d8c8abbee58b6d1cdd72f61257466cb94c9d86ef3d2c8beb54865dd8f0928238"
+      text: "{\"calculation_input_sha256\":\"4a3e682ccd81f361bf674abde27fecee945057fcf19445da4f5f1b7289da3923\",\"exit_code\":0,\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-budget-validate-v2
+    started_at_UTC: '2026-09-16T14:49:58.1933657Z'
+    finished_at_UTC: '2026-09-16T14:49:58.9193946Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate-budget -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -EvidencePath 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\evidence\\k0b-01-implementation-session-allocation-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-budget-validate-v2.stdout.log
+    stderr_file: phase-a-budget-validate-v2.stderr.log
+    stdout:
+      bytes: 127
+      sha256: "d8c8abbee58b6d1cdd72f61257466cb94c9d86ef3d2c8beb54865dd8f0928238"
+      text: "{\"calculation_input_sha256\":\"4a3e682ccd81f361bf674abde27fecee945057fcf19445da4f5f1b7289da3923\",\"exit_code\":0,\"result\":\"pass\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-format-check-v4
+    started_at_UTC: '2026-09-16T14:27:18.6871402Z'
+    finished_at_UTC: '2026-09-16T14:27:19.2647821Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff format --check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-format-check-v4.stdout.log
+    stderr_file: phase-a-format-check-v4.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-index-entry-check-v1
+    started_at_UTC: '2026-09-16T14:28:07.3800045Z'
+    finished_at_UTC: '2026-09-16T14:28:16.5596816Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' check-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --index 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\index-entry-check-v1.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-index-entry-check-v1.stdout.log
+    stderr_file: phase-a-index-entry-check-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-index-entry-check-v2
+    started_at_UTC: '2026-09-16T14:50:32.9683990Z'
+    finished_at_UTC: '2026-09-16T14:50:42.5829991Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' check-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --index 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\index-v1.yaml' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\index-entry-check-v2.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-index-entry-check-v2.stdout.log
+    stderr_file: phase-a-index-entry-check-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-ledger-build-index-v1
+    started_at_UTC: '2026-09-16T14:23:36.3821589Z'
+    finished_at_UTC: '2026-09-16T14:23:46.6568471Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' build-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\index-entry-candidate-v1.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-build-index-v1.stdout.log
+    stderr_file: phase-a-ledger-build-index-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ledger-build-index-v2
+    started_at_UTC: '2026-09-16T14:49:49.3564043Z'
+    finished_at_UTC: '2026-09-16T14:49:57.3716282Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' build-index --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\index-entry-candidate-v2.yaml'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-build-index-v2.stdout.log
+    stderr_file: phase-a-ledger-build-index-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-ledger-validate-v1
+    started_at_UTC: '2026-09-16T14:23:36.2478515Z'
+    finished_at_UTC: '2026-09-16T14:23:46.7395368Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' validate --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\ledger-entry-validation-v1.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-validate-v1.stdout.log
+    stderr_file: phase-a-ledger-validate-v1.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ledger-validate-v2
+    started_at_UTC: '2026-09-16T14:49:40.3709649Z'
+    finished_at_UTC: '2026-09-16T14:49:48.6832650Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\ledger.py' validate --schema 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\schema-profile-v1.yaml' --events 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\ledger\\k0b01\\events' --repository-root 'C:\\Projects\\1.Mistake Not My Baton For A Wand' --output 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\ledger-entry-validation-v2.json'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ledger-validate-v2.stdout.log
+    stderr_file: phase-a-ledger-validate-v2.stderr.log
+    stdout:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-lint-v3
+    started_at_UTC: '2026-09-16T14:27:17.2959507Z'
+    finished_at_UTC: '2026-09-16T14:27:17.6867112Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-lint-v3.stdout.log
+    stderr_file: phase-a-lint-v3.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-preservation-v1
+    started_at_UTC: '2026-09-16T14:28:50.8900310Z'
+    finished_at_UTC: '2026-09-16T14:28:52.0229803Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -c \"import base64;exec(base64.b64decode('ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmZyb20gcnVhbWVsLnlhbWwgaW1wb3J0IFlBTUwKaW1wb3J0IGpzb24saGFzaGxpYixzdGF0CnJvb3Q9UGF0aC5jd2QoKTt5PVlBTUwodHlwPSdzYWZlJyxwdXJlPVRydWUpO3kuYWxsb3dfZHVwbGljYXRlX2tleXM9RmFsc2UKZD15LmxvYWQoKHJvb3QvJ25ldyBwaXBlbGluZS9yZXF1ZXN0cy9rMGItMDEtZmluYWwtaW1wbGVtZW50YXRpb24tZGlzcG9zaXRpb24tYW5kLWJvdW5kZWQtaW1wbGVtZW50YXRpb24tYXBwcm92YWwtcmVxdWVzdC12MS55YW1sJykucmVhZF9ieXRlcygpKQptdXRhYmxlPXsnbmV3IHBpcGVsaW5lL3N0YXRlL3N0YXRlLnlhbWwnLCduZXcgcGlwZWxpbmUvc3RhdGUvU1RBVEUubWQnLCduZXcgcGlwZWxpbmUvbGVkZ2VyL2swYjAxL2luZGV4LXYxLnlhbWwnfQpwaW5zPWRbJ3JlYWRfc2NvcGUnXVsnZXhpc3Rpbmdfc2VtYW50aWNfZmlsZXMnXStkWydyZWFkX3Njb3BlJ11bJ2Zyb3plbl9oYXNoX29ubHlfZmlsZXMnXQpjaGVja3M9W10KZm9yIHBpbiBpbiBwaW5zOgogcD1yb290L3BpblsncGF0aCddO3Jhdz1wLnJlYWRfYnl0ZXMoKTthY3R1YWw9aGFzaGxpYi5zaGEyNTYocmF3KS5oZXhkaWdlc3QoKQogYXNzZXJ0IG5vdCBwLmxzdGF0KCkuc3RfZmlsZV9hdHRyaWJ1dGVzICYgMHg0MDAKIGlmIHBpblsncGF0aCddIG5vdCBpbiBtdXRhYmxlOgogIGFzc2VydCBhY3R1YWw9PXBpblsnc2hhMjU2J10scGluWydwYXRoJ10KICBhc3NlcnQgbGVuKHJhdyk9PXBpblsnYnl0ZXMnXSxwaW5bJ3BhdGgnXQogY2hlY2tzLmFwcGVuZCh7J3BhdGgnOnBpblsncGF0aCddLCdzaGEyNTYnOmFjdHVhbCwnYnl0ZXMnOmxlbihyYXcpLCdwcmVzZXJ2ZWQnOmFjdHVhbD09cGluWydzaGEyNTYnXSwnZXhhY3RfbXV0YWJsZSc6cGluWydwYXRoJ10gaW4gbXV0YWJsZX0pCmZvciBuYW1lIGluICgnc3RhdGUtcmVuZGVyZXItaW5kZXgtYXQtOTdhNzQyYTAtdjEueWFtbCcsJ2ZpbmFsLWRpc3Bvc2l0aW9uLWVudHJ5LWluZGV4LXYxLnlhbWwnKToKIHA9cm9vdC8nbmV3IHBpcGVsaW5lL2xlZGdlci9rMGIwMS9oaXN0b3J5Jy9uYW1lO3Jhdz1wLnJlYWRfYnl0ZXMoKQogYXNzZXJ0IHJhdy5lbmRzd2l0aChiJ1xuJykgYW5kIG5vdCByYXcuZW5kc3dpdGgoYidcblxuJykgYW5kIGInXHInIG5vdCBpbiByYXcKIGlmIG5hbWUuc3RhcnRzd2l0aCgnc3RhdGUtcmVuZGVyZXInKTphc3NlcnQgaGFzaGxpYi5zaGEyNTYocmF3KS5oZXhkaWdlc3QoKT09JzJkMDY4ZTQyYjdhMTgyMmZlZDdiNGQ4MWYwY2M4ZDVlODU5MzQxMjRmMzYyMTc3NzVmNjE4YmNiMWU5ZTE2YjgnCiBlbHNlOmFzc2VydCByYXc9PShyb290LyduZXcgcGlwZWxpbmUvbGVkZ2VyL2swYjAxL2luZGV4LXYxLnlhbWwnKS5yZWFkX2J5dGVzKCkKcHJpbnQoanNvbi5kdW1wcyh7J3Jlc3VsdCc6J3Bhc3MnLCdwaW5zX2NoZWNrZWQnOmxlbihwaW5zKSwnaW1tdXRhYmxlX3ByZXNlcnZlZCc6bGVuKHBpbnMpLTMsJ2Zyb3plbl9oYXNoX29ubHlfcHJlc2VydmVkJzpsZW4oZFsncmVhZF9zY29wZSddWydmcm96ZW5faGFzaF9vbmx5X2ZpbGVzJ10pLCdyZW5kZXJlcl92Ml9wcmVzZXJ2ZWQnOlRydWUsJ3NuYXBzaG90c192ZXJpZmllZCc6Miwnc2NvcGUnOidleGFjdF8xOTNfcGluc19hbmRfdHdvX2F1dGhvcml6ZWRfc25hcHNob3RzX29ubHknLCdmaWxlcyc6Y2hlY2tzfSxzb3J0X2tleXM9VHJ1ZSkpCg=='))\"\nexit $LASTEXITCODE"
+    stdout_file: phase-a-preservation-v1.stdout.log
+    stderr_file: phase-a-preservation-v1.stderr.log
+    stdout:
+      bytes: 41796
+      sha256: "82e0d02f6e475bcff38ed4d9266544a9ae709b06cccb11c4db3a8773881ecea7"
+      parsed_summary:
+        frozen_hash_only_preserved: 18
+        immutable_preserved: 190
+        pins_checked: 193
+        renderer_v2_preserved: true
+        result: pass
+        scope: exact_193_pins_and_two_authorized_snapshots_only
+        snapshots_verified: 2
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-pytest-v1
+    started_at_UTC: '2026-09-16T14:22:08.5876200Z'
+    finished_at_UTC: '2026-09-16T14:22:24.2889270Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\pytest-phase-a-v1' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v1.stdout.log
+    stderr_file: phase-a-pytest-v1.stderr.log
+    stdout:
+      bytes: 11382
+      sha256: "25f3e089f9f8601dc741a5bc881640a711bd6239aae5fb60ef9a61f202f99b00"
+      text: ".FFF..................F.......                                           [100%]\r\n================================== FAILURES ===================================\r\n_____________ test_phase_A_transition_schema_and_byte_equivalence _____________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/pytest-phase-a-v1/test_phase_A_transition_schema0')\r\n\r\n    def test_phase_A_transition_schema_and_byte_equivalence(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_a(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:264: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\\\.tmp\\\\pytest-phase-a-v1\\\\test_phase_A_transition_schema0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n_____________ test_phase_B_transition_schema_and_byte_equivalence _____________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/pytest-phase-a-v1/test_phase_B_transition_schema0')\r\n\r\n    def test_phase_B_transition_schema_and_byte_equivalence(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_b(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:274: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\\\.tmp\\\\pytest-phase-a-v1\\\\test_phase_B_transition_schema0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n______________ test_closed_gates_with_immutable_index_snapshots _______________\r\n\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/pytest-phase-a-v1/test_closed_gates_with_immutab0')\r\n\r\n    def test_closed_gates_with_immutable_index_snapshots(tmp_path: Path) -> None:\r\n>       source, root = synthetic(phase_a(), tmp_path)\r\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:283: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\\\.tmp\\\\pytest-phase-a-v1\\\\test_closed_gates_with_immutab0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n______________ test_fail_closed[K0b_01_gate_inventory_mismatch] _______________\r\n\r\ncase = {'case_id': 'K0b_01_gate_inventory_mismatch', 'expected': 'fail_closed_RendererError'}\r\ntmp_path = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/pytest-phase-a-v1/test_fail_closed_K0b_01_gate_i0')\r\n\r\n    @pytest.mark.parametrize(\"case\", CASES, ids=lambda v: v[\"case_id\"])\r\n    def test_fail_closed(case: dict[str, str], tmp_path: Path) -> None:\r\n        case_id = case[\"case_id\"]\r\n        source = phase_a() if case_id == \"K0b_01_gate_inventory_mismatch\" else load(GOLDEN)\r\n>       path, root = synthetic(source, tmp_path)\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:372: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:203: in synthetic\r\n    visit(source)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:198: in visit\r\n    visit(child)\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:194: in visit\r\n    value[\"sha256\"] = materialize(value[\"path\"])\r\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nnew pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py:187: in materialize\r\n    candidate.write_bytes(data)\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1036: in write_bytes\r\n    with self.open(mode='wb') as f:\r\n         ^^^^^^^^^^^^^^^^^^^^\r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = WindowsPath('C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b01-final-disposition-implementation-v1-b/.tmp/...-repository/new pipeline/requests/k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml')\r\nmode = 'wb', buffering = -1, encoding = None, errors = None, newline = None\r\n\r\n    def open(self, mode='r', buffering=-1, encoding=None,\r\n             errors=None, newline=None):\r\n        \"\"\"\r\n        Open the file pointed to by this path and return a file object, as\r\n        the built-in open() function does.\r\n        \"\"\"\r\n        if \"b\" not in mode:\r\n            encoding = io.text_encoding(encoding)\r\n>       return io.open(self, mode, buffering, encoding, errors, newline)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nE       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\2\\\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\\\.tmp\\\\pytest-phase-a-v1\\\\test_fail_closed_K0b_01_gate_i0\\\\synthetic-repository\\\\new pipeline\\\\requests\\\\k0b-01-toolchain-completeness-remediation-and-gate-closure-approval-request-v1.yaml'\r\n\r\nC:\\ProgramData\\anaconda3\\Lib\\pathlib.py:1013: FileNotFoundError\r\n=========================== short test summary info ===========================\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_phase_A_transition_schema_and_byte_equivalence\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_phase_B_transition_schema_and_byte_equivalence\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_closed_gates_with_immutable_index_snapshots\r\nFAILED new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py::test_fail_closed[K0b_01_gate_inventory_mismatch]\r\n4 failed, 26 passed in 13.85s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-pytest-v2
+    started_at_UTC: '2026-09-16T14:23:36.7180732Z'
+    finished_at_UTC: '2026-09-16T14:23:59.2853549Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\pytest-phase-a-v2' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v2.stdout.log
+    stderr_file: phase-a-pytest-v2.stderr.log
+    stdout:
+      bytes: 102
+      sha256: "c29ad84d9791190bad09493f165e497759292ac6a6509b8b701a4c748450878b"
+      text: "..............................                                           [100%]\r\n30 passed in 17.58s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-pytest-v3
+    started_at_UTC: '2026-09-16T14:27:20.1980728Z'
+    finished_at_UTC: '2026-09-16T14:27:50.7015231Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m pytest -c NUL --noconftest --import-mode=importlib -p no:cacheprovider --rootdir 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3' --basetemp 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\.tmp\\renderer-pytest-v3' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py' -q\nexit $LASTEXITCODE"
+    stdout_file: phase-a-pytest-v3.stdout.log
+    stderr_file: phase-a-pytest-v3.stderr.log
+    stdout:
+      bytes: 102
+      sha256: "274b0830281ab0d0fb238f33ff27209908a0a4e25d3b9db851f0b16d5190e36c"
+      text: "..............................                                           [100%]\r\n30 passed in 29.46s\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-ruff-format-check-v1
+    started_at_UTC: '2026-09-16T14:21:02.2597413Z'
+    finished_at_UTC: '2026-09-16T14:21:03.7602203Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v1.stdout.log
+    stderr_file: phase-a-ruff-format-check-v1.stderr.log
+    stdout:
+      bytes: 164
+      sha256: "527c0107c7050d3bbf2842ee762cd0fc9ebfabe13b1c15fba3b6140d55063759"
+      text: "Would reformat: new pipeline\\state\\renderer\\k0b01_v3\\renderer.py\nWould reformat: new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n2 files would be reformatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ruff-format-check-v2
+    started_at_UTC: '2026-09-16T14:22:08.1762561Z'
+    finished_at_UTC: '2026-09-16T14:22:10.2722649Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v2.stdout.log
+    stderr_file: phase-a-ruff-format-check-v2.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ruff-format-check-v3
+    started_at_UTC: '2026-09-16T14:23:36.9809538Z'
+    finished_at_UTC: '2026-09-16T14:23:44.8409475Z'
+    exit_code: 1
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff format --check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-format-check-v3.stdout.log
+    stderr_file: phase-a-ruff-format-check-v3.stderr.log
+    stdout:
+      bytes: 124
+      sha256: "e0a0821523c44b847939449c0e501cd3845a9468dc71397638677681d3cd8e9c"
+      text: "Would reformat: new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py\n1 file would be reformatted, 1 file already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ruff-lint-v1
+    started_at_UTC: '2026-09-16T14:21:02.2051430Z'
+    finished_at_UTC: '2026-09-16T14:21:03.8313424Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-lint-v1.stdout.log
+    stderr_file: phase-a-ruff-lint-v1.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-ruff-lint-v2
+    started_at_UTC: '2026-09-16T14:22:08.3902809Z'
+    finished_at_UTC: '2026-09-16T14:22:11.0764902Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-ruff-lint-v2.stdout.log
+    stderr_file: phase-a-ruff-lint-v2.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-toolchain-validate-v1
+    started_at_UTC: '2026-09-16T14:21:02.3893656Z'
+    finished_at_UTC: '2026-09-16T14:21:03.6481977Z'
+    exit_code: 2
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-toolchain-validate-v1.stdout.log
+    stderr_file: phase-a-toolchain-validate-v1.stderr.log
+    stdout:
+      bytes: 113
+      sha256: "5418b9b83a84ec5ac51c66f44e3604c8513c42fe39cc4e6ca5b14ce3795fca02"
+      text: "{\"command\":\"validate\",\"error\":\"PythonPath and Wheelhouse are required.\",\"exit_code\":2,\"result\":\"invalid_input\"}\r\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: false
+  - environment: B
+    name: phase-a-toolchain-validate-v2
+    started_at_UTC: '2026-09-16T14:22:08.2231314Z'
+    finished_at_UTC: '2026-09-16T14:22:12.7122011Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\toolchain\\k0b01\\invoke.ps1' -Command validate -PythonPath 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -Wheelhouse 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-wheelhouse'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-toolchain-validate-v2.stdout.log
+    stderr_file: phase-a-toolchain-validate-v2.stderr.log
+    stdout:
+      bytes: 458
+      sha256: "a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e"
+      text: "{\"exit_code\":0,\"package_count\":12,\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"requirements_sha256\":\"6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6\",\"result\":\"pass\",\"sqlite_library_version\":\"3.45.3\",\"sqlite_python_module_version\":\"2.6.0\",\"toolchain_lock_sha256\":\"3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0\",\"wheel_count\":12,\"wheel_set_sha256\":\"bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba\"}\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-lint-v4
+    started_at_UTC: '2026-09-16T14:54:12.4859685Z'
+    finished_at_UTC: '2026-09-16T14:54:13.4065619Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-lint-v4.stdout.log
+    stderr_file: phase-a-lint-v4.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: A
+    name: phase-a-format-check-v5
+    started_at_UTC: '2026-09-16T14:54:12.8874923Z'
+    finished_at_UTC: '2026-09-16T14:54:13.3975972Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -m ruff format --isolated --check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-format-check-v5.stdout.log
+    stderr_file: phase-a-format-check-v5.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-lint-v4
+    started_at_UTC: '2026-09-16T14:54:13.0804956Z'
+    finished_at_UTC: '2026-09-16T14:54:13.9783809Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff check --isolated --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-lint-v4.stdout.log
+    stderr_file: phase-a-lint-v4.stderr.log
+    stdout:
+      bytes: 19
+      sha256: "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      text: "All checks passed!\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+  - environment: B
+    name: phase-a-format-check-v5
+    started_at_UTC: '2026-09-16T14:54:13.0624944Z'
+    finished_at_UTC: '2026-09-16T14:54:13.8663782Z'
+    exit_code: 0
+    child_command: "$ErrorActionPreference='Stop'\n$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -m ruff format --isolated --check --no-cache 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\renderer.py' 'C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b01_v3\\test_renderer.py'\nexit $LASTEXITCODE"
+    stdout_file: phase-a-format-check-v5.stdout.log
+    stderr_file: phase-a-format-check-v5.stderr.log
+    stdout:
+      bytes: 26
+      sha256: "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+      text: "2 files already formatted\n"
+    stderr:
+      bytes: 0
+      sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      text: ''
+    accepted_final_attempt: true
+unlogged_read_only_preparation_attempts:
+  - operation: preflight_output_decode
+    result: DeprecationWarning_contaminated_JSON_capture
+    remediation: same_read_only_checks_with_warning_filter
+    accepted: true
+  - operation: generation_stdout_capture
+    result: truncated_nested_tool_output_no_files_written
+    remediation: deduplicated_symbolic_schema_and_smaller_capture
+    accepted: true
+  - operation: read_only_safe_scanner_diagnostic
+    result: ruamel_safe_C_scanner_scan_API_TypeError
+    remediation: pure_Python_safe_scanner_api_in_new_renderer_only
+    accepted: true
+  - operation: evidence_metadata_normalization
+    result: initial_acquisition_metadata_has_no_name_key_generator_failed_before_write
+    remediation: derive_name_from_literal_metadata_filename_preserve_original_keys
+    accepted: true
+  - operation: apply_patch_index_and_snapshot
+    result: patch_rejected_multiple_operations_same_target_no_write
+    remediation: single_Update_File_and_Add_snapshot
+    accepted: true
+mechanical_repeat_disclosure:
+  - initial_toolchain_validate_omitted_required_Wheelhouse_exit_2_repeated_with_exact_argument
+  - initial_Ruff_format_checks_exit_1_read_only_diff_manually_applied_to_two_exact_new_files
+  - initial_pytest_each_4_failed_26_passed_Windows_MAXPATH_synthetic_path_setup
+  - shortened_synthetic_root_only_within_exact_matching_environment_target
+  - final_assert_format_only_wrap_then_full_30_case_rerun_each_environment
+  - YAML_quote_wrap_lossless_roundtrip_assertion_rejected_draft_before_write_wide_no_wrap_dump_restores_exact_capture_strings
+  - initial_exact_stage_completed_but_diff_check_rejected_YAML_trailing_whitespace_no_commit_created
+  - lossless_YAML_quoted_multiline_stdout_representation_and_syntax_whitespace_cleanup_same_data_then_forward_hash_graph_rebuilt
+  - final_pair_generation_repeated_after_forward_hash_graph_changes_no_extra_gate_change
+  - precommit_read_only_git_ignore_permission_warning_avoided_by_explicit_empty_excludesFile_no_forbidden_file_content_read
+  - final_Ruff_repeated_with_explicit_isolated_after_omitted_flag_in_intermediate_checks_intermediate_attempts_not_accepted
+postfreeze_mandatory_tail:
+  - freeze_closure_and_actual_phase_A_source
+  - render_actual_source_in_both_environments_compare_bytes_and_apply_STATE
+  - check_actual_pair_in_both_environments
+  - verify_all_current_references_preservation_exact_staged_blobs_and_phase_A_commit_parent_inventory
+non_authorizations:
+  implementation_session_started: false
+  product_artifacts_materialized: false
+  runtime_authority: none
+  existing_ledger_or_renderer_tests_rerun: false
+  CI_portability_readiness_claim: false
+  new_independent_implementation_review: false
+  new_credit: 0
+  containing_commit_SHA_embedded: false
