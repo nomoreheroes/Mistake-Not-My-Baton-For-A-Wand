@@ -1,0 +1,286 @@
+{
+    "document_id":  "pipeline-v2.k0b-02.transition-and-planning-owner-disposition-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "recorded_at_UTC":  "2026-09-17T14:15:32.0524978Z",
+    "work_item_id":  "K0b-02",
+    "status":  "approved_exact_documentation_scope_only",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/k0b-02-completion-prerequisites-and-bounded-planning-approval-request-v1.yaml",
+                                               "sha256":  "a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c",
+                                               "bytes":  35951
+                                           },
+                      "separate_owner_confirmation":  {
+                                                          "source_ref":  "current_conversation_owner_exact_hash_full_documentation_scope_confirmation_with_single_source_ownership_and_one_commit",
+                                                          "actor":  "workspace_owner",
+                                                          "statement_verbatim":  "Подтверждаю approval-request SHA-256 a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c и разрешаю полный описанный scope документационного пакета, включая single-source/ownership подтверждение и один exact-scope commit. State/gates остаются неизменными; runtime authority — none.",
+                                                          "repeated_request_sha256":  "a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c",
+                                                          "exact_match":  true,
+                                                          "full_request_scope_authorized":  true,
+                                                          "explicit_single_source_ownership_confirmation":  true,
+                                                          "external_message_ID":  "unknown_not_exposed",
+                                                          "exact_owner_message_timestamp":  "unknown_not_inferred_from_recording_time"
+                                                      },
+                      "confirmation_protocol":  {
+                                                    "path":  "new pipeline/registry/authority-confirmation/v1.yaml",
+                                                    "sha256":  "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd",
+                                                    "bytes":  3170
+                                                },
+                      "cryptographic_owner_identity_authenticated":  false,
+                      "residual_risk":  "complete_hash_repetition_identifies_request_bytes_conversational_owner_identity_is_not_cryptographically_authenticated"
+                  },
+    "entry_verification":  {
+                               "HEAD":  "bf68c85c78c9144389168c3fbd03c9910d92f836",
+                               "parent":  "641a9a97b08478badbf3386446aac21df15360ea",
+                               "tree":  "beedfc413a92befc4be37aaa49c034107f0f6a25",
+                               "exact_request_hash_match":  true,
+                               "existing_input_pins_matched":  [
+                                                                   {
+                                                                       "path":  "new pipeline/state/state.yaml",
+                                                                       "sha256":  "977cc6c681d4cd0f3c80a3e514aacbc66e293b84fff16f7755c1f92216d74ef3",
+                                                                       "bytes":  30082
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/state/STATE.md",
+                                                                       "sha256":  "2c091d2dc4e8fb20ab8c45be5501699d1b00916155faf2df0437b1772fb17d9f",
+                                                                       "bytes":  30518
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+                                                                       "sha256":  "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+                                                                       "bytes":  97569
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml",
+                                                                       "sha256":  "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181",
+                                                                       "bytes":  99133
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml",
+                                                                       "sha256":  "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2",
+                                                                       "bytes":  42360
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml",
+                                                                       "sha256":  "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d",
+                                                                       "bytes":  69439
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml",
+                                                                       "sha256":  "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5",
+                                                                       "bytes":  6349
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml",
+                                                                       "sha256":  "2b2c09f4e8cd3e56edec7e62cd78d6328e0c14b45553f052eacb97fb6f7fc9e6",
+                                                                       "bytes":  26696
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/evidence/k0b-01-implementation-validation-v2.yaml",
+                                                                       "sha256":  "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05",
+                                                                       "bytes":  1000443
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+                                                                       "sha256":  "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+                                                                       "bytes":  37286
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml",
+                                                                       "sha256":  "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d",
+                                                                       "bytes":  15509
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml",
+                                                                       "sha256":  "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7",
+                                                                       "bytes":  55118
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/state/renderer/k0b01_v3/renderer.py",
+                                                                       "sha256":  "4b4b5e84211a9f3cf29d22b8552405641680db2f413fca64ce39d1b03fdadc60",
+                                                                       "bytes":  18588
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/registry/authority-confirmation/v1.yaml",
+                                                                       "sha256":  "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd",
+                                                                       "bytes":  3170
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md",
+                                                                       "sha256":  "9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce",
+                                                                       "bytes":  28613
+                                                                   },
+                                                                   {
+                                                                       "path":  "new pipeline/reviews/k0b-01-human-only-review-v1.yaml",
+                                                                       "sha256":  "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140",
+                                                                       "bytes":  8659
+                                                                   }
+                                                               ],
+                               "input_pin_count":  16,
+                               "workspace_change_at_entry":  "only_the_frozen_untracked_request",
+                               "index_empty":  true,
+                               "five_other_new_targets_absent":  true,
+                               "applicable_AGENTS_md":  "none_found_at_exact_applicable_ancestor_paths",
+                               "hooks":  {
+                                             "core_hooksPath":  "unset",
+                                             "hook_directory":  ".git/hooks",
+                                             "non_sample_hook_files":  0,
+                                             "active_hooks":  false
+                                         },
+                               "signing":  {
+                                               "commit_gpgsign":  "unset",
+                                               "custom_gpg_format_or_program":  "unset",
+                                               "commit_signing_enabled":  false
+                                           },
+                               "core_fsmonitor":  "unset",
+                               "stale_conditions":  [
+
+                                                    ]
+                           },
+    "approved_scope":  {
+                           "exact_new_paths":  [
+                                                   "new pipeline/requests/k0b-02-completion-prerequisites-and-bounded-planning-approval-request-v1.yaml",
+                                                   "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+                                                   "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+                                                   "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+                                                   "new pipeline/architecture/k0b-02-planning-package-v1.md",
+                                                   "new pipeline/evidence/k0b-02-transition-document-check-v1.yaml"
+                                               ],
+                           "new_path_count":  6,
+                           "existing_file_modifications":  [
+
+                                                           ],
+                           "local_commit_count":  1,
+                           "local_commit_parent":  "bf68c85c78c9144389168c3fbd03c9910d92f836",
+                           "outcome":  "final_K0b_01_receipt_narrow_exception_record_single_source_ownership_confirmation_two_gate_closure_proposal_bounded_planning_draft_and_document_checks",
+                           "gate_or_state_mutation_authorized":  false,
+                           "K0b_02_implementation_authority":  "none",
+                           "renderer_successor_implementation_authority":  "none",
+                           "runtime_authority":  "none"
+                       },
+    "prior_exception":  {
+                            "deviation":  "host_Python_ruamel_used_for_YAML_evidence_generation_outside_approved_host_bootstrap_scope",
+                            "classification":  "owner_accepted_procedural_deviation_for_the_completed_K0b_01_execution",
+                            "scope_compliance_claim":  "procedural_deviation_disclosed_not_fully_scope_compliant_execution",
+                            "acceptance_source":  "prior_owner_exception_acceptance_as_quoted_in_current_owner_continuation_task",
+                            "owner_acceptance_verbatim":  "Принимаю использование host Python/ruamel для генерации YAML evidence как исключение этого выполнения. Повторную валидацию и дополнительные изменения не разрешаю. Runtime authority остаётся none",
+                            "original_message_external_ID":  "unknown_not_fabricated",
+                            "new_confirmation_effect":  "authorize_narrow_persistent_record_of_prior_acceptance_only",
+                            "future_host_Python_ruamel_use_authorized":  false,
+                            "repeat_validation_or_additional_K0b_01_changes_authorized":  false,
+                            "prior_request_or_evidence_rewrite_authorized":  false,
+                            "dedicated_exception_commit_authorized":  false
+                        },
+    "single_source_confirmation":  {
+                                       "confirmed_by":  "workspace_owner",
+                                       "confirmation_source":  "authority.separate_owner_confirmation",
+                                       "confirmation_basis":  "exact_hash_full_request_scope_plus_explicit_single_source_ownership_confirmation",
+                                       "registry":  {
+                                                        "path":  "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+                                                        "sha256":  "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+                                                        "bytes":  37286
+                                                    },
+                                       "scope":  "Alpha0_event_definitions_subscriptions_terminal_policies_and_S_routes",
+                                       "compiler_outputs_and_projections":  "derived_not_parallel_authored_registry_truth_sources",
+                                       "independent_roles_preserved":  [
+                                                                           "event_schema_definitions",
+                                                                           "resource_budget_policy_inputs",
+                                                                           "canonical_process_artifact_and_decision_versions_in_SQLite"
+                                                                       ],
+                                       "parallel_authored_registry_or_Python_truth_tables_authorized":  false,
+                                       "projection_owners":  [
+                                                                 {
+                                                                     "owner":  "workspace_owner",
+                                                                     "responsibility":  "human_decision_and_explicit_single_source_ownership_confirmation"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "W1 Kernel / shared artifact-event plane",
+                                                                     "responsibility":  "canonical_persistence_transactional_projection_outbox_projector_checkpoint_publisher_and_replay_materialization"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "artifact_event.transaction_writer",
+                                                                     "responsibility":  "atomic_decision_version_projection_intent_and_outbox_creation"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "artifact_event.projector",
+                                                                     "responsibility":  "deterministic_YAML_MD_pair_render_validation_readiness_and_pair_hashes"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "shared_control",
+                                                                     "responsibility":  "admission_scheduling_and_reconciliation_no_artifact_projection_or_checkpoint_bytes"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "control.projection_reconciliation",
+                                                                     "responsibility":  "consume_projection_written_result_and_reconcile_under_control"
+                                                                 },
+                                                                 {
+                                                                     "owner":  "approved_governance_state_renderer",
+                                                                     "responsibility":  "one_way_state_yaml_to_STATE_md_rendering_under_separately_approved_source_schema_no_manual_MD_edit"
+                                                                 }
+                                                             ],
+                                       "runtime_activation_authorized":  false
+                                   },
+    "gate_effect":  {
+                        "exactly_two_gate_closures_may_be_proposed":  [
+                                                                          "G-K0B02-K0B01-COMPLETE",
+                                                                          "G-K0B02-SINGLE-SOURCE-CONFIRMATION"
+                                                                      ],
+                        "condition_check_requires":  "frozen_final_completion_receipt_and_this_explicit_owner_confirmation",
+                        "closure_materialized_in_state":  false,
+                        "current_K0b_02_state_status":  "blocked",
+                        "other_gates_and_work_items":  "unchanged",
+                        "renderer_blocker":  "v3_gate_contract_closed_record_schemas_does_not_include_the_two_K0b_02_gates_renderer_rejects_unknown_closed_gate_with_source_unknown_closed_gate",
+                        "next_state_materialization_scope":  "separate_reviewable_renderer_successor_and_state_transition_authority_required"
+                    },
+    "owner_interaction_rule":  {
+                                   "source_ref":  "same_current_owner_message_directing_immediate_ready_confirmation_wording",
+                                   "statement":  "Когда требуется подтверждение владельца, сразу представлять готовую формулировку с точным scope и полным hash, если hash уже вычислен. Не просить предварительного разрешения только для того, чтобы запросить это подтверждение.",
+                                   "persistence":  "recorded_in_this_owner_disposition_for_future_Pipeline_V2_collaboration",
+                                   "unchanged_scope_technical_retries":  "no_new_approval",
+                                   "new_paths_dependencies_network_temp_authority_or_material_action_change":  "separate_approval_with_ready_wording",
+                                   "required_authorizations_are_not_waived":  true
+                               },
+    "technical_retry_rule":  {
+                                 "approval_extent":  "unchanged_exact_scope_until_its_authorized_outcome_not_one_shell_attempt_or_assistant_turn",
+                                 "same_scope_technical_retries_require_new_approval":  false,
+                                 "allowed":  "mechanical_quoting_argument_passing_exit_capture_read_only_diagnosis_and_pre_freeze_new_document_corrections_with_unchanged_semantics_exact_paths_dependencies_authority_and_commit_count",
+                                 "inventory_effects_before_retry":  true,
+                                 "unknown_effects":  "stop",
+                                 "record_attempts_before_evidence_freeze_and_report_later_retries":  true,
+                                 "separate_approval_required_for":  [
+                                                                        "new_read_or_write_path",
+                                                                        "new_dependency",
+                                                                        "network_or_temp_target",
+                                                                        "changed_authority",
+                                                                        "material_change_of_actions_or_semantics",
+                                                                        "changed_request_bytes_or_baseline",
+                                                                        "additional_commit_review_model_API_or_agent_call",
+                                                                        "state_gate_renderer_runtime_threshold_storage_or_phase_expansion"
+                                                                    ]
+                             },
+    "retained_non_authorizations":  [
+                                        "no_proposed_documentation_scope_execution_without_separate_complete_request_hash_owner_confirmation",
+                                        "no_K0b_02_code_contract_migration_fixture_checkpoint_publisher_replay_or_crash_reconciliation_implementation",
+                                        "no_renderer_successor_implementation_or_existing_renderer_profile_change",
+                                        "no_gate_or_state_mutation_or_manual_STATE_md_edit",
+                                        "no_K0b_03_or_other_work_item_gate_or_evidence_change",
+                                        "no_prior_K0b_01_request_evidence_validation_session_receipt_or_immutable_input_rewrite",
+                                        "no_frozen_parse_import_copy_execution_activation_or_authority_reuse",
+                                        "no_commits_A_B_rewrite_amend_or_dedicated_exception_commit",
+                                        "no_repeated_Ruff_pytest_ledger_index_budget_renderer_or_190_input_technical_audit",
+                                        "no_network_bootstrap_dependencies_temp_target_creation_or_deleted_target_restoration",
+                                        "no_host_Python_ruamel_use",
+                                        "no_runtime_provider_model_API_manual_dispatch_subagent_or_new_review_call",
+                                        "no_old_pipeline_projects_research_canonical_fixture_or_external_attachment_access",
+                                        "no_threshold_storage_phase_or_credit_change",
+                                        "no_F15_size_stress_second_phase_completion_readiness_CI_portability_or_release_claim",
+                                        "no_push_PR_merge_deploy_release_or_remote_action"
+                                    ],
+    "integrity_rules":  {
+                            "complete_file_hash":  "computed_externally_after_freeze",
+                            "own_hash_or_future_dependent_hash_or_containing_commit":  "not_embedded",
+                            "canonical_payload_verification":  "not_claimed",
+                            "prior_request_and_all_ancestors":  "unchanged"
+                        }
+}
