@@ -1,0 +1,387 @@
+{
+  "canonicalization": "ordinal_sorted_canonical_JSON_UTF8_LF_one_final_LF",
+  "capabilities": [],
+  "compiled_output_family_count": 8,
+  "contract_identities": {
+    "artifact-publication-request": 2,
+    "artifact-version-record": 2,
+    "event-delivery-snapshot": 2,
+    "event-envelope": 2,
+    "key-decision-record": 1,
+    "model-execution-receipt-ref": 1,
+    "pipeline-v2.s-revision-owner-proposal": 1,
+    "pipeline-v2.s-route-freeze-policy": 1,
+    "pipeline-v2.s-route-profile": 1,
+    "pipeline-v2.s-route-proposal": 2
+  },
+  "event_schema_count": 21,
+  "format_profile": "strict_JSON_UTF8_no_BOM_LF_one_final_LF_duplicate_keys_forbidden",
+  "future_persistence_absent": [
+    "projection_outbox",
+    "checkpoint_publications",
+    "replay_materialization",
+    "phase_seals",
+    "dispatch"
+  ],
+  "migration": {
+    "copy_columns": {
+      "event_deliveries": [
+        "event_delivery_id",
+        "event_id",
+        "subscriber_id",
+        "terminal_policy",
+        "state",
+        "fields_read_json",
+        "created_at"
+      ],
+      "events": [
+        "event_id",
+        "run_id",
+        "event_type",
+        "event_version",
+        "initiated_by_invocation_id",
+        "artifact_version_id",
+        "caused_by_event_id",
+        "correlation_id",
+        "schema_id",
+        "schema_version",
+        "schema_sha256",
+        "payload_json",
+        "payload_sha256",
+        "idempotency_key",
+        "created_at"
+      ],
+      "run_state_transitions": [
+        "transition_id",
+        "run_id",
+        "from_state",
+        "to_state",
+        "from_revision",
+        "to_revision",
+        "occurred_at"
+      ],
+      "runs": [
+        "run_id",
+        "profile",
+        "pipeline_commit",
+        "fixture_commit",
+        "fixture_tree",
+        "state",
+        "state_revision",
+        "created_at"
+      ]
+    },
+    "drop_order": [
+      "event_deliveries",
+      "run_state_transitions",
+      "events",
+      "runs"
+    ],
+    "exception_faults": [
+      "B00.before_wal_checkpoint",
+      "B01.after_wal_checkpoint",
+      "B02.before_backup",
+      "B03.after_backup_close",
+      "B04.after_backup_verify",
+      "T00.before_begin_immediate",
+      "T01.after_begin_immediate",
+      "C.runs.before",
+      "C.runs.after",
+      "C.events.before",
+      "C.events.after",
+      "C.run_state_transitions.before",
+      "C.run_state_transitions.after",
+      "C.event_deliveries.before",
+      "C.event_deliveries.after",
+      "D.event_deliveries.before",
+      "D.event_deliveries.after",
+      "D.run_state_transitions.before",
+      "D.run_state_transitions.after",
+      "D.events.before",
+      "D.events.after",
+      "D.runs.before",
+      "D.runs.after",
+      "R.runs.before",
+      "R.runs.after",
+      "R.events.before",
+      "R.events.after",
+      "R.run_state_transitions.before",
+      "R.run_state_transitions.after",
+      "R.event_deliveries.before",
+      "R.event_deliveries.after",
+      "S00.before_schema_objects",
+      "S01.after_schema_objects",
+      "M00.before_migration_row",
+      "M01.after_migration_row",
+      "M02.after_user_version",
+      "V00.before_integrity_checks",
+      "V01.after_integrity_checks",
+      "T99.immediately_before_commit"
+    ],
+    "historical_migrations": [
+      {
+        "bytes": 28893,
+        "path": "new pipeline/harness/migrations/0001_k0a01.sql",
+        "sha256": "9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3"
+      },
+      {
+        "bytes": 17281,
+        "path": "new pipeline/harness/migrations/0002_k0a02.sql",
+        "sha256": "7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b"
+      },
+      {
+        "bytes": 16081,
+        "path": "new pipeline/harness/migrations/0003_k0a03.sql",
+        "sha256": "0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b"
+      }
+    ],
+    "logical_identity": "0004_k0b01",
+    "new_definition_tables": [
+      "alpha_contract_bindings",
+      "alpha_source_profiles",
+      "alpha_compiled_profiles",
+      "alpha_compiler_receipts",
+      "alpha_compiled_output_families",
+      "alpha_human_terminal_queue",
+      "alpha_w5_terminal_queue"
+    ],
+    "owned_recreated_catalog": [
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "events_run_type_idx",
+        "type": "index"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "event_deliveries_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "event_delivery_snapshot_immutable",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_F00_preservation_branch_explicit_Alpha0_branch",
+        "name": "event_delivery_state_transition_is_exact",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "events_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "events_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_F00_preservation_branch_explicit_Alpha0_branch",
+        "name": "run_completed_event_requires_gate",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "run_identity_immutable",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "run_state_transitions_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "run_state_transitions_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_v3_unchanged",
+        "name": "runs_k0a02_blocks_completed_insert",
+        "type": "trigger"
+      },
+      {
+        "historical": "exact_F00_preservation_branch_explicit_Alpha0_branch",
+        "name": "runs_k0a02_requires_completion_gate",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_contract_bindings",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_contract_bindings_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_contract_bindings_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_source_profiles",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_source_profiles_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_source_profiles_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_compiled_profiles",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_compiled_profiles_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_compiled_profiles_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_compiler_receipts",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_compiler_receipts_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_compiler_receipts_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_compiled_output_families",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_compiled_output_families_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_compiled_output_families_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_human_terminal_queue",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_human_terminal_queue_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_human_terminal_queue_immutable_delete",
+        "type": "trigger"
+      },
+      {
+        "definition": "static_Alpha_only",
+        "name": "alpha_w5_terminal_queue",
+        "type": "table"
+      },
+      {
+        "definition": "immutable_update",
+        "name": "alpha_w5_terminal_queue_immutable_update",
+        "type": "trigger"
+      },
+      {
+        "definition": "immutable_delete",
+        "name": "alpha_w5_terminal_queue_immutable_delete",
+        "type": "trigger"
+      }
+    ],
+    "path": "new pipeline/harness/migrations/0004_k0b01_v2.sql",
+    "platform": {
+      "OS": "Windows Server 2022",
+      "architecture": "AMD64",
+      "python": "3.12.7",
+      "python_sqlite_module": "2.6.0",
+      "sqlite": "3.45.3",
+      "version": "10.0.20348"
+    },
+    "process_loss_faults": [
+      "T01.after_begin_immediate",
+      "C.runs.after",
+      "C.events.after",
+      "C.run_state_transitions.after",
+      "C.event_deliveries.after",
+      "D.event_deliveries.after",
+      "D.run_state_transitions.after",
+      "D.events.after",
+      "D.runs.after",
+      "R.runs.after",
+      "R.events.after",
+      "R.run_state_transitions.after",
+      "R.event_deliveries.after",
+      "S01.after_schema_objects",
+      "M01.after_migration_row",
+      "M02.after_user_version",
+      "V01.after_integrity_checks",
+      "T99.immediately_before_commit"
+    ],
+    "rename_order": [
+      "runs",
+      "events",
+      "run_state_transitions",
+      "event_deliveries"
+    ],
+    "sha256": "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c",
+    "tables": [
+      "runs",
+      "events",
+      "run_state_transitions",
+      "event_deliveries"
+    ]
+  },
+  "package_id": "pipeline-v2.alpha0.kernel-contract-package",
+  "package_version": "2.0.0",
+  "registry_complete_file_sha256": "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+  "registry_locator": "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+  "route_count": 5,
+  "runtime_enabled": false,
+  "schema_version": 1,
+  "supported_JSON_Schema_keywords": [
+    "$schema",
+    "$id",
+    "type",
+    "properties",
+    "required",
+    "additionalProperties",
+    "items",
+    "minItems",
+    "maxItems",
+    "uniqueItems",
+    "minLength",
+    "maxLength",
+    "minimum",
+    "maximum",
+    "pattern",
+    "enum",
+    "const",
+    "oneOf",
+    "anyOf"
+  ],
+  "typed_digest_profile": "pipeline-v2.sqlite-content-digest-v1"
+}

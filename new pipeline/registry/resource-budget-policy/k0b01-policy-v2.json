@@ -1,0 +1,334 @@
+{
+  "F15": {
+    "authoritative_worst_case_object_count": null,
+    "historical_publications": 26,
+    "max_under_hard_at_historical_checkpoint": 29,
+    "requires_reforecast_above": 26,
+    "size_stress_completion_claim": false,
+    "unconditional_block_from_publications": 30
+  },
+  "F15_exact_calls": 36,
+  "base_policy": {
+    "bytes": 3594,
+    "path": "new pipeline/registry/checkpoint-budget-policy/v1.yaml",
+    "sha256": "8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3"
+  },
+  "binary_NA_definitions": [
+    {
+      "applicable": false,
+      "contract_proof": {
+        "binary_persistence": false,
+        "contract_ref": "shared_control.version-reference-only.v1",
+        "payload_budgeted_by_producer": true,
+        "uses_only_version_refs": true
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "forecast_provenance": [
+        {
+          "field_paths": [
+            "binary_budget_preserved.logical_seed_count",
+            "binary_budget_preserved.seed_bytes_nested",
+            "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+          ],
+          "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+          "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+        },
+        {
+          "field_paths": [
+            "preserved_B01_D04_and_call_budget",
+            "phase_arithmetic"
+          ],
+          "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+          "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+        },
+        {
+          "field_paths": [
+            "selected_inputs",
+            "exact_calculation"
+          ],
+          "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+          "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+        }
+      ],
+      "media_types": [],
+      "nominal_new_bytes": 0,
+      "nominal_object_count": 0,
+      "payload_classes": [],
+      "producer": "shared_control",
+      "worst_case_object_count": 0,
+      "worst_new_bytes": 0
+    },
+    {
+      "applicable": false,
+      "contract_proof": {
+        "binary_persistence": false,
+        "contract_ref": "S.version-reference-only.v1",
+        "payload_budgeted_by_producer": true,
+        "uses_only_version_refs": true
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "forecast_provenance": [
+        {
+          "field_paths": [
+            "binary_budget_preserved.logical_seed_count",
+            "binary_budget_preserved.seed_bytes_nested",
+            "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+          ],
+          "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+          "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+        },
+        {
+          "field_paths": [
+            "preserved_B01_D04_and_call_budget",
+            "phase_arithmetic"
+          ],
+          "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+          "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+        },
+        {
+          "field_paths": [
+            "selected_inputs",
+            "exact_calculation"
+          ],
+          "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+          "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+        }
+      ],
+      "media_types": [],
+      "nominal_new_bytes": 0,
+      "nominal_object_count": 0,
+      "payload_classes": [],
+      "producer": "S",
+      "worst_case_object_count": 0,
+      "worst_new_bytes": 0
+    }
+  ],
+  "bounded_zero_proof_required": true,
+  "call_classes": [
+    "plan_author_review_allocation",
+    "runtime_allocation",
+    "S0",
+    "Layer0",
+    "worker",
+    "runtime_reviewer",
+    "dialogue_role",
+    "fallback",
+    "compiled_fast_path"
+  ],
+  "credit": {
+    "batch_reset": 0,
+    "compression": 0,
+    "cross_phase": 0,
+    "dedup": 0,
+    "delta": 0,
+    "overlap": 0,
+    "retry": 0
+  },
+  "current_binary_definition": {
+    "applicable": true,
+    "assumed_mean_object_bytes": 372736,
+    "checkpoint_publications": 34,
+    "contract_proof": {
+      "binary_persistence": true,
+      "contract_ref": "artifact-version-record.v2",
+      "payload_budgeted_by_producer": true,
+      "uses_only_version_refs": false
+    },
+    "credit": {
+      "batch_reset": 0,
+      "compression": 0,
+      "cross_phase": 0,
+      "dedup": 0,
+      "delta": 0,
+      "overlap": 0,
+      "retry": 0
+    },
+    "forecast_provenance": [
+      {
+        "field_paths": [
+          "binary_budget_preserved.logical_seed_count",
+          "binary_budget_preserved.seed_bytes_nested",
+          "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+        ],
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+      },
+      {
+        "field_paths": [
+          "preserved_B01_D04_and_call_budget",
+          "phase_arithmetic"
+        ],
+        "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+        "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+      },
+      {
+        "field_paths": [
+          "selected_inputs",
+          "exact_calculation"
+        ],
+        "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+        "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+      }
+    ],
+    "hard_per_object_bytes": 655360,
+    "maximum_aggregate_new_bytes": 7864320,
+    "media_types": [
+      "application/vnd.sqlite3",
+      "application/octet-stream"
+    ],
+    "nominal_object_count": 6,
+    "payload_classes": [
+      "SQLite_checkpoint",
+      "synthetic_measurement_seed"
+    ],
+    "planning_pack_factor": 1,
+    "producer": "artifact_event",
+    "runtime_aggregate_limit_bytes": 7864320,
+    "worst_case_object_count": 12
+  },
+  "dialogue_limits": {
+    "rounds_per_topic": 2,
+    "sessions": 2,
+    "topics": 6
+  },
+  "graph_kinds": [
+    "complete_role_graph",
+    "complete_authoritative_allocation_graph"
+  ],
+  "human_profiles": [
+    "light",
+    "standard",
+    "high_attention"
+  ],
+  "invocation_tiers": {
+    "deep": {
+      "exact_owner_bound_required": true,
+      "nominal_max": null,
+      "worst_max": null
+    },
+    "light": {
+      "nominal_max": 12,
+      "worst_max": 20
+    },
+    "standard": {
+      "nominal_max": 30,
+      "worst_max": 50
+    }
+  },
+  "normative_provenance": [
+    {
+      "field_paths": [
+        "binary_budget_preserved.logical_seed_count",
+        "binary_budget_preserved.seed_bytes_nested",
+        "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+      ],
+      "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+      "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+    },
+    {
+      "field_paths": [
+        "preserved_B01_D04_and_call_budget",
+        "phase_arithmetic"
+      ],
+      "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+      "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+    },
+    {
+      "field_paths": [
+        "selected_inputs",
+        "exact_calculation"
+      ],
+      "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+      "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+    }
+  ],
+  "phase_call_allocations": {
+    "K0b01": [
+      0,
+      0
+    ],
+    "K0b02": [
+      0,
+      0
+    ],
+    "K0b03": [
+      0,
+      0
+    ],
+    "K0b04_F15": [
+      36,
+      36
+    ],
+    "K0b04_post_F15": [
+      0,
+      0
+    ],
+    "K0b04_pre_F15": [
+      16,
+      30
+    ],
+    "K0b05": [
+      0,
+      0
+    ]
+  },
+  "phase_fences_locator": "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+  "phase_members": {
+    "K0b-F15-exact-measurement": [
+      "K0b04_F15",
+      "K0b04_post_F15",
+      "K0b05"
+    ],
+    "K0b-runtime-operational": [
+      "K0b01",
+      "K0b02",
+      "K0b03",
+      "K0b04_pre_F15"
+    ]
+  },
+  "phase_overlay": {
+    "bytes": 6926,
+    "path": "new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml",
+    "sha256": "ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8"
+  },
+  "planning_pack_factor": 1,
+  "policy_id": "pipeline-v2.k0b01.resource-budget-policy",
+  "purpose": "static_forecast_only_not_runtime_authority",
+  "runtime_enabled": false,
+  "runtime_publications": {
+    "approved_exact": 34,
+    "reforecast_sensitive": true
+  },
+  "schema_version": 1,
+  "separate_K0b05_run": false,
+  "thresholds": {
+    "checkpoint_hard_bytes": 104857600,
+    "phase_pack_hard_bytes": 1073741824,
+    "publication_batch_cap": 12,
+    "publication_p95_seconds": 10,
+    "restore_seconds": 120,
+    "warning_bytes": 536870912
+  },
+  "version": "2.0.0",
+  "window_divisors": {
+    "db_bytes": 33554432,
+    "minutes": 5,
+    "points": 10
+  }
+}

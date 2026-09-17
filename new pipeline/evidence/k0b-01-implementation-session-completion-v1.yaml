@@ -1,0 +1,378 @@
+document_id: pipeline-v2.k0b-01.implementation-session-completion-v1
+schema_version: 1
+version: 1.0.0
+status: completed_sources_and_accepted_validation_mandatory_governance_tail_pending
+implementation_package_id: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2
+implementation_session_id: K0B01-IMPL-V2-SESSION-001
+actual_started_at_UTC: '2026-09-16T15:03:25.221834+00:00'
+actual_completed_at_UTC: '2026-09-17T09:46:13Z'
+actor: Codex_primary_workspace_agent
+observable_model_identity: Codex_GPT_5_family_exact_runtime_model_identifier_unknown
+provider_identity: unknown_not_inferred
+model_or_provider_call_count: unknown_not_inferred_from_turns
+cost: unknown
+implementation_sessions_allocated: 1
+implementation_sessions_started: 1
+implementation_sessions_completed: 1
+additional_session_or_review_calls: 0
+session_entry:
+  path: new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+  sha256: "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5"
+  bytes: 6349
+input_manifest:
+  path: new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+  sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  bytes: 69439
+approval_request:
+  path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+  sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+  bytes: 99133
+separate_owner_confirmation_source: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+verified_phase_A_commit:
+  result: verified_phase_A_commit
+  commit: 641a9a97b08478badbf3386446aac21df15360ea
+  parent: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+  tree: 71d3f1ff1ac0ccceef880b1709a02a4dd2403369
+  exact_paths: 18
+  trailers:
+    - 'Approval-Request-SHA256: 77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181'
+    - 'Owner-Confirmation: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16'
+    - 'Implementation-Package: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2'
+    - 'Runtime-Authority: none'
+  five_gates_closed: true
+  implementation_session_started: false
+  global_open: 9
+  global_closed: 8
+  raw_committed_blobs_match: true
+  clean_worktree_and_index: true
+source_and_output_artifact_manifest:
+  profile: ordinal_repository_path_TAB_SHA256_TAB_bytes_LF
+  count: 49
+  root_sha256: "c327a8308a098ef15587adef36d181e2e94a4d15119c1c835fb46840020559c9"
+  exact_artifacts:
+    - path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+      sha256: "a65cc8b000a774afc366e137a311fde5fe34e69823da65a2bfb84a52a3fee5a6"
+      bytes: 10857
+    - path: new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+      sha256: "d4bf43f2491cefba6f37733be7db41cf15248c4520a926040e8b6cff9fc68839"
+      bytes: 4720
+    - path: new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+      sha256: "7a941acd176757f0682a781094b0e0d79d9dcc7654f6ec7502353ecbc82f64fe"
+      bytes: 4572
+    - path: new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+      sha256: "a3f26d2b8f0b0131831aa916fca3321752c89baafd73d8c56175f282a9a34156"
+      bytes: 4736
+    - path: new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+      sha256: "df76f1fd46eed01fe6b364172d268a277bd90e656a1a406b38f77a4db69dd787"
+      bytes: 4489
+    - path: new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+      sha256: "da16c92da7558151b54669bce97d912468d7332fd6322c6f90cad8edf1b5a62d"
+      bytes: 5061
+    - path: new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+      sha256: "d36e691528f2aa2903b281b268e421ab842a16a122ea6c6ad3acc7de72140f21"
+      bytes: 3590
+    - path: new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+      sha256: "363d5a6a078c7b7a0d49d585173619bef2ec4424e8713f6adfaed80e7db6711f"
+      bytes: 3033
+    - path: new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+      sha256: "4087e73cb751b9024f46b2a1b42c024bd9aefe1ec6b45d5c7413c8bafec19d06"
+      bytes: 3455
+    - path: new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+      sha256: "1ba0c8fad2f400de9a59e30522972c048a33aa2625dca77c2ad29fc3d61ffd92"
+      bytes: 3218
+    - path: new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+      sha256: "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454"
+      bytes: 3212
+    - path: new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+      sha256: "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024"
+      bytes: 3149
+    - path: new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+      sha256: "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5"
+      bytes: 3182
+    - path: new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+      sha256: "9f82ec85b9d53fcf641f775b57f2f817f0061d77a54abd5be3d10d3911a5283d"
+      bytes: 3377
+    - path: new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+      sha256: "d07074be96275dc457c6b82776a8b9b52a1276c8bba4b232a257190faa8e7c01"
+      bytes: 2962
+    - path: new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+      sha256: "b6283bb671591d5faabbe8085f1663d4ba91d8aa2a4b6e217b4f2483dcad2c68"
+      bytes: 3192
+    - path: new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+      sha256: "2053b8a9ccea979f0a62b2dc4edd162e23c179b5ef26b9703a63dda8e05525ba"
+      bytes: 3195
+    - path: new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+      sha256: "3f926857c21bd6e9a5acf119957823665f72fa4894612f8d5fbea3a8642eae64"
+      bytes: 3204
+    - path: new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+      sha256: "6e23ad8b69d1028830b0095584f8ea7b67216d4e95374742c118d79108798906"
+      bytes: 3193
+    - path: new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+      sha256: "3175e2c1685b571dec36c28e619cbcc37e1bebc27d80a4796801693ad2146a97"
+      bytes: 3308
+    - path: new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+      sha256: "2a93cbfbf39959e2c77ebd667e790b0cfba277c1f5365fd82cafe46bc62a2bc3"
+      bytes: 3207
+    - path: new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+      sha256: "b72a3b80f3c01ad3422eb46b343a84bf4b776bcc20bdfca899a66c9b23d53355"
+      bytes: 3033
+    - path: new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+      sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      bytes: 37286
+    - path: new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+      sha256: "556c84527a865c5d04b0c0bfd1fa8e79c58c3388d9c63f83049157851feaa42a"
+      bytes: 9425
+    - path: new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+      sha256: "090ab45f0f4a6bcfea0413c850cd9789ce17461c1ee1ef6acc5ba6e355963055"
+      bytes: 30070
+    - path: new pipeline/harness/migrations/0004_k0b01_v2.sql
+      sha256: "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c"
+      bytes: 18747
+    - path: new pipeline/harness/k0b01_v2/__init__.py
+      sha256: "f15ae132a25c343dcefffb37f8ae28754a8c1f9eda5443f64132661b99faf92c"
+      bytes: 102
+    - path: new pipeline/harness/k0b01_v2/contract.py
+      sha256: "61e9d1ba7041ac60a44e622a01e038ed92419ace93db54d62a917ef48f374e99"
+      bytes: 11802
+    - path: new pipeline/harness/k0b01_v2/canonical.py
+      sha256: "40356c8764bb6ead3c560389af811912ad379352a3d53af2fec95a823b5a4361"
+      bytes: 5589
+    - path: new pipeline/harness/k0b01_v2/registry_compiler.py
+      sha256: "1ea533e4f01907a6b4ac270dd348ddb935f6f0d25949ff346af7874131f7c00e"
+      bytes: 26633
+    - path: new pipeline/harness/k0b01_v2/budget_compiler.py
+      sha256: "b8280dc657533e8b4358b1c371362430650bddd6777b6825d4651b73bbea0f01"
+      bytes: 34169
+    - path: new pipeline/harness/k0b01_v2/binary_budget.py
+      sha256: "f44ffc99484d0944e4d634110cbb51f76afcfa6c64727610ca7279639ad4d0c3"
+      bytes: 8319
+    - path: new pipeline/harness/k0b01_v2/digest.py
+      sha256: "57a056d5cef1d145365d1398c0332d1a6907ff914b61e7b92df77c87b71ddede"
+      bytes: 8799
+    - path: new pipeline/harness/k0b01_v2/store.py
+      sha256: "3e4704066c876a59ddb87d00f5f158119c241df15d7960f683dc699792c28641"
+      bytes: 25507
+    - path: new pipeline/harness/k0b01_v2/cli.py
+      sha256: "2b223d24764717598558841e1773effbf625e17c47af8e01725c00445bb7ffd7"
+      bytes: 7463
+    - path: new pipeline/tests/contracts/test_k0b01_v2_contracts.py
+      sha256: "055384af10717a6649700f7083ee5ca0afae5e5402a236cbbc7ff028c130fb50"
+      bytes: 10170
+    - path: new pipeline/tests/contracts/test_k0b01_v2_routing_compiler.py
+      sha256: "d87cbd33d697bba775c7cd82479c1986eb255c18c76240467e538c2391bfcac9"
+      bytes: 13642
+    - path: new pipeline/tests/contracts/test_k0b01_v2_resource_budget.py
+      sha256: "a1fc728ba4497c7cacdb83dcef2f455c139f2ee2e24ff39e0e85730dc8febad8"
+      bytes: 20183
+    - path: new pipeline/tests/foundation/test_k0b01_v2_migration.py
+      sha256: "189b322b383c7c5c6528ceb56fd7574477e0b6b951c999f074d78428869ddff8"
+      bytes: 52614
+    - path: new pipeline/tests/k0b01_v2/independent_oracle.py
+      sha256: "5e3d4509364ce3ca389e69e90e47922091973f25cbc320188a1ceeabe83c0de9"
+      bytes: 7874
+    - path: new pipeline/tests/k0b01_v2/migration_fault_worker.py
+      sha256: "d0ad13d3e6a78197d47d91cf027eb61904e6564eedc791de95bcb0e2f8d7c9ce"
+      bytes: 3128
+    - path: new pipeline/tests/k0b01_v2/fixtures/reference-expected-v1.json
+      sha256: "c6671a3d72561d5eb8512c88e3a2bdb09b284d0b90dd0d588d025710e1aaa438"
+      bytes: 8390
+    - path: new pipeline/tests/k0b01_v2/fixtures/coverage-catalog-v1.json
+      sha256: "52214c4a6b92aef058f49b20d3a0d117d7d4c53fe32b4e61d6b16243001b865b"
+      bytes: 103176
+    - path: new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+      sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+      bytes: 69439
+    - path: new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+      sha256: "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5"
+      bytes: 6349
+    - path: new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+      sha256: "fcfdb3b8cfe6cadb2f033edfae94ab9ecd380ba514119815ab11c713fc0e07ef"
+      bytes: 59064
+    - path: new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+      sha256: "f80a7eb34ec4385c8c1b4e0f83d7e9a86033f6b975c46887c7ed724b5489f1f5"
+      bytes: 23021
+    - path: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+      sha256: "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2"
+      bytes: 73340
+    - path: new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+      sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+      bytes: 1000443
+compiler_receipts_and_aggregate:
+  - path: new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+    sha256: "fcfdb3b8cfe6cadb2f033edfae94ab9ecd380ba514119815ab11c713fc0e07ef"
+    bytes: 59064
+  - path: new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+    sha256: "f80a7eb34ec4385c8c1b4e0f83d7e9a86033f6b975c46887c7ed724b5489f1f5"
+    bytes: 23021
+  - path: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+    sha256: "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2"
+    bytes: 73340
+accepted_implementation_validation:
+  path: new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+  sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+  bytes: 1000443
+exact_authorized_write_set:
+  - new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+  - new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+  - new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+  - new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+  - new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+  - new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+  - new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+  - new pipeline/harness/migrations/0004_k0b01_v2.sql
+  - new pipeline/harness/k0b01_v2/__init__.py
+  - new pipeline/harness/k0b01_v2/contract.py
+  - new pipeline/harness/k0b01_v2/canonical.py
+  - new pipeline/harness/k0b01_v2/registry_compiler.py
+  - new pipeline/harness/k0b01_v2/budget_compiler.py
+  - new pipeline/harness/k0b01_v2/binary_budget.py
+  - new pipeline/harness/k0b01_v2/digest.py
+  - new pipeline/harness/k0b01_v2/store.py
+  - new pipeline/harness/k0b01_v2/cli.py
+  - new pipeline/tests/contracts/test_k0b01_v2_contracts.py
+  - new pipeline/tests/contracts/test_k0b01_v2_routing_compiler.py
+  - new pipeline/tests/contracts/test_k0b01_v2_resource_budget.py
+  - new pipeline/tests/foundation/test_k0b01_v2_migration.py
+  - new pipeline/tests/k0b01_v2/independent_oracle.py
+  - new pipeline/tests/k0b01_v2/migration_fault_worker.py
+  - new pipeline/tests/k0b01_v2/fixtures/reference-expected-v1.json
+  - new pipeline/tests/k0b01_v2/fixtures/coverage-catalog-v1.json
+  - new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml
+  - new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+  - new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+  - new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+  - new pipeline/ledger/k0b01/index-v1.yaml
+  - new pipeline/state/state.yaml
+  - new pipeline/state/STATE.md
+exact_second_commit_path_count: 55
+production_source_and_test_bundle_byte_frozen: true
+technical_attempt_counts:
+  before_validation_freeze:
+    captured_processes: 36
+    captured_classification_counts:
+      exit_zero: 23
+      unexpected_nonzero: 9
+      expected_nonzero_format_diff: 4
+    manual_transport_diagnostic_or_patch_attempts: 15
+    detailed_attempts: immutable_accepted_implementation_validation
+  successful_validation_generator_metadata_probe: 1
+  successful_validation_generator_patch_chunks: 32
+  successful_validation_creation_apply_patch: 1
+  postfreeze_validation_evidence_checks: 2
+  postfreeze_validation_evidence_check_results:
+    - environment: A
+      metadata:
+        name: phaseB-validation-evidence-postfreeze-check-v1
+        started_at_UTC: '2026-09-17T09:46:09.7153481Z'
+        finished_at_UTC: '2026-09-17T09:46:13.5366965Z'
+        exit_code: 0
+        child_command: "$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-a\\Scripts\\python.exe' -B -I -c \"import base64;exec(base64.b64decode('aW1wb3J0IGhhc2hsaWIsanNvbixzeXMKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmZyb20gcnVhbWVsLnlhbWwgaW1wb3J0IFlBTUwKZnJvbSBydWFtZWwueWFtbC50b2tlbnMgaW1wb3J0IEFsaWFzVG9rZW4sQW5jaG9yVG9rZW4Kcm9vdD1QYXRoKHIiQzpcUHJvamVjdHNcMS5NaXN0YWtlIE5vdCBNeSBCYXRvbiBGb3IgQSBXYW5kIikKcGF0aD1yb290LyJuZXcgcGlwZWxpbmUvZXZpZGVuY2UvazBiLTAxLWltcGxlbWVudGF0aW9uLXZhbGlkYXRpb24tdjIueWFtbCIKcmF3PXBhdGgucmVhZF9ieXRlcygpCmFzc2VydCBoYXNobGliLnNoYTI1NihyYXcpLmhleGRpZ2VzdCgpPT0iODRiZWNiMGViYjBhZjc4NGFhMzNjNzc0NGQ0MjRmZGVjMDUwMmFmNzYyMTE3M2U1YTUwMGJkZjlhMGY1ZWYwNSIgYW5kIGxlbihyYXcpPT0xMDAwNDQzCmFzc2VydCBub3QgcmF3LnN0YXJ0c3dpdGgoYiJceGVmXHhiYlx4YmYiKSBhbmQgYiJcciIgbm90IGluIHJhdyBhbmQgcmF3LmVuZHN3aXRoKGIiXG4iKSBhbmQgbm90IHJhdy5lbmRzd2l0aChiIlxuXG4iKQp5PVlBTUwodHlwPSJzYWZlIixwdXJlPVRydWUpO3kuYWxsb3dfZHVwbGljYXRlX2tleXM9RmFsc2UKYXNzZXJ0IG5vdCBhbnkoaXNpbnN0YW5jZSh0b2tlbiwoQWxpYXNUb2tlbixBbmNob3JUb2tlbikpIGZvciB0b2tlbiBpbiB5LnNjYW4ocmF3LmRlY29kZSgidXRmLTgiKSkpCnZhbHVlPXkubG9hZChyYXcpCmFzc2VydCB2YWx1ZVsic3RhdHVzIl09PSJhY2NlcHRlZF9jb21wbGV0ZV9wcmVhcHBlbmRfaW1wbGVtZW50YXRpb25fdmFsaWRhdGlvbiIgYW5kIHZhbHVlWyJjb21wbGV0ZV9jYXNlX2NvdW50X3Blcl9lbnZpcm9ubWVudCJdPT03MzkKYXNzZXJ0IHZhbHVlWyJtYW5kYXRvcnlfcG9zdGZyZWV6ZV90YWlsIl1bInN0YXR1cyJdPT0ibm90X3J1bl9hdF90aGlzX2FuY2VzdG9yX2ZyZWV6ZSIKYXNzZXJ0IHZhbHVlWyJ0ZWNobmljYWxfYXR0ZW1wdHMiXVsiY2FwdHVyZWRfcHJvY2Vzc19hdHRlbXB0X2NvdW50Il09PTM2CmFzc2VydCBzdW0odmFsdWVbInRlY2huaWNhbF9hdHRlbXB0cyJdWyJjYXB0dXJlZF9jbGFzc2lmaWNhdGlvbl9jb3VudHMiXS52YWx1ZXMoKSk9PTM2CmFzc2VydCB2YWx1ZVsidGVjaG5pY2FsX2F0dGVtcHRzIl1bIm1hbnVhbF9hdHRlbXB0X2NvdW50Il09PWxlbih2YWx1ZVsidGVjaG5pY2FsX2F0dGVtcHRzIl1bIm1hbnVhbF90cmFuc3BvcnRfZGlhZ25vc3RpY19vcl9wYXRjaF9hdHRlbXB0cyJdKT09MTUKYXNzZXJ0IHZhbHVlWyJydW50aW1lX2F1dGhvcml0eSJdPT0ibm9uZSIgYW5kIHZhbHVlWyJpbXBsZW1lbnRhdGlvbl9zZXNzaW9uc19zdGFydGVkIl09PTEgYW5kIHZhbHVlWyJhZGRpdGlvbmFsX3Nlc3Npb25fb3JfcmV2aWV3X2NhbGxzIl09PTAKZm9yIHBpbiBpbiB2YWx1ZVsic291cmNlX2FydGlmYWN0X21hbmlmZXN0Il1bImV4YWN0X2N1cnJlbnRfYXJ0aWZhY3RzIl06CiBkYXRhPShyb290L3BpblsicGF0aCJdKS5yZWFkX2J5dGVzKCkKIGFzc2VydCBsZW4oZGF0YSk9PXBpblsiYnl0ZXMiXSBhbmQgaGFzaGxpYi5zaGEyNTYoZGF0YSkuaGV4ZGlnZXN0KCk9PXBpblsic2hhMjU2Il0scGluWyJwYXRoIl0KZm9yIHJlc3VsdCBpbiB2YWx1ZVsiZW52aXJvbm1lbnRfcmVzdWx0cyJdOgogYXNzZXJ0IHJlc3VsdFsicHl0ZXN0X2NvbXBsZXRlX2Nsb3NlZF9jYXRhbG9nIl1bImV4ZWN1dGVkX3Bhc3NlZCJdPT03MzkgYW5kIHJlc3VsdFsicHl0ZXN0X2NvbXBsZXRlX2Nsb3NlZF9jYXRhbG9nIl1bImFsbF9jYXRhbG9nX25vZGVzX21hdGNoIl0KIGFzc2VydCByZXN1bHRbInByZWFwcGVuZF9sZWRnZXIiXVsiZXZlbnRfY291bnQiXT09MzIKIGFzc2VydCBsZW4ocmVzdWx0WyJweXRlc3RfY29tcGxldGVfY2xvc2VkX2NhdGFsb2ciXVsibWFuZGF0b3J5X2dyb3VwX3Jlc3VsdHMiXSk9PTIyCnByaW50KGpzb24uZHVtcHMoeyJyZXN1bHQiOiJwYXNzIiwidmFsaWRhdGlvbl9zaGEyNTYiOmhhc2hsaWIuc2hhMjU2KHJhdykuaGV4ZGlnZXN0KCksInZhbGlkYXRpb25fYnl0ZXMiOmxlbihyYXcpLCJjdXJyZW50X2FydGlmYWN0X3BpbnMiOjQ4LCJhY2NlcHRlZF9jYXNlX2NvdW50X2VhY2giOjczOSwibWFuZGF0b3J5X2dyb3Vwc19lYWNoIjoyMiwiZnV0dXJlX2RlcGVuZGVudF9jaGVja3Nfbm90X2NsYWltZWQiOlRydWUsInJ1bnRpbWVfYXV0aG9yaXR5Ijoibm9uZSJ9LHNvcnRfa2V5cz1UcnVlKSkK'))\"\nexit $LASTEXITCODE"
+        stdout_file: phaseB-validation-evidence-postfreeze-check-v1.stdout.log
+        stderr_file: phaseB-validation-evidence-postfreeze-check-v1.stderr.log
+      metadata_sha256: "7157315ca5856f650cc6b72a914b4f9e79a29d2aee44de5d0b67ce020e48d48e"
+      stdout_sha256: "b34566a0e94b31c2c9cd071b7cb44200880861e9c3e0180dfcbb34cd2438b2f7"
+      stdout_bytes: 303
+      stderr_sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      stderr_bytes: 0
+      result:
+        accepted_case_count_each: 739
+        current_artifact_pins: 48
+        future_dependent_checks_not_claimed: true
+        mandatory_groups_each: 22
+        result: pass
+        runtime_authority: none
+        validation_bytes: 1000443
+        validation_sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+    - environment: B
+      metadata:
+        name: phaseB-validation-evidence-postfreeze-check-v1
+        started_at_UTC: '2026-09-17T09:46:10.0973561Z'
+        finished_at_UTC: '2026-09-17T09:46:13.8117022Z'
+        exit_code: 0
+        child_command: "$ProgressPreference='SilentlyContinue'\n& 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b01-final-disposition-implementation-v1-b\\Scripts\\python.exe' -B -I -c \"import base64;exec(base64.b64decode('aW1wb3J0IGhhc2hsaWIsanNvbixzeXMKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmZyb20gcnVhbWVsLnlhbWwgaW1wb3J0IFlBTUwKZnJvbSBydWFtZWwueWFtbC50b2tlbnMgaW1wb3J0IEFsaWFzVG9rZW4sQW5jaG9yVG9rZW4Kcm9vdD1QYXRoKHIiQzpcUHJvamVjdHNcMS5NaXN0YWtlIE5vdCBNeSBCYXRvbiBGb3IgQSBXYW5kIikKcGF0aD1yb290LyJuZXcgcGlwZWxpbmUvZXZpZGVuY2UvazBiLTAxLWltcGxlbWVudGF0aW9uLXZhbGlkYXRpb24tdjIueWFtbCIKcmF3PXBhdGgucmVhZF9ieXRlcygpCmFzc2VydCBoYXNobGliLnNoYTI1NihyYXcpLmhleGRpZ2VzdCgpPT0iODRiZWNiMGViYjBhZjc4NGFhMzNjNzc0NGQ0MjRmZGVjMDUwMmFmNzYyMTE3M2U1YTUwMGJkZjlhMGY1ZWYwNSIgYW5kIGxlbihyYXcpPT0xMDAwNDQzCmFzc2VydCBub3QgcmF3LnN0YXJ0c3dpdGgoYiJceGVmXHhiYlx4YmYiKSBhbmQgYiJcciIgbm90IGluIHJhdyBhbmQgcmF3LmVuZHN3aXRoKGIiXG4iKSBhbmQgbm90IHJhdy5lbmRzd2l0aChiIlxuXG4iKQp5PVlBTUwodHlwPSJzYWZlIixwdXJlPVRydWUpO3kuYWxsb3dfZHVwbGljYXRlX2tleXM9RmFsc2UKYXNzZXJ0IG5vdCBhbnkoaXNpbnN0YW5jZSh0b2tlbiwoQWxpYXNUb2tlbixBbmNob3JUb2tlbikpIGZvciB0b2tlbiBpbiB5LnNjYW4ocmF3LmRlY29kZSgidXRmLTgiKSkpCnZhbHVlPXkubG9hZChyYXcpCmFzc2VydCB2YWx1ZVsic3RhdHVzIl09PSJhY2NlcHRlZF9jb21wbGV0ZV9wcmVhcHBlbmRfaW1wbGVtZW50YXRpb25fdmFsaWRhdGlvbiIgYW5kIHZhbHVlWyJjb21wbGV0ZV9jYXNlX2NvdW50X3Blcl9lbnZpcm9ubWVudCJdPT03MzkKYXNzZXJ0IHZhbHVlWyJtYW5kYXRvcnlfcG9zdGZyZWV6ZV90YWlsIl1bInN0YXR1cyJdPT0ibm90X3J1bl9hdF90aGlzX2FuY2VzdG9yX2ZyZWV6ZSIKYXNzZXJ0IHZhbHVlWyJ0ZWNobmljYWxfYXR0ZW1wdHMiXVsiY2FwdHVyZWRfcHJvY2Vzc19hdHRlbXB0X2NvdW50Il09PTM2CmFzc2VydCBzdW0odmFsdWVbInRlY2huaWNhbF9hdHRlbXB0cyJdWyJjYXB0dXJlZF9jbGFzc2lmaWNhdGlvbl9jb3VudHMiXS52YWx1ZXMoKSk9PTM2CmFzc2VydCB2YWx1ZVsidGVjaG5pY2FsX2F0dGVtcHRzIl1bIm1hbnVhbF9hdHRlbXB0X2NvdW50Il09PWxlbih2YWx1ZVsidGVjaG5pY2FsX2F0dGVtcHRzIl1bIm1hbnVhbF90cmFuc3BvcnRfZGlhZ25vc3RpY19vcl9wYXRjaF9hdHRlbXB0cyJdKT09MTUKYXNzZXJ0IHZhbHVlWyJydW50aW1lX2F1dGhvcml0eSJdPT0ibm9uZSIgYW5kIHZhbHVlWyJpbXBsZW1lbnRhdGlvbl9zZXNzaW9uc19zdGFydGVkIl09PTEgYW5kIHZhbHVlWyJhZGRpdGlvbmFsX3Nlc3Npb25fb3JfcmV2aWV3X2NhbGxzIl09PTAKZm9yIHBpbiBpbiB2YWx1ZVsic291cmNlX2FydGlmYWN0X21hbmlmZXN0Il1bImV4YWN0X2N1cnJlbnRfYXJ0aWZhY3RzIl06CiBkYXRhPShyb290L3BpblsicGF0aCJdKS5yZWFkX2J5dGVzKCkKIGFzc2VydCBsZW4oZGF0YSk9PXBpblsiYnl0ZXMiXSBhbmQgaGFzaGxpYi5zaGEyNTYoZGF0YSkuaGV4ZGlnZXN0KCk9PXBpblsic2hhMjU2Il0scGluWyJwYXRoIl0KZm9yIHJlc3VsdCBpbiB2YWx1ZVsiZW52aXJvbm1lbnRfcmVzdWx0cyJdOgogYXNzZXJ0IHJlc3VsdFsicHl0ZXN0X2NvbXBsZXRlX2Nsb3NlZF9jYXRhbG9nIl1bImV4ZWN1dGVkX3Bhc3NlZCJdPT03MzkgYW5kIHJlc3VsdFsicHl0ZXN0X2NvbXBsZXRlX2Nsb3NlZF9jYXRhbG9nIl1bImFsbF9jYXRhbG9nX25vZGVzX21hdGNoIl0KIGFzc2VydCByZXN1bHRbInByZWFwcGVuZF9sZWRnZXIiXVsiZXZlbnRfY291bnQiXT09MzIKIGFzc2VydCBsZW4ocmVzdWx0WyJweXRlc3RfY29tcGxldGVfY2xvc2VkX2NhdGFsb2ciXVsibWFuZGF0b3J5X2dyb3VwX3Jlc3VsdHMiXSk9PTIyCnByaW50KGpzb24uZHVtcHMoeyJyZXN1bHQiOiJwYXNzIiwidmFsaWRhdGlvbl9zaGEyNTYiOmhhc2hsaWIuc2hhMjU2KHJhdykuaGV4ZGlnZXN0KCksInZhbGlkYXRpb25fYnl0ZXMiOmxlbihyYXcpLCJjdXJyZW50X2FydGlmYWN0X3BpbnMiOjQ4LCJhY2NlcHRlZF9jYXNlX2NvdW50X2VhY2giOjczOSwibWFuZGF0b3J5X2dyb3Vwc19lYWNoIjoyMiwiZnV0dXJlX2RlcGVuZGVudF9jaGVja3Nfbm90X2NsYWltZWQiOlRydWUsInJ1bnRpbWVfYXV0aG9yaXR5Ijoibm9uZSJ9LHNvcnRfa2V5cz1UcnVlKSkK'))\"\nexit $LASTEXITCODE"
+        stdout_file: phaseB-validation-evidence-postfreeze-check-v1.stdout.log
+        stderr_file: phaseB-validation-evidence-postfreeze-check-v1.stderr.log
+      metadata_sha256: "93b1433745cb18b94383d084ba01b24269e3060112d32b28e359ded14f7bd0ba"
+      stdout_sha256: "b34566a0e94b31c2c9cd071b7cb44200880861e9c3e0180dfcbb34cd2438b2f7"
+      stdout_bytes: 303
+      stderr_sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      stderr_bytes: 0
+      result:
+        accepted_case_count_each: 739
+        current_artifact_pins: 48
+        future_dependent_checks_not_claimed: true
+        mandatory_groups_each: 22
+        result: pass
+        runtime_authority: none
+        validation_bytes: 1000443
+        validation_sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+  not_first_pass: true
+  later_tail_or_commit_attempts: captured_and_reported_after_this_freeze_not_backwritten_here
+  all_tool_model_provider_or_sampling_invocation_counts: unknown_not_inferred
+observed_validation_summary:
+  environment_A: 739
+  environment_B: 739
+  complete_catalog_case_equivalence: true
+  mandatory_node_groups_each: 22
+  skip_xfail_deselection_missing_failure: 0
+  exception_faults_each: 39
+  owned_process_losses_each: 18
+  old_reader_rejections_each: 3
+  closed_15_file_Ruff_lint_and_format: pass_both
+  closed_12_package_toolchain: pass_both
+  compiler_A_B_aggregate_and_binary_output_bytes: identical_A_and_B
+  preappend_ledger_event_count_each: 32
+  current_source_reference_checks_each: 233
+runtime_authority: none
+credit: 0
+F15_size_stress_claim: false
+phase_completion_claim: false
+immutable_after_freeze: true
+not_bound:
+  - own_complete_file_hash
+  - future_4004_hash
+  - future_34_event_index_hash
+  - future_state_or_projection_hash
+  - future_containing_commit_hash
+mandatory_postfreeze_governance_tail:
+  status: pending_at_session_receipt_freeze
+  source_code_or_test_changes: none_needed_or_authorized_after_bundle_freeze
+  remaining_exact_repo_materialization_paths:
+    - new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+    - new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+    - new pipeline/ledger/k0b01/index-v1.yaml
+    - new pipeline/state/state.yaml
+    - new pipeline/state/STATE.md
+  required_checks: 34_event_ledger_index_and_new_snapshot_budgets_final_v3_projection_preservation_A_B_equivalence
+  cleanup: three_exact_temp_targets_only_after_evidence_capture
+  Git: exact_55_path_stage_and_one_second_commit_parent_verified_phase_A
+limitations:
+  - one_bounded_implementation_activity_across_turns_context_compactions_and_same_scope_technical_retries_not_a_second_session
+  - no_additional_design_review_model_provider_or_subagent_dispatch
+  - exact_runtime_model_and_provider_and_cost_remain_unknown
+  - local_two_clean_locked_environment_validation_not_CI_or_platform_portability_or_runtime_readiness
+  - no_other_gate_or_work_item_or_future_authority_changed
+  - no_future_commit_or_committed_credit_claim

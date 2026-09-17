@@ -1,0 +1,105 @@
+document_id: pipeline-v2.k0b-01.implementation-session-entry-v1
+schema_version: 1
+version: 1.0.0
+status: started_not_completed
+implementation_package_id: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2
+implementation_session_id: K0B01-IMPL-V2-SESSION-001
+actual_started_at_UTC: '2026-09-16T15:03:25.221834+00:00'
+actor: Codex_primary_workspace_agent
+observable_model_identity: Codex_GPT_5_family_exact_runtime_model_identifier_unknown
+provider_identity: unknown_not_inferred
+model_or_provider_call_count: unknown_not_inferred_from_turns
+cost: unknown
+implementation_sessions_allocated: 1
+implementation_sessions_started: 1
+additional_session_or_review_calls: 0
+entry_conditions:
+  verified_phase_A_commit: 641a9a97b08478badbf3386446aac21df15360ea
+  expected_phase_A_parent: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+  five_K0b_01_gates_closed: true
+  clean_workspace_and_index_before_entry: true
+  phase_A_committed_inputs_byte_verified: true
+  runtime_authority: none
+input_manifest:
+  path: new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+  sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  bytes: 69439
+allocation:
+  path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+  sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+  bytes: 10379
+exact_authorized_writes:
+  - new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+  - new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+  - new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+  - new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+  - new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+  - new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+  - new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+  - new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+  - new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+  - new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+  - new pipeline/harness/migrations/0004_k0b01_v2.sql
+  - new pipeline/harness/k0b01_v2/__init__.py
+  - new pipeline/harness/k0b01_v2/contract.py
+  - new pipeline/harness/k0b01_v2/canonical.py
+  - new pipeline/harness/k0b01_v2/registry_compiler.py
+  - new pipeline/harness/k0b01_v2/budget_compiler.py
+  - new pipeline/harness/k0b01_v2/binary_budget.py
+  - new pipeline/harness/k0b01_v2/digest.py
+  - new pipeline/harness/k0b01_v2/store.py
+  - new pipeline/harness/k0b01_v2/cli.py
+  - new pipeline/tests/contracts/test_k0b01_v2_contracts.py
+  - new pipeline/tests/contracts/test_k0b01_v2_routing_compiler.py
+  - new pipeline/tests/contracts/test_k0b01_v2_resource_budget.py
+  - new pipeline/tests/foundation/test_k0b01_v2_migration.py
+  - new pipeline/tests/k0b01_v2/independent_oracle.py
+  - new pipeline/tests/k0b01_v2/migration_fault_worker.py
+  - new pipeline/tests/k0b01_v2/fixtures/reference-expected-v1.json
+  - new pipeline/tests/k0b01_v2/fixtures/coverage-catalog-v1.json
+  - new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+  - new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml
+  - new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+  - new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+  - new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+  - new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+  - new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+  - new pipeline/ledger/k0b01/index-v1.yaml
+  - new pipeline/state/state.yaml
+  - new pipeline/state/STATE.md
+session_extent: one_bounded_implementation_activity_across_technical_retries_turns_and_context_compactions_no_second_session
+actual_completion_output_tests_or_end_claim: none_at_entry
+evidence_freeze_rule: immutable_after_first_reference
+non_authorizations:
+  - no_old_pipeline_projects_research_canonical_fixture_or_external_attachment_access
+  - no_frozen_artifact_edit_delete_move_import_execution_activation_or_authority_reuse
+  - no_existing_ledger_schema_code_test_event_or_fixture_change
+  - no_existing_renderer_v2_or_prior_authority_evidence_change
+  - no_product_implementation_before_phase_A_containing_commit
+  - no_K0b_02_projection_outbox_checkpoint_publisher_replay_phase_seal_or_crash_reconciliation_implementation
+  - no_K0b_03_security_broker_adapter_abort_or_compatibility_runtime_implementation
+  - no_K0b_04_scenario_F15_BLOB_churn_manual_model_dispatch_or_runtime_execution
+  - no_K0b_05_N1_real_product_release_deploy_feasibility_or_readiness_claim
+  - no_provider_API_direct_REST_SDK_Responses_managed_credentials_plugin_or_connector
+  - no_model_or_provider_fallback_inferred_identity_or_cost
+  - no_new_design_review_or_subagent_dispatch_or_call_budget_reallocation
+  - no_threshold_raise_storage_migration_third_phase_credit_or_F15_count_invention
+  - no_gate_closure_other_than_G_K0B01_IMPLEMENTATION_DISPOSITION
+  - no_extra_governance_event_fixture_temp_staging_commit_or_remote_action

@@ -1,0 +1,275 @@
+{
+  "authoritative_vectors": [
+    {
+      "authority": {
+        "field_path": "phase_forecast.0",
+        "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml"
+      },
+      "case_id": "D0_K0a_packages",
+      "result": {
+        "human_attention": {
+          "active_minutes_nominal": 20,
+          "active_minutes_worst_case": 60,
+          "blocking_decisions_nominal": 1,
+          "blocking_decisions_worst_case": 3,
+          "sessions_nominal": 1,
+          "sessions_worst_case": 2
+        },
+        "human_profile": "standard",
+        "invocations": {
+          "checkpointed_nominal": 3,
+          "checkpointed_worst_case": 6,
+          "nominal": 9,
+          "worst_case": 24
+        }
+      }
+    },
+    {
+      "authority": {
+        "field_path": "phase_forecast.1",
+        "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml"
+      },
+      "case_id": "D0_K0b_packages",
+      "result": {
+        "human_attention": {
+          "active_minutes_nominal": 60,
+          "active_minutes_worst_case": 150,
+          "blocking_decisions_nominal": 3,
+          "blocking_decisions_worst_case": 6,
+          "sessions_nominal": 2,
+          "sessions_worst_case": 4
+        },
+        "human_profile": "high_attention",
+        "invocations": {
+          "checkpointed_nominal": 16,
+          "checkpointed_worst_case": 30,
+          "nominal": 22,
+          "worst_case": 42
+        }
+      }
+    },
+    {
+      "authority": {
+        "field_path": "phase_envelope_recalculation",
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml"
+      },
+      "case_id": "K0a_worksheet_packages",
+      "result": {
+        "human_attention": {
+          "active_minutes_nominal": 20,
+          "active_minutes_worst_case": 60,
+          "blocking_decisions_nominal": 1,
+          "blocking_decisions_worst_case": 3,
+          "sessions_nominal": 1,
+          "sessions_worst_case": 2
+        },
+        "human_profile": "standard",
+        "invocations": {
+          "checkpointed_nominal": 3,
+          "checkpointed_worst_case": 6,
+          "nominal": 9,
+          "worst_case": 24
+        }
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-runtime-operational",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml"
+      },
+      "case_id": "K0b-runtime-operational.nominal",
+      "result": {
+        "batches": 2,
+        "checkpoint_bytes": 9437184,
+        "phase_pack_bytes": 132120576,
+        "publications": 14,
+        "window_publications": 6
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-runtime-operational",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml"
+      },
+      "case_id": "K0b-runtime-operational.worst_case",
+      "result": {
+        "batches": 3,
+        "checkpoint_bytes": 27262976,
+        "phase_pack_bytes": 926941184,
+        "publications": 34,
+        "window_publications": 18
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-F15-exact-measurement",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml"
+      },
+      "case_id": "K0b-F15-exact-measurement.nominal",
+      "result": {
+        "batches": 1,
+        "checkpoint_bytes": 10485760,
+        "phase_pack_bytes": 125829120,
+        "publications": 12,
+        "window_publications": 8
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-F15-exact-measurement",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml"
+      },
+      "case_id": "K0b-F15-exact-measurement.worst_case",
+      "result": {
+        "batches": 3,
+        "checkpoint_bytes": 36700160,
+        "phase_pack_bytes": 954204160,
+        "publications": 26,
+        "window_publications": 22
+      }
+    },
+    {
+      "authority": {
+        "field_path": "runtime_checkpoint_reference",
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml"
+      },
+      "case_id": "K0a_checkpoint.nominal",
+      "result": {
+        "batches": 0,
+        "checkpoint_bytes": 3145728,
+        "phase_pack_bytes": 0,
+        "publications": 0,
+        "window_publications": 0
+      }
+    },
+    {
+      "authority": {
+        "field_path": "runtime_checkpoint_reference",
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml"
+      },
+      "case_id": "K0a_checkpoint.worst_case",
+      "result": {
+        "batches": 0,
+        "checkpoint_bytes": 6291456,
+        "phase_pack_bytes": 0,
+        "publications": 0,
+        "window_publications": 0
+      }
+    },
+    {
+      "authority": {
+        "field_path": "selected_inputs",
+        "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml"
+      },
+      "case_id": "artifact_event_seed",
+      "result": {
+        "applicable": true,
+        "assumed_mean_object_bytes": 372736,
+        "forecast_worst_by_count_bytes": 4472832,
+        "maximum_aggregate_new_bytes": 7864320,
+        "nominal_expected_bytes": 2236416,
+        "runtime_aggregate_limit_bytes": 7864320,
+        "size_stressed_bytes": 7864320
+      }
+    },
+    {
+      "authority": {
+        "field_path": "section_13_binary_NA",
+        "path": "new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md"
+      },
+      "case_id": "shared_control_binary_NA",
+      "result": {
+        "applicable": false,
+        "forecast_worst_by_count_bytes": 0,
+        "nominal_expected_bytes": 0,
+        "proof": {
+          "binary_persistence": false,
+          "contract_ref": "shared_control.version-reference-only.v1",
+          "payload_budgeted_by_producer": true,
+          "uses_only_version_refs": true
+        },
+        "size_stressed_bytes": 0
+      }
+    },
+    {
+      "authority": {
+        "field_path": "section_13_binary_NA",
+        "path": "new pipeline/architecture/k0b-00-s-layer-delta-v2.md"
+      },
+      "case_id": "S_binary_NA",
+      "result": {
+        "applicable": false,
+        "forecast_worst_by_count_bytes": 0,
+        "nominal_expected_bytes": 0,
+        "proof": {
+          "binary_persistence": false,
+          "contract_ref": "S.version-reference-only.v1",
+          "payload_budgeted_by_producer": true,
+          "uses_only_version_refs": true
+        },
+        "size_stressed_bytes": 0
+      }
+    }
+  ],
+  "literal_boundary_vectors": {
+    "F15_publications": {
+      "26": 954204160,
+      "27": 990904320,
+      "28": 1027604480,
+      "29": 1064304640,
+      "30": 1101004800
+    },
+    "actual_aggregate_exact_limit": "pass",
+    "actual_aggregate_plus_one": "block",
+    "actual_object_exact_hard": "pass",
+    "actual_object_plus_one": "block",
+    "checkpoint_exact_hard": "block",
+    "phase_exact_hard": "block",
+    "rounding_30MiB": {
+      "pack_bytes": 1069547520,
+      "phase_result": "above_warning",
+      "rounded_bytes": 31457280,
+      "unrounded_bytes": 31457280
+    },
+    "rounding_30MiB_plus_one": {
+      "pack_bytes": 1105199104,
+      "phase_result": "above_hard",
+      "rounded_bytes": 32505856,
+      "unrounded_bytes": 31457281
+    },
+    "selected_stress": {
+      "assumed_mean_object_bytes": 372736,
+      "checkpoint_result": "below_hard",
+      "credit": 0,
+      "forecast_worst_by_count_bytes": 4472832,
+      "nominal_expected_bytes": 2236416,
+      "phase_margin_bytes": 39845888,
+      "phase_result": "above_warning",
+      "publications": 34,
+      "rounded_size_stressed_checkpoint_bytes": 30408704,
+      "size_stressed_bytes": 7864320,
+      "size_stressed_phase_pack_bytes": 1033895936,
+      "unrounded_size_stressed_checkpoint_bytes": 29884416
+    },
+    "superseded_1MiB_stress": {
+      "phase_pack_bytes": 1176502272,
+      "phase_result": "above_hard",
+      "rounded_checkpoint_bytes": 34603008,
+      "size_stressed_bytes": 12582912
+    }
+  },
+  "literal_review_overlay": {
+    "active_minutes_nominal": 90,
+    "active_minutes_worst": 240,
+    "blocking_decisions_nominal": 4,
+    "blocking_decisions_worst": 9,
+    "human_profile": "high_attention",
+    "invocations_nominal": 60,
+    "invocations_worst": 94,
+    "max_single_session_minutes": 60,
+    "sessions_nominal": 3,
+    "sessions_worst": 6
+  },
+  "oracle_id": "pipeline-v2.k0b01.independent-literal-reference-expected",
+  "schema_version": 1
+}

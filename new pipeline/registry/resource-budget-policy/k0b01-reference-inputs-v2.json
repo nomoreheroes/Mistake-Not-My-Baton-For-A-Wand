@@ -1,0 +1,908 @@
+{
+  "F15_authoritative_worst_case_object_count": null,
+  "cases": [
+    {
+      "case_id": "D0_K0a_packages",
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "human_envelope_profile": "standard",
+      "kind": "packages",
+      "packages": [
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+            "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 20,
+              "worst_case": 60
+            },
+            "batchable_requests": true,
+            "blocking_decisions": {
+              "nominal": 1,
+              "worst_case": 3
+            },
+            "max_single_session_minutes": 30,
+            "profile": "standard",
+            "sessions": {
+              "nominal": 1,
+              "worst_case": 2
+            }
+          },
+          "invocation_profile": "light",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "plan_author_review_allocation",
+              "node_id": "K0a-plan-bootstrap.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 6,
+              "provenance": {
+                "field_path": "phase_forecast.0.packages.0.invocations",
+                "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+                "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 18
+            }
+          ],
+          "package_id": "K0a-plan-bootstrap",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        },
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+            "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 0,
+              "worst_case": 0
+            },
+            "batchable_requests": true,
+            "blocking_decisions": {
+              "nominal": 0,
+              "worst_case": 0
+            },
+            "max_single_session_minutes": 30,
+            "profile": "light",
+            "sessions": {
+              "nominal": 0,
+              "worst_case": 0
+            }
+          },
+          "invocation_profile": "light",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "runtime_allocation",
+              "node_id": "K0a-runtime-F00.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 3,
+              "provenance": {
+                "field_path": "phase_forecast.0.packages.1.invocations",
+                "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+                "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 6
+            }
+          ],
+          "package_id": "K0a-runtime-F00",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        }
+      ]
+    },
+    {
+      "case_id": "D0_K0b_packages",
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "human_envelope_profile": "high_attention",
+      "kind": "packages",
+      "packages": [
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+            "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 30,
+              "worst_case": 30
+            },
+            "batchable_requests": true,
+            "blocking_decisions": {
+              "nominal": 1,
+              "worst_case": 2
+            },
+            "max_single_session_minutes": 30,
+            "profile": "light",
+            "sessions": {
+              "nominal": 1,
+              "worst_case": 1
+            }
+          },
+          "invocation_profile": "light",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "plan_author_review_allocation",
+              "node_id": "K0b-plan-deltas.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 6,
+              "provenance": {
+                "field_path": "phase_forecast.1.packages.0.invocations",
+                "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+                "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 12
+            }
+          ],
+          "package_id": "K0b-plan-deltas",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        },
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+            "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 30,
+              "worst_case": 120
+            },
+            "batchable_requests": false,
+            "blocking_decisions": {
+              "nominal": 2,
+              "worst_case": 4
+            },
+            "max_single_session_minutes": 60,
+            "profile": "standard",
+            "sessions": {
+              "nominal": 1,
+              "worst_case": 3
+            }
+          },
+          "invocation_profile": "standard",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "runtime_allocation",
+              "node_id": "K0b-runtime-operational.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 16,
+              "provenance": {
+                "field_path": "phase_forecast.1.packages.1.invocations",
+                "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+                "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 30
+            }
+          ],
+          "package_id": "K0b-runtime-operational",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        }
+      ]
+    },
+    {
+      "case_id": "K0a_worksheet_packages",
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "human_envelope_profile": "standard",
+      "kind": "packages",
+      "packages": [
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+            "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 20,
+              "worst_case": 60
+            },
+            "batchable_requests": true,
+            "blocking_decisions": {
+              "nominal": 1,
+              "worst_case": 3
+            },
+            "max_single_session_minutes": 30,
+            "profile": "standard",
+            "sessions": {
+              "nominal": 1,
+              "worst_case": 2
+            }
+          },
+          "invocation_profile": "light",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "plan_author_review_allocation",
+              "node_id": "K0a-plan-bootstrap.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 6,
+              "provenance": {
+                "field_path": "packages.0.invocations",
+                "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+                "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 18
+            }
+          ],
+          "package_id": "K0a-plan-bootstrap",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        },
+        {
+          "capacity": {
+            "runtime_authorized": false,
+            "state": "future_separate_capacity_receipt_required"
+          },
+          "deep_authority": null,
+          "dialogue": {
+            "applicable": false,
+            "bounded_zero_proof": "approved allocation contains no separate dialogue package; any future dialogue requires a complete new graph",
+            "role_instances": 0,
+            "rounds_per_topic": 0,
+            "sessions": 0,
+            "topics": 0
+          },
+          "edges": [],
+          "fallback": {
+            "additional_calls": 0,
+            "bounded_zero_proof": "all registered fallback/retry physical calls are already included in the complete declared allocation"
+          },
+          "fanout_members": [],
+          "forecast_authority": {
+            "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+            "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+          },
+          "graph_kind": "complete_authoritative_allocation_graph",
+          "human_attention": {
+            "active_minutes": {
+              "nominal": 0,
+              "worst_case": 0
+            },
+            "batchable_requests": true,
+            "blocking_decisions": {
+              "nominal": 0,
+              "worst_case": 0
+            },
+            "max_single_session_minutes": 30,
+            "profile": "light",
+            "sessions": {
+              "nominal": 0,
+              "worst_case": 0
+            }
+          },
+          "invocation_profile": "light",
+          "nodes": [
+            {
+              "bounded_zero_proof": null,
+              "call_class": "runtime_allocation",
+              "node_id": "K0a-runtime-F00.declared_allocation",
+              "nominal_attempts": 1,
+              "nominal_calls_per_instance": 1,
+              "nominal_instances": 3,
+              "provenance": {
+                "field_path": "packages.1.invocations",
+                "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+                "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+              },
+              "worst_attempts": 1,
+              "worst_calls_per_instance": 1,
+              "worst_instances": 6
+            }
+          ],
+          "package_id": "K0a-runtime-F00",
+          "purpose": "forecast_only",
+          "retry_bounds_complete": true
+        }
+      ]
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-runtime-operational",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+      },
+      "case_id": "K0b-runtime-operational.nominal",
+      "checkpoint_phase_id": "K0b-runtime-operational",
+      "components_bytes": {
+        "binary_seed": 2236416,
+        "fixed_non_binary": 4194304,
+        "prior_chain": 2195456,
+        "replay_unique": 524288
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "nominal",
+      "planning_pack_factor": 1,
+      "publisher_available": true,
+      "triggers": {
+        "gate": 2,
+        "human_wait_or_exit": 2,
+        "run_end": 4
+      },
+      "window": {
+        "new_db_bytes": 9150464,
+        "publisher_minutes": 16,
+        "total_points": 54
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-runtime-operational",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+      },
+      "case_id": "K0b-runtime-operational.worst_case",
+      "checkpoint_phase_id": "K0b-runtime-operational",
+      "components_bytes": {
+        "binary_seed": 4472832,
+        "fixed_non_binary": 8388608,
+        "prior_chain": 5767168,
+        "replay_unique": 7864320
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "worst_case",
+      "planning_pack_factor": 1,
+      "publisher_available": true,
+      "triggers": {
+        "gate": 4,
+        "human_wait_or_exit": 4,
+        "run_end": 8
+      },
+      "window": {
+        "new_db_bytes": 26492928,
+        "publisher_minutes": 90,
+        "total_points": 172
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-F15-exact-measurement",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+      },
+      "case_id": "K0b-F15-exact-measurement.nominal",
+      "checkpoint_phase_id": "K0b-F15-exact-measurement",
+      "components_bytes": {
+        "F15_replay": 1179648,
+        "predecessor": 9150464
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "nominal",
+      "planning_pack_factor": 1,
+      "publisher_available": true,
+      "triggers": {
+        "boundary": 4
+      },
+      "window": {
+        "new_db_bytes": 1179648,
+        "publisher_minutes": 36,
+        "total_points": 72
+      }
+    },
+    {
+      "authority": {
+        "field_path": "checkpoint_budget_phase_forecasts.K0b-F15-exact-measurement",
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+      },
+      "case_id": "K0b-F15-exact-measurement.worst_case",
+      "checkpoint_phase_id": "K0b-F15-exact-measurement",
+      "components_bytes": {
+        "F15_replay": 9437184,
+        "predecessor": 26492928
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "worst_case",
+      "planning_pack_factor": 1,
+      "publisher_available": true,
+      "triggers": {
+        "boundary": 4
+      },
+      "window": {
+        "new_db_bytes": 9437184,
+        "publisher_minutes": 108,
+        "total_points": 144
+      }
+    },
+    {
+      "authority": {
+        "field_path": "runtime_checkpoint_reference",
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+        "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+      },
+      "case_id": "K0a_checkpoint.nominal",
+      "checkpoint_phase_id": "K0a",
+      "components_bytes": {
+        "unpublished_fixture": 2195456
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "nominal",
+      "planning_pack_factor": 1,
+      "publisher_available": false,
+      "triggers": {},
+      "window": {
+        "new_db_bytes": 0,
+        "publisher_minutes": 0,
+        "total_points": 0
+      }
+    },
+    {
+      "authority": {
+        "field_path": "runtime_checkpoint_reference",
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+        "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9"
+      },
+      "case_id": "K0a_checkpoint.worst_case",
+      "checkpoint_phase_id": "K0a",
+      "components_bytes": {
+        "unpublished_fixture": 5767168
+      },
+      "credit": {
+        "batch_reset": 0,
+        "compression": 0,
+        "cross_phase": 0,
+        "dedup": 0,
+        "delta": 0,
+        "overlap": 0,
+        "retry": 0
+      },
+      "kind": "checkpoint",
+      "mode": "worst_case",
+      "planning_pack_factor": 1,
+      "publisher_available": false,
+      "triggers": {},
+      "window": {
+        "new_db_bytes": 0,
+        "publisher_minutes": 0,
+        "total_points": 0
+      }
+    },
+    {
+      "case_id": "artifact_event_seed",
+      "definition": {
+        "applicable": true,
+        "assumed_mean_object_bytes": 372736,
+        "checkpoint_publications": 34,
+        "contract_proof": {
+          "binary_persistence": true,
+          "contract_ref": "artifact-version-record.v2",
+          "payload_budgeted_by_producer": true,
+          "uses_only_version_refs": false
+        },
+        "credit": {
+          "batch_reset": 0,
+          "compression": 0,
+          "cross_phase": 0,
+          "dedup": 0,
+          "delta": 0,
+          "overlap": 0,
+          "retry": 0
+        },
+        "forecast_provenance": [
+          {
+            "field_paths": [
+              "binary_budget_preserved.logical_seed_count",
+              "binary_budget_preserved.seed_bytes_nested",
+              "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+            ],
+            "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+            "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+          },
+          {
+            "field_paths": [
+              "preserved_B01_D04_and_call_budget",
+              "phase_arithmetic"
+            ],
+            "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+            "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+          },
+          {
+            "field_paths": [
+              "selected_inputs",
+              "exact_calculation"
+            ],
+            "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+            "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+          }
+        ],
+        "hard_per_object_bytes": 655360,
+        "maximum_aggregate_new_bytes": 7864320,
+        "media_types": [
+          "application/vnd.sqlite3",
+          "application/octet-stream"
+        ],
+        "nominal_object_count": 6,
+        "payload_classes": [
+          "SQLite_checkpoint",
+          "synthetic_measurement_seed"
+        ],
+        "planning_pack_factor": 1,
+        "producer": "artifact_event",
+        "runtime_aggregate_limit_bytes": 7864320,
+        "worst_case_object_count": 12
+      },
+      "kind": "binary"
+    },
+    {
+      "case_id": "shared_control_binary_NA",
+      "definition": {
+        "applicable": false,
+        "contract_proof": {
+          "binary_persistence": false,
+          "contract_ref": "shared_control.version-reference-only.v1",
+          "payload_budgeted_by_producer": true,
+          "uses_only_version_refs": true
+        },
+        "credit": {
+          "batch_reset": 0,
+          "compression": 0,
+          "cross_phase": 0,
+          "dedup": 0,
+          "delta": 0,
+          "overlap": 0,
+          "retry": 0
+        },
+        "forecast_provenance": [
+          {
+            "field_paths": [
+              "binary_budget_preserved.logical_seed_count",
+              "binary_budget_preserved.seed_bytes_nested",
+              "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+            ],
+            "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+            "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+          },
+          {
+            "field_paths": [
+              "preserved_B01_D04_and_call_budget",
+              "phase_arithmetic"
+            ],
+            "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+            "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+          },
+          {
+            "field_paths": [
+              "selected_inputs",
+              "exact_calculation"
+            ],
+            "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+            "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+          }
+        ],
+        "media_types": [],
+        "nominal_new_bytes": 0,
+        "nominal_object_count": 0,
+        "payload_classes": [],
+        "producer": "shared_control",
+        "worst_case_object_count": 0,
+        "worst_new_bytes": 0
+      },
+      "kind": "binary"
+    },
+    {
+      "case_id": "S_binary_NA",
+      "definition": {
+        "applicable": false,
+        "contract_proof": {
+          "binary_persistence": false,
+          "contract_ref": "S.version-reference-only.v1",
+          "payload_budgeted_by_producer": true,
+          "uses_only_version_refs": true
+        },
+        "credit": {
+          "batch_reset": 0,
+          "compression": 0,
+          "cross_phase": 0,
+          "dedup": 0,
+          "delta": 0,
+          "overlap": 0,
+          "retry": 0
+        },
+        "forecast_provenance": [
+          {
+            "field_paths": [
+              "binary_budget_preserved.logical_seed_count",
+              "binary_budget_preserved.seed_bytes_nested",
+              "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+            ],
+            "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+            "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+          },
+          {
+            "field_paths": [
+              "preserved_B01_D04_and_call_budget",
+              "phase_arithmetic"
+            ],
+            "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+            "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+          },
+          {
+            "field_paths": [
+              "selected_inputs",
+              "exact_calculation"
+            ],
+            "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+            "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+          }
+        ],
+        "media_types": [],
+        "nominal_new_bytes": 0,
+        "nominal_object_count": 0,
+        "payload_classes": [],
+        "producer": "S",
+        "worst_case_object_count": 0,
+        "worst_new_bytes": 0
+      },
+      "kind": "binary"
+    }
+  ],
+  "current_stress_inputs": {
+    "assumed_mean_object_bytes": 372736,
+    "credit": 0,
+    "hard_per_object_bytes": 655360,
+    "nominal_object_count": 6,
+    "non_binary_worst_bytes": 22020096,
+    "planning_pack_factor": 1,
+    "publications": 34,
+    "worst_case_object_count": 12
+  },
+  "normative_provenance": [
+    {
+      "field_paths": [
+        "binary_budget_preserved.logical_seed_count",
+        "binary_budget_preserved.seed_bytes_nested",
+        "checkpoint_budget_phase_forecasts.K0b-runtime-operational.publications"
+      ],
+      "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+      "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+    },
+    {
+      "field_paths": [
+        "preserved_B01_D04_and_call_budget",
+        "phase_arithmetic"
+      ],
+      "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+      "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+    },
+    {
+      "field_paths": [
+        "selected_inputs",
+        "exact_calculation"
+      ],
+      "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+      "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+    }
+  ],
+  "purpose": "input_graphs_only_no_expected_output_or_oracle_dependency",
+  "reference_id": "pipeline-v2.k0b01.production-reference-inputs",
+  "review_overlay": {
+    "F15_exact": 36,
+    "design_effective_worst": 24,
+    "design_nominal": 6,
+    "human_baseline": {
+      "active_minutes": [
+        60,
+        150
+      ],
+      "blocking_decisions": [
+        3,
+        6
+      ],
+      "sessions": [
+        2,
+        4
+      ]
+    },
+    "human_review": {
+      "active_minutes": [
+        30,
+        90
+      ],
+      "batchable_requests": true,
+      "blocking_decisions": [
+        1,
+        3
+      ],
+      "max_single_session_minutes": 60,
+      "profile": "standard",
+      "sessions": [
+        1,
+        2
+      ]
+    },
+    "operational_nominal": 16,
+    "operational_worst": 30,
+    "review_nominal": 2,
+    "review_worst": 4
+  },
+  "schema_version": 1,
+  "version": "2.0.0"
+}

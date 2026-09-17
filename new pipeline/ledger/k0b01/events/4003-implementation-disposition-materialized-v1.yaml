@@ -1,0 +1,102 @@
+schema_profile_version: 1
+event_id: 4003-implementation-disposition-materialized-v1
+unit_id: K0B01-IMPLEMENTATION-DISPOSITION
+gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+checkpoint_budget_phase: K0b-runtime-operational
+event_type: transition
+resulting_state: materialized
+predecessor:
+  kind: workspace_file
+  path: new pipeline/ledger/k0b01/events/4002-implementation-disposition-authorized-v1.yaml
+  sha256: "c9b89aa799cf4ecfe7284d301bf17c5cb350edaf86587dad170d4c5955a6e540"
+dependencies:
+  - kind: workspace_file
+    path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+    sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+    sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+    sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+    sha256: "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+    sha256: "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+    sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+materialization_authority:
+  request:
+    kind: workspace_file
+    path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+    sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+  confirmation:
+    source: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    repeated_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_match: true
+    exact_scope_authorized: true
+    actor: workspace_owner
+subject_authority:
+  kind: workspace_file
+  path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+  sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+artifacts:
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+    sha256: "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2"
+evidence:
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+    sha256: "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5"
+  - kind: workspace_file
+    path: new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+    sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
+budget_snapshot:
+  assumed_mean_object_bytes: 372736
+  nominal_expected_bytes: 2236416
+  forecast_worst_by_count_bytes: 4472832
+  size_stressed_bytes: 7864320
+  max_publication_bytes: 22020096
+  worst_case_object_count: 12
+  runtime_phase_publications: 34
+  input_provenance:
+    kind: workspace_file
+    path: new pipeline/ledger/k0b01/schema-profile-v1.yaml
+    sha256: "b67f75409dc85ca1ca20c7f027425b39ac4fc43097d82835c591099b9004149a"
+  source_provenance:
+    updated_forecast_v3:
+      kind: workspace_file
+      path: new pipeline/evidence/k0b-00-updated-forecast-v3.yaml
+      sha256: "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a"
+    forecast_binary_reconciliation_v3:
+      kind: workspace_file
+      path: new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml
+      sha256: "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb"
+    binary_size_recalculation_v1:
+      kind: workspace_file
+      path: new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml
+      sha256: "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1"
+  input_sha256: "3ced6adbfd4235b6a853b212a54fdbedb27a6d2ee4b4bf9ada0110ac111e3a95"
+  runtime_phase_publications_reforecast_sensitive: true
+  f15_authoritative_worst_case_object_count: null
+  f15_authority: null
+  f15_size_stress_claim: false
+  phase_completion_claim: false
+credit:
+  eligible: false
+  value: 0
+reason:
+  zero_credit: uncommitted_bounded_implementation_materialized_and_validated_no_credit
+  stale: null
+  rejection: null
+  supersession: null
+historical:
+  recorder: Codex_exact_scope_materializer
+  classification: new_reviewed_plan_Alpha_foundation_materialized_one_completed_implementation_session_mandatory_postfreeze_governance_tail_pending
+  containing_commit: null
+  gate_closed: false
+  implementation_authority: single_owner_authorized_completed_K0b_01_implementation_session_no_other_implementation_or_runtime_scope
+  runtime_authority: none

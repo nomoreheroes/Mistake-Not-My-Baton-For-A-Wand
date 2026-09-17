@@ -1,0 +1,1475 @@
+compiler:
+  bytes: 26633
+  path: new pipeline/harness/k0b01_v2/registry_compiler.py
+  sha256: "1ea533e4f01907a6b4ac270dd348ddb935f6f0d25949ff346af7874131f7c00e"
+dependencies: {}
+diagnostics: []
+inputs:
+  authority:
+    approval_request:
+      bytes: 99133
+      path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+      sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    final_gate_closure:
+      bytes: 19798
+      path: new pipeline/evidence/k0b-01-final-implementation-disposition-gate-closure-v1.yaml
+      sha256: "74bf8f434e27ab1d90fae25f15087c1a3a6bc597df6c9bb64733280e1bb6cdc2"
+    owner_disposition:
+      bytes: 42360
+      path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+      sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+    phase_A_commit:
+      clean_worktree_and_index: true
+      commit: 641a9a97b08478badbf3386446aac21df15360ea
+      exact_paths: 18
+      five_gates_closed: true
+      global_closed: 8
+      global_open: 9
+      implementation_session_started: false
+      parent: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+      raw_committed_blobs_match: true
+      result: verified_phase_A_commit
+      trailers:
+        - 'Approval-Request-SHA256: 77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181'
+        - 'Owner-Confirmation: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16'
+        - 'Implementation-Package: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2'
+        - 'Runtime-Authority: none'
+      tree: 71d3f1ff1ac0ccceef880b1709a02a4dd2403369
+    separate_owner_confirmation_source: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    session_allocation:
+      bytes: 10379
+      path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+      sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+  canonicalization: ordinal_sorted_canonical_JSON_UTF8_LF_one_final_LF
+  implementation_input_manifest_sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  source_pins:
+    - bytes: 10857
+      path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+      sha256: "a65cc8b000a774afc366e137a311fde5fe34e69823da65a2bfb84a52a3fee5a6"
+    - bytes: 3195
+      path: new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+      sha256: "2053b8a9ccea979f0a62b2dc4edd162e23c179b5ef26b9703a63dda8e05525ba"
+    - bytes: 3204
+      path: new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+      sha256: "3f926857c21bd6e9a5acf119957823665f72fa4894612f8d5fbea3a8642eae64"
+    - bytes: 3192
+      path: new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+      sha256: "b6283bb671591d5faabbe8085f1663d4ba91d8aa2a4b6e217b4f2483dcad2c68"
+    - bytes: 3218
+      path: new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+      sha256: "1ba0c8fad2f400de9a59e30522972c048a33aa2625dca77c2ad29fc3d61ffd92"
+    - bytes: 4736
+      path: new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+      sha256: "a3f26d2b8f0b0131831aa916fca3321752c89baafd73d8c56175f282a9a34156"
+    - bytes: 4720
+      path: new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+      sha256: "d4bf43f2491cefba6f37733be7db41cf15248c4520a926040e8b6cff9fc68839"
+    - bytes: 3193
+      path: new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+      sha256: "6e23ad8b69d1028830b0095584f8ea7b67216d4e95374742c118d79108798906"
+    - bytes: 3207
+      path: new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+      sha256: "2a93cbfbf39959e2c77ebd667e790b0cfba277c1f5365fd82cafe46bc62a2bc3"
+    - bytes: 3308
+      path: new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+      sha256: "3175e2c1685b571dec36c28e619cbcc37e1bebc27d80a4796801693ad2146a97"
+    - bytes: 2962
+      path: new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+      sha256: "d07074be96275dc457c6b82776a8b9b52a1276c8bba4b232a257190faa8e7c01"
+    - bytes: 4489
+      path: new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+      sha256: "df76f1fd46eed01fe6b364172d268a277bd90e656a1a406b38f77a4db69dd787"
+    - bytes: 3033
+      path: new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+      sha256: "b72a3b80f3c01ad3422eb46b343a84bf4b776bcc20bdfca899a66c9b23d53355"
+    - bytes: 3182
+      path: new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+      sha256: "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5"
+    - bytes: 3212
+      path: new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+      sha256: "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454"
+    - bytes: 3149
+      path: new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+      sha256: "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024"
+    - bytes: 3377
+      path: new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+      sha256: "9f82ec85b9d53fcf641f775b57f2f817f0061d77a54abd5be3d10d3911a5283d"
+    - bytes: 3033
+      path: new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+      sha256: "363d5a6a078c7b7a0d49d585173619bef2ec4424e8713f6adfaed80e7db6711f"
+    - bytes: 3455
+      path: new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+      sha256: "4087e73cb751b9024f46b2a1b42c024bd9aefe1ec6b45d5c7413c8bafec19d06"
+    - bytes: 3590
+      path: new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+      sha256: "d36e691528f2aa2903b281b268e421ab842a16a122ea6c6ad3acc7de72140f21"
+    - bytes: 5061
+      path: new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+      sha256: "da16c92da7558151b54669bce97d912468d7332fd6322c6f90cad8edf1b5a62d"
+    - bytes: 4572
+      path: new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+      sha256: "7a941acd176757f0682a781094b0e0d79d9dcc7654f6ec7502353ecbc82f64fe"
+    - bytes: 102
+      path: new pipeline/harness/k0b01_v2/__init__.py
+      sha256: "f15ae132a25c343dcefffb37f8ae28754a8c1f9eda5443f64132661b99faf92c"
+    - bytes: 8319
+      path: new pipeline/harness/k0b01_v2/binary_budget.py
+      sha256: "f44ffc99484d0944e4d634110cbb51f76afcfa6c64727610ca7279639ad4d0c3"
+    - bytes: 34169
+      path: new pipeline/harness/k0b01_v2/budget_compiler.py
+      sha256: "b8280dc657533e8b4358b1c371362430650bddd6777b6825d4651b73bbea0f01"
+    - bytes: 5589
+      path: new pipeline/harness/k0b01_v2/canonical.py
+      sha256: "40356c8764bb6ead3c560389af811912ad379352a3d53af2fec95a823b5a4361"
+    - bytes: 7463
+      path: new pipeline/harness/k0b01_v2/cli.py
+      sha256: "2b223d24764717598558841e1773effbf625e17c47af8e01725c00445bb7ffd7"
+    - bytes: 11802
+      path: new pipeline/harness/k0b01_v2/contract.py
+      sha256: "61e9d1ba7041ac60a44e622a01e038ed92419ace93db54d62a917ef48f374e99"
+    - bytes: 8799
+      path: new pipeline/harness/k0b01_v2/digest.py
+      sha256: "57a056d5cef1d145365d1398c0332d1a6907ff914b61e7b92df77c87b71ddede"
+    - bytes: 26633
+      path: new pipeline/harness/k0b01_v2/registry_compiler.py
+      sha256: "1ea533e4f01907a6b4ac270dd348ddb935f6f0d25949ff346af7874131f7c00e"
+    - bytes: 25507
+      path: new pipeline/harness/k0b01_v2/store.py
+      sha256: "3e4704066c876a59ddb87d00f5f158119c241df15d7960f683dc699792c28641"
+    - bytes: 18747
+      path: new pipeline/harness/migrations/0004_k0b01_v2.sql
+      sha256: "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c"
+    - bytes: 37286
+      path: new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+      sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+    - bytes: 9425
+      path: new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+      sha256: "556c84527a865c5d04b0c0bfd1fa8e79c58c3388d9c63f83049157851feaa42a"
+    - bytes: 30070
+      path: new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+      sha256: "090ab45f0f4a6bcfea0413c850cd9789ce17461c1ee1ef6acc5ba6e355963055"
+outputs:
+  - bytes: 21341
+    canonical_payload:
+      claim_layer: registry_level_closed_21_event_Alpha0_definition
+      content_artifact_types:
+        - bootstrap.synthetic_result
+        - alpha0.key_decision
+      events:
+        - event_type: approval.granted
+          event_version: 1
+          field_owners:
+            actor_id: control.authenticated_approval_adapter
+            approval_id: control.authenticated_approval_adapter
+            decision_version_id: control.authenticated_approval_adapter
+            run_id: control.authenticated_approval_adapter
+          idempotency_fields:
+            - run_id
+            - v1
+            - approval_id
+            - decision_version_id
+          persister: artifact_event
+          producer: control.authenticated_approval_adapter
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - approval_id
+                - decision_version_id
+                - actor_id
+              state: pending
+              subscriber: control.approval_coordinator
+              terminal_policy: approval_delivery
+          replay_rule: immutable decision returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.approval.granted.v1
+            path: new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+            sha256: "2053b8a9ccea979f0a62b2dc4edd162e23c179b5ef26b9703a63dda8e05525ba"
+          terminal_disposition: compiled_delivery_only
+        - event_type: approval.rejected
+          event_version: 1
+          field_owners:
+            approval_id: control.authenticated_approval_adapter
+            decision_version_id: control.authenticated_approval_adapter
+            reason_code: control.authenticated_approval_adapter
+            run_id: control.authenticated_approval_adapter
+          idempotency_fields:
+            - run_id
+            - v1
+            - approval_id
+            - decision_version_id
+          persister: artifact_event
+          producer: control.authenticated_approval_adapter
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - approval_id
+                - decision_version_id
+                - reason_code
+              state: pending
+              subscriber: control.approval_coordinator
+              terminal_policy: approval_delivery
+          replay_rule: immutable decision returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.approval.rejected.v1
+            path: new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+            sha256: "3f926857c21bd6e9a5acf119957823665f72fa4894612f8d5fbea3a8642eae64"
+          terminal_disposition: compiled_delivery_only
+        - event_type: approval.requested
+          event_version: 1
+          field_owners:
+            approval_id: shared_control.approval_coordinator
+            required_role: shared_control.approval_coordinator
+            run_id: shared_control.approval_coordinator
+            subject_ref: shared_control.approval_coordinator
+          idempotency_fields:
+            - run_id
+            - v1
+            - approval_id
+          persister: artifact_event
+          producer: shared_control.approval_coordinator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - approval_id
+                - subject_ref
+                - required_role
+              state: pending
+              subscriber: human_approval_queue
+              terminal_policy: human_approval_wait
+          replay_rule: same pending request returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.approval.requested.v1
+            path: new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+            sha256: "b6283bb671591d5faabbe8085f1663d4ba91d8aa2a4b6e217b4f2483dcad2c68"
+          terminal_disposition: compiled_delivery_only
+        - event_type: artifact.published
+          event_version: 1
+          field_owners:
+            artifact_version_id: artifact_event.publication_writer
+            content_sha256: artifact_event.publication_writer
+            publication_transaction_id: artifact_event.publication_writer
+            run_id: artifact_event.publication_writer
+          idempotency_fields:
+            - run_id
+            - v1
+            - publication_transaction_id
+          persister: artifact_event
+          producer: artifact_event.publication_writer
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-02
+              fields_read:
+                - artifact_version_id
+                - publication_transaction_id
+                - content_sha256
+              state: pending
+              subscriber: control.artifact_lifecycle
+              terminal_policy: artifact_delivery
+          replay_rule: same publication returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.artifact.published.v1
+            path: new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+            sha256: "1ba0c8fad2f400de9a59e30522972c048a33aa2625dca77c2ad29fc3d61ffd92"
+          terminal_disposition: compiled_delivery_only
+        - event_type: artifact.version_created
+          event_version: 1
+          field_owners:
+            artifact_type: artifact_event.transaction_writer
+            artifact_version_id: artifact_event.transaction_writer
+            content_sha256: artifact_event.transaction_writer
+            run_id: artifact_event.transaction_writer
+          idempotency_fields:
+            - run_id
+            - v1
+            - artifact_version_id
+          persister: artifact_event
+          producer: artifact_event.transaction_writer
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - artifact_version_id
+                - artifact_type
+                - content_sha256
+              state: pending
+              subscriber: control.artifact_lifecycle
+              terminal_policy: artifact_delivery
+            F00:
+              activation_work_item: historical_F00
+              fields_read:
+                - artifact_version_id
+                - artifact_type
+                - content_sha256
+              state: observed_terminal
+              subscriber: bootstrap_readback
+              terminal_policy: observational_terminal
+          replay_rule: historical version reused
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.artifact.version_created.v1
+            path: new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+            sha256: "a3f26d2b8f0b0131831aa916fca3321752c89baafd73d8c56175f282a9a34156"
+          terminal_disposition: compiled_delivery_only
+        - event_type: command.received
+          event_version: 1
+          field_owners:
+            command: control.authenticated_ingress
+            command_id: control.authenticated_ingress
+            profile: control.authenticated_ingress
+            run_id: control.authenticated_ingress
+          idempotency_fields:
+            - run_id
+            - v1
+            - command_id
+          persister: artifact_event
+          producer: control.authenticated_ingress
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - run_id
+                - profile
+                - command
+              state: pending
+              subscriber: s0_control_delivery
+              terminal_policy: control_delivery
+            F00:
+              activation_work_item: historical_F00
+              fields_read:
+                - run_id
+                - profile
+                - command
+              state: pending
+              subscriber: s0_control_delivery
+              terminal_policy: control_delivery
+          replay_rule: root preserved
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.command.received.v1
+            path: new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+            sha256: "d4bf43f2491cefba6f37733be7db41cf15248c4520a926040e8b6cff9fc68839"
+          terminal_disposition: compiled_delivery_only
+        - event_type: error.schema_mismatch
+          event_version: 1
+          field_owners:
+            error_code: shared_control.schema_validator
+            evidence_ref: shared_control.schema_validator
+            run_id: shared_control.schema_validator
+            source_request_sha256: shared_control.schema_validator
+          idempotency_fields:
+            - run_id
+            - v1
+            - source_request_sha256
+            - error_code
+          persister: artifact_event
+          producer: shared_control.schema_validator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - run_id
+                - error_code
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: human_blocker_queue
+              terminal_policy: block_run_and_enqueue_human
+          replay_rule: error evidence preserved
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.error.schema_mismatch.v1
+            path: new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+            sha256: "6e23ad8b69d1028830b0095584f8ea7b67216d4e95374742c118d79108798906"
+          terminal_disposition: block_run_and_enqueue_human
+        - event_type: error.security_policy
+          event_version: 1
+          field_owners:
+            error_code: shared_control.security_monitor
+            evidence_ref: shared_control.security_monitor
+            incident_source_id: shared_control.security_monitor
+            run_id: shared_control.security_monitor
+          idempotency_fields:
+            - run_id
+            - v1
+            - incident_source_id
+            - error_code
+          persister: artifact_event
+          producer: shared_control.security_monitor
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-03
+              fields_read:
+                - run_id
+                - error_code
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: human_blocker_queue
+              terminal_policy: block_run_and_enqueue_human
+          replay_rule: frozen evidence never suppressed
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.error.security_policy.v1
+            path: new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+            sha256: "2a93cbfbf39959e2c77ebd667e790b0cfba277c1f5365fd82cafe46bc62a2bc3"
+          terminal_disposition: block_run_and_enqueue_human
+        - event_type: error.tool_failure
+          event_version: 1
+          field_owners:
+            attempt: shared_control.tool_boundary
+            error_code: shared_control.tool_boundary
+            evidence_ref: shared_control.tool_boundary
+            invocation_id: shared_control.tool_boundary
+            run_id: shared_control.tool_boundary
+          idempotency_fields:
+            - run_id
+            - v1
+            - invocation_id
+            - attempt
+            - error_code
+          persister: artifact_event
+          producer: shared_control.tool_boundary
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-03
+              fields_read:
+                - run_id
+                - error_code
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: human_blocker_queue
+              terminal_policy: block_run_and_enqueue_human
+          replay_rule: failure preserved, retry gets new attempt
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.error.tool_failure.v1
+            path: new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+            sha256: "3175e2c1685b571dec36c28e619cbcc37e1bebc27d80a4796801693ad2146a97"
+          terminal_disposition: block_run_and_enqueue_human
+        - event_type: gate.passed
+          event_version: 1
+          field_owners:
+            gate_id: shared_control.gate_coordinator
+            run_id: shared_control.gate_coordinator
+            state_revision: shared_control.gate_coordinator
+          idempotency_fields:
+            - run_id
+            - v1
+            - gate_id
+            - state_revision
+          persister: artifact_event
+          producer: shared_control.gate_coordinator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - gate_id
+                - run_id
+                - state_revision
+              state: pending
+              subscriber: control.gate_delivery
+              terminal_policy: gate_delivery
+          replay_rule: same gate result returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.gate.passed.v1
+            path: new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+            sha256: "d07074be96275dc457c6b82776a8b9b52a1276c8bba4b232a257190faa8e7c01"
+          terminal_disposition: compiled_delivery_only
+        - event_type: handoff.ready
+          event_version: 1
+          field_owners:
+            artifact_version_id: artifact_event.transaction_writer
+            profile: artifact_event.transaction_writer
+            route_id: artifact_event.transaction_writer
+            run_id: artifact_event.transaction_writer
+          idempotency_fields:
+            - run_id
+            - v1
+            - artifact_version_id
+            - route_id
+          persister: artifact_event
+          producer: artifact_event.transaction_writer
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - artifact_version_id
+                - profile
+                - route_id
+              state: pending
+              subscriber: control.handoff_delivery
+              terminal_policy: control_delivery
+            F00:
+              activation_work_item: historical_F00
+              fields_read:
+                - artifact_version_id
+                - profile
+              state: pending
+              subscriber: bootstrap_sink
+              terminal_policy: fixture_terminal
+          replay_rule: new descendant only after invalidation
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.handoff.ready.v1
+            path: new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+            sha256: "df76f1fd46eed01fe6b364172d268a277bd90e656a1a406b38f77a4db69dd787"
+          terminal_disposition: compiled_delivery_only
+        - event_type: meta.incident_detected
+          event_version: 1
+          field_owners:
+            evidence_ref: shared_control.security_monitor
+            incident_id: shared_control.security_monitor
+            run_id: shared_control.security_monitor
+          idempotency_fields:
+            - run_id
+            - v1
+            - incident_id
+          persister: artifact_event
+          producer: shared_control.security_monitor
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-03
+              fields_read:
+                - run_id
+                - incident_id
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: w5_incident_queue
+              terminal_policy: persist_incident_and_enqueue_W5
+          replay_rule: incident preserved
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.meta.incident_detected.v1
+            path: new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+            sha256: "b72a3b80f3c01ad3422eb46b343a84bf4b776bcc20bdfca899a66c9b23d53355"
+          terminal_disposition: persist_incident_and_enqueue_W5
+        - event_type: projection.failed
+          event_version: 1
+          field_owners:
+            evidence_ref: artifact_event.projector
+            failure_code: artifact_event.projector
+            projection_id: artifact_event.projector
+            run_id: artifact_event.projector
+          idempotency_fields:
+            - run_id
+            - v1
+            - projection_id
+            - failure_code
+          persister: artifact_event
+          producer: artifact_event.projector
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-02
+              fields_read:
+                - projection_id
+                - failure_code
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: human_blocker_queue
+              terminal_policy: block_run_and_enqueue_human
+          replay_rule: failure preserved
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.projection.failed.v1
+            path: new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+            sha256: "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5"
+          terminal_disposition: block_run_and_enqueue_human
+        - event_type: projection.requested
+          event_version: 1
+          field_owners:
+            decision_version_id: artifact_event.transaction_writer
+            pair_stem: artifact_event.transaction_writer
+            projection_profile_sha256: artifact_event.transaction_writer
+            run_id: artifact_event.transaction_writer
+          idempotency_fields:
+            - run_id
+            - v1
+            - decision_version_id
+            - projection_profile_sha256
+          persister: artifact_event
+          producer: artifact_event.transaction_writer
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-02
+              fields_read:
+                - decision_version_id
+                - projection_profile_sha256
+                - pair_stem
+              state: pending
+              subscriber: artifact_event.projector
+              terminal_policy: projection_delivery
+          replay_rule: same outbox intent returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.projection.requested.v1
+            path: new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+            sha256: "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454"
+          terminal_disposition: compiled_delivery_only
+        - event_type: projection.written
+          event_version: 1
+          field_owners:
+            markdown_sha256: artifact_event.projector
+            projection_id: artifact_event.projector
+            run_id: artifact_event.projector
+            yaml_sha256: artifact_event.projector
+          idempotency_fields:
+            - run_id
+            - v1
+            - projection_id
+          persister: artifact_event
+          producer: artifact_event.projector
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-02
+              fields_read:
+                - projection_id
+                - yaml_sha256
+                - markdown_sha256
+              state: pending
+              subscriber: control.projection_reconciliation
+              terminal_policy: control_delivery
+          replay_rule: same verified pair returned
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.projection.written.v1
+            path: new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+            sha256: "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024"
+          terminal_disposition: compiled_delivery_only
+        - event_type: revision.requested
+          event_version: 1
+          field_owners:
+            artifact_version_id: shared_control.revision_coordinator
+            reason_code: shared_control.revision_coordinator
+            request_revision: shared_control.revision_coordinator
+            revision_owner_zero_role_id: shared_control.revision_coordinator
+            run_id: shared_control.revision_coordinator
+          idempotency_fields:
+            - run_id
+            - v1
+            - artifact_version_id
+            - request_revision
+          persister: artifact_event
+          producer: shared_control.revision_coordinator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - artifact_version_id
+                - revision_owner_zero_role_id
+                - reason_code
+              state: pending
+              subscriber: s.revision_coordinator
+              terminal_policy: s_revision_delivery
+          replay_rule: creates invalidated descendants only
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.revision.requested.v1
+            path: new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+            sha256: "9f82ec85b9d53fcf641f775b57f2f817f0061d77a54abd5be3d10d3911a5283d"
+          terminal_disposition: compiled_delivery_only
+        - event_type: run.abort_requested
+          event_version: 1
+          field_owners:
+            abort_request_id: shared_control.abort_coordinator
+            reason_code: shared_control.abort_coordinator
+            run_id: shared_control.abort_coordinator
+          idempotency_fields:
+            - run_id
+            - v1
+            - abort_request_id
+          persister: artifact_event
+          producer: shared_control.abort_coordinator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-03
+              fields_read:
+                - run_id
+                - abort_request_id
+                - reason_code
+              state: pending
+              subscriber: control.abort_coordinator
+              terminal_policy: control_delivery
+          replay_rule: duplicate returns same fence
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.run.abort_requested.v1
+            path: new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+            sha256: "363d5a6a078c7b7a0d49d585173619bef2ec4424e8713f6adfaed80e7db6711f"
+          terminal_disposition: compiled_delivery_only
+        - event_type: run.aborted
+          event_version: 1
+          field_owners:
+            reconciliation_ref: shared_control.abort_coordinator
+            run_id: shared_control.abort_coordinator
+            state: shared_control.abort_coordinator
+            terminal_revision: shared_control.abort_coordinator
+          idempotency_fields:
+            - run_id
+            - v1
+            - terminal_revision
+          persister: artifact_event
+          producer: shared_control.abort_coordinator
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-03
+              fields_read:
+                - run_id
+                - state
+                - reconciliation_ref
+              state: observed_terminal
+              subscriber: alpha_observation
+              terminal_policy: observational_terminal
+          replay_rule: terminal never reopens
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.run.aborted.v1
+            path: new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+            sha256: "4087e73cb751b9024f46b2a1b42c024bd9aefe1ec6b45d5c7413c8bafec19d06"
+          terminal_disposition: observational_terminal
+        - event_type: run.blocked
+          event_version: 1
+          field_owners:
+            block_code: shared_control.run_fsm
+            evidence_ref: shared_control.run_fsm
+            run_id: shared_control.run_fsm
+            state: shared_control.run_fsm
+            state_revision: shared_control.run_fsm
+          idempotency_fields:
+            - run_id
+            - v1
+            - state_revision
+            - block_code
+          persister: artifact_event
+          producer: shared_control.run_fsm
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - run_id
+                - state
+                - block_code
+                - evidence_ref
+              state: accepted_terminal
+              subscriber: human_blocker_queue
+              terminal_policy: block_run_and_enqueue_human
+          replay_rule: preserve blocker
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.run.blocked.v1
+            path: new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+            sha256: "d36e691528f2aa2903b281b268e421ab842a16a122ea6c6ad3acc7de72140f21"
+          terminal_disposition: block_run_and_enqueue_human
+        - event_type: run.completed
+          event_version: 1
+          field_owners:
+            completion_gate_id: shared_control.run_fsm
+            run_id: shared_control.run_fsm
+            state: shared_control.run_fsm
+            terminal_revision: shared_control.run_fsm
+          idempotency_fields:
+            - run_id
+            - v1
+            - terminal_revision
+          persister: artifact_event
+          producer: shared_control.run_fsm
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - run_id
+                - state
+                - completion_gate_id
+              state: observed_terminal
+              subscriber: alpha_observation
+              terminal_policy: observational_terminal
+            F00:
+              activation_work_item: historical_F00
+              fields_read:
+                - run_id
+                - state
+                - sink_acceptance_id
+                - readback_gate_id
+              state: observed_terminal
+              subscriber: bootstrap_readback
+              terminal_policy: observational_terminal
+          replay_rule: terminal never replayed into same run
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.run.completed.v1
+            path: new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+            sha256: "da16c92da7558151b54669bce97d912468d7332fd6322c6f90cad8edf1b5a62d"
+          terminal_disposition: observational_terminal
+        - event_type: run.started
+          event_version: 1
+          field_owners:
+            run_id: shared_control.run_fsm
+            state: shared_control.run_fsm
+            to_revision: shared_control.run_fsm
+          idempotency_fields:
+            - run_id
+            - v1
+            - to_revision
+          persister: artifact_event
+          producer: shared_control.run_fsm
+          profile_branches:
+            Alpha0:
+              activation_work_item: K0b-04
+              fields_read:
+                - run_id
+                - state
+              state: pending
+              subscriber: control.run_lifecycle
+              terminal_policy: control_delivery
+            F00:
+              activation_work_item: historical_F00
+              fields_read:
+                - run_id
+                - state
+              state: observed_terminal
+              subscriber: bootstrap_readback
+              terminal_policy: observational_terminal
+          replay_rule: once per transition revision
+          runtime_enabled: false
+          schema:
+            id: pipeline-v2.alpha0.event.run.started.v1
+            path: new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+            sha256: "7a941acd176757f0682a781094b0e0d79d9dcc7654f6ec7502353ecbc82f64fe"
+          terminal_disposition: compiled_delivery_only
+      registry_sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      runtime_enabled: false
+    family: compiled_artifact_event_profile
+    sha256: "3863beb85e92c05f6e67ab83224263dfcbc8d2a55acb53f2cee6cdf459a4ccab"
+  - bytes: 5342
+    canonical_payload:
+      claim_layer: registry_level_closed_21_event_Alpha0_definition
+      dynamic_subscriptions: false
+      edges:
+        - downstream_semantic_routes:
+            - control.approval_coordinator
+          event_type: approval.granted
+          producer: control.authenticated_approval_adapter
+          profile: Alpha0
+          subscriber: control.approval_coordinator
+          terminal: false
+        - downstream_semantic_routes:
+            - control.approval_coordinator
+          event_type: approval.rejected
+          producer: control.authenticated_approval_adapter
+          profile: Alpha0
+          subscriber: control.approval_coordinator
+          terminal: false
+        - downstream_semantic_routes:
+            - human_approval_queue
+          event_type: approval.requested
+          producer: shared_control.approval_coordinator
+          profile: Alpha0
+          subscriber: human_approval_queue
+          terminal: false
+        - downstream_semantic_routes:
+            - control.artifact_lifecycle
+          event_type: artifact.published
+          producer: artifact_event.publication_writer
+          profile: Alpha0
+          subscriber: control.artifact_lifecycle
+          terminal: false
+        - downstream_semantic_routes:
+            - control.artifact_lifecycle
+          event_type: artifact.version_created
+          producer: artifact_event.transaction_writer
+          profile: Alpha0
+          subscriber: control.artifact_lifecycle
+          terminal: false
+        - downstream_semantic_routes: []
+          event_type: artifact.version_created
+          producer: artifact_event.transaction_writer
+          profile: F00
+          subscriber: bootstrap_readback
+          terminal: true
+        - downstream_semantic_routes:
+            - s0_control_delivery
+          event_type: command.received
+          producer: control.authenticated_ingress
+          profile: Alpha0
+          subscriber: s0_control_delivery
+          terminal: false
+        - downstream_semantic_routes:
+            - s0_control_delivery
+          event_type: command.received
+          producer: control.authenticated_ingress
+          profile: F00
+          subscriber: s0_control_delivery
+          terminal: false
+        - downstream_semantic_routes: []
+          event_type: error.schema_mismatch
+          producer: shared_control.schema_validator
+          profile: Alpha0
+          subscriber: human_blocker_queue
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: error.security_policy
+          producer: shared_control.security_monitor
+          profile: Alpha0
+          subscriber: human_blocker_queue
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: error.tool_failure
+          producer: shared_control.tool_boundary
+          profile: Alpha0
+          subscriber: human_blocker_queue
+          terminal: true
+        - downstream_semantic_routes:
+            - control.gate_delivery
+          event_type: gate.passed
+          producer: shared_control.gate_coordinator
+          profile: Alpha0
+          subscriber: control.gate_delivery
+          terminal: false
+        - downstream_semantic_routes:
+            - control.handoff_delivery
+          event_type: handoff.ready
+          producer: artifact_event.transaction_writer
+          profile: Alpha0
+          subscriber: control.handoff_delivery
+          terminal: false
+        - downstream_semantic_routes:
+            - bootstrap_sink
+          event_type: handoff.ready
+          producer: artifact_event.transaction_writer
+          profile: F00
+          subscriber: bootstrap_sink
+          terminal: false
+        - downstream_semantic_routes: []
+          event_type: meta.incident_detected
+          producer: shared_control.security_monitor
+          profile: Alpha0
+          subscriber: w5_incident_queue
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: projection.failed
+          producer: artifact_event.projector
+          profile: Alpha0
+          subscriber: human_blocker_queue
+          terminal: true
+        - downstream_semantic_routes:
+            - artifact_event.projector
+          event_type: projection.requested
+          producer: artifact_event.transaction_writer
+          profile: Alpha0
+          subscriber: artifact_event.projector
+          terminal: false
+        - downstream_semantic_routes:
+            - control.projection_reconciliation
+          event_type: projection.written
+          producer: artifact_event.projector
+          profile: Alpha0
+          subscriber: control.projection_reconciliation
+          terminal: false
+        - downstream_semantic_routes:
+            - s.revision_coordinator
+          event_type: revision.requested
+          producer: shared_control.revision_coordinator
+          profile: Alpha0
+          subscriber: s.revision_coordinator
+          terminal: false
+        - downstream_semantic_routes:
+            - control.abort_coordinator
+          event_type: run.abort_requested
+          producer: shared_control.abort_coordinator
+          profile: Alpha0
+          subscriber: control.abort_coordinator
+          terminal: false
+        - downstream_semantic_routes: []
+          event_type: run.aborted
+          producer: shared_control.abort_coordinator
+          profile: Alpha0
+          subscriber: alpha_observation
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: run.blocked
+          producer: shared_control.run_fsm
+          profile: Alpha0
+          subscriber: human_blocker_queue
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: run.completed
+          producer: shared_control.run_fsm
+          profile: Alpha0
+          subscriber: alpha_observation
+          terminal: true
+        - downstream_semantic_routes: []
+          event_type: run.completed
+          producer: shared_control.run_fsm
+          profile: F00
+          subscriber: bootstrap_readback
+          terminal: true
+        - downstream_semantic_routes:
+            - control.run_lifecycle
+          event_type: run.started
+          producer: shared_control.run_fsm
+          profile: Alpha0
+          subscriber: control.run_lifecycle
+          terminal: false
+        - downstream_semantic_routes: []
+          event_type: run.started
+          producer: shared_control.run_fsm
+          profile: F00
+          subscriber: bootstrap_readback
+          terminal: true
+      registry_sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      runtime_enabled: false
+    family: compiled_event_reachability_graph
+    sha256: "0a33b6416c7d90bbd389f2f91ca875d2b88dee0ce5803439633abade40fb6bec"
+  - bytes: 6584
+    canonical_payload:
+      claim_layer: registry_level_closed_21_event_Alpha0_definition
+      registry_sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      runtime_enabled: false
+      snapshots:
+        - activation_work_item: K0b-04
+          event_type: approval.granted
+          fields_read:
+            - approval_id
+            - decision_version_id
+            - actor_id
+          profile: Alpha0
+          state: pending
+          subscriber: control.approval_coordinator
+          terminal_policy: approval_delivery
+        - activation_work_item: K0b-04
+          event_type: approval.rejected
+          fields_read:
+            - approval_id
+            - decision_version_id
+            - reason_code
+          profile: Alpha0
+          state: pending
+          subscriber: control.approval_coordinator
+          terminal_policy: approval_delivery
+        - activation_work_item: K0b-04
+          event_type: approval.requested
+          fields_read:
+            - approval_id
+            - subject_ref
+            - required_role
+          profile: Alpha0
+          state: pending
+          subscriber: human_approval_queue
+          terminal_policy: human_approval_wait
+        - activation_work_item: K0b-02
+          event_type: artifact.published
+          fields_read:
+            - artifact_version_id
+            - publication_transaction_id
+            - content_sha256
+          profile: Alpha0
+          state: pending
+          subscriber: control.artifact_lifecycle
+          terminal_policy: artifact_delivery
+        - activation_work_item: K0b-04
+          event_type: artifact.version_created
+          fields_read:
+            - artifact_version_id
+            - artifact_type
+            - content_sha256
+          profile: Alpha0
+          state: pending
+          subscriber: control.artifact_lifecycle
+          terminal_policy: artifact_delivery
+        - activation_work_item: historical_F00
+          event_type: artifact.version_created
+          fields_read:
+            - artifact_version_id
+            - artifact_type
+            - content_sha256
+          profile: F00
+          state: observed_terminal
+          subscriber: bootstrap_readback
+          terminal_policy: observational_terminal
+        - activation_work_item: K0b-04
+          event_type: command.received
+          fields_read:
+            - run_id
+            - profile
+            - command
+          profile: Alpha0
+          state: pending
+          subscriber: s0_control_delivery
+          terminal_policy: control_delivery
+        - activation_work_item: historical_F00
+          event_type: command.received
+          fields_read:
+            - run_id
+            - profile
+            - command
+          profile: F00
+          state: pending
+          subscriber: s0_control_delivery
+          terminal_policy: control_delivery
+        - activation_work_item: K0b-04
+          event_type: error.schema_mismatch
+          fields_read:
+            - run_id
+            - error_code
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: human_blocker_queue
+          terminal_policy: block_run_and_enqueue_human
+        - activation_work_item: K0b-03
+          event_type: error.security_policy
+          fields_read:
+            - run_id
+            - error_code
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: human_blocker_queue
+          terminal_policy: block_run_and_enqueue_human
+        - activation_work_item: K0b-03
+          event_type: error.tool_failure
+          fields_read:
+            - run_id
+            - error_code
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: human_blocker_queue
+          terminal_policy: block_run_and_enqueue_human
+        - activation_work_item: K0b-04
+          event_type: gate.passed
+          fields_read:
+            - gate_id
+            - run_id
+            - state_revision
+          profile: Alpha0
+          state: pending
+          subscriber: control.gate_delivery
+          terminal_policy: gate_delivery
+        - activation_work_item: K0b-04
+          event_type: handoff.ready
+          fields_read:
+            - artifact_version_id
+            - profile
+            - route_id
+          profile: Alpha0
+          state: pending
+          subscriber: control.handoff_delivery
+          terminal_policy: control_delivery
+        - activation_work_item: historical_F00
+          event_type: handoff.ready
+          fields_read:
+            - artifact_version_id
+            - profile
+          profile: F00
+          state: pending
+          subscriber: bootstrap_sink
+          terminal_policy: fixture_terminal
+        - activation_work_item: K0b-03
+          event_type: meta.incident_detected
+          fields_read:
+            - run_id
+            - incident_id
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: w5_incident_queue
+          terminal_policy: persist_incident_and_enqueue_W5
+        - activation_work_item: K0b-02
+          event_type: projection.failed
+          fields_read:
+            - projection_id
+            - failure_code
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: human_blocker_queue
+          terminal_policy: block_run_and_enqueue_human
+        - activation_work_item: K0b-02
+          event_type: projection.requested
+          fields_read:
+            - decision_version_id
+            - projection_profile_sha256
+            - pair_stem
+          profile: Alpha0
+          state: pending
+          subscriber: artifact_event.projector
+          terminal_policy: projection_delivery
+        - activation_work_item: K0b-02
+          event_type: projection.written
+          fields_read:
+            - projection_id
+            - yaml_sha256
+            - markdown_sha256
+          profile: Alpha0
+          state: pending
+          subscriber: control.projection_reconciliation
+          terminal_policy: control_delivery
+        - activation_work_item: K0b-04
+          event_type: revision.requested
+          fields_read:
+            - artifact_version_id
+            - revision_owner_zero_role_id
+            - reason_code
+          profile: Alpha0
+          state: pending
+          subscriber: s.revision_coordinator
+          terminal_policy: s_revision_delivery
+        - activation_work_item: K0b-03
+          event_type: run.abort_requested
+          fields_read:
+            - run_id
+            - abort_request_id
+            - reason_code
+          profile: Alpha0
+          state: pending
+          subscriber: control.abort_coordinator
+          terminal_policy: control_delivery
+        - activation_work_item: K0b-03
+          event_type: run.aborted
+          fields_read:
+            - run_id
+            - state
+            - reconciliation_ref
+          profile: Alpha0
+          state: observed_terminal
+          subscriber: alpha_observation
+          terminal_policy: observational_terminal
+        - activation_work_item: K0b-04
+          event_type: run.blocked
+          fields_read:
+            - run_id
+            - state
+            - block_code
+            - evidence_ref
+          profile: Alpha0
+          state: accepted_terminal
+          subscriber: human_blocker_queue
+          terminal_policy: block_run_and_enqueue_human
+        - activation_work_item: K0b-04
+          event_type: run.completed
+          fields_read:
+            - run_id
+            - state
+            - completion_gate_id
+          profile: Alpha0
+          state: observed_terminal
+          subscriber: alpha_observation
+          terminal_policy: observational_terminal
+        - activation_work_item: historical_F00
+          event_type: run.completed
+          fields_read:
+            - run_id
+            - state
+            - sink_acceptance_id
+            - readback_gate_id
+          profile: F00
+          state: observed_terminal
+          subscriber: bootstrap_readback
+          terminal_policy: observational_terminal
+        - activation_work_item: K0b-04
+          event_type: run.started
+          fields_read:
+            - run_id
+            - state
+          profile: Alpha0
+          state: pending
+          subscriber: control.run_lifecycle
+          terminal_policy: control_delivery
+        - activation_work_item: historical_F00
+          event_type: run.started
+          fields_read:
+            - run_id
+            - state
+          profile: F00
+          state: observed_terminal
+          subscriber: bootstrap_readback
+          terminal_policy: observational_terminal
+    family: compiled_subscription_terminal_snapshot
+    sha256: "19188ea200ef74f252d14c8848f6902d22958ce8c09b6a700e5e044ab4e484d4"
+  - bytes: 3954
+    canonical_payload:
+      claim_layer: registry_level_closed_21_event_Alpha0_definition
+      phase_fences:
+        F15_boundary_triggers:
+          - k0b.f15.boundary.entry_gate
+          - k0b.f15.boundary.program_owner_wait_or_exit
+          - k0b.f15.boundary.exit_gate
+          - k0b.f15.boundary.top_level_run_end
+        activation_work_items:
+          - K0b-02
+          - K0b-03
+          - K0b-04
+        capabilities: []
+        phase_order:
+          - K0b-runtime-operational
+          - K0b-F15-exact-measurement
+        post_F15_model_calls: 0
+        predecessor_seal_required: true
+        runtime_enabled: false
+      registry_sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      routes:
+        - barrier: null
+          class: blocked
+          direct_actor_handoff: false
+          dispatcher_calls: 0
+          phase_fences:
+            F15_boundary_triggers:
+              - k0b.f15.boundary.entry_gate
+              - k0b.f15.boundary.program_owner_wait_or_exit
+              - k0b.f15.boundary.exit_gate
+              - k0b.f15.boundary.top_level_run_end
+            activation_work_items:
+              - K0b-02
+              - K0b-03
+              - K0b-04
+            capabilities: []
+            phase_order:
+              - K0b-runtime-operational
+              - K0b-F15-exact-measurement
+            post_F15_model_calls: 0
+            predecessor_seal_required: true
+            runtime_enabled: false
+          predicate: missing_stale_conflicting_forbidden_incompatible_or_fenced
+          revision_owner: null
+          route_id: s.alpha0.blocked.v1
+          targets: []
+        - barrier: null
+          class: compiled_nominal
+          direct_actor_handoff: false
+          dispatcher_calls: 0
+          phase_fences:
+            F15_boundary_triggers:
+              - k0b.f15.boundary.entry_gate
+              - k0b.f15.boundary.program_owner_wait_or_exit
+              - k0b.f15.boundary.exit_gate
+              - k0b.f15.boundary.top_level_run_end
+            activation_work_items:
+              - K0b-02
+              - K0b-03
+              - K0b-04
+            capabilities: []
+            phase_order:
+              - K0b-runtime-operational
+              - K0b-F15-exact-measurement
+            post_F15_model_calls: 0
+            predecessor_seal_required: true
+            runtime_enabled: false
+          predicate: one_machine_known_outcome_all_guards_true
+          revision_owner: null
+          route_id: s.alpha0.compiled_nominal.v1
+          targets:
+            - fixture.alpha0.worker
+        - barrier: all_required
+          class: parallel_review
+          direct_actor_handoff: false
+          dispatcher_calls: 0
+          phase_fences:
+            F15_boundary_triggers:
+              - k0b.f15.boundary.entry_gate
+              - k0b.f15.boundary.program_owner_wait_or_exit
+              - k0b.f15.boundary.exit_gate
+              - k0b.f15.boundary.top_level_run_end
+            activation_work_items:
+              - K0b-02
+              - K0b-03
+              - K0b-04
+            capabilities: []
+            phase_order:
+              - K0b-runtime-operational
+              - K0b-F15-exact-measurement
+            post_F15_model_calls: 0
+            predecessor_seal_required: true
+            runtime_enabled: false
+          predicate: exact_compatible_reviewer_snapshot
+          revision_owner: null
+          route_id: s.alpha0.f04.parallel_review.v1
+          targets:
+            - fixture.alpha0.primary_reviewer
+            - fixture.alpha0.adversarial_reviewer
+        - barrier: null
+          class: revision
+          direct_actor_handoff: false
+          dispatcher_calls: 0
+          phase_fences:
+            F15_boundary_triggers:
+              - k0b.f15.boundary.entry_gate
+              - k0b.f15.boundary.program_owner_wait_or_exit
+              - k0b.f15.boundary.exit_gate
+              - k0b.f15.boundary.top_level_run_end
+            activation_work_items:
+              - K0b-02
+              - K0b-03
+              - K0b-04
+            capabilities: []
+            phase_order:
+              - K0b-runtime-operational
+              - K0b-F15-exact-measurement
+            post_F15_model_calls: 0
+            predecessor_seal_required: true
+            runtime_enabled: false
+          predicate: accepted_existing_version_consumer_and_valid_lineage
+          revision_owner: fixture.alpha0.upstream_zero
+          route_id: s.alpha0.f05.revision.v1
+          targets:
+            - fixture.alpha0.upstream_zero
+        - barrier: null
+          class: layer0_fallback
+          direct_actor_handoff: false
+          dispatcher_calls: 1
+          phase_fences:
+            F15_boundary_triggers:
+              - k0b.f15.boundary.entry_gate
+              - k0b.f15.boundary.program_owner_wait_or_exit
+              - k0b.f15.boundary.exit_gate
+              - k0b.f15.boundary.top_level_run_end
+            activation_work_items:
+              - K0b-02
+              - K0b-03
+              - K0b-04
+            capabilities: []
+            phase_order:
+              - K0b-runtime-operational
+              - K0b-F15-exact-measurement
+            post_F15_model_calls: 0
+            predecessor_seal_required: true
+            runtime_enabled: false
+          predicate: registered_ambiguous_or_non_nominal_admitted
+          revision_owner: null
+          route_id: s.alpha0.layer0_fallback.v1
+          targets:
+            - fixture.alpha0.upstream_zero
+      runtime_enabled: false
+    family: compiled_s_route_table_v2
+    sha256: "81ec204b00c53a46627378769445b5a454da8f1538fa7551b942c10c7833baef"
+  - bytes: 592
+    canonical_payload:
+      F04:
+        barrier: all_required
+        dynamic_membership: false
+        members:
+          - fixture.alpha0.primary_reviewer
+          - fixture.alpha0.adversarial_reviewer
+        one_deduplicated_terminal_per_member: true
+        peer_visibility_before_barrier: false
+      F05:
+        owner_must_differ_from_producer_identity: true
+        producer_invocation_is_lineage_only: true
+        revision_owner_zero_role_id: fixture.alpha0.upstream_zero
+      claim_layer: registry_level_closed_21_event_Alpha0_definition
+      direct_actor_handoff: false
+      registry_sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+      runtime_enabled: false
+    family: compiled_fanout_barrier_profile
+    sha256: "7adbf403a6813f55e58bb8af63646035a7b0d519e9742aedb7050a17d476c3ca"
+owner: registry_and_routing
+receipt_id: pipeline-v2.alpha0.registry_and_routing.v2
+result: pass
+runtime_enabled: false
+schema_version: 1

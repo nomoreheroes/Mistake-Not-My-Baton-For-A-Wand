@@ -1,0 +1,558 @@
+compiler:
+  bytes: 34169
+  path: new pipeline/harness/k0b01_v2/budget_compiler.py
+  sha256: "b8280dc657533e8b4358b1c371362430650bddd6777b6825d4651b73bbea0f01"
+dependencies:
+  receipt_A_output_hashes:
+    compiled_artifact_event_profile: "3863beb85e92c05f6e67ab83224263dfcbc8d2a55acb53f2cee6cdf459a4ccab"
+    compiled_event_reachability_graph: "0a33b6416c7d90bbd389f2f91ca875d2b88dee0ce5803439633abade40fb6bec"
+    compiled_fanout_barrier_profile: "7adbf403a6813f55e58bb8af63646035a7b0d519e9742aedb7050a17d476c3ca"
+    compiled_s_route_table_v2: "81ec204b00c53a46627378769445b5a454da8f1538fa7551b942c10c7833baef"
+    compiled_subscription_terminal_snapshot: "19188ea200ef74f252d14c8848f6902d22958ce8c09b6a700e5e044ab4e484d4"
+  receipt_A_sha256: "fcfdb3b8cfe6cadb2f033edfae94ab9ecd380ba514119815ab11c713fc0e07ef"
+diagnostics: []
+inputs:
+  authority:
+    approval_request:
+      bytes: 99133
+      path: new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml
+      sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    exact_request_sha256: "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181"
+    final_gate_closure:
+      bytes: 19798
+      path: new pipeline/evidence/k0b-01-final-implementation-disposition-gate-closure-v1.yaml
+      sha256: "74bf8f434e27ab1d90fae25f15087c1a3a6bc597df6c9bb64733280e1bb6cdc2"
+    owner_disposition:
+      bytes: 42360
+      path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
+      sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
+    phase_A_commit:
+      clean_worktree_and_index: true
+      commit: 641a9a97b08478badbf3386446aac21df15360ea
+      exact_paths: 18
+      five_gates_closed: true
+      global_closed: 8
+      global_open: 9
+      implementation_session_started: false
+      parent: 97a742a0bd9fdfc69360b28b1fd2cda31983fcd1
+      raw_committed_blobs_match: true
+      result: verified_phase_A_commit
+      trailers:
+        - 'Approval-Request-SHA256: 77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181'
+        - 'Owner-Confirmation: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16'
+        - 'Implementation-Package: K0B01-ALPHA-FOUNDATION-IMPLEMENTATION-V2'
+        - 'Runtime-Authority: none'
+      tree: 71d3f1ff1ac0ccceef880b1709a02a4dd2403369
+    separate_owner_confirmation_source: current_conversation_owner_exact_SHA256_full_two_phase_scope_confirmation_2026_09_16
+    session_allocation:
+      bytes: 10379
+      path: new pipeline/evidence/k0b-01-implementation-session-allocation-v1.yaml
+      sha256: "1cbaaabc2d2ccf50a49daeccb5a90b35e0020490a2b9efb5be3effa07e36426a"
+  canonicalization: ordinal_sorted_canonical_JSON_UTF8_LF_one_final_LF
+  implementation_input_manifest_sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  source_pins:
+    - bytes: 10857
+      path: new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json
+      sha256: "a65cc8b000a774afc366e137a311fde5fe34e69823da65a2bfb84a52a3fee5a6"
+    - bytes: 3195
+      path: new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json
+      sha256: "2053b8a9ccea979f0a62b2dc4edd162e23c179b5ef26b9703a63dda8e05525ba"
+    - bytes: 3204
+      path: new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json
+      sha256: "3f926857c21bd6e9a5acf119957823665f72fa4894612f8d5fbea3a8642eae64"
+    - bytes: 3192
+      path: new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json
+      sha256: "b6283bb671591d5faabbe8085f1663d4ba91d8aa2a4b6e217b4f2483dcad2c68"
+    - bytes: 3218
+      path: new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json
+      sha256: "1ba0c8fad2f400de9a59e30522972c048a33aa2625dca77c2ad29fc3d61ffd92"
+    - bytes: 4736
+      path: new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json
+      sha256: "a3f26d2b8f0b0131831aa916fca3321752c89baafd73d8c56175f282a9a34156"
+    - bytes: 4720
+      path: new pipeline/contracts/k0b01/events/command.received-v1.schema.json
+      sha256: "d4bf43f2491cefba6f37733be7db41cf15248c4520a926040e8b6cff9fc68839"
+    - bytes: 3193
+      path: new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json
+      sha256: "6e23ad8b69d1028830b0095584f8ea7b67216d4e95374742c118d79108798906"
+    - bytes: 3207
+      path: new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json
+      sha256: "2a93cbfbf39959e2c77ebd667e790b0cfba277c1f5365fd82cafe46bc62a2bc3"
+    - bytes: 3308
+      path: new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json
+      sha256: "3175e2c1685b571dec36c28e619cbcc37e1bebc27d80a4796801693ad2146a97"
+    - bytes: 2962
+      path: new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json
+      sha256: "d07074be96275dc457c6b82776a8b9b52a1276c8bba4b232a257190faa8e7c01"
+    - bytes: 4489
+      path: new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json
+      sha256: "df76f1fd46eed01fe6b364172d268a277bd90e656a1a406b38f77a4db69dd787"
+    - bytes: 3033
+      path: new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json
+      sha256: "b72a3b80f3c01ad3422eb46b343a84bf4b776bcc20bdfca899a66c9b23d53355"
+    - bytes: 3182
+      path: new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json
+      sha256: "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5"
+    - bytes: 3212
+      path: new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json
+      sha256: "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454"
+    - bytes: 3149
+      path: new pipeline/contracts/k0b01/events/projection.written-v1.schema.json
+      sha256: "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024"
+    - bytes: 3377
+      path: new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json
+      sha256: "9f82ec85b9d53fcf641f775b57f2f817f0061d77a54abd5be3d10d3911a5283d"
+    - bytes: 3033
+      path: new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json
+      sha256: "363d5a6a078c7b7a0d49d585173619bef2ec4424e8713f6adfaed80e7db6711f"
+    - bytes: 3455
+      path: new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json
+      sha256: "4087e73cb751b9024f46b2a1b42c024bd9aefe1ec6b45d5c7413c8bafec19d06"
+    - bytes: 3590
+      path: new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json
+      sha256: "d36e691528f2aa2903b281b268e421ab842a16a122ea6c6ad3acc7de72140f21"
+    - bytes: 5061
+      path: new pipeline/contracts/k0b01/events/run.completed-v1.schema.json
+      sha256: "da16c92da7558151b54669bce97d912468d7332fd6322c6f90cad8edf1b5a62d"
+    - bytes: 4572
+      path: new pipeline/contracts/k0b01/events/run.started-v1.schema.json
+      sha256: "7a941acd176757f0682a781094b0e0d79d9dcc7654f6ec7502353ecbc82f64fe"
+    - bytes: 102
+      path: new pipeline/harness/k0b01_v2/__init__.py
+      sha256: "f15ae132a25c343dcefffb37f8ae28754a8c1f9eda5443f64132661b99faf92c"
+    - bytes: 8319
+      path: new pipeline/harness/k0b01_v2/binary_budget.py
+      sha256: "f44ffc99484d0944e4d634110cbb51f76afcfa6c64727610ca7279639ad4d0c3"
+    - bytes: 34169
+      path: new pipeline/harness/k0b01_v2/budget_compiler.py
+      sha256: "b8280dc657533e8b4358b1c371362430650bddd6777b6825d4651b73bbea0f01"
+    - bytes: 5589
+      path: new pipeline/harness/k0b01_v2/canonical.py
+      sha256: "40356c8764bb6ead3c560389af811912ad379352a3d53af2fec95a823b5a4361"
+    - bytes: 7463
+      path: new pipeline/harness/k0b01_v2/cli.py
+      sha256: "2b223d24764717598558841e1773effbf625e17c47af8e01725c00445bb7ffd7"
+    - bytes: 11802
+      path: new pipeline/harness/k0b01_v2/contract.py
+      sha256: "61e9d1ba7041ac60a44e622a01e038ed92419ace93db54d62a917ef48f374e99"
+    - bytes: 8799
+      path: new pipeline/harness/k0b01_v2/digest.py
+      sha256: "57a056d5cef1d145365d1398c0332d1a6907ff914b61e7b92df77c87b71ddede"
+    - bytes: 26633
+      path: new pipeline/harness/k0b01_v2/registry_compiler.py
+      sha256: "1ea533e4f01907a6b4ac270dd348ddb935f6f0d25949ff346af7874131f7c00e"
+    - bytes: 25507
+      path: new pipeline/harness/k0b01_v2/store.py
+      sha256: "3e4704066c876a59ddb87d00f5f158119c241df15d7960f683dc699792c28641"
+    - bytes: 18747
+      path: new pipeline/harness/migrations/0004_k0b01_v2.sql
+      sha256: "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c"
+    - bytes: 37286
+      path: new pipeline/registry/alpha0/alpha0-routing-contract-v1.json
+      sha256: "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f"
+    - bytes: 9425
+      path: new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json
+      sha256: "556c84527a865c5d04b0c0bfd1fa8e79c58c3388d9c63f83049157851feaa42a"
+    - bytes: 30070
+      path: new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json
+      sha256: "090ab45f0f4a6bcfea0413c850cd9789ce17461c1ee1ef6acc5ba6e355963055"
+outputs:
+  - bytes: 6396
+    canonical_payload:
+      F15_size_stress: blocked_missing_authoritative_object_count
+      binary_budget:
+        applicable: true
+        assumed_mean_object_bytes: 372736
+        forecast_worst_by_count_bytes: 4472832
+        maximum_aggregate_new_bytes: 7864320
+        nominal_expected_bytes: 2236416
+        runtime_aggregate_limit_bytes: 7864320
+        size_stressed_bytes: 7864320
+      current_size_stress:
+        assumed_mean_object_bytes: 372736
+        checkpoint_result: below_hard
+        credit: 0
+        forecast_worst_by_count_bytes: 4472832
+        nominal_expected_bytes: 2236416
+        phase_margin_bytes: 39845888
+        phase_result: above_warning
+        publications: 34
+        rounded_size_stressed_checkpoint_bytes: 30408704
+        size_stressed_bytes: 7864320
+        size_stressed_phase_pack_bytes: 1033895936
+        unrounded_size_stressed_checkpoint_bytes: 29884416
+      human_package_profiles:
+        - case_id: D0_K0a_packages
+          packages:
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 20
+                  worst_case: 60
+                batchable_requests: true
+                blocking_decisions:
+                  nominal: 1
+                  worst_case: 3
+                max_single_session_minutes: 30
+                profile: standard
+                sessions:
+                  nominal: 1
+                  worst_case: 2
+              package_id: K0a-plan-bootstrap
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 0
+                  worst_case: 0
+                batchable_requests: true
+                blocking_decisions:
+                  nominal: 0
+                  worst_case: 0
+                max_single_session_minutes: 30
+                profile: light
+                sessions:
+                  nominal: 0
+                  worst_case: 0
+              package_id: K0a-runtime-F00
+        - case_id: D0_K0b_packages
+          packages:
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 30
+                  worst_case: 30
+                batchable_requests: true
+                blocking_decisions:
+                  nominal: 1
+                  worst_case: 2
+                max_single_session_minutes: 30
+                profile: light
+                sessions:
+                  nominal: 1
+                  worst_case: 1
+              package_id: K0b-plan-deltas
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 30
+                  worst_case: 120
+                batchable_requests: false
+                blocking_decisions:
+                  nominal: 2
+                  worst_case: 4
+                max_single_session_minutes: 60
+                profile: standard
+                sessions:
+                  nominal: 1
+                  worst_case: 3
+              package_id: K0b-runtime-operational
+        - case_id: K0a_worksheet_packages
+          packages:
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 20
+                  worst_case: 60
+                batchable_requests: true
+                blocking_decisions:
+                  nominal: 1
+                  worst_case: 3
+                max_single_session_minutes: 30
+                profile: standard
+                sessions:
+                  nominal: 1
+                  worst_case: 2
+              package_id: K0a-plan-bootstrap
+            - capacity:
+                runtime_authorized: false
+                state: future_separate_capacity_receipt_required
+              human_attention:
+                active_minutes:
+                  nominal: 0
+                  worst_case: 0
+                batchable_requests: true
+                blocking_decisions:
+                  nominal: 0
+                  worst_case: 0
+                max_single_session_minutes: 30
+                profile: light
+                sessions:
+                  nominal: 0
+                  worst_case: 0
+              package_id: K0a-runtime-F00
+      phase_completion_claim: false
+      reference_results:
+        - case_id: D0_K0a_packages
+          result:
+            human_attention:
+              active_minutes_nominal: 20
+              active_minutes_worst_case: 60
+              blocking_decisions_nominal: 1
+              blocking_decisions_worst_case: 3
+              sessions_nominal: 1
+              sessions_worst_case: 2
+            human_profile: standard
+            invocations:
+              checkpointed_nominal: 3
+              checkpointed_worst_case: 6
+              nominal: 9
+              worst_case: 24
+        - case_id: D0_K0b_packages
+          result:
+            human_attention:
+              active_minutes_nominal: 60
+              active_minutes_worst_case: 150
+              blocking_decisions_nominal: 3
+              blocking_decisions_worst_case: 6
+              sessions_nominal: 2
+              sessions_worst_case: 4
+            human_profile: high_attention
+            invocations:
+              checkpointed_nominal: 16
+              checkpointed_worst_case: 30
+              nominal: 22
+              worst_case: 42
+        - case_id: K0a_checkpoint.nominal
+          result:
+            batches: 0
+            checkpoint_bytes: 3145728
+            phase_pack_bytes: 0
+            publications: 0
+            window_publications: 0
+        - case_id: K0a_checkpoint.worst_case
+          result:
+            batches: 0
+            checkpoint_bytes: 6291456
+            phase_pack_bytes: 0
+            publications: 0
+            window_publications: 0
+        - case_id: K0a_worksheet_packages
+          result:
+            human_attention:
+              active_minutes_nominal: 20
+              active_minutes_worst_case: 60
+              blocking_decisions_nominal: 1
+              blocking_decisions_worst_case: 3
+              sessions_nominal: 1
+              sessions_worst_case: 2
+            human_profile: standard
+            invocations:
+              checkpointed_nominal: 3
+              checkpointed_worst_case: 6
+              nominal: 9
+              worst_case: 24
+        - case_id: K0b-F15-exact-measurement.nominal
+          result:
+            batches: 1
+            checkpoint_bytes: 10485760
+            phase_pack_bytes: 125829120
+            publications: 12
+            window_publications: 8
+        - case_id: K0b-F15-exact-measurement.worst_case
+          result:
+            batches: 3
+            checkpoint_bytes: 36700160
+            phase_pack_bytes: 954204160
+            publications: 26
+            window_publications: 22
+        - case_id: K0b-runtime-operational.nominal
+          result:
+            batches: 2
+            checkpoint_bytes: 9437184
+            phase_pack_bytes: 132120576
+            publications: 14
+            window_publications: 6
+        - case_id: K0b-runtime-operational.worst_case
+          result:
+            batches: 3
+            checkpoint_bytes: 27262976
+            phase_pack_bytes: 926941184
+            publications: 34
+            window_publications: 18
+        - case_id: S_binary_NA
+          result:
+            applicable: false
+            forecast_worst_by_count_bytes: 0
+            nominal_expected_bytes: 0
+            proof:
+              binary_persistence: false
+              contract_ref: S.version-reference-only.v1
+              payload_budgeted_by_producer: true
+              uses_only_version_refs: true
+            size_stressed_bytes: 0
+        - case_id: artifact_event_seed
+          result:
+            applicable: true
+            assumed_mean_object_bytes: 372736
+            forecast_worst_by_count_bytes: 4472832
+            maximum_aggregate_new_bytes: 7864320
+            nominal_expected_bytes: 2236416
+            runtime_aggregate_limit_bytes: 7864320
+            size_stressed_bytes: 7864320
+        - case_id: shared_control_binary_NA
+          result:
+            applicable: false
+            forecast_worst_by_count_bytes: 0
+            nominal_expected_bytes: 0
+            proof:
+              binary_persistence: false
+              contract_ref: shared_control.version-reference-only.v1
+              payload_budgeted_by_producer: true
+              uses_only_version_refs: true
+            size_stressed_bytes: 0
+      review_overlay:
+        active_minutes_nominal: 90
+        active_minutes_worst: 240
+        blocking_decisions_nominal: 4
+        blocking_decisions_worst: 9
+        human_profile: high_attention
+        invocations_nominal: 60
+        invocations_worst: 94
+        max_single_session_minutes: 60
+        sessions_nominal: 3
+        sessions_worst: 6
+      runtime_enabled: false
+    family: compiled_resource_forecast
+    sha256: "a5049a105fac70ae79e3321296241cbc599347bfe008a9a4b28b6bc3d079821b"
+  - bytes: 937
+    canonical_payload:
+      F15_boundary_triggers:
+        - k0b.f15.boundary.entry_gate
+        - k0b.f15.boundary.program_owner_wait_or_exit
+        - k0b.f15.boundary.exit_gate
+        - k0b.f15.boundary.top_level_run_end
+      exact_trigger_count: 4
+      members:
+        - checkpoint_phase_id: K0b-runtime-operational
+          member_ids:
+            - K0b01
+            - K0b02
+            - K0b03
+            - K0b04_pre_F15
+          model_call_budget:
+            - 16
+            - 30
+          runtime_enabled: false
+          starts_only_after_verified_predecessor_seal: false
+        - checkpoint_phase_id: K0b-F15-exact-measurement
+          member_ids:
+            - K0b04_F15
+            - K0b04_post_F15
+            - K0b05
+          model_call_budget:
+            - 36
+            - 36
+          runtime_enabled: false
+          starts_only_after_verified_predecessor_seal: true
+      partition_digest: "871d29f5122f4fd4f8ffa309d2f85e85b5de3e28b43ee6bcb005fe0a5f3b91bb"
+      partition_digest_profile: canonical_core_without_digest_or_digest_profile
+      phase_order:
+        - K0b-runtime-operational
+        - K0b-F15-exact-measurement
+      phase_reopen_reorder_relabel_or_third_phase: forbidden
+      runtime_enabled: false
+    family: compiled_checkpoint_phase_partition_v1
+    sha256: "859aee40cf91b46528a840df2d7f9c0b2de4ad777ce612e50fc83c958da474b1"
+  - bytes: 2175
+    canonical_payload:
+      F15:
+        authoritative_worst_case_object_count: null
+        historical_publications: 26
+        max_under_hard_at_historical_checkpoint: 29
+        requires_reforecast_above: 26
+        size_stress_completion_claim: false
+        unconditional_block_from_publications: 30
+      credit:
+        batch_reset: 0
+        compression: 0
+        cross_phase: 0
+        dedup: 0
+        delta: 0
+        overlap: 0
+        retry: 0
+      current_size_stressed_checkpoint_and_phase:
+        assumed_mean_object_bytes: 372736
+        checkpoint_result: below_hard
+        credit: 0
+        forecast_worst_by_count_bytes: 4472832
+        nominal_expected_bytes: 2236416
+        phase_margin_bytes: 39845888
+        phase_result: above_warning
+        publications: 34
+        rounded_size_stressed_checkpoint_bytes: 30408704
+        size_stressed_bytes: 7864320
+        size_stressed_phase_pack_bytes: 1033895936
+        unrounded_size_stressed_checkpoint_bytes: 29884416
+      historical_checkpoint_vectors:
+        - case_id: K0a_checkpoint.nominal
+          result:
+            batches: 0
+            checkpoint_bytes: 3145728
+            phase_pack_bytes: 0
+            publications: 0
+            window_publications: 0
+        - case_id: K0a_checkpoint.worst_case
+          result:
+            batches: 0
+            checkpoint_bytes: 6291456
+            phase_pack_bytes: 0
+            publications: 0
+            window_publications: 0
+        - case_id: K0b-F15-exact-measurement.nominal
+          result:
+            batches: 1
+            checkpoint_bytes: 10485760
+            phase_pack_bytes: 125829120
+            publications: 12
+            window_publications: 8
+        - case_id: K0b-F15-exact-measurement.worst_case
+          result:
+            batches: 3
+            checkpoint_bytes: 36700160
+            phase_pack_bytes: 954204160
+            publications: 26
+            window_publications: 22
+        - case_id: K0b-runtime-operational.nominal
+          result:
+            batches: 2
+            checkpoint_bytes: 9437184
+            phase_pack_bytes: 132120576
+            publications: 14
+            window_publications: 6
+        - case_id: K0b-runtime-operational.worst_case
+          result:
+            batches: 3
+            checkpoint_bytes: 27262976
+            phase_pack_bytes: 926941184
+            publications: 34
+            window_publications: 18
+      phase_completion_claim: false
+      planning_pack_factor: 1
+      runtime_enabled: false
+      runtime_publications_reforecast_sensitive:
+        approved_exact: 34
+        reforecast_sensitive: true
+      thresholds:
+        checkpoint_hard_bytes: 104857600
+        phase_pack_hard_bytes: 1073741824
+        publication_batch_cap: 12
+        publication_p95_seconds: 10
+        restore_seconds: 120
+        warning_bytes: 536870912
+    family: compiled_checkpoint_publication_budget_v2
+    sha256: "679be058b72a649e8150f0fd07b20b7d173a9e5a0dbfa9dfd4af422432239efb"
+owner: resource_and_budget
+receipt_id: pipeline-v2.alpha0.resource_and_budget.v2
+result: pass
+runtime_enabled: false
+schema_version: 1

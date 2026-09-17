@@ -1,0 +1,131 @@
+{
+  "$id": "pipeline-v2.alpha0.event.approval.requested.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_version_id": {
+          "type": "string"
+        },
+        "caused_by_event_id": {
+          "type": "string"
+        },
+        "checkpoint_phase_id": {
+          "enum": [
+            "K0b-runtime-operational",
+            "K0b-F15-exact-measurement"
+          ],
+          "type": "string"
+        },
+        "correlation_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "created_at": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "event_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "event_type": {
+          "const": "approval.requested",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "partition_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "payload": {
+          "additionalProperties": false,
+          "properties": {
+            "approval_id": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "required_role": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "run_id": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            },
+            "subject_ref": {
+              "maxLength": 4096,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "approval_id",
+            "subject_ref",
+            "required_role",
+            "run_id"
+          ],
+          "type": "object"
+        },
+        "producer_id": {
+          "const": "shared_control.approval_coordinator",
+          "type": "string"
+        },
+        "profile": {
+          "const": "Alpha0",
+          "type": "string"
+        },
+        "project_chain_id": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "run_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "schema_id": {
+          "const": "pipeline-v2.alpha0.event.approval.requested.v1",
+          "type": "string"
+        },
+        "schema_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "version": {
+          "const": "1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_version_id",
+        "caused_by_event_id",
+        "correlation_id",
+        "event_id",
+        "event_type",
+        "payload",
+        "run_id",
+        "version",
+        "profile",
+        "project_chain_id",
+        "checkpoint_phase_id",
+        "partition_sha256",
+        "producer_id",
+        "idempotency_key",
+        "schema_id",
+        "schema_sha256",
+        "created_at"
+      ],
+      "type": "object"
+    }
+  ]
+}

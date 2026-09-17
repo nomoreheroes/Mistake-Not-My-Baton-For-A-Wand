@@ -2,7 +2,7 @@
 
 Source: `new pipeline/state/state.yaml`
 
-Source SHA-256: `9aae96232347aee56ec963c678bfac1db0fa3d1436209411865ca85f97b90c51`
+Source SHA-256: `977cc6c681d4cd0f3c80a3e514aacbc66e293b84fff16f7755c1f92216d74ef3`
 
 Projection profile: `new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml`
 
@@ -128,7 +128,7 @@ active_authority:
     sha256: "74bf8f434e27ab1d90fae25f15087c1a3a6bc597df6c9bb64733280e1bb6cdc2"
   K0b_01_active_ledger_index:
     path: new pipeline/ledger/k0b01/index-v1.yaml
-    sha256: "e63e133e521c87e4e26f03cd577cce42b4e07bd6256d537475ffa782b39782f5"
+    sha256: "2c79dc8e3ea105b9e287f910361c81e5e4bf6f70290337aa0b1a32f5a3f64fa0"
 supporting_review_evidence:
   K0b_01_v1_2_r1_dispatch_reconciliation:
     path: new pipeline/evidence/k0b-01-r1-review-dispatch-reconciliation-v1.yaml
@@ -148,6 +148,27 @@ supporting_review_evidence:
   scoped_review_result: two_r1_approvals_for_exact_plan_v1_2_with_zero_open_findings
   v1_3_human_review_result: approve_with_five_non_blocking_findings_carried_forward
   remaining_review_calls: 0
+  K0b_01_implementation_input_manifest:
+    path: new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml
+    sha256: "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d"
+  K0b_01_implementation_session_entry:
+    path: new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml
+    sha256: "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5"
+  K0b_01_implementation_session_completion:
+    path: new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml
+    sha256: "2b2c09f4e8cd3e56edec7e62cd78d6328e0c14b45553f052eacb97fb6f7fc9e6"
+  K0b_01_registry_routing_compiler_receipt:
+    path: new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml
+    sha256: "fcfdb3b8cfe6cadb2f033edfae94ab9ecd380ba514119815ab11c713fc0e07ef"
+  K0b_01_resource_budget_compiler_receipt:
+    path: new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml
+    sha256: "f80a7eb34ec4385c8c1b4e0f83d7e9a86033f6b975c46887c7ed724b5489f1f5"
+  K0b_01_compiled_output_manifest:
+    path: new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml
+    sha256: "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2"
+  K0b_01_implementation_validation:
+    path: new pipeline/evidence/k0b-01-implementation-validation-v2.yaml
+    sha256: "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05"
 root_plan_status:
   architecture_plan:
     path: new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md
@@ -240,7 +261,7 @@ work_items:
     open_gate_ids: []
   - sequence: 11
     work_item_id: K0b-01
-    status: implementation_authorized_not_started
+    status: implemented_validated_runtime_not_authorized
     authority_path: new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml
     authority_sha256: "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2"
     open_gate_ids: []
@@ -567,5 +588,5 @@ scope:
   push_PR_deploy_release_authorized: false
   K0b_01_implementation_session_budget: 1
   K0b_01_implementation_session_id: K0B01-IMPL-V2-SESSION-001
-  K0b_01_implementation_status: authorized_not_started
+  K0b_01_implementation_status: implemented_validated_runtime_not_authorized
 ```

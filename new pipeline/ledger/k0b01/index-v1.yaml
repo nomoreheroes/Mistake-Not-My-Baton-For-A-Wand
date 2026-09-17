@@ -1,4 +1,4 @@
-event_count: 32
+event_count: 34
 events:
   - artifact_count: 0
     checkpoint_budget_phase: K0b-runtime-operational
@@ -415,6 +415,32 @@ events:
     evidence_count: 2
     gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
     resulting_state: authorized
+    unit_id: K0B01-IMPLEMENTATION-DISPOSITION
+  - artifact_count: 1
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 6
+    event_id: 4003-implementation-disposition-materialized-v1
+    event_path: new pipeline/ledger/k0b01/events/4003-implementation-disposition-materialized-v1.yaml
+    event_sha256: cbb1dd8dfb71a996deda78a10adc8db3cb7409ceee9a9681636952a8db671d6d
+    event_type: transition
+    evidence_count: 2
+    gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+    resulting_state: materialized
+    unit_id: K0B01-IMPLEMENTATION-DISPOSITION
+  - artifact_count: 1
+    checkpoint_budget_phase: K0b-runtime-operational
+    credit_eligible: false
+    credit_value: 0
+    dependency_count: 7
+    event_id: 4004-implementation-disposition-validated-v1
+    event_path: new pipeline/ledger/k0b01/events/4004-implementation-disposition-validated-v1.yaml
+    event_sha256: b94cba2dda3c20f1e562d218b9c208e249dbd55f0ed97b4460c0a2f484319dbe
+    event_type: transition
+    evidence_count: 2
+    gate_id: G-K0B01-IMPLEMENTATION-DISPOSITION
+    resulting_state: validated
     unit_id: K0B01-IMPLEMENTATION-DISPOSITION
 generated_index_authoritative: false
 grants_authority_credit_or_runtime_effect: false
