@@ -1,0 +1,706 @@
+{
+  "evidence_id": "pipeline-v2.k0b02-renderer-v4-validation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-18T07:33:14Z",
+  "work_item_id": "K0b-02",
+  "status": "candidate_renderer_and_prerequisite_transition_validated_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "bytes": 25016
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+      "sha256": "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf",
+      "bytes": 13879
+    },
+    "owner_confirmation": "Exact full request SHA and scope in the separate owner message recorded by the immutable disposition.",
+    "runtime_authority": "none",
+    "conversational_identity": "not_cryptographically_authenticated"
+  },
+  "input_bindings": [
+    {
+      "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "bytes": 25016
+    },
+    {
+      "path": "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+      "sha256": "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf",
+      "bytes": 13879
+    },
+    {
+      "path": "new pipeline/architecture/k0b-02-planning-package-v1.1.md",
+      "sha256": "9c5a634984688323f44c44a404aff74dbca12b7136588d886e1e05f674ddf946",
+      "bytes": 21778
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b02_v4/renderer.py",
+      "sha256": "c540338fbf4e328db30e0fd960d5adace29158e149120da67316a3d732f910fa",
+      "bytes": 25259
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+      "sha256": "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d",
+      "bytes": 131959
+    },
+    {
+      "path": "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+      "sha256": "af2eb7460ca59d58d04c1d1edb4ffc4928b90922a3fef55cd88dc2f203e0ce19",
+      "bytes": 14603
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-v1.yaml",
+      "sha256": "3b279e9fe7fd2a6fff27c26e77060e874c32d55eaca288b1a704c3904f3fa59d",
+      "bytes": 5853
+    }
+  ],
+  "entry_input_pins": {
+    "role": "historical_entry_pins_before_the_two_authorized_state_file_changes",
+    "baseline_commit": "d19e68a26102a07cfe524e36ad67f9c5f5e4cd13",
+    "verified_count": 28,
+    "result": "pass",
+    "files": [
+      {
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "977cc6c681d4cd0f3c80a3e514aacbc66e293b84fff16f7755c1f92216d74ef3",
+        "bytes": 30082
+      },
+      {
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "2c091d2dc4e8fb20ab8c45be5501699d1b00916155faf2df0437b1772fb17d9f",
+        "bytes": 30518
+      },
+      {
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+        "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+        "bytes": 97569
+      },
+      {
+        "path": "new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml",
+        "sha256": "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181",
+        "bytes": 99133
+      },
+      {
+        "path": "new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml",
+        "sha256": "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2",
+        "bytes": 42360
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml",
+        "sha256": "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d",
+        "bytes": 69439
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml",
+        "sha256": "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5",
+        "bytes": 6349
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml",
+        "sha256": "2b2c09f4e8cd3e56edec7e62cd78d6328e0c14b45553f052eacb97fb6f7fc9e6",
+        "bytes": 26696
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-validation-v2.yaml",
+        "sha256": "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05",
+        "bytes": 1000443
+      },
+      {
+        "path": "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+        "sha256": "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+        "bytes": 37286
+      },
+      {
+        "path": "new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml",
+        "sha256": "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d",
+        "bytes": 15509
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml",
+        "sha256": "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7",
+        "bytes": 55118
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b01_v3/renderer.py",
+        "sha256": "4b4b5e84211a9f3cf29d22b8552405641680db2f413fca64ce39d1b03fdadc60",
+        "bytes": 18588
+      },
+      {
+        "path": "new pipeline/registry/authority-confirmation/v1.yaml",
+        "sha256": "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd",
+        "bytes": 3170
+      },
+      {
+        "path": "new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md",
+        "sha256": "9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce",
+        "bytes": 28613
+      },
+      {
+        "path": "new pipeline/reviews/k0b-01-human-only-review-v1.yaml",
+        "sha256": "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140",
+        "bytes": 8659
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-completion-prerequisites-and-bounded-planning-approval-request-v1.yaml",
+        "sha256": "a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c",
+        "bytes": 35951
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+        "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28",
+        "bytes": 27337
+      },
+      {
+        "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+        "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+        "bytes": 15226
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+        "sha256": "219f94076b582d52c94b041f389e3e236b04fccdfe53d607000c3a790ae83a8d",
+        "bytes": 8370
+      },
+      {
+        "path": "new pipeline/architecture/k0b-02-planning-package-v1.md",
+        "sha256": "03a6f09b80077de56abd026a5f13fd10e09f7203057152d3df9822e03c866c18",
+        "bytes": 18289
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-transition-document-check-v1.yaml",
+        "sha256": "c79deba2f03c543b508130b88af8e2b04d329a7273a269a687e5315a39a5180a",
+        "bytes": 25181
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+        "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+        "bytes": 5688
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+        "sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+        "bytes": 1142
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/bootstrap.ps1",
+        "sha256": "557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5",
+        "bytes": 4613
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/invoke.ps1",
+        "sha256": "6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197",
+        "bytes": 3928
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+        "sha256": "249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c",
+        "bytes": 4912
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/validate_toolchain.py",
+        "sha256": "86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a",
+        "bytes": 14851
+      }
+    ]
+  },
+  "accepted_freeze_exception": {
+    "confirmation": {
+      "request_sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "actor": "workspace_owner",
+      "source_ref": "current_conversation_owner_narrow_freeze_exception_full_hash_confirmation",
+      "statement_verbatim": "Подтверждаю approval-request SHA-256 33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3 и разрешаю исключение из freeze для текущего незакоммиченного пакета: добавить только три перечисленных пути в `new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml`, обновить только renderer\\_profile SHA/bytes в `new pipeline/evidence/k0b-02-prerequisite-gate-closure-v1.yaml`, пересоздать временные candidate bytes, повторить новые проверки и завершить ранее согласованный scope. Исключение записать в предусмотренном validation evidence. Request и исторические документы остаются неизменными; runtime authority — none.",
+      "message_id_and_timestamp": "not_available_not_inferred",
+      "scope": "Only the three existing authorized reference paths added to v4 allowlist, dependent renderer_profile SHA/bytes in the new uncommitted closure, regenerated temporary candidate bytes and repeated new checks; record this exception in validation evidence.",
+      "runtime_authority": "none"
+    },
+    "reason": "The first new v4 allowlist omitted three already-authorized documentary source paths. The first candidate failed raw-reference scope checks. The profile had already been cited by the new closure evidence before successful render-path validation.",
+    "approved_delta": {
+      "mode": "authorized_narrow_freeze_exception_applied",
+      "add_only_allowlist_paths": [
+        "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+        "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+        "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml"
+      ],
+      "profile_before": "6ffba64104d9722a7ab5f20ff017f9265254e331e785fb90d1d29ba30c567604",
+      "profile_after": "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d",
+      "profile_after_bytes": 131959,
+      "closure_before": "440cb86057a594b8d26c4c78a10bfe85106dc608f953eee1bb7d7b8874e96ea9",
+      "closure_after": "3b279e9fe7fd2a6fff27c26e77060e874c32d55eaca288b1a704c3904f3fa59d",
+      "closure_after_bytes": 5853
+    },
+    "change_verification": "Exact predicted SHA-256 values matched; only three paths appended to the new profile allowlist and sources.renderer_profile SHA/bytes changed in the new uncommitted closure. Renderer/test/owner disposition/plan/request and all historical files unchanged.",
+    "earlier_candidate": "Discarded temporary candidate bytes only; no canonical state/gate mutation or staging at the failure.",
+    "future_authority": "No permission to rewrite other frozen ancestors or to repeat this freeze exception."
+  },
+  "environment_setup": {
+    "host_python": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "allowed_use": "Pinned metadata probe, wheel acquisition, venv creation only; no host ruamel or evidence generation."
+    },
+    "host_use": "Metadata probe, wheel acquisition and venv creation only; host Python/ruamel did not generate evidence or profile/state bytes.",
+    "wheel_acquisition": {
+      "date_UTC": "2026-09-17",
+      "result": "pass",
+      "count": 12,
+      "profile": "pipeline-v2.k0b01-toolchain-lock-v1",
+      "network_hosts": [
+        "pypi.org",
+        "files.pythonhosted.org"
+      ],
+      "transport": "HTTPS",
+      "binary_wheels_only": true,
+      "no_dependencies_source_distributions_cache_proxies_or_alternate_indexes": true,
+      "process_config": "Ambient PIP/proxy/PYTHONPATH settings cleared process-locally and restored; PIP_CONFIG_FILE=NUL for acquisition; scripts confined TEMP/TMP and restored them.",
+      "guard_retry": "First containment check stopped on hidden AppData before acquisition; Get-Item -Force corrected the read-only guard without widening scope."
+    },
+    "bootstrap": {
+      "date_UTC": "2026-09-17",
+      "result": "pass",
+      "environments": 2,
+      "offline": true,
+      "immutable_scripts_and_lock": [
+        {
+          "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+          "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+          "bytes": 5688
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+          "sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+          "bytes": 1142
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/bootstrap.ps1",
+          "sha256": "557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5",
+          "bytes": 4613
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/invoke.ps1",
+          "sha256": "6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197",
+          "bytes": 3928
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+          "sha256": "249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c",
+          "bytes": 4912
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/validate_toolchain.py",
+          "sha256": "86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a",
+          "bytes": 14851
+        }
+      ],
+      "initial_targets": "All three absent on first entry; same session targets preserved during the owner-approved freeze exception."
+    },
+    "new_environment_toolchain_validation": "Captured below; both current checks verify the exact lock/requirements, twelve wheel names/hashes, runtime/platform, package versions and SQLite/Git/shell metadata.",
+    "temporary_targets": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-wheelhouse",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-a",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-b"
+    ]
+  },
+  "preparation_checks": {
+    "legacy_schema_definitions_preserved": true,
+    "strict_source_schema_and_gate_semantics": "In-memory preflight passed before documentary closure; concrete candidate render/check and full tests are captured below.",
+    "preparation_retries": [
+      "PowerShell -c transport stripped embedded double quotes; retry used single-quoted Python literals before any profile write.",
+      "Scope schema fixture variant was rejected by a preparation assertion; selected the matching historical full scope variant before writing the new profile.",
+      "Preflight detected hierarchical blocks K0b-03_F10 and K0b-04_F15_conclusion; new consistency guard recognizes exact work item or its underscore-suffixed block targets while preserving every original string."
+    ],
+    "formatting": "Only the two new Python files prepared via locked Ruff stdin/stdout and native UTF-8 writes; captured lint and format --check passed in each environment."
+  },
+  "candidate_pair": {
+    "generated_at_UTC": "2026-09-18T07:29:59Z",
+    "captures": [
+      {
+        "environment_leaf": "pipeline-v2-k0b02-prerequisite-transition-v1-a",
+        "source_sha256": "17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550",
+        "source_bytes": 38960,
+        "projection_sha256": "f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28",
+        "projection_bytes": 39396
+      },
+      {
+        "environment_leaf": "pipeline-v2-k0b02-prerequisite-transition-v1-b",
+        "source_sha256": "17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550",
+        "source_bytes": 38960,
+        "projection_sha256": "f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28",
+        "projection_bytes": 39396
+      }
+    ],
+    "source_byte_equality": true,
+    "projection_byte_equality": true,
+    "serialization": "UTF-8 without BOM, LF, one final LF; JSON-compatible YAML source; full source bytes fenced in generated Markdown.",
+    "canonical_state_cites_this_validation_evidence": false
+  },
+  "checks": [
+    {
+      "environment": "pipeline-v2-k0b02-prerequisite-transition-v1-a",
+      "commands": [
+        {
+          "step": "toolchain",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/toolchain/k0b01/validate_toolchain.py",
+            "--toolchain-root",
+            "new pipeline/toolchain/k0b01",
+            "--wheelhouse",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-wheelhouse"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:02.7355332Z",
+          "ended_at_UTC": "2026-09-18T07:30:03.8028221Z",
+          "elapsed_seconds": 1.0672888999999999,
+          "log_leaf": "validation-toolchain.log",
+          "log_sha256": "a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e",
+          "log_bytes": 458,
+          "captured_output": "{\"exit_code\":0,\"package_count\":12,\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"requirements_sha256\":\"6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6\",\"result\":\"pass\",\"sqlite_library_version\":\"3.45.3\",\"sqlite_python_module_version\":\"2.6.0\",\"toolchain_lock_sha256\":\"3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0\",\"wheel_count\":12,\"wheel_set_sha256\":\"bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba\"}\n"
+        },
+        {
+          "step": "lint",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\ruff.exe",
+          "arguments": [
+            "check",
+            "--isolated",
+            "--no-cache",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.0986238Z",
+          "ended_at_UTC": "2026-09-18T07:30:04.4143425Z",
+          "elapsed_seconds": 0.31571869999999996,
+          "log_leaf": "validation-lint.log",
+          "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+          "log_bytes": 19,
+          "captured_output": "All checks passed!\n"
+        },
+        {
+          "step": "format",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\ruff.exe",
+          "arguments": [
+            "format",
+            "--check",
+            "--isolated",
+            "--no-cache",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.4143425Z",
+          "ended_at_UTC": "2026-09-18T07:30:04.5084460Z",
+          "elapsed_seconds": 0.09410349999999999,
+          "log_leaf": "validation-format.log",
+          "log_sha256": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938",
+          "log_bytes": 26,
+          "captured_output": "2 files already formatted\n"
+        },
+        {
+          "step": "render",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "render",
+            "--source",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\candidate-state.yaml",
+            "--profile",
+            "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--output",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\candidate-STATE.md"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.5124425Z",
+          "ended_at_UTC": "2026-09-18T07:30:06.5410377Z",
+          "elapsed_seconds": 2.0285952,
+          "log_leaf": "validation-render.log",
+          "log_sha256": "b3f3ab18f179caf530a97d6c3e9dc48b9bd1a402200004c4f92828d5769e0138",
+          "log_bytes": 272,
+          "captured_output": "{\"profile_sha256\":\"cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d\",\"projection_sha256\":\"f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28\",\"result\":\"pass\",\"source_sha256\":\"17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550\"}\n"
+        },
+        {
+          "step": "check",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "check",
+            "--source",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\candidate-state.yaml",
+            "--profile",
+            "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--projection",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\candidate-STATE.md"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:06.5535658Z",
+          "ended_at_UTC": "2026-09-18T07:30:08.0623585Z",
+          "elapsed_seconds": 1.5087926999999999,
+          "log_leaf": "validation-check.log",
+          "log_sha256": "b3f3ab18f179caf530a97d6c3e9dc48b9bd1a402200004c4f92828d5769e0138",
+          "log_bytes": 272,
+          "captured_output": "{\"profile_sha256\":\"cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d\",\"projection_sha256\":\"f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28\",\"result\":\"pass\",\"source_sha256\":\"17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550\"}\n"
+        },
+        {
+          "step": "tests",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--candidate",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\candidate-state.yaml",
+            "--scratch",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-a\\renderer-v4-tests"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:08.0693581Z",
+          "ended_at_UTC": "2026-09-18T07:31:05.5210500Z",
+          "elapsed_seconds": 57.4516919,
+          "log_leaf": "validation-tests.log",
+          "log_sha256": "b1fee974fe844286bedbfea1d787d0b6a3124a481afadbe718995f3d7da08c56",
+          "log_bytes": 2586,
+          "captured_output": "test_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected) ... ok\ntest_cli_input_collision_preserves_source (__main__.RendererV4Tests.test_cli_input_collision_preserves_source) ... ok\ntest_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write) ... ok\ntest_duplicate_unknown_and_overlapping_gates_rejected (__main__.RendererV4Tests.test_duplicate_unknown_and_overlapping_gates_rejected) ... ok\ntest_each_required_closure_must_exist (__main__.RendererV4Tests.test_each_required_closure_must_exist) ... ok\ntest_finite_reference_allowlist (__main__.RendererV4Tests.test_finite_reference_allowlist) ... ok\ntest_foreign_gate_changes_rejected (__main__.RendererV4Tests.test_foreign_gate_changes_rejected) ... ok\ntest_foreign_work_item_changes_rejected (__main__.RendererV4Tests.test_foreign_work_item_changes_rejected) ... ok\ntest_forged_disposition_rejected (__main__.RendererV4Tests.test_forged_disposition_rejected) ... ok\ntest_forged_profile_owner_binding_rejected (__main__.RendererV4Tests.test_forged_profile_owner_binding_rejected) ... ok\ntest_missing_and_mismatched_gate_evidence_rejected (__main__.RendererV4Tests.test_missing_and_mismatched_gate_evidence_rejected) ... ok\ntest_outside_root_path_is_rejected_before_read (__main__.RendererV4Tests.test_outside_root_path_is_rejected_before_read) ... ok\ntest_preserved_historical_evidence_and_closed_records (__main__.RendererV4Tests.test_preserved_historical_evidence_and_closed_records) ... ok\ntest_profile_binding_drift_rejected (__main__.RendererV4Tests.test_profile_binding_drift_rejected) ... ok\ntest_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch) ... ok\ntest_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic) ... ok\ntest_runtime_and_implementation_escalation_rejected (__main__.RendererV4Tests.test_runtime_and_implementation_escalation_rejected) ... ok\ntest_schema_unknown_field_and_boolean_integer_rejected (__main__.RendererV4Tests.test_schema_unknown_field_and_boolean_integer_rejected) ... ok\ntest_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection) ... ok\ntest_work_item_gate_lists_must_match (__main__.RendererV4Tests.test_work_item_gate_lists_must_match) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 57.175s\n\nOK\n{\"errors\": 0, \"failures\": 0, \"result\": \"pass\", \"skipped\": 0, \"tests\": 20}\n"
+        }
+      ],
+      "test_summary": {
+        "errors": 0,
+        "failures": 0,
+        "result": "pass",
+        "skipped": 0,
+        "tests": 20
+      },
+      "first_attempt": {
+        "result": "fail",
+        "tests": 20,
+        "failures": 2,
+        "errors": 3,
+        "capture_completeness": "initial_and_completion_chunks_intermediate_verbose_progress_omitted",
+        "log_sha256": "195469e4670d0deb6043ddfa85a8e821bb361526e1d3d2bb10da23b2aa923690",
+        "log_bytes": 10364,
+        "captured_output": "Captured initial and completion output chunks; intermediate verbose progress chunk is not included.\nInitial session: 39516\ntest_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected) ... FAIL\ntest_cli_input_collision_preserves_source (__main__.RendererV4Tests.test_cli_input_collision_preserves_source) ... ok\ntest_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write) ... ERROR\ntest_duplicate_unknown_and_overlapping_gates_rejected (__main__.RendererV4Tests.test_duplicate_unknown_and_overlapping_gates_rejected) ... ok\ntest_each_required_closure_must_exist (__main__.RendererV4Tests.test_each_required_closure_must_exist) ... ok\ntest_finite_reference_allowlist (__main__.RendererV4Tests.test_finite_reference_allowlist) ... ok\ntest_foreign_gate_changes_rejected (__main__.RendererV4Tests.test_foreign_gate_changes_rejected) ... \nCompletion exit code: 1\nok\ntest_outside_root_path_is_rejected_before_read (__main__.RendererV4Tests.test_outside_root_path_is_rejected_before_read) ... ok\ntest_preserved_historical_evidence_and_closed_records (__main__.RendererV4Tests.test_preserved_historical_evidence_and_closed_records) ... ok\ntest_profile_binding_drift_rejected (__main__.RendererV4Tests.test_profile_binding_drift_rejected) ... ok\ntest_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch) ... FAIL\ntest_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic) ... ERROR\ntest_runtime_and_implementation_escalation_rejected (__main__.RendererV4Tests.test_runtime_and_implementation_escalation_rejected) ... ok\ntest_schema_unknown_field_and_boolean_integer_rejected (__main__.RendererV4Tests.test_schema_unknown_field_and_boolean_integer_rejected) ... ok\ntest_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection) ... ERROR\ntest_work_item_gate_lists_must_match (__main__.RendererV4Tests.test_work_item_gate_lists_must_match) ... ok\n\n======================================================================\nERROR: test_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 193, in test_drift_check_does_not_write\n    output, _ = self.render()\n                ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nERROR: test_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 94, in test_repeated_render_is_deterministic\n    self.assertEqual(self.render(), self.render())\n                     ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nERROR: test_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 66, in test_valid_candidate_and_complete_source_projection\n    output, summary = self.render()\n                      ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nFAIL: test_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected)\n----------------------------------------------------------------------\napproved_renderer_v4.RendererError: source:reference_scope\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 275, in test_actual_windows_junction_and_root_rejected\n    with self.assertRaisesRegex(self.renderer.RendererError, \"reparse\"):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"reparse\" does not match \"source:reference_scope\"\n\n======================================================================\nFAIL: test_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch)\n----------------------------------------------------------------------\napproved_renderer_v4.RendererError: source:reference_scope\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 220, in test_reference_missing_and_actual_hash_mismatch\n    with self.assertRaisesRegex(\n         ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"source:reference_missing\" does not match \"source:reference_scope\"\n\n----------------------------------------------------------------------\nRan 20 tests in 41.450s\n\nFAILED (failures=2, errors=3)\n{\"errors\": 3, \"failures\": 2, \"result\": \"fail\", \"skipped\": 0, \"tests\": 20}\n"
+      }
+    },
+    {
+      "environment": "pipeline-v2-k0b02-prerequisite-transition-v1-b",
+      "commands": [
+        {
+          "step": "toolchain",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/toolchain/k0b01/validate_toolchain.py",
+            "--toolchain-root",
+            "new pipeline/toolchain/k0b01",
+            "--wheelhouse",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-wheelhouse"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:02.8972679Z",
+          "ended_at_UTC": "2026-09-18T07:30:03.8008224Z",
+          "elapsed_seconds": 0.9035544999999999,
+          "log_leaf": "validation-toolchain.log",
+          "log_sha256": "a10534445861cfa8acac7c203741f71f7d6460b88dce5f649a960d6b6b7d702e",
+          "log_bytes": 458,
+          "captured_output": "{\"exit_code\":0,\"package_count\":12,\"profile_id\":\"pipeline-v2.k0b01-toolchain-lock-v1\",\"requirements_sha256\":\"6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6\",\"result\":\"pass\",\"sqlite_library_version\":\"3.45.3\",\"sqlite_python_module_version\":\"2.6.0\",\"toolchain_lock_sha256\":\"3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0\",\"wheel_count\":12,\"wheel_set_sha256\":\"bdabd04b23e905b36c8af8153423d6df8ba94000248fa2c84bed034188b01bba\"}\n"
+        },
+        {
+          "step": "lint",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\ruff.exe",
+          "arguments": [
+            "check",
+            "--isolated",
+            "--no-cache",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.0856138Z",
+          "ended_at_UTC": "2026-09-18T07:30:04.4342457Z",
+          "elapsed_seconds": 0.3486319,
+          "log_leaf": "validation-lint.log",
+          "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+          "log_bytes": 19,
+          "captured_output": "All checks passed!\n"
+        },
+        {
+          "step": "format",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\ruff.exe",
+          "arguments": [
+            "format",
+            "--check",
+            "--isolated",
+            "--no-cache",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.4395164Z",
+          "ended_at_UTC": "2026-09-18T07:30:04.5124425Z",
+          "elapsed_seconds": 0.0729261,
+          "log_leaf": "validation-format.log",
+          "log_sha256": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938",
+          "log_bytes": 26,
+          "captured_output": "2 files already formatted\n"
+        },
+        {
+          "step": "render",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "render",
+            "--source",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\candidate-state.yaml",
+            "--profile",
+            "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--output",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\candidate-STATE.md"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:04.5184406Z",
+          "ended_at_UTC": "2026-09-18T07:30:06.5410377Z",
+          "elapsed_seconds": 2.0225971,
+          "log_leaf": "validation-render.log",
+          "log_sha256": "b3f3ab18f179caf530a97d6c3e9dc48b9bd1a402200004c4f92828d5769e0138",
+          "log_bytes": 272,
+          "captured_output": "{\"profile_sha256\":\"cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d\",\"projection_sha256\":\"f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28\",\"result\":\"pass\",\"source_sha256\":\"17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550\"}\n"
+        },
+        {
+          "step": "check",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/state/renderer/k0b02_v4/renderer.py",
+            "check",
+            "--source",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\candidate-state.yaml",
+            "--profile",
+            "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--projection",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\candidate-STATE.md"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:06.5410377Z",
+          "ended_at_UTC": "2026-09-18T07:30:08.1200627Z",
+          "elapsed_seconds": 1.579025,
+          "log_leaf": "validation-check.log",
+          "log_sha256": "b3f3ab18f179caf530a97d6c3e9dc48b9bd1a402200004c4f92828d5769e0138",
+          "log_bytes": 272,
+          "captured_output": "{\"profile_sha256\":\"cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d\",\"projection_sha256\":\"f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28\",\"result\":\"pass\",\"source_sha256\":\"17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550\"}\n"
+        },
+        {
+          "step": "tests",
+          "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\Scripts\\python.exe",
+          "arguments": [
+            "-I",
+            "-B",
+            "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+            "--repository-root",
+            "C:\\Projects\\1.Mistake Not My Baton For A Wand",
+            "--candidate",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\candidate-state.yaml",
+            "--scratch",
+            "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-prerequisite-transition-v1-b\\renderer-v4-tests"
+          ],
+          "exit_code": 0,
+          "started_at_UTC": "2026-09-18T07:30:08.1200627Z",
+          "ended_at_UTC": "2026-09-18T07:31:06.5925455Z",
+          "elapsed_seconds": 58.472482799999995,
+          "log_leaf": "validation-tests.log",
+          "log_sha256": "4cfe28362d23bdb706c54f7d9c0c03a5e85cc3eab92dde8b02a0f3fde6eb296a",
+          "log_bytes": 2586,
+          "captured_output": "test_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected) ... ok\ntest_cli_input_collision_preserves_source (__main__.RendererV4Tests.test_cli_input_collision_preserves_source) ... ok\ntest_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write) ... ok\ntest_duplicate_unknown_and_overlapping_gates_rejected (__main__.RendererV4Tests.test_duplicate_unknown_and_overlapping_gates_rejected) ... ok\ntest_each_required_closure_must_exist (__main__.RendererV4Tests.test_each_required_closure_must_exist) ... ok\ntest_finite_reference_allowlist (__main__.RendererV4Tests.test_finite_reference_allowlist) ... ok\ntest_foreign_gate_changes_rejected (__main__.RendererV4Tests.test_foreign_gate_changes_rejected) ... ok\ntest_foreign_work_item_changes_rejected (__main__.RendererV4Tests.test_foreign_work_item_changes_rejected) ... ok\ntest_forged_disposition_rejected (__main__.RendererV4Tests.test_forged_disposition_rejected) ... ok\ntest_forged_profile_owner_binding_rejected (__main__.RendererV4Tests.test_forged_profile_owner_binding_rejected) ... ok\ntest_missing_and_mismatched_gate_evidence_rejected (__main__.RendererV4Tests.test_missing_and_mismatched_gate_evidence_rejected) ... ok\ntest_outside_root_path_is_rejected_before_read (__main__.RendererV4Tests.test_outside_root_path_is_rejected_before_read) ... ok\ntest_preserved_historical_evidence_and_closed_records (__main__.RendererV4Tests.test_preserved_historical_evidence_and_closed_records) ... ok\ntest_profile_binding_drift_rejected (__main__.RendererV4Tests.test_profile_binding_drift_rejected) ... ok\ntest_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch) ... ok\ntest_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic) ... ok\ntest_runtime_and_implementation_escalation_rejected (__main__.RendererV4Tests.test_runtime_and_implementation_escalation_rejected) ... ok\ntest_schema_unknown_field_and_boolean_integer_rejected (__main__.RendererV4Tests.test_schema_unknown_field_and_boolean_integer_rejected) ... ok\ntest_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection) ... ok\ntest_work_item_gate_lists_must_match (__main__.RendererV4Tests.test_work_item_gate_lists_must_match) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 58.184s\n\nOK\n{\"errors\": 0, \"failures\": 0, \"result\": \"pass\", \"skipped\": 0, \"tests\": 20}\n"
+        }
+      ],
+      "test_summary": {
+        "errors": 0,
+        "failures": 0,
+        "result": "pass",
+        "skipped": 0,
+        "tests": 20
+      },
+      "first_attempt": {
+        "result": "fail",
+        "tests": 20,
+        "failures": 2,
+        "errors": 3,
+        "capture_completeness": "initial_and_completion_chunks_intermediate_verbose_progress_omitted",
+        "log_sha256": "baf42585dfa6a8e9061680022fc999879a3a53e0eec8c90c78df3c72cab21d87",
+        "log_bytes": 10363,
+        "captured_output": "Captured initial and completion output chunks; intermediate verbose progress chunk is not included.\nInitial session: 6712\ntest_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected) ... FAIL\ntest_cli_input_collision_preserves_source (__main__.RendererV4Tests.test_cli_input_collision_preserves_source) ... ok\ntest_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write) ... ERROR\ntest_duplicate_unknown_and_overlapping_gates_rejected (__main__.RendererV4Tests.test_duplicate_unknown_and_overlapping_gates_rejected) ... ok\ntest_each_required_closure_must_exist (__main__.RendererV4Tests.test_each_required_closure_must_exist) ... ok\ntest_finite_reference_allowlist (__main__.RendererV4Tests.test_finite_reference_allowlist) ... ok\ntest_foreign_gate_changes_rejected (__main__.RendererV4Tests.test_foreign_gate_changes_rejected) ... \nCompletion exit code: 1\nok\ntest_outside_root_path_is_rejected_before_read (__main__.RendererV4Tests.test_outside_root_path_is_rejected_before_read) ... ok\ntest_preserved_historical_evidence_and_closed_records (__main__.RendererV4Tests.test_preserved_historical_evidence_and_closed_records) ... ok\ntest_profile_binding_drift_rejected (__main__.RendererV4Tests.test_profile_binding_drift_rejected) ... ok\ntest_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch) ... FAIL\ntest_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic) ... ERROR\ntest_runtime_and_implementation_escalation_rejected (__main__.RendererV4Tests.test_runtime_and_implementation_escalation_rejected) ... ok\ntest_schema_unknown_field_and_boolean_integer_rejected (__main__.RendererV4Tests.test_schema_unknown_field_and_boolean_integer_rejected) ... ok\ntest_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection) ... ERROR\ntest_work_item_gate_lists_must_match (__main__.RendererV4Tests.test_work_item_gate_lists_must_match) ... ok\n\n======================================================================\nERROR: test_drift_check_does_not_write (__main__.RendererV4Tests.test_drift_check_does_not_write)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 193, in test_drift_check_does_not_write\n    output, _ = self.render()\n                ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nERROR: test_repeated_render_is_deterministic (__main__.RendererV4Tests.test_repeated_render_is_deterministic)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 94, in test_repeated_render_is_deterministic\n    self.assertEqual(self.render(), self.render())\n                     ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nERROR: test_valid_candidate_and_complete_source_projection (__main__.RendererV4Tests.test_valid_candidate_and_complete_source_projection)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 66, in test_valid_candidate_and_complete_source_projection\n    output, summary = self.render()\n                      ^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 55, in render\n    return self.renderer.render_bytes(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 635, in render_bytes\n    walk_references(source, repository_root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 522, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 519, in walk_references\n    walk_references(item, root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 517, in walk_references\n    reference(value[\"path\"], value[\"sha256\"], root, profile)\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 487, in reference\n    require(\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\state\\renderer\\k0b02_v4\\renderer.py\", line 28, in require\n    raise RendererError(code)\napproved_renderer_v4.RendererError: source:reference_scope\n\n======================================================================\nFAIL: test_actual_windows_junction_and_root_rejected (__main__.RendererV4Tests.test_actual_windows_junction_and_root_rejected)\n----------------------------------------------------------------------\napproved_renderer_v4.RendererError: source:reference_scope\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 275, in test_actual_windows_junction_and_root_rejected\n    with self.assertRaisesRegex(self.renderer.RendererError, \"reparse\"):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"reparse\" does not match \"source:reference_scope\"\n\n======================================================================\nFAIL: test_reference_missing_and_actual_hash_mismatch (__main__.RendererV4Tests.test_reference_missing_and_actual_hash_mismatch)\n----------------------------------------------------------------------\napproved_renderer_v4.RendererError: source:reference_scope\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Projects\\1.Mistake Not My Baton For A Wand\\new pipeline\\tests\\state\\test_k0b02_renderer_v4.py\", line 220, in test_reference_missing_and_actual_hash_mismatch\n    with self.assertRaisesRegex(\n         ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"source:reference_missing\" does not match \"source:reference_scope\"\n\n----------------------------------------------------------------------\nRan 20 tests in 40.692s\n\nFAILED (failures=2, errors=3)\n{\"errors\": 3, \"failures\": 2, \"result\": \"fail\", \"skipped\": 0, \"tests\": 20}\n"
+      }
+    }
+  ],
+  "state_transition_assessment": {
+    "close_only": [
+      "G-K0B02-K0B01-COMPLETE",
+      "G-K0B02-SINGLE-SOURCE-CONFIRMATION"
+    ],
+    "closure_conditions": "Completion receipt existence and explicit pinned single-source/ownership confirmation supported; historical K0b-01 validation results not rerun.",
+    "expected_work_item_status": "prerequisites_complete_implementation_not_authorized",
+    "expected_root_status": "K0b_02_prerequisites_complete_implementation_not_authorized",
+    "inventory": {
+      "entry_open": 9,
+      "entry_closed": 8,
+      "candidate_open": 7,
+      "candidate_closed": 10
+    },
+    "preserved": "Every other work-item status/gate/authority, eight previous closed records, K0b-01 evidence and five prerequisite gate IDs, baseline, root-plan status and status index; enforced by candidate checks and tested negative mutations.",
+    "K0b_02_implementation_authority": "none",
+    "runtime_authority": "none"
+  },
+  "compiler_interface_assessment": {
+    "owner_disposition": "Future separately versioned physical ninth output compiled_projection_checkpoint_profile selected.",
+    "current_eight_outputs_registry_and_compiler": "Unchanged; no regeneration or runtime activation.",
+    "future_receipt_dependency": "A contains six routing outputs, B retains three budget/phase outputs and binds A hash plus all six output hashes. A does not bind B output hashes; integrated activation later binds both receipts and all nine outputs.",
+    "future_implementation_authority": "none"
+  },
+  "retained_non_authorizations": [
+    "artifact/event outbox/projector/publisher/replay/crash/migration implementation",
+    "active Alpha0 registry/compiler/output regeneration",
+    "runtime DB/checkpoint/Git publication/fixture clone/F13a/F15",
+    "K0b-03..05 or N1 gate closures or continuation",
+    "provider/model calls",
+    "old pipeline/projects/research access or frozen input semantic use",
+    "external messages/network beyond pinned wheel acquisition",
+    "subagents",
+    "push/merge/deploy/reset/ancestor amendment"
+  ],
+  "completed_K0b01_revalidation": "None: no historical 30 renderer tests, 739 implementation tests, ledger/index/budget validation or blanket 190-input check. Only finite raw reference checks required by the new renderer.",
+  "remaining_tail_at_this_freeze": {
+    "canonical_state_pair": "pending_identical_validated_candidate_promotion",
+    "final_canonical_render_check_both_environments": "pending_after_promotion",
+    "exact_temp_cleanup": "pending_after_evidence_capture_before_staging",
+    "exact_ten_path_stage_and_single_commit": "pending_parent_d19e68a26102a07cfe524e36ad67f9c5f5e4cd13",
+    "post_commit_verification": "reported_externally_without_rewriting_this_evidence"
+  },
+  "integrity_rules": {
+    "immutable_after_first_reference": true,
+    "own_hash_or_containing_commit": "not_embedded",
+    "candidate_hashes": "Observed validated temporary bytes, not a future state or commit claim.",
+    "hash_DAG": "request -> owner -> plan/renderer/profile/test -> documentary closure -> candidate pair/checks -> this evidence -> identical canonical pair -> cleanup -> commit; approved narrow freeze repair is explicitly recorded.",
+    "canonical_payload_verification": "not_claimed",
+    "tail_pending_meaning": "Historical pre-tail snapshot; not an automatic later failure claim."
+  }
+}

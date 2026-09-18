@@ -1,0 +1,245 @@
+{
+  "document_id": "pipeline-v2.k0b02-prerequisite-transition-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-17T15:48:10Z",
+  "work_item_id": "K0b-02",
+  "status": "approved_exact_renderer_state_and_design_disposition_scope",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "bytes": 25016
+    },
+    "confirmation_profile": {
+      "path": "new pipeline/registry/authority-confirmation/v1.yaml",
+      "sha256": "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd",
+      "bytes": 3170
+    },
+    "separate_owner_confirmation": {
+      "source_ref": "current_conversation_owner_complete_request_hash_and_full_scope_confirmation",
+      "actor": "workspace_owner",
+      "repeated_confirmation_SHA256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "exact_match_result": "pass",
+      "statement_verbatim": "Подтверждаю approval-request SHA-256 33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3 и разрешаю весь описанный exact scope: renderer v4 и новые проверки в двух locked-средах, закрытие только G-K0B02-K0B01-COMPLETE и G-K0B02-SINGLE-SOURCE-CONFIRMATION, указанное решение по будущему девятому compiler output, десять перечисленных путей, ограниченную загрузку двенадцати pinned wheels, создание и удаление трёх exact temp-target и один local commit с parent d19e68a26102a07cfe524e36ad67f9c5f5e4cd13. Реализация artifact/event и изменение активного реестра/compiler не разрешены; runtime authority — none.",
+      "message_id_and_timestamp": "not_available_not_inferred"
+    },
+    "residual_risk": "Conversational identity is not cryptographically authenticated; full hash repetition identifies approved request bytes only."
+  },
+  "entry_verification": {
+    "HEAD": "d19e68a26102a07cfe524e36ad67f9c5f5e4cd13",
+    "parent": "bf68c85c78c9144389168c3fbd03c9910d92f836",
+    "tree": "682c32f8ba87200db20cac55efb24b7b7e9b083c",
+    "request_hash": "pass",
+    "existing_input_pins": {
+      "count": 28,
+      "result": "pass"
+    },
+    "index": "empty",
+    "worktree": "only_explicitly_authorized_untracked_request",
+    "applicable_AGENTS": "none_found",
+    "active_hooks": "none",
+    "signing": "not_configured",
+    "temp_targets": "all_three_absent_before_creation",
+    "host_python_hash": "pass",
+    "Git_warning": "Git reports permission denied reading the user-level ignore file; no configuration change is authorized."
+  },
+  "approved_scope": {
+    "new_paths": [
+      "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+      "new pipeline/state/renderer/k0b02_v4/renderer.py",
+      "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+      "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+      "new pipeline/evidence/k0b-02-prerequisite-gate-closure-v1.yaml",
+      "new pipeline/evidence/k0b-02-renderer-v4-validation-v1.yaml",
+      "new pipeline/architecture/k0b-02-planning-package-v1.1.md"
+    ],
+    "modified_paths": [
+      "new pipeline/state/state.yaml",
+      "new pipeline/state/STATE.md"
+    ],
+    "temporary_and_network_scope": {
+      "immutable_toolchain_paths": [
+        {
+          "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+          "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+          "bytes": 5688
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+          "sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+          "bytes": 1142
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/bootstrap.ps1",
+          "sha256": "557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5",
+          "bytes": 4613
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/invoke.ps1",
+          "sha256": "6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197",
+          "bytes": 3928
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+          "sha256": "249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c",
+          "bytes": 4912
+        },
+        {
+          "path": "new pipeline/toolchain/k0b01/validate_toolchain.py",
+          "sha256": "86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a",
+          "bytes": 14851
+        }
+      ],
+      "host_python": {
+        "path": "C:/ProgramData/anaconda3/python.exe",
+        "version": "3.12.7",
+        "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+        "allowed_use": "Pinned metadata probe, wheel acquisition, venv creation only; no host ruamel or evidence generation."
+      },
+      "exact_temp_targets": [
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-wheelhouse",
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-a",
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-prerequisite-transition-v1-b"
+      ],
+      "targets_initially_absent": true,
+      "old_deleted_targets": "Do not restore/reuse.",
+      "network": "Only exact twelve binary wheels from pinned lock/requirements, HTTPS pypi.org and files.pythonhosted.org, no deps/source distributions/cache/proxies/alternate indexes; process-local config only; offline after acquisition.",
+      "bootstrap": "Two new locked environments through existing pinned scripts; validate each new environment, not completed K0b-01 work.",
+      "scratch": "Fixtures/candidate pairs/command logs only beneath the two new environment targets; process-local TEMP/TMP confined/restored.",
+      "test_execution": "Locked environment Python -I -B with explicit imports of only new renderer/tests, no ambient PYTHONPATH/plugin autoload; standard-library unittest new exact test file; Ruff only the new renderer/test file with --isolated --no-cache and format --check.",
+      "cleanup": "Capture evidence then remove only the three exact targets before staging; native LiteralPath operations after absolute containment and reparse-point checks; do not remove parent or unrelated caches."
+    },
+    "commit": {
+      "count": 1,
+      "parent": "d19e68a26102a07cfe524e36ad67f9c5f5e4cd13",
+      "paths": [
+        "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+        "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+        "new pipeline/state/renderer/k0b02_v4/renderer.py",
+        "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+        "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+        "new pipeline/evidence/k0b-02-prerequisite-gate-closure-v1.yaml",
+        "new pipeline/evidence/k0b-02-renderer-v4-validation-v1.yaml",
+        "new pipeline/architecture/k0b-02-planning-package-v1.1.md",
+        "new pipeline/state/state.yaml",
+        "new pipeline/state/STATE.md"
+      ],
+      "message": "Pipeline V2: materialize K0b-02 prerequisites with renderer v4",
+      "amend_push_merge": "forbidden",
+      "hooks_signing": "Inspect before mutation; stop if unapproved side effects/authority needed; do not bypass or change configuration."
+    }
+  },
+  "predecessors": {
+    "completion_receipt": {
+      "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+      "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+      "bytes": 15226
+    },
+    "single_source_owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28",
+      "bytes": 27337
+    },
+    "gate_closure_proposal": {
+      "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+      "sha256": "219f94076b582d52c94b041f389e3e236b04fccdfe53d607000c3a790ae83a8d",
+      "bytes": 8370
+    },
+    "previous_plan": {
+      "path": "new pipeline/architecture/k0b-02-planning-package-v1.md",
+      "sha256": "03a6f09b80077de56abd026a5f13fd10e09f7203057152d3df9822e03c866c18",
+      "bytes": 18289
+    },
+    "baseline_source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "977cc6c681d4cd0f3c80a3e514aacbc66e293b84fff16f7755c1f92216d74ef3",
+      "bytes": 30082
+    },
+    "baseline_profile": {
+      "path": "new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml",
+      "sha256": "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7",
+      "bytes": 55118
+    }
+  },
+  "prior_exception": {
+    "source": {
+      "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28",
+      "bytes": 27337
+    },
+    "source_field": "prior_exception",
+    "meaning": "Only the owner-accepted prior host Python/ruamel YAML-evidence procedural exception; historical result attribution remains unchanged.",
+    "further_host_ruamel_authority": "none",
+    "historical_revalidation_or_rewrite": "not_authorized"
+  },
+  "single_source_and_ownership": {
+    "registry": {
+      "path": "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+      "sha256": "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+      "bytes": 37286
+    },
+    "prior_confirmation": "predecessors.single_source_owner_disposition:single_source_confirmation",
+    "owner_roles": [
+      "workspace_owner",
+      "W1 Kernel / shared artifact-event plane",
+      "artifact_event.transaction_writer",
+      "artifact_event.projector",
+      "shared_control",
+      "control.projection_reconciliation",
+      "approved_governance_state_renderer"
+    ],
+    "role_responsibilities": "Retain all seven exact responsibilities in the pinned predecessor; derived outputs are not authored registry truth sources.",
+    "current_registry_changes": "none",
+    "governance_renderer": "v4_program_state_projection_only_not_artifact_event_runtime"
+  },
+  "gate_action": {
+    "close_only": [
+      "G-K0B02-K0B01-COMPLETE",
+      "G-K0B02-SINGLE-SOURCE-CONFIRMATION"
+    ],
+    "work_item_status": "prerequisites_complete_implementation_not_authorized",
+    "root_status": "K0b_02_prerequisites_complete_implementation_not_authorized",
+    "other_gates": "preserve_exactly",
+    "K0b_02_implementation_authority": "none",
+    "runtime_authority": "none"
+  },
+  "compiler_interface_disposition": {
+    "choice": "Introduce compiled_projection_checkpoint_profile as a separately versioned physical ninth output in a future owner-approved compiler implementation package.",
+    "historical_eight_outputs": "Frozen valid K0b-01 results; no regeneration or retroactive failure claim.",
+    "future_receipt_A": "Six routing/registry outputs, including the new profile; binds exact versioned single registry source and projection/checkpoint policy inputs.",
+    "future_receipt_B": "Three budget/phase outputs; binds the complete future receipt A hash and hashes of all six A outputs.",
+    "acyclic_boundary": "The new A profile does not depend on B output hashes; later integrated activation binds both receipts and all nine outputs.",
+    "profile_design_minimum": [
+      "compiler/schema/input version and SHA bindings",
+      "canonical projection/checkpoint ownership",
+      "exact projection pair stems and target-path allowlists",
+      "deterministic YAML/Markdown rendering and pair readiness",
+      "durable intent and fail-closed reconciliation",
+      "atomic per-peer replace policy",
+      "snapshot target and integrity/FK verification contract",
+      "coordination-Git target and footer/readback contract"
+    ],
+    "implementation_authority": "none; exact source/schema/compiler paths, fields, fixtures and checks require a later request.",
+    "activation_authority": "none; no active JSON or compiled bytes changed."
+  },
+  "owner_interaction_rule": "When confirmation is required, immediately supply ready confirmation wording with exact scope and full SHA when available; do not first seek permission to request confirmation.",
+  "technical_retry_rule": "Same approved paths/dependencies/network hosts/temp targets/authority/action scope may retry after technical failure. Freeze dependent bytes only after success. Any immutable ancestor/hash change after freeze, new path/dependency/host/temp target/authority or material action change requires separate scope approval.",
+  "retained_non_authorizations": [
+    "artifact/event outbox/projector/publisher/replay/crash/migration implementation",
+    "active Alpha0 registry/compiler/output regeneration",
+    "runtime DB/checkpoint/Git publication/fixture clone/F13a/F15",
+    "K0b-03..05 or N1 gate closures or continuation",
+    "provider/model calls",
+    "old pipeline/projects/research access or frozen input semantic use",
+    "external messages/network beyond pinned wheel acquisition",
+    "subagents",
+    "push/merge/deploy/reset/ancestor amendment"
+  ],
+  "integrity_rules": {
+    "immutable_after_first_reference": true,
+    "own_hash_future_profile_validation_state_and_containing_commit": "not_embedded",
+    "request_status": "Frozen creation-time non-authorizing status remains historical; this separate full-hash owner confirmation supplies exact scope authority only."
+  }
+}

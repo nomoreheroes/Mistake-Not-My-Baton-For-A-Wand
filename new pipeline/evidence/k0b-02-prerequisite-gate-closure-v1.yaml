@@ -1,0 +1,129 @@
+{
+  "evidence_id": "pipeline-v2.k0b02-prerequisite-gate-closure-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-17T15:57:30Z",
+  "work_item_id": "K0b-02",
+  "status": "documentary_prerequisites_closed_state_materialization_pending_validation",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+      "bytes": 25016
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+      "sha256": "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf",
+      "bytes": 13879
+    }
+  },
+  "sources": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+      "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3"
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+      "sha256": "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf"
+    },
+    "completion_receipt": {
+      "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+      "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1"
+    },
+    "single_source_confirmation": {
+      "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28"
+    },
+    "gate_closure_proposal": {
+      "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+      "sha256": "219f94076b582d52c94b041f389e3e236b04fccdfe53d607000c3a790ae83a8d"
+    },
+    "planning_package": {
+      "path": "new pipeline/architecture/k0b-02-planning-package-v1.1.md",
+      "sha256": "9c5a634984688323f44c44a404aff74dbca12b7136588d886e1e05f674ddf946"
+    },
+    "renderer_profile": {
+      "path": "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+      "sha256": "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d",
+      "bytes": 131959
+    }
+  },
+  "verification_scope": "Existence and exact raw hashes of the frozen completion receipt and explicit prior owner single-source/ownership disposition; no fresh K0b-01 runtime/implementation verification.",
+  "gates": [
+    {
+      "gate_id": "G-K0B02-K0B01-COMPLETE",
+      "prior_status": "blocked_by_predecessor",
+      "closure_condition": "K0b_01_completion_receipt_exists",
+      "condition_result": "pass",
+      "closed_by": "workspace_owner",
+      "evidence": {
+        "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+        "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1"
+      },
+      "facts": [
+        "Final completion receipt exists and its complete-file hash matches.",
+        "Historical validation and owner-reported final tail remain attributed separately.",
+        "The accepted prior host Python/ruamel procedural exception is narrowly disclosed; no new host ruamel authority."
+      ]
+    },
+    {
+      "gate_id": "G-K0B02-SINGLE-SOURCE-CONFIRMATION",
+      "prior_status": "future_open",
+      "closure_condition": "confirm_single_JSON_registry_and_projection_ownership_before_K0b_02",
+      "condition_result": "pass",
+      "closed_by": "workspace_owner",
+      "evidence": {
+        "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+        "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28"
+      },
+      "evidence_fields": [
+        "authority.separate_owner_confirmation",
+        "single_source_confirmation"
+      ],
+      "facts": [
+        "Prior full-hash owner approval explicitly included single-source and projection ownership.",
+        "One current authored Alpha0 JSON registry and seven exact owner responsibilities remain unchanged.",
+        "This separate request full-hash confirmation authorizes only materialization of these two gate closures."
+      ]
+    }
+  ],
+  "materialization_contract": {
+    "close_only": [
+      "G-K0B02-K0B01-COMPLETE",
+      "G-K0B02-SINGLE-SOURCE-CONFIRMATION"
+    ],
+    "new_renderer_version": "4.0.0",
+    "work_item_status": "prerequisites_complete_implementation_not_authorized",
+    "root_status": "K0b_02_prerequisites_complete_implementation_not_authorized",
+    "expected_inventory": {
+      "open": 7,
+      "closed": 10
+    },
+    "state_pair_checks": "pending_new_locked_environment_checks_no_success_claim_here",
+    "validation_evidence": "recorded_after_candidate_checks_not_bound_here",
+    "K0b_02_implementation_authority": "none",
+    "runtime_authority": "none"
+  },
+  "preservation": {
+    "baseline_state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "977cc6c681d4cd0f3c80a3e514aacbc66e293b84fff16f7755c1f92216d74ef3",
+      "bytes": 30082
+    },
+    "baseline_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "2c091d2dc4e8fb20ab8c45be5501699d1b00916155faf2df0437b1772fb17d9f",
+      "bytes": 30518
+    },
+    "all_other_gates_and_work_items": "unchanged",
+    "prior_closed_records_and_K0b_01_evidence": "unchanged",
+    "active_registry_and_compiler": "unchanged",
+    "historical_completion_pending_tail": "Retained as the historical pre-tail observation; it is not a later failure claim."
+  },
+  "integrity_rules": {
+    "immutable_after_first_reference": true,
+    "own_hash_future_candidate_validation_projection_or_containing_commit": "not_embedded",
+    "canonical_payload_verification": "not_claimed",
+    "post_materialization_checks": "reported_in_later_validation_and_final_handoff_without_ancestor_rewrite"
+  }
+}
