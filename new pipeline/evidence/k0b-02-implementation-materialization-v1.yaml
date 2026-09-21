@@ -1,0 +1,138 @@
+{
+    "document_id":  "pipeline-v2.k0b-02.implementation-materialization-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "status":  "frozen_transition_contract_before_dependent_state",
+    "recorded_at_UTC":  "2026-09-21T15:41:01.897Z",
+    "work_item_id":  "K0b-02",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml",
+                                               "sha256":  "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+                                               "bytes":  96712
+                                           },
+                      "owner_disposition":  {
+                                                "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+                                                "bytes":  4392
+                                            },
+                      "validation":  {
+                                         "path":  "new pipeline/evidence/k0b-02-artifact-event-validation-v1.yaml",
+                                         "sha256":  "a4f60ab80b32c1db73c93e43ae82bd9460f339be8b7edd9f9a22cf9191784b7b",
+                                         "bytes":  126283
+                                     },
+                      "completion":  {
+                                         "path":  "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v1.yaml",
+                                         "sha256":  "7be6e34a38932dfd83a4ad73f3de6de4d5c56a63bd3345cef3ac83fbf7c4065a",
+                                         "bytes":  5273
+                                     }
+                  },
+    "baseline":  {
+                     "source":  {
+                                    "path":  "new pipeline/state/state.yaml",
+                                    "sha256":  "17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550",
+                                    "bytes":  38960
+                                },
+                     "projection":  {
+                                        "path":  "new pipeline/state/STATE.md",
+                                        "sha256":  "f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28",
+                                        "bytes":  39396
+                                    },
+                     "profile_v4":  {
+                                        "path":  "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+                                        "sha256":  "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d",
+                                        "bytes":  131959
+                                    },
+                     "projection_version":  "4.0.0",
+                     "status":  "K0b_02_prerequisites_complete_implementation_not_authorized",
+                     "open_gate_count":  7,
+                     "closed_gate_count":  10,
+                     "K0b02_work_item":  {
+                                             "sequence":  12,
+                                             "work_item_id":  "K0b-02",
+                                             "status":  "prerequisites_complete_implementation_not_authorized",
+                                             "authority_path":  "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+                                             "authority_sha256":  "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf",
+                                             "open_gate_ids":  [
+
+                                                               ]
+                                         },
+                     "runtime_authority":  "none",
+                     "K0b02_runtime_authority":  "none"
+                 },
+    "transition":  {
+                       "projection_version":  "5.0.0",
+                       "top_status":  "K0b_02_implemented_validated_runtime_not_authorized",
+                       "K0b02_status":  "implemented_validated_runtime_not_authorized",
+                       "implementation_authority":  "bounded_K0b_02_exact_fixture_scope_only",
+                       "runtime_authority":  "none",
+                       "K0b02_runtime_authority":  "none",
+                       "gate_changes":  "none",
+                       "open_gate_count":  7,
+                       "closed_gate_count":  10,
+                       "delta_field_count":  12,
+                       "delta_whitelist":  [
+                                               "generated_at",
+                                               "projection_version",
+                                               "status",
+                                               "projection_profile.path",
+                                               "projection_profile.sha256",
+                                               "active_authority.K0b_02_artifact_event_implementation",
+                                               "supporting_review_evidence.K0b_02_artifact_event_completion",
+                                               "supporting_review_evidence.K0b_02_implementation_materialization",
+                                               "work_items[work_item_id=K0b-02].status",
+                                               "work_items[work_item_id=K0b-02].authority_path",
+                                               "work_items[work_item_id=K0b-02].authority_sha256",
+                                               "scope.K0b_02_implementation_authority"
+                                           ],
+                       "expected_fixed_references":  {
+                                                         "active_authority_K0b02":  {
+                                                                                        "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                                                        "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+                                                                                        "bytes":  4392
+                                                                                    },
+                                                         "K0b02_work_item_authority":  {
+                                                                                           "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                                                           "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+                                                                                           "bytes":  4392
+                                                                                       },
+                                                         "completion":  {
+                                                                            "path":  "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v1.yaml",
+                                                                            "sha256":  "7be6e34a38932dfd83a4ad73f3de6de4d5c56a63bd3345cef3ac83fbf7c4065a",
+                                                                            "bytes":  5273
+                                                                        }
+                                                     },
+                       "materialization_self_reference":  {
+                                                              "path":  "new pipeline/evidence/k0b-02-implementation-materialization-v1.yaml",
+                                                              "binding":  "candidate_must_use_complete_file_SHA256_and_bytes_after_this_document_is_frozen",
+                                                              "self_hash_embedded_in_this_document":  false
+                                                          },
+                       "projection_profile":  {
+                                                  "path":  "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml",
+                                                  "binding":  "candidate_uses_complete_profile_SHA256_after_profile_freeze"
+                                              }
+                   },
+    "reference_scope":  {
+                            "root_exception":  {
+                                                   "path":  ".gitattributes",
+                                                   "sha256":  "58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d",
+                                                   "bytes":  477
+                                               },
+                            "new_candidate_references":  [
+                                                             "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                             "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v1.yaml",
+                                                             "new pipeline/evidence/k0b-02-implementation-materialization-v1.yaml",
+                                                             "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml"
+                                                         ],
+                            "prospective_validation_reference":  "new pipeline/evidence/k0b-02-renderer-v5-validation-v1.yaml_not_cited_by_candidate_to_avoid_cycle"
+                        },
+    "non_authorizations":  [
+                               "no_gate_change",
+                               "no_runtime_authority",
+                               "no_real_Alpha0_F15_model_execution",
+                               "no_K0b03_N1_advance",
+                               "no_validation_back_reference_cycle",
+                               "no_push_merge_deploy_release"
+                           ],
+    "result":  "ready_for_v5_profile_freeze"
+}

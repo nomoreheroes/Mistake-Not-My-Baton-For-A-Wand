@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.replay-receipt-v1.schema",
+  "type": "object",
+  "properties": {
+    "replay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "envelope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "envelope_complete_file_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "checkpoint_and_pair_hashes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "minItems": 3
+    },
+    "source_seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "new_restore_target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verified_content_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reproducibility_gap": {
+      "type": "string",
+      "minLength": 1
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "blocked"
+      ]
+    }
+  },
+  "required": [
+    "replay_id",
+    "envelope_id",
+    "envelope_complete_file_sha256",
+    "checkpoint_and_pair_hashes",
+    "source_seq",
+    "new_restore_target",
+    "verified_content_digest",
+    "reproducibility_gap",
+    "result"
+  ],
+  "additionalProperties": false
+}

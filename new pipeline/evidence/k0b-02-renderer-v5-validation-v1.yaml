@@ -1,0 +1,122 @@
+{
+    "document_id":  "pipeline-v2.k0b-02.renderer-v5-validation-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "status":  "accepted_before_canonical_pair_promotion",
+    "recorded_at_UTC":  "2026-09-21T15:43:00.152Z",
+    "work_item_id":  "K0b-02",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml",
+                                               "sha256":  "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+                                               "bytes":  96712
+                                           },
+                      "completion":  {
+                                         "path":  "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v1.yaml",
+                                         "sha256":  "7be6e34a38932dfd83a4ad73f3de6de4d5c56a63bd3345cef3ac83fbf7c4065a",
+                                         "bytes":  5273
+                                     },
+                      "materialization":  {
+                                              "path":  "new pipeline/evidence/k0b-02-implementation-materialization-v1.yaml",
+                                              "sha256":  "ae8e0686e457dd68090c73e08a7464519d25e554773a70453bc3c7ecab5166bb",
+                                              "bytes":  10427
+                                          }
+                  },
+    "baseline":  {
+                     "source":  {
+                                    "path":  "new pipeline/state/state.yaml",
+                                    "sha256":  "17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550",
+                                    "bytes":  38960
+                                },
+                     "projection":  {
+                                        "path":  "new pipeline/state/STATE.md",
+                                        "sha256":  "f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28",
+                                        "bytes":  39396
+                                    },
+                     "open_gate_count":  7,
+                     "closed_gate_count":  10
+                 },
+    "renderer":  {
+                     "code":  {
+                                  "path":  "new pipeline/state/renderer/k0b02_v5/renderer.py",
+                                  "sha256":  "8d52e5e047be8cac534f2fc345611c10c8a6aeef690f3bc8413e4007da137279",
+                                  "bytes":  11754
+                              },
+                     "test":  {
+                                  "path":  "new pipeline/tests/state/test_k0b02_renderer_v5.py",
+                                  "sha256":  "fe7e09bb6fa10caf2f13d70d2ef77d115180ce96f317a2527478066493a8a72f",
+                                  "bytes":  8107
+                              },
+                     "profile":  {
+                                     "path":  "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml",
+                                     "sha256":  "cf43eeb070953c9ad5e1bbc18e474f3a224dce1a9ca11bef0ce1564f7b1ab7d7",
+                                     "bytes":  173181
+                                 },
+                     "projection_version":  "5.0.0",
+                     "delta_field_count":  12
+                 },
+    "candidates":  {
+                       "environment_A":  {
+                                             "source":  {
+                                                            "sha256":  "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+                                                            "bytes":  79169
+                                                        },
+                                             "projection":  {
+                                                                "sha256":  "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+                                                                "bytes":  79605
+                                                            },
+                                             "renderer_exit":  0,
+                                             "check_exit":  0,
+                                             "tests":  9,
+                                             "passed":  9,
+                                             "failures":  0,
+                                             "errors":  0,
+                                             "skipped":  0,
+                                             "elapsed_seconds":  2.046
+                                         },
+                       "environment_B":  {
+                                             "source":  {
+                                                            "sha256":  "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+                                                            "bytes":  79169
+                                                        },
+                                             "projection":  {
+                                                                "sha256":  "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+                                                                "bytes":  79605
+                                                            },
+                                             "renderer_exit":  0,
+                                             "check_exit":  0,
+                                             "tests":  9,
+                                             "passed":  9,
+                                             "failures":  0,
+                                             "errors":  0,
+                                             "skipped":  0,
+                                             "elapsed_seconds":  2.298
+                                         },
+                       "source_byte_identity":  true,
+                       "projection_byte_identity":  true
+                   },
+    "transition_checks":  {
+                              "only_twelve_whitelist_fields_changed":  true,
+                              "complete_typed_baseline_plus_patch_equality":  true,
+                              "open_gate_records_unchanged":  true,
+                              "closed_gate_records_unchanged":  true,
+                              "open_gate_count":  7,
+                              "closed_gate_count":  10,
+                              "global_runtime_authority":  "none",
+                              "K0b02_runtime_authority":  "none",
+                              "projection_contains_complete_source_bytes":  true,
+                              "read_only_drift_check_writes_zero_bytes":  true,
+                              "root_reference_exception_only_literal_gitattributes":  true,
+                              "validation_back_reference_in_candidate":  false
+                          },
+    "promotion":  {
+                      "source_path":  "new pipeline/state/state.yaml",
+                      "projection_path":  "new pipeline/state/STATE.md",
+                      "approved_source_sha256":  "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+                      "approved_source_bytes":  79169,
+                      "approved_projection_sha256":  "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+                      "approved_projection_bytes":  79605,
+                      "status":  "ready_for_identical_pair_promotion"
+                  },
+    "result":  "pass"
+}

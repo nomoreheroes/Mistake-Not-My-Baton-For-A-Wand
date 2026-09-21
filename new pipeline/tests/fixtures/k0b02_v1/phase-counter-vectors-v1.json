@@ -1,0 +1,15 @@
+{
+  "F15_boundary_triggers": [
+    "k0b.f15.boundary.entry_gate",
+    "k0b.f15.boundary.program_owner_wait_or_exit",
+    "k0b.f15.boundary.exit_gate",
+    "k0b.f15.boundary.top_level_run_end"
+  ],
+  "model_calls": 0,
+  "phase_order": [
+    "K0b-runtime-operational",
+    "K0b-F15-exact-measurement"
+  ],
+  "schema_version": 1,
+  "synthetic": true
+}

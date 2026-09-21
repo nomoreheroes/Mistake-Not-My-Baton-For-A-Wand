@@ -1,0 +1,16 @@
+{
+  "assumed_mean_object_bytes": 372736,
+  "batch_publications_maximum": 12,
+  "binary_size_stress_bytes": 7864320,
+  "checkpoint_hard_bytes": 104857600,
+  "checkpoint_size_stress_bytes": 30408704,
+  "credit": 0,
+  "nonbinary_worst_bytes": 22020096,
+  "phase_pack_hard_bytes": 1073741824,
+  "phase_pack_size_stress_bytes": 1033895936,
+  "phase_pack_warning_bytes": 536870912,
+  "planning_pack_factor": 1,
+  "producer_object_hard_bytes": 655360,
+  "publication_count": 34,
+  "schema_version": 1
+}

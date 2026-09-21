@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.phase-seal-v1.schema",
+  "type": "object",
+  "properties": {
+    "seal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partition_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "predecessor_seal_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "terminal_checkpoint_publication_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "terminal_checkpoint_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "ready_pair_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "outbox_high_water": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cumulative_full_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "publication_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "authorities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "minItems": 1
+    },
+    "all_admitted_members_terminal": {
+      "type": "boolean",
+      "const": true
+    },
+    "no_unresolved_begun_effects": {
+      "type": "boolean",
+      "const": true
+    },
+    "result": {
+      "type": "string",
+      "const": "sealed"
+    }
+  },
+  "required": [
+    "seal_id",
+    "phase_id",
+    "partition_digest",
+    "predecessor_seal_id",
+    "terminal_checkpoint_publication_id",
+    "terminal_checkpoint_sha256",
+    "ready_pair_set_sha256",
+    "outbox_high_water",
+    "cumulative_full_bytes",
+    "publication_count",
+    "authorities",
+    "all_admitted_members_terminal",
+    "no_unresolved_begun_effects",
+    "result"
+  ],
+  "additionalProperties": false
+}

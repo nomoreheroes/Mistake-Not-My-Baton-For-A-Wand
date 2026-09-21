@@ -1,0 +1,1378 @@
+{
+    "document_id":  "pipeline-v2.k0b-02.artifact-event-validation-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "status":  "accepted_complete_fixture_validation",
+    "recorded_at_UTC":  "2026-09-21T15:40:15.473Z",
+    "work_item_id":  "K0b-02",
+    "runtime_authority":  "none",
+    "actual_provider_model_calls":  0,
+    "actual_program_runtime_publications":  0,
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml",
+                                               "sha256":  "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+                                               "bytes":  96712
+                                           },
+                      "approved_sha256":  "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+                      "owner_disposition":  {
+                                                "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+                                                "bytes":  4392
+                                            },
+                      "post_freeze_exceptions":  [
+                                                     {
+                                                         "source":  "current_conversation_owner_statement_2026_09_21",
+                                                         "entry_manifest_sha256":  "dbee420f199bfc74a0169fd845399c248c9e87b7d3144f8ada799dd27b546549",
+                                                         "scope":  "technical_defects_and_Ruff_only_in_approved_paths_then_package_and_manifest_regeneration"
+                                                     },
+                                                     {
+                                                         "source":  "current_conversation_owner_statement_2026_09_21_tail",
+                                                         "entry_manifest_sha256":  "cc66df6933780ea7128bb9826516d861b7b2545f7601d5f76c0d92dafcca007e",
+                                                         "prior_validation_sha256":  "db1f81dcd73760e68d928a024a4a82d81753badb4da110302af9d2d4e4b8635d",
+                                                         "scope":  "remove_exactly_one_final_LF_from_each_migration_and_rebuild_exact_downstream_chain"
+                                                     }
+                                                 ]
+                  },
+    "baseline":  {
+                     "commit":  "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+                     "input_manifest":  {
+                                            "path":  "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml",
+                                            "sha256":  "54b36e788f7f1e4e8b914e3db6a652cd148c9517eff7d8587632fb8f2d466035",
+                                            "bytes":  106312
+                                        },
+                     "input_manifest_effective_count":  147,
+                     "input_manifest_HASH_ONLY_count":  18,
+                     "attributes":  {
+                                        "path":  ".gitattributes",
+                                        "sha256":  "58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d",
+                                        "bytes":  477
+                                    }
+                 },
+    "locked_toolchain":  {
+                             "environment_count":  2,
+                             "python":  "CPython 3.12.7",
+                             "sqlite_library_version":  "3.45.3",
+                             "git_version":  "2.51.2.windows.1",
+                             "pytest":  "9.0.2",
+                             "ruff":  "0.15.1",
+                             "plugin_autoload":  "disabled",
+                             "python_flags":  [
+                                                  "-I",
+                                                  "-B"
+                                              ],
+                             "wheel_count":  12,
+                             "wheel_set_root_sha256":  "2f6b623195294aa0fd96329e794097ae6f932bb91e9e302a8bdd0c92ac125b3b",
+                             "wheel_set_root_profile":  "ordinal_filename_TAB_SHA256_TAB_bytes_LF",
+                             "wheels":  [
+                                            {
+                                                "filename":  "colorama-0.4.6-py2.py3-none-any.whl",
+                                                "sha256":  "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+                                                "bytes":  25335
+                                            },
+                                            {
+                                                "filename":  "iniconfig-1.1.1-py2.py3-none-any.whl",
+                                                "sha256":  "011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3",
+                                                "bytes":  4990
+                                            },
+                                            {
+                                                "filename":  "packaging-24.1-py3-none-any.whl",
+                                                "sha256":  "5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124",
+                                                "bytes":  53985
+                                            },
+                                            {
+                                                "filename":  "pip-24.2-py3-none-any.whl",
+                                                "sha256":  "2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2",
+                                                "bytes":  1815170
+                                            },
+                                            {
+                                                "filename":  "pluggy-1.6.0-py3-none-any.whl",
+                                                "sha256":  "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746",
+                                                "bytes":  20538
+                                            },
+                                            {
+                                                "filename":  "Pygments-2.15.1-py3-none-any.whl",
+                                                "sha256":  "db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1",
+                                                "bytes":  1146422
+                                            },
+                                            {
+                                                "filename":  "pytest-9.0.2-py3-none-any.whl",
+                                                "sha256":  "711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b",
+                                                "bytes":  374801
+                                            },
+                                            {
+                                                "filename":  "ruamel.yaml.clib-0.2.8-cp312-cp312-win_amd64.whl",
+                                                "sha256":  "1758ce7d8e1a29d23de54a16ae867abd370f01b5a69e1a3ba75223eaa3ca1a1b",
+                                                "bytes":  115305
+                                            },
+                                            {
+                                                "filename":  "ruamel.yaml-0.18.6-py3-none-any.whl",
+                                                "sha256":  "57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636",
+                                                "bytes":  117761
+                                            },
+                                            {
+                                                "filename":  "ruff-0.15.1-py3-none-win_amd64.whl",
+                                                "sha256":  "c820fef9dd5d4172a6570e5721704a96c6679b80cf7be41659ed439653f62336",
+                                                "bytes":  11599956
+                                            },
+                                            {
+                                                "filename":  "setuptools-75.1.0-py3-none-any.whl",
+                                                "sha256":  "35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2",
+                                                "bytes":  1248506
+                                            },
+                                            {
+                                                "filename":  "wheel-0.44.0-py3-none-any.whl",
+                                                "sha256":  "2376a90c98cc337d18623527a97c31797bd02bad0033d41547043a1cbfbe448f",
+                                                "bytes":  67059
+                                            }
+                                        ]
+                         },
+    "compiler":  {
+                     "result":  "pass",
+                     "environment_count":  2,
+                     "physical_output_count":  9,
+                     "receipt_and_manifest_count":  3,
+                     "byte_identity_across_environments":  true,
+                     "compiler_runtime_enabled":  false,
+                     "artifacts":  [
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_artifact_event_profile.json",
+                                           "sha256":  "7b228b266a356d32b0fd9c4f7689ca557c84005efdaa10d1be26528533758215",
+                                           "bytes":  21690
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_event_reachability_graph.json",
+                                           "sha256":  "616ace107f6591dbe1bab6714322a463ffe82f9de503c8bf85ab8fd72a6e6c74",
+                                           "bytes":  4035
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_subscription_terminal_snapshot.json",
+                                           "sha256":  "51fdd0d6a6b4b036941053d15bd35d77006f905cface8219d52ee285e592b5c2",
+                                           "bytes":  1486
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_s_route_table_v2.json",
+                                           "sha256":  "30cb6ec6e93635dde19d8cd97827ab4e41810685b6c82e762ce7d744279b7464",
+                                           "bytes":  3841
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_fanout_barrier_profile.json",
+                                           "sha256":  "d48e6a546aa99318cd043fdd8c3a24e5763c6aa70a64f60cb218a97c19493a87",
+                                           "bytes":  1190
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_projection_checkpoint_profile.json",
+                                           "sha256":  "bde93bb99f421b223bf2e649e4e6d295e17bc4bd7b11389d3dcf39b6fcbe0324",
+                                           "bytes":  778
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_resource_forecast.json",
+                                           "sha256":  "4e41730f6afe3c44dd2d66e484e876e4081cc8caaf08c9c73b0e3cb23a433f45",
+                                           "bytes":  659
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_checkpoint_phase_partition_v1.json",
+                                           "sha256":  "75c66bfc251f9eee9968e2ed404153f0b996ffbae534fe0620ee006ff0fc6a8d",
+                                           "bytes":  629
+                                       },
+                                       {
+                                           "path":  "new pipeline/compiled/k0b02_v1/compiled_checkpoint_publication_budget_v2.json",
+                                           "sha256":  "01a9b35724a9232bcfdc7f282bc840c3d521849db8fdc29395af12bb327bb4ad",
+                                           "bytes":  851
+                                       },
+                                       {
+                                           "path":  "new pipeline/evidence/k0b-02-registry-routing-compiler-receipt-v3.yaml",
+                                           "sha256":  "354d45f26e4dd357f053cb8fd43efc193de29c19e1fed72c93dd4ddd343252b4",
+                                           "bytes":  1522
+                                       },
+                                       {
+                                           "path":  "new pipeline/evidence/k0b-02-resource-budget-compiler-receipt-v3.yaml",
+                                           "sha256":  "c0ea6f85826df9ac5d2c2afa33b5302c85bc6f43aeaa36fe5276c2989a14e7dd",
+                                           "bytes":  1847
+                                       },
+                                       {
+                                           "path":  "new pipeline/evidence/k0b-02-compiled-output-manifest-v3.yaml",
+                                           "sha256":  "39c67e80d2fa0280757a6f0c80baa7fbd0007ec06339ee3e803d50345e87107b",
+                                           "bytes":  1913
+                                       }
+                                   ]
+                 },
+    "test_execution":  {
+                           "command":  "locked_python -I -B -m pytest -q --disable-warnings --maxfail=20 new pipeline/tests/k0b02_v1",
+                           "test_module_count":  10,
+                           "helper_file_count":  2,
+                           "expected_case_count":  80,
+                           "expected_case_ids":  [
+                                                     "compile_valid",
+                                                     "compile_missing_ninth",
+                                                     "compile_missing_B_binding",
+                                                     "compile_A_reverse_B_binding",
+                                                     "compile_wrong_output_schema",
+                                                     "compile_registry_semantic_drift",
+                                                     "compile_duplicate_family",
+                                                     "migration_v4_to_v5",
+                                                     "migration_v5_to_v6",
+                                                     "migration_unknown_schema",
+                                                     "migration_repeat_readback",
+                                                     "migration_exception_before_commit",
+                                                     "migration_loss_before_commit",
+                                                     "migration_loss_after_commit",
+                                                     "atomic_decision_outbox",
+                                                     "duplicate_original_result",
+                                                     "conflicting_duplicate",
+                                                     "projection_before_source_commit",
+                                                     "projection_after_source_commit",
+                                                     "projection_after_first_peer",
+                                                     "projection_after_both_peers",
+                                                     "projection_drift",
+                                                     "projection_failure_receipt",
+                                                     "publication_before_backup",
+                                                     "publication_after_backup",
+                                                     "publication_after_snapshot_replace",
+                                                     "publication_after_git_commit",
+                                                     "publication_after_db_result",
+                                                     "publication_dirty_tree",
+                                                     "publication_binary_divergence",
+                                                     "clone_only_restore",
+                                                     "replay_corrupt_checkpoint",
+                                                     "replay_incompatible_schema",
+                                                     "replay_missing_envelope",
+                                                     "replay_ambiguous_begun_effect",
+                                                     "abort_unknown_effect",
+                                                     "phase_before_seal",
+                                                     "phase_after_seal",
+                                                     "phase_reopen_or_reorder",
+                                                     "phase_unknown_partition",
+                                                     "F15_fifth_trigger",
+                                                     "F15_non_model_simulation",
+                                                     "post_F15_call_rejection",
+                                                     "checkpoint_hard_limit",
+                                                     "phase_pack_hard_limit",
+                                                     "publication_batch_cap",
+                                                     "warning_reforecast",
+                                                     "path_escape",
+                                                     "cli_denied_root",
+                                                     "cli_input_output_collision",
+                                                     "publication_performance_01",
+                                                     "publication_performance_02",
+                                                     "publication_performance_03",
+                                                     "publication_performance_04",
+                                                     "publication_performance_05",
+                                                     "publication_performance_06",
+                                                     "publication_performance_07",
+                                                     "publication_performance_08",
+                                                     "publication_performance_09",
+                                                     "publication_performance_10",
+                                                     "publication_performance_11",
+                                                     "publication_performance_12",
+                                                     "restore_performance_01",
+                                                     "restore_performance_02",
+                                                     "restore_performance_03",
+                                                     "restore_performance_04",
+                                                     "restore_performance_05",
+                                                     "restore_performance_06",
+                                                     "restore_performance_07",
+                                                     "restore_performance_08",
+                                                     "restore_performance_09",
+                                                     "restore_performance_10",
+                                                     "restore_performance_11",
+                                                     "restore_performance_12",
+                                                     "compile_multiple_pair_stems_rejected",
+                                                     "projection_unapproved_pair_stem_rejected",
+                                                     "replay_checkpoint_cut_over_immutable_seed",
+                                                     "eol_checkout_invariance",
+                                                     "eol_missing_attributes_rejected",
+                                                     "fixture_git_config_drift"
+                                                 ],
+                           "process_loss_boundary_count":  12,
+                           "process_loss_boundaries":  [
+                                                           "new_migration_before_commit",
+                                                           "new_migration_after_commit",
+                                                           "decision_outbox_before_commit",
+                                                           "decision_outbox_after_commit_before_response",
+                                                           "first_peer_replaced",
+                                                           "both_peers_replaced_before_result",
+                                                           "backup_verified",
+                                                           "snapshot_replaced",
+                                                           "coordination_Git_commit_before_DB_result",
+                                                           "publication_DB_result",
+                                                           "terminal_checkpoint_before_seal",
+                                                           "seal_committed_before_successor_admission"
+                                                       ],
+                           "mandatory_regression_cases":  [
+                                                              "compile_multiple_pair_stems_rejected",
+                                                              "projection_unapproved_pair_stem_rejected",
+                                                              "replay_checkpoint_cut_over_immutable_seed",
+                                                              "eol_checkout_invariance",
+                                                              "eol_missing_attributes_rejected",
+                                                              "fixture_git_config_drift"
+                                                          ],
+                           "environments":  [
+                                                {
+                                                    "environment":  "environment_A",
+                                                    "temp_target":  "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-artifact-event-implementation-v1-a",
+                                                    "python_executable":  "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-artifact-event-implementation-v1-a\\Scripts\\python.exe",
+                                                    "python_version":  "3.12.7",
+                                                    "sqlite_library_version":  "3.45.3",
+                                                    "pytest_exit_code":  0,
+                                                    "pytest_collected":  66,
+                                                    "pytest_passed":  66,
+                                                    "pytest_failed":  0,
+                                                    "pytest_skipped":  0,
+                                                    "suite_elapsed_seconds":  220.94,
+                                                    "case_report_sha256":  "4eb4d20312b0abed2e206055706228a8ebe9bd2ffe9303c4536a5cb0d8fb0882",
+                                                    "case_report_bytes":  8896,
+                                                    "case_count":  80,
+                                                    "unique_case_count":  80,
+                                                    "expected_case_set_match":  true,
+                                                    "publication_sample_count":  12,
+                                                    "publication_samples_seconds":  [
+                                                                                        2.5,
+                                                                                        2.765999999945052,
+                                                                                        2.8279999999795109,
+                                                                                        2.875,
+                                                                                        2.8910000000614673,
+                                                                                        2.9529999999795109,
+                                                                                        2.9529999999795109,
+                                                                                        2.984000000054948,
+                                                                                        3.1089999999385327,
+                                                                                        3.2030000000959262,
+                                                                                        3.51500000001397,
+                                                                                        3.640999999945052
+                                                                                    ],
+                                                    "publication_p95_seconds":  3.640999999945052,
+                                                    "publication_sla_seconds":  10,
+                                                    "restore_sample_count":  12,
+                                                    "restore_samples_seconds":  [
+                                                                                    3.9689999999245629,
+                                                                                    4.0940000000409782,
+                                                                                    4.5,
+                                                                                    4.76500000001397,
+                                                                                    4.98499999998603,
+                                                                                    5.0630000000819564,
+                                                                                    5.0790000000270084,
+                                                                                    5.2189999999245629,
+                                                                                    5.26500000001397,
+                                                                                    5.734000000054948,
+                                                                                    6.64000000001397,
+                                                                                    6.6559999999590218
+                                                                                ],
+                                                    "restore_p95_seconds":  6.6559999999590218,
+                                                    "restore_sla_seconds":  120,
+                                                    "ruff_format_check":  "pass_30_paths_no_cache",
+                                                    "ruff_check":  "pass_30_paths_no_cache",
+                                                    "case_results":  [
+                                                                         {
+                                                                             "case_id":  "atomic_decision_outbox",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "source_seq":  1
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "duplicate_original_result",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "conflicting_duplicate",
+                                                                             "environment":  "environment_A",
+                                                                             "original_outbox_id":  "outbox-269756384d9d5c283a41d336949e0d5e",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "checkpoint_hard_limit",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_pack_hard_limit",
+                                                                             "credit":  0,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "admitted":  12,
+                                                                             "case_id":  "publication_batch_cap",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "warning_reforecast",
+                                                                             "environment":  "environment_A",
+                                                                             "phase_margin_bytes":  39845888,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_before_backup",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_backup",
+                                                                             "environment":  "environment_A",
+                                                                             "recovery_result":  "committed",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_snapshot_replace",
+                                                                             "environment":  "environment_A",
+                                                                             "recovery_result":  "committed",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_git_commit",
+                                                                             "environment":  "environment_A",
+                                                                             "recovery_result":  "recovered",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_db_result",
+                                                                             "environment":  "environment_A",
+                                                                             "recovery_result":  "original",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_dirty_tree",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_binary_divergence",
+                                                                             "committed":  "636bd6976b6008af7bc24bb8b9adefd74fd28fa7",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_01",
+                                                                             "elapsed_seconds":  2.8910000000614673,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_02",
+                                                                             "elapsed_seconds":  2.952999999979511,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_03",
+                                                                             "elapsed_seconds":  2.952999999979511,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_04",
+                                                                             "elapsed_seconds":  2.875,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_05",
+                                                                             "elapsed_seconds":  2.765999999945052,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_06",
+                                                                             "elapsed_seconds":  2.984000000054948,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_07",
+                                                                             "elapsed_seconds":  3.640999999945052,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_08",
+                                                                             "elapsed_seconds":  3.1089999999385327,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_09",
+                                                                             "elapsed_seconds":  3.51500000001397,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_10",
+                                                                             "elapsed_seconds":  2.827999999979511,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_11",
+                                                                             "elapsed_seconds":  3.2030000000959262,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_12",
+                                                                             "elapsed_seconds":  2.5,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "path_escape",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "cli_denied_root",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "cli_input_output_collision",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "eol_checkout_invariance",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "toolchain_files":  5
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "eol_missing_attributes_rejected",
+                                                                             "drifted":  [
+                                                                                             "new pipeline/toolchain/k0b01/bootstrap.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/invoke.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/requirements-v1.lock",
+                                                                                             "new pipeline/toolchain/k0b02/invoke-v1.ps1"
+                                                                                         ],
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "scope_mutations":  0
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "clone_only_restore",
+                                                                             "environment":  "environment_A",
+                                                                             "restored_sha256":  "c10651c32a2b3651b3f66c8d34d457c123cfb127622490764ccba30e8ad8198d",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_corrupt_checkpoint",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_incompatible_schema",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_missing_envelope",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_checkpoint_cut_over_immutable_seed",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "fixture_git_config_drift",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_01",
+                                                                             "elapsed_seconds":  6.64000000001397,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_02",
+                                                                             "elapsed_seconds":  4.5,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_03",
+                                                                             "elapsed_seconds":  5.063000000081956,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_04",
+                                                                             "elapsed_seconds":  5.218999999924563,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_05",
+                                                                             "elapsed_seconds":  4.76500000001397,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_06",
+                                                                             "elapsed_seconds":  4.98499999998603,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_07",
+                                                                             "elapsed_seconds":  5.734000000054948,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_08",
+                                                                             "elapsed_seconds":  6.655999999959022,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_09",
+                                                                             "elapsed_seconds":  4.094000000040978,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_10",
+                                                                             "elapsed_seconds":  3.968999999924563,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_11",
+                                                                             "elapsed_seconds":  5.26500000001397,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_12",
+                                                                             "elapsed_seconds":  5.079000000027008,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_valid",
+                                                                             "environment":  "environment_A",
+                                                                             "outputs":  9,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_missing_ninth",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_missing_B_binding",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_A_reverse_B_binding",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_wrong_output_schema",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_registry_semantic_drift",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_duplicate_family",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_multiple_pair_stems_rejected",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_ambiguous_begun_effect",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "abort_unknown_effect",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_v4_to_v5",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "bcdc1a29184ca5a3ab14d89d195d30830a7159b5186df62e43865ffd79c961a8"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_v5_to_v6",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "c6fed1ec64f6df787688f83115944b7775afe9df40896c07837b5e4feba1a66d"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_repeat_readback",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "c6fed1ec64f6df787688f83115944b7775afe9df40896c07837b5e4feba1a66d"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_unknown_schema",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_exception_before_commit",
+                                                                             "durable_user_version":  4,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_loss_before_commit",
+                                                                             "durable_user_version":  4,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_loss_after_commit",
+                                                                             "durable_user_version":  5,
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_before_seal",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_after_seal",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_reopen_or_reorder",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_unknown_partition",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "case_id":  "F15_fifth_trigger",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "trigger_count":  4
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "actual_provider_calls":  0,
+                                                                             "case_id":  "F15_non_model_simulation",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass",
+                                                                             "synthetic":  true
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "case_id":  "post_F15_call_rejection",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_before_source_commit",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_source_commit",
+                                                                             "environment":  "environment_A",
+                                                                             "outbox_id":  "outbox-c73af97a1592eb4d438d1d7cd329eaba",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_first_peer",
+                                                                             "environment":  "environment_A",
+                                                                             "recovered":  true,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_both_peers",
+                                                                             "environment":  "environment_A",
+                                                                             "recovered":  true,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_drift",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_failure_receipt",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_unapproved_pair_stem_rejected",
+                                                                             "environment":  "environment_A",
+                                                                             "result":  "pass"
+                                                                         }
+                                                                     ]
+                                                },
+                                                {
+                                                    "environment":  "environment_B",
+                                                    "temp_target":  "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-artifact-event-implementation-v1-b",
+                                                    "python_executable":  "C:\\Users\\Administrator\\AppData\\Local\\Temp\\2\\pipeline-v2-k0b02-artifact-event-implementation-v1-b\\Scripts\\python.exe",
+                                                    "python_version":  "3.12.7",
+                                                    "sqlite_library_version":  "3.45.3",
+                                                    "pytest_exit_code":  0,
+                                                    "pytest_collected":  66,
+                                                    "pytest_passed":  66,
+                                                    "pytest_failed":  0,
+                                                    "pytest_skipped":  0,
+                                                    "suite_elapsed_seconds":  225.95,
+                                                    "case_report_sha256":  "260b4dc6727b24d22b900fb04d60cf6929b52cb40bdc957ef2f6b9d050affb02",
+                                                    "case_report_bytes":  8927,
+                                                    "case_count":  80,
+                                                    "unique_case_count":  80,
+                                                    "expected_case_set_match":  true,
+                                                    "publication_sample_count":  12,
+                                                    "publication_samples_seconds":  [
+                                                                                        2.5790000000270084,
+                                                                                        2.609000000054948,
+                                                                                        2.6720000000204891,
+                                                                                        2.6870000000344589,
+                                                                                        2.7189999999245629,
+                                                                                        2.9689999999245629,
+                                                                                        2.9690000000409782,
+                                                                                        3.0630000000819564,
+                                                                                        3.1870000000344589,
+                                                                                        3.234000000054948,
+                                                                                        3.2810000000754371,
+                                                                                        3.390999999945052
+                                                                                    ],
+                                                    "publication_p95_seconds":  3.390999999945052,
+                                                    "publication_sla_seconds":  10,
+                                                    "restore_sample_count":  12,
+                                                    "restore_samples_seconds":  [
+                                                                                    4.1720000000204891,
+                                                                                    4.265999999945052,
+                                                                                    4.3589999999385327,
+                                                                                    4.515999999945052,
+                                                                                    4.6410000000614673,
+                                                                                    4.6870000000344589,
+                                                                                    4.7339999999385327,
+                                                                                    4.875,
+                                                                                    4.9070000000065193,
+                                                                                    5.2190000000409782,
+                                                                                    5.39000000001397,
+                                                                                    5.484000000054948
+                                                                                ],
+                                                    "restore_p95_seconds":  5.484000000054948,
+                                                    "restore_sla_seconds":  120,
+                                                    "ruff_format_check":  "pass_30_paths_no_cache",
+                                                    "ruff_check":  "pass_30_paths_no_cache",
+                                                    "case_results":  [
+                                                                         {
+                                                                             "case_id":  "atomic_decision_outbox",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "source_seq":  1
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "duplicate_original_result",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "conflicting_duplicate",
+                                                                             "environment":  "environment_B",
+                                                                             "original_outbox_id":  "outbox-269756384d9d5c283a41d336949e0d5e",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "checkpoint_hard_limit",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_pack_hard_limit",
+                                                                             "credit":  0,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "admitted":  12,
+                                                                             "case_id":  "publication_batch_cap",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "warning_reforecast",
+                                                                             "environment":  "environment_B",
+                                                                             "phase_margin_bytes":  39845888,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_before_backup",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_backup",
+                                                                             "environment":  "environment_B",
+                                                                             "recovery_result":  "committed",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_snapshot_replace",
+                                                                             "environment":  "environment_B",
+                                                                             "recovery_result":  "committed",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_git_commit",
+                                                                             "environment":  "environment_B",
+                                                                             "recovery_result":  "recovered",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_after_db_result",
+                                                                             "environment":  "environment_B",
+                                                                             "recovery_result":  "original",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_dirty_tree",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_binary_divergence",
+                                                                             "committed":  "f56168d33d34c50a7575c9200bdbb09b809254cc",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_01",
+                                                                             "elapsed_seconds":  2.687000000034459,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_02",
+                                                                             "elapsed_seconds":  2.5790000000270084,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_03",
+                                                                             "elapsed_seconds":  2.672000000020489,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_04",
+                                                                             "elapsed_seconds":  2.609000000054948,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_05",
+                                                                             "elapsed_seconds":  3.187000000034459,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_06",
+                                                                             "elapsed_seconds":  3.281000000075437,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_07",
+                                                                             "elapsed_seconds":  3.390999999945052,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_08",
+                                                                             "elapsed_seconds":  3.0630000000819564,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_09",
+                                                                             "elapsed_seconds":  2.718999999924563,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_10",
+                                                                             "elapsed_seconds":  2.969000000040978,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_11",
+                                                                             "elapsed_seconds":  2.968999999924563,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "publication_performance_12",
+                                                                             "elapsed_seconds":  3.234000000054948,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "path_escape",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "cli_denied_root",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "cli_input_output_collision",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "eol_checkout_invariance",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "toolchain_files":  5
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "eol_missing_attributes_rejected",
+                                                                             "drifted":  [
+                                                                                             "new pipeline/toolchain/k0b01/bootstrap.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/invoke.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+                                                                                             "new pipeline/toolchain/k0b01/requirements-v1.lock",
+                                                                                             "new pipeline/toolchain/k0b02/invoke-v1.ps1"
+                                                                                         ],
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "scope_mutations":  0
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "clone_only_restore",
+                                                                             "environment":  "environment_B",
+                                                                             "restored_sha256":  "6bfd30bfaa24b816cefb4d730bbe2e9a233ba169285b84e30b13052e5d96a35b",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_corrupt_checkpoint",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_incompatible_schema",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_missing_envelope",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_checkpoint_cut_over_immutable_seed",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "fixture_git_config_drift",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_01",
+                                                                             "elapsed_seconds":  4.515999999945052,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_02",
+                                                                             "elapsed_seconds":  5.484000000054948,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_03",
+                                                                             "elapsed_seconds":  5.219000000040978,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_04",
+                                                                             "elapsed_seconds":  4.358999999938533,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_05",
+                                                                             "elapsed_seconds":  4.641000000061467,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_06",
+                                                                             "elapsed_seconds":  4.265999999945052,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_07",
+                                                                             "elapsed_seconds":  4.687000000034459,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_08",
+                                                                             "elapsed_seconds":  4.172000000020489,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_09",
+                                                                             "elapsed_seconds":  4.733999999938533,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_10",
+                                                                             "elapsed_seconds":  4.907000000006519,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_11",
+                                                                             "elapsed_seconds":  5.39000000001397,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "restore_performance_12",
+                                                                             "elapsed_seconds":  4.875,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_valid",
+                                                                             "environment":  "environment_B",
+                                                                             "outputs":  9,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_missing_ninth",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_missing_B_binding",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_A_reverse_B_binding",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_wrong_output_schema",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_registry_semantic_drift",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_duplicate_family",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "compile_multiple_pair_stems_rejected",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "replay_ambiguous_begun_effect",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "abort_unknown_effect",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_v4_to_v5",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "bcdc1a29184ca5a3ab14d89d195d30830a7159b5186df62e43865ffd79c961a8"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_v5_to_v6",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "c6fed1ec64f6df787688f83115944b7775afe9df40896c07837b5e4feba1a66d"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_repeat_readback",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "schema_fingerprint":  "c6fed1ec64f6df787688f83115944b7775afe9df40896c07837b5e4feba1a66d"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_unknown_schema",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_exception_before_commit",
+                                                                             "durable_user_version":  4,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_loss_before_commit",
+                                                                             "durable_user_version":  4,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "migration_loss_after_commit",
+                                                                             "durable_user_version":  5,
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_before_seal",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_after_seal",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_reopen_or_reorder",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "phase_unknown_partition",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "case_id":  "F15_fifth_trigger",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "trigger_count":  4
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "actual_provider_calls":  0,
+                                                                             "case_id":  "F15_non_model_simulation",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass",
+                                                                             "synthetic":  true
+                                                                         },
+                                                                         {
+                                                                             "actual_model_calls":  0,
+                                                                             "case_id":  "post_F15_call_rejection",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_before_source_commit",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_source_commit",
+                                                                             "environment":  "environment_B",
+                                                                             "outbox_id":  "outbox-c73af97a1592eb4d438d1d7cd329eaba",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_first_peer",
+                                                                             "environment":  "environment_B",
+                                                                             "recovered":  true,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_after_both_peers",
+                                                                             "environment":  "environment_B",
+                                                                             "recovered":  true,
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_drift",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_failure_receipt",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         },
+                                                                         {
+                                                                             "case_id":  "projection_unapproved_pair_stem_rejected",
+                                                                             "environment":  "environment_B",
+                                                                             "result":  "pass"
+                                                                         }
+                                                                     ]
+                                                }
+                                            ]
+                       },
+    "verified_properties":  [
+                                "additive_v4_to_v5_to_v6_migrations_and_repeat_readback",
+                                "atomic_decision_event_outbox_and_stable_duplicate_result",
+                                "singleton_projection_stem_in_schema_compiler_runtime",
+                                "same_source_pair_atomic_readiness_and_terminal_drift_block",
+                                "fixture_local_LF_Git_config_and_blob_worktree_byte_invariance",
+                                "checkpoint_publication_footer_tree_snapshot_and_source_cut_readback",
+                                "clone_only_restore_with_origin_removed_before_checkout",
+                                "twelve_actual_process_loss_boundaries",
+                                "phase_partition_seals_F15_synthetic_only",
+                                "checkpoint_and_phase_budget_guards",
+                                "fixture_git_config_drift_blocks_before_mutation",
+                                "two_locked_environment_80_case_identity",
+                                "cached_diff_blank_EOF_remediation_revalidated"
+                            ],
+    "technical_defects_corrected_under_exception":  [
+                                                        "PowerShell_5_1_absolute_path_compatibility",
+                                                        "v4_migration_trigger_and_writable_schema_order",
+                                                        "Windows_read_handle_fsync_mode",
+                                                        "worker_PID_termination_and_durable_marker_close_race",
+                                                        "publication_temp_checkpoint_recovery_and_terminal_drift_precedence",
+                                                        "projection_terminal_drift_preserves_original_result",
+                                                        "historical_catalog_subset_comparison",
+                                                        "renderer_v5_baseline_pin_matches_approved_request",
+                                                        "two_migration_extra_final_LF_bytes"
+                                                    ],
+    "limitations":  [
+                        "fixture_only_no_real_Alpha0_execution",
+                        "no_real_F15_or_model_execution",
+                        "no_runtime_authority",
+                        "no_CI_claim",
+                        "no_push_merge_deploy_release"
+                    ]
+}

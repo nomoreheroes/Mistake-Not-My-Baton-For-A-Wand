@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.alpha0-registry-v2.schema",
+  "type": "object",
+  "properties": {
+    "registry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 2
+    },
+    "version": {
+      "type": "string",
+      "const": "2.0.0"
+    },
+    "profile": {
+      "type": "string",
+      "const": "Alpha0"
+    },
+    "claim_layer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 21,
+      "maxItems": 21
+    },
+    "route_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "phase_order": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "output_families": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "pipeline-v2.k0b02.inline.output-families",
+      "type": "object",
+      "properties": {
+        "registry_and_routing": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "resource_and_budget": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "registry_and_routing",
+        "resource_and_budget"
+      ],
+      "additionalProperties": false
+    },
+    "projection_checkpoint": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "pipeline-v2.k0b02.inline.projection-checkpoint",
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "const": "pipeline-v2.k0b02.projection-checkpoint.v1"
+        },
+        "schema_version": {
+          "type": "integer",
+          "const": 1
+        },
+        "version": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "runtime_enabled": {
+          "type": "boolean",
+          "const": false
+        },
+        "pair_stems": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "fixture-decision"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "checkpoint_target": {
+          "type": "string",
+          "const": ".pipeline/history/pipeline-checkpoint.sqlite3"
+        },
+        "replay_envelope": {
+          "type": "string",
+          "const": ".pipeline/replay/invocation-envelope.json"
+        }
+      },
+      "required": [
+        "profile_id",
+        "schema_version",
+        "version",
+        "runtime_enabled",
+        "pair_stems",
+        "checkpoint_target",
+        "replay_envelope"
+      ],
+      "additionalProperties": false
+    },
+    "supersedes_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "registry_id",
+    "schema_version",
+    "version",
+    "profile",
+    "claim_layer",
+    "event_types",
+    "route_ids",
+    "phase_order",
+    "output_families",
+    "projection_checkpoint",
+    "supersedes_sha256"
+  ],
+  "additionalProperties": false
+}

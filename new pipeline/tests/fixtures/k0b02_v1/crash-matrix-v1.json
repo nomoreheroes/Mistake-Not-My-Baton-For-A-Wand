@@ -1,0 +1,17 @@
+{
+  "boundaries": [
+    "new_migration_before_commit",
+    "new_migration_after_commit",
+    "decision_outbox_before_commit",
+    "decision_outbox_after_commit_before_response",
+    "first_peer_replaced",
+    "both_peers_replaced_before_result",
+    "backup_verified",
+    "snapshot_replaced",
+    "coordination_Git_commit_before_DB_result",
+    "publication_DB_result",
+    "terminal_checkpoint_before_seal",
+    "seal_committed_before_successor_admission"
+  ],
+  "schema_version": 1
+}

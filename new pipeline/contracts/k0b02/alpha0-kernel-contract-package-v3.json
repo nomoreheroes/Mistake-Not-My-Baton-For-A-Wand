@@ -1,0 +1,160 @@
+{
+    "canonicalization":  "ordinal_sorted_canonical_JSON_UTF8_LF_one_final_LF",
+    "capabilities":  [
+
+                     ],
+    "compiled_output_family_count":  9,
+    "compiler_ownership":  {
+                               "A":  [
+                                         "compiled_artifact_event_profile",
+                                         "compiled_event_reachability_graph",
+                                         "compiled_subscription_terminal_snapshot",
+                                         "compiled_s_route_table_v2",
+                                         "compiled_fanout_barrier_profile",
+                                         "compiled_projection_checkpoint_profile"
+                                     ],
+                               "B":  [
+                                         "compiled_resource_forecast",
+                                         "compiled_checkpoint_phase_partition_v1",
+                                         "compiled_checkpoint_publication_budget_v2"
+                                     ]
+                           },
+    "compiler_sources":  [
+                             {
+                                 "path":  "new pipeline/harness/k0b02_v1/canonical.py",
+                                 "sha256":  "40356c8764bb6ead3c560389af811912ad379352a3d53af2fec95a823b5a4361",
+                                 "bytes":  5589
+                             },
+                             {
+                                 "path":  "new pipeline/harness/k0b02_v1/contract.py",
+                                 "sha256":  "0bc36e12a3d358ac57b5ad2b2c5fa2d820f76e67bb4288f78c9cca2a73d3abae",
+                                 "bytes":  9537
+                             },
+                             {
+                                 "path":  "new pipeline/harness/k0b02_v1/registry_compiler.py",
+                                 "sha256":  "78efb8ad8f0cb24c4136e000ec31990681872ad5572099371fdb0b2eebf1c1b5",
+                                 "bytes":  6168
+                             },
+                             {
+                                 "path":  "new pipeline/harness/k0b02_v1/budget_compiler.py",
+                                 "sha256":  "2ebb999648695be7df2e4701cf268170f0bf888e7f49d936075b903bcd8042c4",
+                                 "bytes":  6393
+                             },
+                             {
+                                 "path":  "new pipeline/harness/k0b02_v1/binary_budget.py",
+                                 "sha256":  "f44ffc99484d0944e4d634110cbb51f76afcfa6c64727610ca7279639ad4d0c3",
+                                 "bytes":  8319
+                             }
+                         ],
+    "contract_schemas":  [
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/alpha0-registry-v2.schema.json",
+                                 "sha256":  "24eb458e6a106f724578383ba2cdb555019056b38e73845257e63468a2b1a303",
+                                 "bytes":  3515
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/compiled-projection-checkpoint-profile-v1.schema.json",
+                                 "sha256":  "c3894ff3fc153c7a57ea33ed31f07b0b5769ddb425a233290033d89fad2b47f9",
+                                 "bytes":  2657
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/projection-intent-v1.schema.json",
+                                 "sha256":  "63e0bc6d091870559398066f370469f9de42fa051726849ac28eed553a3b8f2b",
+                                 "bytes":  1985
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/projection-pair-receipt-v1.schema.json",
+                                 "sha256":  "325d57276cd95b582d021c65d1d923986a6e01d32872bfaef74be2b17847c97c",
+                                 "bytes":  1356
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/checkpoint-publication-request-v1.schema.json",
+                                 "sha256":  "c7c63229a6e73bbb49564f59b3782ce78dbfe4fe25d1ca823b1075c94bd4b1de",
+                                 "bytes":  1466
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/checkpoint-publication-receipt-v1.schema.json",
+                                 "sha256":  "b41a0709965eba58a0f92944afdfa5b85e7ff2900d8d0faf49410c32f45f05c1",
+                                 "bytes":  2282
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/replay-envelope-v1.schema.json",
+                                 "sha256":  "22cff446e23422440d104507902bd1920eb1c73ddd1f7b59c7c65f7a636e1f9c",
+                                 "bytes":  983
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/replay-receipt-v1.schema.json",
+                                 "sha256":  "aa77751313240daa332d5bc0294194ce17539ae3ff95b3806b27ad6c6bc65696",
+                                 "bytes":  1294
+                             },
+                             {
+                                 "path":  "new pipeline/contracts/k0b02/phase-seal-v1.schema.json",
+                                 "sha256":  "3513d4288eae718f7dd78565ecebbd61f2295ce9f8102ed226090313d1899e71",
+                                 "bytes":  1932
+                             }
+                         ],
+    "event_schema_count":  21,
+    "format_profile":  "strict_JSON_UTF8_no_BOM_LF_one_final_LF_duplicate_keys_forbidden",
+    "input_manifest_locator":  "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml",
+    "migrations":  [
+                       {
+                           "path":  "new pipeline/harness/migrations/0001_k0a01.sql",
+                           "sha256":  "9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3",
+                           "bytes":  28893
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0002_k0a02.sql",
+                           "sha256":  "7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b",
+                           "bytes":  17281
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0003_k0a03.sql",
+                           "sha256":  "0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b",
+                           "bytes":  16081
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0004_k0b01_v2.sql",
+                           "sha256":  "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c",
+                           "bytes":  18747
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0005_k0b02_publication_replay_v1.sql",
+                           "sha256":  "bc16fc9524e42cda207c1dd6fd763dcb7b6471a02e327bb29239b4db782cb5d1",
+                           "bytes":  6758
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0006_k0b02_checkpoint_phase_partition_v1.sql",
+                           "sha256":  "c16ddbc367f84d2240502e0dbc88af6a70ced057054db7742d24805ea9ff47b4",
+                           "bytes":  2840
+                       }
+                   ],
+    "package_id":  "pipeline-v2.alpha0.kernel-contract-package",
+    "package_version":  "3.0.0",
+    "registry_complete_file_sha256":  "e6216a0eb36a7d90693d2e0d2251318d00d0bf38ef546a71fa6a586b9ed81dce",
+    "registry_locator":  "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json",
+    "route_count":  5,
+    "runtime_enabled":  false,
+    "schema_version":  1,
+    "supported_JSON_Schema_keywords":  [
+                                           "$schema",
+                                           "$id",
+                                           "type",
+                                           "properties",
+                                           "required",
+                                           "additionalProperties",
+                                           "items",
+                                           "minItems",
+                                           "maxItems",
+                                           "uniqueItems",
+                                           "minLength",
+                                           "maxLength",
+                                           "minimum",
+                                           "maximum",
+                                           "pattern",
+                                           "enum",
+                                           "const",
+                                           "oneOf",
+                                           "anyOf"
+                                       ],
+    "typed_digest_profile":  "pipeline-v2.sqlite-content-digest-v1"
+}

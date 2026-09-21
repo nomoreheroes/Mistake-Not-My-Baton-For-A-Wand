@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.replay-envelope-v1.schema",
+  "type": "object",
+  "properties": {
+    "envelope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_chain_identity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partition_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "profile_and_compiler_and_schema_pins": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "minItems": 1
+    },
+    "invocation_and_artifact_version_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "envelope_id",
+    "run_chain_identity",
+    "partition_digest",
+    "profile_and_compiler_and_schema_pins",
+    "invocation_and_artifact_version_references"
+  ],
+  "additionalProperties": false
+}

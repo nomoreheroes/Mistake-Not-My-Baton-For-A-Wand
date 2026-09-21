@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.checkpoint-publication-request-v1.schema",
+  "type": "object",
+  "properties": {
+    "publication_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partition_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "receipt_high_water": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "outbox_high_water": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ready_pair_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "expected_Git_parent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predecessor_publication_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checkpoint_target": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "publication_id",
+    "run_id",
+    "phase_id",
+    "partition_digest",
+    "source_seq",
+    "receipt_high_water",
+    "outbox_high_water",
+    "ready_pair_set_sha256",
+    "expected_Git_parent",
+    "predecessor_publication_id",
+    "checkpoint_target"
+  ],
+  "additionalProperties": false
+}

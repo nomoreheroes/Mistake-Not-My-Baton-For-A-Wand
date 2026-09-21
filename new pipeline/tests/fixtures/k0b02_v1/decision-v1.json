@@ -1,0 +1,7 @@
+{
+  "decision_version_id": "decision-v1",
+  "kind": "fixture-decision",
+  "result": "approve",
+  "schema_version": 1,
+  "subject": "bounded-k0b02-fixture"
+}

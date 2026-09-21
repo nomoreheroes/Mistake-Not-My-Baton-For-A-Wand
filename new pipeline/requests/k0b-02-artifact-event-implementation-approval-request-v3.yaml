@@ -1,0 +1,1716 @@
+{
+  "request_id": "pipeline-v2.k0b-02.artifact-event-implementation-approval-request-v3",
+  "schema_version": 1,
+  "version": "3.0.0",
+  "prepared_on": "2026-09-20",
+  "work_item_id": "K0b-02",
+  "status": "non_authorizing_proposed_scope",
+  "document_kind": "owner_reviewable_bounded_fixture_implementation_proposal",
+  "serialization": "strict_JSON_compatible_YAML_UTF8_no_BOM_LF_one_final_LF_complete_file_SHA256_only_no_self_hash",
+  "current_permission": {
+    "semantic_reads": [
+      "new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json",
+      "new pipeline/harness/k0b01_v2/store.py",
+      "new pipeline/harness/k0b01_v2/contract.py",
+      "new pipeline/harness/k0b01_v2/registry_compiler.py",
+      "new pipeline/harness/k0b01_v2/budget_compiler.py",
+      "new pipeline/harness/migrations/0004_k0b01_v2.sql",
+      "new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json",
+      "new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json",
+      ".gitattributes",
+      "new pipeline/harness/k0b01_v2/cli.py",
+      "new pipeline/tests/k0b01_v2/migration_fault_worker.py"
+    ],
+    "request_creation": true,
+    "implementation_execution": false,
+    "tests": false,
+    "network": false,
+    "temp_targets": false,
+    "staging": false,
+    "commit": false,
+    "state_gates_changes": false,
+    "runtime_authority": "none"
+  },
+  "authority": {
+    "execution_requires": "separate_owner_message_with_the_materialized_request_complete_lowercase_64_hex_SHA256_and_explicit_full_scope_approval; file_creation_permission_is_separate",
+    "owner_message_identity": "conversation_only_not_cryptographically_authenticated; unknown_message_ids_and_timestamps_remain_unknown",
+    "one_request_does_not_self_authorize": true
+  },
+  "baseline": {
+    "HEAD": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+    "parent": "d19e68a26102a07cfe524e36ad67f9c5f5e4cd13",
+    "tree": "4974b032ebbc502e8afe7861b3b24aea509c5133",
+    "entry_worktree": "at_v3_draft_only_exact_v1_and_v2_untracked_with_confirmed_bytes; at_execution_allow_only_exact_v1_v2_archives_and_separately_created_v3_request_with_confirmed_bytes; no_other_changes",
+    "index": "must_be_empty; no_staging_authority_from_prior_request_creation_or_review_remediation",
+    "state_status": "K0b_02_prerequisites_complete_implementation_not_authorized",
+    "K0b_02_status": "prerequisites_complete_implementation_not_authorized",
+    "open_gate_count": 7,
+    "closed_gate_count": 10
+  },
+  "read_scope": {
+    "existing_semantic_file_count": 93,
+    "existing_semantic_files": [
+      {
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+        "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+        "bytes": 97569,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-00-checkpoint-phase-partition-addendum-v2.md",
+        "sha256": "838fbec03184c587286dd37bc757a0fe7717d68c70454aef34650f51ba7db46c",
+        "bytes": 13018,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-00-shared-artifact-event-plane-delta-v2.md",
+        "sha256": "9586c4536144b612be58d6d01cc13f6437d31898c9bb40fb1c518602086a26ce",
+        "bytes": 28613,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-00-shared-control-plane-delta-v2.md",
+        "sha256": "ce8c8a3160f52dae4f49d753f60ac2df202496c40697bca1d1cc5775908b17e3",
+        "bytes": 26784,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-01-planning-package-v1.2.md",
+        "sha256": "f6c297a111346a017cf12925d8d3f4fe8d0a168b0a8e34737f93a43edb4775ff",
+        "bytes": 23529,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-01-planning-package-v1.3.md",
+        "sha256": "4a039d27d13b52553d3ec860f9c1bfdef489f95c43490d8763ca069656b874e4",
+        "bytes": 15415,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-02-planning-package-v1.1.md",
+        "sha256": "9c5a634984688323f44c44a404aff74dbca12b7136588d886e1e05f674ddf946",
+        "bytes": 21778,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/architecture/k0b-02-planning-package-v1.md",
+        "sha256": "03a6f09b80077de56abd026a5f13fd10e09f7203057152d3df9822e03c866c18",
+        "bytes": 18289,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/contracts/k0a02/f00-contract-package-v1.json",
+        "sha256": "5b8b677aa98416d85db29a12bb0369e98369dcdfae98249dfaf813eeb08a19c6",
+        "bytes": 18221,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v2.json",
+        "sha256": "a65cc8b000a774afc366e137a311fde5fe34e69823da65a2bfb84a52a3fee5a6",
+        "bytes": 10857,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/approval.granted-v1.schema.json",
+        "sha256": "2053b8a9ccea979f0a62b2dc4edd162e23c179b5ef26b9703a63dda8e05525ba",
+        "bytes": 3195,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/approval.rejected-v1.schema.json",
+        "sha256": "3f926857c21bd6e9a5acf119957823665f72fa4894612f8d5fbea3a8642eae64",
+        "bytes": 3204,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/approval.requested-v1.schema.json",
+        "sha256": "b6283bb671591d5faabbe8085f1663d4ba91d8aa2a4b6e217b4f2483dcad2c68",
+        "bytes": 3192,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/artifact.published-v1.schema.json",
+        "sha256": "1ba0c8fad2f400de9a59e30522972c048a33aa2625dca77c2ad29fc3d61ffd92",
+        "bytes": 3218,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/artifact.version_created-v1.schema.json",
+        "sha256": "a3f26d2b8f0b0131831aa916fca3321752c89baafd73d8c56175f282a9a34156",
+        "bytes": 4736,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/command.received-v1.schema.json",
+        "sha256": "d4bf43f2491cefba6f37733be7db41cf15248c4520a926040e8b6cff9fc68839",
+        "bytes": 4720,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/error.schema_mismatch-v1.schema.json",
+        "sha256": "6e23ad8b69d1028830b0095584f8ea7b67216d4e95374742c118d79108798906",
+        "bytes": 3193,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/error.security_policy-v1.schema.json",
+        "sha256": "2a93cbfbf39959e2c77ebd667e790b0cfba277c1f5365fd82cafe46bc62a2bc3",
+        "bytes": 3207,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/error.tool_failure-v1.schema.json",
+        "sha256": "3175e2c1685b571dec36c28e619cbcc37e1bebc27d80a4796801693ad2146a97",
+        "bytes": 3308,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/gate.passed-v1.schema.json",
+        "sha256": "d07074be96275dc457c6b82776a8b9b52a1276c8bba4b232a257190faa8e7c01",
+        "bytes": 2962,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/handoff.ready-v1.schema.json",
+        "sha256": "df76f1fd46eed01fe6b364172d268a277bd90e656a1a406b38f77a4db69dd787",
+        "bytes": 4489,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/meta.incident_detected-v1.schema.json",
+        "sha256": "b72a3b80f3c01ad3422eb46b343a84bf4b776bcc20bdfca899a66c9b23d53355",
+        "bytes": 3033,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/projection.failed-v1.schema.json",
+        "sha256": "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5",
+        "bytes": 3182,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/projection.requested-v1.schema.json",
+        "sha256": "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454",
+        "bytes": 3212,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/projection.written-v1.schema.json",
+        "sha256": "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024",
+        "bytes": 3149,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/revision.requested-v1.schema.json",
+        "sha256": "9f82ec85b9d53fcf641f775b57f2f817f0061d77a54abd5be3d10d3911a5283d",
+        "bytes": 3377,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/run.abort_requested-v1.schema.json",
+        "sha256": "363d5a6a078c7b7a0d49d585173619bef2ec4424e8713f6adfaed80e7db6711f",
+        "bytes": 3033,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/run.aborted-v1.schema.json",
+        "sha256": "4087e73cb751b9024f46b2a1b42c024bd9aefe1ec6b45d5c7413c8bafec19d06",
+        "bytes": 3455,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/run.blocked-v1.schema.json",
+        "sha256": "d36e691528f2aa2903b281b268e421ab842a16a122ea6c6ad3acc7de72140f21",
+        "bytes": 3590,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/run.completed-v1.schema.json",
+        "sha256": "da16c92da7558151b54669bce97d912468d7332fd6322c6f90cad8edf1b5a62d",
+        "bytes": 5061,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/contracts/k0b01/events/run.started-v1.schema.json",
+        "sha256": "7a941acd176757f0682a781094b0e0d79d9dcc7654f6ec7502353ecbc82f64fe",
+        "bytes": 4572,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/decisions/d0-01-full-route-forecast.yaml",
+        "sha256": "7e8a8da36c982b21bc25e1bbd1b1dd495f36f92446e7afbef4c6ce8cc8683840",
+        "bytes": 42771,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-00-final-architecture-package-owner-disposition-v1.yaml",
+        "sha256": "544a6160fc27be348794179f44b44080b87bf3f53c0dd1b66baf9c7d1a40fe9d",
+        "bytes": 15509,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-01-b02-binary-budget-owner-disposition-v1.yaml",
+        "sha256": "349997f22c6fe33a2bf5bae0b6090a409ff306cb4b96020a9c3745c2aa1b33e6",
+        "bytes": 3465,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-01-final-implementation-owner-disposition-v2.yaml",
+        "sha256": "474d49857a91fd1177560e0ba8ac46f90d56a79de5f41e373febc1440371ccb2",
+        "bytes": 42360,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-prerequisite-transition-owner-disposition-v1.yaml",
+        "sha256": "4532c26b67fa33da04a4464c413963b7b1131896e421c9ee9935851f2b932eaf",
+        "bytes": 13879,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml",
+        "sha256": "10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28",
+        "bytes": 27337,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-00-forecast-binary-reconciliation-v3.yaml",
+        "sha256": "d3f9bd18ba15c2d7e791a8dc277011711cc8b7ef6788eb4c0ccdfecdfd2f71cb",
+        "bytes": 5734,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-00-updated-forecast-v3.yaml",
+        "sha256": "ed65d6e3c046c81c2e1e10efd4ac152bba5cd2cc1783b4d6b2102c788accdc8a",
+        "bytes": 8394,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-b02-binary-size-recalculation-v1.yaml",
+        "sha256": "5ebc6ba23898521dc6547ead18b5dc5fc1c731b4d9ecb51df804a0689ad8d6e1",
+        "bytes": 3745,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-compiled-output-manifest-v2.yaml",
+        "sha256": "39d50076b809f6515a8d7e139a49594a25fe4212b0421d6cc1f068a155fd84e2",
+        "bytes": 73340,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml",
+        "sha256": "25b8c8458cf9d20f26bd8538fd69a4a5364d3e0a424350d31c65c8a3084e5a0d",
+        "bytes": 69439,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-session-completion-v1.yaml",
+        "sha256": "2b2c09f4e8cd3e56edec7e62cd78d6328e0c14b45553f052eacb97fb6f7fc9e6",
+        "bytes": 26696,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-session-entry-v1.yaml",
+        "sha256": "67560a802711261c22b35ad3e9bae8dd4b3037aba4da84faebc728c8efe6a6a5",
+        "bytes": 6349,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-implementation-validation-v2.yaml",
+        "sha256": "84becb0ebb0af784aa33c7744d424fdec0502af7621173e5a500bdf9a0f5ef05",
+        "bytes": 1000443,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-registry-routing-compiler-receipt-v2.yaml",
+        "sha256": "fcfdb3b8cfe6cadb2f033edfae94ab9ecd380ba514119815ab11c713fc0e07ef",
+        "bytes": 59064,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-resource-budget-compiler-receipt-v2.yaml",
+        "sha256": "f80a7eb34ec4385c8c1b4e0f83d7e9a86033f6b975c46887c7ed724b5489f1f5",
+        "bytes": 23021,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-proposal-v1.yaml",
+        "sha256": "219f94076b582d52c94b041f389e3e236b04fccdfe53d607000c3a790ae83a8d",
+        "bytes": 8370,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-prerequisite-gate-closure-v1.yaml",
+        "sha256": "3b279e9fe7fd2a6fff27c26e77060e874c32d55eaca288b1a704c3904f3fa59d",
+        "bytes": 5853,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-renderer-v4-validation-v1.yaml",
+        "sha256": "3e8704fc23da74e5e0c9a8c690e3a3a4da573c1200dd2af0609a8eb6402acc60",
+        "bytes": 63285,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-transition-document-check-v1.yaml",
+        "sha256": "c79deba2f03c543b508130b88af8e2b04d329a7273a269a687e5315a39a5180a",
+        "bytes": 25181,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/__init__.py",
+        "sha256": "f15ae132a25c343dcefffb37f8ae28754a8c1f9eda5443f64132661b99faf92c",
+        "bytes": 102,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/binary_budget.py",
+        "sha256": "f44ffc99484d0944e4d634110cbb51f76afcfa6c64727610ca7279639ad4d0c3",
+        "bytes": 8319,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/budget_compiler.py",
+        "sha256": "b8280dc657533e8b4358b1c371362430650bddd6777b6825d4651b73bbea0f01",
+        "bytes": 34169,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/canonical.py",
+        "sha256": "40356c8764bb6ead3c560389af811912ad379352a3d53af2fec95a823b5a4361",
+        "bytes": 5589,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/contract.py",
+        "sha256": "61e9d1ba7041ac60a44e622a01e038ed92419ace93db54d62a917ef48f374e99",
+        "bytes": 11802,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/digest.py",
+        "sha256": "57a056d5cef1d145365d1398c0332d1a6907ff914b61e7b92df77c87b71ddede",
+        "bytes": 8799,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-validation-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/registry_compiler.py",
+        "sha256": "1ea533e4f01907a6b4ac270dd348ddb935f6f0d25949ff346af7874131f7c00e",
+        "bytes": 26633,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/store.py",
+        "sha256": "3e4704066c876a59ddb87d00f5f158119c241df15d7960f683dc699792c28641",
+        "bytes": 25507,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/harness/migrations/0001_k0a01.sql",
+        "sha256": "9901b21aa733611a36191f07cb139b7a79b5d73fd0184e6347792b091adf4dc3",
+        "bytes": 28893,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/migrations/0002_k0a02.sql",
+        "sha256": "7539ab85afaddac2b520f806787177d78106a934e05f5e2a2229c3ef13c8456b",
+        "bytes": 17281,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/migrations/0003_k0a03.sql",
+        "sha256": "0e0b59b111e53406158c6d58ce533ab5b4676e90a6f1f9261583f1b73a79557b",
+        "bytes": 16081,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/harness/migrations/0004_k0b01_v2.sql",
+        "sha256": "cfecb77483e0ead7b6141a3dbd85e6145ab2722eebca07773d64de5d2b487d6c",
+        "bytes": 18747,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+        "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+        "bytes": 15226,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/registry/alpha0/alpha0-routing-contract-v1.json",
+        "sha256": "38f0ad9652fde5b26268be476347e119be864110f3d4b2fbcc0d4682187f232f",
+        "bytes": 37286,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/registry/authority-confirmation/v1.yaml",
+        "sha256": "b597423cb20687ce801d1ee2ad13df1bf1a603c374cad2b7680b22158bc18ecd",
+        "bytes": 3170,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/registry/checkpoint-budget-policy/k0b-phase-partition-v1.yaml",
+        "sha256": "ed224c7473810be838c2c22129d567c337bd16fd13532efb893074e684367ce8",
+        "bytes": 6926,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/registry/checkpoint-budget-policy/v1.yaml",
+        "sha256": "8e9696916c939c6d9fa337c7bddc8b022c7657a2c105c0e51773b4c6ba1a67f3",
+        "bytes": 3594,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": "new pipeline/registry/resource-budget-policy/k0b01-policy-v2.json",
+        "sha256": "556c84527a865c5d04b0c0bfd1fa8e79c58c3388d9c63f83049157851feaa42a",
+        "bytes": 9425,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/registry/resource-budget-policy/k0b01-reference-inputs-v2.json",
+        "sha256": "090ab45f0f4a6bcfea0413c850cd9789ce17461c1ee1ef6acc5ba6e355963055",
+        "bytes": 30070,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_eight_file_read_turn_not_reverified_in_v2_draft_turn"
+      },
+      {
+        "path": "new pipeline/requests/k0b-01-final-implementation-disposition-and-bounded-implementation-approval-request-v1.yaml",
+        "sha256": "77f31ede0443d1c2d4b6ab6c332b6b250876b225e2574b8d3f789adfa6125181",
+        "bytes": 99133,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-completion-prerequisites-and-bounded-planning-approval-request-v1.yaml",
+        "sha256": "a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c",
+        "bytes": 35951,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-prerequisite-transition-approval-request-v1.yaml",
+        "sha256": "33ffc19e51b866cbd66b844c7582e237660020a2b9da3c3a2afc62782717a8f3",
+        "bytes": 25016,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/reviews/k0b-01-human-only-review-v1.yaml",
+        "sha256": "522c3b0e5227f5a6620668ec78c4870b2370faa5d95d8c5132f5a6a7e4fd5140",
+        "bytes": 8659,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "f876ad6f02402cd3eb73f175bfd2362acd479165ae070881b7fd877e35ca8a28",
+        "bytes": 39396,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b01_v3/projection-profile-v3.yaml",
+        "sha256": "90628af8fad69b9941665074af7a9876f3b48654bab37a4b19fb57c3d41b54f7",
+        "bytes": 55118,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b01_v3/renderer.py",
+        "sha256": "4b4b5e84211a9f3cf29d22b8552405641680db2f413fca64ce39d1b03fdadc60",
+        "bytes": 18588,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
+        "sha256": "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d",
+        "bytes": 131959,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v4/renderer.py",
+        "sha256": "c540338fbf4e328db30e0fd960d5adace29158e149120da67316a3d732f910fa",
+        "bytes": 25259,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "17624062836c03a45d0fb6c192cb78ae3d3c8cc441fdb02e8bcc73225e4f4550",
+        "bytes": 38960,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/tests/state/test_k0b02_renderer_v4.py",
+        "sha256": "af2eb7460ca59d58d04c1d1edb4ffc4928b90922a3fef55cd88dc2f203e0ce19",
+        "bytes": 14603,
+        "verification": "committed_prerequisite_transition_package"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/bootstrap.ps1",
+        "sha256": "557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5",
+        "bytes": 4613,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/invoke.ps1",
+        "sha256": "6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197",
+        "bytes": 3928,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+        "sha256": "249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c",
+        "bytes": 4912,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+        "sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+        "bytes": 1142,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+        "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+        "bytes": 5688,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/validate_toolchain.py",
+        "sha256": "86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a",
+        "bytes": 14851,
+        "verification": "previous_approved_documentary_input"
+      },
+      {
+        "path": "new pipeline/worksheets/k0a-00-budget-reference-v1.yaml",
+        "sha256": "eab713455e593d556ee4c52668fe202649f969d79a6ebfa17ad10b237b4503f9",
+        "bytes": 5022,
+        "verification": "recorded_pin_from_new pipeline/evidence/k0b-01-implementation-input-manifest-v2.yaml"
+      },
+      {
+        "path": ".gitattributes",
+        "sha256": "87be23033492faf4b5c24e97587e4838cd2d986689d64601884a58e1b1adc5f9",
+        "bytes": 384,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_v2_three_file_read_turn"
+      },
+      {
+        "path": "new pipeline/harness/k0b01_v2/cli.py",
+        "sha256": "2b223d24764717598558841e1773effbf625e17c47af8e01725c00445bb7ffd7",
+        "bytes": 7463,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_v2_three_file_read_turn"
+      },
+      {
+        "path": "new pipeline/tests/k0b01_v2/migration_fault_worker.py",
+        "sha256": "d0ad13d3e6a78197d47d91cf027eb61904e6564eedc791de95bcb0e2f8d7c9ce",
+        "bytes": 3128,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_v2_three_file_read_turn"
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v1.yaml",
+        "sha256": "4e41048c2c20b3e6cb6c5d052ea652e9853a92e662028db1f4a97b667ce7f109",
+        "bytes": 67959,
+        "verification": "verified_by_read_only_native_SHA256_and_length_in_prior_review_response_turn"
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v2.yaml",
+        "sha256": "121285b2f37b1025e061ce9c5602992500016b9b71b7d295ac34c6120dcd4a24",
+        "bytes": 89752,
+        "verification": "created_and_exact_byte_verified_under_separate_v2_request_creation_permission"
+      }
+    ],
+    "frozen_HASH_ONLY_file_count": 18,
+    "frozen_HASH_ONLY_files": [
+      {
+        "path": "new pipeline/contracts/k0b01/alpha0-kernel-contract-package-v1.json",
+        "sha256": "fb5c078dc8c10d166ea6b62aeb32183be4197b47dd9fec4df37511d5ef7cc654",
+        "bytes": 6600
+      },
+      {
+        "path": "new pipeline/decisions/k0b-01-implementation-owner-disposition-v1.yaml",
+        "sha256": "cdb87a83b5bc91ca343a76103252183669dc5da6d03ab9222abb1b81b68fe4dc",
+        "bytes": 4536
+      },
+      {
+        "path": "new pipeline/evidence/k0b-01-validation-v1.yaml",
+        "sha256": "8a0485b0821b3c58b13d5ad44f57dd5f8ef7b508492b9c64dd2989110d1d044f",
+        "bytes": 10903
+      },
+      {
+        "path": "new pipeline/harness/k0b01/__init__.py",
+        "sha256": "e029a9aa3699ac7f159ebdfd21880455a4bcd98727a5e06ae54273a400efdb59",
+        "bytes": 1635
+      },
+      {
+        "path": "new pipeline/harness/k0b01/budget.py",
+        "sha256": "d51af4aba54fa482a8f214137bf1cd72ab961cf400c0aa4a38c3903631d6cf71",
+        "bytes": 33575
+      },
+      {
+        "path": "new pipeline/harness/k0b01/compiler.py",
+        "sha256": "3c9e337e38df67fbae0f9a688ddc30720e517900e4eeb6a8b071a3e4377d2ee5",
+        "bytes": 24815
+      },
+      {
+        "path": "new pipeline/harness/k0b01/contract.py",
+        "sha256": "12ea694ffdf21d2396d1831d78df4fe2f95f06b90051a66ce9e1121403f75898",
+        "bytes": 12337
+      },
+      {
+        "path": "new pipeline/harness/k0b01/store.py",
+        "sha256": "8efbab7e3395874150289f4edfca4ed5d5e913d7550a911396128260fb18f05a",
+        "bytes": 24985
+      },
+      {
+        "path": "new pipeline/harness/migrations/0004_k0b01.sql",
+        "sha256": "7be712f1483c07e52cb34d75c6cd76e4bde5104b31f974faa1bc57e9f0f2c96a",
+        "bytes": 14960
+      },
+      {
+        "path": "new pipeline/registry/alpha0/event-profile-v1.yaml",
+        "sha256": "ae6c93462ecef5e39655103004f7e9b6777f9b8aff9c2dc8488348ede2d987d2",
+        "bytes": 12930
+      },
+      {
+        "path": "new pipeline/registry/alpha0/s-routing-profile-v1.yaml",
+        "sha256": "0d2002f2d09253a04ee7e494b3681e90728850f5e8c1fe8afe762970d9b8cfbf",
+        "bytes": 2984
+      },
+      {
+        "path": "new pipeline/registry/alpha0/subscription-terminal-profile-v1.yaml",
+        "sha256": "62806ad950e1a9a0c17b9d6f885f4af553395db58be9b14634b28e28fca34fab",
+        "bytes": 4040
+      },
+      {
+        "path": "new pipeline/registry/resource-budget-policy/reference-cases-v1.yaml",
+        "sha256": "f576d2b25aa9ab934ce8c45b30e3bb0e86cca82743c057f7045cab092c0fdbd1",
+        "bytes": 10725
+      },
+      {
+        "path": "new pipeline/registry/resource-budget-policy/v1.yaml",
+        "sha256": "3db06dce46de067e2fde5bdbbf184fda0da3e7a131a3211d48ba31d8eb8790f9",
+        "bytes": 4473
+      },
+      {
+        "path": "new pipeline/tests/contracts/test_k0b01_contracts.py",
+        "sha256": "777e27bc6c0ccec71828ff20a952cf15853bb4686a9667e90051d3b60ba4c4e9",
+        "bytes": 7074
+      },
+      {
+        "path": "new pipeline/tests/contracts/test_k0b01_resource_budget.py",
+        "sha256": "2d30b21391b2bda0fe0788e7fcb07320dc166cac7df7345099c789265d5dd103",
+        "bytes": 9188
+      },
+      {
+        "path": "new pipeline/tests/contracts/test_k0b01_routing_compiler.py",
+        "sha256": "2816e2bac8df9b7f14fad38270d527906ed2c6651114a8b21498661314cf0b6a",
+        "bytes": 8020
+      },
+      {
+        "path": "new pipeline/tests/foundation/test_k0b01_migration.py",
+        "sha256": "46b22d87b3e4c0fac1402a2db0fc080445ea4d73d78da504293c92ee61d14987",
+        "bytes": 19837
+      }
+    ],
+    "frozen_operations": "only_exact_reference_SHA256_and_length_checks_when_needed_no_parse_import_copy_patch_execute_activate",
+    "raw_governance_reference_policy": "finite_v4_reference_contract_allowlist_plus_enumerated_prospective_paths_and_the_single_repository_root_file_.gitattributes; inspect_only_actual_required_references_no_blanket_revalidation; .gitattributes_is_a_literal_exact_exception_not_a_general_repository_root_or_new_root_capability",
+    "transitive_expansion": "none",
+    "applicable_instructions": "only_exact_applicable_AGENTS.md_ancestors",
+    "Git_metadata": "HEAD_parent_tree_status_diff_exact_scoped_blobs_hooks_signing_metadata; read_only_core.autocrlf_core.eol_and_text_eol_filter_attributes_only_for_the_four_pinned_legacy_toolchain_PS1_LOCK_files_and_the_new_invoke-v1.ps1; fixture_Git_metadata_only_inside_exact_admitted_repositories",
+    "materialization": "Inline all 93 complete existing path/SHA256/bytes pins: preserve all 88 source pins with honest verification provenance, append three freshly read files and immutable v1/v2 archives. No new semantic dependency reads at request creation. Future full-scope entry preflight verifies actual bytes of all 93 and stops on drift before any modification; root attributes and the two state files are the only intentional changes, represented with separate entry and final frozen pins. After the exact authorized attributes patch, the frozen manifest must retain its entry SHA/bytes and separately bind actual final attributes SHA/bytes with the exact two-line delta. New contexts verify the current frozen attributes bytes, rather than asserting the old entry pin still matches; no waiver for other input drift. Final state changes likewise retain entry pins and exact approved final materialization."
+  },
+  "write_scope": {
+    "exact_path_count": 77,
+    "add_count": 74,
+    "modify_count": 3,
+    "paths": [
+      "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v1.yaml",
+      "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v2.yaml",
+      "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml",
+      "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+      "new pipeline/architecture/k0b-02-planning-package-v1.2.md",
+      "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml",
+      "new pipeline/evidence/k0b-02-artifact-event-validation-v1.yaml",
+      "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v1.yaml",
+      "new pipeline/evidence/k0b-02-implementation-materialization-v1.yaml",
+      "new pipeline/evidence/k0b-02-renderer-v5-validation-v1.yaml",
+      "new pipeline/state/renderer/k0b02_v5/renderer.py",
+      "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml",
+      "new pipeline/tests/state/test_k0b02_renderer_v5.py",
+      "new pipeline/state/state.yaml",
+      "new pipeline/state/STATE.md",
+      "new pipeline/contracts/k0b02/alpha0-kernel-contract-package-v3.json",
+      "new pipeline/contracts/k0b02/alpha0-registry-v2.schema.json",
+      "new pipeline/contracts/k0b02/compiled-projection-checkpoint-profile-v1.schema.json",
+      "new pipeline/contracts/k0b02/projection-intent-v1.schema.json",
+      "new pipeline/contracts/k0b02/projection-pair-receipt-v1.schema.json",
+      "new pipeline/contracts/k0b02/checkpoint-publication-request-v1.schema.json",
+      "new pipeline/contracts/k0b02/checkpoint-publication-receipt-v1.schema.json",
+      "new pipeline/contracts/k0b02/replay-envelope-v1.schema.json",
+      "new pipeline/contracts/k0b02/replay-receipt-v1.schema.json",
+      "new pipeline/contracts/k0b02/phase-seal-v1.schema.json",
+      "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json",
+      "new pipeline/registry/resource-budget-policy/k0b02-policy-v3.json",
+      "new pipeline/harness/migrations/0005_k0b02_publication_replay_v1.sql",
+      "new pipeline/harness/migrations/0006_k0b02_checkpoint_phase_partition_v1.sql",
+      "new pipeline/toolchain/k0b02/invoke-v1.ps1",
+      "new pipeline/harness/k0b02_v1/__init__.py",
+      "new pipeline/harness/k0b02_v1/canonical.py",
+      "new pipeline/harness/k0b02_v1/digest.py",
+      "new pipeline/harness/k0b02_v1/binary_budget.py",
+      "new pipeline/harness/k0b02_v1/contract.py",
+      "new pipeline/harness/k0b02_v1/registry_compiler.py",
+      "new pipeline/harness/k0b02_v1/budget_compiler.py",
+      "new pipeline/harness/k0b02_v1/store.py",
+      "new pipeline/harness/k0b02_v1/transaction_writer.py",
+      "new pipeline/harness/k0b02_v1/outbox.py",
+      "new pipeline/harness/k0b02_v1/projector.py",
+      "new pipeline/harness/k0b02_v1/publisher.py",
+      "new pipeline/harness/k0b02_v1/replay.py",
+      "new pipeline/harness/k0b02_v1/reconciliation.py",
+      "new pipeline/harness/k0b02_v1/phase.py",
+      "new pipeline/harness/k0b02_v1/cli.py",
+      "new pipeline/compiled/k0b02_v1/compiled_artifact_event_profile.json",
+      "new pipeline/compiled/k0b02_v1/compiled_event_reachability_graph.json",
+      "new pipeline/compiled/k0b02_v1/compiled_subscription_terminal_snapshot.json",
+      "new pipeline/compiled/k0b02_v1/compiled_s_route_table_v2.json",
+      "new pipeline/compiled/k0b02_v1/compiled_fanout_barrier_profile.json",
+      "new pipeline/compiled/k0b02_v1/compiled_projection_checkpoint_profile.json",
+      "new pipeline/compiled/k0b02_v1/compiled_resource_forecast.json",
+      "new pipeline/compiled/k0b02_v1/compiled_checkpoint_phase_partition_v1.json",
+      "new pipeline/compiled/k0b02_v1/compiled_checkpoint_publication_budget_v2.json",
+      "new pipeline/evidence/k0b-02-registry-routing-compiler-receipt-v3.yaml",
+      "new pipeline/evidence/k0b-02-resource-budget-compiler-receipt-v3.yaml",
+      "new pipeline/evidence/k0b-02-compiled-output-manifest-v3.yaml",
+      "new pipeline/tests/fixtures/k0b02_v1/decision-v1.json",
+      "new pipeline/tests/fixtures/k0b02_v1/projection-request-v1.json",
+      "new pipeline/tests/fixtures/k0b02_v1/replay-envelope-v1.json",
+      "new pipeline/tests/fixtures/k0b02_v1/crash-matrix-v1.json",
+      "new pipeline/tests/fixtures/k0b02_v1/phase-counter-vectors-v1.json",
+      "new pipeline/tests/fixtures/k0b02_v1/budget-boundary-vectors-v1.json",
+      "new pipeline/tests/k0b02_v1/fixture_support.py",
+      "new pipeline/tests/k0b02_v1/fault_worker.py",
+      "new pipeline/tests/k0b02_v1/test_compiler.py",
+      "new pipeline/tests/k0b02_v1/test_migration_compatibility.py",
+      "new pipeline/tests/k0b02_v1/test_atomic_outbox.py",
+      "new pipeline/tests/k0b02_v1/test_projector.py",
+      "new pipeline/tests/k0b02_v1/test_checkpoint_publication.py",
+      "new pipeline/tests/k0b02_v1/test_clone_only_replay.py",
+      "new pipeline/tests/k0b02_v1/test_crash_reconciliation.py",
+      "new pipeline/tests/k0b02_v1/test_phase_partition_seals.py",
+      "new pipeline/tests/k0b02_v1/test_budget_guards.py",
+      "new pipeline/tests/k0b02_v1/test_cli_admission.py",
+      ".gitattributes"
+    ],
+    "historical_input_changes": "only_.gitattributes_exact_two_line_change_and_the_two_explicit_state_materializations; all_other_existing_inputs_and_v1_v2_request_bytes_immutable",
+    "existing_modified_paths": [
+      "new pipeline/state/state.yaml",
+      "new pipeline/state/STATE.md",
+      ".gitattributes"
+    ],
+    "attributes_change": {
+      "path": ".gitattributes",
+      "entry_sha256": "87be23033492faf4b5c24e97587e4838cd2d986689d64601884a58e1b1adc5f9",
+      "entry_bytes": 384,
+      "operation": "insert_exactly_two_lines_immediately_after_*.sql_text_eol=lf_preserve_every_other_byte",
+      "inserted_lines": [
+        "\"new pipeline/toolchain/**/*.ps1\" text eol=lf",
+        "\"new pipeline/toolchain/**/*.lock\" text eol=lf"
+      ],
+      "result_utf8_bytes": 477,
+      "result_complete_utf8_LF_text": "# Byte-bound governance artifacts must survive Windows clean checkout unchanged.\n*.yaml text eol=lf\n*.yml text eol=lf\n*.md text eol=lf\n*.txt text eol=lf\n*.json text eol=lf\n*.toml text eol=lf\n*.py text eol=lf\n*.sql text eol=lf\n\"new pipeline/toolchain/**/*.ps1\" text eol=lf\n\"new pipeline/toolchain/**/*.lock\" text eol=lf\n.gitignore text eol=lf\n.gitattributes text eol=lf\n\n# SQLite checkpoints and other payloads are never subject to text conversion.\n*.sqlite3 binary\n*.db binary\n",
+      "scope": "only_Pipeline_toolchain_PS1_and_LOCK_attributes; no_git_renormalize_checkout_worktree_rewrite_global_config_change_or_literal_pin_substitution; explicit_stop_on_any_entry_byte_drift",
+      "result_sha256": "58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d",
+      "result_hash_status": "complete_literal_UTF8_bytes_independently_recomputed_from_result_complete_utf8_LF_text"
+    },
+    "immutable_added_archives": [
+      {
+        "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v1.yaml",
+        "sha256": "4e41048c2c20b3e6cb6c5d052ea652e9853a92e662028db1f4a97b667ce7f109",
+        "bytes": 67959
+      },
+      {
+        "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v2.yaml",
+        "sha256": "121285b2f37b1025e061ce9c5602992500016b9b71b7d295ac34c6120dcd4a24",
+        "bytes": 89752
+      }
+    ]
+  },
+  "single_source": {
+    "registry_successor": "v2 is the separately versioned sole authored registry for this fixture compiler context; v1 remains immutable selected historical source for K0b-01; no current v1 mutation, shadow registry, ambient default switch or production activation",
+    "registry_v2_delta": [
+      "versioned_supersedes_pin",
+      "projection_checkpoint_single_authored_object",
+      "registry_and_routing_output_family_adds_compiled_projection_checkpoint_profile"
+    ],
+    "invariants": "same 21 event definitions/schemas/producers/subscriptions/terminal policies/idempotency fields, five semantic routes and exact phase fences; no new event vocabulary",
+    "budget_v3_delta": "versioned successor changes only identity/supersedes/phase_fences_locator_to_v2; all numerical inputs, normative provenance, zero-credit rules, F15 None and reference inputs v2 unchanged"
+  },
+  "compiler": {
+    "package_version": "3.0.0",
+    "receipt_schema_version": 2,
+    "A_owns": [
+      "compiled_artifact_event_profile",
+      "compiled_event_reachability_graph",
+      "compiled_subscription_terminal_snapshot",
+      "compiled_s_route_table_v2",
+      "compiled_fanout_barrier_profile",
+      "compiled_projection_checkpoint_profile"
+    ],
+    "B_owns": [
+      "compiled_resource_forecast",
+      "compiled_checkpoint_phase_partition_v1",
+      "compiled_checkpoint_publication_budget_v2"
+    ],
+    "physical_outputs": "each of nine exact canonical JSON files in write_scope, plus two receipt files and integrated manifest",
+    "A_binding": "compiler/schema/input pins and v2 registry full hash; no receipt B/output B hashes; no own receipt or own containing commit hash",
+    "B_binding": "complete receipt A SHA256 AND actual hashes of all six A output files",
+    "activation": "integrated manifest binds both complete receipt hashes and all nine exact physical output files, schemas, owners and consumer interfaces; legacy eight-family receipts remain valid historical results and cannot substitute for this activation",
+    "profile": {
+      "profile_id": "pipeline-v2.k0b02.projection-checkpoint.v1",
+      "schema_version": 1,
+      "version": "1.0.0",
+      "runtime_enabled": false,
+      "source_of_authored_fields": "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json:projection_checkpoint",
+      "owners": {
+        "transaction_writer": "artifact_event.transaction_writer",
+        "projector": "artifact_event.projector",
+        "publisher": "artifact_event",
+        "reconciliation": "control.projection_reconciliation",
+        "control_admission": "shared_control"
+      },
+      "pair_stems": [
+        "fixture-decision"
+      ],
+      "pair_targets": {
+        "yaml": ".pipeline/projections/fixture-decision.yaml",
+        "markdown": ".pipeline/projections/fixture-decision.md"
+      },
+      "pair_temporary_targets": {
+        "yaml": ".pipeline/projections/.fixture-decision.yaml.tmp",
+        "markdown": ".pipeline/projections/.fixture-decision.md.tmp"
+      },
+      "checkpoint_target": ".pipeline/history/pipeline-checkpoint.sqlite3",
+      "checkpoint_temporary_target": ".pipeline/history/.pipeline-checkpoint.sqlite3.tmp",
+      "replay_envelope": ".pipeline/replay/invocation-envelope.json",
+      "format": {
+        "yaml": "strict_canonical_JSON_as_YAML_UTF8_no_BOM_LF_one_final_LF",
+        "markdown": "deterministic_UTF8_no_BOM_LF_one_final_LF_with_complete_source_and_hash_headers"
+      },
+      "sequence": {
+        "source_seq": "monotonic_canonical_decision_and_outbox_admission_sequence",
+        "receipt_seq": "separate_monotonic_effect_and_reconciliation_journal_sequence",
+        "snapshot": "source_seq_equals_ready_pair_cut_and_snapshot_metadata; bind actual snapshot SHA and receipt high_water; journal mutations do not redefine source_seq"
+      },
+      "durability": {
+        "transaction": "decision_version_plus_outbox_plus_projection.requested_in_one_short_BEGIN_IMMEDIATE_transaction",
+        "replace": "fsync_each_verified_same_directory_candidate_then_atomic_per_peer_replace",
+        "readiness": "only_both_same_version_source_seq_profile_and_actual_hashes_verified",
+        "backup": "sqlite3_Connection.backup_closed_fsynced_reopened_integrity_and_FK_verified",
+        "publication": "durable_intent_then_verified_snapshot_and_pair_then_exact_three_path_Git_commit_then_readback_then_DB_result",
+        "next_checkpoint": "includes_previous_verified_Git_result_not_its_own_future_commit_hash"
+      },
+      "footer_fields": [
+        "Pipeline-Checkpoint-Publication-ID",
+        "Pipeline-Checkpoint-Source-Sequence",
+        "Pipeline-Checkpoint-Snapshot-SHA256",
+        "Pipeline-Checkpoint-Profile-SHA256",
+        "Pipeline-Checkpoint-Pair-Set-SHA256",
+        "Pipeline-Checkpoint-Predecessor"
+      ],
+      "reconciliation": "unique_exact_known_effect_return_original_result_once_else_typed_block; no blind retry or rollback of begun unknown external effects",
+      "snapshot_checks": [
+        "full_complete_file_SHA256",
+        "schema_and_migration_identity",
+        "run_and_partition_identity",
+        "source_seq_and_outbox_high_water",
+        "typed_content_digest",
+        "integrity_check_ok",
+        "foreign_key_check_empty"
+      ],
+      "limits": "derive unchanged B02 and checkpoint/phase budgets from the pinned policy; no missing-as-zero, credits, object-count substitution or real F15 completion claim",
+      "replay_envelope_policy": {
+        "immutability": "complete_invocation_envelope_is_immutable_after_initial_seed",
+        "complete_file_SHA256": "bound_externally_in_SQLite_and_replay_receipts_never_embedded_as_its_own_hash",
+        "source_cut": "current_source_seq_checkpoint_and_pair_hashes_come_from_verified_publication_footer_and_snapshot_metadata_not_mutable_seed_fields",
+        "publication_membership": "initial_seed_only_never_a_fourth_publication_path",
+        "restore_binding": "per_publication_lineage_and_new_restore_target_belong_to_external_replay_request_and_result_not_seed_file"
+      }
+    },
+    "registry_v2_schema_fields": [
+      "registry_id",
+      "schema_version",
+      "version",
+      "profile",
+      "claim_layer",
+      "events",
+      "routes",
+      "run_states",
+      "subscribers",
+      "producers",
+      "output_families",
+      "phase_fences",
+      "F00_contract",
+      "content_artifact_types",
+      "F05_rule",
+      "F04_rule",
+      "supersedes",
+      "projection_checkpoint"
+    ],
+    "profile_authored_fields": [
+      "profile_id",
+      "schema_version",
+      "version",
+      "runtime_enabled",
+      "owners",
+      "pair_stems",
+      "pair_targets",
+      "pair_temporary_targets",
+      "checkpoint_target",
+      "checkpoint_temporary_target",
+      "replay_envelope",
+      "format",
+      "sequence",
+      "durability",
+      "footer_fields",
+      "reconciliation",
+      "snapshot_checks",
+      "limits",
+      "replay_envelope_policy"
+    ]
+  },
+  "contracts": {
+    "closed_inline_JSON_schemas": "exact ten contract paths; no external $ref or schema fetching; preserve supported bounded schema keyword set",
+    "intent_fields": [
+      "run_id",
+      "decision_version_id",
+      "phase_id",
+      "partition_digest",
+      "expected_revision",
+      "source_seq",
+      "projection_profile_sha256",
+      "pair_stem",
+      "causation_id",
+      "correlation_id",
+      "stable_identity",
+      "canonical_request_sha256",
+      "idempotency_key",
+      "admitted_root_id",
+      "schema_pins",
+      "compiler_manifest_sha256"
+    ],
+    "event_payloads": "preserve the exact existing projection.* v1 payloads and keys; carry extra linkage only in new SQLite records and internal receipts",
+    "pair_receipt_fields": [
+      "projection_id",
+      "decision_version_id",
+      "source_seq",
+      "outbox_id",
+      "outbox_high_water",
+      "pair_stem",
+      "projection_profile_sha256",
+      "yaml_sha256",
+      "markdown_sha256",
+      "ready",
+      "result"
+    ],
+    "publication_fields": [
+      "publication_id",
+      "run_id",
+      "phase_id",
+      "partition_digest",
+      "source_seq",
+      "receipt_high_water",
+      "outbox_high_water",
+      "ready_pair_set_sha256",
+      "checkpoint_target",
+      "snapshot_sha256",
+      "snapshot_bytes",
+      "schema_and_migration_identity",
+      "expected_Git_parent",
+      "predecessor_publication_id",
+      "footer_fields",
+      "readback_tree",
+      "actual_Git_commit",
+      "result"
+    ],
+    "replay_fields": [
+      "envelope_id",
+      "envelope_complete_file_sha256",
+      "run_chain_identity",
+      "checkpoint_and_pair_hashes",
+      "source_seq",
+      "partition_digest",
+      "profile_and_compiler_and_schema_pins",
+      "invocation_and_artifact_version_references",
+      "new_restore_target",
+      "verified_content_digest",
+      "reproducibility_gap",
+      "result"
+    ],
+    "phase_seal_fields": [
+      "seal_id",
+      "phase_id",
+      "partition_digest",
+      "predecessor_seal_id",
+      "terminal_checkpoint_publication_id",
+      "terminal_checkpoint_sha256",
+      "ready_pair_set_sha256",
+      "outbox_high_water",
+      "cumulative_full_bytes",
+      "publication_count",
+      "authorities",
+      "all_admitted_members_terminal",
+      "no_unresolved_begun_effects",
+      "result"
+    ],
+    "pair_stems_invariant": "registry_v2_projection_checkpoint_and_compiled_profile_require_exact_singleton_[fixture-decision]; inline_minItems=maxItems=1_and_item_enum; compiler_and_transaction_writer_projector_must_reject_second_or_unapproved_stem_before_mutation; projection.*_v1_payloads_and_idempotency_fields_remain_unchanged",
+    "replay_field_roles": {
+      "immutable_seed_fields": [
+        "envelope_id",
+        "run_chain_identity",
+        "partition_digest",
+        "profile_and_compiler_and_schema_pins",
+        "invocation_and_artifact_version_references"
+      ],
+      "external_request_or_receipt_fields": [
+        "envelope_complete_file_sha256",
+        "checkpoint_and_pair_hashes",
+        "source_seq",
+        "new_restore_target",
+        "verified_content_digest",
+        "reproducibility_gap",
+        "result"
+      ],
+      "rules": "source_seq_is_not_a_mutable_seed_field; current_cut_requires_agreement_of_verified_publication_footer_snapshot_metadata_and_pair; external_complete_seed_SHA256_must_match_immutable_seed_blob_and_worktree_file; caller_restore_target_passes_exact_new_path_admission; no_self_hash_in_seed"
+    },
+    "pair_stems_schema": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "fixture-decision"
+        ]
+      }
+    }
+  },
+  "migration": {
+    "v5": {
+      "path": "new pipeline/harness/migrations/0005_k0b02_publication_replay_v1.sql",
+      "logical_identity": "k0b02.artifact_event.publication_replay_v1",
+      "tables": [
+        "k0b02_source_sequences",
+        "k0b02_decision_versions",
+        "k0b02_projection_outbox",
+        "k0b02_projection_attempts",
+        "k0b02_projection_pairs",
+        "k0b02_projection_results",
+        "k0b02_publication_intents",
+        "k0b02_publication_attempts",
+        "k0b02_publication_results",
+        "k0b02_replay_envelopes",
+        "k0b02_replay_results",
+        "k0b02_compiler_bindings"
+      ]
+    },
+    "v6": {
+      "path": "new pipeline/harness/migrations/0006_k0b02_checkpoint_phase_partition_v1.sql",
+      "logical_identity": "k0b02.artifact_event.checkpoint_phase_partition_v1",
+      "tables": [
+        "k0b02_phase_bindings",
+        "k0b02_outbox_phase_bindings",
+        "k0b02_publication_phase_bindings",
+        "k0b02_phase_counters",
+        "k0b02_phase_seals"
+      ]
+    },
+    "order": "known verified v4 -> additive v5 -> additive v6",
+    "guards": "no historical DDL/table/index/trigger rewrite or rebuild; own new catalog only; new strict verifier for versions 4/5/6 with exact migration rows and schema fingerprints; never disable the v2 3/4 guard",
+    "compatibility": "independent pre/post nonempty historical rows, PKs, typed content digests, payload lengths/HEX, immutable version/event lineage and external catalog SQL; FK/integrity and verified backup/new-path restore; unknown schema/hash hard blocks"
+  },
+  "implementation": {
+    "transaction_writer": "single writer with short atomic decision/outbox/projection.requested transaction; stable identical duplicate returns original IDs/result; canonical hash conflict typed block",
+    "outbox": "ordered claims and durable bounded attempts, no dispatcher or model executor",
+    "projector": "enforce exact singleton [fixture-decision] in authored/compiled schema, compiler, transaction writer and projector before mutation; unchanged projection.* v1 event keys; same-source deterministic YAML+MD and actual per-peer checks; no partial readiness; actual control fields_read receipt; typed rejection of multiple/unapproved stems",
+    "publisher": "persistent source-cut fence blocks newer canonical admissions until reconciled; source sequence and receipt journal sequence are distinct defined types; close verification handles; only checkpoint and two matching peers in the independent coordination fixture repository; DB result follows actual footer/tree/readback; next checkpoint captures previous result. All producer and clone fixture Git repositories require the normal-case LF config invariant before first add/commit/checkout and at every publisher entry; pair worktree SHA must equal committed blob SHA after clone/readback.",
+    "replay": "clone-only forensic restore into exact new destination, no producer active DB required; seed invocation envelope immutable and externally SHA-bound; current source_seq/checkpoint/pair cut derives from agreeing verified publication footer and snapshot metadata, per-publication restore bindings external to seed; mutated or missing envelope/incompatible identity/corruption/ambiguous begun effects block; stochastic rerun separate and not run. Normal-case clone checkout runs only after the LF config invariant and local-origin removal; actual cloned YAML/Markdown file SHA must equal its verified Git blob SHA and frozen LF pair SHA.",
+    "reconciliation": "exception injection plus actual durable-marker process termination at agreed effect boundaries; known committed external effect recovered once; no invented effects or blanket exactly-once claim across SQLite/files/Git",
+    "phase": "two exact chronological exhaustive phases; successor requires predecessor terminal seal and reconciled high water; immutable seal cannot reopen; preserve exact four F15 trigger IDs and zero post-F15 calls; F15 counters in tests are labeled synthetic with actual provider/model calls zero",
+    "budgets": "unchanged six/twelve objects, assumed mean 372736, hard per admitted producer object 655360, size stress 7864320, nonbinary 22020096, rounded checkpoint stress 30408704, 34 reforecast-sensitive publications, pack factor 1 and zero credits; checkpoint strict below 104857600, phase warning 536870912/hard 1073741824, batch<=12, publication p95<10s and restore<120s; cumulative full snapshot bytes and conservative projected pack guards; F15 authoritative worst count remains None",
+    "CLI_and_fault_worker": "new standalone context/frontend/worker with the 92-entry manifest, new exact environment/runtime roots and explicit source closure; legacy cli.py and migration_fault_worker.py are immutable read-only references not executable imports; no old hardcoded 193-input manifest, old temp roots or old dispatcher activation; durable-marker.ready is explicitly admitted if the closed-marker pause protocol uses it"
+  },
+  "toolchain": {
+    "immutable_helpers": [
+      {
+        "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+        "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+        "bytes": 5688
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+        "sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+        "bytes": 1142
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/bootstrap.ps1",
+        "sha256": "557b8b4fbbf1e6e07aa2635d558ea545a06aa6ba81009ed9d1d2037f554fbab5",
+        "bytes": 4613
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/invoke.ps1",
+        "sha256": "6fcd592ccece881d5876cc1f120951c1b6ef3bafa1a2841cddc0d232bba71197",
+        "bytes": 3928
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+        "sha256": "249144da43c27b692ec21b2c92ab9382338c755cd6b95efd6c1aeb1a21bfc33c",
+        "bytes": 4912
+      },
+      {
+        "path": "new pipeline/toolchain/k0b01/validate_toolchain.py",
+        "sha256": "86b9efa4a855369edc99912c71e2effdfb7de3a8ae33d34621a3223b46d4064a",
+        "bytes": 14851
+      }
+    ],
+    "host_python": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "allowed_use": "Pinned metadata probe, wheel acquisition, venv creation only; no host ruamel or evidence generation."
+    },
+    "dependency_changes": "none; exact same twelve locked binary wheels and versions/hashes from pinned lock/requirements",
+    "network": "HTTPS pypi.org and files.pythonhosted.org solely for the exact 12 wheels; no dependencies/source/cache/proxies/alternate indexes; offline thereafter",
+    "targets": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-wheelhouse",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b"
+    ],
+    "preflight": "before scope mutations verify HEAD/index/exact v1+v2 untracked files and all 92 literal entry pins; new three temp roots initially absent; inspect exact toolchain text/eol/filter attributes and record core.autocrlf/core.eol; diagnose legacy missing LF attributes without silently converting bytes; byte drift stops; the precisely authorized attributes change follows entry checks and is frozen with static code, then all five toolchain paths must have text=set/eol=lf/no external filter; no restore of old targets",
+    "execution": "locked CPython -I -B; only explicit new module/test dependency closure and pinned stdlib/ruamel; unittest discovery only the enumerated new test paths; no ambient PYTHONPATH, pytest/plugin autoload, old suites or historical ledger/index/budget rerun",
+    "scratch_bound_bytes_per_environment": 2147483648,
+    "cleanup": "record all evidence/logs first; close processes/handles; remove admitted test junctions by native link-only operations; native LiteralPath recursive removal only of the three roots after verified absolute containment and reparse checks; no parents/unrelated caches"
+  },
+  "fixture_scope": {
+    "case_ids": [
+      "compile_valid",
+      "compile_missing_ninth",
+      "compile_missing_B_binding",
+      "compile_A_reverse_B_binding",
+      "compile_wrong_output_schema",
+      "compile_registry_semantic_drift",
+      "compile_duplicate_family",
+      "migration_v4_to_v5",
+      "migration_v5_to_v6",
+      "migration_unknown_schema",
+      "migration_repeat_readback",
+      "migration_exception_before_commit",
+      "migration_loss_before_commit",
+      "migration_loss_after_commit",
+      "atomic_decision_outbox",
+      "duplicate_original_result",
+      "conflicting_duplicate",
+      "projection_before_source_commit",
+      "projection_after_source_commit",
+      "projection_after_first_peer",
+      "projection_after_both_peers",
+      "projection_drift",
+      "projection_failure_receipt",
+      "publication_before_backup",
+      "publication_after_backup",
+      "publication_after_snapshot_replace",
+      "publication_after_git_commit",
+      "publication_after_db_result",
+      "publication_dirty_tree",
+      "publication_binary_divergence",
+      "clone_only_restore",
+      "replay_corrupt_checkpoint",
+      "replay_incompatible_schema",
+      "replay_missing_envelope",
+      "replay_ambiguous_begun_effect",
+      "abort_unknown_effect",
+      "phase_before_seal",
+      "phase_after_seal",
+      "phase_reopen_or_reorder",
+      "phase_unknown_partition",
+      "F15_fifth_trigger",
+      "F15_non_model_simulation",
+      "post_F15_call_rejection",
+      "checkpoint_hard_limit",
+      "phase_pack_hard_limit",
+      "publication_batch_cap",
+      "warning_reforecast",
+      "path_escape",
+      "cli_denied_root",
+      "cli_input_output_collision",
+      "publication_performance_01",
+      "publication_performance_02",
+      "publication_performance_03",
+      "publication_performance_04",
+      "publication_performance_05",
+      "publication_performance_06",
+      "publication_performance_07",
+      "publication_performance_08",
+      "publication_performance_09",
+      "publication_performance_10",
+      "publication_performance_11",
+      "publication_performance_12",
+      "restore_performance_01",
+      "restore_performance_02",
+      "restore_performance_03",
+      "restore_performance_04",
+      "restore_performance_05",
+      "restore_performance_06",
+      "restore_performance_07",
+      "restore_performance_08",
+      "restore_performance_09",
+      "restore_performance_10",
+      "restore_performance_11",
+      "restore_performance_12",
+      "compile_multiple_pair_stems_rejected",
+      "projection_unapproved_pair_stem_rejected",
+      "replay_checkpoint_cut_over_immutable_seed",
+      "eol_checkout_invariance",
+      "eol_missing_attributes_rejected",
+      "fixture_git_config_drift"
+    ],
+    "variants": [
+      "positive",
+      "exception",
+      "process_loss"
+    ],
+    "runtime_path_rule": "finite cartesian product environment_a_or_b/.tmp/runtime/cases/{listed_case_id}/{listed_variant}; no other case IDs",
+    "per_case_files": [
+      "active.sqlite3",
+      "active.sqlite3-wal",
+      "active.sqlite3-shm",
+      "pre-v5.sqlite3",
+      "pre-v6.sqlite3",
+      "restored.sqlite3",
+      "restored.sqlite3-wal",
+      "restored.sqlite3-shm",
+      "mutated-input.json",
+      "case-input-manifest.yaml",
+      "durable-marker.json",
+      "fault-result.json",
+      "reparse-link",
+      "target",
+      "coord-producer",
+      "coord-clone",
+      "durable-marker.ready"
+    ],
+    "coordination_repositories": "only coord-producer and coord-clone under a listed case; native Git-created .git descendants inside these roots; no workspace clone, hardlinked source objects or global config changes. Producer: init, immediately set local core.autocrlf=false and core.eol=lf before first add/commit/readback. Clone: --no-hardlinks --no-checkout with command-local core.autocrlf=false/core.eol=lf, then set the same local config, remove automatically generated same-case origin, verify config/attributes, and only then checkout/replay. No external/network source or remote effect.",
+    "fixture_git_initial_seed_paths": [
+      ".pipeline/replay/invocation-envelope.json",
+      "unrelated.txt"
+    ],
+    "fixture_git_publication_paths": [
+      ".pipeline/history/pipeline-checkpoint.sqlite3",
+      ".pipeline/projections/fixture-decision.yaml",
+      ".pipeline/projections/fixture-decision.md"
+    ],
+    "fixture_git_commit_bound": "one initial seed plus up to two admitted checkpoint commits per case/variant; clone/readback only; dirty unrelated.txt negative fixtures never included by publisher",
+    "fixture_git_policy": {
+      "identity_and_effects": "explicit temporary identity; hooks/signing disabled; no workspace/global config change or remote push/merge/fetch/PR",
+      "normal_case_command_flags": [
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.eol=lf"
+      ],
+      "normal_case_local_config": {
+        "core.autocrlf": "false",
+        "core.eol": "lf"
+      },
+      "producer_order": [
+        "git_init",
+        "set_and_verify_local_LF_config",
+        "verify_pair_attributes_have_no_text_eol_filter_or_working-tree-encoding_override",
+        "first_add_or_commit",
+        "publisher_and_readback"
+      ],
+      "clone_order": [
+        "clone_--no-hardlinks_--no-checkout_with_command_local_LF_flags",
+        "set_and_verify_clone_local_LF_config",
+        "remove_same_case_local_origin",
+        "verify_no_origin_and_no_transforming_pair_attributes",
+        "checkout",
+        "replay_and_readback"
+      ],
+      "entry_guard": "before every publisher/replay Git effect, require exact local core.autocrlf=false and core.eol=lf, no origin, approved identity, hooks/signing disabled; mismatch typed block before mutation",
+      "byte_invariant": "for .pipeline/projections/fixture-decision.yaml and .md, producer working file SHA equals staged/committed blob SHA; after clone checkout actual file SHA equals verified blob and frozen LF SHA; checkpoint sqlite remains binary and is verified separately",
+      "eol_case_exception": "only eol_checkout_invariance and eol_missing_attributes_rejected may override core.autocrlf=true for their isolated one-seed zero-publication checkout; reset is unnecessary because those repositories perform no common publisher/replay action and are deleted with their case root",
+      "no_ambient_default": "normal cases never inherit system/global core.autocrlf or core.eol for an effecting Git command"
+    },
+    "other_scratch": {
+      "environment_bindings": [
+        {
+          "environment": "environment_A",
+          "admitted_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a",
+          "compiler_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/compiler-a",
+          "compiler_files": [
+            "compiled_artifact_event_profile.json",
+            "compiled_event_reachability_graph.json",
+            "compiled_subscription_terminal_snapshot.json",
+            "compiled_s_route_table_v2.json",
+            "compiled_fanout_barrier_profile.json",
+            "compiled_projection_checkpoint_profile.json",
+            "compiled_resource_forecast.json",
+            "compiled_checkpoint_phase_partition_v1.json",
+            "compiled_checkpoint_publication_budget_v2.json",
+            "k0b-02-registry-routing-compiler-receipt-v3.yaml",
+            "k0b-02-resource-budget-compiler-receipt-v3.yaml",
+            "k0b-02-compiled-output-manifest-v3.yaml"
+          ],
+          "compiler_negative_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/compiler-a/negative/{listed_compile_case_id}",
+          "compiler_negative_files": "only_copies_of_the_nine_named_outputs_three_named_receipts_and_mutated-input.json_for_an_enumerated_compile_case",
+          "governance_candidate_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/governance-candidate",
+          "governance_candidate_files": [
+            "state.yaml",
+            "STATE.md",
+            "check-state.md"
+          ],
+          "logs_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/logs",
+          "command_ids": [
+            "native-preflight",
+            "toolchain-validation",
+            "compile-registry",
+            "compile-budget",
+            "validate-output-manifest",
+            "implementation-tests",
+            "renderer-tests",
+            "renderer-render",
+            "renderer-check",
+            "ruff-check",
+            "ruff-format-check",
+            "native-tail",
+            "cleanup-readback"
+          ],
+          "log_file_rule": "finite_listed_command_id_plus_one_suffix_.stdout.log_.stderr.log_or_.json",
+          "config_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/config",
+          "config_files": [
+            "preflight.json",
+            "source-pins.json",
+            "ruff.toml"
+          ],
+          "native_temp_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a/.tmp/config/native-temp",
+          "native_temp_rule": "only_process_local_pinned_Python_venv_pip_unittest_or_native_Git_temporary_descendants; no_repository_payload_or_extra_coordination_root; process_TEMP_TMP_restored"
+        },
+        {
+          "environment": "environment_B",
+          "admitted_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b",
+          "compiler_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/compiler-b",
+          "compiler_files": [
+            "compiled_artifact_event_profile.json",
+            "compiled_event_reachability_graph.json",
+            "compiled_subscription_terminal_snapshot.json",
+            "compiled_s_route_table_v2.json",
+            "compiled_fanout_barrier_profile.json",
+            "compiled_projection_checkpoint_profile.json",
+            "compiled_resource_forecast.json",
+            "compiled_checkpoint_phase_partition_v1.json",
+            "compiled_checkpoint_publication_budget_v2.json",
+            "k0b-02-registry-routing-compiler-receipt-v3.yaml",
+            "k0b-02-resource-budget-compiler-receipt-v3.yaml",
+            "k0b-02-compiled-output-manifest-v3.yaml"
+          ],
+          "compiler_negative_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/compiler-b/negative/{listed_compile_case_id}",
+          "compiler_negative_files": "only_copies_of_the_nine_named_outputs_three_named_receipts_and_mutated-input.json_for_an_enumerated_compile_case",
+          "governance_candidate_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/governance-candidate",
+          "governance_candidate_files": [
+            "state.yaml",
+            "STATE.md",
+            "check-state.md"
+          ],
+          "logs_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/logs",
+          "command_ids": [
+            "native-preflight",
+            "toolchain-validation",
+            "compile-registry",
+            "compile-budget",
+            "validate-output-manifest",
+            "implementation-tests",
+            "renderer-tests",
+            "renderer-render",
+            "renderer-check",
+            "ruff-check",
+            "ruff-format-check",
+            "native-tail",
+            "cleanup-readback"
+          ],
+          "log_file_rule": "finite_listed_command_id_plus_one_suffix_.stdout.log_.stderr.log_or_.json",
+          "config_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/config",
+          "config_files": [
+            "preflight.json",
+            "source-pins.json",
+            "ruff.toml"
+          ],
+          "native_temp_root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b/.tmp/config/native-temp",
+          "native_temp_rule": "only_process_local_pinned_Python_venv_pip_unittest_or_native_Git_temporary_descendants; no_repository_payload_or_extra_coordination_root; process_TEMP_TMP_restored"
+        }
+      ],
+      "bootstrap_descendants": "only_existing_pinned_bootstrap/wheelhouse_scripts_generated_files_under_the_three_exact_targets; no_new_temp_root_or_parent_cache_scope; enforce_per_environment_scratch_cap_and_record_concrete_files",
+      "root_rule": "every_scratch_path_is_within_its_explicit_admitted_root_after_absolute_containment_and_reparse_checks; names_.tmp/compiler-a_and_.tmp/compiler-b_never_mean_standalone_roots"
+    },
+    "fixture_git_seed_exceptions": {
+      "case_ids": [
+        "eol_checkout_invariance",
+        "eol_missing_attributes_rejected"
+      ],
+      "repositories": "same_listed_case_coord-producer_and_coord-clone_only",
+      "initial_seed_paths": [
+        ".gitattributes",
+        "new pipeline/toolchain/k0b01/requirements-v1.lock",
+        "new pipeline/toolchain/k0b01/bootstrap.ps1",
+        "new pipeline/toolchain/k0b01/invoke.ps1",
+        "new pipeline/toolchain/k0b01/prepare-wheelhouse.ps1",
+        "new pipeline/toolchain/k0b02/invoke-v1.ps1"
+      ],
+      "seed_attribute_choices": "positive_exact_authorized_two_line_attributes_result_or_negative_exact_original_384_byte_attributes; byte_copies_of_four_approved_legacy_toolchain_inputs_and_frozen_new_wrapper_no_PS1_execution",
+      "commits": "one_initial_seed_only_zero_publications_no_extra_Git_repo",
+      "config": "deliberate case-local core.autocrlf=true override only for the two named EOL cases; hooks/signing disabled; --no-hardlinks --no-checkout same-case clone then remove local origin before checkout; no common publisher/replay operation, global/workspace config change or external filter",
+      "checks": "fresh_same-case_local_clone_after_origin_removal_then_actual_checkout_and_literal_SHA256_bytes_comparison_for_all_five_toolchain_files; positive_preserves_frozen_LF_bytes; negative_detects_expected_checkout_drift_and_typed_preflight_stop_before_scope_mutation",
+      "limit": "does_not_copy_parse_or_execute_any_frozen_HASH_ONLY_file_and_does_not_clone_workspace"
+    }
+  },
+  "validation": {
+    "mandatory_tests": "all ten new implementation test modules plus new v5 renderer test, with actual CLI/frontend fixtures, independent SQLite and Git/file readbacks; no skipped required cases",
+    "process_loss_boundaries": [
+      "new_migration_before_commit",
+      "new_migration_after_commit",
+      "decision_outbox_before_commit",
+      "decision_outbox_after_commit_before_response",
+      "first_peer_replaced",
+      "both_peers_replaced_before_result",
+      "backup_verified",
+      "snapshot_replaced",
+      "coordination_Git_commit_before_DB_result",
+      "publication_DB_result",
+      "terminal_checkpoint_before_seal",
+      "seal_committed_before_successor_admission"
+    ],
+    "cross_environment": "byte-equal all nine canonical physical compiler outputs, both receipts/integrated manifest, deterministic valid pair and candidate governance YAML/MD; snapshot logical/typed identity equal, record actual per-environment complete binary SHA without assuming binary byte equality. For every normal publication/replay fixture, record local config and effective attributes; both YAML/Markdown post-clone actual file SHA values must equal the corresponding Git blob and frozen LF bytes.",
+    "timing": "12 actual isolated publisher samples and 12 clone-only restore samples per environment; monotonic elapsed, p95 nearest_rank sorted_samples[ceil(0.95*n)-1], strict unchanged <10s/<120s SLA; fixture timing only not real Alpha0/F15 completion",
+    "Ruff": "isolated/no-cache check and format--check only new 16 modules/new 12 implementation test/helper files/new renderer+new renderer test",
+    "retained_findings": [
+      "K0B01-HR-NB01",
+      "K0B01-HR-NB02",
+      "K0B01-HR-NB03",
+      "K0B01-HR-NB04",
+      "K0B01-HR-NB05"
+    ],
+    "capture": "actual invocation args/exits/logs/hash bytes/schema+row+Git lineage/fault outcomes/read fields/counters, uncertainty explicitly typed; actual provider/model calls 0 and program-runtime publications 0",
+    "new_review_regression_requirements": {
+      "case_count": 80,
+      "mandatory_cases": [
+        "compile_multiple_pair_stems_rejected",
+        "projection_unapproved_pair_stem_rejected",
+        "replay_checkpoint_cut_over_immutable_seed",
+        "eol_checkout_invariance",
+        "eol_missing_attributes_rejected",
+        "fixture_git_config_drift"
+      ],
+      "case_placement": "compile_multiple_pair_stems_rejected -> test_compiler.py; projection_unapproved_pair_stem_rejected -> test_projector.py; replay_checkpoint_cut_over_immutable_seed -> test_clone_only_replay.py; eol_checkout_invariance and eol_missing_attributes_rejected -> test_cli_admission.py; fixture_git_config_drift and normal clone byte invariance -> test_clone_only_replay.py; publication readback byte invariance -> test_checkpoint_publication.py.",
+      "checks": "both locked environments, no skips; actual normal-case producer blob/worktree and post-clone blob/file SHA equality for both LF pair files; config drift typed block before mutation; independent snapshot/footer source-cut checks; enforce singleton in schema/compiler/runtime; two isolated EOL cases retain their deliberate true override"
+    }
+  },
+  "governance": {
+    "renderer_version": "5.0.0",
+    "baseline": "copy allowed unfrozen v4 into new v5 paths; strict v4 baseline preserved, no historical edits",
+    "K0b_02_status": "implemented_validated_runtime_not_authorized",
+    "top_status": "K0b_02_implemented_validated_runtime_not_authorized",
+    "allowed_authority_changes": [
+      "new active_authority.K0b_02_artifact_event_implementation owner reference",
+      "K0b-02 work_item authority_path/sha/status",
+      "scope.K0b_02_implementation_authority=bounded_K0b_02_exact_fixture_scope_only"
+    ],
+    "runtime_fields": "global and K0b02 runtime remain none",
+    "allowed_header_evidence_changes": "only the literal delta_whitelist entries; new evidence names refer exactly to the completion receipt and materialization evidence from write_scope; unknown fields or any other baseline change hard fail",
+    "gate_changes": "none; seven open and ten closed full records unchanged, including all work-items other than K0b02 and global historical K0b01 implementation authority; no automatic K0b03/N1 closure",
+    "projection": "STATE.md is one-way rendering of candidate YAML; validation must not be cited back by the candidate when it would create a cycle",
+    "delta_whitelist": [
+      "generated_at",
+      "projection_version",
+      "status",
+      "projection_profile.path",
+      "projection_profile.sha256",
+      "active_authority.K0b_02_artifact_event_implementation",
+      "supporting_review_evidence.K0b_02_artifact_event_completion",
+      "supporting_review_evidence.K0b_02_implementation_materialization",
+      "work_items[work_item_id=K0b-02].status",
+      "work_items[work_item_id=K0b-02].authority_path",
+      "work_items[work_item_id=K0b-02].authority_sha256",
+      "scope.K0b_02_implementation_authority"
+    ],
+    "root_reference_exception": "new_v5_only_literal_.gitattributes_exact_repository_file_may_be_bound_by_manifest/materialization_receipts; syntax_and_path_resolution_admit_only_this_literal_plus_existing_Pipeline_rules; every_other_repository_root_reference_rejected; v4_profile_renderer_and_baseline_immutable"
+  },
+  "freeze_order": [
+    "request_then_separate_full_SHA_scope_approval",
+    "owner_disposition",
+    "exact_two_line_repository_attributes_change_plus_all_new_registry_budget_contract_runtime_code_schema_fixture_toolchain_renderer_code_and_tests_formatted_and_frozen_before_first_reference; v5_profile_is_frozen_later_after_completion_receipt",
+    "finite_input_manifest",
+    "two_environment_compiler_checks_then_exact_physical_outputs_receiptA_receiptB_integrated_manifest_freeze",
+    "new_runtime_migration_crash_clone_phase_budget_and_timing_checks_then_implementation_validation_freeze",
+    "completion_receipt",
+    "v5_profile_and_materialization_evidence_before_first_dependent_reference_with_complete_current_and_prospective_allowlist",
+    "candidate_source_projection_then_new_v5_checks_in_both_env_then_renderer_validation_freeze",
+    "identical_validated_canonical_pair_promotion_then_native_tail_checks",
+    "exact_three_target_cleanup",
+    "native_exact77_staged_and_committed_byte_checks_one_local_commit"
+  ],
+  "freeze_integrity": "fixes within agreed paths before freeze allowed; after first hash-bound reference no mutation of frozen inputs/evidence/request without a new exact owner exception; no self hashes/future containing commit hash/backfill of post-freeze tests/cleanup/commit; pending tail remains historic and final actual facts reported separately",
+  "commit": {
+    "count": 1,
+    "local_only": true,
+    "parent": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+    "exact_paths": 77,
+    "amend": false,
+    "stage_only_after_complete_checks_and_cleanup": true,
+    "native_final": "cached diff check, exact 74 added/3 modified paths and literal frozen bytes; preserved v1/v2 archive SHA/bytes; separate entry/final attributes and state pins; parent/tree/committed blobs/current bytes; 90 unchanged entry inputs plus exact attributes and state deltas; clean index/worktree; three targets absent; trailer complete approved v3 request SHA; no amend or remote effects"
+  },
+  "external_review": {
+    "signal_now": "v2 external review identified normal fixture checkout EOL exposure; this v3 draft closes it and adds explicit final attributes SHA before creation or implementation approval",
+    "second_signal": "after new compiler/persistence/publisher/replay/crash candidate checks before final freeze/commit when meaningful; report actual readiness, without inventing a new mandatory governance gate",
+    "focus": [
+      "SHA/scope/first-reference freeze exception and documentary vs owner-reported facts",
+      "single versioned registry and A6/B3 DAG physical ninth binding",
+      "v4 foundation compatibility and additive v5/v6 verifier",
+      "source_sequence_vs_receipt_journal_cut_and_no_pair_readiness_cycles",
+      "existing projection event idempotency and exact singleton stem",
+      "recoverable known external effects and typed ambiguity blocks",
+      "forensic clone-only restore and budget/F15 claim limits",
+      "exact two-line Pipeline toolchain LF attributes and actual positive/negative clean fixture checkout byte checks",
+      "fully anchored scratch and legacy CLI/worker immutable reference pins",
+      "immutable seed envelope versus verified per-publication restore cut",
+      "normal fixture Git config inheritance, pair blob/worktree/clone SHA equality and typed config-drift rejection"
+    ],
+    "no_outbound_contact_authority": true,
+    "owner_rule": "Signal review readiness to owner; do not contact reviewer or create a new mandatory approval gate automatically"
+  },
+  "stop_conditions": [
+    "baseline/index/unrelated worktree drift",
+    "any expected input/profile/owner/request SHA or length mismatch",
+    "existing proposed output or fresh temp root collision",
+    "required unknown dependencies, paths, hosts, registry/event semantics, table rebuild or program budgets",
+    "unsupported schema/DB/partition identity, missing envelope, unknown cost/object-count facts",
+    "post-freeze edits requiring exception",
+    "actual fault/readback/timing/new-case failure or incomplete required coverage",
+    "hooks/signing or effects outside the exact agreed local Git scope",
+    "any unauthorized .gitattributes change, missing intended LF after exact patch, non-builtin fixture filter, EOL entry byte drift or newly unanchored scratch path",
+    "more than one pair stem or an unapproved runtime stem",
+    "seed envelope mutation or disagreement of publication footer/snapshot/pair source cut",
+    "normal fixture Git core.autocrlf/core.eol drift, transforming pair attribute, pair blob/worktree/clone SHA mismatch, or any common publisher/replay operation under the two EOL-case override repositories"
+  ],
+  "stop_response": "preserve committed/frozen facts, report the concrete blocker and give ready exact confirmation wording if a material scope exception is needed; technical retries within unchanged approved scope need no new permission",
+  "non_authorizations": [
+    "production/runtime activation",
+    "provider/model/API/network beyond exact wheels",
+    "S0/actor dispatch",
+    "real Alpha0/F13a/F15 measurement or 36 model calls",
+    "K0b03..05/N1 status or gate closures",
+    "old pipeline/projects/research/external attachments",
+    "subagents",
+    "historical frozen input semantic reuse or historical amendments",
+    "new credits/thresholds/storage/phases/trigger counts",
+    "remote push/merge/PR/deploy/release",
+    "host Python/ruamel evidence generation"
+  ],
+  "creation_confirmation": "Разрешаю создать только `new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml` по приведённому проекту со статусом `non_authorizing_proposed_scope` и вычислить полный SHA-256. Существующие request v1 и v2 оставить побайтово неизменными. Выполнение scope, изменение `.gitattributes`, staging, commit и изменения state/gates пока не разрешаю; runtime authority — none.",
+  "future_execution_confirmation_template": "Подтверждаю approval-request SHA-256 FULL_COMPLETE_REQUEST_SHA256 и разрешаю весь описанный exact scope: 93 existing read pins; single-source registry v2/resource-policy v3 и девять физических compiler outputs (6 + 3); additive migrations 5/6; bounded fixture artifact/event outbox/projector/publisher/replay/reconciliation/seals с проверяемым singleton, immutable seed envelope и обязательным LF config/byte invariant во всех normal fixture Git repositories; новые проверки, crash cases, EOL/config-drift/checkout checks и timings в двух locked-средах; renderer/profile v5 и только указанную K0b02 state materialization без изменений gates; 77 перечисленных путей, включая сохранённые request v1/v2, новый request v3 и точное добавление двух строк в `.gitattributes` с result SHA-256 58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d; ограниченную загрузку 12 pinned wheels; три exact новых temp-target с перечисленными fixture Git/SQLite эффектами и cleanup; один local commit с parent de1dce970acb0e83eff34f9e8a429a451e478c5c. Runtime authority — none; реальные Alpha0/F15/model execution не разрешены.",
+  "read_only_draft_authorization": {
+    "source": "current_conversation_separate_owner_three_file_read_only_and_chat_draft_permission",
+    "owner_quote": "Разрешаю read-only семантическое чтение `.gitattributes`, `new pipeline/harness/k0b01_v2/cli.py` и `new pipeline/tests/k0b01_v2/migration_fault_worker.py`, вычисление их полного SHA-256 и размеров, чтение Git metadata `core.autocrlf`, `core.eol` и эффективных атрибутов для четырёх отмеченных toolchain-файлов и будущего `new pipeline/toolchain/k0b02/invoke-v1.ps1`, а также подготовку в переписке проекта approval-request v2 относительно commit `de1dce970acb0e83eff34f9e8a429a451e478c5c`. Создание или изменение файлов, исполнение кода репозитория, тесты, сеть, temp-target, staging, commit, изменение Git config и state/gates не разрешаю; runtime authority — none.",
+    "status": "three_named_semantic_reads_SHA256_bytes_exact_Git_metadata_and_chat_draft_only",
+    "request_creation_authorized": false,
+    "implementation_execution_authorized": false,
+    "tests_authorized": false,
+    "network_authorized": false,
+    "temp_targets_authorized": false,
+    "staging_authorized": false,
+    "commit_authorized": false,
+    "state_gates_changes_authorized": false,
+    "Git_config_changes_authorized": false,
+    "runtime_authority": "none",
+    "message_id": "unknown",
+    "message_timestamp": "unknown",
+    "identity_authentication": "conversation_assertion_not_cryptographic"
+  },
+  "proposal_creation_materialization_rule": {
+    "only_on_separate_creation_permission": "set_current_permission.request_creation=true_and_append_creation_authorization_with_actual_owner_v3_quote_unknown_message_id_timestamp_and_conversation_only_identity",
+    "creation_authorization_fields": [
+      "source",
+      "owner_quote",
+      "status",
+      "execution_scope_authorized",
+      "staging_authorized",
+      "commit_authorized",
+      "state_gates_changes_authorized",
+      "runtime_authority",
+      "message_id",
+      "message_timestamp",
+      "identity_authentication"
+    ],
+    "fixed_creation_status": "one_request_file_and_complete_file_SHA256_only",
+    "execution_scope_authorized": false,
+    "staging_authorized": false,
+    "commit_authorized": false,
+    "state_gates_changes_authorized": false,
+    "runtime_authority": "none",
+    "other_changes": "none; no own request SHA or future containing commit hash embedded"
+  },
+  "supersedes_proposals": [
+    {
+      "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v1.yaml",
+      "sha256": "4e41048c2c20b3e6cb6c5d052ea652e9853a92e662028db1f4a97b667ce7f109",
+      "bytes": 67959,
+      "relation": "preserved_non_authorizing_scope_proposal_archive"
+    },
+    {
+      "path": "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v2.yaml",
+      "sha256": "121285b2f37b1025e061ce9c5602992500016b9b71b7d295ac34c6120dcd4a24",
+      "bytes": 89752,
+      "relation": "superseded_non_authorizing_scope_proposal_with_fixture_EOL_gap"
+    }
+  ],
+  "review_remediation_basis": {
+    "status": "external_review_finding_accepted_and_resolved_in_v3_proposal",
+    "finding": "normal fixture repositories inherited system core.autocrlf=true and could produce CRLF clone files for frozen LF projection peers",
+    "decision": "explicit normal-case command-local and repository-local core.autocrlf=false/core.eol=lf before every effect; exact isolated true override only for two zero-publication EOL cases; actual blob/worktree/clone SHA equality",
+    "attributes_result_SHA256": "58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d",
+    "retained_nonblocking_observations": [
+      "workspace origin/branch tracking exists; no permission to alter it and all remote effects remain prohibited with native final verification",
+      "pytest remains a pinned unused wheel; autoload stays disabled and dependency changes remain outside scope"
+    ],
+    "authority": "chat draft only; no file creation, code/test/network/temp/staging/commit/state change or runtime authority inferred"
+  },
+  "post_creation_correction_authorization": {
+    "source": "current_conversation_owner_instruction_after_external_review",
+    "status": "narrow_owner_authorized_preimplementation_text_correction",
+    "prior_complete_request_sha256": "ce1cbc1cbab7f7665aa57241d7b908c035acfcf86ef304ec3ae3479428395019",
+    "prior_complete_request_bytes": 95159,
+    "exact_corrected_fields": [
+      "implementation.publisher sentence boundary",
+      "implementation.replay sentence boundary",
+      "validation.cross_environment sentence boundary",
+      "validation.new_review_regression_requirements.case_placement exact module mapping",
+      "write_scope.historical_input_changes immutable v1/v2 wording"
+    ],
+    "same_message_execution_approval": {
+      "supplied_request_sha256": "ce1cbc1cbab7f7665aa57241d7b908c035acfcf86ef304ec3ae3479428395019",
+      "matches_corrected_complete_file": false,
+      "corrected_complete_request_sha256": "not_embedded_to_avoid_self_hash",
+      "disposition": "non_authorizing_for_corrected_bytes_requires_new_complete_SHA256_confirmation"
+    },
+    "execution_scope_authorized_for_corrected_bytes": false,
+    "staging_authorized": false,
+    "commit_authorized": false,
+    "state_gates_changes_authorized": false,
+    "runtime_authority": "none",
+    "message_id": "unknown",
+    "message_timestamp": "unknown",
+    "identity_authentication": "conversation_assertion_not_cryptographic"
+  },
+  "creation_authorization": {
+    "source": "current_conversation_separate_owner_request_creation_permission",
+    "owner_quote": "Разрешаю создать только `new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml` по приведённому проекту со статусом `non_authorizing_proposed_scope` и вычислить полный SHA-256. Существующие request v1 и v2 оставить побайтово неизменными. Выполнение scope, изменение `.gitattributes`, staging, commit и изменения state/gates пока не разрешаю; runtime authority — none.",
+    "status": "one_request_file_and_complete_file_SHA256_only",
+    "execution_scope_authorized": false,
+    "staging_authorized": false,
+    "commit_authorized": false,
+    "state_gates_changes_authorized": false,
+    "runtime_authority": "none",
+    "message_id": "unknown",
+    "message_timestamp": "unknown",
+    "identity_authentication": "conversation_assertion_not_cryptographic"
+  }
+}

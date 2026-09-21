@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.projection-intent-v1.schema",
+  "type": "object",
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_version_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partition_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "expected_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "projection_profile_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "pair_stem": {
+      "type": "string",
+      "enum": [
+        "fixture-decision"
+      ]
+    },
+    "causation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stable_identity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_request_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "admitted_root_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_pins": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "minItems": 1
+    },
+    "compiler_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "run_id",
+    "decision_version_id",
+    "phase_id",
+    "partition_digest",
+    "expected_revision",
+    "source_seq",
+    "projection_profile_sha256",
+    "pair_stem",
+    "causation_id",
+    "correlation_id",
+    "stable_identity",
+    "canonical_request_sha256",
+    "idempotency_key",
+    "admitted_root_id",
+    "schema_pins",
+    "compiler_manifest_sha256"
+  ],
+  "additionalProperties": false
+}

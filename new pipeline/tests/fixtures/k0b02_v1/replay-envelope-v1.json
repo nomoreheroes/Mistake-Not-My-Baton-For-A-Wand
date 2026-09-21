@@ -1,0 +1,7 @@
+{
+  "envelope_id": "fixture-envelope-v1",
+  "invocation_and_artifact_version_references": [],
+  "partition_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+  "profile_and_compiler_and_schema_pins": [],
+  "run_chain_identity": "fixture-run-chain-v1"
+}

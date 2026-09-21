@@ -1,0 +1,90 @@
+{
+    "receipt_id":  "pipeline-v2.k0b-02.artifact-event-implementation-completion-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "status":  "implemented_validated_runtime_not_authorized",
+    "recorded_at_UTC":  "2026-09-21T15:40:35.187Z",
+    "work_item_id":  "K0b-02",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/k0b-02-artifact-event-implementation-approval-request-v3.yaml",
+                                               "sha256":  "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+                                               "bytes":  96712
+                                           },
+                      "owner_disposition":  {
+                                                "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+                                                "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+                                                "bytes":  4392
+                                            }
+                  },
+    "implementation_inputs":  {
+                                  "path":  "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml",
+                                  "sha256":  "54b36e788f7f1e4e8b914e3db6a652cd148c9517eff7d8587632fb8f2d466035",
+                                  "bytes":  106312
+                              },
+    "validation":  {
+                       "path":  "new pipeline/evidence/k0b-02-artifact-event-validation-v1.yaml",
+                       "sha256":  "a4f60ab80b32c1db73c93e43ae82bd9460f339be8b7edd9f9a22cf9191784b7b",
+                       "bytes":  126283
+                   },
+    "compiled_output_manifest":  {
+                                     "path":  "new pipeline/evidence/k0b-02-compiled-output-manifest-v3.yaml",
+                                     "sha256":  "39c67e80d2fa0280757a6f0c80baa7fbd0007ec06339ee3e803d50345e87107b",
+                                     "bytes":  1913
+                                 },
+    "registry":  {
+                     "path":  "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json",
+                     "sha256":  "e6216a0eb36a7d90693d2e0d2251318d00d0bf38ef546a71fa6a586b9ed81dce",
+                     "bytes":  86209
+                 },
+    "resource_policy":  {
+                            "path":  "new pipeline/registry/resource-budget-policy/k0b02-policy-v3.json",
+                            "sha256":  "66d5b33238f5e6c51988b81fc9739bdc30411e05c41f61db9f551d274dfa03cb",
+                            "bytes":  23366
+                        },
+    "migrations":  [
+                       {
+                           "path":  "new pipeline/harness/migrations/0005_k0b02_publication_replay_v1.sql",
+                           "sha256":  "bc16fc9524e42cda207c1dd6fd763dcb7b6471a02e327bb29239b4db782cb5d1",
+                           "bytes":  6758
+                       },
+                       {
+                           "path":  "new pipeline/harness/migrations/0006_k0b02_checkpoint_phase_partition_v1.sql",
+                           "sha256":  "c16ddbc367f84d2240502e0dbc88af6a70ced057054db7742d24805ea9ff47b4",
+                           "bytes":  2840
+                       }
+                   ],
+    "results":  {
+                    "compiler_outputs":  9,
+                    "compiler_receipt_and_manifest_files":  3,
+                    "locked_environments":  2,
+                    "pytest_passed_per_environment":  66,
+                    "fixture_cases_per_environment":  80,
+                    "process_loss_boundaries_per_environment":  12,
+                    "publication_samples_per_environment":  12,
+                    "restore_samples_per_environment":  12,
+                    "Ruff_path_count":  30,
+                    "skips":  0,
+                    "failures":  0,
+                    "actual_provider_model_calls":  0,
+                    "actual_program_runtime_publications":  0,
+                    "cached_diff_SQL_EOF_remediation":  "validated"
+                },
+    "completed_capabilities":  [
+                                   "single_source_registry_v2_and_resource_policy_v3",
+                                   "nine_physical_compiler_outputs",
+                                   "additive_migrations_0005_and_0006",
+                                   "bounded_fixture_artifact_event_outbox_projector",
+                                   "checkpoint_publisher_clone_only_replay_and_reconciliation",
+                                   "immutable_phase_seals_and_budget_guards",
+                                   "normal_fixture_Git_LF_config_and_byte_invariant"
+                               ],
+    "retained_constraints":  [
+                                 "runtime_authority_none",
+                                 "real_Alpha0_F15_model_execution_not_performed",
+                                 "seven_open_and_ten_closed_gates_unchanged",
+                                 "K0b03_N1_not_advanced",
+                                 "push_merge_deploy_release_not_authorized"
+                             ],
+    "result":  "pass"
+}

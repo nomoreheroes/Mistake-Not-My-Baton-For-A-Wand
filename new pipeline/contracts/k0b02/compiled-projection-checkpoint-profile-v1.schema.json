@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2.k0b02.compiled-projection-checkpoint-profile-v1.schema",
+  "type": "object",
+  "properties": {
+    "family": {
+      "type": "string",
+      "const": "compiled_projection_checkpoint_profile"
+    },
+    "profile_id": {
+      "type": "string",
+      "const": "pipeline-v2.k0b02.projection-checkpoint.v1"
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "runtime_enabled": {
+      "type": "boolean",
+      "const": false
+    },
+    "owners": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "pipeline-v2.k0b02.inline.owners",
+      "type": "object",
+      "properties": {
+        "transaction_writer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reconciliation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "control_admission": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "transaction_writer",
+        "projector",
+        "publisher",
+        "reconciliation",
+        "control_admission"
+      ],
+      "additionalProperties": false
+    },
+    "pair_stems": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "fixture-decision"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "pair_targets": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "pipeline-v2.k0b02.inline.pair-targets",
+      "type": "object",
+      "properties": {
+        "yaml": {
+          "type": "string",
+          "minLength": 1
+        },
+        "markdown": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "yaml",
+        "markdown"
+      ],
+      "additionalProperties": false
+    },
+    "checkpoint_target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "replay_envelope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_registry_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "family",
+    "profile_id",
+    "schema_version",
+    "version",
+    "runtime_enabled",
+    "owners",
+    "pair_stems",
+    "pair_targets",
+    "checkpoint_target",
+    "replay_envelope",
+    "source_registry_sha256"
+  ],
+  "additionalProperties": false
+}

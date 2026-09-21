@@ -7,6 +7,8 @@
 *.toml text eol=lf
 *.py text eol=lf
 *.sql text eol=lf
+"new pipeline/toolchain/**/*.ps1" text eol=lf
+"new pipeline/toolchain/**/*.lock" text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
 
