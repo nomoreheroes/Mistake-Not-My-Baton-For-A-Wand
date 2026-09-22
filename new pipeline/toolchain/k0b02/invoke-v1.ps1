@@ -1,13 +1,14 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)][string]$PythonPath,
-    [Parameter(Mandatory=$true)][ValidateSet('validate-inputs','compile-all','init-db','audit-db','unittest','ruff-check','ruff-format')][string]$Mode,
+    [Parameter(Mandatory=$true)][ValidateSet('validate-inputs','compile-all','init-db','audit-db','unittest','pytest','ruff-check','ruff-format')][string]$Mode,
     [Parameter(Mandatory=$true)][string]$RepositoryRoot,
     [Parameter(Mandatory=$true)][string]$Manifest,
     [Parameter(Mandatory=$true)][string]$RuntimeRoot,
     [Parameter(Mandatory=$true)][ValidateSet('environment_A','environment_B')][string]$Environment,
     [string]$OutputDir,
     [string]$Database,
+    [string]$BaseTemp,
     [int]$TargetVersion = 6,
     [string[]]$TestPaths = @()
 )
@@ -27,6 +28,24 @@ if ($Mode -eq 'unittest') {
     if ($TestPaths.Count -eq 0) { throw 'TestPaths required' }
     & $PythonPath -I -B -m unittest -v @TestPaths
     exit $LASTEXITCODE
+}
+if ($Mode -eq 'pytest') {
+    if ($TestPaths.Count -eq 0) { throw 'TestPaths required' }
+    Assert-AbsolutePath -Value $BaseTemp -Name 'BaseTemp'
+    $runtimeFull = [IO.Path]::GetFullPath($RuntimeRoot).TrimEnd('\') + '\'
+    $baseTempFull = [IO.Path]::GetFullPath($BaseTemp)
+    if (-not $baseTempFull.StartsWith($runtimeFull, [StringComparison]::OrdinalIgnoreCase)) {
+        throw 'BaseTemp must be a descendant of RuntimeRoot'
+    }
+    $oldPluginAutoload = $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD
+    try {
+        $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'
+        & $PythonPath -I -B -m pytest -p no:cacheprovider --basetemp $baseTempFull @TestPaths
+        exit $LASTEXITCODE
+    }
+    finally {
+        $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = $oldPluginAutoload
+    }
 }
 if ($Mode -eq 'ruff-check' -or $Mode -eq 'ruff-format') {
     $ruff = Join-Path (Split-Path $PythonPath -Parent) 'ruff.exe'

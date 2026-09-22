@@ -1,0 +1,45 @@
+{
+  "decision_id": "pipeline-v2.k0b-02.post-audit-remediation-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "decided_on": "2026-09-22",
+  "status": "approved_exact_scope",
+  "work_item_id": "K0b-02",
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-02-post-audit-remediation-approval-request-v1.yaml",
+    "sha256": "e7d4b50531986195a2a47715bb7bc9dcd5d0f5b1210ad3909c3ea4c3de85d29c",
+    "bytes": 39852
+  },
+  "baseline": {
+    "parent": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "tree": "68eddc9a7d0d2537450a28dafe00b8f45dcb7eb7"
+  },
+  "owner_confirmation": {
+    "source": "current_conversation",
+    "identity_authentication": "conversation_assertion_not_cryptographic",
+    "message_id": "unknown",
+    "message_timestamp": "unknown",
+    "owner_quote": "Подтверждаю approval-request SHA-256 `e7d4b50531986195a2a47715bb7bc9dcd5d0f5b1210ad3909c3ea4c3de85d29c` и разрешаю весь описанный exact scope K0B02-POST-AUDIT-REMEDIATION-V1 относительно parent `ee7bc6e6da4db72f5784714c6bf06419e8910e78`: закрыть одиннадцать блокирующих audit findings; создать 12 и изменить 34 перечисленных пути, всего ровно 46; выпустить manifest v2, contract package v4, девять regenerated compiler outputs и v4 receipt chain; реализовать source-cut admission fence, ordered claims, durable bounded attempts, шесть table bindings, compiled single-source runtime, repeat-publish recovery, exact footer matching и closed Git environment; добавить committed pytest mode и evidence prior-root/amend; выполнить полный расширенный K0b‑02 suite, compiler, Ruff, renderer regression, crash/security checks и timings в двух locked-средах; использовать только три exact temp-target и при необходимости загрузить только те же 12 hash-pinned wheels с `pypi.org`/`files.pythonhosted.org`; удалить temp-target, проверить staged diff и создать один local commit с parent `ee7bc6e6da4db72f5784714c6bf06419e8910e78`. State/gates остаются неизменными; runtime authority — none; реальные Alpha0/F15/model execution и remote effects не разрешены."
+  },
+  "authorized": {
+    "blocking_findings": 11,
+    "exact_paths": 46,
+    "new_paths": 12,
+    "modified_paths": 34,
+    "temp_targets": 3,
+    "locked_environments": 2,
+    "local_commits": 1,
+    "network": "only_twelve_hash_pinned_wheels_from_pypi.org_and_files.pythonhosted.org",
+    "state_gates_changes": false,
+    "runtime_authority": "none"
+  },
+  "execution_rule": "stop_on_any_baseline_pin_path_freeze_compiler_schema_database_Git_security_test_timing_cleanup_or_state_gate_invariant_mismatch; same_scope_repairs_before_dependent_freeze_are_allowed; post_freeze_edits_require_a_new_exact_owner_exception",
+  "non_authorizations": [
+    "real_Alpha0_F13a_F15_or_model_execution",
+    "runtime_activation",
+    "K0b03_or_later_work",
+    "state_or_gate_change",
+    "remote_effect",
+    "amend_reset_rebase_or_ancestor_rewrite"
+  ]
+}

@@ -34,12 +34,32 @@ def test_v5_to_v6_and_repeat_readback() -> None:
     root, database, store = database_for("migration_v5_to_v6", 5)
     result = store.initialize_to_version(database, 6)
     assert result["user_version"] == 6 and len(result["k0b02_tables"]) == 17
+    connection = sqlite3.connect(database)
+    binding = connection.execute(
+        "SELECT output_count,runtime_enabled FROM k0b02_compiler_bindings"
+    ).fetchall()
+    connection.close()
+    assert binding == [(9, 0)]
     record("migration_v5_to_v6", schema_fingerprint=result["schema_fingerprint"])
 
     root, database, store = database_for("migration_repeat_readback", 6)
     first, second = store.audit(database), store.initialize_to_version(database, 6)
     assert first == second
     record("migration_repeat_readback", schema_fingerprint=first["schema_fingerprint"])
+
+
+def test_compiler_binding_drift_is_rejected() -> None:
+    root, database, store = database_for("compiler_binding_drift", 6)
+    connection = sqlite3.connect(database)
+    connection.execute(
+        "UPDATE k0b02_compiler_bindings SET integrated_manifest_sha256=?",
+        ("0" * 64,),
+    )
+    connection.commit()
+    connection.close()
+    with pytest.raises(ContractError, match="compiler_binding:identity"):
+        store.audit(database)
+    record("compiler_binding_drift")
 
 
 def test_unknown_schema_hard_blocks_without_catalog_write() -> None:

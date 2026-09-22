@@ -39,10 +39,10 @@ FILENAMES = {
 }
 ROOTS = {
     "environment_A": Path(
-        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-a"
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-a"
     ),
     "environment_B": Path(
-        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-artifact-event-implementation-v1-b"
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-b"
     ),
 }
 
@@ -109,16 +109,16 @@ def main(argv: list[str] | None = None) -> int:
             for name in A_FAMILIES:
                 (args.output_dir / FILENAMES[name]).write_bytes(a[name])
             a_path = (
-                args.output_dir / "k0b-02-registry-routing-compiler-receipt-v3.yaml"
+                args.output_dir / "k0b-02-registry-routing-compiler-receipt-v4.yaml"
             )
             a_path.write_bytes(receipt_a)
             b, receipt_b = compile_b(context, receipt_a)
             for name in B_FAMILIES:
                 (args.output_dir / FILENAMES[name]).write_bytes(b[name])
-            b_path = args.output_dir / "k0b-02-resource-budget-compiler-receipt-v3.yaml"
+            b_path = args.output_dir / "k0b-02-resource-budget-compiler-receipt-v4.yaml"
             b_path.write_bytes(receipt_b)
             manifest = integrated_manifest(context, receipt_a, receipt_b, {**a, **b})
-            m_path = args.output_dir / "k0b-02-compiled-output-manifest-v3.yaml"
+            m_path = args.output_dir / "k0b-02-compiled-output-manifest-v4.yaml"
             m_path.write_bytes(manifest)
             value = {
                 "result": "pass",

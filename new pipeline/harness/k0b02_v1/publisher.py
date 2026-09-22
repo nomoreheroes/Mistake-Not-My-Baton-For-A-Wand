@@ -8,31 +8,61 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .canonical import ContractError, json_bytes, require, sha256
-from .store import K0b02Store
+from .store import K0b02Store, runtime_profile
 
 
-PAIR_PATHS = (
-    ".pipeline/projections/fixture-decision.yaml",
-    ".pipeline/projections/fixture-decision.md",
-)
-CHECKPOINT_PATH = ".pipeline/history/pipeline-checkpoint.sqlite3"
-CHECKPOINT_TEMP_PATH = ".pipeline/history/.pipeline-checkpoint.sqlite3.tmp"
-PUBLICATION_PATHS = (CHECKPOINT_PATH, *PAIR_PATHS)
+def _closed_git_environment(extra: dict[str, str] | None = None) -> dict[str, str]:
+    admitted = {
+        "systemroot",
+        "windir",
+        "comspec",
+        "path",
+        "pathext",
+        "temp",
+        "tmp",
+    }
+    environment = {
+        key: value for key, value in os.environ.items() if key.lower() in admitted
+    }
+    environment.update(
+        {
+            "GIT_CONFIG_NOSYSTEM": "1",
+            "GIT_CONFIG_GLOBAL": "NUL",
+            "GIT_TERMINAL_PROMPT": "0",
+            "GCM_INTERACTIVE": "Never",
+            "LC_ALL": "C",
+            "LANG": "C",
+        }
+    )
+    if extra:
+        require(
+            set(extra) <= {"GIT_AUTHOR_DATE", "GIT_COMMITTER_DATE"},
+            "git:environment_extra",
+        )
+        environment.update(extra)
+    require(
+        not any(
+            key.upper()
+            in {
+                "GIT_DIR",
+                "GIT_WORK_TREE",
+                "GIT_CONFIG_PARAMETERS",
+                "GIT_OBJECT_DIRECTORY",
+                "GIT_ALTERNATE_OBJECT_DIRECTORIES",
+            }
+            for key in environment
+        ),
+        "git:environment_closed",
+    )
+    return environment
 
 
-def _git(repo: Path, *args: str, check: bool = True) -> str:
-    command = [
-        "git",
-        "-c",
-        "core.autocrlf=false",
-        "-c",
-        "core.eol=lf",
-        "-C",
-        str(repo),
-        *args,
-    ]
+def _git_process(
+    command: list[str], *, check: bool = True, extra_env: dict[str, str] | None = None
+) -> subprocess.CompletedProcess[bytes]:
     result = subprocess.run(
         command,
+        env=_closed_git_environment(extra_env),
         stdin=subprocess.DEVNULL,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -40,10 +70,43 @@ def _git(repo: Path, *args: str, check: bool = True) -> str:
     )
     if check and result.returncode:
         raise ContractError("git:" + result.stderr.decode("utf-8", "replace").strip())
+    return result
+
+
+def _git(repo: Path, *args: str, check: bool = True) -> str:
+    result = _git_process(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "-C",
+            str(repo),
+            *args,
+        ],
+        check=check,
+    )
     return result.stdout.decode("utf-8", "strict").strip()
 
 
-def verify_git_policy(repo: Path) -> dict[str, Any]:
+def _git_bytes(repo: Path, *args: str, check: bool = True) -> bytes:
+    return _git_process(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "-C",
+            str(repo),
+            *args,
+        ],
+        check=check,
+    ).stdout
+
+
+def verify_git_policy(repo: Path, pair_paths: list[str]) -> dict[str, Any]:
     require(repo.is_absolute() and (repo / ".git").is_dir(), "git:repository")
     require(
         _git(repo, "config", "--local", "--get", "core.autocrlf") == "false",
@@ -59,16 +122,18 @@ def verify_git_policy(repo: Path) -> dict[str, Any]:
         "git:tag_signing",
     )
     require(
-        _git(repo, "config", "--local", "--get", "core.hooksPath") == "NUL", "git:hooks"
+        _git(repo, "config", "--local", "--get", "core.hooksPath") == "NUL",
+        "git:hooks",
     )
     require(
         bool(_git(repo, "config", "--local", "--get", "user.name")), "git:user_name"
     )
     require(
-        bool(_git(repo, "config", "--local", "--get", "user.email")), "git:user_email"
+        bool(_git(repo, "config", "--local", "--get", "user.email")),
+        "git:user_email",
     )
     require(not _git(repo, "remote"), "git:remote")
-    for path in PAIR_PATHS:
+    for path in pair_paths:
         attrs = _git(
             repo,
             "check-attr",
@@ -89,28 +154,69 @@ def verify_git_policy(repo: Path) -> dict[str, Any]:
         "hooks_path": "NUL",
         "remote_count": 0,
         "pair_attributes": "unspecified",
+        "environment": "closed",
     }
 
 
+def _trailers(message: str) -> list[tuple[str, str]]:
+    lines = message.replace("\r\n", "\n").split("\n")
+    while lines and not lines[-1]:
+        lines.pop()
+    block: list[str] = []
+    for line in reversed(lines):
+        if not line or ": " not in line:
+            break
+        block.append(line)
+    result = []
+    for line in reversed(block):
+        key, value = line.split(": ", 1)
+        if key and value:
+            result.append((key, value))
+    return result
+
+
 def _known_commit(repo: Path, publication_id: str) -> str | None:
-    value = _git(
-        repo,
-        "log",
-        "--all",
-        "-1",
-        "--format=%H",
-        "--grep=Pipeline-Checkpoint-Publication-ID: " + publication_id,
-        check=False,
+    require(
+        bool(publication_id)
+        and "\n" not in publication_id
+        and "\r" not in publication_id,
+        "publication:ID",
     )
-    return value or None
+    candidates = [
+        value
+        for value in _git(repo, "rev-list", "--first-parent", "HEAD").splitlines()
+        if value
+    ]
+    matches: list[str] = []
+    key = "Pipeline-Checkpoint-Publication-ID"
+    for commit in candidates:
+        values = [
+            value
+            for name, value in _trailers(
+                _git(repo, "show", "-s", "--format=%B", commit)
+            )
+            if name == key
+        ]
+        if publication_id in values:
+            require(values == [publication_id], "publication:ambiguous_footer")
+            matches.append(commit)
+    require(len(matches) <= 1, "publication:ambiguous_footer")
+    return matches[0] if matches else None
 
 
 def _blob_raw(repo: Path, commit: str, path: str) -> bytes:
-    result = subprocess.run(
-        ["git", "-C", str(repo), "show", commit + ":" + path],
-        stdin=subprocess.DEVNULL,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+    result = _git_process(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "-C",
+            str(repo),
+            "show",
+            commit + ":" + path,
+        ],
         check=False,
     )
     require(result.returncode == 0, "publication:missing_blob")
@@ -137,6 +243,30 @@ def _verified_snapshot(path: Path) -> dict[str, Any]:
         connection.close()
     raw = path.read_bytes()
     return {"sha256": sha256(raw), "bytes": len(raw), "user_version": 6}
+
+
+def _attempt_boundary(
+    database: Path,
+    publication_id: str,
+    boundary: str,
+    *,
+    marker_sha256: str | None = None,
+    effect_commit: str | None = None,
+) -> None:
+    connection = K0b02Store.connect(database)
+    try:
+        connection.execute("BEGIN IMMEDIATE")
+        changed = connection.execute(
+            "UPDATE k0b02_publication_attempts SET boundary=?,durable_marker_sha256=COALESCE(?,durable_marker_sha256),effect_commit=COALESCE(?,effect_commit) WHERE publication_id=?",
+            (boundary, marker_sha256, effect_commit, publication_id),
+        ).rowcount
+        require(changed == 1, "publication:attempt_singleton")
+        connection.commit()
+    except BaseException:
+        connection.rollback()
+        raise
+    finally:
+        connection.close()
 
 
 def _record_result(
@@ -197,6 +327,12 @@ def _record_result(
             "UPDATE k0b02_publication_intents SET status='committed' WHERE publication_id=?",
             (request["publication_id"],),
         )
+        boundary = "terminal_recovered" if recovered else "terminal_committed"
+        changed = connection.execute(
+            "UPDATE k0b02_publication_attempts SET boundary=?,durable_marker_sha256=?,effect_commit=? WHERE publication_id=?",
+            (boundary, snapshot_sha, commit, request["publication_id"]),
+        ).rowcount
+        require(changed == 1, "publication:attempt_singleton")
         connection.commit()
         return {
             "result": "recovered" if recovered else "committed",
@@ -221,13 +357,26 @@ def publish(
     request: dict[str, Any],
     observer: Callable[[str], None] | None = None,
 ) -> dict[str, Any]:
-    policy = verify_git_policy(repository)
+    connection = K0b02Store.connect(database)
+    try:
+        profile = runtime_profile(connection)
+    finally:
+        connection.close()
+    pair_paths = profile["pair_paths"]
+    checkpoint_path = profile["checkpoint_path"]
+    checkpoint_target = repository / checkpoint_path
+    checkpoint_temp = checkpoint_target.with_name("." + checkpoint_target.name + ".tmp")
+    checkpoint_temp_path = checkpoint_temp.relative_to(repository).as_posix()
+    publication_paths = [checkpoint_path, *pair_paths]
+    policy = verify_git_policy(repository, pair_paths)
     require(
-        request["checkpoint_target"] == CHECKPOINT_PATH, "publication:checkpoint_target"
+        request["checkpoint_target"] == checkpoint_path,
+        "publication:checkpoint_target",
     )
+    known = _known_commit(repository, request["publication_id"])
     require(
         _git(repository, "rev-parse", "HEAD") == request["expected_Git_parent"]
-        or _known_commit(repository, request["publication_id"]) is not None,
+        or known is not None,
         "publication:parent",
     )
     connection = K0b02Store.connect(database)
@@ -237,13 +386,32 @@ def publish(
             (request["publication_id"],),
         ).fetchone()
         if previous:
-            checkpoint = repository / CHECKPOINT_PATH
+            binding = connection.execute(
+                "SELECT phase_id,partition_digest FROM k0b02_publication_phase_bindings WHERE publication_id=?",
+                (request["publication_id"],),
+            ).fetchall()
             require(
-                checkpoint.is_file()
-                and sha256(checkpoint.read_bytes()) == previous[2]
-                and sha256(_blob_raw(repository, previous[0], CHECKPOINT_PATH))
+                checkpoint_target.is_file()
+                and sha256(checkpoint_target.read_bytes()) == previous[2]
+                and sha256(_blob_raw(repository, previous[0], checkpoint_path))
                 == previous[2],
                 "publication:terminal_checkpoint_drift",
+            )
+            require(
+                binding == [(request["phase_id"], request["partition_digest"])]
+                and request["phase_id"] in profile["phases"],
+                "publication:phase_binding",
+            )
+            attempts = connection.execute(
+                "SELECT boundary,durable_marker_sha256,effect_commit FROM k0b02_publication_attempts WHERE publication_id=?",
+                (request["publication_id"],),
+            ).fetchall()
+            require(
+                len(attempts) == 1
+                and attempts[0][0].startswith("terminal_")
+                and attempts[0][1] == previous[2]
+                and attempts[0][2] == previous[0],
+                "publication:attempt_terminal",
             )
             return {
                 "result": "original",
@@ -262,11 +430,11 @@ def publish(
             if len(line) >= 4
         }
         require(
-            dirty <= {*PUBLICATION_PATHS, CHECKPOINT_TEMP_PATH},
+            dirty <= {*publication_paths, checkpoint_temp_path},
             "publication:dirty_tree",
         )
         intent = connection.execute(
-            "SELECT status FROM k0b02_publication_intents WHERE publication_id=?",
+            "SELECT run_id,phase_id,partition_digest,source_seq,status FROM k0b02_publication_intents WHERE publication_id=?",
             (request["publication_id"],),
         ).fetchone()
         pair = connection.execute(
@@ -296,11 +464,12 @@ def publish(
             pair_set_sha == request["ready_pair_set_sha256"], "publication:pair_set"
         )
         require(
-            sha256((repository / PAIR_PATHS[0]).read_bytes()) == pair[1]
-            and sha256((repository / PAIR_PATHS[1]).read_bytes()) == pair[2],
+            sha256((repository / pair_paths[0]).read_bytes()) == pair[1]
+            and sha256((repository / pair_paths[1]).read_bytes()) == pair[2],
             "publication:pair_files",
         )
-        if not intent:
+        connection.execute("BEGIN IMMEDIATE")
+        if intent is None:
             connection.execute(
                 "INSERT INTO k0b02_publication_intents(publication_id,run_id,phase_id,partition_digest,source_seq,receipt_high_water,outbox_high_water,ready_pair_set_sha256,expected_git_parent,predecessor_publication_id,status,created_at) VALUES(?,?,?,?,?,?,?,?,?,?,'begun',?)",
                 (
@@ -317,14 +486,66 @@ def publish(
                     datetime.now(timezone.utc).isoformat(),
                 ),
             )
+            connection.execute(
+                "INSERT INTO k0b02_publication_phase_bindings(publication_id,phase_id,partition_digest) VALUES(?,?,?)",
+                (
+                    request["publication_id"],
+                    request["phase_id"],
+                    request["partition_digest"],
+                ),
+            )
+        else:
+            require(
+                intent[:4]
+                == (
+                    request["run_id"],
+                    request["phase_id"],
+                    request["partition_digest"],
+                    request["source_seq"],
+                )
+                and intent[4] == "begun",
+                "publication:intent_drift",
+            )
+        binding = connection.execute(
+            "SELECT phase_id,partition_digest FROM k0b02_publication_phase_bindings WHERE publication_id=?",
+            (request["publication_id"],),
+        ).fetchall()
+        require(
+            binding == [(request["phase_id"], request["partition_digest"])]
+            and request["phase_id"] in profile["phases"],
+            "publication:phase_binding",
+        )
+        attempts = connection.execute(
+            "SELECT attempt_id FROM k0b02_publication_attempts WHERE publication_id=? ORDER BY attempt_id",
+            (request["publication_id"],),
+        ).fetchall()
+        if not attempts:
+            require(profile["projection_attempt_cap"] >= 1, "publication:attempt_cap")
+            connection.execute(
+                "INSERT INTO k0b02_publication_attempts(attempt_id,publication_id,boundary,durable_marker_sha256,effect_commit,created_at) VALUES(?,?,'begun',?,NULL,?)",
+                (
+                    request["publication_id"] + "-attempt-1",
+                    request["publication_id"],
+                    sha256(json_bytes(request)),
+                    datetime.now(timezone.utc).isoformat(),
+                ),
+            )
+        else:
+            require(
+                len(attempts) == 1 and profile["projection_attempt_cap"] == 1,
+                "publication:attempt_cap",
+            )
+        connection.commit()
+    except BaseException:
+        connection.rollback()
+        raise
     finally:
         connection.close()
     known = _known_commit(repository, request["publication_id"])
-    checkpoint = repository / CHECKPOINT_PATH
     if known:
-        raw = checkpoint.read_bytes()
+        raw = checkpoint_target.read_bytes()
         require(
-            sha256(_blob_raw(repository, known, CHECKPOINT_PATH)) == sha256(raw),
+            sha256(_blob_raw(repository, known, checkpoint_path)) == sha256(raw),
             "publication:known_checkpoint_drift",
         )
         tree = _git(repository, "show", "-s", "--format=%T", known)
@@ -335,20 +556,31 @@ def publish(
         _git(repository, "rev-parse", "HEAD") == request["expected_Git_parent"],
         "publication:ambiguous_begun_effect",
     )
-    candidate = repository / CHECKPOINT_TEMP_PATH
     snapshot = (
-        _verified_snapshot(candidate)
-        if candidate.exists()
-        else store.snapshot(database, candidate)
+        _verified_snapshot(checkpoint_temp)
+        if checkpoint_temp.exists()
+        else store.snapshot(database, checkpoint_temp)
+    )
+    _attempt_boundary(
+        database,
+        request["publication_id"],
+        "backup_verified",
+        marker_sha256=snapshot["sha256"],
     )
     if observer:
         observer("backup_verified")
-    checkpoint.parent.mkdir(parents=True, exist_ok=True)
-    os.replace(candidate, checkpoint)
+    checkpoint_target.parent.mkdir(parents=True, exist_ok=True)
+    os.replace(checkpoint_temp, checkpoint_target)
+    _attempt_boundary(
+        database,
+        request["publication_id"],
+        "snapshot_replaced",
+        marker_sha256=snapshot["sha256"],
+    )
     if observer:
         observer("snapshot_replaced")
     require(
-        sha256(checkpoint.read_bytes()) == snapshot["sha256"],
+        sha256(checkpoint_target.read_bytes()) == snapshot["sha256"],
         "publication:snapshot_readback",
     )
     message = (
@@ -372,40 +604,34 @@ def publish(
         + (request["predecessor_publication_id"] or "none")
         + "\n"
     )
-    _git(repository, "add", "--", *PUBLICATION_PATHS)
+    _git(repository, "add", "--", *publication_paths)
     staged = tuple(
-        x for x in _git(repository, "diff", "--cached", "--name-only").splitlines() if x
+        value
+        for value in _git(repository, "diff", "--cached", "--name-only").splitlines()
+        if value
     )
     require(
-        len(staged) == 3 and set(staged) == set(PUBLICATION_PATHS),
+        len(staged) == 3 and set(staged) == set(publication_paths),
         "publication:exact_paths",
     )
-    env = os.environ.copy()
-    env.update(
-        {
+    result = _git_process(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "-C",
+            str(repository),
+            "commit",
+            "--no-gpg-sign",
+            "-m",
+            message,
+        ],
+        extra_env={
             "GIT_AUTHOR_DATE": "2000-01-01T00:00:00Z",
             "GIT_COMMITTER_DATE": "2000-01-01T00:00:00Z",
-        }
-    )
-    command = [
-        "git",
-        "-c",
-        "core.autocrlf=false",
-        "-c",
-        "core.eol=lf",
-        "-C",
-        str(repository),
-        "commit",
-        "--no-gpg-sign",
-        "-m",
-        message,
-    ]
-    result = subprocess.run(
-        command,
-        env=env,
-        stdin=subprocess.DEVNULL,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        },
         check=False,
     )
     require(result.returncode == 0, "publication:Git_commit")
@@ -415,18 +641,20 @@ def publish(
         _known_commit(repository, request["publication_id"]) == commit,
         "publication:footer_readback",
     )
-    for path, expected in zip(PAIR_PATHS, (pair[1], pair[2])):
-        blob = _git(repository, "rev-parse", "HEAD:" + path)
-        blob_raw = subprocess.run(
-            ["git", "-C", str(repository), "cat-file", "blob", blob],
-            stdout=subprocess.PIPE,
-            check=True,
-        ).stdout
+    for path, expected in zip(pair_paths, (pair[1], pair[2])):
+        blob_raw = _git_bytes(repository, "show", "HEAD:" + path)
         require(
             sha256(blob_raw) == expected
             and sha256((repository / path).read_bytes()) == expected,
             "publication:blob_worktree",
         )
+    _attempt_boundary(
+        database,
+        request["publication_id"],
+        "coordination_Git_commit_before_DB_result",
+        marker_sha256=snapshot["sha256"],
+        effect_commit=commit,
+    )
     if observer:
         observer("coordination_Git_commit_before_DB_result")
     result_data = _record_result(

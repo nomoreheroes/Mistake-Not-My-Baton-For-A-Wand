@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .canonical import json_bytes, require, sha256
-from .store import K0b02Store
+from .store import K0b02Store, runtime_profile
 
 
 def now() -> str:
@@ -29,11 +29,13 @@ def admit(
     intent: dict[str, Any],
     observer: Callable[[str], None] | None = None,
 ) -> dict[str, Any]:
-    require(intent["pair_stem"] == "fixture-decision", "writer:pair_stem")
     canonical, digest = json_bytes(intent), sha256(json_bytes(intent))
     connection = K0b02Store.connect(database)
     try:
         connection.execute("BEGIN IMMEDIATE")
+        profile = runtime_profile(connection)
+        require(intent["pair_stem"] == profile["pair_stem"], "writer:pair_stem")
+        require(intent["phase_id"] in profile["phases"], "writer:phase")
         ensure_run(connection, intent["run_id"])
         existing = connection.execute(
             "SELECT decision_version_id,source_seq,canonical_sha256 FROM k0b02_decision_versions WHERE decision_version_id=?",
@@ -53,6 +55,41 @@ def admit(
                 "outbox_id": row[0],
                 "event": json.loads(row[1]),
             }
+        fence = connection.execute(
+            "SELECT publication_id FROM k0b02_publication_intents "
+            "WHERE status='begun' AND (run_id=? OR partition_digest=?) "
+            "ORDER BY source_seq,publication_id LIMIT 1",
+            (intent["run_id"], intent["partition_digest"]),
+        ).fetchone()
+        require(fence is None, "writer:source_cut")
+        for index, phase_id in enumerate(profile["phases"]):
+            connection.execute(
+                "INSERT OR IGNORE INTO k0b02_phase_bindings(phase_id,partition_digest,phase_order,predecessor_phase_id,runtime_enabled) VALUES(?,?,?,?,0)",
+                (
+                    phase_id,
+                    intent["partition_digest"],
+                    index + 1,
+                    profile["phases"][index - 1] if index else None,
+                ),
+            )
+            binding = connection.execute(
+                "SELECT partition_digest,phase_order,predecessor_phase_id,runtime_enabled FROM k0b02_phase_bindings WHERE phase_id=?",
+                (phase_id,),
+            ).fetchone()
+            require(
+                binding
+                == (
+                    intent["partition_digest"],
+                    index + 1,
+                    profile["phases"][index - 1] if index else None,
+                    0,
+                ),
+                "writer:phase_binding",
+            )
+            connection.execute(
+                "INSERT OR IGNORE INTO k0b02_phase_counters(phase_id,cumulative_full_snapshot_bytes,publication_count,batch_publications,model_calls,boundary_trigger_count) VALUES(?,0,0,0,0,0)",
+                (phase_id,),
+            )
         seq = connection.execute(
             "SELECT next_source_seq FROM k0b02_source_sequences WHERE run_id=?",
             (intent["run_id"],),
@@ -116,7 +153,7 @@ def admit(
                 intent["correlation_id"],
                 "pipeline-v2.alpha0.event.projection.requested.v1",
                 "1",
-                "1a8735a7c8f35415f7eb8dd3f958740e31f2c1521b7fdbe75a9b3245c0c30454",
+                profile["event_schema_sha256"]["projection.requested"],
                 json_bytes(payload).decode().strip(),
                 sha256(json_bytes(payload)),
                 event["idempotency_key"],
@@ -135,6 +172,10 @@ def admit(
                 json_bytes(event).decode().strip(),
                 now(),
             ),
+        )
+        connection.execute(
+            "INSERT INTO k0b02_outbox_phase_bindings(outbox_id,phase_id,partition_digest) VALUES(?,?,?)",
+            (outbox_id, intent["phase_id"], intent["partition_digest"]),
         )
         if observer:
             observer("decision_outbox_before_commit")

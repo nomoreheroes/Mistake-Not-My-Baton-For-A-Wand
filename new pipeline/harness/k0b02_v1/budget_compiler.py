@@ -105,6 +105,9 @@ def compile_outputs(context: InputContext, receipt_a_raw: bytes) -> dict[str, by
             "runtime_enabled": False,
         },
     }
+    for payload in payloads.values():
+        payload["compiler_package_version"] = "4.0.0"
+        payload["input_manifest_sha256"] = context.manifest_sha256
     return {name: json_bytes(payloads[name]) for name in FAMILIES}
 
 
@@ -114,9 +117,9 @@ def receipt_b(
     a = load_json(receipt_a_raw)
     require(tuple(outputs) == FAMILIES, "compiler:B_order")
     return {
-        "receipt_id": "pipeline-v2.k0b02.resource-budget.v3",
+        "receipt_id": "pipeline-v2.k0b02.resource-budget.v4",
         "schema_version": 2,
-        "compiler_package_version": "3.0.0",
+        "compiler_package_version": "4.0.0",
         "family": "resource_and_budget",
         "compiler": context.compiler_pin("budget_compiler.py"),
         "input_manifest_sha256": context.manifest_sha256,
@@ -157,9 +160,10 @@ def integrated_manifest(
     )
     return json_bytes(
         {
-            "manifest_id": "pipeline-v2.k0b02.compiled-output-manifest.v3",
+            "manifest_id": "pipeline-v2.k0b02.compiled-output-manifest.v4",
             "schema_version": 2,
-            "compiler_package_version": "3.0.0",
+            "compiler_package_version": "4.0.0",
+            "input_manifest_sha256": context.manifest_sha256,
             "receipt_A_sha256": sha256(a_raw),
             "receipt_B_sha256": sha256(b_raw),
             "outputs": [

@@ -164,8 +164,8 @@ def validate(value: Any, schema: dict[str, Any], path: str = "$") -> None:
 class InputContext:
     """Finite K0b-02 input closure. HASH-ONLY inputs never become semantic inputs."""
 
-    MANIFEST = "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml"
-    PACKAGE = "new pipeline/contracts/k0b02/alpha0-kernel-contract-package-v3.json"
+    MANIFEST = "new pipeline/evidence/k0b-02-implementation-input-manifest-v2.yaml"
+    PACKAGE = "new pipeline/contracts/k0b02/alpha0-kernel-contract-package-v4.json"
 
     def __init__(self, repository_root: Path, manifest_path: Path) -> None:
         require(repository_root.is_absolute(), "context:absolute_root")
@@ -181,9 +181,9 @@ class InputContext:
         self.manifest_sha256 = sha256(raw)
         require(
             self.manifest.get("status") == "frozen_implementation_inputs"
-            and self.manifest.get("schema_version") == 1
+            and self.manifest.get("schema_version") == 2
             and self.manifest.get("request_sha256")
-            == "b04ae991fbc6358eeb26b2feda00ff85abad7eadb378c4e188072431fa97c75d",
+            == "e7d4b50531986195a2a47715bb7bc9dcd5d0f5b1210ad3909c3ea4c3de85d29c",
             "manifest:identity",
         )
         effective = self.manifest["effective_inputs"]
@@ -192,7 +192,8 @@ class InputContext:
             len(effective) == len({p["path"] for p in effective}), "manifest:duplicate"
         )
         require(
-            len(frozen) == 18 and len({p["path"] for p in frozen}) == 18,
+            len(frozen) == self.manifest["frozen_HASH_ONLY_file_count"]
+            and len({p["path"] for p in frozen}) == len(frozen),
             "manifest:frozen",
         )
         self.hash_only = {p["path"] for p in frozen}
@@ -206,6 +207,11 @@ class InputContext:
             self.package["runtime_enabled"] is False
             and self.package["capabilities"] == [],
             "package:runtime",
+        )
+        require(
+            self.package["package_version"] == "4.0.0"
+            and self.package["input_manifest_locator"] == self.MANIFEST,
+            "package:version",
         )
         self.registry = self.json(self.package["registry_locator"])
         require(
@@ -223,6 +229,7 @@ class InputContext:
             validate_schema(schema, keywords)
             require(schema["$id"] not in self.schemas, "package:duplicate_schema")
             self.schemas[schema["$id"]] = schema
+        self._runtime_profile_cache: dict[str, Any] | None = None
 
     def raw(self, path: str) -> bytes:
         require(
@@ -248,6 +255,111 @@ class InputContext:
         path = "new pipeline/harness/k0b02_v1/" + name
         self.raw(path)
         return self.pin(path)
+
+    def _runtime_raw(self, path: str) -> bytes:
+        require(
+            path.startswith("new pipeline/compiled/k0b02_v1/")
+            or path.startswith("new pipeline/evidence/k0b-02-"),
+            "compiled:path_scope",
+        )
+        candidate = (self.root / path).resolve()
+        require(candidate.is_relative_to(self.root), "compiled:path_escape")
+        no_reparse(candidate)
+        require(candidate.is_file(), "compiled:missing")
+        return candidate.read_bytes()
+
+    def runtime_profile(self) -> dict[str, Any]:
+        if self._runtime_profile_cache is not None:
+            return copy.deepcopy(self._runtime_profile_cache)
+        manifest_path = self.package["compiled_output_manifest_locator"]
+        receipt_a_path = self.package["compiler_receipt_A_locator"]
+        receipt_b_path = self.package["compiler_receipt_B_locator"]
+        manifest_raw = self._runtime_raw(manifest_path)
+        receipt_a_raw = self._runtime_raw(receipt_a_path)
+        receipt_b_raw = self._runtime_raw(receipt_b_path)
+        compiled = load_json(manifest_raw)
+        receipt_a = load_json(receipt_a_raw)
+        receipt_b = load_json(receipt_b_raw)
+        require(
+            compiled["manifest_id"] == "pipeline-v2.k0b02.compiled-output-manifest.v4"
+            and compiled["compiler_package_version"] == "4.0.0"
+            and compiled["input_manifest_sha256"] == self.manifest_sha256
+            and compiled["runtime_enabled"] is False
+            and compiled["result"] == "pass",
+            "compiled:manifest_identity",
+        )
+        require(
+            compiled["receipt_A_sha256"] == sha256(receipt_a_raw)
+            and compiled["receipt_B_sha256"] == sha256(receipt_b_raw)
+            and receipt_a["input_manifest_sha256"] == self.manifest_sha256
+            and receipt_b["input_manifest_sha256"] == self.manifest_sha256
+            and receipt_b["dependencies"]["receipt_A_sha256"] == sha256(receipt_a_raw),
+            "compiled:receipt_chain",
+        )
+        locators = {
+            item["family"]: item["path"]
+            for item in self.package["compiled_output_locators"]
+        }
+        pins = {item["family"]: item for item in compiled["outputs"]}
+        require(
+            len(locators) == 9 and set(locators) == set(pins), "compiled:nine_outputs"
+        )
+        outputs: dict[str, dict[str, Any]] = {}
+        output_hashes: dict[str, str] = {}
+        for family in locators:
+            raw = self._runtime_raw(locators[family])
+            require(
+                sha256(raw) == pins[family]["sha256"]
+                and len(raw) == pins[family]["bytes"],
+                "compiled:output_pin:" + family,
+            )
+            value = load_json(raw)
+            require(
+                value["family"] == family
+                and value["compiler_package_version"] == "4.0.0"
+                and value["input_manifest_sha256"] == self.manifest_sha256
+                and value["runtime_enabled"] is False,
+                "compiled:output_identity:" + family,
+            )
+            outputs[family] = value
+            output_hashes[family] = pins[family]["sha256"]
+        projection = outputs["compiled_projection_checkpoint_profile"]
+        partition = outputs["compiled_checkpoint_phase_partition_v1"]
+        budget = outputs["compiled_checkpoint_publication_budget_v2"]
+        events = outputs["compiled_artifact_event_profile"]["events"]
+        event_schemas = {
+            event["event_type"]: event["schema"]["sha256"]
+            for event in events
+            if event["event_type"]
+            in {"projection.requested", "projection.written", "projection.failed"}
+        }
+        require(len(event_schemas) == 3, "compiled:projection_event_schemas")
+        pair_targets = projection["pair_targets"]
+        pair_stems = projection["pair_stems"]
+        require(
+            len(pair_stems) == 1
+            and set(pair_targets) == {"yaml", "markdown"}
+            and budget["credit"]["retry"] == 0,
+            "compiled:runtime_profile",
+        )
+        self._runtime_profile_cache = {
+            "binding_id": "compiler-binding-" + sha256(manifest_raw)[:32],
+            "integrated_manifest_sha256": sha256(manifest_raw),
+            "input_manifest_sha256": self.manifest_sha256,
+            "output_hashes": output_hashes,
+            "event_schema_sha256": event_schemas,
+            "phases": list(partition["phase_order"]),
+            "triggers": list(partition["F15_boundary_triggers"]),
+            "partition_digest": partition["partition_digest"],
+            "thresholds": copy.deepcopy(budget["thresholds"]),
+            "projection_attempt_cap": 1 + budget["credit"]["retry"],
+            "pair_stem": pair_stems[0],
+            "pair_paths": [pair_targets["yaml"], pair_targets["markdown"]],
+            "checkpoint_path": projection["checkpoint_target"],
+            "replay_envelope_path": projection["replay_envelope"],
+            "runtime_enabled": False,
+        }
+        return copy.deepcopy(self._runtime_profile_cache)
 
     def provenance(self) -> dict[str, Any]:
         return {

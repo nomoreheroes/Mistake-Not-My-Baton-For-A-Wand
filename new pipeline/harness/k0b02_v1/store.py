@@ -6,11 +6,28 @@ import sqlite3
 from pathlib import Path
 from typing import Any, Callable
 
-from .canonical import ContractError, no_reparse, require, sha256
+from .canonical import ContractError, json_bytes, load_json, no_reparse, require, sha256
 from .contract import InputContext
 from .digest import schema_fingerprint
 
 FaultObserver = Callable[[str], None]
+
+
+def runtime_profile(connection: sqlite3.Connection) -> dict[str, Any]:
+    rows = list(
+        connection.execute(
+            "SELECT integrated_manifest_sha256,output_hashes_json,runtime_enabled "
+            "FROM k0b02_compiler_bindings ORDER BY binding_id"
+        )
+    )
+    require(len(rows) == 1 and rows[0][2] == 0, "compiler_binding:singleton")
+    value = load_json(rows[0][1].encode("utf-8"))
+    require(
+        value["runtime_profile"]["integrated_manifest_sha256"] == rows[0][0]
+        and value["runtime_profile"]["runtime_enabled"] is False,
+        "compiler_binding:identity",
+    )
+    return value["runtime_profile"]
 
 
 def _execute(connection: sqlite3.Connection, sql: str) -> None:
@@ -186,9 +203,52 @@ class K0b02Store:
                 if current < item[0] <= version:
                     self._migrate_one(connection, *item, observer)
                     current = item[0]
+            if version == 6:
+                self._bind_compiler(connection)
             return self._audit_connection(connection, version)
         finally:
             connection.close()
+
+    def _bind_compiler(self, connection: sqlite3.Connection) -> None:
+        profile = self.context.runtime_profile()
+        payload = {
+            "input_manifest_sha256": self.context.manifest_sha256,
+            "outputs": profile["output_hashes"],
+            "runtime_profile": profile,
+        }
+        connection.execute("BEGIN IMMEDIATE")
+        try:
+            connection.execute(
+                "INSERT OR IGNORE INTO k0b02_compiler_bindings(binding_id,integrated_manifest_sha256,output_hashes_json,output_count,runtime_enabled,created_at) VALUES(?,?,?,9,0,?)",
+                (
+                    profile["binding_id"],
+                    profile["integrated_manifest_sha256"],
+                    json_bytes(payload).decode(),
+                    "2000-01-01T00:00:00Z",
+                ),
+            )
+            rows = list(
+                connection.execute(
+                    "SELECT binding_id,integrated_manifest_sha256,output_hashes_json,output_count,runtime_enabled FROM k0b02_compiler_bindings"
+                )
+            )
+            require(
+                rows
+                == [
+                    (
+                        profile["binding_id"],
+                        profile["integrated_manifest_sha256"],
+                        json_bytes(payload).decode(),
+                        9,
+                        0,
+                    )
+                ],
+                "compiler_binding:drift",
+            )
+            connection.commit()
+        except BaseException:
+            connection.rollback()
+            raise
 
     def migrate(
         self, database: Path, backup: Path, observer: FaultObserver | None = None
@@ -251,6 +311,8 @@ class K0b02Store:
         ]
         expected = 0 if version == 4 else 12 if version == 5 else 17
         require(len(tables) == expected, "audit:k0b02_table_count")
+        if version == 6:
+            runtime_profile(connection)
         return {
             "result": "pass",
             "user_version": version,

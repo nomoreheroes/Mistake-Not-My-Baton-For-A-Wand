@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from .canonical import require
-from .store import K0b02Store
+from .store import K0b02Store, runtime_profile
 
 
 def claim(database: Path, outbox_id: str) -> dict[str, Any]:
@@ -13,7 +13,12 @@ def claim(database: Path, outbox_id: str) -> dict[str, Any]:
     try:
         connection.execute("BEGIN IMMEDIATE")
         row = connection.execute(
-            "SELECT decision_version_id,run_id,source_seq,projection_profile_sha256,pair_stem,status,attempts,requested_event_json FROM k0b02_projection_outbox WHERE outbox_id=?",
+            "SELECT o.decision_version_id,o.run_id,o.source_seq,o.projection_profile_sha256,o.pair_stem,o.status,o.attempts,o.requested_event_json,"
+            "b.phase_id,b.partition_digest,d.phase_id,d.partition_digest "
+            "FROM k0b02_projection_outbox AS o "
+            "LEFT JOIN k0b02_outbox_phase_bindings AS b ON b.outbox_id=o.outbox_id "
+            "JOIN k0b02_decision_versions AS d ON d.decision_version_id=o.decision_version_id "
+            "WHERE o.outbox_id=?",
             (outbox_id,),
         ).fetchone()
         require(row is not None, "outbox:missing")
@@ -24,6 +29,19 @@ def claim(database: Path, outbox_id: str) -> dict[str, Any]:
                 "status": row[5],
                 "outbox_id": outbox_id,
             }
+        profile = runtime_profile(connection)
+        require(
+            row[8] in profile["phases"] and row[8] == row[10] and row[9] == row[11],
+            "outbox:phase_binding",
+        )
+        lower = connection.execute(
+            "SELECT outbox_id FROM k0b02_projection_outbox "
+            "WHERE run_id=? AND source_seq<? AND status IN ('pending','claimed') "
+            "ORDER BY source_seq,outbox_id LIMIT 1",
+            (row[1], row[2]),
+        ).fetchone()
+        require(lower is None, "outbox:claim_order")
+        require(row[6] < profile["projection_attempt_cap"], "outbox:attempt_cap")
         attempt = row[6] + 1
         connection.execute(
             "UPDATE k0b02_projection_outbox SET status='claimed',attempts=? WHERE outbox_id=?",

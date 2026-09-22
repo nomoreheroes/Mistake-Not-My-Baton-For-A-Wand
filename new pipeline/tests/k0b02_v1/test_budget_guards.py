@@ -1,10 +1,19 @@
 from __future__ import annotations
 
+import sqlite3
+
 import pytest
 
-from fixture_support import ContractError, context, database_for, fixture, record
+from fixture_support import (
+    ContractError,
+    context,
+    database_for,
+    fixture,
+    record,
+    runtime_values,
+)
 from k0b02_v1.binary_budget import stress_checkpoint
-from k0b02_v1.phase import PHASES, bind, record_publication
+from k0b02_v1.phase import bind, record_publication
 
 
 def _bound(case_id: str):
@@ -16,34 +25,40 @@ def _bound(case_id: str):
 def test_checkpoint_hard_limit_is_strict() -> None:
     database = _bound("checkpoint_hard_limit")
     with pytest.raises(ContractError, match="checkpoint_hard"):
-        record_publication(database, PHASES[0], 104857600)
+        record_publication(
+            database,
+            runtime_values()["phases"][0],
+            runtime_values()["thresholds"]["checkpoint_hard_bytes"],
+        )
     record("checkpoint_hard_limit")
 
 
 def test_phase_pack_hard_limit_uses_cumulative_full_bytes() -> None:
     database = _bound("phase_pack_hard_limit")
-    record_publication(
-        database, PHASES[0], 90, checkpoint_hard=1000, phase_warning=80, phase_hard=100
+    profile = runtime_values()
+    connection = sqlite3.connect(database)
+    connection.execute(
+        "UPDATE k0b02_phase_counters SET cumulative_full_snapshot_bytes=? WHERE phase_id=?",
+        (profile["thresholds"]["phase_pack_hard_bytes"] - 5, profile["phases"][0]),
     )
+    connection.commit()
+    connection.close()
     with pytest.raises(ContractError, match="phase:pack_hard"):
-        record_publication(
-            database,
-            PHASES[0],
-            10,
-            checkpoint_hard=1000,
-            phase_warning=80,
-            phase_hard=100,
-        )
+        record_publication(database, profile["phases"][0], 10)
     record("phase_pack_hard_limit", credit=0)
 
 
 def test_publication_batch_cap_is_twelve() -> None:
     database = _bound("publication_batch_cap")
-    for _ in range(12):
-        record_publication(database, PHASES[0], 1)
+    profile = runtime_values()
+    for _ in range(profile["thresholds"]["publication_batch_cap"]):
+        record_publication(database, profile["phases"][0], 1)
     with pytest.raises(ContractError, match="batch_cap"):
-        record_publication(database, PHASES[0], 1)
-    record("publication_batch_cap", admitted=12)
+        record_publication(database, profile["phases"][0], 1)
+    record(
+        "publication_batch_cap",
+        admitted=profile["thresholds"]["publication_batch_cap"],
+    )
 
 
 def test_warning_reforecast_and_exact_stress_vector() -> None:
@@ -56,6 +71,7 @@ def test_warning_reforecast_and_exact_stress_vector() -> None:
     )
     result = stress_checkpoint(inputs["current_stress_inputs"], policy["thresholds"])
     expected = fixture("budget-boundary-vectors-v1.json")
+    assert runtime_values()["thresholds"] == policy["thresholds"]
     assert (
         result["rounded_size_stressed_checkpoint_bytes"]
         == expected["checkpoint_size_stress_bytes"]

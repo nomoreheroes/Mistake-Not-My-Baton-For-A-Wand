@@ -1,0 +1,43 @@
+{
+  "evidence_id": "pipeline-v2.k0b-02.post-audit-remediation-session-entry-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-22",
+  "status": "authorized_execution_entry_verified",
+  "baseline": {
+    "HEAD": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "parent": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+    "tree": "68eddc9a7d0d2537450a28dafe00b8f45dcb7eb7",
+    "index": "clean",
+    "worktree": "only_confirmed_untracked_remediation_request",
+    "verified_existing_write_pins": 34
+  },
+  "authority": {
+    "request_sha256": "e7d4b50531986195a2a47715bb7bc9dcd5d0f5b1210ad3909c3ea4c3de85d29c",
+    "owner_disposition": "new pipeline/decisions/k0b-02-post-audit-remediation-owner-disposition-v1.yaml",
+    "exact_paths": 46,
+    "runtime_authority": "none"
+  },
+  "locked_dependencies": {
+    "lock_path": "new pipeline/toolchain/k0b01/requirements-v1.lock",
+    "lock_sha256": "6c767bccd0d07afd9d25f6e123a1a8a9c62c0b097086554bc5894cc705468fa6",
+    "wheel_count": 12,
+    "wheel_set_root_sha256": "2f6b623195294aa0fd96329e794097ae6f932bb91e9e302a8bdd0c92ac125b3b",
+    "download_hosts": ["pypi.org", "files.pythonhosted.org"],
+    "environment_A": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-a",
+    "environment_B": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-b",
+    "python": "CPython_3.12.7",
+    "installation": "offline_require_hashes_no_deps_pass_in_both_environments"
+  },
+  "temp_targets": [
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-wheelhouse",
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-a",
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-post-audit-remediation-v1-b"
+  ],
+  "entry_state": {
+    "state_changes_authorized": false,
+    "gate_changes_authorized": false,
+    "real_Alpha0_F15_model_execution_authorized": false,
+    "remote_effects_authorized": false
+  }
+}

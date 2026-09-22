@@ -49,7 +49,7 @@ def main() -> int:
 
     context = InputContext(
         root,
-        root / "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml",
+        root / "new pipeline/evidence/k0b-02-implementation-input-manifest-v2.yaml",
     )
     store = K0b02Store(context, runtime, runtime)
     payload = json.loads(args.payload.read_bytes())

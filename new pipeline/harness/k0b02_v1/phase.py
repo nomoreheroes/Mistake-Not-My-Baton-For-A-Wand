@@ -5,30 +5,23 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .canonical import json_bytes, require, sha256
-from .store import K0b02Store
-
-
-PHASES = ("K0b-runtime-operational", "K0b-F15-exact-measurement")
-TRIGGERS = (
-    "k0b.f15.boundary.entry_gate",
-    "k0b.f15.boundary.program_owner_wait_or_exit",
-    "k0b.f15.boundary.exit_gate",
-    "k0b.f15.boundary.top_level_run_end",
-)
+from .store import K0b02Store, runtime_profile
 
 
 def bind(database: Path, partition_digest: str) -> None:
     connection = K0b02Store.connect(database)
     try:
         connection.execute("BEGIN IMMEDIATE")
-        for index, phase in enumerate(PHASES):
+        profile = runtime_profile(connection)
+        phases = profile["phases"]
+        for index, phase in enumerate(phases):
             connection.execute(
                 "INSERT OR IGNORE INTO k0b02_phase_bindings(phase_id,partition_digest,phase_order,predecessor_phase_id,runtime_enabled) VALUES(?,?,?,?,0)",
                 (
                     phase,
                     partition_digest,
                     index + 1,
-                    PHASES[index - 1] if index else None,
+                    phases[index - 1] if index else None,
                 ),
             )
             connection.execute(
@@ -47,17 +40,18 @@ def record_publication(
     database: Path,
     phase_id: str,
     snapshot_bytes: int,
-    checkpoint_hard: int = 104857600,
-    phase_warning: int = 536870912,
-    phase_hard: int = 1073741824,
 ) -> dict[str, Any]:
-    require(
-        phase_id in PHASES and 0 < snapshot_bytes < checkpoint_hard,
-        "phase:checkpoint_hard",
-    )
     connection = K0b02Store.connect(database)
     try:
         connection.execute("BEGIN IMMEDIATE")
+        profile = runtime_profile(connection)
+        phases = profile["phases"]
+        thresholds = profile["thresholds"]
+        require(
+            phase_id in phases
+            and 0 < snapshot_bytes < thresholds["checkpoint_hard_bytes"],
+            "phase:checkpoint_hard",
+        )
         require(
             connection.execute(
                 "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (phase_id,)
@@ -65,11 +59,11 @@ def record_publication(
             == 0,
             "phase:sealed",
         )
-        if phase_id == PHASES[1]:
+        if phase_id == phases[1]:
             require(
                 connection.execute(
                     "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?",
-                    (PHASES[0],),
+                    (phases[0],),
                 ).fetchone()[0]
                 == 1,
                 "phase:predecessor_seal",
@@ -78,9 +72,12 @@ def record_publication(
             "SELECT cumulative_full_snapshot_bytes,publication_count,batch_publications FROM k0b02_phase_counters WHERE phase_id=?",
             (phase_id,),
         ).fetchone()
-        require(row is not None and row[2] < 12, "phase:batch_cap")
+        require(
+            row is not None and row[2] < thresholds["publication_batch_cap"],
+            "phase:batch_cap",
+        )
         cumulative, count = row[0] + snapshot_bytes, row[1] + 1
-        require(cumulative < phase_hard, "phase:pack_hard")
+        require(cumulative < thresholds["phase_pack_hard_bytes"], "phase:pack_hard")
         connection.execute(
             "UPDATE k0b02_phase_counters SET cumulative_full_snapshot_bytes=?,publication_count=?,batch_publications=? WHERE phase_id=?",
             (cumulative, count, row[2] + 1, phase_id),
@@ -88,7 +85,7 @@ def record_publication(
         connection.commit()
         return {
             "result": "above_warning"
-            if cumulative >= phase_warning
+            if cumulative >= thresholds["warning_bytes"]
             else "below_warning",
             "cumulative_full_snapshot_bytes": cumulative,
             "publication_count": count,
@@ -105,29 +102,32 @@ def record_f15_trigger(database: Path, trigger_id: str) -> dict[str, Any]:
     connection = K0b02Store.connect(database)
     try:
         connection.execute("BEGIN IMMEDIATE")
+        profile = runtime_profile(connection)
+        phases = profile["phases"]
+        triggers = profile["triggers"]
         require(
             connection.execute(
-                "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (PHASES[0],)
+                "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (phases[0],)
             ).fetchone()[0]
             == 1,
             "phase:predecessor_seal",
         )
         require(
             connection.execute(
-                "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (PHASES[1],)
+                "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (phases[1],)
             ).fetchone()[0]
             == 0,
             "phase:F15_sealed",
         )
         count, calls = connection.execute(
             "SELECT boundary_trigger_count,model_calls FROM k0b02_phase_counters WHERE phase_id=?",
-            (PHASES[1],),
+            (phases[1],),
         ).fetchone()
-        require(calls == 0 and count < len(TRIGGERS), "phase:F15_trigger_limit")
-        require(trigger_id == TRIGGERS[count], "phase:F15_trigger_order")
+        require(calls == 0 and count < len(triggers), "phase:F15_trigger_limit")
+        require(trigger_id == triggers[count], "phase:F15_trigger_order")
         connection.execute(
             "UPDATE k0b02_phase_counters SET boundary_trigger_count=? WHERE phase_id=?",
-            (count + 1, PHASES[1]),
+            (count + 1, phases[1]),
         )
         connection.commit()
         return {
@@ -145,8 +145,9 @@ def record_f15_trigger(database: Path, trigger_id: str) -> dict[str, Any]:
 def reject_model_call(database: Path) -> None:
     connection = K0b02Store.connect(database)
     try:
+        phases = runtime_profile(connection)["phases"]
         sealed = connection.execute(
-            "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (PHASES[1],)
+            "SELECT COUNT(*) FROM k0b02_phase_seals WHERE phase_id=?", (phases[1],)
         ).fetchone()[0]
         require(
             False,
@@ -159,14 +160,20 @@ def reject_model_call(database: Path) -> None:
 def seal(
     database: Path, data: dict[str, Any], observer: Callable[[str], None] | None = None
 ) -> dict[str, Any]:
-    require(data["phase_id"] in PHASES and data["result"] == "sealed", "seal:identity")
-    require(
-        data["all_admitted_members_terminal"] is True
-        and data["no_unresolved_begun_effects"] is True,
-        "seal:terminal",
-    )
     connection = K0b02Store.connect(database)
     try:
+        profile = runtime_profile(connection)
+        phases = profile["phases"]
+        triggers = profile["triggers"]
+        require(
+            data["phase_id"] in phases and data["result"] == "sealed",
+            "seal:identity",
+        )
+        require(
+            data["all_admitted_members_terminal"] is True
+            and data["no_unresolved_begun_effects"] is True,
+            "seal:terminal",
+        )
         unresolved = connection.execute(
             "SELECT COUNT(*) FROM k0b02_publication_intents WHERE status='begun'"
         ).fetchone()[0]
@@ -199,17 +206,17 @@ def seal(
             and publication[0] == data["terminal_checkpoint_sha256"],
             "seal:terminal_checkpoint",
         )
-        if data["phase_id"] == PHASES[1]:
+        if data["phase_id"] == phases[1]:
             predecessor = connection.execute(
-                "SELECT seal_id FROM k0b02_phase_seals WHERE phase_id=?", (PHASES[0],)
+                "SELECT seal_id FROM k0b02_phase_seals WHERE phase_id=?", (phases[0],)
             ).fetchone()
             require(
                 predecessor is not None
                 and data["predecessor_seal_id"] == predecessor[0],
                 "seal:predecessor",
             )
-            require(data["authorities"] == list(TRIGGERS), "seal:four_triggers")
-            require(counters[2] == 4, "seal:trigger_count")
+            require(data["authorities"] == triggers, "seal:four_triggers")
+            require(counters[2] == len(triggers), "seal:trigger_count")
         if observer:
             observer("terminal_checkpoint_before_seal")
         connection.execute(

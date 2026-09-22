@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .canonical import json_bytes, require, sha256
-from .store import K0b02Store
+from .store import K0b02Store, runtime_profile
 from .transaction_writer import stable_id
 
 
@@ -30,10 +30,14 @@ def _write_candidate(candidate: Path, target: Path, raw: bytes) -> None:
         os.fsync(stream.fileno())
 
 
-def _markdown(source: dict[str, Any], source_raw: bytes, profile_sha: str) -> bytes:
+def _markdown(
+    source: dict[str, Any], source_raw: bytes, profile_sha: str, pair_stem: str
+) -> bytes:
     body = json.dumps(source, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
     text = (
-        "# fixture-decision\n\n"
+        "# "
+        + pair_stem
+        + "\n\n"
         + "Pipeline-Source-SHA256: "
         + sha256(source_raw)
         + "\n"
@@ -58,11 +62,13 @@ def project(
     recordable = False
     terminal_existing = False
     try:
+        profile = runtime_profile(connection)
         row = connection.execute(
             "SELECT decision_version_id,run_id,source_seq,projection_profile_sha256,pair_stem,status,requested_event_json FROM k0b02_projection_outbox WHERE outbox_id=?",
             (outbox_id,),
         ).fetchone()
-        require(row is not None and row[4] == "fixture-decision", "projector:outbox")
+        require(row is not None and row[4] == profile["pair_stem"], "projector:outbox")
+        yaml_path, markdown_path = profile["pair_paths"]
         recordable = True
         existing = connection.execute(
             "SELECT projection_id,yaml_sha256,markdown_sha256,ready FROM k0b02_projection_pairs WHERE outbox_id=?",
@@ -71,8 +77,8 @@ def project(
         if existing:
             terminal_existing = True
             require(existing[3] == 1, "projector:partial_ready")
-            yaml_target = repository / ".pipeline/projections/fixture-decision.yaml"
-            md_target = repository / ".pipeline/projections/fixture-decision.md"
+            yaml_target = repository / yaml_path
+            md_target = repository / markdown_path
             require(
                 sha256(yaml_target.read_bytes()) == existing[1]
                 and sha256(md_target.read_bytes()) == existing[2],
@@ -93,11 +99,11 @@ def project(
         source_raw = (decision[0] + "\n").encode("utf-8")
         source = json.loads(decision[0])
         yaml_raw = json_bytes(source)
-        markdown_raw = _markdown(source, source_raw, row[3])
-        yaml_target = repository / ".pipeline/projections/fixture-decision.yaml"
-        md_target = repository / ".pipeline/projections/fixture-decision.md"
-        yaml_temp = repository / ".pipeline/projections/.fixture-decision.yaml.tmp"
-        md_temp = repository / ".pipeline/projections/.fixture-decision.md.tmp"
+        markdown_raw = _markdown(source, source_raw, row[3], profile["pair_stem"])
+        yaml_target = repository / yaml_path
+        md_target = repository / markdown_path
+        yaml_temp = yaml_target.with_name("." + yaml_target.name + ".tmp")
+        md_temp = md_target.with_name("." + md_target.name + ".tmp")
         _write_candidate(yaml_temp, yaml_target, yaml_raw)
         if observer:
             observer("first_peer_replaced")
@@ -156,7 +162,7 @@ def project(
                 row[1],
                 "pipeline-v2.alpha0.event.projection.written.v1",
                 "1",
-                "73e943cddd612db8a30d74c7b10550508d28c416a322b26966ac89409a3bc024",
+                profile["event_schema_sha256"]["projection.written"],
                 json_bytes(payload).decode().strip(),
                 sha256(json_bytes(payload)),
                 "|".join([row[1], "v1", projection_id]),
@@ -232,7 +238,7 @@ def project(
                     row[1],
                     "pipeline-v2.alpha0.event.projection.failed.v1",
                     "1",
-                    "d6c30ea2a13c89c2d503099b25de02298ca10105a30fe02e6c2f7ec3616917b5",
+                    profile["event_schema_sha256"]["projection.failed"],
                     json_bytes(payload).decode().strip(),
                     sha256(json_bytes(payload)),
                     "|".join([row[1], "v1", projection_id, type(exc).__name__]),

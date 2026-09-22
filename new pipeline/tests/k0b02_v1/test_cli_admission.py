@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 import subprocess
 import sys
@@ -10,6 +11,7 @@ from fixture_support import (
     REPOSITORY,
     RUNTIME_ROOT,
     case_root,
+    context,
     record,
     sha256,
 )
@@ -71,6 +73,63 @@ def test_cli_input_output_collision() -> None:
     result = _cli("compile-all", RUNTIME_ROOT, "--output-dir", str(RUNTIME_ROOT))
     assert result.returncode == 1 and b"CLI:output_dir" in result.stderr
     record("cli_input_output_collision")
+
+
+def test_manifest_v2_accepts_final_pair_and_rejects_baseline_pair() -> None:
+    result = _cli("validate-inputs", RUNTIME_ROOT)
+    payload = json.loads(result.stdout)
+    assert result.returncode == 0 and payload["result"] == "pass"
+    ctx = context()
+    record(
+        "committed_head_manifest_v2",
+        manifest_sha256=ctx.manifest_sha256,
+        effective_input_count=len(ctx.pins),
+    )
+    historical = json.loads(
+        (
+            REPOSITORY
+            / "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml"
+        ).read_bytes()
+    )
+    historical_pins = {item["path"]: item for item in historical["effective_inputs"]}
+    for path in ("new pipeline/state/state.yaml", "new pipeline/state/STATE.md"):
+        baseline = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(REPOSITORY),
+                "show",
+                "de1dce970acb0e83eff34f9e8a429a451e478c5c:" + path,
+            ],
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=True,
+        ).stdout
+        assert (sha256(baseline), len(baseline)) == (
+            historical_pins[path]["sha256"],
+            historical_pins[path]["bytes"],
+        )
+        assert (sha256(baseline), len(baseline)) != (
+            ctx.pin(path)["sha256"],
+            ctx.pin(path)["bytes"],
+        )
+    record("baseline_state_pair_rejected_by_manifest_v2")
+
+
+def test_committed_pytest_wrapper_is_explicit_and_closed() -> None:
+    raw = (REPOSITORY / "new pipeline/toolchain/k0b02/invoke-v1.ps1").read_text(
+        encoding="utf-8"
+    )
+    for literal in (
+        "'pytest'",
+        "$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD = '1'",
+        "-I -B -m pytest -p no:cacheprovider",
+        "BaseTemp must be a descendant of RuntimeRoot",
+    ):
+        assert literal in raw
+    assert MANIFEST.name == "k0b-02-implementation-input-manifest-v2.yaml"
+    record("committed_pytest_wrapper")
 
 
 def _git(

@@ -4,8 +4,8 @@ from pathlib import Path
 from typing import Any
 
 from .canonical import require, sha256
-from .publisher import CHECKPOINT_PATH, _git
-from .store import K0b02Store
+from .publisher import _git, _known_commit
+from .store import K0b02Store, runtime_profile
 
 
 def reconcile(database: Path, repository: Path, publication_id: str) -> dict[str, Any]:
@@ -26,22 +26,15 @@ def reconcile(database: Path, repository: Path, publication_id: str) -> dict[str
                 "git_commit": result[0],
                 "snapshot_sha256": result[1],
             }
-        commit = _git(
-            repository,
-            "log",
-            "--all",
-            "-1",
-            "--format=%H",
-            "--grep=Pipeline-Checkpoint-Publication-ID: " + publication_id,
-            check=False,
-        )
+        profile = runtime_profile(connection)
+        commit = _known_commit(repository, publication_id)
         if not commit:
             require(
                 _git(repository, "rev-parse", "HEAD") == intent[1],
                 "reconciliation:ambiguous_unknown_effect",
             )
             return {"result": "safe_to_retry_no_effect"}
-        checkpoint = repository / CHECKPOINT_PATH
+        checkpoint = repository / profile["checkpoint_path"]
         require(checkpoint.is_file(), "reconciliation:known_effect_missing_checkpoint")
         return {
             "result": "known_committed_effect",

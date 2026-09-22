@@ -157,15 +157,18 @@ def compile_outputs(context: InputContext) -> dict[str, bytes]:
             "source_registry_sha256": registry_sha,
         },
     }
+    for payload in payloads.values():
+        payload["compiler_package_version"] = "4.0.0"
+        payload["input_manifest_sha256"] = context.manifest_sha256
     return {name: json_bytes(payloads[name]) for name in FAMILIES}
 
 
 def receipt_a(context: InputContext, outputs: dict[str, bytes]) -> dict[str, Any]:
     require(tuple(outputs) == FAMILIES, "compiler:A_order")
     return {
-        "receipt_id": "pipeline-v2.k0b02.registry-routing.v3",
+        "receipt_id": "pipeline-v2.k0b02.registry-routing.v4",
         "schema_version": 2,
-        "compiler_package_version": "3.0.0",
+        "compiler_package_version": "4.0.0",
         "family": "registry_and_routing",
         "compiler": context.compiler_pin("registry_compiler.py"),
         "input_manifest_sha256": context.manifest_sha256,

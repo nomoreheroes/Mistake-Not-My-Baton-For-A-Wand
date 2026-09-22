@@ -10,6 +10,7 @@ from fixture_support import (
     init_coordination,
     intent,
     record,
+    runtime_values,
 )
 from k0b02_v1.outbox import claim
 from k0b02_v1.projector import project
@@ -82,10 +83,7 @@ def test_projection_process_loss_readback(
 
     with pytest.raises(ProcessLoss):
         project(database, admitted["outbox_id"], repository, observer)
-    peers = [
-        repository / ".pipeline/projections/fixture-decision.yaml",
-        repository / ".pipeline/projections/fixture-decision.md",
-    ]
+    peers = [repository / path for path in runtime_values()["pair_paths"]]
     assert sum(path.is_file() for path in peers) == expected_files
     connection = sqlite3.connect(database)
     assert (
@@ -101,7 +99,7 @@ def test_projection_process_loss_readback(
 def test_projection_drift_is_detected_on_original_readback() -> None:
     root, database, repository, admitted = _prepared("projection_drift")
     result = project(database, admitted["outbox_id"], repository)
-    target = repository / ".pipeline/projections/fixture-decision.yaml"
+    target = repository / runtime_values()["pair_paths"][0]
     target.write_bytes(target.read_bytes() + b"drift\n")
     with pytest.raises(ContractError, match="existing_pair_drift"):
         project(database, admitted["outbox_id"], repository)
@@ -111,7 +109,8 @@ def test_projection_drift_is_detected_on_original_readback() -> None:
 
 def test_projection_failure_receipt_is_terminal_and_keeps_v1_payload() -> None:
     root, database, repository, admitted = _prepared("projection_failure_receipt")
-    temporary = repository / ".pipeline/projections/.fixture-decision.yaml.tmp"
+    target = repository / runtime_values()["pair_paths"][0]
+    temporary = target.with_name("." + target.name + ".tmp")
     temporary.parent.mkdir(parents=True, exist_ok=True)
     temporary.write_bytes(b"owned failure fixture\n")
     with pytest.raises(ContractError, match="temp_exists"):
@@ -133,6 +132,25 @@ def test_projection_failure_receipt_is_terminal_and_keeps_v1_payload() -> None:
     )
     assert status == "failed"
     record("projection_failure_receipt")
+
+
+def test_projection_event_schema_hashes_come_from_compiled_profile() -> None:
+    root, database, repository, admitted = _prepared("projection_compiled_schemas")
+    project(database, admitted["outbox_id"], repository)
+    profile = runtime_values()
+    connection = sqlite3.connect(database)
+    rows = dict(
+        connection.execute(
+            "SELECT event_type,schema_sha256 FROM events "
+            "WHERE event_type IN ('projection.requested','projection.written')"
+        )
+    )
+    connection.close()
+    assert rows == {
+        name: profile["event_schema_sha256"][name]
+        for name in ("projection.requested", "projection.written")
+    }
+    record("projection_compiled_schemas")
 
 
 def test_unapproved_pair_stem_rejected_before_mutation() -> None:

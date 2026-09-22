@@ -24,6 +24,7 @@ from fixture_support import (
     ready_pair,
     record,
     run_git,
+    runtime_values,
 )
 from k0b02_v1.canonical import json_bytes
 from k0b02_v1.outbox import claim
@@ -135,6 +136,7 @@ def _boundary_fixture(case_id: str, operation: str):
         payload = {"outbox_id": admitted["outbox_id"]}
     elif operation == "publisher":
         bundle = ready_pair(case_id)
+        store = bundle["store"]
         root, database, repository = (
             bundle["root"],
             bundle["database"],
@@ -143,6 +145,7 @@ def _boundary_fixture(case_id: str, operation: str):
         payload = publication_request(bundle)
     else:
         bundle, request, result = published(case_id)
+        store = bundle["store"]
         root, database, repository = (
             bundle["root"],
             bundle["database"],
@@ -150,11 +153,11 @@ def _boundary_fixture(case_id: str, operation: str):
         )
         bind(database, "1" * 64)
         record_publication(
-            database, "K0b-runtime-operational", result["snapshot_bytes"]
+            database, runtime_values()["phases"][0], result["snapshot_bytes"]
         )
         payload = {
             "seal_id": "seal-" + case_id,
-            "phase_id": "K0b-runtime-operational",
+            "phase_id": runtime_values()["phases"][0],
             "partition_digest": "1" * 64,
             "predecessor_seal_id": None,
             "terminal_checkpoint_publication_id": request["publication_id"],
@@ -170,14 +173,14 @@ def _boundary_fixture(case_id: str, operation: str):
         }
     payload_path = root / "fault-result.json"
     payload_path.write_bytes(json_bytes(payload))
-    return root, database, repository, payload_path
+    return root, database, repository, payload_path, store
 
 
 @pytest.mark.parametrize(("case_id", "operation", "boundary"), BOUNDARIES)
 def test_all_twelve_owned_process_loss_boundaries(
     case_id: str, operation: str, boundary: str
 ) -> None:
-    root, database, repository, payload = _boundary_fixture(case_id, operation)
+    root, database, repository, payload, store = _boundary_fixture(case_id, operation)
     marker, ready = root / "durable-marker.json", root / "durable-marker.ready"
     worker = REPOSITORY / "new pipeline/tests/k0b02_v1/fault_worker.py"
     command = [
@@ -236,6 +239,10 @@ def test_all_twelve_owned_process_loss_boundaries(
         if child.poll() is None:
             child.kill()
             child.communicate(timeout=10)
+    if operation == "publisher":
+        request = json.loads(payload.read_bytes())
+        recovered = publish(store, database, repository, request)
+        assert recovered["result"] in {"committed", "recovered", "original"}
     connection = sqlite3.connect(database)
     if operation == "migration":
         version = connection.execute("PRAGMA user_version").fetchone()[0]
@@ -253,6 +260,19 @@ def test_all_twelve_owned_process_loss_boundaries(
             == 0
         )
     elif operation == "publisher" and boundary == "publication_DB_result":
+        assert (
+            connection.execute(
+                "SELECT COUNT(*) FROM k0b02_publication_results"
+            ).fetchone()[0]
+            == 1
+        )
+    if operation == "publisher":
+        assert (
+            connection.execute(
+                "SELECT COUNT(*) FROM k0b02_publication_attempts"
+            ).fetchone()[0]
+            == 1
+        )
         assert (
             connection.execute(
                 "SELECT COUNT(*) FROM k0b02_publication_results"

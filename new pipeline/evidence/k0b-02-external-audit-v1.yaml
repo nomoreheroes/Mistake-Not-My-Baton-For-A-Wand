@@ -1,0 +1,78 @@
+{
+  "evidence_id": "pipeline-v2.k0b-02.external-audit-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-22",
+  "status": "owner_supplied_report_normalized_findings_record",
+  "audit_report": {
+    "transport": "current_conversation_attachment_outside_repository",
+    "sha256": "83c89a7439c6fc0130334abb7c018127692000033450922dbb86c7e52c99d335",
+    "bytes": 10942,
+    "reviewer_identity": "unknown_not_invented",
+    "audited_commit": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "audited_parent": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+    "audited_tree": "68eddc9a7d0d2537450a28dafe00b8f45dcb7eb7"
+  },
+  "reported_positive_results": {
+    "named_SHA256_and_size_pins": "24_of_24_match",
+    "commit_delta": "77_paths_74_added_3_modified",
+    "trailers": "five_Git_parsed",
+    "EOL": "77_of_77_UTF8_no_BOM_no_CR_one_final_LF",
+    "compiler": "nine_outputs_and_v3_receipt_chain_match",
+    "migrations": "additive_12_plus_5_tables_user_version_7_blocked_WAL_FULL",
+    "state": "exact_12_field_whitelist_17_gate_records_unchanged_7_open_10_closed",
+    "crash_matrix": "twelve_boundaries_match_code_and_tests",
+    "cleanup": "reported_clean"
+  },
+  "reported_reproduction": {
+    "committed_HEAD": "20_failed_3_passed_then_maxfail_all_pin_length",
+    "baseline_state_pair_restored": "66_passed_80_unique_cases_0_skipped",
+    "reported_publication_p95_seconds": "3.750",
+    "reported_restore_p95_seconds": "6.156",
+    "reported_Ruff": "pass",
+    "reported_renderer_v5": "pass"
+  },
+  "classification": {
+    "source": "implementation_agent_inference_from_report_not_literal_auditor_status",
+    "result": "changes_required"
+  },
+  "blocking_findings": [
+    "K0B02-PA-R01_committed_HEAD_not_self_reproducing",
+    "K0B02-PA-R02_exact77_root_comparer_not_recorded",
+    "K0B02-PA-R03_message_only_amend_exception_not_materialized",
+    "K0B02-PA-R04_pytest_invocation_not_committed",
+    "K0B02-PA-F01_source_cut_does_not_block_admission",
+    "K0B02-PA-F02_ordered_claims_and_durable_bounded_attempts_missing",
+    "K0B02-PA-F03_six_migration_tables_unused",
+    "K0B02-PA-F04_runtime_duplicates_compiled_constants",
+    "K0B02-PA-F05_publisher_process_loss_second_call_not_proved",
+    "K0B02-PA-S01_known_commit_substring_grep",
+    "K0B02-PA-S02_Git_subprocess_environment_not_sanitized"
+  ],
+  "accepted_nonblocking_findings": [
+    "K0B02-PA-NB01_main_repository_push_boundary_remains_procedural",
+    "K0B02-PA-NB02_suite_performance_optimization_deferred",
+    "K0B02-PA-NB03_Windows_locked_environment_limitation_recorded",
+    "K0B02-PA-NB04_ignored_cache_and_old_pipeline_pyc_cleanup_out_of_scope"
+  ],
+  "prior_exact77_root": {
+    "sha256": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+    "path_comparer": "OrdinalIgnoreCase",
+    "path_encoding": "UTF8",
+    "record_encoding": "path_TAB_lowercase_SHA256_TAB_decimal_bytes_LF",
+    "record_order": "case_insensitive_ordinal_path_order_with_original_path_bytes_in_each_record",
+    "note": "this_records_the_preexisting_77_path_root_reported_and_independently_reproduced_by_the_auditor"
+  },
+  "message_only_amend_exception": {
+    "authority_source": "current_conversation_owner_post_commit_exception_2026_09_21",
+    "old_commit": "8ace2d68151ac010761365927381e6964313d697",
+    "new_commit": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "parent": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+    "tree": "68eddc9a7d0d2537450a28dafe00b8f45dcb7eb7",
+    "changed": "commit_message_only",
+    "unchanged": "parent_tree_77_path_scope_74_additions_3_modifications_and_all_committed_blobs",
+    "remote_effects": false,
+    "identity_authentication": "conversation_assertion_not_cryptographic"
+  },
+  "runtime_authority": "none"
+}

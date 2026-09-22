@@ -17,7 +17,7 @@ RUNTIME_ROOT = Path(os.environ["K0B02_RUNTIME_ROOT"]).resolve()
 ENVIRONMENT = os.environ["K0B02_ENVIRONMENT"]
 REPORT = Path(os.environ["K0B02_CASE_REPORT"]).resolve()
 MANIFEST = (
-    REPOSITORY / "new pipeline/evidence/k0b-02-implementation-input-manifest-v1.yaml"
+    REPOSITORY / "new pipeline/evidence/k0b-02-implementation-input-manifest-v2.yaml"
 )
 FIXTURES = REPOSITORY / "new pipeline/tests/fixtures/k0b02_v1"
 PACKAGE_PARENT = REPOSITORY / "new pipeline/harness"
@@ -28,7 +28,12 @@ from k0b02_v1.canonical import ContractError as ContractError, json_bytes, sha25
 from k0b02_v1.contract import InputContext  # noqa: E402
 from k0b02_v1.outbox import claim  # noqa: E402
 from k0b02_v1.projector import project  # noqa: E402
-from k0b02_v1.publisher import _git, publish, verify_git_policy  # noqa: E402
+from k0b02_v1.publisher import (  # noqa: E402
+    _git,
+    _git_process,
+    publish,
+    verify_git_policy,
+)
 from k0b02_v1.store import K0b02Store  # noqa: E402
 from k0b02_v1.transaction_writer import admit  # noqa: E402
 
@@ -37,8 +42,18 @@ def fixture(name: str) -> dict[str, Any]:
     return json.loads((FIXTURES / name).read_bytes())
 
 
+_CONTEXT: InputContext | None = None
+
+
 def context() -> InputContext:
-    return InputContext(REPOSITORY, MANIFEST)
+    global _CONTEXT
+    if _CONTEXT is None:
+        _CONTEXT = InputContext(REPOSITORY, MANIFEST)
+    return _CONTEXT
+
+
+def runtime_values() -> dict[str, Any]:
+    return context().runtime_profile()
 
 
 def case_root(case_id: str, variant: str = "positive") -> Path:
@@ -87,12 +102,7 @@ def run_git(
         str(repo),
         *args,
     ]
-    result = subprocess.run(
-        command,
-        stdin=subprocess.DEVNULL,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
+    result = _git_process(command, check=False)
     if check and result.returncode:
         raise AssertionError(result.stderr.decode("utf-8", "replace"))
     return result
@@ -103,7 +113,7 @@ def init_coordination(
 ) -> tuple[Path, str, str]:
     repo = root / "coord-producer"
     repo.mkdir()
-    result = subprocess.run(
+    result = _git_process(
         [
             "git",
             "-c",
@@ -115,9 +125,7 @@ def init_coordination(
             "main",
             str(repo),
         ],
-        stdin=subprocess.DEVNULL,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        check=False,
     )
     assert result.returncode == 0, result.stderr.decode("utf-8", "replace")
     for key, value in (
@@ -141,14 +149,7 @@ def init_coordination(
     run_git(
         repo, "add", "--", ".pipeline/replay/invocation-envelope.json", "unrelated.txt"
     )
-    env = os.environ.copy()
-    env.update(
-        {
-            "GIT_AUTHOR_DATE": "2000-01-01T00:00:00Z",
-            "GIT_COMMITTER_DATE": "2000-01-01T00:00:00Z",
-        }
-    )
-    commit = subprocess.run(
+    commit = _git_process(
         [
             "git",
             "-c",
@@ -162,14 +163,15 @@ def init_coordination(
             "-m",
             "fixture seed",
         ],
-        env=env,
-        stdin=subprocess.DEVNULL,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        extra_env={
+            "GIT_AUTHOR_DATE": "2000-01-01T00:00:00Z",
+            "GIT_COMMITTER_DATE": "2000-01-01T00:00:00Z",
+        },
+        check=False,
     )
     assert commit.returncode == 0, commit.stderr.decode("utf-8", "replace")
     assert run_git(repo, "remote").stdout == b""
-    verify_git_policy(repo)
+    verify_git_policy(repo, runtime_values()["pair_paths"])
     return repo, _git(repo, "rev-parse", "HEAD"), sha256(envelope_raw)
 
 
@@ -219,16 +221,17 @@ def publication_request(
         "markdown_sha256": projected["markdown_sha256"],
         "source_seq": bundle["admitted"]["source_seq"],
     }
+    profile = runtime_values()
     return {
         "publication_id": publication_id,
         "run_id": bundle["admitted"]["event"]["payload"]["run_id"],
-        "phase_id": "K0b-runtime-operational",
+        "phase_id": profile["phases"][0],
         "partition_digest": "1" * 64,
         "source_seq": bundle["admitted"]["source_seq"],
         "receipt_high_water": projected["receipt_seq"],
         "outbox_high_water": bundle["admitted"]["source_seq"],
         "ready_pair_set_sha256": sha256(json_bytes(pair_set)),
-        "checkpoint_target": ".pipeline/history/pipeline-checkpoint.sqlite3",
+        "checkpoint_target": profile["checkpoint_path"],
         "projection_profile_sha256": "2" * 64,
         "expected_Git_parent": bundle["parent"],
         "predecessor_publication_id": None,
