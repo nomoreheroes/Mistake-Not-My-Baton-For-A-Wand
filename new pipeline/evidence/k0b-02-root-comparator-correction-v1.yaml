@@ -1,0 +1,154 @@
+{
+  "document_id": "pipeline-v2.k0b-02-root-comparator-correction-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T08:01:07.5853268Z",
+  "work_item_id": "K0b-02",
+  "status": "authoritative_append_only_root_comparator_correction",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+      "bytes": 4272
+    },
+    "external_audit": {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+      "bytes": 5803
+    },
+    "external_audit_source": {
+      "sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "bytes": 8553
+    }
+  },
+  "finding": {
+    "id": "K0B02-POST-REMEDIATION-AUDIT-R01",
+    "classification": "evidence_algorithm_label_accuracy",
+    "implementation_blob_impact": "none",
+    "historical_blob_policy": "immutable",
+    "statement": "three_historical_root_values_were_labeled_OrdinalIgnoreCase_but_their_record_order_does_not_match_literal_DOTNET_StringComparer.OrdinalIgnoreCase"
+  },
+  "authoritative_root_profile": {
+    "comparer_type": "System.StringComparer",
+    "comparer_member": "OrdinalIgnoreCase",
+    "comparer_expression": "[System.StringComparer]::OrdinalIgnoreCase",
+    "culture_dependency": "none",
+    "path_domain_observed": "ASCII_only_for_all_three_sets",
+    "path_bytes_in_record": "original_path_UTF8_without_BOM",
+    "digest_text": "lowercase_SHA256_hex_ASCII",
+    "byte_count_text": "invariant_decimal_ASCII",
+    "record_layout": "path_TAB_sha256_TAB_bytes_LF",
+    "final_record_terminator": "LF_required",
+    "carriage_returns": "none",
+    "stream_BOM": "none",
+    "root_operation": "SHA256_over_the_complete_concatenated_record_stream",
+    "duplicates": "reject_exact_duplicate_paths",
+    "comparison_ties": "reject_distinct_paths_equal_under_OrdinalIgnoreCase"
+  },
+  "corrected_roots": [
+    {
+      "root_id": "prior_exact77",
+      "source_definition": {
+        "path_set": "git_diff_name_only_between_parent_and_commit",
+        "parent": "de1dce970acb0e83eff34f9e8a429a451e478c5c",
+        "commit": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+        "blob_source": "commit_ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+        "per_path_digest": "SHA256_of_exact_Git_blob_bytes",
+        "per_path_bytes": "exact_Git_blob_length"
+      },
+      "pin_count": 77,
+      "record_stream_bytes": 9872,
+      "all_paths_ASCII": true,
+      "exact_duplicate_count": 0,
+      "OrdinalIgnoreCase_tie_count": 0,
+      "first_sorted_path": ".gitattributes",
+      "last_sorted_path": "new pipeline/toolchain/k0b02/invoke-v1.ps1",
+      "historical_root_sha256": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+      "historical_label": "OrdinalIgnoreCase",
+      "historical_root_reproduction": {
+        "InvariantCultureIgnoreCase": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+        "Ordinal": "b0f2555d08c06503d8aafb1c2e52d8b5235ba30ef636b77601c6d834c91ef677",
+        "note": "matching_an_alternate_order_does_not_prove_the_original_generator_and_is_recorded_only_to_explain_the_mislabel"
+      },
+      "correct_OrdinalIgnoreCase_root_sha256": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a"
+    },
+    {
+      "root_id": "post_audit_materialization_nonself45",
+      "source_definition": {
+        "path": "new pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml",
+        "sha256": "ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+        "bytes": 11525,
+        "field": "exact_scope.nonself_path_pins"
+      },
+      "pin_count": 45,
+      "record_stream_bytes": 5738,
+      "all_paths_ASCII": true,
+      "exact_duplicate_count": 0,
+      "OrdinalIgnoreCase_tie_count": 0,
+      "first_sorted_path": "new pipeline/compiled/k0b02_v1/compiled_artifact_event_profile.json",
+      "last_sorted_path": "new pipeline/toolchain/k0b02/invoke-v1.ps1",
+      "historical_root_sha256": "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+      "historical_label": "OrdinalIgnoreCase_path_TAB_sha256_TAB_bytes_LF",
+      "historical_root_reproduction": {
+        "InvariantCultureIgnoreCase": "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+        "Ordinal": "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+        "note": "matching_alternate_orders_are_ambiguous_for_this_set_and_do_not_make_the_OrdinalIgnoreCase_label_correct"
+      },
+      "correct_OrdinalIgnoreCase_root_sha256": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1"
+    },
+    {
+      "root_id": "post_audit_completion_frozen44",
+      "source_definition": {
+        "path": "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml",
+        "sha256": "6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+        "bytes": 11299,
+        "field": "path_scope.frozen_path_pins"
+      },
+      "pin_count": 44,
+      "record_stream_bytes": 5589,
+      "all_paths_ASCII": true,
+      "exact_duplicate_count": 0,
+      "OrdinalIgnoreCase_tie_count": 0,
+      "first_sorted_path": "new pipeline/compiled/k0b02_v1/compiled_artifact_event_profile.json",
+      "last_sorted_path": "new pipeline/toolchain/k0b02/invoke-v1.ps1",
+      "historical_root_sha256": "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b",
+      "historical_label": "OrdinalIgnoreCase_path_TAB_sha256_TAB_bytes_LF",
+      "historical_root_reproduction": {
+        "InvariantCultureIgnoreCase": "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b",
+        "Ordinal": "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b",
+        "note": "matching_alternate_orders_are_ambiguous_for_this_set_and_do_not_make_the_OrdinalIgnoreCase_label_correct"
+      },
+      "correct_OrdinalIgnoreCase_root_sha256": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    }
+  ],
+  "independent_reproduction_profiles": [
+    {
+      "name": "primary",
+      "sort": "DOTNET_Array_Sort_with_System.StringComparer.OrdinalIgnoreCase",
+      "result": "all_three_expected_roots_match"
+    },
+    {
+      "name": "secondary",
+      "precondition": "all_paths_ASCII_and_no_OrdinalIgnoreCase_ties",
+      "sort": "ASCII_ToUpperInvariant_key_with_StringComparer.Ordinal",
+      "result": "orders_and_all_three_roots_byte_identical_to_primary"
+    }
+  ],
+  "supersession": {
+    "scope": "only_the_three_historical_comparer_labels_and_corresponding_OrdinalIgnoreCase_root_values",
+    "historical_files_modified": false,
+    "historical_roots_retained_as_legacy_observations": true,
+    "authoritative_values": [
+      "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a",
+      "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1",
+      "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    ]
+  },
+  "result": "blocking_evidence_accuracy_finding_corrected_without_implementation_or_historical_blob_changes",
+  "runtime_authority": "none"
+}

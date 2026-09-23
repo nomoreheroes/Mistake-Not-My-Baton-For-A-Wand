@@ -1,0 +1,158 @@
+{
+  "document_id": "pipeline-v2.k0b-02-root-comparator-validation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T08:01:07.5853268Z",
+  "work_item_id": "K0b-02",
+  "status": "pass",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+      "bytes": 4272
+    },
+    "external_audit": {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+      "bytes": 5803
+    },
+    "correction": {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+      "bytes": 7524
+    }
+  },
+  "preflight": {
+    "HEAD": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "parent": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "tree": "255251947ad639447ec56d8318f4a8268a8eb5da",
+    "initial_index": "clean",
+    "initial_worktree": "only_the_authorized_untracked_request",
+    "request_hash_confirmed": true,
+    "external_audit_input": {
+      "sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "bytes": 8553,
+      "result": "match"
+    }
+  },
+  "historical_source_pins": [
+    {
+      "path": "new pipeline/evidence/k0b-02-external-audit-v1.yaml",
+      "sha256": "e774488b58c07eb224eee8144e4176fcc1a24ac14d444f8af01f3cedd56ac14e",
+      "bytes": 3761,
+      "result": "match"
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml",
+      "sha256": "ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+      "bytes": 11525,
+      "result": "match"
+    },
+    {
+      "path": "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml",
+      "sha256": "6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+      "bytes": 11299,
+      "result": "match"
+    }
+  ],
+  "root_checks": [
+    {
+      "root_id": "prior_exact77",
+      "pin_count": 77,
+      "record_stream_bytes": 9872,
+      "all_paths_ASCII": true,
+      "exact_duplicates": 0,
+      "OrdinalIgnoreCase_ties": 0,
+      "primary_method": "DOTNET_Array_Sort_StringComparer.OrdinalIgnoreCase",
+      "primary_sha256": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a",
+      "secondary_method": "ASCII_ToUpperInvariant_key_then_StringComparer.Ordinal",
+      "secondary_sha256": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a",
+      "orders_identical": true,
+      "expected_match": true,
+      "result": "pass"
+    },
+    {
+      "root_id": "post_audit_materialization_nonself45",
+      "pin_count": 45,
+      "record_stream_bytes": 5738,
+      "all_paths_ASCII": true,
+      "exact_duplicates": 0,
+      "OrdinalIgnoreCase_ties": 0,
+      "primary_method": "DOTNET_Array_Sort_StringComparer.OrdinalIgnoreCase",
+      "primary_sha256": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1",
+      "secondary_method": "ASCII_ToUpperInvariant_key_then_StringComparer.Ordinal",
+      "secondary_sha256": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1",
+      "orders_identical": true,
+      "expected_match": true,
+      "result": "pass"
+    },
+    {
+      "root_id": "post_audit_completion_frozen44",
+      "pin_count": 44,
+      "record_stream_bytes": 5589,
+      "all_paths_ASCII": true,
+      "exact_duplicates": 0,
+      "OrdinalIgnoreCase_ties": 0,
+      "primary_method": "DOTNET_Array_Sort_StringComparer.OrdinalIgnoreCase",
+      "primary_sha256": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959",
+      "secondary_method": "ASCII_ToUpperInvariant_key_then_StringComparer.Ordinal",
+      "secondary_sha256": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959",
+      "orders_identical": true,
+      "expected_match": true,
+      "result": "pass"
+    }
+  ],
+  "serialization_checks_before_this_validation_document": {
+    "documents_checked": 4,
+    "strict_UTF8": "pass",
+    "JSON_parse": "pass",
+    "BOM_absent": "pass",
+    "CR_bytes": 0,
+    "exactly_one_final_LF_each": "pass"
+  },
+  "validation_attempts": [
+    {
+      "attempt": 1,
+      "operation": "JSON_and_encoding_check",
+      "result": "no_result_mechanical_command_error",
+      "error": "PowerShell_boolean_literal_true_was_missing_the_dollar_prefix",
+      "repository_effects": false,
+      "correction": "rerun_the_same_read_only_check_with_$true"
+    },
+    {
+      "attempt": 2,
+      "operation": "JSON_and_encoding_check",
+      "result": "pass",
+      "repository_effects": false
+    }
+  ],
+  "scope_checks": {
+    "repository_code_executed": false,
+    "repository_tests_executed": false,
+    "network_used": false,
+    "temp_targets_created": false,
+    "existing_files_modified": false,
+    "state_changes": 0,
+    "gate_changes": 0,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "state_pair_entry_pins": {
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+      "bytes": 79169
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+      "bytes": 79605
+    }
+  },
+  "result": "pass_three_OrdinalIgnoreCase_roots_reissued_exactly_and_historical_blobs_unchanged"
+}

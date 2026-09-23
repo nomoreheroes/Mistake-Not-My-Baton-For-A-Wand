@@ -1,0 +1,125 @@
+{
+  "receipt_id": "pipeline-v2.k0b-02.post-remediation-audit-correction-completion-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T08:01:07.5853268Z",
+  "work_item_id": "K0b-02",
+  "status": "completed_validated_evidence_only_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+      "bytes": 4272
+    },
+    "external_audit_source": {
+      "sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "bytes": 8553
+    }
+  },
+  "evidence_chain": {
+    "external_audit": {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+      "bytes": 5803
+    },
+    "root_correction": {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+      "bytes": 7524
+    },
+    "validation": {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+      "sha256": "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+      "bytes": 5840
+    }
+  },
+  "finding_disposition": {
+    "id": "K0B02-POST-REMEDIATION-AUDIT-R01",
+    "finding": "three_historical_root_hashes_mislabeled_as_OrdinalIgnoreCase",
+    "status": "closed_by_append_only_authoritative_correction",
+    "historical_files_changed": false,
+    "implementation_files_changed": false,
+    "corrected_roots": {
+      "prior_exact77": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a",
+      "materialization_nonself45": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1",
+      "completion_frozen44": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    }
+  },
+  "validation_results": {
+    "pin_sets": [77, 45, 44],
+    "record_stream_bytes": [9872, 5738, 5589],
+    "all_paths_ASCII": true,
+    "exact_duplicate_paths": 0,
+    "OrdinalIgnoreCase_comparison_ties": 0,
+    "primary_and_secondary_orders_identical": true,
+    "primary_and_secondary_roots_identical": true,
+    "expected_roots_matched": 3,
+    "failures": 0,
+    "result": "pass"
+  },
+  "path_scope": {
+    "exact_total": 7,
+    "additions": 7,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+      "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+      "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml"
+    ],
+    "completed_nonself_pins": [
+      {
+        "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+        "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+        "bytes": 16095
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+        "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+        "bytes": 4272
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+        "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+        "bytes": 5803
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+        "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+        "bytes": 7524
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+        "sha256": "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+        "bytes": 5840
+      }
+    ],
+    "self_exclusions": [
+      "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+      "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml"
+    ],
+    "self_exclusion_reason": "avoid_content_hash_cycles_materialization_binds_this_completion_and_all_six_other_paths"
+  },
+  "retained_constraints": {
+    "repository_code_executed": false,
+    "repository_tests_executed": false,
+    "network_used": false,
+    "temp_targets_created": false,
+    "existing_files_changed": 0,
+    "state_changes": 0,
+    "gate_changes": 0,
+    "real_Alpha0_F15_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "result": "pass_append_only_comparator_correction_complete_pending_exact_scope_commit"
+}

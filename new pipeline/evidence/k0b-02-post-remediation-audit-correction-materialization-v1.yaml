@@ -1,0 +1,156 @@
+{
+  "document_id": "pipeline-v2.k0b-02.post-remediation-audit-correction-materialization-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T08:01:07.5853268Z",
+  "work_item_id": "K0b-02",
+  "status": "frozen_commit_candidate_without_future_commit_self_reference",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+      "bytes": 4272
+    },
+    "external_audit_source": {
+      "sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "bytes": 8553
+    },
+    "confirmed_request_sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8"
+  },
+  "baseline": {
+    "HEAD": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "parent": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "tree": "255251947ad639447ec56d8318f4a8268a8eb5da",
+    "entry_index": "clean",
+    "entry_worktree": "only_the_authorized_request_untracked_before_execution"
+  },
+  "correction_results": {
+    "external_audit_finding": "K0B02-POST-REMEDIATION-AUDIT-R01",
+    "strategy": "append_only_authoritative_corrigendum",
+    "historical_file_changes": 0,
+    "pin_counts": [77, 45, 44],
+    "corrected_roots": [
+      "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a",
+      "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1",
+      "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    ],
+    "primary_and_secondary_validation": "pass",
+    "finding_status": "closed"
+  },
+  "evidence_chain": {
+    "external_audit": {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+      "bytes": 5803
+    },
+    "root_correction": {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+      "bytes": 7524
+    },
+    "validation": {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+      "sha256": "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+      "bytes": 5840
+    },
+    "completion": {
+      "path": "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+      "sha256": "b156cce4111ce6a14191d415df09b25599a35df2389d8248e9ffd0e86be45e2c",
+      "bytes": 5286
+    }
+  },
+  "exact_scope": {
+    "total_paths": 7,
+    "additions": 7,
+    "modifications": 0,
+    "deletions": 0,
+    "nonself_path_pins": [
+      {
+        "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+        "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+        "bytes": 16095
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+        "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+        "bytes": 4272
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+        "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+        "bytes": 5803
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+        "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+        "bytes": 7524
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+        "sha256": "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+        "bytes": 5840
+      },
+      {
+        "path": "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+        "sha256": "b156cce4111ce6a14191d415df09b25599a35df2389d8248e9ffd0e86be45e2c",
+        "bytes": 5286
+      }
+    ],
+    "nonself_pin_count": 6,
+    "nonself_record_stream_bytes": 878,
+    "nonself_pin_root_profile": "DOTNET_StringComparer.OrdinalIgnoreCase_path_UTF8_TAB_lowercase_SHA256_TAB_decimal_bytes_LF",
+    "nonself_pin_root_sha256": "b2ef49cef17d6dce8cdac57a2503ccc6c260b04933c0541afb8fe2e761ef4e69",
+    "self_path": "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml",
+    "self_hash_excluded": "content_hash_cycle_prevention"
+  },
+  "commit_candidate": {
+    "future_commit_self_reference": false,
+    "required_local_commit_count": 1,
+    "required_parent": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "required_path_count": 7,
+    "required_additions": 7,
+    "required_modifications": 0,
+    "required_deletions": 0,
+    "trailers": [
+      "Approval-Request-SHA256: eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "Owner-Confirmation: current_conversation_owner_exact_SHA256_full_scope_confirmation_2026_09_23",
+      "Audit-Input-SHA256: b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "Correction-Package: K0B02-POST-REMEDIATION-AUDIT-CORRECTION-V1",
+      "Runtime-Authority: none"
+    ],
+    "remote_effects": false
+  },
+  "state_and_gates": {
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+      "bytes": 79169
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+      "bytes": 79605
+    },
+    "state_changes": 0,
+    "gate_changes": 0,
+    "open_gates": 7,
+    "closed_gates": 10
+  },
+  "non_authorizations": {
+    "repository_code_executed": false,
+    "repository_tests_executed": false,
+    "network_used": false,
+    "temp_targets_created": false,
+    "actual_program_runtime_publications": 0,
+    "actual_provider_model_calls": 0,
+    "real_Alpha0_F15_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "result": "ready_for_exact_seven_addition_local_commit"
+}

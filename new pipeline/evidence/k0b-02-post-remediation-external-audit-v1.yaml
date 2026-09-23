@@ -1,0 +1,121 @@
+{
+  "document_id": "pipeline-v2.k0b-02.post-remediation-external-audit-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T08:01:07.5853268Z",
+  "work_item_id": "K0b-02",
+  "status": "external_audit_recorded_with_one_evidence_accuracy_blocker",
+  "provenance": {
+    "source_kind": "current_conversation_external_reviewer_report_attachment",
+    "source_sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+    "source_bytes": 8553,
+    "reviewer_identity": "not_provided",
+    "report_content_storage": "structured_faithful_summary_bound_to_complete_source_hash_and_byte_size",
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    }
+  },
+  "audited_commit": {
+    "commit": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "parent": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "tree": "255251947ad639447ec56d8318f4a8268a8eb5da",
+    "path_delta": "46_paths_12_additions_34_modifications",
+    "workspace_reported_clean": true,
+    "remote_effects_reported": false
+  },
+  "overall_result": {
+    "implementation_result": "reproduced_from_clean_clone_without_state_pair_substitution",
+    "checklist": "nineteen_fully_confirmed_and_one_confirmed_with_material_evidence_accuracy_correction_required",
+    "blocking_implementation_defects": 0,
+    "blocking_evidence_accuracy_defects": 1,
+    "nonfatal_observations": true
+  },
+  "reported_reproduction": {
+    "validate_inputs": "pass",
+    "compiler_outputs_byte_identical": "12_of_12",
+    "Ruff_paths_clean": 24,
+    "renderer_v5": "9_of_9_passed",
+    "pytest": "80_passed_0_failed_0_skipped",
+    "unique_case_records": 96,
+    "case_record_set": "matches_validation_environment_A",
+    "publication_p95_seconds": 3.922,
+    "restore_p95_seconds": 5.813,
+    "suite_elapsed_seconds": 244,
+    "environment_count_run_by_external_reviewer": 1,
+    "dependency_installation_report": "same_twelve_hash_pinned_wheels_downloaded_from_pypi.org_and_installed_offline_with_require_hashes"
+  },
+  "confirmed_review_areas": [
+    "commit_parent_tree_exact_path_scope_and_cleanliness",
+    "five_Git_trailers_in_exact_parsed_order",
+    "request_audit_input_and_message_only_amend_provenance",
+    "manifest_v2_closure_and_state_pair_pins",
+    "clean_clone_reproduction",
+    "compiler_v4_DAG_receipts_and_twelve_byte_identical_outputs",
+    "source_cut_admission_fence",
+    "ordered_claims_and_current_attempt_cap",
+    "six_operational_table_bindings_with_drift_and_immutability_coverage",
+    "compiled_single_source_runtime_with_recorded_nuances",
+    "publisher_process_loss_recovery_at_four_boundaries",
+    "exact_footer_matching",
+    "closed_Git_environment_by_allowlist_construction",
+    "fixture_Git_EOL_and_clone_only_replay",
+    "committed_invoke_v1_pytest_mode",
+    "two_environment_validation_numbers_as_recorded",
+    "state_gate_immutability_and_evidence_hashes",
+    "temp_target_cleanup_and_absence_of_remote_effects"
+  ],
+  "blocking_finding": {
+    "id": "K0B02-POST-REMEDIATION-AUDIT-R01",
+    "title": "three_root_hashes_are_mislabeled_as_OrdinalIgnoreCase",
+    "affected_historical_roots": [
+      "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+      "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+      "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b"
+    ],
+    "finding": "the_recorded_hashes_are_reproducible_but_not_with_the_declared_literal_StringComparer.OrdinalIgnoreCase_order",
+    "impact": "provenance_algorithm_is_inaccurately_described_while_the_underlying_path_pins_and_implementation_blobs_remain_valid",
+    "recommended_resolution": "use_a_separate_exact_scope_exception_to_correct_the_label_or_reissue_the_roots_with_true_OrdinalIgnoreCase",
+    "selected_resolution": "append_only_reissue_with_true_OrdinalIgnoreCase_and_no_historical_blob_changes"
+  },
+  "nonblocking_observations": {
+    "test_strength": [
+      "source_cut_rejection_test_relies_on_transaction_rollback_without_recounting_decision_event_and_outbox_rows",
+      "crash_tests_assert_one_attempt_and_one_result_but_not_exactly_one_Git_commit",
+      "closed_Git_environment_test_checks_show_toplevel_while_object_directory_and_alternates_are_rejected_by_construction"
+    ],
+    "precision": [
+      "owner_quote_in_the_prior_disposition_is_scope_equivalent_but_not_byte_equal_to_the_request_template"
+    ],
+    "efficiency": [
+      "known_commit_scans_first_parent_history_linearly_and_is_suitable_for_bounded_fixtures",
+      "deep_Windows_clone_paths_can_exceed_legacy_MAX_PATH_due_to_long_request_names"
+    ],
+    "security_and_binding": [
+      "git_is_resolved_through_inherited_PATH",
+      "runtime_profile_is_not_rechecked_against_compiled_files_on_every_publish",
+      "the_integrated_compiler_manifest_has_no_separate_runtime_checked_governance_pin"
+    ],
+    "design_constraints": [
+      "publisher_recovery_is_specialized_to_attempt_cap_one",
+      "ordered_claims_are_run_local_without_partition_ordering",
+      "migration_and_compiler_material_retain_duplicate_nonruntime_literals",
+      "state_remains_on_the_pre_remediation_projection_pending_a_separate_transition_decision"
+    ]
+  },
+  "cleanup_reported_by_reviewer": {
+    "runtime_root_removed": true,
+    "clone_removed": true,
+    "venv_removed": true,
+    "wheelhouse_removed": true,
+    "authorized_temp_targets_absent": true,
+    "workspace_clean_on_audited_commit": true,
+    "remote_effects": false
+  },
+  "authority_boundary": {
+    "external_report_grants_authority": false,
+    "state_or_gate_transition": false,
+    "runtime_authority": "none"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "request_id": "pipeline-v2.k0b-02.post-remediation-audit-correction-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "prepared_on": "2026-09-23",
+  "work_item_id": "K0b-02",
+  "status": "non_authorizing_proposed_scope",
+  "document_kind": "owner_reviewable_append_only_evidence_correction_proposal",
+  "serialization": "strict_JSON_compatible_YAML_UTF8_no_BOM_LF_one_final_LF_complete_file_SHA256_only_no_self_hash",
+  "purpose": "Append-only correction of three K0b-02 root records whose hashes are valid for their historical record streams but whose recorded path comparer was incorrectly labeled OrdinalIgnoreCase; reissue all three roots with literal .NET StringComparer.OrdinalIgnoreCase without changing historical evidence, implementation code, state, gates, or runtime authority.",
+  "current_permission": {
+    "request_path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+    "request_creation": true,
+    "request_complete_SHA256_calculation": true,
+    "correction_execution": false,
+    "existing_file_changes": false,
+    "repository_code_execution": false,
+    "tests": false,
+    "network": false,
+    "temp_targets": false,
+    "staging": false,
+    "commit": false,
+    "state_gates_changes": false,
+    "runtime_authority": "none",
+    "owner_permission_verbatim": "Разрешаю создать только `new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml` по приведённому append-only проекту переиздания трёх root-хэшей со статусом `non_authorizing_proposed_scope`, относительно commit `689021e51ef72f40c2f08fa66da8905b0a107360` и внешнего аудиторского отчёта SHA-256 `b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de`, 8553 bytes, а затем вычислить полный SHA-256 созданного request. Существующие файлы оставить побайтово неизменными. Выполнение correction scope, запуск кода или тестов, сеть, temp-target, staging, commit и изменение state/gates пока не разрешаю; runtime authority — none."
+  },
+  "authority": {
+    "proposal_only": true,
+    "request_does_not_self_authorize": true,
+    "execution_requires": "separate_owner_message_containing_this_materialized_request_complete_lowercase_64_hex_SHA256_and_explicit_full_described_scope_approval",
+    "no_authority_inference": "delivery_of_the_external_audit_and_permission_to_create_this_request_do_not_authorize_correction_execution",
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "parent": "ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+    "tree": "255251947ad639447ec56d8318f4a8268a8eb5da",
+    "entry_index": "clean",
+    "entry_worktree": "clean_except_this_separately_authorized_untracked_request_after_creation",
+    "committed_path_delta": "46_paths_12_additions_34_modifications",
+    "runtime_authority": "none"
+  },
+  "external_audit_input": {
+    "source_kind": "current_conversation_attachment",
+    "sha256": "b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+    "bytes": 8553,
+    "audit_result": "implementation_reproduced_from_clean_clone_and_all_twenty_review_checks_confirmed_except_one_material_root_comparator_label_defect",
+    "blocking_finding": "three_recorded_roots_do_not_reproduce_with_the_claimed_OrdinalIgnoreCase_comparer",
+    "nonblocking_observations_retained_for_future_separate_disposition": [
+      "source_cut_test_does_not_recompute_all_rolled_back_rows_after_rejection",
+      "publisher_crash_tests_assert_one_attempt_and_result_but_not_exactly_one_Git_commit",
+      "closed_Git_environment_test_does_not_directly_exercise_object_directory_or_alternates_overrides",
+      "owner_disposition_quote_is_scope_equivalent_but_not_byte_equal_to_the_request_template",
+      "known_commit_first_parent_scan_is_linear_and_fixture_bounded",
+      "deep_clone_paths_can_exceed_legacy_WINDOWS_MAX_PATH",
+      "git_executable_is_resolved_through_inherited_PATH",
+      "runtime_profile_does_not_recompile_and_compare_the_twelve_file_chain_on_each_publish",
+      "integrated_compiler_manifest_has_no_separate_runtime_checked_governance_pin",
+      "publisher_recovery_current_behavior_is_specialized_to_compiled_attempt_cap_one",
+      "ordered_claims_are_run_local_and_do_not add_partition_ordering",
+      "migration_and_compiler_inputs_retain_nonruntime_duplicate_literals",
+      "state_projection_intentionally_still_references_the_pre_remediation_completion_chain"
+    ]
+  },
+  "historical_records": [
+    {
+      "path": "new pipeline/evidence/k0b-02-external-audit-v1.yaml",
+      "sha256": "e774488b58c07eb224eee8144e4176fcc1a24ac14d444f8af01f3cedd56ac14e",
+      "bytes": 3761,
+      "field": "prior_exact77_root",
+      "recorded_root_sha256": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+      "recorded_comparer": "OrdinalIgnoreCase",
+      "finding": "recorded_root_reproduces_with_culture_sensitive_ignore_case_order_in_the_audited_environment_and_does_not_reproduce_with_literal_StringComparer_OrdinalIgnoreCase"
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml",
+      "sha256": "ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+      "bytes": 11525,
+      "field": "exact_scope.nonself_pin_root_sha256",
+      "recorded_root_sha256": "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+      "recorded_comparer_profile": "OrdinalIgnoreCase_path_TAB_sha256_TAB_bytes_LF",
+      "finding": "recorded_root_does_not_reproduce_with_literal_StringComparer_OrdinalIgnoreCase"
+    },
+    {
+      "path": "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml",
+      "sha256": "6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+      "bytes": 11299,
+      "field": "path_scope.frozen_pin_root_sha256",
+      "recorded_root_sha256": "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b",
+      "recorded_comparer_profile": "OrdinalIgnoreCase_path_TAB_sha256_TAB_bytes_LF",
+      "finding": "recorded_root_does_not_reproduce_with_literal_StringComparer_OrdinalIgnoreCase"
+    }
+  ],
+  "corrected_root_profile": {
+    "path_comparer": ".NET_System.StringComparer.OrdinalIgnoreCase",
+    "path_domain": "all_paths_in_all_three_sets_are_ASCII",
+    "path_encoding": "UTF8_without_BOM",
+    "digest_encoding": "lowercase_64_hex_SHA256",
+    "byte_count_encoding": "invariant_decimal_ASCII",
+    "record_encoding": "original_path_UTF8_TAB_lowercase_SHA256_ASCII_TAB_decimal_bytes_ASCII_LF",
+    "record_terminator": "one_LF_for_every_record_including_the_last_record",
+    "stream_encoding": "concatenated_records_UTF8_without_BOM_no_CR",
+    "root_digest": "SHA256_of_complete_record_stream",
+    "duplicate_path_rule": "reject_before_sort_or_hash",
+    "comparison_tie_rule": "reject_distinct_paths_that_compare_equal_under_OrdinalIgnoreCase",
+    "locale_dependency": "none"
+  },
+  "reissued_roots": [
+    {
+      "name": "prior_exact77",
+      "pin_count": 77,
+      "pin_set": "paths_changed_between_de1dce970acb0e83eff34f9e8a429a451e478c5c_and_ee7bc6e6da4db72f5784714c6bf06419e8910e78_with_blob_SHA256_and_byte_size_from_ee7bc6e6da4db72f5784714c6bf06419e8910e78",
+      "historical_mislabeled_root_sha256": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+      "correct_OrdinalIgnoreCase_root_sha256": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a"
+    },
+    {
+      "name": "post_audit_materialization_nonself45",
+      "pin_count": 45,
+      "pin_set": "exact_scope.nonself_path_pins_from_new_pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml_SHA256_ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+      "historical_mislabeled_root_sha256": "3b260309cf364c88eace93e1f53cf9683fcb7dfe5daa71577ee742d325f2136c",
+      "correct_OrdinalIgnoreCase_root_sha256": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1"
+    },
+    {
+      "name": "post_audit_completion_frozen44",
+      "pin_count": 44,
+      "pin_set": "path_scope.frozen_path_pins_from_new_pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml_SHA256_6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+      "historical_mislabeled_root_sha256": "7fedbca3b5872621f9450bf65713852ba905984253157fddf64f70cfcad0600b",
+      "correct_OrdinalIgnoreCase_root_sha256": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    }
+  ],
+  "proposed_correction": {
+    "strategy": "append_only_authoritative_corrigendum_and_reissued_roots",
+    "historical_file_changes": 0,
+    "implementation_file_changes": 0,
+    "test_file_changes": 0,
+    "compiler_output_changes": 0,
+    "state_changes": 0,
+    "gate_changes": 0,
+    "runtime_authority": "none",
+    "supersession_rule": "new_correction_evidence_is_authoritative_only_for_the_three_comparer_labels_and_reissued_root_values; every_other_historical_statement_and_blob_remains_unchanged",
+    "blocking_finding_closure_condition": "all_three_pin_sets_are_recomputed_with_literal_StringComparer.OrdinalIgnoreCase_and_match_the_three_corrected_full_SHA256_values_recorded_in_this_request"
+  },
+  "future_exact_write_scope": {
+    "total_paths": 7,
+    "additions": 7,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+      "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+      "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml"
+    ],
+    "request_handling": "this_request_is_created_under_the_current_limited_permission_and_must_remain_byte_identical_during_any_later_authorized_execution",
+    "existing_repository_files": "all_byte_immutable",
+    "historical_requests_decisions_evidence_receipts_code_tests_compiler_outputs_state_and_gates": "all_byte_immutable"
+  },
+  "future_execution_sequence": [
+    "verify_HEAD_parent_tree_and_clean_index_with_only_this_expected_untracked_request",
+    "verify_this_request_complete_SHA256_matches_the_separate_owner_confirmation",
+    "verify_the_external_audit_input_SHA256_and_byte_size_when_the_pinned_attachment_is available",
+    "verify_the_three_historical_source_files_against_their_full_SHA256_and_byte_pins",
+    "reconstruct_the_77_45_and_44_record_sets_without_mutating_the_repository",
+    "reject_duplicate_paths_and_OrdinalIgnoreCase_comparison_ties",
+    "sort_each_set_with_literal_DOTNET_StringComparer_OrdinalIgnoreCase",
+    "serialize_records_with_the_exact_corrected_root_profile_and_recompute_all_three_roots",
+    "require_exact_match_to_656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a_37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1_and_bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959",
+    "materialize_the_owner_disposition_external_audit_record_authoritative_correction_validation_completion_and_materialization_documents",
+    "verify_all_seven_documents_parse_as_strict_JSON_compatible_YAML_and_all_internal_pins_match",
+    "stage_exactly_the_seven_paths_and_verify_the_cached_diff_contains_seven_additions_zero_modifications_zero_deletions",
+    "create_exactly_one_local_commit_with_parent_689021e51ef72f40c2f08fa66da8905b0a107360_and_the_required_trailers",
+    "verify_commit_parent_tree_path_scope_trailers_and_clean_index_worktree"
+  ],
+  "future_validation": {
+    "repository_code_execution": false,
+    "repository_tests": false,
+    "network": false,
+    "temp_targets": false,
+    "allowed_read_only_tools": [
+      "Git_metadata_and_blob_reads",
+      "PowerShell_or_DOTNET_SHA256",
+      "literal_DOTNET_StringComparer_OrdinalIgnoreCase_in_memory_sort",
+      "strict_JSON_parse",
+      "byte_size_and_file_hash_checks"
+    ],
+    "required_assertions": [
+      "external_audit_input_pin_matches",
+      "historical_three_file_pins_match",
+      "pin_counts_are_exactly_77_45_44",
+      "all_paths_are_ASCII_as_observed",
+      "no_duplicate_or_comparison_equal_distinct_paths_exist",
+      "three_reissued_roots_match_exactly",
+      "all_existing_files_are_byte_unchanged",
+      "state_and_STATE_projection_are_byte_unchanged",
+      "open_and_closed_gate_counts_are_unchanged",
+      "runtime_authority_is_none",
+      "no_remote_effects_occurred"
+    ]
+  },
+  "future_commit": {
+    "count": 1,
+    "local_only": true,
+    "required_parent": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "subject": "Correct K0b-02 root comparator evidence",
+    "required_trailers_in_order": [
+      "Approval-Request-SHA256: FULL_COMPLETE_REQUEST_SHA256",
+      "Owner-Confirmation: current_conversation_owner_exact_SHA256_full_scope_confirmation_2026_09_23",
+      "Audit-Input-SHA256: b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de",
+      "Correction-Package: K0B02-POST-REMEDIATION-AUDIT-CORRECTION-V1",
+      "Runtime-Authority: none"
+    ],
+    "remote_effects": false
+  },
+  "stop_conditions": [
+    "baseline_HEAD_parent_or_tree_drift",
+    "unexpected_index_or_worktree_change",
+    "request_hash_confirmation_missing_or_mismatched",
+    "external_audit_input_hash_or_size_mismatch",
+    "historical_source_file_hash_or_size_mismatch",
+    "pin_set_count_or_membership_mismatch",
+    "duplicate_path_or_OrdinalIgnoreCase_comparison_tie",
+    "any_recomputed_root_mismatch",
+    "need_to_modify_any_existing_file",
+    "need_to_execute_repository_code_or_tests",
+    "need_for_network_or_temp_target",
+    "write_scope_would_exceed_seven_additions",
+    "state_gate_or_runtime_authority_change",
+    "remote_effect_would_be_required"
+  ],
+  "non_authorizations": {
+    "correction_execution_under_this_request_creation_permission": false,
+    "repository_code_or_tests": false,
+    "network": false,
+    "temp_targets": false,
+    "existing_file_changes": false,
+    "staging": false,
+    "commit": false,
+    "state_or_gate_transition": false,
+    "real_Alpha0_F15_or_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "future_execution_confirmation_template": "Подтверждаю approval-request SHA-256 FULL_COMPLETE_REQUEST_SHA256 и разрешаю весь описанный exact scope K0B02-POST-REMEDIATION-AUDIT-CORRECTION-V1 относительно parent 689021e51ef72f40c2f08fa66da8905b0a107360: append-only переиздание трёх root-хэшей с буквальным .NET StringComparer.OrdinalIgnoreCase; создание семи перечисленных путей без изменения существующих файлов; фиксацию внешнего аудиторского отчёта SHA-256 b9081565bec4db7f175c3dd6ea6fad4107b4b0f272cde587cc6bfac4b9ddb4de, 8553 bytes; проверку наборов из 77, 45 и 44 pins и точных corrected roots 656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a, 37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1 и bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959; read-only Git/blob/hash/JSON validation без запуска repository code или tests, без сети и temp-target; staging ровно семи additions и один local commit с parent 689021e51ef72f40c2f08fa66da8905b0a107360. State/gates остаются неизменными; runtime authority — none; реальные Alpha0/F15/model execution и remote effects не разрешены."
+}
