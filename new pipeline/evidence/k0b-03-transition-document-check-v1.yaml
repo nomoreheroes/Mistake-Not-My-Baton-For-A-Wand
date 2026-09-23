@@ -1,0 +1,229 @@
+{
+  "document_id": "pipeline-v2.k0b-03.transition-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-23",
+  "work_item_id": "K0b-03",
+  "status": "precommit_documentation_checks_pass_ready_for_exact_scope_local_commit",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-prerequisite-and-bounded-planning-approval-request-v1.yaml",
+      "sha256": "296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d",
+      "bytes": 34654
+    },
+    "owner_confirmation": {
+      "source_ref": "current_conversation_owner_exact_hash_full_documentation_scope_confirmation_2026_09_23",
+      "confirmed_request_sha256": "296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d",
+      "full_five_path_scope_explicit": true
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "9f19dc88c3d265ae8f8073f840ae3d84afd6f8ef87db69e650e782fd8ea8ff77",
+      "bytes": 9317
+    },
+    "predecessor_gate_proposal": {
+      "path": "new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml",
+      "sha256": "f314d65b9ae5b3b0578792dc1a319e89cb3d122af118294b7a1f38402e12f0f2",
+      "bytes": 5887
+    },
+    "planning_package": {
+      "path": "new pipeline/architecture/k0b-03-planning-package-v1.md",
+      "sha256": "0ef7d61150cce6b407a8719b819589c180e3efc6fde55538d50f0d8ef94ca147",
+      "bytes": 26523
+    }
+  },
+  "baseline_checks": {
+    "repository_root": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "HEAD": "1c7294ca2d3386e9eb07c2fbb507d239e5c09aeb",
+    "parent": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "tree": "dccb7b3f9fce715c9d0cfd00a28c9fb9f791b61f",
+    "entry_index_empty": true,
+    "entry_worktree_only_frozen_request": true,
+    "all_45_existing_pins_recomputed": true,
+    "all_45_existing_pins_match": true,
+    "remaining_four_targets_initially_absent": true,
+    "request_hash_recomputed_after_owner_confirmation": "match"
+  },
+  "Git_effect_preflight": {
+    "hooks_path": ".git/hooks",
+    "active_non_sample_hooks": 0,
+    "commit_gpgsign": "unset",
+    "tag_gpgsign": "unset",
+    "Git_identity_present": true,
+    "all_five_paths_text_attribute": "set",
+    "all_five_paths_eol_attribute": "lf",
+    "all_five_paths_filter_attribute": "unspecified",
+    "network_or_remote_command_run": false,
+    "unexpected_effect": false
+  },
+  "serialization_checks": {
+    "profile": "UTF8_without_BOM_LF_exactly_one_final_LF",
+    "approval_request": "pass",
+    "owner_disposition": "pass",
+    "predecessor_gate_proposal": "pass",
+    "planning_package": "pass",
+    "document_check_self": "validated_after_creation_before_staging",
+    "machine_documents_valid_JSON_compatible_YAML": true,
+    "machine_documents_duplicate_keys": 0,
+    "approval_request_self_hash_embedded": false,
+    "document_check_self_hash_embedded": false,
+    "future_commit_self_reference": false
+  },
+  "scope_checks": [
+    {"check":"exact_approval_request_hash_and_explicit_owner_scope_confirmation","result":"pass"},
+    {"check":"exact_read_pin_count_45","result":"pass"},
+    {"check":"exact_proposed_new_path_count_5_and_existing_modification_count_0","result":"pass"},
+    {"check":"locked_environment_network_dependency_temp_target_and_repository_execution_sets_empty","result":"pass"},
+    {"check":"one_future_local_commit_parent_and_trailers_exact","result":"pass"},
+    {"check":"state_STATE_renderer_and_gate_change_authority_absent","result":"pass"},
+    {"check":"K0b03_implementation_and_K0b04_K0b05_N1_authority_absent","result":"pass"},
+    {"check":"Alpha0_F10_F15_model_provider_runtime_publication_and_remote_effect_authority_absent","result":"pass"}
+  ],
+  "predecessor_condition_checks": {
+    "gate_id": "G-K0B03-K0B01-COMPLETE",
+    "closure_condition": "K0b_01_completion_receipt_exists",
+    "receipt": {
+      "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+      "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+      "bytes": 15226
+    },
+    "receipt_exists_and_matches": true,
+    "receipt_addresses_exact_condition": true,
+    "receipt_disclaims_automatic_state_or_gate_change": true,
+    "condition_result": "satisfied",
+    "closure_proposed_only": true,
+    "closure_materialized": false,
+    "proposal_exact_gate_count": 1
+  },
+  "untrusted_shapes_checks": {
+    "gate_id": "G-K0B03-UNTRUSTED-SHAPES",
+    "status_before_and_after_package": "future_open",
+    "closure_proposed": false,
+    "planning_families": [
+      "secret_shape",
+      "JWT",
+      "Bearer",
+      "provider_token",
+      "high_entropy",
+      "base64_and_base64url",
+      "split_line"
+    ],
+    "bounded_lengths_thresholds_decode_and_source_mapping_present": true,
+    "raw_match_redaction_and_sanitized_finding_contract_present": true,
+    "scan_and_guard_order_present": true,
+    "mandatory_hygiene_statement_present": true,
+    "scanner_claims_prompt_injection_proof": false,
+    "F10_claim_or_execution": false,
+    "implementation_or_validation_claim": false
+  },
+  "single_source_and_ownership_checks": {
+    "active_registry": {
+      "path": "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json",
+      "sha256": "e6216a0eb36a7d90693d2e0d2251318d00d0bf38ef546a71fa6a586b9ed81dce",
+      "bytes": 86209
+    },
+    "registry_v2_confirmed_as_current_sole_authored_registry": true,
+    "registry_v1_confirmed_as_immutable_historical_source": true,
+    "event_schema_roles_preserved": true,
+    "future_detector_profile_role_is_separate_and_non_authorized": true,
+    "compiled_output_Python_SQLite_projection_or_markdown_shadow_truth": false,
+    "shared_control_artifact_event_S_publisher_owner_and_renderer_boundaries_complete": true
+  },
+  "guard_abort_and_compatibility_checks": {
+    "repository_worktree_path_symlink_junction_reparse_and_sparse_boundaries": "complete_in_plan",
+    "tool_executable_hash_argv_cwd_environment_resource_output_egress_and_process_boundaries": "complete_in_plan",
+    "abort_event_state_revision_freeze_cancel_reconcile_preserve_and_unknown_effect_semantics": "complete_in_plan",
+    "forward_only_migration_backup_integrity_old_reader_no_write_no_downgrade_new_path_restore_and_HITL": "complete_in_plan",
+    "expected_logical_migration": "k0b03.artifact_event.compatibility_evidence_v1",
+    "expected_future_migration_path": "new pipeline/harness/migrations/0007_k0b03_compatibility_evidence_v1.sql",
+    "migration_or_code_created_here": false
+  },
+  "canonical_state_preservation": {
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "renderer": {
+      "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+      "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+      "bytes": 12373
+    },
+    "projection_profile": {
+      "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+      "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+      "bytes": 191471
+    },
+    "state_or_projection_changes": 0,
+    "renderer_or_profile_changes": 0,
+    "gate_changes": 0,
+    "open_gate_count": 7,
+    "closed_gate_count": 10,
+    "K0b_03_status": "blocked"
+  },
+  "execution_checks": {
+    "repository_code_executed": false,
+    "repository_tests_executed": false,
+    "Ruff_or_pytest_executed": false,
+    "renderer_executed": false,
+    "host_Python_or_ruamel_used": false,
+    "network_used": false,
+    "dependency_or_bootstrap_used": false,
+    "temp_target_created": false,
+    "model_or_provider_call_count": 0,
+    "runtime_publication_count": 0,
+    "remote_effect_count": 0
+  },
+  "precommit_exact_scope": {
+    "paths": [
+      "new pipeline/requests/k0b-03-prerequisite-and-bounded-planning-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml",
+      "new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml",
+      "new pipeline/architecture/k0b-03-planning-package-v1.md",
+      "new pipeline/evidence/k0b-03-transition-document-check-v1.yaml"
+    ],
+    "path_count": 5,
+    "existing_modification_count": 0,
+    "future_commit_count": 1,
+    "future_commit_parent": "1c7294ca2d3386e9eb07c2fbb507d239e5c09aeb",
+    "future_commit_message": "docs(pipeline-v2): prepare K0b-03 prerequisites and planning",
+    "required_trailers": [
+      "Approval-Request-SHA256: 296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d",
+      "Owner-Confirmation: current_conversation_owner_exact_hash_full_documentation_scope_confirmation_2026_09_23",
+      "Runtime-Authority: none"
+    ],
+    "staging_and_commit_not_yet_performed_at_evidence_freeze": true,
+    "future_commit_ID_not_invented": true
+  },
+  "post_creation_validation_required_before_staging": [
+    "recompute_all_five_complete_file_SHA256_and_bytes",
+    "validate_UTF8_no_BOM_LF_one_final_LF_for_all_five",
+    "validate_all_four_machine_documents_as_JSON_compatible_YAML_with_zero_duplicate_keys",
+    "validate_exact_authority_hash_chain_and_no_self_hash",
+    "validate_only_five_untracked_paths_and_empty_index",
+    "recompute_45_existing_pins_and_canonical_state_preservation"
+  ],
+  "postcommit_validation_required": [
+    "new_commit_parent_is_exact_baseline_HEAD",
+    "new_commit_contains_exactly_five_new_paths",
+    "subject_and_three_trailers_are_exact_and_ordered",
+    "committed_blob_bytes_equal_frozen_worktree_bytes",
+    "state_projection_renderer_profile_and_all_gates_unchanged",
+    "index_and_worktree_clean",
+    "no_remote_effect"
+  ],
+  "retained_non_authorizations": [
+    "no_state_gate_renderer_or_status_transition",
+    "no_K0b03_implementation_migration_profile_toolchain_fixture_or_test_execution",
+    "no_close_of_G_K0B03_UNTRUSTED_SHAPES",
+    "no_K0b04_K0b05_N1_progress",
+    "no_network_dependency_temp_target_model_provider_Alpha0_F10_F15_runtime_publication_or_remote_effect",
+    "runtime_authority_none"
+  ],
+  "result": "pass_ready_for_exact_five_path_staging_and_one_local_commit_without_state_gate_or_runtime_authority"
+}

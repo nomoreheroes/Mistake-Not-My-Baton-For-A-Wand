@@ -1,0 +1,123 @@
+{
+  "document_id": "pipeline-v2.k0b-03.predecessor-gate-closure-proposal-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-23",
+  "work_item_id": "K0b-03",
+  "status": "conditions_satisfied_closure_proposed_not_materialized_in_state",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-prerequisite-and-bounded-planning-approval-request-v1.yaml",
+      "sha256": "296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d",
+      "bytes": 34654
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "9f19dc88c3d265ae8f8073f840ae3d84afd6f8ef87db69e650e782fd8ea8ff77",
+      "bytes": 9317
+    },
+    "confirmed_request_sha256": "296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d",
+    "authorized_action": "documentary_verification_and_one_non_materializing_predecessor_gate_closure_proposal",
+    "gate_or_state_materialization_authority": "none",
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "1c7294ca2d3386e9eb07c2fbb507d239e5c09aeb",
+    "parent": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "tree": "dccb7b3f9fce715c9d0cfd00a28c9fb9f791b61f",
+    "canonical_state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "canonical_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "K0b_03_status": "blocked",
+    "open_gate_count": 7,
+    "closed_gate_count": 10
+  },
+  "verification_scope": "Existence, complete-file identity and declared completion semantics of the final K0b-01 receipt only; no fresh K0b-01 implementation, runtime or test verification.",
+  "completion_evidence": {
+    "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+    "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+    "bytes": 15226,
+    "exists": true,
+    "work_item_id": "K0b-01",
+    "receipt_status": "completion_documented",
+    "K0b_01_effective_status": "implemented_validated_runtime_not_authorized",
+    "closure_condition_addressed": "K0b_01_completion_receipt_exists",
+    "automatic_gate_closure": false,
+    "state_or_K0b_03_gate_change": false,
+    "runtime_authority": "none"
+  },
+  "corroborating_governance_fact": {
+    "fact": "the_same_final_K0b01_completion_receipt_already_supported_closure_of_the_analogous_K0b02_predecessor_gate",
+    "inference_limit": "corroborates_receipt_role_but_does_not_close_or_modify_the_K0b03_gate"
+  },
+  "gate_proposal": {
+    "gate_id": "G-K0B03-K0B01-COMPLETE",
+    "current_status": "blocked_by_predecessor",
+    "closure_condition": "K0b_01_completion_receipt_exists",
+    "condition_result": "satisfied",
+    "proposed_future_status": "closed",
+    "proposed_action": "close_only_under_a_later_separate_hash_bound_renderer_and_state_transition_authority",
+    "current_gate_status_after_this_document": "blocked_by_predecessor",
+    "closure_materialized": false,
+    "state_mutated": false
+  },
+  "exact_proposed_gate_count": 1,
+  "proposed_gate_ids": ["G-K0B03-K0B01-COMPLETE"],
+  "explicitly_unchanged_K0b_03_gate": {
+    "gate_id": "G-K0B03-UNTRUSTED-SHAPES",
+    "current_status": "future_open",
+    "closure_condition": "shape_entropy_JWT_Bearer_provider_token_base64_and_split_line_detectors_exist_and_scanner_is_documented_as_hygiene",
+    "condition_result": "not_assessed_as_satisfied_and_not_implementable_by_this_documentation_package",
+    "status_after_this_document": "future_open",
+    "closure_proposed": false
+  },
+  "unchanged_open_gate_inventory": [
+    {"gate_id":"G-K0B03-K0B01-COMPLETE","status":"blocked_by_predecessor"},
+    {"gate_id":"G-K0B03-UNTRUSTED-SHAPES","status":"future_open"},
+    {"gate_id":"G-K0B04-F15-ATTESTATION-LIMIT","status":"future_open"},
+    {"gate_id":"G-K0B04-PREREQUISITES","status":"blocked_by_predecessors"},
+    {"gate_id":"G-K0B05-F15-COMPLETE","status":"blocked_by_predecessor"},
+    {"gate_id":"G-N1-K0B-COMPLETE","status":"blocked_by_predecessor"},
+    {"gate_id":"G-N1-POLICY-LIMITS","status":"future_open"}
+  ],
+  "unchanged_closed_gate_inventory": [
+    "G-K0B01-HUMAN-SIGNOFF",
+    "G-K0B01-TOOLCHAIN",
+    "G-K0B01-IMPLEMENTATION-LEDGER",
+    "G-D0-CANONICAL-HASH-PROFILE-VERIFIER",
+    "G-D005-CONTAINING-COMMIT",
+    "G-K0B01-BINARY-SIZE",
+    "G-K0B01-STATE-RENDERER",
+    "G-K0B01-IMPLEMENTATION-DISPOSITION",
+    "G-K0B02-K0B01-COMPLETE",
+    "G-K0B02-SINGLE-SOURCE-CONFIRMATION"
+  ],
+  "verification_results": [
+    {"check":"completion_receipt_exists","result":"pass"},
+    {"check":"completion_receipt_complete_file_SHA256_and_bytes_match","result":"pass"},
+    {"check":"receipt_names_K0b01_and_documents_implemented_validated_runtime_not_authorized","result":"pass"},
+    {"check":"receipt_addresses_exact_closure_condition","result":"pass"},
+    {"check":"receipt_disclaims_automatic_gate_or_state_change","result":"pass"},
+    {"check":"proposal_contains_exactly_one_gate_ID","result":"pass"},
+    {"check":"untrusted_shapes_gate_remains_open_and_unproposed","result":"pass"},
+    {"check":"state_projection_renderer_and_all_gate_records_unchanged","result":"pass"}
+  ],
+  "non_authorizations": {
+    "state_or_projection_change": false,
+    "renderer_or_profile_change": false,
+    "gate_closure_materialization": false,
+    "K0b_03_implementation_or_test_execution": false,
+    "K0b_04_K0b_05_N1_progress": false,
+    "Alpha0_F10_F15_model_or_provider_execution": false,
+    "network_temp_target_or_remote_effect": false,
+    "runtime_authority": "none"
+  },
+  "result": "G_K0B03_K0B01_COMPLETE_condition_satisfied_closure_proposed_for_later_separate_transition_authority_only"
+}
