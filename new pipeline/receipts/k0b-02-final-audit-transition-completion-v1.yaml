@@ -1,0 +1,145 @@
+{
+  "receipt_id": "pipeline-v2.k0b-02.final-audit-transition-completion-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T13:03:18.1007348Z",
+  "work_item_id": "K0b-02",
+  "status": "completed_validated_externally_audited_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+      "sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+      "bytes": 21809
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+      "sha256": "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+      "bytes": 3440
+    },
+    "final_external_audit": {
+      "path": "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+      "sha256": "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
+      "bytes": 5223
+    }
+  },
+  "renderer_chain": {
+    "code": {
+      "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+      "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+      "bytes": 12373
+    },
+    "profile": {
+      "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+      "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+      "bytes": 191471
+    },
+    "test": {
+      "path": "new pipeline/tests/state/test_k0b02_renderer_v6.py",
+      "sha256": "5c0a527eb59bd4c66f1a97534dc7059e6381f628213960ae7403ab33d454cd1f",
+      "bytes": 8586
+    },
+    "validation": {
+      "path": "new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml",
+      "sha256": "850eecddbef383b0d529f4cdcea3196abaecac8e5774d677e1bec9f0c3fd44be",
+      "bytes": 5806
+    }
+  },
+  "state_pair": {
+    "source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "projection_version": "6.0.0",
+    "status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized"
+  },
+  "results": {
+    "final_external_audit": "20_of_20_confirmed_zero_blockers",
+    "renderer_tests_per_environment": 9,
+    "renderer_passed_per_environment": 9,
+    "locked_environments": 2,
+    "failures_final": 0,
+    "errors_final": 0,
+    "skips": 0,
+    "candidate_state_byte_identity": true,
+    "projection_byte_identity": true,
+    "canonical_pair_check_after_promotion": "pass_in_both_environments",
+    "delta_whitelist_fields": 20,
+    "open_gate_records_changed": 0,
+    "closed_gate_records_changed": 0,
+    "downstream_work_item_records_changed": 0,
+    "runtime_authority": "none"
+  },
+  "path_scope": {
+    "exact_total": 11,
+    "additions": 9,
+    "modifications": 2,
+    "deletions": 0,
+    "nonself_pins": [
+      {
+        "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+        "sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+        "bytes": 21809
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+        "sha256": "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+        "bytes": 3440
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+        "sha256": "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
+        "bytes": 5223
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+        "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+        "bytes": 12373
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+        "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+        "bytes": 191471
+      },
+      {
+        "path": "new pipeline/tests/state/test_k0b02_renderer_v6.py",
+        "sha256": "5c0a527eb59bd4c66f1a97534dc7059e6381f628213960ae7403ab33d454cd1f",
+        "bytes": 8586
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml",
+        "sha256": "850eecddbef383b0d529f4cdcea3196abaecac8e5774d677e1bec9f0c3fd44be",
+        "bytes": 5806
+      },
+      {
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+        "bytes": 84926
+      },
+      {
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+        "bytes": 85362
+      }
+    ],
+    "self_exclusions": [
+      "new pipeline/receipts/k0b-02-final-audit-transition-completion-v1.yaml",
+      "new pipeline/evidence/k0b-02-final-audit-transition-materialization-v1.yaml"
+    ],
+    "self_exclusion_reason": "avoid_content_hash_cycles_materialization_binds_completion_and_all_ten_other_paths"
+  },
+  "retained_constraints": {
+    "gate_closures": 0,
+    "K0b03_K0b04_K0b05_N1_advancement": false,
+    "network": false,
+    "real_Alpha0_F15_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "result": "pass_K0b02_final_audit_projected_pending_exact_scope_commit"
+}

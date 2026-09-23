@@ -1,0 +1,394 @@
+{
+  "request_id": "pipeline-v2.k0b-02.final-audit-transition-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "prepared_on": "2026-09-23",
+  "work_item_id": "K0b-02",
+  "status": "non_authorizing_proposed_scope",
+  "document_kind": "owner_reviewable_final_audit_state_projection_transition_proposal",
+  "serialization": "strict_JSON_compatible_YAML_UTF8_no_BOM_LF_one_final_LF_complete_file_SHA256_only_no_self_hash",
+  "purpose": "Record the externally confirmed 20-of-20 K0b-02 final audit, project the post-audit remediation and append-only root-correction chains into canonical state through a versioned renderer v6, preserve every gate and downstream work-item record, and finish K0b-02 governance projection before K0b-03 begins in a new session.",
+  "current_permission": {
+    "request_path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+    "request_creation": true,
+    "request_complete_SHA256_calculation": true,
+    "transition_execution": false,
+    "renderer_execution": false,
+    "tests": false,
+    "temp_targets": false,
+    "staging": false,
+    "commit": false,
+    "state_changes": false,
+    "gate_changes": false,
+    "network": false,
+    "runtime_authority": "none",
+    "owner_permission_verbatim": "Давай завершим пункт 1, а 2 выполним в новой сессии. Сделай, пожалуйста, промпт для корректного продолжения с п.2. Разрешаю создать только `new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml` со статусом `non_authorizing_proposed_scope` относительно commit `c4b8b627cf32f43093b2b1da27c3a41a5788d4a8` по следующему проекту: структурированно зафиксировать финальный внешний аудит K0b‑02 с результатом 20/20 и без блокирующих дефектов; выпустить versioned renderer/profile v6; спроецировать в `state.yaml` и `STATE.md` post-audit remediation v2 и append-only root-correction chain; изменить только K0b‑02 audit/evidence/status и projection metadata; сохранить побайтово неизменными все семь open и десять closed gate records, статусы K0b‑03…N1 и runtime authority; будущий exact scope ограничить 11 путями — 9 additions и только двумя modifications state-пары — с renderer validation в двух locked stdlib-средах без сети и одним будущим local commit. После создания вычислить полный SHA-256 request. Выполнение transition scope, запуск renderer или tests, temp-target, staging, commit и любые изменения state/gates пока не разрешаю; runtime authority — none."
+  },
+  "authority": {
+    "proposal_only": true,
+    "request_does_not_self_authorize": true,
+    "execution_requires": "separate_owner_message_containing_this_materialized_request_complete_lowercase_64_hex_SHA256_and_explicit_full_described_scope_approval",
+    "no_authority_inference": "final_audit_delivery_and_request_creation_permission_do_not_authorize_state_transition_or_K0b03_work",
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "parent": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "tree": "953bc7b5fa3df933359abbdb862b21a1eec35f8c",
+    "entry_index": "clean",
+    "entry_worktree": "clean_except_this_separately_authorized_untracked_request_after_creation",
+    "current_projection_version": "5.0.0",
+    "current_status": "K0b_02_implemented_validated_runtime_not_authorized",
+    "open_gate_count": 7,
+    "closed_gate_count": 10,
+    "runtime_authority": "none"
+  },
+  "final_external_audit_input": {
+    "source_kind": "current_conversation_owner_delivered_external_reviewer_result",
+    "source_file_or_complete_message_hash": "not_available",
+    "structured_record_requirement": "preserve_the_reported_results_without_inventing_a_binary_source_hash",
+    "result": "all_twenty_audit_points_confirmed_zero_blocking_defects",
+    "root_reproduction": "all_four_roots_independently_reproduced_by_two_methods_and_byte_identical",
+    "historical_blobs_rewritten": 0,
+    "internal_pin_checks": "43_confirmed_0_mismatches_across_11_distinct_files",
+    "serialization": "all_seven_correction_documents_strict_UTF8_no_BOM_no_CR_one_final_LF_and_JSON_without_duplicate_keys",
+    "execution_boundary": "confirmed_repository_code_tests_network_temp_targets_and_remote_effects_absent",
+    "cosmetic_findings": [
+      "frozen_request_token_do_not_SPACE_add_partition_ordering",
+      "frozen_request_token_attachment_is_SPACE_available"
+    ],
+    "cosmetic_finding_disposition": "retain_byte_immutable_because_meaning_and_roots_are_unaffected_and_no_exception_is_justified",
+    "remaining_nonblocking_observation_count": 13,
+    "remaining_nonblocking_observations_status": "carried_forward_open_not_closed_by_this_transition"
+  },
+  "read_pins": [
+    {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+      "bytes": 79169
+    },
+    {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1f672fc3e21648fdad0afa2a70d27cd75935ac35002f420beb6d05dcc0755a84",
+      "bytes": 79605
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b02_v5/renderer.py",
+      "sha256": "8d52e5e047be8cac534f2fc345611c10c8a6aeef690f3bc8413e4007da137279",
+      "bytes": 11754
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml",
+      "sha256": "cf43eeb070953c9ad5e1bbc18e474f3a224dce1a9ca11bef0ce1564f7b1ab7d7",
+      "bytes": 173181
+    },
+    {
+      "path": "new pipeline/tests/state/test_k0b02_renderer_v5.py",
+      "sha256": "fe7e09bb6fa10caf2f13d70d2ef77d115180ce96f317a2527478066493a8a72f",
+      "bytes": 8107
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-renderer-v5-validation-v1.yaml",
+      "sha256": "cbde0daa218ac2a148d38d8c296dface133bfb5517cd4e7a234834e065c04dfe",
+      "bytes": 7672
+    },
+    {
+      "path": "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
+      "sha256": "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
+      "bytes": 4392
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-artifact-event-validation-v2.yaml",
+      "sha256": "be4517e53b39fcb9fb73a39d370eb298e1f62270676cf577a2d97cb572f73c83",
+      "bytes": 18812
+    },
+    {
+      "path": "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml",
+      "sha256": "6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+      "bytes": 11299
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml",
+      "sha256": "ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+      "bytes": 11525
+    },
+    {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "sha256": "eda1b8d56ddacd8d0a3644049c13d0ae155f560325a86f767de1b26fc03778a8",
+      "bytes": 16095
+    },
+    {
+      "path": "new pipeline/decisions/k0b-02-post-remediation-audit-correction-owner-disposition-v1.yaml",
+      "sha256": "174e595c272435d22961e502660ea1a5328b8eb5dd20fe3345af3c05d78b041f",
+      "bytes": 4272
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-external-audit-v1.yaml",
+      "sha256": "9cee7eb1f939315b44dc8eec75e73ecc6293a4ce57343c0649a13840e85f4147",
+      "bytes": 5803
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+      "sha256": "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+      "bytes": 7524
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+      "sha256": "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+      "bytes": 5840
+    },
+    {
+      "path": "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+      "sha256": "b156cce4111ce6a14191d415df09b25599a35df2389d8248e9ffd0e86be45e2c",
+      "bytes": 5286
+    },
+    {
+      "path": "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml",
+      "sha256": "96d151bcd247d8922361b22f0aee067fa58d862073e6f05264a9ae2443a2255d",
+      "bytes": 6372
+    },
+    {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "bytes": 97569
+    }
+  ],
+  "future_exact_write_scope": {
+    "total_paths": 11,
+    "additions": 9,
+    "modifications": 2,
+    "deletions": 0,
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/tests/state/test_k0b02_renderer_v6.py",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/receipts/k0b-02-final-audit-transition-completion-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-final-audit-transition-materialization-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "path": "new pipeline/state/state.yaml",
+        "operation": "modify"
+      },
+      {
+        "path": "new pipeline/state/STATE.md",
+        "operation": "modify"
+      }
+    ],
+    "request_handling": "this_request_is_created_under_the_current_limited_permission_and_must_remain_byte_identical_during_later_execution",
+    "all_other_repository_paths": "byte_immutable"
+  },
+  "state_transition": {
+    "projection_version": "6.0.0",
+    "target_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "target_work_item_status": "implemented_validated_externally_audited_runtime_not_authorized",
+    "work_item_authority_path_and_sha256": "unchanged_from_the_original_artifact_event_implementation_owner_disposition",
+    "active_authority_addition": "active_authority.K0b_02_final_audit_transition",
+    "supporting_evidence_additions": [
+      "supporting_review_evidence.K0b_02_post_audit_remediation_validation",
+      "supporting_review_evidence.K0b_02_post_audit_remediation_completion",
+      "supporting_review_evidence.K0b_02_post_audit_remediation_materialization",
+      "supporting_review_evidence.K0b_02_root_comparator_correction",
+      "supporting_review_evidence.K0b_02_root_comparator_validation",
+      "supporting_review_evidence.K0b_02_audit_correction_completion",
+      "supporting_review_evidence.K0b_02_audit_correction_materialization",
+      "supporting_review_evidence.K0b_02_final_external_audit"
+    ],
+    "scope_additions": {
+      "scope.K0b_02_post_audit_remediation_status": "complete_validated",
+      "scope.K0b_02_root_comparator_correction_status": "complete_independently_audited",
+      "scope.K0b_02_final_external_audit_status": "complete_20_of_20_zero_blockers",
+      "scope.K0b_02_final_external_audit_checklist": "20_of_20_confirmed",
+      "scope.K0b_02_remaining_nonblocking_observations": 13
+    },
+    "delta_whitelist_exact_count": 20,
+    "delta_whitelist": [
+      "generated_at",
+      "projection_version",
+      "status",
+      "projection_profile.path",
+      "projection_profile.sha256",
+      "active_authority.K0b_02_final_audit_transition",
+      "supporting_review_evidence.K0b_02_post_audit_remediation_validation",
+      "supporting_review_evidence.K0b_02_post_audit_remediation_completion",
+      "supporting_review_evidence.K0b_02_post_audit_remediation_materialization",
+      "supporting_review_evidence.K0b_02_root_comparator_correction",
+      "supporting_review_evidence.K0b_02_root_comparator_validation",
+      "supporting_review_evidence.K0b_02_audit_correction_completion",
+      "supporting_review_evidence.K0b_02_audit_correction_materialization",
+      "supporting_review_evidence.K0b_02_final_external_audit",
+      "work_items[work_item_id=K0b-02].status",
+      "scope.K0b_02_post_audit_remediation_status",
+      "scope.K0b_02_root_comparator_correction_status",
+      "scope.K0b_02_final_external_audit_status",
+      "scope.K0b_02_final_external_audit_checklist",
+      "scope.K0b_02_remaining_nonblocking_observations"
+    ],
+    "immutable_state_regions": [
+      "baseline",
+      "root_plan_status",
+      "all_active_authority_entries_except_the_one_addition",
+      "all_supporting_review_evidence_entries_except_the_eight_additions",
+      "work_items_except_K0b-02_status",
+      "K0b-02_authority_path",
+      "K0b-02_authority_sha256",
+      "all_seven_open_gate_records_and_order",
+      "all_ten_closed_gate_records_and_order",
+      "status_index",
+      "all_scope_fields_except_the_five_additions",
+      "scope.runtime_authority"
+    ],
+    "K0b03_K0b04_K0b05_and_N1_statuses": "byte_and_typed_value_unchanged",
+    "gate_inventory": "seven_open_and_ten_closed_records_byte_and_typed_value_unchanged",
+    "gate_closures": 0,
+    "runtime_authority": "none"
+  },
+  "renderer_v6": {
+    "lineage": "versioned_successor_of_k0b02_v5_not_an_in_place_edit",
+    "profile_id": "pipeline-v2.state-projection-profile-v6",
+    "projection_version": "6.0.0",
+    "baseline_source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "ce4e902b370ccc361bd60d08340a09cbaaddab8df3bfb95f04880990c7a64c17",
+      "bytes": 79169
+    },
+    "requirements": [
+      "embed_the_complete_typed_v5_state_baseline_and_apply_only_the_exact_twenty_field_whitelist",
+      "derive_projection_profile_sha256_from_the_final_profile_bytes_without_profile_self_hash_embedding",
+      "bind_every_repository_reference_to_an_allowed_path_SHA256_and_byte_size",
+      "reject_absolute_paths_reparse_points_BOM_CR_duplicate_or_extra_JSON_fields_and_out_of_scope_state_delta",
+      "render_STATE.md_as_a_complete_byte_projection_of_state.yaml_with_source_and_profile_SHA256",
+      "make_check_mode_read_only_and_byte_exact",
+      "reject_any_gate_inventory_downstream_status_or_runtime_authority_change"
+    ],
+    "v5_files": "byte_immutable"
+  },
+  "validation": {
+    "locked_environments": 2,
+    "network": false,
+    "dependencies": "Python_standard_library_only_no_wheels",
+    "temp_targets": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-final-audit-v6-A",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b02-final-audit-v6-B"
+    ],
+    "temp_target_policy": "create_only_these_two_roots_verify_absent_or_safely_owned_before_use_and_remove_both_before_staging",
+    "required_checks_per_environment": [
+      "renderer_v6_unit_suite",
+      "candidate_state_render",
+      "read_only_projection_check",
+      "deterministic_second_render_byte_identity",
+      "exact_twenty_field_typed_delta",
+      "seven_open_and_ten_closed_gate_record_identity",
+      "K0b03_K0b04_K0b05_and_N1_record_identity",
+      "all_repository_reference_pins",
+      "final_state_and_projection_byte_identity_across_environments"
+    ],
+    "repository_code_execution": "only_the_new_renderer_v6_and_new_renderer_v6_test_within_the_two_locked_stdlib_environments",
+    "other_repository_code_or_tests": false,
+    "real_Alpha0_F15_or_model_execution": false
+  },
+  "future_execution_sequence": [
+    "verify_baseline_HEAD_tree_clean_index_and_only_this_expected_untracked_request",
+    "verify_this_request_complete_SHA256_matches_the_separate_owner_confirmation",
+    "verify_all_eighteen_read_pins_before_any_write",
+    "materialize_the_owner_disposition_and_structured_final_external_audit_record",
+    "create_renderer_profile_and_test_v6_as_new_versioned_paths",
+    "build_candidate_state_with_only_the_exact_twenty_whitelisted_fields",
+    "create_only_the_two_exact_locked_stdlib_temp_targets",
+    "run_renderer_v6_tests_render_and_checks_in_both_environments",
+    "require_candidate_state_and_projection_byte_identity_across_both_environments",
+    "promote_the_validated_candidate_bytes_to_state.yaml_and_STATE.md",
+    "write_renderer_validation_completion_and_materialization_evidence",
+    "remove_both_exact_temp_targets_and_verify_absence",
+    "verify_all_other_existing_files_byte_unchanged_and_no_untracked_or_generated_residue",
+    "stage_exactly_the_eleven_paths_and_require_nine_additions_two_modifications_zero_deletions",
+    "run_cached_diff_check_and_create_exactly_one_local_commit_with_parent_c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "verify_Git_parsed_trailers_parent_tree_exact_path_scope_and_clean_index_worktree",
+    "produce_a_self_contained_new_session_prompt_for_read_only_K0b03_planning_using_the_actual_final_commit_tree_state_hashes_and_unchanged_gate_inventory"
+  ],
+  "future_commit": {
+    "count": 1,
+    "local_only": true,
+    "required_parent": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "subject": "Project final K0b-02 audit state",
+    "required_trailers_in_order": [
+      "Approval-Request-SHA256: FULL_COMPLETE_REQUEST_SHA256",
+      "Owner-Confirmation: current_conversation_owner_exact_SHA256_full_scope_confirmation_2026_09_23",
+      "Final-Audit-Result: K0B02-20-OF-20-NO-BLOCKERS",
+      "Transition-Package: K0B02-FINAL-AUDIT-TRANSITION-V1",
+      "Runtime-Authority: none"
+    ],
+    "remote_effects": false
+  },
+  "new_session_handoff": {
+    "delivery": "conversation_text_after_successful_transition_commit_not_a_repository_file",
+    "purpose": "continue_with_item_2_K0b03_in_a_new_session",
+    "must_include": [
+      "workspace_absolute_path",
+      "actual_transition_commit_parent_and_tree",
+      "clean_worktree_requirement",
+      "final_state_and_STATE_SHA256_and_bytes",
+      "final_renderer_v6_profile_and_validation_pins",
+      "K0b02_final_status_and_runtime_authority_none",
+      "exact_unchanged_seven_open_and_ten_closed_gate_inventory",
+      "K0b03_current_two_gate_ids_and_closure_conditions",
+      "instruction_to_begin_with_read_only_semantic_inventory_and_prepare_a_non_authorizing_K0b03_approval_request_before_any_implementation",
+      "prohibition_on_K0b04_K0b05_N1_real_Alpha0_F15_model_execution_remote_effects_and_unapproved_writes"
+    ]
+  },
+  "stop_conditions": [
+    "baseline_HEAD_tree_index_or_worktree_drift",
+    "request_hash_confirmation_missing_or_mismatched",
+    "any_read_pin_mismatch",
+    "final_audit_would_need_an_invented_source_hash_or_unreported_claim",
+    "write_scope_would_exceed_eleven_paths_nine_additions_two_state_pair_modifications",
+    "need_to_modify_any_v5_or_other_historical_file",
+    "candidate_delta_outside_the_exact_twenty_whitelisted_fields",
+    "any_gate_record_or_downstream_work_item_change",
+    "runtime_authority_change",
+    "renderer_or_projection_mismatch_between_locked_environments",
+    "need_for_network_nonstdlib_dependency_or_additional_temp_target",
+    "unexpected_generated_file_or_residue",
+    "remote_effect_would_be_required"
+  ],
+  "non_authorizations": {
+    "execution_under_this_request_creation_permission": false,
+    "K0b03_planning_or_implementation": false,
+    "K0b04_K0b05_or_N1_advancement": false,
+    "gate_closure_or_inventory_change": false,
+    "network": false,
+    "real_Alpha0_F15_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "future_execution_confirmation_template": "Подтверждаю approval-request SHA-256 FULL_COMPLETE_REQUEST_SHA256 и разрешаю весь описанный exact scope K0B02-FINAL-AUDIT-TRANSITION-V1 относительно parent c4b8b627cf32f43093b2b1da27c3a41a5788d4a8: структурированно зафиксировать финальный внешний аудит K0b-02 с результатом 20/20 и без блокирующих дефектов; создать renderer/profile/test v6 и validation/completion/materialization chain; спроецировать post-audit remediation v2 и append-only root-correction evidence в state.yaml и STATE.md; изменить только двадцать перечисленных K0b-02 audit/evidence/status/projection fields; сохранить неизменными семь open и десять closed gate records, статусы и authority K0b-03…N1 и runtime authority; создать 9 и изменить только 2 перечисленных пути, всего ровно 11; создать и удалить только две exact locked stdlib temp-среды без сети; выполнить только renderer v6 и его tests в обеих средах; staged diff проверить и создать один local commit с parent c4b8b627cf32f43093b2b1da27c3a41a5788d4a8; после commit подготовить в переписке self-contained prompt для продолжения K0b-03 в новой сессии. Runtime authority — none; gate closures, K0b-03 implementation, реальные Alpha0/F15/model execution и remote effects не разрешены."
+}

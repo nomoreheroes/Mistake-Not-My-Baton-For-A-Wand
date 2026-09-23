@@ -1,0 +1,136 @@
+{
+  "document_id": "pipeline-v2.k0b-02.final-external-audit-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T13:03:18.1007348Z",
+  "work_item_id": "K0b-02",
+  "status": "accepted_20_of_20_zero_blocking_defects",
+  "provenance": {
+    "source_kind": "current_conversation_owner_delivered_external_reviewer_result",
+    "source_file_or_complete_message_hash": "not_available",
+    "recording_rule": "structured_faithful_record_without_inventing_a_binary_source_hash",
+    "audited_commit": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+      "sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+      "bytes": 21809
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+      "sha256": "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+      "bytes": 3440
+    }
+  },
+  "overall_result": {
+    "checklist_confirmed": "20_of_20",
+    "blocking_defects": 0,
+    "root_corrigendum": "correctly_closes_the_only_prior_audit_finding",
+    "historical_blobs_rewritten": 0,
+    "recommendation": "accept_K0b02_final_audit_and_project_the_complete_chain_without_gate_advancement"
+  },
+  "chain_completeness": {
+    "order": [
+      "approval_request",
+      "owner_disposition",
+      "external_audit",
+      "root_corrigendum",
+      "validation",
+      "completion",
+      "materialization"
+    ],
+    "every_successor_pins_predecessors_by_complete_SHA256_and_bytes": true,
+    "self_hash_exclusions": 2,
+    "remaining_nonblocking_observations_carried_forward": 13,
+    "nonblocking_observations_falsely_closed": 0
+  },
+  "Git_results": {
+    "parent": "689021e51ef72f40c2f08fa66da8905b0a107360",
+    "tree": "953bc7b5fa3df933359abbdb862b21a1eec35f8c",
+    "additions": 7,
+    "modifications": 0,
+    "deletions": 0,
+    "insertions": 1013,
+    "trailers_exact_and_ordered": 5,
+    "index_worktree_clean": true,
+    "commit_was_normal_without_amend_or_rebase": true
+  },
+  "independent_root_reproduction": [
+    {
+      "root_id": "prior_exact77",
+      "records": 77,
+      "stream_bytes": 9872,
+      "sha256": "656b3b7416d80a1124f42175993cc6eab4e02f0357783cb221dfa3bb55c1463a"
+    },
+    {
+      "root_id": "materialization_nonself45",
+      "records": 45,
+      "stream_bytes": 5738,
+      "sha256": "37fd95a58ae8d1534cb7112fd16fa54c92b87cc7cabd8e71c4369a6aa898f7d1"
+    },
+    {
+      "root_id": "completion_frozen44",
+      "records": 44,
+      "stream_bytes": 5589,
+      "sha256": "bf05fb670aa905ebf8c94cff25811cbf327bf7a9fc32c0a1c608c7a6536e1959"
+    },
+    {
+      "root_id": "correction_nonself6",
+      "records": 6,
+      "stream_bytes": 878,
+      "sha256": "b2ef49cef17d6dce8cdac57a2503ccc6c260b04933c0541afb8fe2e761ef4e69"
+    }
+  ],
+  "root_method": {
+    "primary": "DOTNET_Array_Sort_StringComparer.OrdinalIgnoreCase",
+    "secondary": "ASCII_ToUpperInvariant_key_StringComparer.Ordinal",
+    "orders_and_streams_byte_identical": true,
+    "all_paths_ASCII": true,
+    "exact_duplicates": 0,
+    "OrdinalIgnoreCase_collisions": 0,
+    "CR_bytes": 0,
+    "LF_count_equals_record_count": true,
+    "exactly_one_final_LF": true
+  },
+  "pin_and_serialization_results": {
+    "path_SHA256_bytes_assertions": 43,
+    "pin_mismatches": 0,
+    "distinct_files": 11,
+    "seven_documents_strict_UTF8": true,
+    "seven_documents_BOM_absent": true,
+    "seven_documents_CR_absent": true,
+    "seven_documents_one_final_LF": true,
+    "seven_documents_JSON_parse": "pass_without_duplicate_keys",
+    "validation_internal_coverage": "first_four_documents",
+    "external_reviewer_additional_coverage": "validation_completion_and_materialization_confirmed"
+  },
+  "legacy_claim_checks": {
+    "exact77_InvariantCultureIgnoreCase": "c2d471d7488a5e6a40b401a0ffd51fe781d9fb3c59110d3fa597e35a0f2f00c4",
+    "exact77_Ordinal": "b0f2555d08c06503d8aafb1c2e52d8b5235ba30ef636b77601c6d834c91ef677",
+    "materialization45_alternate_orders": "historical_value_reproduced_but_generator_remains_ambiguous",
+    "completion44_alternate_orders": "historical_value_reproduced_but_generator_remains_ambiguous"
+  },
+  "cosmetic_findings": [
+    {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "token": "do_not add_partition_ordering",
+      "expected_style": "do_not_add_partition_ordering",
+      "impact": "none"
+    },
+    {
+      "path": "new pipeline/requests/k0b-02-post-remediation-audit-correction-approval-request-v1.yaml",
+      "token": "attachment_is available",
+      "expected_style": "attachment_is_available",
+      "impact": "none"
+    }
+  ],
+  "cosmetic_finding_disposition": "retain_frozen_request_bytes_no_exception",
+  "execution_boundary": {
+    "repository_code_or_tests_run_by_correction_package": false,
+    "sqlite_or_pycache_residue": false,
+    "authorized_temp_targets_present": false,
+    "pipeline_named_temp_directories_present": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "result": "pass_final_external_audit_accepted_for_state_projection"
+}

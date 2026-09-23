@@ -1,0 +1,196 @@
+{
+  "document_id": "pipeline-v2.k0b-02.final-audit-transition-materialization-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-23T13:23:15.2467579Z",
+  "work_item_id": "K0b-02",
+  "status": "frozen_commit_candidate_without_future_commit_self_reference",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+      "sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+      "bytes": 21809
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+      "sha256": "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+      "bytes": 3440
+    },
+    "confirmed_request_sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d"
+  },
+  "baseline": {
+    "HEAD": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "tree": "953bc7b5fa3df933359abbdb862b21a1eec35f8c",
+    "entry_index": "clean",
+    "entry_worktree": "only_the_authorized_request_untracked_before_execution"
+  },
+  "audit_transition_results": {
+    "final_external_audit_result": "20_of_20_confirmed_no_blocking_defects",
+    "post_audit_remediation_version": 2,
+    "append_only_root_correction_chain_projected": true,
+    "projection_version": "6.0.0",
+    "k0b02_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "authorized_field_changes": 20,
+    "gate_record_changes": 0,
+    "downstream_status_or_authority_changes": 0,
+    "runtime_authority": "none"
+  },
+  "validation": {
+    "environment_A": {
+      "python": "3.12.7",
+      "dependency_mode": "stdlib_only_venv_without_pip",
+      "tests": "9_of_9_pass",
+      "elapsed_seconds": 1.680,
+      "render_exit_code": 0,
+      "check_exit_code": 0,
+      "second_render_exit_code": 0
+    },
+    "environment_B": {
+      "python": "3.12.7",
+      "dependency_mode": "stdlib_only_venv_without_pip",
+      "tests": "9_of_9_pass",
+      "elapsed_seconds": 1.713,
+      "render_exit_code": 0,
+      "check_exit_code": 0,
+      "second_render_exit_code": 0
+    },
+    "candidate_state_sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+    "candidate_projection_sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+    "candidate_projection_bytes": 85362,
+    "deterministic_within_each_environment": true,
+    "cross_environment_byte_identity": true,
+    "canonical_pair_matches_tested_candidate": true,
+    "initial_nonpassing_attempt_disclosed_in_validation_evidence": true
+  },
+  "evidence_chain": {
+    "final_external_audit": {
+      "path": "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+      "sha256": "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
+      "bytes": 5223
+    },
+    "renderer_validation": {
+      "path": "new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml",
+      "sha256": "850eecddbef383b0d529f4cdcea3196abaecac8e5774d677e1bec9f0c3fd44be",
+      "bytes": 5806
+    },
+    "completion": {
+      "path": "new pipeline/receipts/k0b-02-final-audit-transition-completion-v1.yaml",
+      "sha256": "3659ff517e0fdd12d9a71e5e16c0ff5e4dc7dda166f46332ca17117ad4ddfca6",
+      "bytes": 5467
+    }
+  },
+  "exact_scope": {
+    "total_paths": 11,
+    "additions": 9,
+    "modifications": 2,
+    "deletions": 0,
+    "nonself_path_pins": [
+      {
+        "path": "new pipeline/requests/k0b-02-final-audit-transition-approval-request-v1.yaml",
+        "sha256": "45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+        "bytes": 21809
+      },
+      {
+        "path": "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+        "sha256": "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+        "bytes": 3440
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+        "sha256": "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
+        "bytes": 5223
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+        "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+        "bytes": 12373
+      },
+      {
+        "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+        "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+        "bytes": 191471
+      },
+      {
+        "path": "new pipeline/tests/state/test_k0b02_renderer_v6.py",
+        "sha256": "5c0a527eb59bd4c66f1a97534dc7059e6381f628213960ae7403ab33d454cd1f",
+        "bytes": 8586
+      },
+      {
+        "path": "new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml",
+        "sha256": "850eecddbef383b0d529f4cdcea3196abaecac8e5774d677e1bec9f0c3fd44be",
+        "bytes": 5806
+      },
+      {
+        "path": "new pipeline/receipts/k0b-02-final-audit-transition-completion-v1.yaml",
+        "sha256": "3659ff517e0fdd12d9a71e5e16c0ff5e4dc7dda166f46332ca17117ad4ddfca6",
+        "bytes": 5467
+      },
+      {
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+        "bytes": 84926
+      },
+      {
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+        "bytes": 85362
+      }
+    ],
+    "nonself_pin_count": 10,
+    "nonself_record_stream_bytes": 1273,
+    "nonself_pin_root_profile": "DOTNET_StringComparer.OrdinalIgnoreCase_path_UTF8_TAB_lowercase_SHA256_TAB_decimal_bytes_LF",
+    "nonself_pin_root_sha256": "f79f47f17b31e8ffbeb09ebbcd74156cefc4b8e32a076f16d7e8b3c33b978a99",
+    "self_path": "new pipeline/evidence/k0b-02-final-audit-transition-materialization-v1.yaml",
+    "self_hash_excluded": "content_hash_cycle_prevention"
+  },
+  "state_and_gates": {
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "state_changes": 20,
+    "gate_changes": 0,
+    "open_gates": 7,
+    "closed_gates": 10,
+    "K0b03_through_N1_status_and_authority_changes": 0
+  },
+  "commit_candidate": {
+    "future_commit_self_reference": false,
+    "required_local_commit_count": 1,
+    "required_parent": "c4b8b627cf32f43093b2b1da27c3a41a5788d4a8",
+    "required_path_count": 11,
+    "required_additions": 9,
+    "required_modifications": 2,
+    "required_deletions": 0,
+    "trailers": [
+      "Approval-Request-SHA256: 45e5d9ccf7fdb4aaa22c6205714664b3843e0cceabb9d5d8d58198b57977d37d",
+      "Owner-Confirmation: current_conversation_owner_exact_SHA256_full_scope_confirmation_2026_09_23",
+      "Final-Audit-Result: K0B02-20-OF-20-NO-BLOCKERS",
+      "Transition-Package: K0B02-FINAL-AUDIT-TRANSITION-V1",
+      "Runtime-Authority: none"
+    ],
+    "remote_effects": false
+  },
+  "cleanup": {
+    "environment_A_absent": true,
+    "environment_B_absent": true,
+    "network_used": false,
+    "runtime_authority": "none"
+  },
+  "non_authorizations": {
+    "gate_closures": 0,
+    "K0b03_implementation": false,
+    "actual_program_runtime_publications": 0,
+    "actual_provider_model_calls": 0,
+    "real_Alpha0_F15_model_execution": false,
+    "remote_effects": false,
+    "runtime_authority": "none"
+  },
+  "result": "ready_for_exact_eleven_path_local_commit"
+}

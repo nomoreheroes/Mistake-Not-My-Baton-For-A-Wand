@@ -1,12 +1,12 @@
 {
     "state_id":  "pipeline-v2-program-state",
     "schema_version":  1,
-    "projection_version":  "5.0.0",
-    "generated_at":  "2026-09-21T15:41:52Z",
-    "status":  "K0b_02_implemented_validated_runtime_not_authorized",
+    "projection_version":  "6.0.0",
+    "generated_at":  "2026-09-23T13:03:18.1007348Z",
+    "status":  "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
     "projection_profile":  {
-                               "path":  "new pipeline/state/renderer/k0b02_v5/projection-profile-v5.yaml",
-                               "sha256":  "cf43eeb070953c9ad5e1bbc18e474f3a224dce1a9ca11bef0ce1564f7b1ab7d7"
+                               "path":  "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+                               "sha256":  "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233"
                            },
     "baseline":  {
                      "pre_remediation_HEAD":  "a031ee56a36cf794646643b67270c6e0f7092e08",
@@ -158,7 +158,12 @@
                                                                           "path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
                                                                           "sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
                                                                           "bytes":  4392
-                                                                      }
+                                                                      },
+                             "K0b_02_final_audit_transition":  {
+                                                                   "path":  "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+                                                                   "sha256":  "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+                                                                   "bytes":  3440
+                                                               }
                          },
     "supporting_review_evidence":  {
                                        "K0b_01_v1_2_r1_dispatch_reconciliation":  {
@@ -220,7 +225,47 @@
                                                                                      "path":  "new pipeline/evidence/k0b-02-implementation-materialization-v1.yaml",
                                                                                      "sha256":  "ae8e0686e457dd68090c73e08a7464519d25e554773a70453bc3c7ecab5166bb",
                                                                                      "bytes":  10427
-                                                                                 }
+                                                                                 },
+                                       "K0b_02_post_audit_remediation_validation":  {
+                                                                                        "path":  "new pipeline/evidence/k0b-02-artifact-event-validation-v2.yaml",
+                                                                                        "sha256":  "be4517e53b39fcb9fb73a39d370eb298e1f62270676cf577a2d97cb572f73c83",
+                                                                                        "bytes":  18812
+                                                                                    },
+                                       "K0b_02_post_audit_remediation_completion":  {
+                                                                                        "path":  "new pipeline/receipts/k0b-02-artifact-event-implementation-completion-v2.yaml",
+                                                                                        "sha256":  "6608987741e966f7e02e30788cb4b89ccf8365941be368af4ea69e7564bd64e5",
+                                                                                        "bytes":  11299
+                                                                                    },
+                                       "K0b_02_post_audit_remediation_materialization":  {
+                                                                                             "path":  "new pipeline/evidence/k0b-02-post-audit-remediation-materialization-v1.yaml",
+                                                                                             "sha256":  "ce25b072d821f508017a5adbf7d6485a790fbf02b1e7b30dd86f9921da613635",
+                                                                                             "bytes":  11525
+                                                                                         },
+                                       "K0b_02_root_comparator_correction":  {
+                                                                                 "path":  "new pipeline/evidence/k0b-02-root-comparator-correction-v1.yaml",
+                                                                                 "sha256":  "1d644e835280deec3888f6631e66d487fd34ae8786529b7ffe1758af8d8f4d0a",
+                                                                                 "bytes":  7524
+                                                                             },
+                                       "K0b_02_root_comparator_validation":  {
+                                                                                 "path":  "new pipeline/evidence/k0b-02-root-comparator-validation-v1.yaml",
+                                                                                 "sha256":  "3a2a54ce490b22d9559e1125bc75151a17a1498cd6e9c809c6915b27ead164bb",
+                                                                                 "bytes":  5840
+                                                                             },
+                                       "K0b_02_audit_correction_completion":  {
+                                                                                  "path":  "new pipeline/receipts/k0b-02-post-remediation-audit-correction-completion-v1.yaml",
+                                                                                  "sha256":  "b156cce4111ce6a14191d415df09b25599a35df2389d8248e9ffd0e86be45e2c",
+                                                                                  "bytes":  5286
+                                                                              },
+                                       "K0b_02_audit_correction_materialization":  {
+                                                                                       "path":  "new pipeline/evidence/k0b-02-post-remediation-audit-correction-materialization-v1.yaml",
+                                                                                       "sha256":  "96d151bcd247d8922361b22f0aee067fa58d862073e6f05264a9ae2443a2255d",
+                                                                                       "bytes":  6372
+                                                                                   },
+                                       "K0b_02_final_external_audit":  {
+                                                                           "path":  "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
+                                                                           "sha256":  "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
+                                                                           "bytes":  5223
+                                                                       }
                                    },
     "root_plan_status":  {
                              "architecture_plan":  {
@@ -375,7 +420,7 @@
                        {
                            "sequence":  12,
                            "work_item_id":  "K0b-02",
-                           "status":  "implemented_validated_runtime_not_authorized",
+                           "status":  "implemented_validated_externally_audited_runtime_not_authorized",
                            "authority_path":  "new pipeline/decisions/k0b-02-artifact-event-implementation-owner-disposition-v1.yaml",
                            "authority_sha256":  "49d6e38d4162b9d8832621db1e983407eff5c73a6904e40f104d9e4eb246ee35",
                            "open_gate_ids":  [
@@ -894,6 +939,11 @@
                   "K0b_01_implementation_session_id":  "K0B01-IMPL-V2-SESSION-001",
                   "K0b_01_implementation_status":  "implemented_validated_runtime_not_authorized",
                   "K0b_02_implementation_authority":  "bounded_K0b_02_exact_fixture_scope_only",
-                  "K0b_02_runtime_authority":  "none"
+                  "K0b_02_runtime_authority":  "none",
+                  "K0b_02_post_audit_remediation_status":  "complete_validated",
+                  "K0b_02_root_comparator_correction_status":  "complete_independently_audited",
+                  "K0b_02_final_external_audit_status":  "complete_20_of_20_zero_blockers",
+                  "K0b_02_final_external_audit_checklist":  "20_of_20_confirmed",
+                  "K0b_02_remaining_nonblocking_observations":  13
               }
 }
