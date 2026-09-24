@@ -1,0 +1,149 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-and-plan-revision-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-24",
+  "status": "owner_approved_exact_29_path_documentation_reference_scope_runtime_not_authorized",
+  "approval_request": {
+    "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+    "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+    "bytes": 38427,
+    "request_status": "non_authorizing_pending_separate_exact_hash_owner_confirmation"
+  },
+  "owner_confirmation": {
+    "source_ref": "current_conversation_exact_hash_29_path_documentation_scope_confirmation_2026_09_24",
+    "confirmed_request_sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+    "complete_lowercase_64_hex_hash_repeated": true,
+    "exact_29_path_scope_authorized": true,
+    "one_local_commit_authorized": true,
+    "statement_verbatim": "Подтверждаю approval-request SHA-256 `1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191` и разрешаю на baseline HEAD `84b390ef281a31caa119023c5dee61fceaa25439` весь описанный exact scope одного 29-path documentation commit: создать owner disposition, полный 170-path base/successor/exclusion manifest, 21 LF-normalized legacy overlay files с сохранёнными raw-source provenance pins, applicability evidence, development-plan successor v0.14, architecture applicability addendum, k0b-03 planning package v1.1 и document-check evidence; затем выполнить один local commit ровно этих 29 новых путей с parent `84b390ef281a31caa119023c5dee61fceaa25439`. Разрешаю только документные статические проверки и технические повторы внутри неизменного exact scope. Существующие old pipeline, планы, state/STATE, renderer/profile, gates, evidence, code, tests и migrations остаются неизменными; repository code/tests, network, dependencies, temp-targets, K0b-03 implementation, K0b-04/K0b-05/N1, Alpha0/F10/F15/model/provider execution, runtime publications и remote effects не разрешены; runtime authority остаётся none. При любом mismatch или расширении scope — остановиться без staging/commit и сообщить точное состояние."
+  },
+  "confirmation_validation": {
+    "request_hash_recomputed_before_materialization": "match",
+    "request_bytes_unchanged": true,
+    "baseline_rechecked": "pass",
+    "base_successor_and_exclusion_pins_rechecked": "pass",
+    "entry_worktree": "only_confirmed_request_untracked_before_materialization",
+    "abbreviated_or_implicit_confirmation": false,
+    "result": "valid_exact_hash_scope_confirmation"
+  },
+  "baseline": {
+    "repository_root": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "HEAD": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "parent": "1c7294ca2d3386e9eb07c2fbb507d239e5c09aeb",
+    "tree": "4f44ada7d7c1e1c3a273445a69f3236bccefca27",
+    "commit_parent_required": "84b390ef281a31caa119023c5dee61fceaa25439"
+  },
+  "legacy_source_disposition": {
+    "base_root": "old pipeline",
+    "base_role": "immutable_repository_snapshot",
+    "successor_root": "C:/Projects/software_workflow",
+    "successor_access": "read_only",
+    "successor_role": "external_provenance_source_only",
+    "base_manifest_sha256": "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597",
+    "successor_manifest_sha256": "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8",
+    "path_count": 170,
+    "changed_path_count": 21,
+    "unchanged_path_count": 149,
+    "backup_exclusion_count": 33,
+    "pytest_cache_exclusion_count": 4,
+    "top_level_recursive_exclusion_count": 21,
+    "manifest": {
+      "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+      "bytes": 178435
+    },
+    "overlay_role": "immutable_LF_normalized_reference_evidence_only",
+    "overlay_runtime_import_allowed": false,
+    "external_source_as_governance_authority_allowed": false,
+    "excluded_artifact_semantic_use_allowed": false
+  },
+  "single_source_boundaries": {
+    "active_Alpha0_routing_registry": "new pipeline/registry/alpha0/alpha0-routing-contract-v2.json",
+    "registry_v2_role": "sole_current_authored_event_producer_subscriber_terminal_route_and_phase_fence_source",
+    "legacy_base_successor_and_overlay": "prior_art_and_delta_evidence_not_registry_or_runtime_truth",
+    "path_level_applicability": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+    "program_sequence": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+    "applicability_rules": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+    "K0b03_delta_plan": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+    "existing_development_plan": "immutable_historical_v0.13",
+    "existing_architecture_plan": "immutable_current_v0.16_base_not_rewritten",
+    "existing_K0b03_plan_v1": "immutable_base_for_v1.1_overlay",
+    "compiled_outputs_code_SQLite_state_and_markdown": "must_not_become_shadow_authored_truth"
+  },
+  "applicability_disposition": {
+    "rule": "each_of_21_changed_paths_has_exactly_one_primary_category_owner_phase_consumer_and_future_evidence_route",
+    "allowed_categories": [
+      "already_covered_by_v2",
+      "required_for_K0b03",
+      "required_for_K0b04",
+      "required_for_N1",
+      "deferred_to_later_layer",
+      "not_applicable"
+    ],
+    "adopt_legacy_text_verbatim": false,
+    "native_v2_contract_translation_required": true,
+    "completed_K0a_K0b01_K0b02_retroactive_invalidation": false,
+    "independent_review_before_implementation_scope_freeze": true
+  },
+  "phase_routing": {
+    "K0b03": {
+      "accepted_scope": "only_applicable_fail_closed_repository_tool_egress_and_object_specific_hash_guard_implications",
+      "legacy_prompt_dispatcher_or_runtime_import": false,
+      "implementation_authorized": false
+    },
+    "K0b04": {
+      "future_disposition_scope": "dispatcher_preflight_toolchain_reachability_acceptance_oracle_and_attestation_guarantee_findings",
+      "F10_or_F15_execution_authorized": false,
+      "progress_claimed": false
+    },
+    "N1_00": {
+      "future_required_artifact": "21_row_layer_migration_matrix_bound_to_applicability_evidence",
+      "layer_plan_or_prompt_activation_authorized": false,
+      "progress_claimed": false
+    }
+  },
+  "authorized_package": {
+    "new_path_count": 29,
+    "existing_path_modification_count": 0,
+    "overlay_path_count": 21,
+    "non_overlay_path_count": 8,
+    "local_commit_count": 1,
+    "required_parent": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "commit_kind": "documentation_and_reference_overlay_only",
+    "technical_retries": "inside_unchanged_exact_scope_only",
+    "remote_effects": false
+  },
+  "resource_authority": {
+    "locked_environments": [],
+    "network_hosts": [],
+    "dependencies": [],
+    "temp_targets": [],
+    "repository_code_or_test_execution": [],
+    "model_or_provider_calls": 0,
+    "runtime_publications": 0
+  },
+  "state_and_gate_boundaries": {
+    "state_yaml_change": false,
+    "STATE_md_change": false,
+    "renderer_or_profile_change": false,
+    "gate_changes": 0,
+    "G_K0B03_K0B01_COMPLETE": "unchanged_blocked_by_predecessor",
+    "G_K0B03_UNTRUSTED_SHAPES": "unchanged_future_open",
+    "K0b03_status": "blocked",
+    "K0b04_K0b05_N1_progress": false,
+    "runtime_authority": "none"
+  },
+  "retained_non_authorizations": [
+    "no_existing_file_modification",
+    "no_state_STATE_renderer_profile_status_or_gate_change",
+    "no_K0b03_implementation",
+    "no_K0b04_K0b05_or_N1_execution_or_progress_claim",
+    "no_repository_code_or_test_execution",
+    "no_network_dependency_or_temp_target",
+    "no_Alpha0_F10_F15_model_or_provider_execution",
+    "no_runtime_publication_push_fetch_PR_merge_deploy_release_or_other_remote_effect",
+    "runtime_authority_none"
+  ],
+  "outcome": "exact_legacy_successor_documentation_reference_package_authorized_for_one_local_commit_only"
+}

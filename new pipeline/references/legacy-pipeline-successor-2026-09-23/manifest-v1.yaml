@@ -1,0 +1,2714 @@
+{
+    "document_id":  "pipeline-v2.legacy-pipeline-successor-2026-09-23.manifest-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "recorded_on":  "2026-09-24",
+    "status":  "complete_reference_manifest_non_authorizing_runtime_not_authorized",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+                                               "sha256":  "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+                                               "bytes":  38427
+                                           },
+                      "owner_confirmation":  "current_conversation_exact_hash_29_path_documentation_scope_confirmation_2026_09_24",
+                      "baseline_HEAD":  "84b390ef281a31caa119023c5dee61fceaa25439",
+                      "external_source":  "C:/Projects/software_workflow",
+                      "external_source_access":  "read_only",
+                      "external_source_is_runtime_or_governance_authority":  false
+                  },
+    "path_set":  {
+                     "definition":  "exact_relative_paths_from_git_ls_files_under_old_pipeline_at_the_pinned_baseline_with_old_pipeline_prefix_removed_and_forward_slashes",
+                     "semantic_source_directories":  [
+                                                         "A.Idea Note Layer",
+                                                         "B.Concept Layer",
+                                                         "C.Requirements Layer",
+                                                         "D.Stories \u0026 PRD Layer",
+                                                         "E. Design Research \u0026 Intent Layer",
+                                                         "F.UX Architecture",
+                                                         "G.Visual System \u0026 UI",
+                                                         "H. Design-to-Code Handoff",
+                                                         "I. Architecture \u0026 Task Graph",
+                                                         "J. Implementation",
+                                                         "K. Audit \u0026 Documentation Layer",
+                                                         "M. Meta Layer"
+                                                     ],
+                     "ordering":  "ascending_dotnet_string_comparer_ordinal",
+                     "path_count":  170,
+                     "changed_path_count":  21,
+                     "unchanged_path_count":  149
+                 },
+    "raw_manifest_profile":  {
+                                 "line":  "relative_path\u003cTAB\u003elowercase_sha256_of_raw_file_bytes\u003cTAB\u003edecimal_byte_count\u003cLF\u003e",
+                                 "ordering":  "ascending_dotnet_string_comparer_ordinal_by_complete_line_equivalent_to_relative_path_for_unique_paths",
+                                 "encoding":  "UTF-8_without_BOM",
+                                 "final_terminator":  "exactly_one_LF",
+                                 "digest":  "SHA-256_over_complete_manifest_bytes"
+                             },
+    "base_manifest":  {
+                          "path_count":  170,
+                          "content_bytes":  11051221,
+                          "manifest_bytes":  21819,
+                          "sha256":  "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597"
+                      },
+    "successor_raw_manifest":  {
+                                   "path_count":  170,
+                                   "content_bytes":  11361589,
+                                   "manifest_bytes":  21820,
+                                   "sha256":  "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8"
+                               },
+    "unchanged_raw_subset":  {
+                                 "definition":  "base_manifest_paths_minus_the_21_changed_paths_listed_below",
+                                 "path_count":  149,
+                                 "content_bytes":  7573456,
+                                 "manifest_bytes":  19217,
+                                 "sha256":  "ce227e2575a3694e13721752addbc77accfebb6a47018516493806a30e581697"
+                             },
+    "overlay_normalization_contract":  {
+                                           "reason":  "external_markdown_contains_CRLF_or_mixed_line_endings_while_repository_gitattributes_requires_LF",
+                                           "decode":  "strict_UTF-8_without_BOM",
+                                           "transform_order":  [
+                                                                   "replace_CRLF_with_LF",
+                                                                   "replace_remaining_CR_with_LF",
+                                                                   "remove_all_trailing_LF_characters",
+                                                                   "append_exactly_one_final_LF",
+                                                                   "encode_UTF-8_without_BOM"
+                                                               ],
+                                           "semantic_editing_during_normalization":  false,
+                                           "raw_source_hashes_remain_provenance":  true,
+                                           "normalized_hashes_are_future_repository_overlay_bindings":  true
+                                       },
+    "entries":  [
+                    {
+                        "relative_path":  "A.Idea Note Layer/A Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "493ca273dfe11c98eb386f3edb83c7e79a2efeea6159d6ece2cc848e7a094c03",
+                                         "bytes":  57278
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "493ca273dfe11c98eb386f3edb83c7e79a2efeea6159d6ece2cc848e7a094c03",
+                                              "bytes":  57278
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A1.Vision Interview Agent.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "17b2c407f7a4748e6fed85f0d04c819772f7567e0d20350e0e70b79e59047d8c",
+                                         "bytes":  17661
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "17b2c407f7a4748e6fed85f0d04c819772f7567e0d20350e0e70b79e59047d8c",
+                                              "bytes":  17661
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A2.Idea Note Generator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "593416485132c7bfba357ea4c7298870163e5002b366f89c2421522c640da91f",
+                                         "bytes":  16652
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "593416485132c7bfba357ea4c7298870163e5002b366f89c2421522c640da91f",
+                                              "bytes":  16652
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A3.Marketing Reviewer v2.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "296489b534692e473a98ade5582c0ac56b29147cf397531c286b36171fb19626",
+                                         "bytes":  17743
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "296489b534692e473a98ade5582c0ac56b29147cf397531c286b36171fb19626",
+                                              "bytes":  17743
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A4.Architecture Feasibility Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "bf4451d9258e982e037b37776f8df4d00232b406a36ca9248f6206abea763362",
+                                         "bytes":  18867
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "bf4451d9258e982e037b37776f8df4d00232b406a36ca9248f6206abea763362",
+                                              "bytes":  18867
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A5.Ethics \u0026 Regulatory Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0c09a4f1ac765cad48cfcd9bba958bab3786160006647245a6fcbeb6df266433",
+                                         "bytes":  24837
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0c09a4f1ac765cad48cfcd9bba958bab3786160006647245a6fcbeb6df266433",
+                                              "bytes":  24837
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "A.Idea Note Layer/A6.Binary Gatekeeper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "190ba9cb5693497d2f0183294c55b8d2a54a78ae3064a05055e9beac7165ef91",
+                                         "bytes":  20102
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "190ba9cb5693497d2f0183294c55b8d2a54a78ae3064a05055e9beac7165ef91",
+                                              "bytes":  20102
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "999534d75cee2813db313cde44ca921828ff2b70abd3e77f59c9558d25149cfc",
+                                         "bytes":  30808
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "999534d75cee2813db313cde44ca921828ff2b70abd3e77f59c9558d25149cfc",
+                                              "bytes":  30808
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B1.Snapshot Projection \u0026 Coverage Interview.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "be332e23b1e7f6abe97d859e75143efa70c268a771a13df67d6da619d4288f32",
+                                         "bytes":  13269
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "be332e23b1e7f6abe97d859e75143efa70c268a771a13df67d6da619d4288f32",
+                                              "bytes":  13269
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B2.Peer Review of Concept Coverage.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "aceb53f2df52f4d60775db5fe409f292fc35265c72e12c949ecd188c86198dce",
+                                         "bytes":  8660
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "aceb53f2df52f4d60775db5fe409f292fc35265c72e12c949ecd188c86198dce",
+                                              "bytes":  8660
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B3.Marketing Coverage Expansion.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "6d5ba1b30856aaf3025d07307bbb51cbef2e056902cc0a548526b0219e95455b",
+                                         "bytes":  11164
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "6d5ba1b30856aaf3025d07307bbb51cbef2e056902cc0a548526b0219e95455b",
+                                              "bytes":  11164
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B4.Architecture Coverage Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "7841eabeddc7b90999ac56d6374e89c6921c7ec4f1b512acf3a04d9abef39a1c",
+                                         "bytes":  14501
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "7841eabeddc7b90999ac56d6374e89c6921c7ec4f1b512acf3a04d9abef39a1c",
+                                              "bytes":  14501
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B5.Risk \u0026 Operations Coverage.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "cdd315543d3bfd63c44e3e3e23153166b9a0a023efec19d49102ce06ec1aa307",
+                                         "bytes":  13273
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "cdd315543d3bfd63c44e3e3e23153166b9a0a023efec19d49102ce06ec1aa307",
+                                              "bytes":  13273
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B6.Ethics \u0026 Governance Enforcement Coverage Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "d60b689a609a69c59369c75616b9691991b04254e64f4a446d6a22086b580fe9",
+                                         "bytes":  13330
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "d60b689a609a69c59369c75616b9691991b04254e64f4a446d6a22086b580fe9",
+                                              "bytes":  13330
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B7.Aspect Similarity \u0026 Consolidation Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f364838bcabda591184e5736cc4a7003f60d72177f1eb839ddc4f1708cb5e568",
+                                         "bytes":  10342
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f364838bcabda591184e5736cc4a7003f60d72177f1eb839ddc4f1708cb5e568",
+                                              "bytes":  10342
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "B.Concept Layer/B8.Coverage Final Gatekeeper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "ac854478ead8ffb954ec2da6a07d9e05166c12aaa0ae9a22aa514da103a9b73e",
+                                         "bytes":  10024
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "ac854478ead8ffb954ec2da6a07d9e05166c12aaa0ae9a22aa514da103a9b73e",
+                                              "bytes":  10024
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "C.Requirements Layer/C Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c8df8fbc32130a3af78566a9e4d950adbc5ee985c4d2efe7629175201a1f38c9",
+                                         "bytes":  24715
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c8df8fbc32130a3af78566a9e4d950adbc5ee985c4d2efe7629175201a1f38c9",
+                                              "bytes":  24715
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "C.Requirements Layer/C1.Aspect Requirement Translator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "b7a66ef85a30967a87910cb66266e57a51c8f900b157c58e74541534981d04e1",
+                                         "bytes":  28213
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "b7a66ef85a30967a87910cb66266e57a51c8f900b157c58e74541534981d04e1",
+                                              "bytes":  28213
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "C.Requirements Layer/C2.Requirements Validation.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "636c866a2638114d05e41901e18cf7961914633a9649bf934b4b97c32123be66",
+                                         "bytes":  28975
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "636c866a2638114d05e41901e18cf7961914633a9649bf934b4b97c32123be66",
+                                              "bytes":  28975
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1f5e89de740ac2e8d86d6f15c1d084bb58d109a43ceb26884782661ad06f82f5",
+                                         "bytes":  28115
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1f5e89de740ac2e8d86d6f15c1d084bb58d109a43ceb26884782661ad06f82f5",
+                                              "bytes":  28115
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D1.Story Inventory Generator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "3f21dc16b53fb2b214a74455824ca613e4e0010c2a7dc5444c0fa6303f8e2581",
+                                         "bytes":  28072
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "3f21dc16b53fb2b214a74455824ca613e4e0010c2a7dc5444c0fa6303f8e2581",
+                                              "bytes":  28072
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D2.Story Inventory Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "2a2acc95c151f27010750074bd9f9ab94c13b308627eeb6660108004543bbc30",
+                                         "bytes":  14378
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "2a2acc95c151f27010750074bd9f9ab94c13b308627eeb6660108004543bbc30",
+                                              "bytes":  14378
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D3.Story Detailing.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "24e7df12b799a0dcd6b90b0152bf193a9cc21f38690b424bdb56e729e12e799c",
+                                         "bytes":  43118
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "24e7df12b799a0dcd6b90b0152bf193a9cc21f38690b424bdb56e729e12e799c",
+                                              "bytes":  43118
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D4.UX Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "971dc58ac212ac48b88bf1d7b70fc10c02706b9c89c5108f6f962e044876becc",
+                                         "bytes":  17955
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "971dc58ac212ac48b88bf1d7b70fc10c02706b9c89c5108f6f962e044876becc",
+                                              "bytes":  17955
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D5.Feasibility Reviewer (Low-level).md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "74c2987a10e96ef0a5a2dd58b91f3104cbd7f006920e5c17196a32454b37f02e",
+                                         "bytes":  20713
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "74c2987a10e96ef0a5a2dd58b91f3104cbd7f006920e5c17196a32454b37f02e",
+                                              "bytes":  20713
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D6.Product \u0026 Traceability Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "034c4c7d84fcb81bda941a7d2681704965a60e27e0fdd0c53cc51504253a2367",
+                                         "bytes":  17355
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "034c4c7d84fcb81bda941a7d2681704965a60e27e0fdd0c53cc51504253a2367",
+                                              "bytes":  17355
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "D.Stories \u0026 PRD Layer/D7.Story Gatekeeper \u0026 PRD Index Registrar.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "5fa074b9a8a517a57b24e72c634d48a0145e61e3b38c38a5a7acb00c7d9823b9",
+                                         "bytes":  19109
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "5fa074b9a8a517a57b24e72c634d48a0145e61e3b38c38a5a7acb00c7d9823b9",
+                                              "bytes":  19109
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "bbdb9596a28879ce14f9289a3cf903755af7ce763f3e8f49e56bec9c0b5df4f5",
+                                         "bytes":  32478
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "bbdb9596a28879ce14f9289a3cf903755af7ce763f3e8f49e56bec9c0b5df4f5",
+                                              "bytes":  32478
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E1.Design Research Analyst.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "055c745e06c7c0caaef2445b7af71080f0265a4a0e5f01675f7b047349c92f6f",
+                                         "bytes":  30083
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "055c745e06c7c0caaef2445b7af71080f0265a4a0e5f01675f7b047349c92f6f",
+                                              "bytes":  30083
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E10.DesignMoodSketcherHITL.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "7ee5a116b7417ef976a6e49900f7f0dbd66f146bc9c5a272a03f9c3861562e6a",
+                                         "bytes":  27791
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "7ee5a116b7417ef976a6e49900f7f0dbd66f146bc9c5a272a03f9c3861562e6a",
+                                              "bytes":  27791
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E11.Research Intent Gatekeeper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "184cc05982c16ea196b40a8a4736d704e194fad3dee4ae5097694d60daec453e",
+                                         "bytes":  45131
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "184cc05982c16ea196b40a8a4736d704e194fad3dee4ae5097694d60daec453e",
+                                              "bytes":  45131
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E12.HITL Design Specification Sign-Off.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "45f62bb3d093ad0db32969fc46390915c75ace376fe6a0d34512a662e890a36a",
+                                         "bytes":  34628
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "45f62bb3d093ad0db32969fc46390915c75ace376fe6a0d34512a662e890a36a",
+                                              "bytes":  34628
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E2.Design Vision Interview (HITL).md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c09bdcfe248bcecfdf0ffe64908613d717f7de92af962781893b9bfc8b3c6429",
+                                         "bytes":  53772
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c09bdcfe248bcecfdf0ffe64908613d717f7de92af962781893b9bfc8b3c6429",
+                                              "bytes":  53772
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E3.Design Parameter Alignment Synthesizer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9d8d181df7e04a5fa6110a39871d21e484f8e2f81c5c912ed99d251132811f00",
+                                         "bytes":  17906
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9d8d181df7e04a5fa6110a39871d21e484f8e2f81c5c912ed99d251132811f00",
+                                              "bytes":  17906
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E4.DesignIntentNormalizerTensionMapper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a432666edf5a6359f8b374d78bc0d8739a05236887bef17f0e44669015370215",
+                                         "bytes":  37452
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a432666edf5a6359f8b374d78bc0d8739a05236887bef17f0e44669015370215",
+                                              "bytes":  37452
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E5.Expressive Adequacy Surface Grammar Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a460d824f913782bf9c2b5f1c0bbbd06906da5b45665bc57e70214a7177136e7",
+                                         "bytes":  16954
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a460d824f913782bf9c2b5f1c0bbbd06906da5b45665bc57e70214a7177136e7",
+                                              "bytes":  16954
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E6.PM Intent Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f6372731a539ce273cfc7e0fcc7489224da75fb6358c74a65f85eb3de468fbc1",
+                                         "bytes":  22227
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f6372731a539ce273cfc7e0fcc7489224da75fb6358c74a65f85eb3de468fbc1",
+                                              "bytes":  22227
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E7.Marketing Positioning Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a8514149a39386430754b6d39b317a12b47cacd711d73b509f9815993f680c79",
+                                         "bytes":  27478
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a8514149a39386430754b6d39b317a12b47cacd711d73b509f9815993f680c79",
+                                              "bytes":  27478
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E8.Accessibility Intent Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f8a98a99ec6de603c0044e8a3f83a50525d8d2d8b7f37e057ba0bd79d7177074",
+                                         "bytes":  31077
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f8a98a99ec6de603c0044e8a3f83a50525d8d2d8b7f37e057ba0bd79d7177074",
+                                              "bytes":  31077
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/E9.Frontend Design System Feasibility Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "b9f1d654f9cba05090564668a4ba53e8a3eb5ecdc1ef4a819a635ff8a85d51da",
+                                         "bytes":  40691
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "b9f1d654f9cba05090564668a4ba53e8a3eb5ecdc1ef4a819a635ff8a85d51da",
+                                              "bytes":  40691
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "E. Design Research \u0026 Intent Layer/design_parameter_reference.yaml",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "369a798d2a7fd8a47874b5b7775bc5bd3966fc5a8138d91614437428fcf4e0f0",
+                                         "bytes":  26922
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "369a798d2a7fd8a47874b5b7775bc5bd3966fc5a8138d91614437428fcf4e0f0",
+                                              "bytes":  26922
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "29029fcbe70d55e4040bfc7bb014a77bec33e1d64b98560086b60d21a5f0b7d6",
+                                         "bytes":  32098
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "29029fcbe70d55e4040bfc7bb014a77bec33e1d64b98560086b60d21a5f0b7d6",
+                                              "bytes":  32098
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F1. Surface Map Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8a1793d6f63bd4e4149b46dae1ff1b6fc0f8d7573b7de5c0aba1b531af22d02e",
+                                         "bytes":  32615
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8a1793d6f63bd4e4149b46dae1ff1b6fc0f8d7573b7de5c0aba1b531af22d02e",
+                                              "bytes":  32615
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F2. Navigation Flow Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "080f0441e6522b4ceda6dc186be657fb0120fc6e8e3fa7286b04886b0c59ad37",
+                                         "bytes":  32203
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "080f0441e6522b4ceda6dc186be657fb0120fc6e8e3fa7286b04886b0c59ad37",
+                                              "bytes":  32203
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F3. Information Architecture Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0986bb8d95430baacc80fb42f057e2839b269a71430bcb9431852016d2a507c3",
+                                         "bytes":  30350
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0986bb8d95430baacc80fb42f057e2839b269a71430bcb9431852016d2a507c3",
+                                              "bytes":  30350
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F4. Interaction Pattern Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "67eb02438f1a0c2ce4fff53f952f5406f95789cc837885e08e47bf49f61e8b1a",
+                                         "bytes":  31813
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "67eb02438f1a0c2ce4fff53f952f5406f95789cc837885e08e47bf49f61e8b1a",
+                                              "bytes":  31813
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F5. UX Structure QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1cca584dc10809e9d0d4891e1c88388f7ad438d030df25a0df534a9ecdfb9eaf",
+                                         "bytes":  26994
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1cca584dc10809e9d0d4891e1c88388f7ad438d030df25a0df534a9ecdfb9eaf",
+                                              "bytes":  26994
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F6. PM Flow Story Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "259d0121e3e5e0543e58302eb28d2f26be54544da5b129c48639e8a01c6bc7c2",
+                                         "bytes":  20247
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "259d0121e3e5e0543e58302eb28d2f26be54544da5b129c48639e8a01c6bc7c2",
+                                              "bytes":  20247
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F7. Accessibility Architecture Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "2f238ae823950d1cec80cdc95df9355957e6bb9bcf3dc6e8e31ad6b24ca6d9f0",
+                                         "bytes":  21866
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "2f238ae823950d1cec80cdc95df9355957e6bb9bcf3dc6e8e31ad6b24ca6d9f0",
+                                              "bytes":  21866
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F8. UX Architecture HITL Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1c39f3ba66b7840ac628ed0aa07ca4a54ef1bca3d33077a363119493ea308dc9",
+                                         "bytes":  24865
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1c39f3ba66b7840ac628ed0aa07ca4a54ef1bca3d33077a363119493ea308dc9",
+                                              "bytes":  24865
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "F.UX Architecture/F9. UX Architecture Gatekeeper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f49d21d517aecd2b9ca4dc3563d33c50278fac7f0a488530e7fed1b3529f8bdf",
+                                         "bytes":  20487
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f49d21d517aecd2b9ca4dc3563d33c50278fac7f0a488530e7fed1b3529f8bdf",
+                                              "bytes":  20487
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G Layer - New Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a1ffde9e9ee7f231b6d8e9998f20c3b30c6724e9660caceb9ccc7955a818a347",
+                                         "bytes":  43109
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a1ffde9e9ee7f231b6d8e9998f20c3b30c6724e9660caceb9ccc7955a818a347",
+                                              "bytes":  43109
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G1. Visual System Reference Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "4a4ef5756feda81f72f097747bd418f186a6012a738d1d6002dc79bbcaf0596b",
+                                         "bytes":  27852
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "4a4ef5756feda81f72f097747bd418f186a6012a738d1d6002dc79bbcaf0596b",
+                                              "bytes":  27852
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G10. HITL Mapping Review.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8ecb953432dc91f8c39888b0ecb1b687b9463c121f8e714093bf9c890a01b381",
+                                         "bytes":  45123
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8ecb953432dc91f8c39888b0ecb1b687b9463c121f8e714093bf9c890a01b381",
+                                              "bytes":  45123
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G11. Annotation Formalization.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "7b0cfd461c985b49c7f9025f2505d7e6e0e22209029b8bb369d6a857cbf99e72",
+                                         "bytes":  54952
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "7b0cfd461c985b49c7f9025f2505d7e6e0e22209029b8bb369d6a857cbf99e72",
+                                              "bytes":  54952
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G12. Accessibility Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a879b30afcbc82171cd7b7d9172fe36a21cd2344b1804b0455cd872d3631d5e4",
+                                         "bytes":  53912
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a879b30afcbc82171cd7b7d9172fe36a21cd2344b1804b0455cd872d3631d5e4",
+                                              "bytes":  53912
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G13. PM Traceability Reviewer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "3f1a55b41dd8db175726985d22457ac96c3d5d93efaba1831b9685ebd5ac8ad3",
+                                         "bytes":  41385
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "3f1a55b41dd8db175726985d22457ac96c3d5d93efaba1831b9685ebd5ac8ad3",
+                                              "bytes":  41385
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G14. H Layer Package Generator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "4055856f0d22a3b654b44fdc25fe185f1af02d57f1fbeffd6a06b36a77000a6f",
+                                         "bytes":  49693
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "4055856f0d22a3b654b44fdc25fe185f1af02d57f1fbeffd6a06b36a77000a6f",
+                                              "bytes":  49693
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G15. Owner Sign-off.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0ac334cbcf632809cd6a15533f5cc79969586fcf01551d3530de11f8ae0453ac",
+                                         "bytes":  39405
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0ac334cbcf632809cd6a15533f5cc79969586fcf01551d3530de11f8ae0453ac",
+                                              "bytes":  39405
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G2. Visual System QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "70badaf5ada9874c0d03b20b106943f7bb37a3f2b0e36b67f1cfe8568150b288",
+                                         "bytes":  18271
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "70badaf5ada9874c0d03b20b106943f7bb37a3f2b0e36b67f1cfe8568150b288",
+                                              "bytes":  18271
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G3. Asset Strategy.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "eaf3dfd48529ec85b2676c67f6a0c9ba1a0957e9d6261506cff15f2e017154da",
+                                         "bytes":  33733
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "eaf3dfd48529ec85b2676c67f6a0c9ba1a0957e9d6261506cff15f2e017154da",
+                                              "bytes":  33733
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G4. Asset Generator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1db59e4c00fe23d6b43575a8ffbfb8cd6b50233633fc1a35b24239c00eb2c55b",
+                                         "bytes":  35400
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1db59e4c00fe23d6b43575a8ffbfb8cd6b50233633fc1a35b24239c00eb2c55b",
+                                              "bytes":  35400
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G5. Asset QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "3028ccdfd97cf58af6926ce1618efa9644142519f91a4da2f3670eee7caa0965",
+                                         "bytes":  36633
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "3028ccdfd97cf58af6926ce1618efa9644142519f91a4da2f3670eee7caa0965",
+                                              "bytes":  36633
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G6. Art Critic.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0e07266907ba88e9294b4da196e972c26f0d857cd2781ce693f2e3f0fcdaf1f9",
+                                         "bytes":  52245
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0e07266907ba88e9294b4da196e972c26f0d857cd2781ce693f2e3f0fcdaf1f9",
+                                              "bytes":  52245
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G7. Creative Surface Designer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "67588032100ebbae308c976f613dc6d8cac637e57c99e4c901d5bb2004656ece",
+                                         "bytes":  49072
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "67588032100ebbae308c976f613dc6d8cac637e57c99e4c901d5bb2004656ece",
+                                              "bytes":  49072
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G8. Component Manifest Builder.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "d169e2a15cf1c2ade6d99321399c2e3382daff0e4636fc28bb2b60aed500d7ce",
+                                         "bytes":  52929
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "d169e2a15cf1c2ade6d99321399c2e3382daff0e4636fc28bb2b60aed500d7ce",
+                                              "bytes":  52929
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "G.Visual System \u0026 UI/G9. Component Mapper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "d17cda0d68cda181ab37fe8f17a5079da71a557275d88974b39801a1abd14ea1",
+                                         "bytes":  39505
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "d17cda0d68cda181ab37fe8f17a5079da71a557275d88974b39801a1abd14ea1",
+                                              "bytes":  39505
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c9e9c16074a85696fed183ddbeb06b6c04ec9c0a806bc4820e7560bf93e208e9",
+                                         "bytes":  23674
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c9e9c16074a85696fed183ddbeb06b6c04ec9c0a806bc4820e7560bf93e208e9",
+                                              "bytes":  23674
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H1. Traceability Index Builder.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c2f6a3ad1717982c5ec30dc94f8ca3ca129a860c6ec8f0e57738ad40a641b5b5",
+                                         "bytes":  30994
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c2f6a3ad1717982c5ec30dc94f8ca3ca129a860c6ec8f0e57738ad40a641b5b5",
+                                              "bytes":  30994
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H10. ELM View Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c3f7d247bdafefcb792a115ae612b46230db9155a2b7afb8c10b1896858d4339",
+                                         "bytes":  105972
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c3f7d247bdafefcb792a115ae612b46230db9155a2b7afb8c10b1896858d4339",
+                                              "bytes":  105972
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H11. ELM View QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "e3cf69d4afb3aa9e906f93ef11f6f473e65b01a37407a10770e98723d4d888fa",
+                                         "bytes":  92187
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e3cf69d4afb3aa9e906f93ef11f6f473e65b01a37407a10770e98723d4d888fa",
+                                              "bytes":  92187
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H12. ELM Architecture Integrator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "033791234a3e3986c13350a8e225782cc6bbcf11f5b4183ddd592e45611c5eea",
+                                         "bytes":  52270
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "033791234a3e3986c13350a8e225782cc6bbcf11f5b4183ddd592e45611c5eea",
+                                              "bytes":  52270
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H13. ELM Architecture QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "994cc2a42c68ab5f646073e0a9ad5838f6c90b4c459e3c8da212d4b0d1dd457e",
+                                         "bytes":  44897
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "994cc2a42c68ab5f646073e0a9ad5838f6c90b4c459e3c8da212d4b0d1dd457e",
+                                              "bytes":  44897
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H14. ELM Architecture HITL.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "e0b9fa8b79985e9aa7eda6601254c7c54cb0ab97da0be4cc531be43c2c0dedf6",
+                                         "bytes":  68522
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e0b9fa8b79985e9aa7eda6601254c7c54cb0ab97da0be4cc531be43c2c0dedf6",
+                                              "bytes":  68522
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H15. ELM Architecture Gatekeeper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "2c8236c3c7c18ff4eccd790569ddc2cb605b8c9dfc37f2e08552e2709c9c01fc",
+                                         "bytes":  64359
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "2c8236c3c7c18ff4eccd790569ddc2cb605b8c9dfc37f2e08552e2709c9c01fc",
+                                              "bytes":  64359
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H2. Traceability QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "43ab3941d0d284c70172cc796effb2dd59b4de4bbbb6b2fd6f6e3889a8b40f8b",
+                                         "bytes":  30344
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "43ab3941d0d284c70172cc796effb2dd59b4de4bbbb6b2fd6f6e3889a8b40f8b",
+                                              "bytes":  30344
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H3. ELM Module Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "265f24397b2e8328f82d2c2656437bf46e2f0d8f1da12377f53c137ee9a1377c",
+                                         "bytes":  64475
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "265f24397b2e8328f82d2c2656437bf46e2f0d8f1da12377f53c137ee9a1377c",
+                                              "bytes":  64475
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H4. ELM Module QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "38dec1b194168dfd2a1c985d0fcbc5c5878e1f60c4f2e556d231e1f0e327d161",
+                                         "bytes":  58364
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "38dec1b194168dfd2a1c985d0fcbc5c5878e1f60c4f2e556d231e1f0e327d161",
+                                              "bytes":  58364
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H5. ELM State Type Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8de78f2b08a6def9ea7264cc3bbd920929947399e93e9959b8b4768b56a14fa6",
+                                         "bytes":  72751
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8de78f2b08a6def9ea7264cc3bbd920929947399e93e9959b8b4768b56a14fa6",
+                                              "bytes":  72751
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H6. ELM State Type QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "35b7f0c536c4570660b481fc53db3922ba6b6d72fcda2b63c92620798893a47c",
+                                         "bytes":  73245
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "35b7f0c536c4570660b481fc53db3922ba6b6d72fcda2b63c92620798893a47c",
+                                              "bytes":  73245
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H7. ELM Update Architect.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "22b0bebbcaaec99f0f1a55ebd75a450006e57beaf04b836596f5b91dee3d14e7",
+                                         "bytes":  74084
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "22b0bebbcaaec99f0f1a55ebd75a450006e57beaf04b836596f5b91dee3d14e7",
+                                              "bytes":  74084
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H8. ELM Update QA.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1108b46df2137e6d8fe7ca76e0f1153270bb18887d5d31d31fcd00cec1b608ee",
+                                         "bytes":  65859
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1108b46df2137e6d8fe7ca76e0f1153270bb18887d5d31d31fcd00cec1b608ee",
+                                              "bytes":  65859
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "H. Design-to-Code Handoff/H9. ELM Contract Spec.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "fa68f3c50757ab2400955987debdab77eb01ecf4a0bd30a6cd71c54e39b1ef49",
+                                         "bytes":  77117
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "fa68f3c50757ab2400955987debdab77eb01ecf4a0bd30a6cd71c54e39b1ef49",
+                                              "bytes":  77117
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I Layer - Architecture Plan.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "244ff0eaadc57214250fa9b17c680f7ec711e81191cb285d83de7138d00e4f57",
+                                         "bytes":  132871
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "3b3da9e1efdb2769af266012d3a7e9379d35703902694197836aab2bb1bd03bf",
+                                              "bytes":  138119
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I Layer - Architecture Plan.md",
+                                        "sha256":  "666cb6d21e77ff73ea587be65ecea952aa7bc032d9cf85db828a3f44e3e8621b",
+                                        "bytes":  136233,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I0. Schema Migration.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c7c656b021a19c16bd3f90586186234bc79027ba3d0637527033f5f18beac3b9",
+                                         "bytes":  53225
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c7c656b021a19c16bd3f90586186234bc79027ba3d0637527033f5f18beac3b9",
+                                              "bytes":  53225
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I1. Technology Researcher.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "562a49a8ab749217a4ab31f75c316914e430d87c5eb7bbc76edb14851997475a",
+                                         "bytes":  53858
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "562a49a8ab749217a4ab31f75c316914e430d87c5eb7bbc76edb14851997475a",
+                                              "bytes":  53858
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I10. Architecture Reviewer - Maintainability.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "d1ed5b31051f2ec8b482f7a9d3b60361a1451ba1c3954e6e68b3264394c89e82",
+                                         "bytes":  71626
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "d1ed5b31051f2ec8b482f7a9d3b60361a1451ba1c3954e6e68b3264394c89e82",
+                                              "bytes":  71626
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I11. Architecture Reviewer - Cost.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "cea2b4005340b76de39ce292869694cd574e1d6c08d85dc88ea6f1fdd4121e65",
+                                         "bytes":  75563
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "cea2b4005340b76de39ce292869694cd574e1d6c08d85dc88ea6f1fdd4121e65",
+                                              "bytes":  75563
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I12. Architecture Reviewer - Performance.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c9db040d9df8b542a371f309fc0daf985d8e27d5531b575940b8a26d2f63263e",
+                                         "bytes":  82264
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c9db040d9df8b542a371f309fc0daf985d8e27d5531b575940b8a26d2f63263e",
+                                              "bytes":  82264
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I13. Architecture Reviewer - Scalability.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "e9a5105a36c449aa35d59c4e3d16da3d2672b7cdab0999c8917283971fb91603",
+                                         "bytes":  65017
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e9a5105a36c449aa35d59c4e3d16da3d2672b7cdab0999c8917283971fb91603",
+                                              "bytes":  65017
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I14. Security Review.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "1847e16cfde2650ed792097eedee7ed42eb20d06cfa9ee18375fe310094368b3",
+                                         "bytes":  58249
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75",
+                                              "bytes":  59691
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I14. Security Review.md",
+                                        "sha256":  "88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75",
+                                        "bytes":  59691,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I15. Ethics \u0026 Legal Review.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "586797f4a9b4691cb1db422e8a7311170c8b89af7ff2b7d4c3170afa8fff0739",
+                                         "bytes":  83882
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5",
+                                              "bytes":  85151
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I15. Ethics \u0026 Legal Review.md",
+                                        "sha256":  "be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5",
+                                        "bytes":  85151,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I16. Architecture Conflict Resolver.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "de0017487aed5eac19919e2d10cec59a805e5b56c78b0c8ea470f7ae75dff47e",
+                                         "bytes":  65191
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "de0017487aed5eac19919e2d10cec59a805e5b56c78b0c8ea470f7ae75dff47e",
+                                              "bytes":  65191
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I17. Trade-off HITL.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "3b3b2b69666e25bb1bcc71a55707ba4e59fad90ef079acc5fdb093e396baed3a",
+                                         "bytes":  94126
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1ae8b8ea008713df6943ea31ad940cb04c9a1dc3d11ac3a71b691e56c77ba4e4",
+                                              "bytes":  122342
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I17. Trade-off HITL.md",
+                                        "sha256":  "e6364861d283dedb81864ec243d223d9e79ea5b56b370ed3f9fbd454eaad8322",
+                                        "bytes":  120790,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I18. Observability Architect.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "d7a2bc6646e6329ad5558a8de5dadc21eec50a0ef441939fbc9acba3bdb2d592",
+                                         "bytes":  104866
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325",
+                                              "bytes":  106982
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I18. Observability Architect.md",
+                                        "sha256":  "ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325",
+                                        "bytes":  106982,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I19. Deployment Architect.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "96692e64b1fbbfdf9c5eb6240d7e7f7960d8640bb8f753d1386b2f0dc86728eb",
+                                         "bytes":  105741
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf",
+                                              "bytes":  112791
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I19. Deployment Architect.md",
+                                        "sha256":  "38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf",
+                                        "bytes":  112791,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I2. HITL Architect Interview.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9eb5dbcbe009f4a0c1393a756d84083f4a3113ebf24d3600a36bd0dc44e98434",
+                                         "bytes":  74105
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9eb5dbcbe009f4a0c1393a756d84083f4a3113ebf24d3600a36bd0dc44e98434",
+                                              "bytes":  74105
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I20. Task Tree Builder.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "aac9df8ad5f45151bf769fb9b068870b0169fd6c262521c5e2cac525de42dbc8",
+                                         "bytes":  218809
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "b3f99e95dd6af0433041fd1b3b43abf88053286fdb2fea2b8c70bbf1820c3c0a",
+                                              "bytes":  236092
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I20. Task Tree Builder.md",
+                                        "sha256":  "28423a4f7cfc09273ff2a4b2eb4a1a939b5c0891228c813f7d49505cbd40bb72",
+                                        "bytes":  233636,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "9598fedbbf64dc3fbe5b0ceacc6afcb09eeb8afc3e92f8fd82e40f0a1076909e",
+                                         "bytes":  129560
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f",
+                                              "bytes":  151195
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md",
+                                        "sha256":  "5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f",
+                                        "bytes":  151195,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "367182a91d6b9ed8b89dec0310c4a24e665e97f279e056f8a601460be6db91fb",
+                                         "bytes":  142538
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a",
+                                              "bytes":  149041
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+                                        "sha256":  "c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a",
+                                        "bytes":  149041,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "af42575a4439eeb78697b1501d86cf1c4c2aca384f8779db2763a86e4be0e156",
+                                         "bytes":  192647
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "5b490bd86605e3a99548658580fde0951dcb1b369b5574c21a473b414857029f",
+                                              "bytes":  257608
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I23. Task Graph QA.md",
+                                        "sha256":  "6b0ebe5d35a6dfd4336ee92730dc0f137a21491ecd118236238a61e083d0ffda",
+                                        "bytes":  255345,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I24. Gatekeeper \u0026 Publisher.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "fc66a31a808e9a87b42f70955b03679ea2aa9e6e480f28de28d3605f5e2138b6",
+                                         "bytes":  223754
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e073e1a8b106c020854d347bebeaef33358e0565fd3a479a1ed84423643c5c0e",
+                                              "bytes":  245861
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I24. Gatekeeper \u0026 Publisher.md",
+                                        "sha256":  "db1c6d617420d71beabe0ddbcd9565eaf1176f27219a043c904306a58c970057",
+                                        "bytes":  243525,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I3. Process Causality Map.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1e85a12726ef3b52f0ff6eb4863523ebb5e2b1bee4e40bac6c62a018dae3a232",
+                                         "bytes":  78437
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1e85a12726ef3b52f0ff6eb4863523ebb5e2b1bee4e40bac6c62a018dae3a232",
+                                              "bytes":  78437
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I4. Invariants Ownership.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "b54fee12830ea2267c132b295bb64232f15c42e9dad002a50a6a46ff8478e651",
+                                         "bytes":  85426
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "b54fee12830ea2267c132b295bb64232f15c42e9dad002a50a6a46ff8478e651",
+                                              "bytes":  85426
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I5. Interaction Semantics.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "de34665836de8ac88fd5c1c1e178cb459a3d20f8168d743f11dd207029a4b9a1",
+                                         "bytes":  84911
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "de34665836de8ac88fd5c1c1e178cb459a3d20f8168d743f11dd207029a4b9a1",
+                                              "bytes":  84911
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I6. Architecture Synthesis.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "349daf4d3483de20619cc3bd93f87471ce60a744ada00029c5f2d41e0460f5a5",
+                                         "bytes":  188557
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b",
+                                              "bytes":  200011
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I6. Architecture Synthesis.md",
+                                        "sha256":  "e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b",
+                                        "bytes":  200011,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I7. Causal Map Builder.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "877baadd89a10f3f658be001bbcfe9b82adb2e0ef2e63c1c31639524f7d9be03",
+                                         "bytes":  105362
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a",
+                                              "bytes":  110331
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture \u0026 Task Graph/I7. Causal Map Builder.md",
+                                        "sha256":  "8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a",
+                                        "bytes":  110331,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I8. Architecture Reviewer - Reliability.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "cb9864524ea3f2cdf9cae528563a99f5e52e45341f7eac3c3084f125fe798c65",
+                                         "bytes":  72389
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "cb9864524ea3f2cdf9cae528563a99f5e52e45341f7eac3c3084f125fe798c65",
+                                              "bytes":  72389
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/I9. Architecture Reviewer - Simplicity.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "89bb7383bfc3e0f4a727a8cc74fe905b7ff2bb2cacae2260e9a1e54b63a80567",
+                                         "bytes":  47437
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "89bb7383bfc3e0f4a727a8cc74fe905b7ff2bb2cacae2260e9a1e54b63a80567",
+                                              "bytes":  47437
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "I. Architecture \u0026 Task Graph/PRESENTATION-COVERAGE-REPAIR - Rerun Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "63da25d985084c73ded00d1171d9e555ec5126b0e7b58c2334a06ff6949c91a4",
+                                         "bytes":  19304
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "63da25d985084c73ded00d1171d9e555ec5126b0e7b58c2334a06ff6949c91a4",
+                                              "bytes":  19304
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f61ebbc12ab80cba8c8a72cf88d726164ea8c0be5eb92308eb234a34bb6ffd46",
+                                         "bytes":  158175
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f61ebbc12ab80cba8c8a72cf88d726164ea8c0be5eb92308eb234a34bb6ffd46",
+                                              "bytes":  158175
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "b4f6735fd06b93ce2a85dbcc093566d88b02263d10377828dbebba44b71f8796",
+                                         "bytes":  48558
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "128a61452072a2bbbc4b3fcbedc41a3d740f26d8411f02005b1b96d8c31c56b3",
+                                              "bytes":  51312
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+                                        "sha256":  "174f4e91f6ea58162f34e7d0543fc02e98d38657052e859e07d639d3836e660b",
+                                        "bytes":  51117,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J0. Dispatcher.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "d435daba6f83156d9919c6f2368aaf216e2f4a6214d0f8f260db30fc40932d74",
+                                         "bytes":  707417
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e2448f7246423449180a459614392175f43c579f1968d757ae311bc9aa1ff84e",
+                                              "bytes":  774293
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J0. Dispatcher.md",
+                                        "sha256":  "8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784",
+                                        "bytes":  771025,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J1. Spike Executor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9c1a6784067e3b2b8b89c1064338712d200b91bfe1f430e90a7aa3698d0ff081",
+                                         "bytes":  51810
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9c1a6784067e3b2b8b89c1064338712d200b91bfe1f430e90a7aa3698d0ff081",
+                                              "bytes":  51810
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J10. Code Analyst.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "99e85b0507ab642abff59ad093437bce3cbea6b74892ecba3a306090eda67064",
+                                         "bytes":  77723
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "99e85b0507ab642abff59ad093437bce3cbea6b74892ecba3a306090eda67064",
+                                              "bytes":  77723
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J11. Documenter.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "24dc1b2a8acdfd22d79630d7c266ebe92a484d37e976009c9c1f52e27a6229f8",
+                                         "bytes":  62132
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600",
+                                              "bytes":  64544
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J11. Documenter.md",
+                                        "sha256":  "17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600",
+                                        "bytes":  64544,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J12. Container \u0026 Deploy.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "5084a1953df63baa6e0fdb448bdcfa997d8fd0bc3fa8e0dcc0817863bfb1b2cf",
+                                         "bytes":  56641
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "5084a1953df63baa6e0fdb448bdcfa997d8fd0bc3fa8e0dcc0817863bfb1b2cf",
+                                              "bytes":  56641
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J13 HITL UI Protocol - Regression Matrix.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "7610f11280ec8d819f4d056d78929b17da406912490b6628bed20e9847acf8ea",
+                                         "bytes":  70769
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "7610f11280ec8d819f4d056d78929b17da406912490b6628bed20e9847acf8ea",
+                                              "bytes":  70769
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J13. HITL UI.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "47392d1852369a7d9ed2a8c6a5876317895840eb982b8840ed9f7cb4df59ca19",
+                                         "bytes":  288239
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "47392d1852369a7d9ed2a8c6a5876317895840eb982b8840ed9f7cb4df59ca19",
+                                              "bytes":  288239
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J14-J0-J16-J17 Generation And State Schemas.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "85930b91f1543efaeaf4f3bce5f8014889b65864e42c4c564150a9795cc2e54c",
+                                         "bytes":  33112
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "85930b91f1543efaeaf4f3bce5f8014889b65864e42c4c564150a9795cc2e54c",
+                                              "bytes":  33112
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J14. Infra Methodologist.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "105bbeabd331aea9b772c90f27029e295ca254875c4729a24104d845d4ba1494",
+                                         "bytes":  267971
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+                                              "bytes":  269823
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J14. Infra Methodologist.md",
+                                        "sha256":  "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+                                        "bytes":  269823,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J15. Infra Coder.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a260b44eef6537a29012d83ee2a31338e6fcb15f798059ebcf1cddffc14657cd",
+                                         "bytes":  99391
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a260b44eef6537a29012d83ee2a31338e6fcb15f798059ebcf1cddffc14657cd",
+                                              "bytes":  99391
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J16. Infra Deployer.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "9d5f78cfe5b2cb79d4cae52d2895277b07efa99ce001e3c8a801033fa738af8b",
+                                         "bytes":  242148
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea",
+                                              "bytes":  262403
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J16. Infra Deployer.md",
+                                        "sha256":  "e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea",
+                                        "bytes":  262403,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J17. Infra Tester.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "014bddb4c699b042974f486e8ea807a649d2662790ba54690f1fce92296d49e4",
+                                         "bytes":  132954
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+                                              "bytes":  148671
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J17. Infra Tester.md",
+                                        "sha256":  "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+                                        "bytes":  148671,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J18. Integration Planner.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "63d246f96ebaad31db4baa05aaaab4c80a47db12d1c7105ec5dddba9399d5cc8",
+                                         "bytes":  77358
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "63d246f96ebaad31db4baa05aaaab4c80a47db12d1c7105ec5dddba9399d5cc8",
+                                              "bytes":  77358
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J19. Load Tester.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9f08f9effcb11a898cff164efdb376c893273839bb89d49b8a2702faedaea36c",
+                                         "bytes":  93608
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9f08f9effcb11a898cff164efdb376c893273839bb89d49b8a2702faedaea36c",
+                                              "bytes":  93608
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J2. Spike Documenter.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "dcbadf5c47ee4a72837a8b0c103a6aaa8711d8cb1c4e2c7be755cdc514d1e69e",
+                                         "bytes":  32531
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "dcbadf5c47ee4a72837a8b0c103a6aaa8711d8cb1c4e2c7be755cdc514d1e69e",
+                                              "bytes":  32531
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J20. Migration Dry Run.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "f9c58c265b3707e9ae1210c721899c773405d22dc7c3bcc329abbdf52899e495",
+                                         "bytes":  123841
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "f9c58c265b3707e9ae1210c721899c773405d22dc7c3bcc329abbdf52899e495",
+                                              "bytes":  123841
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J21. HITL Coder Session.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "858486255d809474aa99ec6eba4662c5043314d986982f55d9cee458b8dfccd4",
+                                         "bytes":  88351
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "858486255d809474aa99ec6eba4662c5043314d986982f55d9cee458b8dfccd4",
+                                              "bytes":  88351
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J22. External Manual Action.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8d2dc015b8d2e0c36b3899d3d44b3ccc98ac223a98c0805e244e33047060274c",
+                                         "bytes":  162575
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8d2dc015b8d2e0c36b3899d3d44b3ccc98ac223a98c0805e244e33047060274c",
+                                              "bytes":  162575
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J3. Spike Resolver.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8c46c104566ce4d32dc65a989f8f5e6b47b597f8047122d966741682ba8841a7",
+                                         "bytes":  63307
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8c46c104566ce4d32dc65a989f8f5e6b47b597f8047122d966741682ba8841a7",
+                                              "bytes":  63307
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J4-J0 Core Generation And Invocation Envelope.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "247b2d2a8e3cdf983a0e2138b249242fcec737d2ca434fe66ce60ba0b640e846",
+                                         "bytes":  12330
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "247b2d2a8e3cdf983a0e2138b249242fcec737d2ca434fe66ce60ba0b640e846",
+                                              "bytes":  12330
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J4. Methodologist.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "419be880f03701b07e37f168ca9c198dd0361534743e4b15db07c530a22712e2",
+                                         "bytes":  151486
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8",
+                                              "bytes":  156762
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J4. Methodologist.md",
+                                        "sha256":  "fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8",
+                                        "bytes":  156762,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J5. Test Writer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "df7ceefd6351a22ec0ced6cc93541610d797de351752e2362ce6b7273c4cf253",
+                                         "bytes":  56197
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "df7ceefd6351a22ec0ced6cc93541610d797de351752e2362ce6b7273c4cf253",
+                                              "bytes":  56197
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J6. Coder.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a755f3ad53b566a5289777b7dcd4d35d4a7163c21b89c6a645fa890361e1c7ab",
+                                         "bytes":  51489
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a755f3ad53b566a5289777b7dcd4d35d4a7163c21b89c6a645fa890361e1c7ab",
+                                              "bytes":  51489
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J7. Test Runner.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "bd153c5a56f3ffe082311ccb5f7474ce92f2be03d6e402b53794fb836dda4611",
+                                         "bytes":  59575
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "bd153c5a56f3ffe082311ccb5f7474ce92f2be03d6e402b53794fb836dda4611",
+                                              "bytes":  59575
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J8. Static Analyzer.md",
+                        "disposition":  "changed_overlay_materialized",
+                        "base_raw":  {
+                                         "sha256":  "4f8e270a76528c5c9f26aee609b07586e0868d926c0d4186f60b7fd55cfff7fd",
+                                         "bytes":  84137
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c",
+                                              "bytes":  85110
+                                          },
+                        "overlay":  {
+                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J8. Static Analyzer.md",
+                                        "sha256":  "65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c",
+                                        "bytes":  85110,
+                                        "normalization":  "strict_UTF8_CRLF_and_CR_to_LF_trim_trailing_LFs_append_one_LF_UTF8_no_BOM"
+                                    }
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J9. Dependency Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "7416b2ec401214cbb0087a46b890446329c7e220c9398b356136cca2ed31cf92",
+                                         "bytes":  97803
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "7416b2ec401214cbb0087a46b890446329c7e220c9398b356136cca2ed31cf92",
+                                              "bytes":  97803
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/J9b. Lockfile Verifier.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "ec958301fab23d711d64aa3e169f7f5048667e63edca247e13a591d6386ceab7",
+                                         "bytes":  53458
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "ec958301fab23d711d64aa3e169f7f5048667e63edca247e13a591d6386ceab7",
+                                              "bytes":  53458
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_infra_prompt_contracts.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "12d2becb3763d20174fc18b8ff223a1953400625d5a141a35d55978327c4a57e",
+                                         "bytes":  18912
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "12d2becb3763d20174fc18b8ff223a1953400625d5a141a35d55978327c4a57e",
+                                              "bytes":  18912
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_infra_prompt_contracts.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0ef3f1eed0f988473cf5a3356e90edb89f85bd6681f9914fb2d96b084b8bd50f",
+                                         "bytes":  18798
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0ef3f1eed0f988473cf5a3356e90edb89f85bd6681f9914fb2d96b084b8bd50f",
+                                              "bytes":  18798
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j13_contracts.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "1a258072b216dcb96945a698a515bdd0a706533120e40c88f5e801af1303b0d9",
+                                         "bytes":  9583
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "1a258072b216dcb96945a698a515bdd0a706533120e40c88f5e801af1303b0d9",
+                                              "bytes":  9583
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j13_contracts.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "25b9c34d3cbb845bab931e3f5e8a24c71ff276c613fa654be9f273509413c874",
+                                         "bytes":  9469
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "25b9c34d3cbb845bab931e3f5e8a24c71ff276c613fa654be9f273509413c874",
+                                              "bytes":  9469
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j14_generation_fsm.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "23ecd4b2e83d2c9ff879175c39916adb7fa2f6a2fff88920da171323c1f276df",
+                                         "bytes":  90004
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "23ecd4b2e83d2c9ff879175c39916adb7fa2f6a2fff88920da171323c1f276df",
+                                              "bytes":  90004
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j14_generation_fsm.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "c00afd001b2b4a75de2d6d3764d8fc4ea1611c5208d2a343a90ea6498ea838e5",
+                                         "bytes":  35769
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "c00afd001b2b4a75de2d6d3764d8fc4ea1611c5208d2a343a90ea6498ea838e5",
+                                              "bytes":  35769
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j1_j3_contracts.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "44751f0f834797e6dbc16694db4cc603e2b2f846b4f12c9b4c231fc99e5f54f1",
+                                         "bytes":  8222
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "44751f0f834797e6dbc16694db4cc603e2b2f846b4f12c9b4c231fc99e5f54f1",
+                                              "bytes":  8222
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j1_j3_contracts.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a77dc931f75e09999bb7c65901f28c5faf4382fedf6ef09f99d8a755433f8377",
+                                         "bytes":  8108
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a77dc931f75e09999bb7c65901f28c5faf4382fedf6ef09f99d8a755433f8377",
+                                              "bytes":  8108
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j4_cross_prompt_contracts.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9cdfefdc064ca77476f1e83a7d1d2a9afa0eeab2d5c5a582cbc7964e9b09990b",
+                                         "bytes":  15530
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9cdfefdc064ca77476f1e83a7d1d2a9afa0eeab2d5c5a582cbc7964e9b09990b",
+                                              "bytes":  15530
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j4_cross_prompt_contracts.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "b572fcc47e379b8fae10ef8174c8e35462082fba13610bc693eb878fcd293482",
+                                         "bytes":  15416
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "b572fcc47e379b8fae10ef8174c8e35462082fba13610bc693eb878fcd293482",
+                                              "bytes":  15416
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j4_generation_fsm.cpython-312-pytest-9.0.2.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "a15995b62bcd427f9899bafcc29d52ec907b96d850e1a70cec514a4252ea1a5e",
+                                         "bytes":  11332
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "a15995b62bcd427f9899bafcc29d52ec907b96d850e1a70cec514a4252ea1a5e",
+                                              "bytes":  11332
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/__pycache__/test_j4_generation_fsm.cpython-312.pyc",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "85816a25252b027c868e508ca84fc784a18316199e6c18a07a3efb0f9778cd86",
+                                         "bytes":  9233
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "85816a25252b027c868e508ca84fc784a18316199e6c18a07a3efb0f9778cd86",
+                                              "bytes":  9233
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_infra_prompt_contracts.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "ae9c9c5a05038ea04cd23d1b567a88459fbe9b5b35ec8ae971e373de9352a053",
+                                         "bytes":  10069
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "ae9c9c5a05038ea04cd23d1b567a88459fbe9b5b35ec8ae971e373de9352a053",
+                                              "bytes":  10069
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_j13_contracts.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "3fe42ca5f46d8625e1a7720c3c3ad40a4871f4001879cc69860ef552b8ed2b2f",
+                                         "bytes":  5384
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "3fe42ca5f46d8625e1a7720c3c3ad40a4871f4001879cc69860ef552b8ed2b2f",
+                                              "bytes":  5384
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_j14_generation_fsm.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "ec01c8a5dfab514db1f55eb4d0201918b0c650acd97b03a07c3d6e9ed453fc28",
+                                         "bytes":  33627
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "ec01c8a5dfab514db1f55eb4d0201918b0c650acd97b03a07c3d6e9ed453fc28",
+                                              "bytes":  33627
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_j1_j3_contracts.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "e3288936be29099161b7bc2b3dc67e58b306997f3c40ddf72d6bf99890a4eb9f",
+                                         "bytes":  4226
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e3288936be29099161b7bc2b3dc67e58b306997f3c40ddf72d6bf99890a4eb9f",
+                                              "bytes":  4226
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_j4_cross_prompt_contracts.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "72a54861d6480cf225c3b5252f6f9233be40a2062ffc750a00fb7aaf3eb7a7e6",
+                                         "bytes":  8296
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "72a54861d6480cf225c3b5252f6f9233be40a2062ffc750a00fb7aaf3eb7a7e6",
+                                              "bytes":  8296
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "J. Implementation/tests/test_j4_generation_fsm.py",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "8617d2bd198cfe955b0b01f6af291218c7858d6089c5acd90c78491eaaee91a1",
+                                         "bytes":  5225
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "8617d2bd198cfe955b0b01f6af291218c7858d6089c5acd90c78491eaaee91a1",
+                                              "bytes":  5225
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "0ad5b618663db64b7bfcf60253ab63dc34f7dc6eedcc2884053786591857bd4b",
+                                         "bytes":  135011
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "0ad5b618663db64b7bfcf60253ab63dc34f7dc6eedcc2884053786591857bd4b",
+                                              "bytes":  135011
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K0. Audit Dispatcher-Orchestrator.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "9aba222ee451486ca1e146fd28df231794c13653496b170c4c74b8e507761258",
+                                         "bytes":  170589
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "9aba222ee451486ca1e146fd28df231794c13653496b170c4c74b8e507761258",
+                                              "bytes":  170589
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K1. Repo Indexer \u0026 Summarizer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "620080d098494809895accedaddf90bf8d12fba7dce2cea30b66616cbb4b0ea6",
+                                         "bytes":  93527
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "620080d098494809895accedaddf90bf8d12fba7dce2cea30b66616cbb4b0ea6",
+                                              "bytes":  93527
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K10. Documentation Synthesizer \u0026 Finalizer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "5d7f4ba13d503799230ac2cb44bd0812567fe20059b253b30934685639f4d95b",
+                                         "bytes":  53955
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "5d7f4ba13d503799230ac2cb44bd0812567fe20059b253b30934685639f4d95b",
+                                              "bytes":  53955
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K2. Structure \u0026 Dependency Mapper.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "be0824f7b0981d4a11b36f28e4187aa331bbbe6ff7185d927b0289dd461470b0",
+                                         "bytes":  146158
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "be0824f7b0981d4a11b36f28e4187aa331bbbe6ff7185d927b0289dd461470b0",
+                                              "bytes":  146158
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K3. Contract, Data \u0026 Capability Extractor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "124dab0f28f12038cab9552b224730200c339500c70469afa8958197dde935bf",
+                                         "bytes":  209526
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "124dab0f28f12038cab9552b224730200c339500c70469afa8958197dde935bf",
+                                              "bytes":  209526
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K4. Security Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "e87e920f469e860e6734fb3d6b69980e791d67989c1e42d5ed9261e049970e5f",
+                                         "bytes":  150596
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "e87e920f469e860e6734fb3d6b69980e791d67989c1e42d5ed9261e049970e5f",
+                                              "bytes":  150596
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K5. Requirements \u0026 Story Coverage Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "2bae688717f2f1ec18761f9f04bb83858a9904697e62eabd6e8a03e9f5e2bb25",
+                                         "bytes":  184840
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "2bae688717f2f1ec18761f9f04bb83858a9904697e62eabd6e8a03e9f5e2bb25",
+                                              "bytes":  184840
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K6. Efficiency \u0026 Resource Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "db1c33be289fe4620f65a8252d02aec99003556d49c85235dc4f2be4659d717c",
+                                         "bytes":  167053
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "db1c33be289fe4620f65a8252d02aec99003556d49c85235dc4f2be4659d717c",
+                                              "bytes":  167053
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K7. Implementation Quality Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "defa03cabd269fd967aab9fb1cf71ac688161904174fce2742d928e5b2ad04e8",
+                                         "bytes":  47557
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "defa03cabd269fd967aab9fb1cf71ac688161904174fce2742d928e5b2ad04e8",
+                                              "bytes":  47557
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K8. Concurrency \u0026 Distributed Behavior Auditor.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "02eb8ae0c0fe76ec003abd1ce91d6d0cdf9a61167030cd8c10467ff84d7b27b9",
+                                         "bytes":  42533
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "02eb8ae0c0fe76ec003abd1ce91d6d0cdf9a61167030cd8c10467ff84d7b27b9",
+                                              "bytes":  42533
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "K. Audit \u0026 Documentation Layer/K9. Sharded Upstream Traceability Synthesizer.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "53c390e28f452aff5062bb6c26ae1eb57c0c9679a848248611a6cb4f88278817",
+                                         "bytes":  44423
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "53c390e28f452aff5062bb6c26ae1eb57c0c9679a848248611a6cb4f88278817",
+                                              "bytes":  44423
+                                          },
+                        "overlay":  null
+                    },
+                    {
+                        "relative_path":  "M. Meta Layer/M Layer - Architecture Plan.md",
+                        "disposition":  "unchanged_base_path_no_overlay",
+                        "base_raw":  {
+                                         "sha256":  "44a155d9bd0edf677d1e66b2947d272d6d405678edcaa08a53eee315a8a7018c",
+                                         "bytes":  113759
+                                     },
+                        "successor_raw":  {
+                                              "sha256":  "44a155d9bd0edf677d1e66b2947d272d6d405678edcaa08a53eee315a8a7018c",
+                                              "bytes":  113759
+                                          },
+                        "overlay":  null
+                    }
+                ],
+    "exclusions":  {
+                       "rule":  "every_successor_entry_not_in_the_exact_170_path_set_is_excluded_and_must_not_be_copied_semantically_parsed_or_used_as_plan_authority",
+                       "backup_file_count":  33,
+                       "backup_files":  [
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I Layer - Architecture Plan.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "ca24169289a2858520abf30d00f88cfd30f35e2bf77e6c752a62fc26754d8bc2",
+                                                "bytes":  134513
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I17. Trade-off HITL.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "3b3b2b69666e25bb1bcc71a55707ba4e59fad90ef079acc5fdb093e396baed3a",
+                                                "bytes":  94126
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I18. Observability Architect.md.pre-graph-version-enum-20260909.bak",
+                                                "sha256":  "d7a2bc6646e6329ad5558a8de5dadc21eec50a0ef441939fbc9acba3bdb2d592",
+                                                "bytes":  104866
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I19. Deployment Architect.md.pre-graph-version-enum-20260909.bak",
+                                                "sha256":  "3c5f8f17ba04987870930e15178cf67b1df99bfe41d9c7809b50cfe4a674f054",
+                                                "bytes":  106019
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I19. Deployment Architect.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "30fddd65225dc02cc4c56ded548dd52af84c314fd1597268ee2f8595def1d60b",
+                                                "bytes":  108386
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I20. Task Tree Builder.md.pre-baseline-hook-20260908.bak",
+                                                "sha256":  "0af9bbcfe431ee05ac4a7dbdb8f83569e0cec41acaadd03c92b6c79b990c2084",
+                                                "bytes":  233366
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I20. Task Tree Builder.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "aac9df8ad5f45151bf769fb9b068870b0169fd6c262521c5e2cac525de42dbc8",
+                                                "bytes":  218809
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md.pre-executable-target-check-20260910.bak",
+                                                "sha256":  "74b9d72e9f9666069b0c33a0a439f91d6401a238de899334261708cad2c1e0a5",
+                                                "bytes":  131199
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md.pre-gate-defects-20260909.bak",
+                                                "sha256":  "9598fedbbf64dc3fbe5b0ceacc6afcb09eeb8afc3e92f8fd82e40f0a1076909e",
+                                                "bytes":  129560
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md.pre-oracle-binding-20260923.bak",
+                                                "sha256":  "fb7a6072bec0f3bd18a023d44ea3ab198ff6a52a861ab4fc132ffe28102dde88",
+                                                "bytes":  147613
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I21. Task Spec Agent.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "e51d93cce5077068b1c01d2a4b0f56ac9ef3695ad70ecd527d09f8423f73bb9d",
+                                                "bytes":  144367
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I22. HITL Tree Review + Risk Acceptance.md.pre-gate-defects-20260909.bak",
+                                                "sha256":  "367182a91d6b9ed8b89dec0310c4a24e665e97f279e056f8a601460be6db91fb",
+                                                "bytes":  142538
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I22. HITL Tree Review + Risk Acceptance.md.pre-oracle-binding-20260923.bak",
+                                                "sha256":  "f78587db6e28e42d34470140b765a337c04377bab43812bb381501ecd27a1320",
+                                                "bytes":  146657
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-5g-h-schema-20260911.bak",
+                                                "sha256":  "9b5a5cfd428f7c2c136587cfb6215a5560e30d85888e3ed936e047cb967aa59d",
+                                                "bytes":  223759
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-baseline-hook-20260908.bak",
+                                                "sha256":  "39c7e4aeb69c29562e75429a25f15111600f481aa35192b9ab839f30911e54af",
+                                                "bytes":  209256
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "af42575a4439eeb78697b1501d86cf1c4c2aca384f8779db2763a86e4be0e156",
+                                                "bytes":  192647
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-executable-target-check-20260910.bak",
+                                                "sha256":  "8774dea55105935a02869eca4530827a6ef46ef40d6d42063280a6a27479f892",
+                                                "bytes":  219233
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-gate-defects-20260909.bak",
+                                                "sha256":  "1203e8d5ec1d33fbc2914897c0e54ba86c967cf58c224a279f2ee5c6232c9251",
+                                                "bytes":  216490
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-oracle-binding-20260923.bak",
+                                                "sha256":  "214ffd4f8875622cda451ec1e540d93eb72a6a7df3418c5c1817360c8169112a",
+                                                "bytes":  253894
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-step4c-sync-requirement-20260915.bak",
+                                                "sha256":  "037c38779ced6d82f1bdae40debd765c8d9984980d7906eca4327deab8deae0f",
+                                                "bytes":  227715
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I23. Task Graph QA.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "f407fd63b8ad69a16d38d88fac4dacbaae0dd8e9c253779f218dee14d914e7f6",
+                                                "bytes":  250066
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I24. Gatekeeper \u0026 Publisher.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "fc66a31a808e9a87b42f70955b03679ea2aa9e6e480f28de28d3605f5e2138b6",
+                                                "bytes":  223754
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I24. Gatekeeper \u0026 Publisher.md.pre-republish-branch-20260911.bak",
+                                                "sha256":  "4c522299e553e5d6879edbc7e1800de6d2013212d3c2ac92a225b741f7f14382",
+                                                "bytes":  239485
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I24. Gatekeeper \u0026 Publisher.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "b4830951ad8c03dc0b847b1ae153661e1949288a6e16c7b26121667529e05cc2",
+                                                "bytes":  244385
+                                            },
+                                            {
+                                                "path":  "I. Architecture \u0026 Task Graph/I6. Architecture Synthesis.md.pre-gate-defects-20260909.bak",
+                                                "sha256":  "74bd877275b2fe6f7de995f4ddc9e93a4a9cecf58c00749ae0fce24b7eacbb3e",
+                                                "bytes":  196736
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J Layer - Deep Findings And V-Next Requirements.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "b4f6735fd06b93ce2a85dbcc093566d88b02263d10377828dbebba44b71f8796",
+                                                "bytes":  48558
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J0. Dispatcher.md.pre-defer-lifecycle.bak",
+                                                "sha256":  "d435daba6f83156d9919c6f2368aaf216e2f4a6214d0f8f260db30fc40932d74",
+                                                "bytes":  707417
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J0. Dispatcher.md.pre-oracle-binding-20260923.bak",
+                                                "sha256":  "c508d80bbadcd103acf0b91454ac503a28d4f61c881520c60d985f619c4901cb",
+                                                "bytes":  762358
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J0. Dispatcher.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "cafb3c87981312b5a04b03d75df6241c80aca2b925be03e508382728966cb2d8",
+                                                "bytes":  758363
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J11. Documenter.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "24dc1b2a8acdfd22d79630d7c266ebe92a484d37e976009c9c1f52e27a6229f8",
+                                                "bytes":  62132
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J14. Infra Methodologist.md.pre-j16-render.bak",
+                                                "sha256":  "105bbeabd331aea9b772c90f27029e295ca254875c4729a24104d845d4ba1494",
+                                                "bytes":  267971
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J4. Methodologist.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "7b57d4be00da4148d45c2819b73717dd4cb3ee90eeddd7e02a3cf2d3f3d9f8a1",
+                                                "bytes":  155133
+                                            },
+                                            {
+                                                "path":  "J. Implementation/J8. Static Analyzer.md.pre-toolchain-manifest-20260923.bak",
+                                                "sha256":  "4f8e270a76528c5c9f26aee609b07586e0868d926c0d4186f60b7fd55cfff7fd",
+                                                "bytes":  84137
+                                            }
+                                        ],
+                       "pytest_cache_file_count":  4,
+                       "pytest_cache_files":  [
+                                                  {
+                                                      "path":  "J. Implementation/.pytest_cache/.gitignore",
+                                                      "sha256":  "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d",
+                                                      "bytes":  39
+                                                  },
+                                                  {
+                                                      "path":  "J. Implementation/.pytest_cache/CACHEDIR.TAG",
+                                                      "sha256":  "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+                                                      "bytes":  191
+                                                  },
+                                                  {
+                                                      "path":  "J. Implementation/.pytest_cache/README.md",
+                                                      "sha256":  "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70",
+                                                      "bytes":  310
+                                                  },
+                                                  {
+                                                      "path":  "J. Implementation/.pytest_cache/v/cache/nodeids",
+                                                      "sha256":  "c2fb73ad46b5f980c235948fd9b075580229ddae200d9d52283a4b429380c10e",
+                                                      "bytes":  8244
+                                                  }
+                                              ],
+                       "excluded_top_level_recursive_closure_count":  21,
+                       "excluded_top_level_recursive_closures":  [
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  ".agents"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  ".claude"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  ".git"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  ".vscode"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "EMA-001 CI Deploy Identity - Runbook.md",
+                                                                         "bytes":  17918
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "EMA-002 J17 Live Phase Execution - Runbook.md",
+                                                                         "bytes":  18004
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "g11_execute.py",
+                                                                         "bytes":  37346
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "Layer_G_Request_And_Report_Schemas.md",
+                                                                         "bytes":  2609
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "Layer_G_Revision_Protocol.md",
+                                                                         "bytes":  8601
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "lbug.exe",
+                                                                         "bytes":  13392896
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  "node_modules"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "out1.txt",
+                                                                         "bytes":  3242
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "out2.txt",
+                                                                         "bytes":  12791
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "package.json",
+                                                                         "bytes":  60
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "package-lock.json",
+                                                                         "bytes":  7213
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "pipeline.db",
+                                                                         "bytes":  528384
+                                                                     },
+                                                                     {
+                                                                         "kind":  "file",
+                                                                         "path":  "pipeline.db.i0_backup_1781776086235343300",
+                                                                         "bytes":  237568
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  "scratch_i21_bak"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  "scripts"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  "TEST WORKFLOW"
+                                                                     },
+                                                                     {
+                                                                         "kind":  "directory",
+                                                                         "path":  "tools"
+                                                                     }
+                                                                 ],
+                       "excluded_recursive_closure_contents_enumerated_or_hashed":  false,
+                       "excluded_content_semantically_parsed":  false,
+                       "excluded_content_copied":  false
+                   },
+    "source_boundaries":  {
+                              "old_pipeline":  "immutable_base_snapshot",
+                              "external_successor":  "read_only_provenance_source_not_importable_at_runtime",
+                              "overlay":  "immutable_reference_evidence_only_not_runtime_import_or_plan_authority_by_itself",
+                              "applicability_authority":  "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+                              "registry_v2":  "remains_sole_current_authored_Alpha0_routing_source"
+                          },
+    "validation":  {
+                       "base_manifest_match":  true,
+                       "successor_manifest_match":  true,
+                       "unchanged_subset_match":  true,
+                       "exact_changed_set_match":  true,
+                       "exact_exclusion_inventory_match":  true,
+                       "overlay_hash_and_size_match_for_all_21":  true,
+                       "network_used":  false,
+                       "repository_code_or_tests_executed":  false,
+                       "temp_targets_used":  [
+
+                                             ]
+                   },
+    "runtime_authority":  "none"
+}

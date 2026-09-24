@@ -1,0 +1,322 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-applicability-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-24",
+  "status": "complete_21_path_applicability_disposition_non_implementing_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+      "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+      "bytes": 38427
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml",
+      "sha256": "4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5",
+      "bytes": 8381
+    },
+    "source_manifest": {
+      "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+      "bytes": 178435
+    },
+    "development_plan_successor": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "bytes": 101354
+    }
+  },
+  "classification_contract": {
+    "row_count": 21,
+    "one_primary_category_per_changed_path": true,
+    "allowed_categories": [
+      "already_covered_by_v2",
+      "required_for_K0b03",
+      "required_for_K0b04",
+      "required_for_N1",
+      "deferred_to_later_layer",
+      "not_applicable"
+    ],
+    "category_counts": {
+      "already_covered_by_v2": 3,
+      "required_for_K0b03": 2,
+      "required_for_K0b04": 8,
+      "required_for_N1": 8,
+      "deferred_to_later_layer": 0,
+      "not_applicable": 0
+    },
+    "classification_meaning": "primary_destination_for_native_v2_disposition_not_permission_to_import_or_execute_legacy_text",
+    "independent_review_required_before_implementation_scope_freeze": true
+  },
+  "rows": [
+    {
+      "relative_path": "I. Architecture & Task Graph/I Layer - Architecture Plan.md",
+      "overlay_sha256": "666cb6d21e77ff73ea587be65ecea952aa7bc032d9cf85db828a3f44e3e8621b",
+      "category": "required_for_N1",
+      "owner": "N1_00_layer_plan_owner_with_workspace_owner_approval",
+      "phase": "N1-00",
+      "consumer": "I_layer_plan_successor_and_budget_escalation_router",
+      "applicable_delta": "owner_correct_routing_for_deployment_contract_gap_architecture_decision_and_deferred_scope_reentry",
+      "native_v2_target": "N1_00_legacy_delta_migration_matrix_and_approved_I_layer_plan",
+      "future_evidence_route": "N1_00_architecture_applicability_review_and_layer_plan_approval_receipt"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I14. Security Review.md",
+      "overlay_sha256": "88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75",
+      "category": "already_covered_by_v2",
+      "owner": "shared_contract_schema_owner",
+      "phase": "current_v2_baseline_with_N1_00_confirmation",
+      "consumer": "typed_gate_compiler",
+      "applicable_delta": "explicit_completed_or_blocked_producer_status_and_fail_closed_absence",
+      "native_v2_target": "existing_typed_status_and_schema_validation_invariants",
+      "future_evidence_route": "applicability_review_confirms_no_new_shared_plane_requirement_and_N1_schema_binding_does_not_regress"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I15. Ethics & Legal Review.md",
+      "overlay_sha256": "be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5",
+      "category": "already_covered_by_v2",
+      "owner": "shared_contract_schema_owner",
+      "phase": "current_v2_baseline_with_N1_00_confirmation",
+      "consumer": "typed_gate_compiler",
+      "applicable_delta": "explicit_completed_or_blocked_producer_status_and_fail_closed_absence",
+      "native_v2_target": "existing_typed_status_and_schema_validation_invariants",
+      "future_evidence_route": "applicability_review_confirms_no_new_shared_plane_requirement_and_N1_schema_binding_does_not_regress"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I17. Trade-off HITL.md",
+      "overlay_sha256": "e6364861d283dedb81864ec243d223d9e79ea5b56b370ed3f9fbd454eaad8322",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "owner_decision_and_budget_escalation_contract",
+      "applicable_delta": "evidence_bound_owner_decision_recording_defer_reentry_and_package_version_ownership",
+      "native_v2_target": "approved_I_layer_plan_and_owner_decision_schema_without_legacy_signal_import",
+      "future_evidence_route": "N1_00_layer_plan_review_plus_owner_decision_schema_contract_tests_under_later_authority"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I18. Observability Architect.md",
+      "overlay_sha256": "ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "observability_contract_consumer",
+      "applicable_delta": "explicit_causal_graph_version_admission_and_read_only_final_graph_consumption",
+      "native_v2_target": "versioned_graph_consumer_contract_in_I_layer_plan",
+      "future_evidence_route": "N1_00_migration_matrix_and_graph_version_compatibility_review"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I19. Deployment Architect.md",
+      "overlay_sha256": "38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_dispatcher_security_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "toolchain_reachability_and_source_of_truth_proof",
+      "applicable_delta": "declared_toolchain_manifest_or_closed_hash_bound_file_set_and_no_inference_from_single_code_file",
+      "native_v2_target": "K0b04_toolchain_reachability_disposition_and_F10_F15_preflight_evidence",
+      "future_evidence_route": "K0b04_dispatcher_security_storage_proof_receipt"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I20. Task Tree Builder.md",
+      "overlay_sha256": "28423a4f7cfc09273ff2a4b2eb4a1a939b5c0891228c813f7d49505cbd40bb72",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "task_graph_builder_contract",
+      "applicable_delta": "targeted_signal_carve_out_review_owner_route_and_deferred_task_semantics",
+      "native_v2_target": "approved_task_graph_contract_and_layer_migration_matrix",
+      "future_evidence_route": "N1_00_task_graph_plan_review_and_future_contract_validation"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I21. Task Spec Agent.md",
+      "overlay_sha256": "5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "task_spec_contract_and_acceptance_compiler",
+      "applicable_delta": "toolchain_compatible_commands_machine_readable_acceptance_oracles_and_full_acceptance_coverage",
+      "native_v2_target": "native_task_spec_schema_and_consumer_registered_oracle_binding",
+      "future_evidence_route": "N1_00_schema_review_then_N1_01_contract_tests_under_separate_authority"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+      "overlay_sha256": "c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner_and_workspace_owner",
+      "phase": "N1-00",
+      "consumer": "HITL_tree_review_and_risk_acceptance_gate",
+      "applicable_delta": "producer_repair_exit_must_reproduce_original_detector_and_partial_rerun_has_per_task_records",
+      "native_v2_target": "typed_HITL_disposition_and_repair_evidence_contract",
+      "future_evidence_route": "N1_00_review_budget_and_HITL_contract_approval_receipt"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I23. Task Graph QA.md",
+      "overlay_sha256": "6b0ebe5d35a6dfd4336ee92730dc0f137a21491ecd118236238a61e083d0ffda",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_dispatcher_security_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "pre_execution_toolchain_and_acceptance_oracle_proof",
+      "applicable_delta": "whole_graph_command_reachability_build_root_policy_package_version_and_oracle_resolvability_checks",
+      "native_v2_target": "K0b04_synthetic_preflight_and_fail_closed_dispatcher_test_matrix",
+      "future_evidence_route": "K0b04_Alpha0_dispatcher_security_storage_proof_receipt"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I24. Gatekeeper & Publisher.md",
+      "overlay_sha256": "db1c6d617420d71beabe0ddbcd9565eaf1176f27219a043c904306a58c970057",
+      "category": "already_covered_by_v2",
+      "owner": "shared_artifact_event_publisher_owner",
+      "phase": "current_v2_baseline_with_N1_00_confirmation",
+      "consumer": "versioned_publisher_and_state_machine",
+      "applicable_delta": "content_bound_active_version_selection_immutable_snapshot_and_typed_deferred_lifecycle",
+      "native_v2_target": "existing_artifact_version_lineage_consumer_receipt_and_publisher_freeze_contracts",
+      "future_evidence_route": "applicability_review_confirms_coverage_and_N1_00_records_no_legacy_publisher_import"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I6. Architecture Synthesis.md",
+      "overlay_sha256": "e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "architecture_synthesis_contract",
+      "applicable_delta": "orchestrator_owned_bounded_maintenance_signal_and_uniform_content_hash_fields",
+      "native_v2_target": "native_I_layer_maintenance_and_artifact_hash_schema",
+      "future_evidence_route": "N1_00_layer_plan_review_and_N1_01_schema_tests_under_later_authority"
+    },
+    {
+      "relative_path": "I. Architecture & Task Graph/I7. Causal Map Builder.md",
+      "overlay_sha256": "8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a",
+      "category": "required_for_N1",
+      "owner": "N1_00_I_layer_plan_owner",
+      "phase": "N1-00",
+      "consumer": "causal_graph_producer_and_versioned_consumers",
+      "applicable_delta": "named_graph_versions_final_task_trace_mode_and_single_writer_boundary",
+      "native_v2_target": "versioned_causal_graph_contract_with_explicit_writer_and_readers",
+      "future_evidence_route": "N1_00_graph_contract_review_and_future_compatibility_tests"
+    },
+    {
+      "relative_path": "J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+      "overlay_sha256": "174f4e91f6ea58162f34e7d0543fc02e98d38657052e859e07d639d3836e660b",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_Alpha0_disposition_owner",
+      "phase": "K0b-04",
+      "consumer": "Alpha0_finding_disposition_register",
+      "applicable_delta": "consolidated_dispatcher_toolchain_oracle_deferred_scope_and_two_phase_infra_failure_classes",
+      "native_v2_target": "K0b04_bounded_finding_dispositions_without_treating_legacy_report_as_test_evidence",
+      "future_evidence_route": "K0b04_Alpha0_disposition_and_external_review_evidence"
+    },
+    {
+      "relative_path": "J. Implementation/J0. Dispatcher.md",
+      "overlay_sha256": "8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_dispatcher_and_F15_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "Alpha0_dispatcher_preflight_and_task_completion_gate",
+      "applicable_delta": "prelaunch_evidence_path_reachability_toolchain_manifest_oracle_binding_two_phase_infra_and_task_scoped_escalation",
+      "native_v2_target": "registry_v2_bound_dispatcher_contract_and_F15_hypothesis_evidence",
+      "future_evidence_route": "K0b04_F15_dispatcher_receipt_and_Alpha0_disposition"
+    },
+    {
+      "relative_path": "J. Implementation/J11. Documenter.md",
+      "overlay_sha256": "17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_toolchain_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "toolchain_manifest_compiler_and_dispatcher",
+      "applicable_delta": "machine_readable_build_root_toolchain_handoff_derived_from_diff_and_declared_constraints",
+      "native_v2_target": "future_native_toolchain_manifest_evidence_contract_not_legacy_documenter_prompt",
+      "future_evidence_route": "K0b04_toolchain_source_of_truth_and_reachability_receipt"
+    },
+    {
+      "relative_path": "J. Implementation/J14. Infra Methodologist.md",
+      "overlay_sha256": "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_security_and_attestation_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "infra_command_coverage_and_non_mutating_plan_contract",
+      "applicable_delta": "explicit_command_dispositions_hash_binding_and_offline_render_basis",
+      "native_v2_target": "K0b04_F10_tool_policy_and_attestation_limit_matrix",
+      "future_evidence_route": "K0b04_F10_security_receipt_with_no_inferred_live_safety"
+    },
+    {
+      "relative_path": "J. Implementation/J16. Infra Deployer.md",
+      "overlay_sha256": "e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_attestation_limit_owner",
+      "phase": "K0b-04",
+      "consumer": "F10_attestation_policy_and_future_infra_plan_contract",
+      "applicable_delta": "plan_only_non_mutating_mode_explicit_reduced_guarantee_partition_and_no_success_overclaim",
+      "native_v2_target": "K0b04_attestation_limit_disposition_and_F10_negative_cases",
+      "future_evidence_route": "G_K0B04_F15_ATTESTATION_LIMIT_closure_evidence_under_later_authority"
+    },
+    {
+      "relative_path": "J. Implementation/J17. Infra Tester.md",
+      "overlay_sha256": "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+      "category": "required_for_K0b04",
+      "owner": "K0b04_attestation_limit_owner",
+      "phase": "K0b-04",
+      "consumer": "F10_attestation_policy_and_future_read_only_live_verification_contract",
+      "applicable_delta": "rollout_binding_read_only_command_admission_observed_identity_and_non_reducible_credential_isolation",
+      "native_v2_target": "K0b04_attestation_limit_and_capability_non_escalation_test_matrix",
+      "future_evidence_route": "K0b04_F10_and_attestation_limit_receipts_under_separate_execution_authority"
+    },
+    {
+      "relative_path": "J. Implementation/J4. Methodologist.md",
+      "overlay_sha256": "fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8",
+      "category": "required_for_K0b03",
+      "owner": "shared_control_guard_and_hash_profile_owner",
+      "phase": "K0b-03",
+      "consumer": "future_K0b03_admission_compiler",
+      "applicable_delta": "object_specific_raw_byte_task_spec_hash_binding_and_no_downstream_package_version_guessing",
+      "native_v2_target": "K0b03_v1_1_hash_profile_selection_and_declared_source_guard",
+      "future_evidence_route": "future_K0b03_hash_profile_negative_tests_and_compiler_receipt"
+    },
+    {
+      "relative_path": "J. Implementation/J8. Static Analyzer.md",
+      "overlay_sha256": "65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c",
+      "category": "required_for_K0b03",
+      "owner": "shared_control_repository_and_tool_guard_owner",
+      "phase": "K0b-03",
+      "consumer": "future_K0b03_repository_tool_and_argument_guard",
+      "applicable_delta": "task_bounded_diff_policy_and_build_root_constraints_must_come_from_declared_manifest_not_inference",
+      "native_v2_target": "K0b03_v1_1_closed_repository_tool_policy_input_contract",
+      "future_evidence_route": "future_K0b03_repository_tool_guard_negative_tests_and_validation_receipt"
+    }
+  ],
+  "global_findings": {
+    "K0b03_guard_delta": [
+      "hash_profile_is_selected_per_object_type_and_is_never_silently_substituted",
+      "repository_or_build_root_constraints_come_from_a_pinned_declared_source_not_single_file_inference",
+      "tool_reachability_is_preflight_metadata_and_does_not_authorize_execution",
+      "clean_scanner_or_valid_hash_never_authorizes_tool_egress_or_runtime_effect"
+    ],
+    "K0b04_required_dispositions": [
+      "dispatcher_preflight_before_agent_or_command_cost",
+      "whole_scope_toolchain_reachability",
+      "machine_readable_acceptance_oracle_resolution",
+      "attestation_guarantee_partition_and_reduction_limits",
+      "credentialed_read_only_probe_identity_isolation",
+      "plan_only_or_read_only_status_must_not_overclaim_applied_or_live_success"
+    ],
+    "N1_00_migration_matrix_columns": [
+      "legacy_relative_path",
+      "overlay_sha256",
+      "applicability_category",
+      "native_v2_target_contract",
+      "owner",
+      "consumer",
+      "compatibility_or_rejection_disposition",
+      "planned_verification",
+      "approval_receipt_ref"
+    ]
+  },
+  "preserved_boundaries": {
+    "external_source_or_overlay_runtime_import": false,
+    "legacy_prompt_activation": false,
+    "state_or_gate_change": false,
+    "K0b03_implementation": false,
+    "K0b04_or_N1_execution": false,
+    "Alpha0_F10_F15_execution": false,
+    "network_dependency_temp_target_or_remote_effect": false,
+    "runtime_authority": "none"
+  },
+  "result": "all_21_changed_paths_classified_once_with_native_v2_owner_phase_consumer_and_future_evidence_route"
+}

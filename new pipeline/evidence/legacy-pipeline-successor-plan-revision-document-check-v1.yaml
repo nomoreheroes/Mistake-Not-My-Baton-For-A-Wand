@@ -1,0 +1,209 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-plan-revision-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-24",
+  "status": "precommit_documentation_checks_pass_ready_for_exact_29_path_local_commit",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+      "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+      "bytes": 38427
+    },
+    "owner_confirmation": {
+      "source_ref": "current_conversation_exact_hash_29_path_documentation_scope_confirmation_2026_09_24",
+      "confirmed_request_sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+      "exact_29_path_scope_explicit": true,
+      "one_local_commit_explicit": true
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml",
+      "sha256": "4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5",
+      "bytes": 8381
+    }
+  },
+  "baseline_checks": {
+    "repository_root": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "HEAD": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "parent": "1c7294ca2d3386e9eb07c2fbb507d239e5c09aeb",
+    "tree": "4f44ada7d7c1e1c3a273445a69f3236bccefca27",
+    "entry_index_empty": true,
+    "entry_worktree_only_confirmed_request_before_materialization": true,
+    "other_28_targets_initially_absent": true,
+    "request_hash_recomputed_after_owner_confirmation": "match"
+  },
+  "legacy_source_checks": {
+    "source": "C:/Projects/software_workflow",
+    "access": "read_only",
+    "path_set_count": 170,
+    "base_manifest_sha256": "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597",
+    "base_manifest_bytes": 21819,
+    "base_content_bytes": 11051221,
+    "successor_manifest_sha256": "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8",
+    "successor_manifest_bytes": 21820,
+    "successor_content_bytes": 11361589,
+    "unchanged_subset_sha256": "ce227e2575a3694e13721752addbc77accfebb6a47018516493806a30e581697",
+    "unchanged_subset_count": 149,
+    "changed_path_count": 21,
+    "changed_set_exact": true,
+    "backup_exclusion_count": 33,
+    "pytest_cache_exclusion_count": 4,
+    "top_level_recursive_exclusion_count": 21,
+    "other_files_inside_semantic_source_directories": 0,
+    "exclusion_hash_size_and_metadata_pins_match": true,
+    "excluded_recursive_closure_contents_read_or_semantically_parsed": false
+  },
+  "materialized_path_checks": {
+    "declared_path_count": 29,
+    "unique_path_count": 29,
+    "new_path_count": 29,
+    "existing_path_modification_count": 0,
+    "overlay_path_count": 21,
+    "overlay_raw_source_pins_match": true,
+    "overlay_normalized_hash_and_size_pins_match": true,
+    "overlay_semantic_edits": false,
+    "manifest_entry_count": 170,
+    "manifest_changed_count": 21,
+    "manifest_unchanged_count": 149,
+    "manifest_contains_complete_exclusion_inventory": true
+  },
+  "complete_file_pins_excluding_self": [
+    {"path":"new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml","sha256":"1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191","bytes":38427},
+    {"path":"new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml","sha256":"4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5","bytes":8381},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml","sha256":"37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880","bytes":178435},
+    {"path":"new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md","sha256":"7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5","bytes":101354},
+    {"path":"new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md","sha256":"7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b","bytes":11398},
+    {"path":"new pipeline/architecture/k0b-03-planning-package-v1.1.md","sha256":"58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423","bytes":13146},
+    {"path":"new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml","sha256":"a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c","bytes":17797},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I Layer - Architecture Plan.md","sha256":"666cb6d21e77ff73ea587be65ecea952aa7bc032d9cf85db828a3f44e3e8621b","bytes":136233},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I14. Security Review.md","sha256":"88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75","bytes":59691},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I15. Ethics & Legal Review.md","sha256":"be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5","bytes":85151},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I17. Trade-off HITL.md","sha256":"e6364861d283dedb81864ec243d223d9e79ea5b56b370ed3f9fbd454eaad8322","bytes":120790},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I18. Observability Architect.md","sha256":"ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325","bytes":106982},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I19. Deployment Architect.md","sha256":"38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf","bytes":112791},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I20. Task Tree Builder.md","sha256":"28423a4f7cfc09273ff2a4b2eb4a1a939b5c0891228c813f7d49505cbd40bb72","bytes":233636},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I21. Task Spec Agent.md","sha256":"5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f","bytes":151195},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I22. HITL Tree Review + Risk Acceptance.md","sha256":"c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a","bytes":149041},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I23. Task Graph QA.md","sha256":"6b0ebe5d35a6dfd4336ee92730dc0f137a21491ecd118236238a61e083d0ffda","bytes":255345},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I24. Gatekeeper & Publisher.md","sha256":"db1c6d617420d71beabe0ddbcd9565eaf1176f27219a043c904306a58c970057","bytes":243525},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I6. Architecture Synthesis.md","sha256":"e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b","bytes":200011},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I7. Causal Map Builder.md","sha256":"8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a","bytes":110331},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J Layer - Deep Findings And V-Next Requirements.md","sha256":"174f4e91f6ea58162f34e7d0543fc02e98d38657052e859e07d639d3836e660b","bytes":51117},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J0. Dispatcher.md","sha256":"8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784","bytes":771025},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J11. Documenter.md","sha256":"17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600","bytes":64544},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J14. Infra Methodologist.md","sha256":"944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16","bytes":269823},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J16. Infra Deployer.md","sha256":"e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea","bytes":262403},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J17. Infra Tester.md","sha256":"0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a","bytes":148671},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J4. Methodologist.md","sha256":"fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8","bytes":156762},
+    {"path":"new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J8. Static Analyzer.md","sha256":"65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c","bytes":85110}
+  ],
+  "serialization_checks": {
+    "profile": "strict_UTF8_without_BOM_LF_exactly_one_final_LF",
+    "all_28_preexisting_package_paths_before_self": "pass",
+    "document_check_self": "validated_after_creation_before_staging",
+    "machine_documents_valid_JSON_compatible_YAML": true,
+    "machine_documents_duplicate_keys": 0,
+    "duplicate_key_check_method": "recursive_ordinal_object_key_tokenizer_plus_ConvertFrom_Json_parse",
+    "approval_request_self_hash_embedded": false,
+    "document_check_self_hash_embedded": false,
+    "future_commit_self_reference": false
+  },
+  "applicability_checks": {
+    "row_count": 21,
+    "unique_relative_path_count": 21,
+    "one_primary_category_per_path": true,
+    "category_counts": {
+      "already_covered_by_v2": 3,
+      "required_for_K0b03": 2,
+      "required_for_K0b04": 8,
+      "required_for_N1": 8,
+      "deferred_to_later_layer": 0,
+      "not_applicable": 0
+    },
+    "every_row_has_owner_phase_consumer_native_target_and_future_evidence_route": true,
+    "independent_review_required_before_implementation_scope_freeze": true,
+    "external_source_or_overlay_runtime_authority": false
+  },
+  "plan_checks": {
+    "development_plan_v0_14_is_new_full_immutable_successor": true,
+    "development_plan_v0_13_unchanged": true,
+    "architecture_plan_v0_16_unchanged": true,
+    "architecture_addendum_is_new_non_replacing_document": true,
+    "K0b03_plan_v1_1_is_new_overlay_on_unchanged_v1": true,
+    "K0b03_delta_limited_to_applicable_hash_repository_tool_egress_and_attestation_interface_guards": true,
+    "K0b04_findings_routed_but_not_executed": true,
+    "N1_migration_matrix_required_later_but_not_created": true
+  },
+  "canonical_preservation": {
+    "tracked_worktree_diff_before_staging": 0,
+    "index_diff_before_staging": 0,
+    "existing_development_plan_sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+    "existing_architecture_plan_sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+    "existing_K0b03_plan_v1_sha256": "0ef7d61150cce6b407a8719b819589c180e3efc6fde55538d50f0d8ef94ca147",
+    "state_yaml_sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+    "STATE_md_sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+    "renderer_v6_sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+    "projection_profile_v6_sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+    "existing_path_changes": 0,
+    "state_or_gate_changes": 0
+  },
+  "Git_effect_preflight": {
+    "active_non_sample_hooks": 0,
+    "commit_gpgsign": "unset",
+    "Git_identity_present": true,
+    "network_or_remote_command_run": false,
+    "unexpected_effect": false
+  },
+  "execution_checks": {
+    "repository_code_executed": false,
+    "repository_tests_executed": false,
+    "renderer_executed": false,
+    "network_used": false,
+    "dependency_or_bootstrap_used": false,
+    "temp_target_created": false,
+    "model_or_provider_call_count": 0,
+    "Alpha0_F10_F15_execution_count": 0,
+    "runtime_publication_count": 0,
+    "remote_effect_count": 0
+  },
+  "precommit_exact_scope": {
+    "path_source": "approval_request.future_documentation_package.proposed_write_paths",
+    "path_count": 29,
+    "existing_modification_count": 0,
+    "future_commit_count": 1,
+    "future_commit_parent": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "future_commit_message": "docs(pipeline-v2): bind legacy successor applicability",
+    "required_trailers": [
+      "Approval-Request-SHA256: 1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+      "Owner-Confirmation: current_conversation_exact_hash_29_path_documentation_scope_confirmation_2026_09_24",
+      "Runtime-Authority: none"
+    ],
+    "staging_and_commit_not_yet_performed_at_evidence_freeze": true,
+    "future_commit_ID_not_invented": true
+  },
+  "post_creation_validation_required_before_staging": [
+    "recompute_all_29_complete_file_SHA256_and_bytes",
+    "validate_UTF8_no_BOM_LF_one_final_LF_for_all_29",
+    "validate_all_machine_documents_as_JSON_compatible_YAML_with_zero_duplicate_keys",
+    "validate_all_28_embedded_complete_file_pins",
+    "validate_exact_29_untracked_paths_and_empty_index",
+    "validate_gitattributes_text_eol_and_no_filter_surprises",
+    "recompute_existing_plan_state_renderer_and_profile_pins"
+  ],
+  "postcommit_validation_required": [
+    "new_commit_parent_is_exact_baseline_HEAD",
+    "new_commit_contains_exactly_29_new_paths",
+    "committed_blob_bytes_equal_frozen_worktree_bytes",
+    "existing_paths_state_renderer_profile_and_all_gates_unchanged",
+    "index_and_worktree_clean",
+    "no_remote_effect"
+  ],
+  "retained_non_authorizations": [
+    "no_state_gate_renderer_profile_or_status_transition",
+    "no_K0b03_implementation_or_test_execution",
+    "no_K0b04_K0b05_or_N1_execution_or_progress_claim",
+    "no_Alpha0_F10_F15_model_provider_network_dependency_temp_target_runtime_publication_or_remote_effect",
+    "runtime_authority_none"
+  ],
+  "result": "pass_ready_for_exact_29_path_staging_and_one_local_documentation_commit_only"
+}
