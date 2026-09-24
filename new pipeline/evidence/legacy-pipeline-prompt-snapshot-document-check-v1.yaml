@@ -1,0 +1,157 @@
+{
+    "document_id":  "pipeline-v2.legacy-pipeline-prompt-snapshot-document-check-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "recorded_on":  "2026-09-24",
+    "status":  "pass_documentary_snapshot_materialization_only_runtime_not_authorized",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+                                               "sha256":  "78dcb544d6d3d503b411b525a97ab619a8d1a1c4b6d015bd2d99b74672d9ee1b",
+                                               "bytes":  20205
+                                           },
+                      "owner_confirmation":  "current_conversation_exact_hash_156_path_snapshot_scope_confirmation_2026_09_24",
+                      "owner_disposition":  {
+                                                "sha256":  "cdca76ee1772090f17ddc2213d97778a3244c14e562577d762957fbe3d24eeb9",
+                                                "bytes":  3247,
+                                                "path":  "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml"
+                                            },
+                      "snapshot_manifest":  {
+                                                "sha256":  "cbd2a54c94e5e163013ab9c97eeb710193727c2a99ac1826ada31e85554ffa7e",
+                                                "bytes":  147591,
+                                                "path":  "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml"
+                                            },
+                      "capture_evidence":  {
+                                               "sha256":  "5ad4a8969ea08a692342d5991f85760dcd97e027a9e2c20c6b00eec24591b713",
+                                               "bytes":  155029,
+                                               "path":  "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml"
+                                           },
+                      "baseline_HEAD":  "b7887957c854825044b448a0ff6a1e84e2ab6562"
+                  },
+    "observed":  {
+                     "selected_markdown_paths":  151,
+                     "excluded_non_markdown_paths":  19,
+                     "pre_capture_decoder_validation_repeats":  1,
+                     "capture_attempts":  1,
+                     "successful_attempt":  1,
+                     "input_utf8_bom_signature_count":  15,
+                     "prompt_output_paths":  151,
+                     "metadata_paths_including_request":  5,
+                     "total_new_paths":  156,
+                     "stable_raw_manifest":  {
+                                                 "path_count":  151,
+                                                 "content_bytes":  11022565,
+                                                 "manifest_bytes":  19112,
+                                                 "sha256":  "72f6ca7da741bb49aa6874113785c4cfb8114cf45c8df6f524892e54a2178b96"
+                                             },
+                     "normalized_snapshot_manifest":  {
+                                                          "path_count":  151,
+                                                          "content_bytes":  10974418,
+                                                          "manifest_bytes":  19110,
+                                                          "sha256":  "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+                                                      },
+                     "unselected_content_read_count":  0,
+                     "unselected_content_copy_count":  0
+                 },
+    "checks":  [
+                   {
+                       "id":  "LPSNAP-C01",
+                       "check":  "baseline_HEAD_parent_tree_and_clean_tracked_index_state",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C02",
+                       "check":  "approval_request_full_SHA256_and_owner_confirmation",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C03",
+                       "check":  "path_set_authority_pin_and_exact_151_markdown_selector",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C04",
+                       "check":  "exact_19_non_markdown_entries_excluded_without_content_read",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C05",
+                       "check":  "bounded_attempt_count_between_one_and_three",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C06",
+                       "check":  "successful_attempt_initial_in_memory_and_final_roots_match",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C07",
+                       "check":  "optional_source_UTF8_BOM_signatures_consumed_only_during_strict_decode",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C08",
+                       "check":  "all_151_raw_source_bindings_complete",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C09",
+                       "check":  "all_151_projected_snapshot_paths_complete",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C10",
+                       "check":  "all_151_normalized_snapshot_bindings_match_in_memory_bytes",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C11",
+                       "check":  "all_snapshot_files_UTF8_without_BOM_LF_only_one_final_LF",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C12",
+                       "check":  "manifest_exactly_151_unique_ordinal_entries",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C13",
+                       "check":  "unselected_content_not_read_copied_hashed_or_used",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C14",
+                       "check":  "exact_156_future_path_derivation",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C15",
+                       "check":  "all_preexisting_tracked_paths_unchanged",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C16",
+                       "check":  "structured_documents_valid_JSON_YAML_without_duplicate_keys",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C17",
+                       "check":  "no_repository_code_tests_network_dependencies_locked_environments_or_temp_targets",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "LPSNAP-C18",
+                       "check":  "no_semantic_delta_plan_state_gate_implementation_runtime_or_remote_effect_claim",
+                       "status":  "pass"
+                   }
+               ],
+    "result":  "pass",
+    "limitations":  [
+                        "no_semantic_delta_analysis",
+                        "no_bug_fix_validation",
+                        "no_applicability_or_plan_adoption",
+                        "no_state_status_or_gate_transition",
+                        "no_implementation_or_runtime_authority"
+                    ],
+    "runtime_authority":  "none"
+}

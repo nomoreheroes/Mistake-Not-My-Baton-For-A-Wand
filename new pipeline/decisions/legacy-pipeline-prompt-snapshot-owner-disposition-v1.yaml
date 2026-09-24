@@ -1,0 +1,49 @@
+{
+    "document_id":  "pipeline-v2.legacy-pipeline-prompt-snapshot-owner-disposition-v1",
+    "schema_version":  1,
+    "version":  "1.0.0",
+    "recorded_on":  "2026-09-24",
+    "status":  "owner_confirmed_exact_scope_snapshot_capture_non_authorizing_runtime_not_authorized",
+    "authority":  {
+                      "approval_request":  {
+                                               "path":  "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+                                               "sha256":  "78dcb544d6d3d503b411b525a97ab619a8d1a1c4b6d015bd2d99b74672d9ee1b",
+                                               "bytes":  20205
+                                           },
+                      "owner_confirmation":  "current_conversation_exact_hash_156_path_snapshot_scope_confirmation_2026_09_24",
+                      "baseline_HEAD":  "b7887957c854825044b448a0ff6a1e84e2ab6562"
+                  },
+    "disposition":  {
+                        "authorized_capture_source":  "C:/Projects/software_workflow",
+                        "capture_source_access":  "read_only",
+                        "selected_path_authority":  {
+                                                        "path":  "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+                                                        "sha256":  "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+                                                        "bytes":  178435,
+                                                        "selector":  "entries[].relative_path_where_relative_path_ends_with_dot_md_using_ordinal_ignore_case",
+                                                        "selected_count":  151,
+                                                        "excluded_non_markdown_count":  19
+                                                    },
+                        "selected_markdown_paths":  151,
+                        "excluded_non_markdown_manifest_entries":  19,
+                        "future_commit_paths":  156,
+                        "bounded_capture_attempts_maximum":  3,
+                        "successful_capture_attempt":  1,
+                        "source_changes_after_successful_capture_invalidate_snapshot":  false,
+                        "snapshot_role":  "immutable_reference_only_not_plan_registry_implementation_or_runtime_authority"
+                    },
+    "prohibited":  {
+                       "unselected_content_read":  true,
+                       "unselected_content_copy":  true,
+                       "semantic_delta_analysis":  true,
+                       "applicability_or_plan_changes":  true,
+                       "existing_file_changes":  true,
+                       "repository_code_or_tests":  true,
+                       "network_dependencies_locked_environments_or_temp_targets":  true,
+                       "state_status_or_gate_changes":  true,
+                       "K0b03_K0b04_K0b05_or_N1_progress":  true,
+                       "Alpha0_F10_F15_model_or_provider_execution":  true,
+                       "runtime_publications_or_remote_effects":  true
+                   },
+    "runtime_authority":  "none"
+}

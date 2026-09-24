@@ -1,0 +1,352 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-prompt-snapshot-approval-request-v2",
+  "schema_version": 1,
+  "version": "2.0.0",
+  "recorded_on": "2026-09-24",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "purpose": "define_a_reproducible_immutable_markdown_prompts_only_snapshot_of_a_continuously_mutating_legacy_pipeline_without_copying_tests_compiled_files_reference_data_or_runtime_artifacts_and_without_authorizing_capture_commit_analysis_plan_changes_review_implementation_or_runtime",
+  "supersession": {
+    "supersedes_uncommitted_request": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v1.yaml",
+    "superseded_request_sha256": "05660b75bf7639fc715f7b0930204823eb6fef661111483f9858603b4c2e726c",
+    "superseded_request_bytes": 18238,
+    "reason": "the_170_path_authority_contains_151_markdown_documents_one_yaml_six_python_tests_and_twelve_compiled_pyc_files_so_the_v1_all_paths_are_markdown_invariant_was_false",
+    "superseded_request_was_committed": false
+  },
+  "current_owner_authorization": {
+    "source": "current_conversation_2026_09_24",
+    "baseline_HEAD": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "baseline_parent": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "baseline_tree": "145b32d33a72f954c6955bb0aef9b21e74daabee",
+    "authorized_current_deletion": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v1.yaml",
+    "authorized_current_creation": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+    "current_request_replacement_only": true,
+    "future_snapshot_materialization_authorized": false,
+    "future_commit_authorized": false,
+    "semantic_delta_analysis_authorized": false,
+    "applicability_or_plan_change_authorized": false,
+    "independent_review_authorized": false,
+    "state_or_gate_transition_authorized": false,
+    "implementation_or_runtime_authorized": false,
+    "runtime_authority": "none"
+  },
+  "git_baseline": {
+    "repository_root": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "HEAD": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "parent": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "tree": "145b32d33a72f954c6955bb0aef9b21e74daabee",
+    "required_tracked_worktree": "clean",
+    "required_index": "clean",
+    "future_commit_parent_must_equal_HEAD": true
+  },
+  "prompts_only_path_set_authority": {
+    "manifest_path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+    "manifest_sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+    "manifest_bytes": 178435,
+    "selector": "entries[].relative_path_where_relative_path_ends_with_dot_md_using_ordinal_ignore_case",
+    "selected_path_count": 151,
+    "selection_order": "ascending_dotnet_string_comparer_ordinal_by_relative_path",
+    "selected_paths_must_be_unique": true,
+    "selected_paths_must_be_safe_relative_paths_confined_to_manifest_semantic_source_directories": true,
+    "manifest_use": "immutable_path_selection_authority_only_not_current_live_content_pin",
+    "historical_entry_hashes_are_expected_current_live_hashes": false,
+    "new_or_unlisted_live_paths_are_automatically_selected": false,
+    "future_new_prompt_handling": "requires_owner_signal_and_a_separately_authorized_new_snapshot"
+  },
+  "excluded_manifest_entries": {
+    "count": 19,
+    "extension_counts": {
+      ".yaml": 1,
+      ".py": 6,
+      ".pyc": 12
+    },
+    "paths": [
+      "E. Design Research & Intent Layer/design_parameter_reference.yaml",
+      "J. Implementation/tests/__pycache__/test_infra_prompt_contracts.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_infra_prompt_contracts.cpython-312.pyc",
+      "J. Implementation/tests/__pycache__/test_j13_contracts.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_j13_contracts.cpython-312.pyc",
+      "J. Implementation/tests/__pycache__/test_j14_generation_fsm.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_j14_generation_fsm.cpython-312.pyc",
+      "J. Implementation/tests/__pycache__/test_j1_j3_contracts.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_j1_j3_contracts.cpython-312.pyc",
+      "J. Implementation/tests/__pycache__/test_j4_cross_prompt_contracts.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_j4_cross_prompt_contracts.cpython-312.pyc",
+      "J. Implementation/tests/__pycache__/test_j4_generation_fsm.cpython-312-pytest-9.0.2.pyc",
+      "J. Implementation/tests/__pycache__/test_j4_generation_fsm.cpython-312.pyc",
+      "J. Implementation/tests/test_infra_prompt_contracts.py",
+      "J. Implementation/tests/test_j13_contracts.py",
+      "J. Implementation/tests/test_j14_generation_fsm.py",
+      "J. Implementation/tests/test_j1_j3_contracts.py",
+      "J. Implementation/tests/test_j4_cross_prompt_contracts.py",
+      "J. Implementation/tests/test_j4_generation_fsm.py"
+    ],
+    "contents_may_be_read": false,
+    "paths_may_be_copied": false,
+    "paths_participate_in_stability_checks": false,
+    "paths_may_be_used_for_claims": false
+  },
+  "mutable_capture_source": {
+    "root": "C:/Projects/software_workflow",
+    "access": "read_only",
+    "source_is_expected_to_change_over_time": true,
+    "source_is_long_term_review_pin": false,
+    "source_is_governance_plan_registry_implementation_or_runtime_authority": false,
+    "content_read_scope": "only_the_exact_151_selected_markdown_paths",
+    "changes_after_a_successful_capture_invalidate_committed_snapshot": false,
+    "later_material_change_handling": "owner_signals_the_change_then_a_new_snapshot_and_delta_discussion_require_separate_authority"
+  },
+  "closed_world_exclusion_contract": {
+    "rule": "every_live_source_path_not_in_the_exact_151_selected_path_set_is_out_of_scope_regardless_of_creation_modification_or_deletion",
+    "unselected_path_metadata_or_content_is_required_for_capture": false,
+    "unselected_file_contents_may_be_read": false,
+    "unselected_paths_may_be_copied": false,
+    "unselected_paths_participate_in_stability_checks": false,
+    "unselected_path_churn_is_a_mismatch": false,
+    "unselected_content_may_be_used_for_claims": false,
+    "named_exclusion_classes": [
+      "the_exact_19_non_markdown_manifest_entries",
+      ".bak",
+      ".pytest_cache",
+      "__pycache__",
+      ".git",
+      "databases",
+      "scripts",
+      "tools",
+      "runbooks",
+      "outputs",
+      "node_modules",
+      "tests",
+      "compiled_files",
+      "reference_data",
+      "project_artifacts",
+      "runtime_artifacts",
+      "all_other_unlisted_paths"
+    ]
+  },
+  "bounded_consistency_protocol": {
+    "maximum_attempts": 3,
+    "attempts_are_technical_repeats_with_identical_scope": true,
+    "temp_targets": [],
+    "no_repository_write_before_stable_attempt": true,
+    "per_attempt_order": [
+      "read_only_verify_each_of_the_exact_151_selected_paths_exists_as_a_regular_file",
+      "read_the_exact_151_paths_for_initial_raw_manifest",
+      "read_the_exact_151_paths_into_memory_for_capture_and_compute_in_memory_raw_manifest",
+      "strictly_decode_every_in_memory_file_as_UTF8_without_accepting_invalid_sequences",
+      "read_the_exact_151_paths_for_final_raw_manifest",
+      "require_initial_in_memory_and_final_raw_manifests_to_be_byte_identical",
+      "require_each_in_memory_raw_entry_hash_and_size_to_equal_the_stable_manifest_entry",
+      "only_after_all_requirements_pass_materialize_repository_snapshot_bytes_from_the_in_memory_capture"
+    ],
+    "raw_manifest_profile": {
+      "line": "relative_path<TAB>lowercase_sha256_of_raw_file_bytes<TAB>decimal_byte_count<LF>",
+      "ordering": "ascending_dotnet_string_comparer_ordinal_by_relative_path",
+      "encoding": "UTF-8_without_BOM",
+      "final_terminator": "exactly_one_LF",
+      "digest": "SHA-256_over_complete_manifest_bytes"
+    },
+    "stable_attempt_definition": "initial_in_memory_and_final_raw_manifests_for_the_exact_151_paths_are_identical_and_all_inputs_are_strict_UTF8",
+    "source_change_during_attempt": "discard_in_memory_capture_without_repository_writes_and_retry_if_attempt_budget_remains",
+    "failure_after_third_attempt": "stop_without_materialization_staging_or_commit_and_report_all_observed_manifest_roots",
+    "source_change_after_stable_capture": "does_not_invalidate_the_snapshot_materialized_from_the_stable_in_memory_capture"
+  },
+  "normalization_contract": {
+    "input": "stable_in_memory_raw_bytes_for_each_of_the_151_selected_markdown_paths",
+    "decode": "strict_UTF-8",
+    "transform_order": [
+      "replace_CRLF_with_LF",
+      "replace_remaining_CR_with_LF",
+      "remove_all_trailing_LF_characters",
+      "append_exactly_one_final_LF",
+      "encode_UTF-8_without_BOM"
+    ],
+    "semantic_editing": false,
+    "snapshot_files_must_be_LF_only": true,
+    "snapshot_files_must_have_exactly_one_final_LF": true,
+    "raw_source_sha256_and_bytes_must_be_preserved_in_manifest": true,
+    "normalized_snapshot_sha256_and_bytes_must_be_preserved_in_manifest": true,
+    "raw_and_normalized_bindings_are_required_for_every_selected_path": true
+  },
+  "future_snapshot_layout": {
+    "snapshot_root": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24",
+    "prompt_root": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts",
+    "prompt_path_projection": "prompt_root + '/' + selected_relative_path",
+    "prompt_path_count": 151,
+    "metadata_paths": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+      "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml",
+      "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml"
+    ],
+    "metadata_path_count": 5,
+    "total_future_commit_path_count": 156,
+    "all_paths_are_new_relative_to_baseline": true,
+    "no_other_path_is_permitted": true
+  },
+  "future_manifest_contract": {
+    "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+    "required_top_level_facts": [
+      "document_identity_version_and_non_authorizing_reference_status",
+      "approval_request_full_SHA256_and_owner_confirmation_reference",
+      "baseline_HEAD_parent_and_tree",
+      "path_set_authority_path_SHA256_size_selector_and_151_count",
+      "exact_19_manifest_entry_exclusions_and_closed_world_boundary",
+      "mutable_capture_source_and_read_only_boundary",
+      "successful_capture_attempt_ordinal_and_maximum_attempts",
+      "initial_in_memory_and_final_raw_manifest_roots",
+      "normalization_profile",
+      "exact_151_entry_inventory",
+      "snapshot_is_not_plan_registry_implementation_or_runtime_authority",
+      "runtime_authority_none"
+    ],
+    "required_fields_per_entry": [
+      "ordinal",
+      "relative_path",
+      "source_path",
+      "snapshot_path",
+      "raw_source_sha256",
+      "raw_source_bytes",
+      "normalized_snapshot_sha256",
+      "normalized_snapshot_bytes"
+    ],
+    "entry_count": 151,
+    "one_entry_per_selected_path": true,
+    "entry_order": "ascending_dotnet_string_comparer_ordinal_by_relative_path"
+  },
+  "future_owner_disposition_contract": {
+    "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+    "must_bind": [
+      "approval_request_full_SHA256",
+      "separate_owner_confirmation",
+      "exact_156_path_scope",
+      "exact_151_markdown_path_selector",
+      "exact_19_non_markdown_manifest_entry_exclusions",
+      "mutable_source_and_immutable_snapshot_boundary",
+      "no_semantic_delta_or_plan_adoption",
+      "no_state_gate_implementation_or_runtime_effect"
+    ]
+  },
+  "future_capture_evidence_contract": {
+    "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml",
+    "must_record": [
+      "capture_attempt_count_and_successful_attempt_ordinal",
+      "initial_in_memory_and_final_raw_manifest_roots_for_each_attempt",
+      "stable_attempt_equality_result",
+      "strict_UTF8_validation_for_all_151_inputs",
+      "normalization_validation_for_all_151_outputs",
+      "raw_and_normalized_per_entry_bindings",
+      "unselected_content_read_count_zero",
+      "network_dependency_temp_target_repository_code_and_test_use_counts_zero",
+      "runtime_authority_none"
+    ],
+    "may_claim_semantic_correctness_or_bug_resolution": false,
+    "may_claim_only_reproducible_capture_and_document_hygiene": true
+  },
+  "future_document_check_contract": {
+    "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml",
+    "required_checks": [
+      "baseline_HEAD_parent_tree_and_clean_tracked_index_state",
+      "approval_request_full_SHA256_and_separate_owner_confirmation",
+      "pinned_path_set_authority_SHA256_size_selector_and_exact_151_unique_markdown_paths",
+      "exact_19_non_markdown_manifest_entries_are_excluded",
+      "bounded_attempt_count_is_between_one_and_three",
+      "successful_attempt_initial_in_memory_and_final_manifest_roots_match",
+      "all_151_raw_source_hash_size_pins_match_the_stable_in_memory_capture",
+      "all_151_snapshot_paths_are_exactly_the_projected_new_paths",
+      "all_151_normalized_snapshot_hash_size_pins_match_repository_bytes",
+      "all_snapshot_files_are_strict_UTF8_without_BOM_LF_only_and_have_exactly_one_final_LF",
+      "manifest_has_exactly_151_complete_unique_entries_in_ordinal_order",
+      "unselected_content_was_not_read_copied_hashed_or_used_for_claims",
+      "only_the_exact_156_future_paths_exist_as_new_paths",
+      "all_preexisting_tracked_paths_are_unchanged",
+      "structured_new_documents_have_no_duplicate_keys",
+      "no_repository_code_tests_network_dependencies_locked_environment_or_temp_targets_were_used",
+      "no_semantic_delta_applicability_plan_state_status_gate_implementation_runtime_or_remote_effect_claim"
+    ]
+  },
+  "future_commit_contract": {
+    "authorized_now": false,
+    "requires_separate_exact_full_request_SHA256_owner_confirmation": true,
+    "commit_count": 1,
+    "kind": "local_immutable_documentation_snapshot_commit",
+    "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "path_count": 156,
+    "exact_path_derivation": "the_five_metadata_paths_plus_the_151_prompt_path_projections_and_no_other_paths",
+    "message": "docs(pipeline-v2): freeze legacy prompt snapshot",
+    "trailers": [
+      "Approval-Request-SHA256: <full_sha256_of_this_complete_request_file>",
+      "Snapshot-Selection: exact-151-markdown-prompts",
+      "Runtime-Authority: none"
+    ],
+    "staged_set_must_equal_exact_path_derivation": true,
+    "post_commit_inventory_must_be_exactly_156_all_new_paths": true,
+    "commit_does_not_authorize_semantic_delta_analysis_applicability_changes_plan_adoption_review_implementation_or_runtime": true
+  },
+  "current_step": {
+    "authorized_deletion_count": 1,
+    "authorized_creation_count": 1,
+    "deleted_path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v1.yaml",
+    "created_path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+    "prompt_files_read_or_copied": 0,
+    "other_future_paths_created": 0,
+    "staging_or_commit": false,
+    "repository_code_or_tests": false,
+    "network": false,
+    "dependencies": [],
+    "locked_environments": [],
+    "temp_targets": [],
+    "runtime_authority": "none"
+  },
+  "unchanged_boundaries": {
+    "old_pipeline": "immutable",
+    "existing_legacy_successor_package": "immutable_historical_documentation_package",
+    "existing_development_and_architecture_plans": "immutable",
+    "state_STATE_renderer_and_profile": "immutable",
+    "status_and_all_gates": "unchanged",
+    "code_tests_and_migrations": "unchanged",
+    "K0b03_K0b04_K0b05_and_N1": "not_advanced",
+    "Alpha0_F10_F15_model_and_provider_execution": "forbidden",
+    "runtime_publications_and_remote_effects": "forbidden",
+    "snapshot_authority": "immutable_reference_only_not_registry_plan_implementation_or_runtime_authority",
+    "runtime_authority": "none"
+  },
+  "future_prewrite_checks": [
+    "reverify_baseline_HEAD_parent_tree_and_clean_tracked_index_state",
+    "verify_this_request_matches_the_owner_confirmed_full_SHA256_and_size",
+    "verify_the_other_155_future_paths_are_absent",
+    "verify_the_pinned_path_set_authority_SHA256_and_size",
+    "derive_and_validate_exactly_151_unique_safe_relative_markdown_paths",
+    "derive_and_validate_the_exact_19_excluded_non_markdown_manifest_entries_without_reading_their_contents",
+    "complete_one_stable_bounded_in_memory_capture_attempt_before_any_repository_write"
+  ],
+  "stop_conditions": [
+    "baseline_HEAD_parent_tree_or_tracked_index_cleanliness_mismatch",
+    "approval_request_hash_size_or_owner_confirmation_mismatch",
+    "path_set_authority_hash_size_selector_selected_count_excluded_count_order_uniqueness_or_path_safety_mismatch",
+    "any_of_the_other_155_future_targets_already_exists",
+    "selected_markdown_prompt_missing_unreadable_or_not_strict_UTF8",
+    "initial_in_memory_or_final_selected_manifest_mismatch_within_an_attempt",
+    "no_stable_capture_after_three_attempts",
+    "any_repository_write_before_a_stable_in_memory_capture",
+    "any_attempt_to_read_copy_hash_or_use_unselected_content",
+    "any_unlisted_write_stage_or_commit_path",
+    "any_existing_file_modification",
+    "any_repository_code_test_network_dependency_locked_environment_or_temp_target_requirement",
+    "any_semantic_delta_applicability_plan_state_status_gate_implementation_runtime_publication_or_remote_effect",
+    "any_scope_expansion"
+  ],
+  "current_request_validation": [
+    "v1_request_absent",
+    "only_this_v2_request_is_untracked",
+    "tracked_worktree_and_index_remain_clean",
+    "valid_JSON_which_is_valid_YAML",
+    "strict_UTF8_without_BOM",
+    "LF_only",
+    "exactly_one_final_LF",
+    "no_duplicate_keys",
+    "full_SHA256_and_decimal_byte_count_reported_to_owner"
+  ],
+  "proposed_owner_confirmation_template": "Подтверждаю approval-request v2 SHA-256 `<full_sha256_of_new_pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml>` и разрешаю на baseline HEAD `b7887957c854825044b448a0ff6a1e84e2ab6562` выполнить весь описанный exact scope bounded in-memory capture и одного immutable 156-path documentation snapshot commit: создать ровно 151 LF-normalized `.md` prompt/source-файл по pinned prompts-only selector, manifest, owner disposition, capture evidence и document-check evidence, затем выполнить один local commit с parent `b7887957c854825044b448a0ff6a1e84e2ab6562`, сообщением `docs(pipeline-v2): freeze legacy prompt snapshot` и указанными trailers. Разрешаю не более трёх technical capture attempts без repository writes до stable attempt. Ровно 19 non-markdown manifest entries и любые другие unselected source paths запрещено читать по содержимому, копировать или включать в stability checks; их изменение не является mismatch. Изменения live source после successful capture не инвалидируют committed snapshot. Существующие файлы, планы, state/STATE, renderer/profile, status/gates, code/tests/migrations остаются неизменными; semantic delta analysis, applicability/plan changes, independent review, K0b-03/K0b-04/K0b-05/N1, Alpha0/F10/F15/model/provider execution, network, dependencies, locked environments, temp-targets, runtime publications и remote effects не разрешены; runtime authority остаётся `none`. При любом mismatch или scope expansion — остановиться без staging/commit и сообщить точное состояние.",
+  "runtime_authority": "none"
+}
