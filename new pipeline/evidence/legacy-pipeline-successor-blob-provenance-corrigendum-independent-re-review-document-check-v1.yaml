@@ -1,0 +1,236 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_precommit_document_checks_passed_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-approval-request-v1.yaml",
+      "sha256": "c0a4271d6fdae1f36966205c449c4183f4f58add2b9cbe114d14d91d2f489af6",
+      "bytes": 19900
+    },
+    "independent_re_review": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-v1.yaml",
+      "sha256": "4fddf845f6b8a5f2c0562b0cd255880442a8ef9bc0189f4034fa883d28cdbdcd",
+      "bytes": 16150
+    }
+  },
+  "baseline": {
+    "head": "72dff2dfae3ec0620e69d9e283b269a59a669bef",
+    "parent": "9ed4a396412038098887245ad2e83b8f66723e72",
+    "tree": "51bf01561be0706c5ef59046403191c9e7ca40b2",
+    "tracked_worktree_before_package": "clean",
+    "index_before_package": "clean",
+    "initial_untracked_set": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-approval-request-v1.yaml"
+    ]
+  },
+  "package_inventory": {
+    "path_count": 3,
+    "all_paths_new": true,
+    "existing_files_modified": 0,
+    "paths": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-approval-request-v1.yaml",
+      "new pipeline/reviews/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-document-check-v1.yaml"
+    ]
+  },
+  "verified_review_result": {
+    "reviewer_profile": "fresh_context_read_only_non_author",
+    "result": "approve",
+    "review_check_count": 23,
+    "passed_review_check_count": 23,
+    "new_finding_count": 0,
+    "new_blocking_finding_count": 0,
+    "LSR_F01_remediation_verified": true,
+    "LSR_F01_formally_closed": false,
+    "formal_closure_requires_separate_owner_disposition": true,
+    "carry_forward_finding_ids": [
+      "LSR-F02",
+      "LSR-F03",
+      "LSR-F04",
+      "LSR-F05"
+    ],
+    "non_finding_observation_ids": [
+      "LSRR-O01"
+    ],
+    "runtime_authority": "none"
+  },
+  "verified_binding_summary": {
+    "direct_read_pin_count": 9,
+    "direct_read_pin_errors": 0,
+    "baseline_blob_binding_count": 170,
+    "baseline_blob_binding_errors": 0,
+    "overlay_blob_binding_count": 21,
+    "overlay_blob_binding_errors": 0,
+    "path_partition": {
+      "total": 170,
+      "unchanged": 149,
+      "changed_overlay": 21,
+      "complete": true,
+      "disjoint": true
+    },
+    "mismatch_inventory": {
+      "mismatch_paths": 51,
+      "matching_paths": 119,
+      "all_mismatches_unchanged_base_path_no_overlay": true,
+      "pure_CRLF_to_LF": true,
+      "total_CR_byte_and_size_delta": 34112
+    }
+  },
+  "verified_projection_results": {
+    "baseline_git_blob_base_manifest_v1": {
+      "paths": 170,
+      "content_bytes": 11017109,
+      "manifest_bytes": 21817,
+      "manifest_sha256": "038069326933d295d67ea32d98c07c7ff4e5c389283ed519c8566b9c921b454e"
+    },
+    "baseline_git_blob_unchanged_subset_manifest_v1": {
+      "paths": 149,
+      "content_bytes": 7539344,
+      "manifest_bytes": 19215,
+      "manifest_sha256": "7bab2c12c9633c03f1ab32d879f26741b42d99004aeea8a6899f486a3e36bb8f"
+    },
+    "baseline_git_blob_plus_committed_normalized_overlay_successor_manifest_v1": {
+      "paths": 170,
+      "content_bytes": 11313521,
+      "manifest_bytes": 21818,
+      "manifest_sha256": "c90e1b0854ffbc78661ae728a4581a8c1aae91cc0ca84a09e10f3bb23bafc2c2",
+      "named_successor_raw": false
+    }
+  },
+  "verified_preservation": {
+    "historical_roots_preserved": true,
+    "historical_provenance_roles_corrected": true,
+    "embedded_pins_checked_across_eight_documents": 253,
+    "embedded_pin_mismatches": 0,
+    "normalized_projection_roots_unchanged": true,
+    "prompt_snapshot_partition_148_3_unchanged": true,
+    "three_K0b04_impact_classifications_unchanged": true,
+    "plans_state_STATE_renderer_profile_status_and_gates_unchanged": true,
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03_status": "blocked",
+    "runtime_authority": "none"
+  },
+  "checks": [
+    {
+      "ordinal": 1,
+      "check": "baseline_head_parent_tree_and_clean_status",
+      "result": "pass",
+      "evidence": "HEAD_72dff2df_parent_9ed4a396_tree_51bf0156_index_and_tracked_worktree_clean_before_package"
+    },
+    {
+      "ordinal": 2,
+      "check": "approval_request_full_hash_size_status_and_exact_scope",
+      "result": "pass",
+      "evidence": "c0a4271d6fdae1f36966205c449c4183f4f58add2b9cbe114d14d91d2f489af6_19900_bytes_pending_confirmation_status_and_three_path_contract_match"
+    },
+    {
+      "ordinal": 3,
+      "check": "reviewer_independence",
+      "result": "pass",
+      "evidence": "fresh_context_read_only_non_author_did_not_author_or_modify_reviewed_packages_and_used_no_live_or_effectful_resources"
+    },
+    {
+      "ordinal": 4,
+      "check": "all_nine_direct_read_pins",
+      "result": "pass",
+      "evidence": "nine_full_SHA256_and_decimal_byte_pins_match_with_zero_errors"
+    },
+    {
+      "ordinal": 5,
+      "check": "all_twenty_three_review_checks",
+      "result": "pass",
+      "evidence": "review_contains_ordinals_1_through_23_exactly_once_and_all_results_are_pass"
+    },
+    {
+      "ordinal": 6,
+      "check": "review_result_and_finding_counts",
+      "result": "pass",
+      "evidence": "result_approve_new_finding_count_zero_new_blocking_finding_count_zero"
+    },
+    {
+      "ordinal": 7,
+      "check": "blob_bindings_partition_roots_counts_and_sizes",
+      "result": "pass",
+      "evidence": "170_baseline_21_overlay_partition_170_149_21_and_roots_03806932_7bab2c12_c90e1b08_match"
+    },
+    {
+      "ordinal": 8,
+      "check": "mismatch_inventory_and_line_ending_explanation",
+      "result": "pass",
+      "evidence": "51_exact_unchanged_base_paths_pure_CRLF_to_LF_and_34112_byte_delta"
+    },
+    {
+      "ordinal": 9,
+      "check": "historical_roots_and_corrected_roles",
+      "result": "pass",
+      "evidence": "73afe757_2ea156ba_ce227e25_preserved_with_worktree_observed_or_mixed_roles"
+    },
+    {
+      "ordinal": 10,
+      "check": "carry_forward_findings_and_non_finding_observation",
+      "result": "pass",
+      "evidence": "LSR_F02_through_LSR_F05_unchanged_and_LSRR_O01_is_info_non_finding_zero_drift"
+    },
+    {
+      "ordinal": 11,
+      "check": "LSR_F01_verified_but_not_formally_closed",
+      "result": "pass",
+      "evidence": "remediation_verified_true_formally_closed_false_separate_owner_disposition_required"
+    },
+    {
+      "ordinal": 12,
+      "check": "cross_document_hashes_and_semantic_consistency",
+      "result": "pass",
+      "evidence": "review_pins_request_and_document_check_pins_request_plus_review_with_matching_results_counts_and_boundaries"
+    },
+    {
+      "ordinal": 13,
+      "check": "UTF8_without_BOM_LF_one_final_LF_no_duplicate_keys",
+      "result": "pass",
+      "evidence": "all_three_JSON_compatible_YAML_documents_strict_UTF8_no_BOM_zero_CR_exact_one_final_LF_and_zero_duplicate_keys"
+    },
+    {
+      "ordinal": 14,
+      "check": "exact_three_path_all_new_staged_and_commit_inventory",
+      "result": "pass",
+      "evidence": "precommit_inventory_contains_only_request_review_and_document_check_as_new_paths"
+    },
+    {
+      "ordinal": 15,
+      "check": "future_parent_message_contiguous_trailers_and_runtime_boundary",
+      "result": "pass",
+      "evidence": "parent_72dff2df_exact_subject_four_contiguous_trailers_runtime_none_and_no_owner_closure"
+    }
+  ],
+  "format_validation": {
+    "path_count": 3,
+    "strict_UTF8": true,
+    "UTF8_BOM_count": 0,
+    "CR_byte_count": 0,
+    "one_final_LF_for_every_path": true,
+    "JSON_compatible_YAML_parse_errors": 0,
+    "duplicate_key_errors": 0
+  },
+  "execution_boundary": {
+    "repository_code_or_tests_executed": false,
+    "live_source_read": false,
+    "network_used": false,
+    "dependencies_used": false,
+    "locked_environments_used": [],
+    "temp_targets_used": [],
+    "plan_adoption": false,
+    "state_or_gate_transition": false,
+    "LSR_F01_formal_closure": false,
+    "implementation_or_runtime_execution": false,
+    "runtime_authority": "none"
+  },
+  "mandatory_follow_up": {
+    "action": "separate_owner_disposition_for_formal_LSR_F01_closure",
+    "separate_exact_scope_authority_required": true,
+    "independent_re_review_commit_does_not_close_LSR_F01": true,
+    "no_additional_external_review_required_before_owner_disposition_absent_new_mismatch": true
+  }
+}
