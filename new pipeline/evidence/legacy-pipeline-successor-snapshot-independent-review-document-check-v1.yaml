@@ -1,0 +1,188 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-snapshot-independent-review-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_precommit_independent_review_document_checks_passed_changes_required_runtime_not_authorized",
+  "review_result": "changes_required",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml",
+      "sha256": "9bfec5428670cc74ec1036a2aae3de56567557ac422e91a4d335dd17c504365f",
+      "bytes": 89797
+    },
+    "independent_review": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml",
+      "sha256": "83cbd72df6f6755b6ab606384b06278a2f18a9698062f2ed18189ab6d0b1f03b",
+      "bytes": 17609
+    },
+    "confirmed_direct_read_manifest": {
+      "path_count": 196,
+      "content_bytes": 16241564,
+      "manifest_bytes": 37900,
+      "manifest_sha256": "0f3057aafeb65e39f7eee24e575a3822aebe3b4f6b8f8716dcdfecace55d7fb2"
+    },
+    "external_reviewer_return": {
+      "sha256": "b2f8c223ca55b0e41ea2ca9780234feb08fac3298b0b6b912023709b8b083a25",
+      "bytes": 10349,
+      "durable_authority": false
+    }
+  },
+  "baseline": {
+    "head": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+    "parent": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "tree": "008565b814f27bca9ab8ae9ae042bb455bf608af",
+    "tracked_worktree_before_review_materialization": "clean",
+    "index_before_review_materialization": "clean",
+    "initial_untracked_set": [
+      "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml"
+    ]
+  },
+  "reviewer_independence": {
+    "profile": "fresh_context_read_only_non_author",
+    "created_reviewed_packages": false,
+    "modified_repository_files": false,
+    "modified_index": false,
+    "used_live_source": false,
+    "confirmed_by_owner": true,
+    "result_is_owner_approval": false
+  },
+  "package_inventory": {
+    "path_count": 3,
+    "all_paths_new": true,
+    "paths": [
+      "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml",
+      "new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-successor-snapshot-independent-review-document-check-v1.yaml"
+    ],
+    "existing_files_modified": 0
+  },
+  "checks": [
+    {
+      "ordinal": 1,
+      "check": "baseline_head_parent_tree_and_clean_tracked_index_state",
+      "result": "pass",
+      "evidence": "baseline_matches_request_and_only_the_request_was_untracked_before_materialization"
+    },
+    {
+      "ordinal": 2,
+      "check": "approval_request_full_hash_size_and_status",
+      "result": "pass",
+      "evidence": "request_9bfec5428670cc74ec1036a2aae3de56567557ac422e91a4d335dd17c504365f_89797_bytes_status_pending_separate_exact_hash_confirmation_was_owner_confirmed"
+    },
+    {
+      "ordinal": 3,
+      "check": "direct_read_manifest_reproduction",
+      "result": "pass",
+      "evidence": "196_entries_zero_pin_errors_37900_bytes_0f3057aafeb65e39f7eee24e575a3822aebe3b4f6b8f8716dcdfecace55d7fb2"
+    },
+    {
+      "ordinal": 4,
+      "check": "reviewer_independence_and_read_only_behavior",
+      "result": "pass",
+      "evidence": "owner_confirms_fresh_context_read_only_non_author_profile_and_reviewer_left_repository_files_and_index_unchanged"
+    },
+    {
+      "ordinal": 5,
+      "check": "review_result_enum_and_blocking_consistency",
+      "result": "pass",
+      "evidence": "result_changes_required_is_allowed_and_required_by_one_blocking_finding"
+    },
+    {
+      "ordinal": 6,
+      "check": "complete_26_check_inventory",
+      "result": "pass",
+      "evidence": "review_contains_exactly_26_uniquely_numbered_check_rows_and_preserves_each_external_reviewer_outcome_and_qualification"
+    },
+    {
+      "ordinal": 7,
+      "check": "complete_finding_inventory",
+      "result": "pass",
+      "evidence": "exactly_five_unique_findings_LSR_F01_through_LSR_F05_are_present_with_one_blocking_and_four_non_blocking"
+    },
+    {
+      "ordinal": 8,
+      "check": "finding_required_fields",
+      "result": "pass",
+      "evidence": "every_finding_has_stable_ID_severity_blocking_path_section_evidence_affected_claim_and_required_disposition"
+    },
+    {
+      "ordinal": 9,
+      "check": "known_blocking_finding_materialization_exception",
+      "result": "pass",
+      "evidence": "owner_explicitly_allows_LSR_F01_to_be_recorded_as_review_evidence_without_treating_it_as_a_pre_materialization_stop_and_without_authorizing_remediation"
+    },
+    {
+      "ordinal": 10,
+      "check": "review_limitation_preserved",
+      "result": "pass",
+      "evidence": "check_11_is_explicitly_limited_to_structure_uniqueness_counts_and_diff_theme_correspondence_without_full_semantic_read_of_approximately_11_MB"
+    },
+    {
+      "ordinal": 11,
+      "check": "unaffected_projection_and_classification_results",
+      "result": "pass",
+      "evidence": "roots_c7579bc5_and_390ab862_partition_148_3_and_three_K0b04_impact_routes_are_recorded_as_reproduced"
+    },
+    {
+      "ordinal": 12,
+      "check": "effect_boundaries",
+      "result": "pass",
+      "evidence": "review_denies_remediation_plan_adoption_state_or_gate_transition_implementation_and_runtime_authority"
+    },
+    {
+      "ordinal": 13,
+      "check": "document_encoding_structure_and_duplicate_keys",
+      "result": "pass",
+      "evidence": "all_three_new_documents_are_strict_UTF8_without_BOM_LF_only_one_final_LF_JSON_compatible_YAML_and_have_zero_duplicate_object_keys"
+    },
+    {
+      "ordinal": 14,
+      "check": "cross_document_hashes_and_references",
+      "result": "pass",
+      "evidence": "request_and_review_full_hashes_sizes_and_referenced_repository_paths_are_bound_without_dangling_review_package_references"
+    },
+    {
+      "ordinal": 15,
+      "check": "exact_three_path_precommit_candidate_set",
+      "result": "precommit_pass",
+      "evidence": "candidate_set_is_exactly_the_request_review_and_document_check_and_must_be_rechecked_after_staging"
+    },
+    {
+      "ordinal": 16,
+      "check": "future_commit_contract",
+      "result": "precommit_contract_bound",
+      "evidence": "parent_1129f160_message_and_required_approval_reviewer_independence_and_runtime_trailers_are_fixed_for_post_commit_verification"
+    }
+  ],
+  "expected_review_findings": {
+    "finding_count": 5,
+    "blocking_finding_count": 1,
+    "blocking_ids": [
+      "LSR-F01"
+    ],
+    "non_blocking_ids": [
+      "LSR-F02",
+      "LSR-F03",
+      "LSR-F04",
+      "LSR-F05"
+    ]
+  },
+  "format_profile": {
+    "encoding": "strict_UTF8_without_BOM",
+    "line_endings": "LF_only",
+    "final_line_ending": "exactly_one_final_LF",
+    "structured_format": "JSON_compatible_YAML",
+    "duplicate_keys": 0,
+    "network_used": false,
+    "dependencies_used": [],
+    "locked_environments_used": [],
+    "temp_targets_used": [],
+    "repository_code_or_tests_executed": []
+  },
+  "new_mismatches": [],
+  "known_findings_are_not_remediated": true,
+  "state_or_gate_transition_performed": false,
+  "implementation_performed": false,
+  "runtime_authority": "none"
+}

@@ -1,0 +1,374 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-snapshot-independent-review-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_changes_required_one_blocking_finding_runtime_not_authorized",
+  "result": "changes_required",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml",
+      "sha256": "9bfec5428670cc74ec1036a2aae3de56567557ac422e91a4d335dd17c504365f",
+      "bytes": 89797
+    },
+    "confirmed_direct_read_manifest": {
+      "path_count": 196,
+      "manifest_sha256": "0f3057aafeb65e39f7eee24e575a3822aebe3b4f6b8f8716dcdfecace55d7fb2",
+      "manifest_bytes": 37900,
+      "content_bytes": 16241564
+    },
+    "owner_confirmation": {
+      "confirmed_request_sha256": "9bfec5428670cc74ec1036a2aae3de56567557ac422e91a4d335dd17c504365f",
+      "review_result_accepted_for_documentation": "changes_required",
+      "known_LSR_F01_allowed_to_be_recorded_as_review_evidence": true,
+      "owner_approval_or_remediation_authority_granted": false
+    }
+  },
+  "reviewer": {
+    "independence_profile": "fresh_context_read_only_non_author",
+    "created_successor_package": false,
+    "created_snapshot_package": false,
+    "created_semantic_delta_package": false,
+    "modified_repository_files": false,
+    "modified_index": false,
+    "used_live_source": false,
+    "reviewer_recommendation_is_owner_approval": false
+  },
+  "external_return_provenance": {
+    "kind": "user_supplied_fresh_context_reviewer_transcript",
+    "sha256": "b2f8c223ca55b0e41ea2ca9780234feb08fac3298b0b6b912023709b8b083a25",
+    "bytes": 10349,
+    "transcript_is_long_term_authority": false,
+    "durable_result_is_this_review_document": true
+  },
+  "git_baseline": {
+    "head": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+    "parent": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "tree": "008565b814f27bca9ab8ae9ae042bb455bf608af",
+    "index": "clean",
+    "git_status": "clean_except_the_untracked_review_approval_request",
+    "byte_clean_qualification": "54_tracked_worktree_files_have_line_ending_bytes_different_from_HEAD_despite_git_clean_status"
+  },
+  "review_summary": {
+    "result": "changes_required",
+    "check_count": 26,
+    "blocking_finding_count": 1,
+    "non_blocking_finding_count": 4,
+    "finding_count": 5,
+    "blocking_finding_ids": [
+      "LSR-F01"
+    ],
+    "non_blocking_finding_ids": [
+      "LSR-F02",
+      "LSR-F03",
+      "LSR-F04",
+      "LSR-F05"
+    ],
+    "all_other_reviewed_claims_reproduced_from_git_blobs": true,
+    "normalized_projection_roots_reproduced": true,
+    "snapshot_partition_reproduced": true,
+    "new_semantic_delta_classifications_reproduced": true,
+    "reviewed_packages_changed": false,
+    "remediation_performed": false
+  },
+  "four_axis_assessment": {
+    "completeness": {
+      "rating": "high_with_documented_authority_chain_qualification",
+      "evidence": "all_26_checks_are_repository_verifiable_without_live_source_all_three_packages_have_request_disposition_evidence_and_document_check_and_346_embedded_pins_have_zero_mismatches",
+      "qualification": "verbatim_owner_confirmation_is_present_only_in_the_successor_disposition_while_snapshot_and_semantic_delta_refer_to_the_conversation_without_equivalent_commit_trailers"
+    },
+    "accuracy": {
+      "rating": "changes_required_due_to_one_material_provenance_mismatch",
+      "evidence": "LSR_F01_affects_the_raw_base_successor_and_unchanged_manifest_roots_while_other_roots_sizes_counts_partitions_and_section_ranges_match"
+    },
+    "efficiency": {
+      "rating": "mechanically_verifiable_but_heavy",
+      "evidence": "the_direct_review_set_has_196_paths_and_16241564_bytes_the_snapshot_repeats_148_normalized_unchanged_files_and_three_requests_repeat_boundaries",
+      "out_of_scope_recommendation": "a_future_separately_authorized_committed_verifier_could_reduce_repeated_ad_hoc_audit_logic"
+    },
+    "safety": {
+      "rating": "strong_with_line_ending_reproducibility_risk",
+      "evidence": "runtime_authority_is_none_state_and_gates_are_unchanged_provider_literals_remain_under_references_and_runtime_code_does_not_import_legacy_content",
+      "risk": "local_core_autocrlf_true_and_stale_CRLF_or_mixed_worktree_bytes_can_regenerate_non_reproducible_raw_hash_claims"
+    }
+  },
+  "checks": [
+    {
+      "ordinal": 1,
+      "result": "pass_with_qualification",
+      "check": "git_baseline_and_clean_status",
+      "evidence": "HEAD_parent_tree_and_empty_index_match_Git_status_is_clean_but_54_tracked_files_have_worktree_line_endings_different_from_HEAD_blobs",
+      "finding_refs": [
+        "LSR-F02"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "result": "pass",
+      "check": "exact_parent_tree_and_29_path_all_new_successor_inventory",
+      "evidence": "commit_b7887957_has_parent_84b390ef_tree_145b32d3_and_exactly_29_A_paths"
+    },
+    {
+      "ordinal": 3,
+      "result": "pass",
+      "check": "exact_parent_tree_and_156_path_all_new_snapshot_inventory",
+      "evidence": "commit_08efc5b7_has_parent_b7887957_tree_f5c8977a_and_exactly_156_A_paths_comprising_151_prompts_and_5_metadata_paths"
+    },
+    {
+      "ordinal": 4,
+      "result": "pass",
+      "check": "exact_parent_tree_and_5_path_all_new_semantic_delta_inventory",
+      "evidence": "commit_1129f160_has_parent_08efc5b7_tree_008565b8_and_exactly_5_A_paths"
+    },
+    {
+      "ordinal": 5,
+      "result": "pass",
+      "check": "committed_bytes_and_full_SHA256_for_all_direct_review_inputs",
+      "evidence": "196_paths_16241564_content_bytes_37900_manifest_bytes_manifest_0f3057aafeb65e39f7eee24e575a3822aebe3b4f6b8f8716dcdfecace55d7fb2_true_ordinal_order_and_worktree_equals_HEAD_for_all_196"
+    },
+    {
+      "ordinal": 6,
+      "result": "pass_with_qualification",
+      "check": "request_confirmation_owner_disposition_authority_chains_for_all_three_packages",
+      "evidence": "hash_chains_close_but_only_the_successor_disposition_records_verbatim_owner_confirmation",
+      "finding_refs": [
+        "LSR-F04"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "result": "fail_blocking",
+      "check": "170_path_base_successor_manifest_and_exact_21_149_partition",
+      "evidence": "170_paths_and_21_149_partition_match_but_raw_base_successor_and_unchanged_roots_are_derived_from_worktree_observed_bytes_not_the_pinned_84b390ef_git_blobs_for_51_paths",
+      "finding_refs": [
+        "LSR-F01"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "result": "pass_with_qualification",
+      "check": "21_overlay_raw_and_normalized_bindings",
+      "evidence": "all_21_overlay_hashes_and_sizes_match_have_no_BOM_or_CR_have_one_final_LF_and_are_normalization_idempotent_raw_source_pins_are_only_internally_consistent_without_live_source",
+      "finding_refs": []
+    },
+    {
+      "ordinal": 9,
+      "result": "pass",
+      "check": "complete_exclusion_inventory_and_prohibition_on_semantic_or_runtime_use",
+      "evidence": "33_dot_bak_4_dot_pytest_cache_and_21_recursive_closures_are_declared_none_is_copied_or_imported_by_runtime_code"
+    },
+    {
+      "ordinal": 10,
+      "result": "pass",
+      "check": "exactly_one_applicability_category_owner_phase_consumer_native_target_and_future_route_for_each_of_21_original_changed_paths",
+      "evidence": "all_21_rows_are_complete_unique_and_bind_the_same_overlay_hashes_as_the_successor_manifest"
+    },
+    {
+      "ordinal": 11,
+      "result": "pass",
+      "check": "category_correctness_for_3_already_covered_2_K0b03_8_K0b04_and_8_N1_rows",
+      "evidence": "category_counts_and_base_to_overlay_diff_themes_match_the_declared_routing_for_all_21_paths",
+      "limitation": "structural_uniqueness_count_and_diff_theme_review_only_not_a_full_semantic_read_of_approximately_11_MB_of_overlay_text"
+    },
+    {
+      "ordinal": 12,
+      "result": "pass",
+      "check": "development_plan_v0_14_delta_against_v0_13_and_no_undeclared_scope",
+      "evidence": "only_the_header_changes_0_14_paragraph_three_sequence_rows_and_new_section_12_1_are_added"
+    },
+    {
+      "ordinal": 13,
+      "result": "pass",
+      "check": "architecture_addendum_precedence_ownership_and_single_source_boundaries",
+      "evidence": "precedence_levels_1_through_5_single_sources_for_manifest_applicability_and_registry_v2_and_reverse_flow_prohibition_are_explicit"
+    },
+    {
+      "ordinal": 14,
+      "result": "pass",
+      "check": "K0b03_planning_package_v1_1_and_prohibition_on_legacy_prompt_or_runtime_import",
+      "evidence": "v1_1_is_an_overlay_on_unchanged_v1_sha256_0ef7d611_and_section_2_prohibits_runtime_legacy_import"
+    },
+    {
+      "ordinal": 15,
+      "result": "pass",
+      "check": "exact_151_path_Markdown_only_snapshot_selector",
+      "evidence": "ordinal_ignore_case_dot_md_selector_yields_151_unique_paths_and_the_19_excluded_entries_match"
+    },
+    {
+      "ordinal": 16,
+      "result": "pass_with_qualification",
+      "check": "raw_capture_and_normalized_snapshot_bindings_for_all_151_paths",
+      "evidence": "all_151_raw_and_normalized_bindings_match_and_capture_evidence_equals_manifest_entries_BOM_is_consumed_for_15_files_as_an_encoding_signature",
+      "finding_refs": [
+        "LSR-F03"
+      ]
+    },
+    {
+      "ordinal": 17,
+      "result": "pass",
+      "check": "previous_projection_root",
+      "evidence": "151_paths_10969317_content_bytes_19110_manifest_bytes_c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc_reproduced_from_git_blobs"
+    },
+    {
+      "ordinal": 18,
+      "result": "pass",
+      "check": "snapshot_projection_root",
+      "evidence": "151_paths_10974418_content_bytes_19110_manifest_bytes_390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d_and_raw_root_72f6ca7d_reproduced"
+    },
+    {
+      "ordinal": 19,
+      "result": "pass",
+      "check": "exact_148_unchanged_3_changed_partition",
+      "evidence": "only_J0_Dispatcher_J14_Infra_Methodologist_and_J17_Infra_Tester_are_changed"
+    },
+    {
+      "ordinal": 20,
+      "result": "pass",
+      "check": "full_before_after_pins_and_section_level_semantics_for_J0_J14_J17",
+      "evidence": "before_after_hashes_and_sizes_match_and_each_file_has_one_hunk_within_lines_779_804_1189_1209_and_86_101_respectively"
+    },
+    {
+      "ordinal": 21,
+      "result": "pass",
+      "check": "all_three_new_deltas_classified_K0b04_impact_with_preserved_routing",
+      "evidence": "classification_owner_phase_consumer_and_route_match_applicability_rows_207_215_229_237_and_251_259"
+    },
+    {
+      "ordinal": 22,
+      "result": "pass",
+      "check": "legacy_literals_are_not_Pipeline_v2_authority",
+      "evidence": "service_account_project_machine_path_and_EMA_owner_ID_literals_do_not_occur_outside_references"
+    },
+    {
+      "ordinal": 23,
+      "result": "pass",
+      "check": "no_revision_required_for_v0_14_canonical_plans_and_K0b03_v1_1",
+      "evidence": "the_v0_14_K0b04_sequence_row_and_K0b03_v1_1_section_7_already_route_attestation_identity_binding_to_K0b04"
+    },
+    {
+      "ordinal": 24,
+      "result": "pass",
+      "check": "additive_supplement_suffices_without_mutating_immutable_predecessor_packages",
+      "evidence": "the_supplement_is_additive_the_predecessor_packages_are_unchanged_and_the_semantic_delta_commit_has_exactly_5_new_paths"
+    },
+    {
+      "ordinal": 25,
+      "result": "pass",
+      "check": "state_STATE_renderer_profile_status_and_all_gates_unchanged",
+      "evidence": "all_four_pins_are_unchanged_since_84b390ef_and_the_inventory_remains_7_open_and_10_closed_gates",
+      "finding_refs": [
+        "LSR-F05"
+      ]
+    },
+    {
+      "ordinal": 26,
+      "result": "pass",
+      "check": "G_K0B03_UNTRUSTED_SHAPES_remains_open_and_runtime_authority_none",
+      "evidence": "gate_status_is_future_open_K0b03_status_is_blocked_and_runtime_authority_is_none"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "LSR-F01",
+      "severity": "high",
+      "blocking": true,
+      "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "section": "base_manifest_successor_raw_manifest_unchanged_raw_subset_and_entries_base_raw",
+      "evidence": "for_51_paths_git_show_84b390ef_old_pipeline_path_returns_LF_blobs_with_different_sha256_while_git_ls_files_eol_reports_i_lf_w_crlf_and_the_manifest_entries_match_the_worktree_bytes_for_all_170_paths",
+      "affected_claim": "base_role_immutable_repository_snapshot_and_roots_73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597_2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8_ce227e2575a3694e13721752addbc77accfebb6a47018516493806a30e581697",
+      "required_disposition": "create_a_separately_authorized_append_only_corrigendum_with_blob_based_base_successor_and_unchanged_roots_for_baseline_84b390ef_and_label_the_existing_values_as_worktree_observed_provenance"
+    },
+    {
+      "finding_id": "LSR-F02",
+      "severity": "medium",
+      "blocking": false,
+      "path": ".git/config",
+      "related_paths": [
+        "old pipeline/**",
+        "reviews/sources/*.txt"
+      ],
+      "section": "core_autocrlf_and_worktree_line_endings",
+      "evidence": "32_files_are_w_crlf_and_22_are_w_mixed_while_index_blobs_are_i_lf_and_dot_gitattributes_requires_LF",
+      "affected_claim": "required_worktree_status_clean_is_git_clean_but_not_byte_clean",
+      "required_disposition": "under_separate_authority_renormalize_the_worktree_remove_or_override_core_autocrlf_true_and_add_a_byte_clean_check_to_future_document_checks"
+    },
+    {
+      "finding_id": "LSR-F03",
+      "severity": "low",
+      "blocking": false,
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+      "related_paths": [
+        "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+        "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml"
+      ],
+      "section": "normalization_contract_transform_order_and_manifest_normalization",
+      "evidence": "the_request_says_strict_UTF8_decode_without_an_explicit_BOM_step_while_manifest_and_document_check_C07_consume_BOM_for_15_files_and_the_corresponding_base_blobs_also_have_BOM",
+      "affected_claim": "capture_execution_conforms_exactly_to_the_request_normalization_contract",
+      "required_disposition": "record_BOM_consumption_as_an_accepted_encoding_signature_interpretation_and_include_the_step_explicitly_in_future_requests"
+    },
+    {
+      "finding_id": "LSR-F04",
+      "severity": "low",
+      "blocking": false,
+      "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+      "related_paths": [
+        "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+        "commit:08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+        "commit:1129f160b2d62af422d64b7c38fbb5ec19c708aa"
+      ],
+      "section": "authority_owner_confirmation_and_commit_trailers",
+      "evidence": "the_two_dispositions_contain_only_a_conversation_label_without_confirmed_request_sha256_and_statement_verbatim_and_the_two_commits_have_no_Owner_Confirmation_trailer",
+      "affected_claim": "authority_chain_completeness_and_uniformity",
+      "required_disposition": "future_packages_should_record_the_confirmed_hash_and_verbatim_statement_uniformly"
+    },
+    {
+      "finding_id": "LSR-F05",
+      "severity": "info",
+      "blocking": false,
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "related_paths": [
+        "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+        "new pipeline/state/state.yaml"
+      ],
+      "section": "root_plan_status_and_deferred_plan_adoption",
+      "evidence": "canonical_state_remains_bound_to_v0_13_while_the_successor_disposition_names_v0_14_as_program_sequence_and_adoption_is_deferred",
+      "affected_claim": "unambiguous_current_development_plan_authority",
+      "required_disposition": "no_action_in_this_review_close_only_in_a_future_separately_authorized_plan_adoption_transaction"
+    }
+  ],
+  "review_limitations": [
+    {
+      "limitation_id": "LSR-L01",
+      "scope": "check_11",
+      "statement": "category_correctness_was_checked_by_structure_uniqueness_counts_and_correspondence_between_base_to_overlay_diff_themes_and_each_declared_row_not_by_full_semantic_reading_of_approximately_11_MB_of_overlay_text",
+      "invalidates_result": false
+    }
+  ],
+  "verified_unaffected_results": {
+    "previous_projection": {
+      "path_count": 151,
+      "content_bytes": 10969317,
+      "manifest_bytes": 19110,
+      "sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+    },
+    "snapshot_projection": {
+      "path_count": 151,
+      "content_bytes": 10974418,
+      "manifest_bytes": 19110,
+      "sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+    },
+    "partition": "148_unchanged_3_changed",
+    "new_delta_classifications": "three_K0b04_impact_rows_with_preserved_routing"
+  },
+  "effect_boundaries": {
+    "review_result_authorizes_remediation": false,
+    "review_result_authorizes_plan_adoption": false,
+    "review_result_authorizes_state_or_gate_transition": false,
+    "review_result_authorizes_implementation": false,
+    "review_result_authorizes_K0b03_K0b04_K0b05_or_N1_execution": false,
+    "review_result_authorizes_model_provider_or_runtime_execution": false,
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03_status": "blocked",
+    "runtime_authority": "none"
+  }
+}

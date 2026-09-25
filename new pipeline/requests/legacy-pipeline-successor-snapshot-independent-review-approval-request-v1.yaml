@@ -1,0 +1,2213 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-snapshot-independent-review-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "purpose": "request_a_fresh_context_read_only_non_author_independent_review_of_the_combined_legacy_successor_prompt_snapshot_and_semantic_delta_documentation_packages",
+  "non_authorizing_statement": {
+    "this_document_runs_a_reviewer": false,
+    "this_document_grants_reviewer_authority": false,
+    "this_document_grants_owner_approval": false,
+    "this_document_authorizes_remediation": false,
+    "this_document_adopts_a_plan": false,
+    "this_document_changes_state_or_a_gate": false,
+    "this_document_grants_implementation_or_runtime_authority": false,
+    "separate_exact_hash_owner_confirmation_required": true,
+    "runtime_authority": "none"
+  },
+  "git_baseline": {
+    "repository": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "head": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+    "parent": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "tree": "008565b814f27bca9ab8ae9ae042bb455bf608af",
+    "required_index_status": "clean",
+    "required_worktree_status": "clean"
+  },
+  "committed_package_inventories": [
+    {
+      "package": "legacy_pipeline_successor_and_plan_revision",
+      "commit": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+      "parent": "84b390ef281a31caa119023c5dee61fceaa25439",
+      "tree": "145b32d33a72f954c6955bb0aef9b21e74daabee",
+      "path_count": 29,
+      "all_paths_new": true,
+      "source_set": "legacy_successor_commit_29"
+    },
+    {
+      "package": "immutable_legacy_prompt_snapshot",
+      "commit": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+      "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+      "tree": "f5c8977a7068ca260062b142b789168d09698e5b",
+      "path_count": 156,
+      "all_paths_new": true,
+      "source_set": "prompt_snapshot_commit_156"
+    },
+    {
+      "package": "prompt_snapshot_semantic_delta",
+      "commit": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+      "parent": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+      "tree": "008565b814f27bca9ab8ae9ae042bb455bf608af",
+      "path_count": 5,
+      "all_paths_new": true,
+      "source_set": "semantic_delta_commit_5"
+    }
+  ],
+  "direct_read_manifest": {
+    "definition": "deduplicated_union_of_the_exact_three_commit_inventories_and_six_canonical_direct_paths_at_the_clean_baseline",
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_path_order",
+    "encoding": "UTF8_without_BOM",
+    "final_lf": "exactly_one_per_manifest_row_including_last_row",
+    "path_count": 196,
+    "content_bytes": 16241564,
+    "manifest_bytes": 37900,
+    "manifest_sha256": "0f3057aafeb65e39f7eee24e575a3822aebe3b4f6b8f8716dcdfecace55d7fb2",
+    "source_set_counts": {
+      "legacy_successor_commit_29": 29,
+      "prompt_snapshot_commit_156": 156,
+      "semantic_delta_commit_5": 5,
+      "canonical_direct": 6
+    },
+    "entries": [
+      {
+        "ordinal": 1,
+        "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+        "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+        "bytes": 246369,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      },
+      {
+        "ordinal": 2,
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+        "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+        "bytes": 101354,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 3,
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+        "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+        "bytes": 97569,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      },
+      {
+        "ordinal": 4,
+        "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+        "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+        "bytes": 13146,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 5,
+        "path": "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+        "sha256": "7cb686afaa08293b3db75043258e35df9fd6a0eaacbc06a2bfffc3bc7b0d3c39",
+        "bytes": 8354,
+        "source_sets": [
+          "semantic_delta_commit_5"
+        ]
+      },
+      {
+        "ordinal": 6,
+        "path": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+        "sha256": "7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b",
+        "bytes": 11398,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 7,
+        "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+        "sha256": "cdca76ee1772090f17ddc2213d97778a3244c14e562577d762957fbe3d24eeb9",
+        "bytes": 3247,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 8,
+        "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+        "sha256": "a7e51e2724c39eec395667316812a9382381c61c480dbf7a10d23f087b8923c6",
+        "bytes": 6272,
+        "source_sets": [
+          "semantic_delta_commit_5"
+        ]
+      },
+      {
+        "ordinal": 9,
+        "path": "new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml",
+        "sha256": "4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5",
+        "bytes": 8381,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 10,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml",
+        "sha256": "5ad4a8969ea08a692342d5991f85760dcd97e027a9e2c20c6b00eec24591b713",
+        "bytes": 155029,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 11,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml",
+        "sha256": "e8ecfba884d14628a2f1d7a724e87864cbdcc7ad1bc84e617e164df82da2372f",
+        "bytes": 8135,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 12,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1.yaml",
+        "sha256": "6c8374de4bba5eb12ca6a26bff0d3c4fcee71f5ffbc19fbec653ae6b962a1500",
+        "bytes": 8000,
+        "source_sets": [
+          "semantic_delta_commit_5"
+        ]
+      },
+      {
+        "ordinal": 13,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+        "sha256": "704029153429f5a9213b7aca3d519034db028e9de1d8fb88c2b500653e753073",
+        "bytes": 13731,
+        "source_sets": [
+          "semantic_delta_commit_5"
+        ]
+      },
+      {
+        "ordinal": 14,
+        "path": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+        "sha256": "a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c",
+        "bytes": 17797,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 15,
+        "path": "new pipeline/evidence/legacy-pipeline-successor-plan-revision-document-check-v1.yaml",
+        "sha256": "e4ba2175ce06c80e2eb8c749222fa5928fa225358a792e74bc1f4ca9a04b27d6",
+        "bytes": 14339,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 16,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+        "sha256": "cbd2a54c94e5e163013ab9c97eeb710193727c2a99ac1826ada31e85554ffa7e",
+        "bytes": 147591,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 17,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A Layer - Architecture Plan.md",
+        "sha256": "493ca273dfe11c98eb386f3edb83c7e79a2efeea6159d6ece2cc848e7a094c03",
+        "bytes": 57278,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 18,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A1.Vision Interview Agent.md",
+        "sha256": "e59f616b6d35babd275141dcb15b44946c7058fe31d45c9f52a6b8ec8694ef1e",
+        "bytes": 17223,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 19,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A2.Idea Note Generator.md",
+        "sha256": "0b287f59edf4535ab978e4684df72293a3c8c4fba3a338287d3bca2eeba12470",
+        "bytes": 16211,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 20,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A3.Marketing Reviewer v2.md",
+        "sha256": "1d4f253d88130f9da1c0d295196444b8de45bf9ae5e4fc52e57c392d8fafe316",
+        "bytes": 17257,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 21,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A4.Architecture Feasibility Reviewer.md",
+        "sha256": "f0343111b46521a6293a2b404b87d2830532f2139589c4b3c840f32f0aba89f6",
+        "bytes": 18424,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 22,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A5.Ethics & Regulatory Reviewer.md",
+        "sha256": "e60b455ff79e2238dcae6c668025f2b7a0e32ead750979145725c980538b6009",
+        "bytes": 24259,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 23,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/A.Idea Note Layer/A6.Binary Gatekeeper.md",
+        "sha256": "e3a208fd2576d556a67018aaa1566303576190af551373860171cff28efd8d67",
+        "bytes": 19470,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 24,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B Layer - Architecture Plan.md",
+        "sha256": "dd5d26bf15dc86a24ab9a9dadc9b89312ea11e071dd9aefd56f0e92c9e1ebf1d",
+        "bytes": 30807,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 25,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B1.Snapshot Projection & Coverage Interview.md",
+        "sha256": "8aa239926cfc5f283147c5da01abe62e60c0293f4e419db3e83c73650c299cd7",
+        "bytes": 12686,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 26,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B2.Peer Review of Concept Coverage.md",
+        "sha256": "8d809d66f8bbebd99eb3b7d0c97d977d7527d69108ea5a633fbb73dc2fe2f7c4",
+        "bytes": 8214,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 27,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B3.Marketing Coverage Expansion.md",
+        "sha256": "13e2e1c7e7ad8171a6631bbf9b4172c3bb4dde4375ce98df618d87ae57e7c53a",
+        "bytes": 10607,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 28,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B4.Architecture Coverage Review.md",
+        "sha256": "be04e1de39db66c9ccefba7bb0e5c036223452573740fabe6c53b9be20965673",
+        "bytes": 13861,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 29,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B5.Risk & Operations Coverage.md",
+        "sha256": "0264a817045f31f68918f2047f083e40b88b057f1648de66f8da9263ee59be27",
+        "bytes": 12692,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 30,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B6.Ethics & Governance Enforcement Coverage Review.md",
+        "sha256": "8c7ce7640d0ffddeeeaffeb21887562a2bf6bef2a6b1e26412dbe2aaf8fcc3d0",
+        "bytes": 12651,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 31,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B7.Aspect Similarity & Consolidation Review.md",
+        "sha256": "1f4a8d4a298f9751f87a8adbd88ac54ea3480b36e3e3e625274e41d74b721a89",
+        "bytes": 9745,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 32,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/B.Concept Layer/B8.Coverage Final Gatekeeper.md",
+        "sha256": "07e91ee4c0ccc0e46089482324541e63f38922df6c1383e5f4a746319087284a",
+        "bytes": 9560,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 33,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/C.Requirements Layer/C Layer - Architecture Plan.md",
+        "sha256": "918e457f69247f916f98864874f4468e27b0a74af091212f069cc9f6add389c6",
+        "bytes": 24714,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 34,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/C.Requirements Layer/C1.Aspect Requirement Translator.md",
+        "sha256": "48f691b6ee197b8fe344b0b7c313b8d1e2a01f8d493782d1f249adc282106280",
+        "bytes": 27415,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 35,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/C.Requirements Layer/C2.Requirements Validation.md",
+        "sha256": "0453a3a6e66f2837c11d5ad840d2cf81af819dec21fe0e629d13a4689c3968d7",
+        "bytes": 27948,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 36,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D Layer - Architecture Plan.md",
+        "sha256": "fb2ee6f139f50d2ae013540210a4e66b0accc391266a4447cb014c37c30b4639",
+        "bytes": 28114,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 37,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D1.Story Inventory Generator.md",
+        "sha256": "4cf142bdfa8a5673f9c9b00b6d16b0e86d732fa4857e374230bade88c456e0ea",
+        "bytes": 27239,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 38,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D2.Story Inventory Review.md",
+        "sha256": "1c7768ec2dfca8131f84232058170906a29d288140aff678401ec9ed75c69518",
+        "bytes": 13831,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 39,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D3.Story Detailing.md",
+        "sha256": "0bc2132c2e8148fc319d86420fd92419a90220221a78a86a643c502956267042",
+        "bytes": 41898,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 40,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D4.UX Reviewer.md",
+        "sha256": "5278172cd275753be7d17172676ad8c9349fa0bfa8371d7da6d20eae5d6691c2",
+        "bytes": 17406,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 41,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D5.Feasibility Reviewer (Low-level).md",
+        "sha256": "8e19f082d6c400d3613ded1cdd601f94b11f2fda16e0e2e06b3afe7c5430f952",
+        "bytes": 20142,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 42,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D6.Product & Traceability Reviewer.md",
+        "sha256": "742de95f2835010d62e8513254f34b94c23669ba4db1242eb946888e14c89b13",
+        "bytes": 16759,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 43,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/D.Stories & PRD Layer/D7.Story Gatekeeper & PRD Index Registrar.md",
+        "sha256": "e2fad03e9e76228557ef5574042abcff0f1e1b8d74589d4688148ded6dfc473f",
+        "bytes": 18570,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 44,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E Layer - Architecture Plan.md",
+        "sha256": "e9521c78f316e3718be3e84ef24104d66b8e1cbd20343ad082c3382bb4057e79",
+        "bytes": 32477,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 45,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E1.Design Research Analyst.md",
+        "sha256": "d61de21475e6ba0f73e55ec43313404c6ba0c5c9ea8a0198225de3eeafcf0bbc",
+        "bytes": 29262,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 46,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E10.DesignMoodSketcherHITL.md",
+        "sha256": "5fe4800de3d2996b5edacae0d2ce3a51bbde72938dc5eff10551c3c537d70d1e",
+        "bytes": 27780,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 47,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E11.Research Intent Gatekeeper.md",
+        "sha256": "6a1870a5805db625eb3dbbd2d252cd70b29da12d045510d2901dbf54ef64b634",
+        "bytes": 45123,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 48,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E12.HITL Design Specification Sign-Off.md",
+        "sha256": "45f62bb3d093ad0db32969fc46390915c75ace376fe6a0d34512a662e890a36a",
+        "bytes": 34628,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 49,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E2.Design Vision Interview (HITL).md",
+        "sha256": "68aa51bdbed09a5cf3fd9eee6ce8e40f61ed6633d44383493739f440c83cb1b9",
+        "bytes": 52398,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 50,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E3.Design Parameter Alignment Synthesizer.md",
+        "sha256": "42198f59e920c42156e3af13f8b83f42bc58d00df66b2152412346dd46e7b535",
+        "bytes": 17895,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 51,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E4.DesignIntentNormalizerTensionMapper.md",
+        "sha256": "600c52716e3d1b0b389e6d2f24eaaeece283ac5923322fc21f20e6db8e6df80e",
+        "bytes": 36427,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 52,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E5.Expressive Adequacy Surface Grammar Reviewer.md",
+        "sha256": "37671886dbf2cc28e1d205da9b16bc1537256502001468ec5d280ece02537cd3",
+        "bytes": 16941,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 53,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E6.PM Intent Reviewer.md",
+        "sha256": "a4614bbe15fa9086bbb6b8d56e4e1e29aea2937c476e41d9475b3e0b8cdbd890",
+        "bytes": 21721,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 54,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E7.Marketing Positioning Reviewer.md",
+        "sha256": "5aa0e716a56dedddb6bf26ad48714fe4822e8642046237c7e02cd56026463939",
+        "bytes": 26739,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 55,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E8.Accessibility Intent Reviewer.md",
+        "sha256": "b2c4cf5dbd889227eedaa79e7a90cf44740702ad5bc71bfd6cca89c59dd208f6",
+        "bytes": 30326,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 56,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/E. Design Research & Intent Layer/E9.Frontend Design System Feasibility Reviewer.md",
+        "sha256": "b6987c6d1f237ce08ec5b52f1644cb6a4666ac10bd7e3a71cbd37921276fec72",
+        "bytes": 39807,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 57,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F Layer - Architecture Plan.md",
+        "sha256": "29029fcbe70d55e4040bfc7bb014a77bec33e1d64b98560086b60d21a5f0b7d6",
+        "bytes": 32098,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 58,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F1. Surface Map Architect.md",
+        "sha256": "c00f096fb74b3dc9229583334cb2b87eda150ab6af0b7ae27acb13c40282215b",
+        "bytes": 31916,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 59,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F2. Navigation Flow Architect.md",
+        "sha256": "3900727ec3eee1dc1ba28ef1b0b91f1da67f23f2050aeed06b9ba4ce887605cf",
+        "bytes": 31532,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 60,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F3. Information Architecture Architect.md",
+        "sha256": "7ae48ff9cbf73ec7dba5d660a36592b0ee0b8e3d9e3d78b2c0a0048be6d0d6f7",
+        "bytes": 29803,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 61,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F4. Interaction Pattern Architect.md",
+        "sha256": "ac3fa466a1c163794be9d753bf1ceb0bca9142fd0d4331a215ad99075800e071",
+        "bytes": 31192,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 62,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F5. UX Structure QA.md",
+        "sha256": "bd09c76c59de8da2310bd907094e5bac60c08e43012a74372e9eb6c29e7b435a",
+        "bytes": 26385,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 63,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F6. PM Flow Story Reviewer.md",
+        "sha256": "6086d0ae67a3c1a8b93cd64ba923e8f916cbe3056036937f7f07d669bb253f5f",
+        "bytes": 19746,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 64,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F7. Accessibility Architecture Reviewer.md",
+        "sha256": "cf0d95ddb8ce626ab4e84a69b49ce90e96a58c021aaf137fa1b4f17945f0289c",
+        "bytes": 21324,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 65,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F8. UX Architecture HITL Review.md",
+        "sha256": "fe8eaf6ddc4d58c4b5b728ed2f30a648b2592ac708ba58f3a3f94385122265dd",
+        "bytes": 24311,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 66,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/F.UX Architecture/F9. UX Architecture Gatekeeper.md",
+        "sha256": "1520fc6b41c573e0da84bb3b4b6b25c162d45106ed130646c04e3051f3b933fb",
+        "bytes": 19972,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 67,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G Layer - New Architecture Plan.md",
+        "sha256": "a1ffde9e9ee7f231b6d8e9998f20c3b30c6724e9660caceb9ccc7955a818a347",
+        "bytes": 43109,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 68,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G1. Visual System Reference Architect.md",
+        "sha256": "4a4ef5756feda81f72f097747bd418f186a6012a738d1d6002dc79bbcaf0596b",
+        "bytes": 27852,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 69,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G10. HITL Mapping Review.md",
+        "sha256": "8ecb953432dc91f8c39888b0ecb1b687b9463c121f8e714093bf9c890a01b381",
+        "bytes": 45123,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 70,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G11. Annotation Formalization.md",
+        "sha256": "7b0cfd461c985b49c7f9025f2505d7e6e0e22209029b8bb369d6a857cbf99e72",
+        "bytes": 54952,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 71,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G12. Accessibility Reviewer.md",
+        "sha256": "a879b30afcbc82171cd7b7d9172fe36a21cd2344b1804b0455cd872d3631d5e4",
+        "bytes": 53912,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 72,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G13. PM Traceability Reviewer.md",
+        "sha256": "3f1a55b41dd8db175726985d22457ac96c3d5d93efaba1831b9685ebd5ac8ad3",
+        "bytes": 41385,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 73,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G14. H Layer Package Generator.md",
+        "sha256": "4055856f0d22a3b654b44fdc25fe185f1af02d57f1fbeffd6a06b36a77000a6f",
+        "bytes": 49693,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 74,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G15. Owner Sign-off.md",
+        "sha256": "0ac334cbcf632809cd6a15533f5cc79969586fcf01551d3530de11f8ae0453ac",
+        "bytes": 39405,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 75,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G2. Visual System QA.md",
+        "sha256": "70badaf5ada9874c0d03b20b106943f7bb37a3f2b0e36b67f1cfe8568150b288",
+        "bytes": 18271,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 76,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G3. Asset Strategy.md",
+        "sha256": "eaf3dfd48529ec85b2676c67f6a0c9ba1a0957e9d6261506cff15f2e017154da",
+        "bytes": 33733,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 77,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G4. Asset Generator.md",
+        "sha256": "1db59e4c00fe23d6b43575a8ffbfb8cd6b50233633fc1a35b24239c00eb2c55b",
+        "bytes": 35400,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 78,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G5. Asset QA.md",
+        "sha256": "3028ccdfd97cf58af6926ce1618efa9644142519f91a4da2f3670eee7caa0965",
+        "bytes": 36633,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 79,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G6. Art Critic.md",
+        "sha256": "0e07266907ba88e9294b4da196e972c26f0d857cd2781ce693f2e3f0fcdaf1f9",
+        "bytes": 52245,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 80,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G7. Creative Surface Designer.md",
+        "sha256": "67588032100ebbae308c976f613dc6d8cac637e57c99e4c901d5bb2004656ece",
+        "bytes": 49072,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 81,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G8. Component Manifest Builder.md",
+        "sha256": "d169e2a15cf1c2ade6d99321399c2e3382daff0e4636fc28bb2b60aed500d7ce",
+        "bytes": 52929,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 82,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/G.Visual System & UI/G9. Component Mapper.md",
+        "sha256": "d17cda0d68cda181ab37fe8f17a5079da71a557275d88974b39801a1abd14ea1",
+        "bytes": 39505,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 83,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H Layer - Architecture Plan.md",
+        "sha256": "c9e9c16074a85696fed183ddbeb06b6c04ec9c0a806bc4820e7560bf93e208e9",
+        "bytes": 23674,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 84,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H1. Traceability Index Builder.md",
+        "sha256": "790db789032a6b0fb0bf93dd8735e77dde2c9bee1fb7e1a5e30d64993321e4f2",
+        "bytes": 30475,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 85,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H10. ELM View Architect.md",
+        "sha256": "df0e08a44b247b0c2c87a2bf7adf381f4df22bf41feb9647e633690164b52071",
+        "bytes": 104680,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 86,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H11. ELM View QA.md",
+        "sha256": "3ad4b004c43665fb5a6ed0d12dd89fcb093c6eb4d35796e6483b5916d400c3bb",
+        "bytes": 90584,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 87,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H12. ELM Architecture Integrator.md",
+        "sha256": "1ac2525ccc570fde256cc435568f8b7cceedd4ad3278e7b63965b5723f377746",
+        "bytes": 51437,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 88,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H13. ELM Architecture QA.md",
+        "sha256": "0c53acb9438d19b24df6bff38999ce15ab9c64bec98fdd7c364a994af5ae835f",
+        "bytes": 44086,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 89,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H14. ELM Architecture HITL.md",
+        "sha256": "e0b9fa8b79985e9aa7eda6601254c7c54cb0ab97da0be4cc531be43c2c0dedf6",
+        "bytes": 68522,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 90,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H15. ELM Architecture Gatekeeper.md",
+        "sha256": "0392af13ef23416c1147dc9bce1c5af1e31b2223bddaa5416a4879dac31d789d",
+        "bytes": 63448,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 91,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H2. Traceability QA.md",
+        "sha256": "1d9637582b5c83614daa2989d48efd87aa271ab5b3f0abe27e602939082f6083",
+        "bytes": 29915,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 92,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H3. ELM Module Architect.md",
+        "sha256": "1d6a2789f8bb5363181c40002abe2d520a3f515d532b88fd6f732299530a136b",
+        "bytes": 63506,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 93,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H4. ELM Module QA.md",
+        "sha256": "6c6cd0a039c2ac6be99cd1f60bce52da6b101cf9e279266fea4bef92721d3448",
+        "bytes": 58360,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 94,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H5. ELM State Type Architect.md",
+        "sha256": "8de78f2b08a6def9ea7264cc3bbd920929947399e93e9959b8b4768b56a14fa6",
+        "bytes": 72751,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 95,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H6. ELM State Type QA.md",
+        "sha256": "a3b58b7d107741f19cfbdf58616c90805801886eb8362ba40e6989806317ac26",
+        "bytes": 72076,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 96,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H7. ELM Update Architect.md",
+        "sha256": "22b0bebbcaaec99f0f1a55ebd75a450006e57beaf04b836596f5b91dee3d14e7",
+        "bytes": 74084,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 97,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H8. ELM Update QA.md",
+        "sha256": "1108b46df2137e6d8fe7ca76e0f1153270bb18887d5d31d31fcd00cec1b608ee",
+        "bytes": 65859,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 98,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/H. Design-to-Code Handoff/H9. ELM Contract Spec.md",
+        "sha256": "fa68f3c50757ab2400955987debdab77eb01ecf4a0bd30a6cd71c54e39b1ef49",
+        "bytes": 77117,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 99,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I Layer - Architecture Plan.md",
+        "sha256": "666cb6d21e77ff73ea587be65ecea952aa7bc032d9cf85db828a3f44e3e8621b",
+        "bytes": 136233,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 100,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I0. Schema Migration.md",
+        "sha256": "c7c656b021a19c16bd3f90586186234bc79027ba3d0637527033f5f18beac3b9",
+        "bytes": 53225,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 101,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I1. Technology Researcher.md",
+        "sha256": "562a49a8ab749217a4ab31f75c316914e430d87c5eb7bbc76edb14851997475a",
+        "bytes": 53858,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 102,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I10. Architecture Reviewer - Maintainability.md",
+        "sha256": "d1ed5b31051f2ec8b482f7a9d3b60361a1451ba1c3954e6e68b3264394c89e82",
+        "bytes": 71626,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 103,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I11. Architecture Reviewer - Cost.md",
+        "sha256": "cea2b4005340b76de39ce292869694cd574e1d6c08d85dc88ea6f1fdd4121e65",
+        "bytes": 75563,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 104,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I12. Architecture Reviewer - Performance.md",
+        "sha256": "c9db040d9df8b542a371f309fc0daf985d8e27d5531b575940b8a26d2f63263e",
+        "bytes": 82264,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 105,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I13. Architecture Reviewer - Scalability.md",
+        "sha256": "e9a5105a36c449aa35d59c4e3d16da3d2672b7cdab0999c8917283971fb91603",
+        "bytes": 65017,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 106,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I14. Security Review.md",
+        "sha256": "88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75",
+        "bytes": 59691,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 107,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I15. Ethics & Legal Review.md",
+        "sha256": "be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5",
+        "bytes": 85151,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 108,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I16. Architecture Conflict Resolver.md",
+        "sha256": "de0017487aed5eac19919e2d10cec59a805e5b56c78b0c8ea470f7ae75dff47e",
+        "bytes": 65191,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 109,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I17. Trade-off HITL.md",
+        "sha256": "e6364861d283dedb81864ec243d223d9e79ea5b56b370ed3f9fbd454eaad8322",
+        "bytes": 120790,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 110,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I18. Observability Architect.md",
+        "sha256": "ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325",
+        "bytes": 106982,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 111,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I19. Deployment Architect.md",
+        "sha256": "38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf",
+        "bytes": 112791,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 112,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I2. HITL Architect Interview.md",
+        "sha256": "9eb5dbcbe009f4a0c1393a756d84083f4a3113ebf24d3600a36bd0dc44e98434",
+        "bytes": 74105,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 113,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I20. Task Tree Builder.md",
+        "sha256": "28423a4f7cfc09273ff2a4b2eb4a1a939b5c0891228c813f7d49505cbd40bb72",
+        "bytes": 233636,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 114,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I21. Task Spec Agent.md",
+        "sha256": "5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f",
+        "bytes": 151195,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 115,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+        "sha256": "c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a",
+        "bytes": 149041,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 116,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I23. Task Graph QA.md",
+        "sha256": "6b0ebe5d35a6dfd4336ee92730dc0f137a21491ecd118236238a61e083d0ffda",
+        "bytes": 255345,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 117,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I24. Gatekeeper & Publisher.md",
+        "sha256": "db1c6d617420d71beabe0ddbcd9565eaf1176f27219a043c904306a58c970057",
+        "bytes": 243525,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 118,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I3. Process Causality Map.md",
+        "sha256": "1e85a12726ef3b52f0ff6eb4863523ebb5e2b1bee4e40bac6c62a018dae3a232",
+        "bytes": 78437,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 119,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I4. Invariants Ownership.md",
+        "sha256": "b54fee12830ea2267c132b295bb64232f15c42e9dad002a50a6a46ff8478e651",
+        "bytes": 85426,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 120,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I5. Interaction Semantics.md",
+        "sha256": "de34665836de8ac88fd5c1c1e178cb459a3d20f8168d743f11dd207029a4b9a1",
+        "bytes": 84911,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 121,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I6. Architecture Synthesis.md",
+        "sha256": "e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b",
+        "bytes": 200011,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 122,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I7. Causal Map Builder.md",
+        "sha256": "8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a",
+        "bytes": 110331,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 123,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I8. Architecture Reviewer - Reliability.md",
+        "sha256": "cb9864524ea3f2cdf9cae528563a99f5e52e45341f7eac3c3084f125fe798c65",
+        "bytes": 72389,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 124,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/I9. Architecture Reviewer - Simplicity.md",
+        "sha256": "89bb7383bfc3e0f4a727a8cc74fe905b7ff2bb2cacae2260e9a1e54b63a80567",
+        "bytes": 47437,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 125,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/I. Architecture & Task Graph/PRESENTATION-COVERAGE-REPAIR - Rerun Plan.md",
+        "sha256": "63da25d985084c73ded00d1171d9e555ec5126b0e7b58c2334a06ff6949c91a4",
+        "bytes": 19304,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 126,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J Layer - Architecture Plan.md",
+        "sha256": "f61ebbc12ab80cba8c8a72cf88d726164ea8c0be5eb92308eb234a34bb6ffd46",
+        "bytes": 158175,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 127,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+        "sha256": "174f4e91f6ea58162f34e7d0543fc02e98d38657052e859e07d639d3836e660b",
+        "bytes": 51117,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 128,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J0. Dispatcher.md",
+        "sha256": "7fdd2d8c9a58404f096c145ab21250827f536a74fd9f159925c63742db4933e3",
+        "bytes": 773764,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 129,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J1. Spike Executor.md",
+        "sha256": "9c1a6784067e3b2b8b89c1064338712d200b91bfe1f430e90a7aa3698d0ff081",
+        "bytes": 51810,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 130,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J10. Code Analyst.md",
+        "sha256": "99e85b0507ab642abff59ad093437bce3cbea6b74892ecba3a306090eda67064",
+        "bytes": 77723,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 131,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J11. Documenter.md",
+        "sha256": "17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600",
+        "bytes": 64544,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 132,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J12. Container & Deploy.md",
+        "sha256": "5084a1953df63baa6e0fdb448bdcfa997d8fd0bc3fa8e0dcc0817863bfb1b2cf",
+        "bytes": 56641,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 133,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J13 HITL UI Protocol - Regression Matrix.md",
+        "sha256": "7610f11280ec8d819f4d056d78929b17da406912490b6628bed20e9847acf8ea",
+        "bytes": 70769,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 134,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J13. HITL UI.md",
+        "sha256": "47392d1852369a7d9ed2a8c6a5876317895840eb982b8840ed9f7cb4df59ca19",
+        "bytes": 288239,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 135,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J14-J0-J16-J17 Generation And State Schemas.md",
+        "sha256": "85930b91f1543efaeaf4f3bce5f8014889b65864e42c4c564150a9795cc2e54c",
+        "bytes": 33112,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 136,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J14. Infra Methodologist.md",
+        "sha256": "9ad1e56d85f99e76b1398d326db85c26ce67b49fadd50416d832d44d15ecfdf7",
+        "bytes": 271433,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 137,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J15. Infra Coder.md",
+        "sha256": "a260b44eef6537a29012d83ee2a31338e6fcb15f798059ebcf1cddffc14657cd",
+        "bytes": 99391,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 138,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J16. Infra Deployer.md",
+        "sha256": "e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea",
+        "bytes": 262403,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 139,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J17. Infra Tester.md",
+        "sha256": "a747ec3fbddb4b041ebfe9729b4ccb550b0f5e3511c7d82464b7586508cbac6e",
+        "bytes": 149423,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 140,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J18. Integration Planner.md",
+        "sha256": "63d246f96ebaad31db4baa05aaaab4c80a47db12d1c7105ec5dddba9399d5cc8",
+        "bytes": 77358,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 141,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J19. Load Tester.md",
+        "sha256": "9f08f9effcb11a898cff164efdb376c893273839bb89d49b8a2702faedaea36c",
+        "bytes": 93608,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 142,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J2. Spike Documenter.md",
+        "sha256": "dcbadf5c47ee4a72837a8b0c103a6aaa8711d8cb1c4e2c7be755cdc514d1e69e",
+        "bytes": 32531,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 143,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J20. Migration Dry Run.md",
+        "sha256": "f9c58c265b3707e9ae1210c721899c773405d22dc7c3bcc329abbdf52899e495",
+        "bytes": 123841,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 144,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J21. HITL Coder Session.md",
+        "sha256": "858486255d809474aa99ec6eba4662c5043314d986982f55d9cee458b8dfccd4",
+        "bytes": 88351,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 145,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J22. External Manual Action.md",
+        "sha256": "8d2dc015b8d2e0c36b3899d3d44b3ccc98ac223a98c0805e244e33047060274c",
+        "bytes": 162575,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 146,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J3. Spike Resolver.md",
+        "sha256": "8c46c104566ce4d32dc65a989f8f5e6b47b597f8047122d966741682ba8841a7",
+        "bytes": 63307,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 147,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J4-J0 Core Generation And Invocation Envelope.md",
+        "sha256": "247b2d2a8e3cdf983a0e2138b249242fcec737d2ca434fe66ce60ba0b640e846",
+        "bytes": 12330,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 148,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J4. Methodologist.md",
+        "sha256": "fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8",
+        "bytes": 156762,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 149,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J5. Test Writer.md",
+        "sha256": "df7ceefd6351a22ec0ced6cc93541610d797de351752e2362ce6b7273c4cf253",
+        "bytes": 56197,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 150,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J6. Coder.md",
+        "sha256": "a755f3ad53b566a5289777b7dcd4d35d4a7163c21b89c6a645fa890361e1c7ab",
+        "bytes": 51489,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 151,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J7. Test Runner.md",
+        "sha256": "bd153c5a56f3ffe082311ccb5f7474ce92f2be03d6e402b53794fb836dda4611",
+        "bytes": 59575,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 152,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J8. Static Analyzer.md",
+        "sha256": "65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c",
+        "bytes": 85110,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 153,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J9. Dependency Auditor.md",
+        "sha256": "7416b2ec401214cbb0087a46b890446329c7e220c9398b356136cca2ed31cf92",
+        "bytes": 97803,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 154,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J9b. Lockfile Verifier.md",
+        "sha256": "ec958301fab23d711d64aa3e169f7f5048667e63edca247e13a591d6386ceab7",
+        "bytes": 53458,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 155,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K Layer - Architecture Plan.md",
+        "sha256": "0ad5b618663db64b7bfcf60253ab63dc34f7dc6eedcc2884053786591857bd4b",
+        "bytes": 135011,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 156,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K0. Audit Dispatcher-Orchestrator.md",
+        "sha256": "9aba222ee451486ca1e146fd28df231794c13653496b170c4c74b8e507761258",
+        "bytes": 170589,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 157,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K1. Repo Indexer & Summarizer.md",
+        "sha256": "620080d098494809895accedaddf90bf8d12fba7dce2cea30b66616cbb4b0ea6",
+        "bytes": 93527,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 158,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K10. Documentation Synthesizer & Finalizer.md",
+        "sha256": "5d7f4ba13d503799230ac2cb44bd0812567fe20059b253b30934685639f4d95b",
+        "bytes": 53955,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 159,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K2. Structure & Dependency Mapper.md",
+        "sha256": "be0824f7b0981d4a11b36f28e4187aa331bbbe6ff7185d927b0289dd461470b0",
+        "bytes": 146158,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 160,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K3. Contract, Data & Capability Extractor.md",
+        "sha256": "124dab0f28f12038cab9552b224730200c339500c70469afa8958197dde935bf",
+        "bytes": 209526,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 161,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K4. Security Auditor.md",
+        "sha256": "e87e920f469e860e6734fb3d6b69980e791d67989c1e42d5ed9261e049970e5f",
+        "bytes": 150596,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 162,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K5. Requirements & Story Coverage Auditor.md",
+        "sha256": "2bae688717f2f1ec18761f9f04bb83858a9904697e62eabd6e8a03e9f5e2bb25",
+        "bytes": 184840,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 163,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K6. Efficiency & Resource Auditor.md",
+        "sha256": "db1c33be289fe4620f65a8252d02aec99003556d49c85235dc4f2be4659d717c",
+        "bytes": 167053,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 164,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K7. Implementation Quality Auditor.md",
+        "sha256": "defa03cabd269fd967aab9fb1cf71ac688161904174fce2742d928e5b2ad04e8",
+        "bytes": 47557,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 165,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K8. Concurrency & Distributed Behavior Auditor.md",
+        "sha256": "02eb8ae0c0fe76ec003abd1ce91d6d0cdf9a61167030cd8c10467ff84d7b27b9",
+        "bytes": 42533,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 166,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/K. Audit & Documentation Layer/K9. Sharded Upstream Traceability Synthesizer.md",
+        "sha256": "53c390e28f452aff5062bb6c26ae1eb57c0c9679a848248611a6cb4f88278817",
+        "bytes": 44423,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 167,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/M. Meta Layer/M Layer - Architecture Plan.md",
+        "sha256": "44a155d9bd0edf677d1e66b2947d272d6d405678edcaa08a53eee315a8a7018c",
+        "bytes": 113759,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 168,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+        "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+        "bytes": 178435,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 169,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I Layer - Architecture Plan.md",
+        "sha256": "666cb6d21e77ff73ea587be65ecea952aa7bc032d9cf85db828a3f44e3e8621b",
+        "bytes": 136233,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 170,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I14. Security Review.md",
+        "sha256": "88d882fd75b95f1b926fa77c23ad2cf6865f252060c01c08196abe1ef24bfa75",
+        "bytes": 59691,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 171,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I15. Ethics & Legal Review.md",
+        "sha256": "be279e3feecda5e0713735d84e2a89304f1bb3e78a948bc8d0ba6fcf600246b5",
+        "bytes": 85151,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 172,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I17. Trade-off HITL.md",
+        "sha256": "e6364861d283dedb81864ec243d223d9e79ea5b56b370ed3f9fbd454eaad8322",
+        "bytes": 120790,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 173,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I18. Observability Architect.md",
+        "sha256": "ecab6705c954d62ac9e6eb95e1df4ff8512c56ca88af16b0ded9cff922589325",
+        "bytes": 106982,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 174,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I19. Deployment Architect.md",
+        "sha256": "38a42687d2cb5b70e22339175672a8c93372735ce6422c8ffbe922571b99a4bf",
+        "bytes": 112791,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 175,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I20. Task Tree Builder.md",
+        "sha256": "28423a4f7cfc09273ff2a4b2eb4a1a939b5c0891228c813f7d49505cbd40bb72",
+        "bytes": 233636,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 176,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I21. Task Spec Agent.md",
+        "sha256": "5cbc273819b00f6b0a6962b4d3a1c1e21c00bd1fee98da8389743ec0dc41717f",
+        "bytes": 151195,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 177,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+        "sha256": "c6000be296a8bf9a8c1ac8cd77b36d358807ebcadd4ebfc28fb33b68cc905d3a",
+        "bytes": 149041,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 178,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I23. Task Graph QA.md",
+        "sha256": "6b0ebe5d35a6dfd4336ee92730dc0f137a21491ecd118236238a61e083d0ffda",
+        "bytes": 255345,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 179,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I24. Gatekeeper & Publisher.md",
+        "sha256": "db1c6d617420d71beabe0ddbcd9565eaf1176f27219a043c904306a58c970057",
+        "bytes": 243525,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 180,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I6. Architecture Synthesis.md",
+        "sha256": "e6821d2b79f3c73a9210428bc093693616678d2449c811879b1de6a5198e6e2b",
+        "bytes": 200011,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 181,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/I. Architecture & Task Graph/I7. Causal Map Builder.md",
+        "sha256": "8a5b120d93098d31da6697efd0af7cd9e0c2189bbdfbc623858aabc84646285a",
+        "bytes": 110331,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 182,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+        "sha256": "174f4e91f6ea58162f34e7d0543fc02e98d38657052e859e07d639d3836e660b",
+        "bytes": 51117,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 183,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J0. Dispatcher.md",
+        "sha256": "8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784",
+        "bytes": 771025,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 184,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J11. Documenter.md",
+        "sha256": "17a0606c2a82b84d87b58635ca890723cfc0b6bfbf03e108a9f0838f6bb3c600",
+        "bytes": 64544,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 185,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J14. Infra Methodologist.md",
+        "sha256": "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+        "bytes": 269823,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 186,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J16. Infra Deployer.md",
+        "sha256": "e5ef25ad3c49807f43289ee0187162266aa3872be520adf641a4e5fa6c9a31ea",
+        "bytes": 262403,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 187,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J17. Infra Tester.md",
+        "sha256": "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+        "bytes": 148671,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 188,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J4. Methodologist.md",
+        "sha256": "fa0223c7e85cd0ca327d6d70cac65cdfb8a5c869d42b981d475c74884186e2d8",
+        "bytes": 156762,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 189,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J8. Static Analyzer.md",
+        "sha256": "65b3463bad91dda11335fcf9c114fff824483c948c4c1528cc850f83d810e53c",
+        "bytes": 85110,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 190,
+        "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+        "sha256": "78dcb544d6d3d503b411b525a97ab619a8d1a1c4b6d015bd2d99b74672d9ee1b",
+        "bytes": 20205,
+        "source_sets": [
+          "prompt_snapshot_commit_156"
+        ]
+      },
+      {
+        "ordinal": 191,
+        "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+        "sha256": "7cefa337af2ae3ad38f529d080da1b3b3e685b68288a217000f899c29419dbb0",
+        "bytes": 21058,
+        "source_sets": [
+          "semantic_delta_commit_5"
+        ]
+      },
+      {
+        "ordinal": 192,
+        "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+        "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+        "bytes": 38427,
+        "source_sets": [
+          "legacy_successor_commit_29"
+        ]
+      },
+      {
+        "ordinal": 193,
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+        "bytes": 85362,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      },
+      {
+        "ordinal": 194,
+        "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+        "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+        "bytes": 191471,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      },
+      {
+        "ordinal": 195,
+        "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+        "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+        "bytes": 12373,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      },
+      {
+        "ordinal": 196,
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+        "bytes": 84926,
+        "source_sets": [
+          "canonical_direct"
+        ]
+      }
+    ]
+  },
+  "review_anchor_pins": {
+    "successor_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+      "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+      "bytes": 38427
+    },
+    "successor_owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml",
+      "sha256": "4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5",
+      "bytes": 8381
+    },
+    "successor_manifest": {
+      "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+      "bytes": 178435
+    },
+    "successor_applicability": {
+      "path": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+      "sha256": "a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c",
+      "bytes": 17797
+    },
+    "successor_addendum": {
+      "path": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+      "sha256": "7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b",
+      "bytes": 11398
+    },
+    "development_plan_v0_14": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "bytes": 101354
+    },
+    "K0b03_planning_v1_1": {
+      "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+      "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+      "bytes": 13146
+    },
+    "successor_document_check": {
+      "path": "new pipeline/evidence/legacy-pipeline-successor-plan-revision-document-check-v1.yaml",
+      "sha256": "e4ba2175ce06c80e2eb8c749222fa5928fa225358a792e74bc1f4ca9a04b27d6",
+      "bytes": 14339
+    },
+    "snapshot_request": {
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+      "sha256": "78dcb544d6d3d503b411b525a97ab619a8d1a1c4b6d015bd2d99b74672d9ee1b",
+      "bytes": 20205
+    },
+    "snapshot_owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+      "sha256": "cdca76ee1772090f17ddc2213d97778a3244c14e562577d762957fbe3d24eeb9",
+      "bytes": 3247
+    },
+    "snapshot_manifest": {
+      "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+      "sha256": "cbd2a54c94e5e163013ab9c97eeb710193727c2a99ac1826ada31e85554ffa7e",
+      "bytes": 147591
+    },
+    "snapshot_capture_evidence": {
+      "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml",
+      "sha256": "5ad4a8969ea08a692342d5991f85760dcd97e027a9e2c20c6b00eec24591b713",
+      "bytes": 155029
+    },
+    "snapshot_document_check": {
+      "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml",
+      "sha256": "e8ecfba884d14628a2f1d7a724e87864cbdcc7ad1bc84e617e164df82da2372f",
+      "bytes": 8135
+    },
+    "semantic_delta_request": {
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "sha256": "7cefa337af2ae3ad38f529d080da1b3b3e685b68288a217000f899c29419dbb0",
+      "bytes": 21058
+    },
+    "semantic_delta_owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "sha256": "a7e51e2724c39eec395667316812a9382381c61c480dbf7a10d23f087b8923c6",
+      "bytes": 6272
+    },
+    "semantic_delta_evidence": {
+      "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+      "sha256": "704029153429f5a9213b7aca3d519034db028e9de1d8fb88c2b500653e753073",
+      "bytes": 13731
+    },
+    "semantic_delta_supplement": {
+      "path": "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+      "sha256": "7cb686afaa08293b3db75043258e35df9fd6a0eaacbc06a2bfffc3bc7b0d3c39",
+      "bytes": 8354
+    },
+    "semantic_delta_document_check": {
+      "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1.yaml",
+      "sha256": "6c8374de4bba5eb12ca6a26bff0d3c4fcee71f5ffbc19fbec653ae6b962a1500",
+      "bytes": 8000
+    },
+    "canonical_development_plan": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "bytes": 97569
+    },
+    "canonical_architecture_plan": {
+      "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+      "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+      "bytes": 246369
+    },
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "STATE_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "renderer_v6": {
+      "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+      "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+      "bytes": 12373
+    },
+    "projection_profile_v6": {
+      "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+      "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+      "bytes": 191471
+    }
+  },
+  "manifest_defined_closed_world_sets": {
+    "legacy_base_successor": {
+      "manifest_path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "path_count": 170,
+      "base_manifest_sha256": "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597",
+      "successor_manifest_sha256": "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8",
+      "changed_overlay_paths": 21,
+      "unchanged_base_paths": 149,
+      "overlay_content_semantic_read_allowed": true,
+      "unchanged_base_content_semantic_read_allowed": false
+    },
+    "immutable_prompt_snapshot": {
+      "manifest_path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+      "selected_markdown_paths": 151,
+      "excluded_non_markdown_manifest_entries": 19,
+      "raw_manifest_sha256": "72f6ca7da741bb49aa6874113785c4cfb8114cf45c8df6f524892e54a2178b96",
+      "normalized_manifest_sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d",
+      "normalized_content_bytes": 10974418,
+      "per_entry_hash_verification_allowed": true,
+      "semantic_read_allowed_only_for_changed_after_paths": true
+    },
+    "previous_normalized_successor_projection": {
+      "path_count": 151,
+      "content_bytes": 10969317,
+      "manifest_bytes": 19110,
+      "manifest_sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc",
+      "resolution": "committed_overlay_where_present_else_immutable_old_pipeline_base_then_BOM_aware_strict_UTF8_LF_one_final_LF_normalization"
+    },
+    "snapshot_delta_partition": {
+      "unchanged_paths": 148,
+      "changed_paths": 3,
+      "exact_changed_paths": [
+        "J. Implementation/J0. Dispatcher.md",
+        "J. Implementation/J14. Infra Methodologist.md",
+        "J. Implementation/J17. Infra Tester.md"
+      ]
+    }
+  },
+  "semantic_read_boundary": {
+    "allowed": [
+      "the_21_changed_successor_overlay_paths_and_only_their_manifest_bound_predecessor_context",
+      "the_three_new_J0_J14_J17_before_after_prompt_pairs",
+      "the_direct_review_documents_and_relevant_canonical_plan_state_and_gate_sections"
+    ],
+    "forbidden": [
+      "live_C:/Projects/software_workflow",
+      "excluded_dot_bak_content",
+      "excluded_dot_pytest_cache_content",
+      "the_19_non_Markdown_snapshot_manifest_entries",
+      "project_or_runtime_artifacts",
+      "unselected_source_paths"
+    ],
+    "excluded_path_presence_or_change_is_not_a_mismatch": true,
+    "live_source_is_not_a_review_pin_or_authority": true
+  },
+  "future_reviewer_contract": {
+    "independence_profile": "fresh_context_read_only_non_author",
+    "reviewer_did_not_create_successor_snapshot_or_semantic_delta_packages": true,
+    "repository_file_changes_allowed": false,
+    "index_changes_allowed": false,
+    "allowed_result_enum": [
+      "approve",
+      "changes_required",
+      "inconclusive"
+    ],
+    "result_must_be_evidence_bound": true,
+    "reviewer_recommendation_is_owner_approval": false,
+    "reviewer_recommendation_adopts_a_plan": false,
+    "reviewer_recommendation_changes_state_or_a_gate": false,
+    "reviewer_recommendation_grants_implementation_or_runtime_authority": false,
+    "blocking_findings_may_be_hidden_fixed_or_converted_to_approval": false
+  },
+  "finding_contract": {
+    "required_fields": [
+      "finding_id",
+      "severity",
+      "blocking",
+      "path",
+      "section",
+      "evidence",
+      "affected_claim",
+      "required_disposition"
+    ],
+    "finding_id_must_be_stable": true,
+    "blocking_finding_requires_non_approve_result": true,
+    "remediation_is_out_of_scope": true,
+    "reviewed_packages_remain_immutable": true
+  },
+  "required_review_checks": [
+    {
+      "ordinal": 1,
+      "check": "git_baseline_and_clean_status"
+    },
+    {
+      "ordinal": 2,
+      "check": "exact_parent_tree_and_29_path_all_new_successor_inventory"
+    },
+    {
+      "ordinal": 3,
+      "check": "exact_parent_tree_and_156_path_all_new_snapshot_inventory"
+    },
+    {
+      "ordinal": 4,
+      "check": "exact_parent_tree_and_5_path_all_new_semantic_delta_inventory"
+    },
+    {
+      "ordinal": 5,
+      "check": "committed_bytes_and_full_SHA256_for_all_direct_review_inputs"
+    },
+    {
+      "ordinal": 6,
+      "check": "request_confirmation_owner_disposition_authority_chains_for_all_three_packages"
+    },
+    {
+      "ordinal": 7,
+      "check": "170_path_base_successor_manifest_and_exact_21_149_partition"
+    },
+    {
+      "ordinal": 8,
+      "check": "21_overlay_raw_and_normalized_bindings"
+    },
+    {
+      "ordinal": 9,
+      "check": "complete_exclusion_inventory_and_prohibition_on_semantic_or_runtime_use"
+    },
+    {
+      "ordinal": 10,
+      "check": "exactly_one_applicability_category_owner_phase_consumer_native_target_and_future_route_for_each_of_21_original_changed_paths"
+    },
+    {
+      "ordinal": 11,
+      "check": "category_correctness_for_3_already_covered_2_K0b03_8_K0b04_and_8_N1_rows"
+    },
+    {
+      "ordinal": 12,
+      "check": "development_plan_v0_14_delta_against_v0_13_and_no_undeclared_scope"
+    },
+    {
+      "ordinal": 13,
+      "check": "architecture_addendum_precedence_ownership_and_single_source_boundaries"
+    },
+    {
+      "ordinal": 14,
+      "check": "K0b03_planning_package_v1_1_and_prohibition_on_legacy_prompt_or_runtime_import"
+    },
+    {
+      "ordinal": 15,
+      "check": "exact_151_path_Markdown_only_snapshot_selector"
+    },
+    {
+      "ordinal": 16,
+      "check": "raw_capture_and_normalized_snapshot_bindings_for_all_151_paths"
+    },
+    {
+      "ordinal": 17,
+      "check": "previous_projection_root_c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+    },
+    {
+      "ordinal": 18,
+      "check": "snapshot_root_390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+    },
+    {
+      "ordinal": 19,
+      "check": "exact_148_unchanged_3_changed_partition"
+    },
+    {
+      "ordinal": 20,
+      "check": "full_before_after_pins_and_section_level_semantics_for_J0_J14_J17"
+    },
+    {
+      "ordinal": 21,
+      "check": "all_three_new_deltas_classified_K0b04_impact_with_preserved_routing"
+    },
+    {
+      "ordinal": 22,
+      "check": "legacy_owner_IDs_service_account_literals_machine_paths_and_provider_commands_are_not_Pipeline_v2_authority"
+    },
+    {
+      "ordinal": 23,
+      "check": "correctness_of_no_revision_required_for_v0_14_canonical_plans_and_K0b03_v1_1"
+    },
+    {
+      "ordinal": 24,
+      "check": "additive_supplement_is_sufficient_review_input_without_mutating_immutable_predecessor_packages"
+    },
+    {
+      "ordinal": 25,
+      "check": "state_STATE_renderer_profile_status_and_all_gates_unchanged"
+    },
+    {
+      "ordinal": 26,
+      "check": "G_K0B03_UNTRUSTED_SHAPES_remains_open_and_runtime_authority_none"
+    }
+  ],
+  "proposed_future_review_package": {
+    "write_paths": [
+      "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml",
+      "new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-successor-snapshot-independent-review-document-check-v1.yaml"
+    ],
+    "write_path_count": 3,
+    "all_paths_must_be_new": true,
+    "one_local_documentation_commit": {
+      "parent": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+      "message": "docs(pipeline-v2): record legacy successor snapshot independent review",
+      "trailers": [
+        "Approval-Request-SHA256: <full_hash_of_this_request>",
+        "Reviewer-Independence: fresh-context-read-only-non-author",
+        "Runtime-Authority: none"
+      ]
+    },
+    "changes_required_or_inconclusive_may_be_committed": true,
+    "changes_required_or_inconclusive_authorizes_remediation_or_progression": false
+  },
+  "execution_resources": {
+    "network_targets": [],
+    "dependencies": [],
+    "locked_environments": [],
+    "temp_targets": [],
+    "repository_code_commands": [],
+    "repository_test_commands": [],
+    "model_or_provider_execution": [],
+    "runtime_publications": [],
+    "remote_effects": []
+  },
+  "stop_conditions": [
+    "git_baseline_parent_tree_or_clean_status_mismatch",
+    "any_commit_inventory_parent_tree_path_count_or_all_new_mismatch",
+    "any_direct_read_path_hash_or_size_mismatch",
+    "any_ordinal_read_manifest_count_hash_or_size_mismatch",
+    "any_manifest_defined_binding_projection_root_or_148_3_partition_mismatch",
+    "any_review_target_exists_before_its_authorized_step",
+    "review_requires_live_source_or_excluded_content",
+    "reviewer_independence_cannot_be_established",
+    "review_requires_repository_file_or_index_changes",
+    "review_requires_network_dependency_locked_environment_temp_target_repository_code_or_tests",
+    "review_requires_plan_state_gate_implementation_or_runtime_change",
+    "any_scope_expansion"
+  ],
+  "current_request_materialization_boundary": {
+    "authorized_write_paths": [
+      "new pipeline/requests/legacy-pipeline-successor-snapshot-independent-review-approval-request-v1.yaml"
+    ],
+    "authorized_write_path_count": 1,
+    "review_report_authorized_now": false,
+    "document_check_authorized_now": false,
+    "reviewer_execution_authorized_now": false,
+    "staging_or_commit_authorized_now": false,
+    "existing_file_changes_authorized_now": false,
+    "implementation_state_gate_or_runtime_change_authorized_now": false,
+    "runtime_authority": "none"
+  }
+}
