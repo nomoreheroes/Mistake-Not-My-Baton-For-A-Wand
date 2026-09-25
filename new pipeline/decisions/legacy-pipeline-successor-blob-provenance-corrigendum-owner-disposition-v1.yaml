@@ -1,0 +1,173 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-blob-provenance-corrigendum-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "owner_approved_append_only_corrigendum_materialization_pending_independent_re_review_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml",
+      "sha256": "e232ee0fc3fc8351a29cf4488a2d7e167319e9035b944743d644a349bfe6491c",
+      "bytes": 261616
+    },
+    "owner_confirmation": {
+      "kind": "exact_hash_and_exact_scope_confirmation_in_conversation",
+      "recorded_on": "2026-09-25",
+      "confirmed_request_sha256": "e232ee0fc3fc8351a29cf4488a2d7e167319e9035b944743d644a349bfe6491c",
+      "confirmed_request_bytes": 261616
+    },
+    "git_baseline": {
+      "head": "9ed4a396412038098887245ad2e83b8f66723e72",
+      "parent": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+      "tree": "a875e12ee01f91b85358cd0cdf21b8a2e62b9e2e"
+    }
+  },
+  "approved_scope": {
+    "package_kind": "append_only_blob_provenance_corrigendum_documentation",
+    "write_path_count": 5,
+    "write_paths": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml",
+      "new pipeline/decisions/legacy-pipeline-successor-blob-provenance-corrigendum-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-successor-blob-provenance-corrigendum-v1.yaml",
+      "new pipeline/architecture/legacy-pipeline-successor-blob-provenance-corrigendum-v1.md",
+      "new pipeline/evidence/legacy-pipeline-successor-blob-provenance-corrigendum-document-check-v1.yaml"
+    ],
+    "all_paths_new": true,
+    "existing_files_may_change": false,
+    "historical_evidence_may_change": false,
+    "independent_re_review_in_scope": false,
+    "finding_closure_in_scope": false,
+    "plan_adoption_in_scope": false,
+    "state_or_gate_transition_in_scope": false,
+    "implementation_or_runtime_in_scope": false
+  },
+  "owner_disposition": {
+    "LSR-F01": {
+      "reviewed_severity": "high",
+      "reviewed_blocking": true,
+      "materialization_disposition": "proposed_remediation_materialized_pending_fresh_context_independent_re_review",
+      "closed_by_this_package": false,
+      "closure_authority": "separate_fresh_context_independent_re_review_followed_by_separate_owner_disposition",
+      "remediation_form": "three_additive_reproducible_Git_blob_projection_profiles_and_corrected_role_descriptions_for_preserved_historical_roots",
+      "semantic_projection_changed": false,
+      "normalized_projection_roots_changed": false,
+      "applicability_classifications_changed": false
+    },
+    "binding_single_source": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml",
+      "section": "git_blob_read_set.entries",
+      "baseline_binding_count": 170,
+      "overlay_binding_count": 21,
+      "binding_fields": [
+        "commit",
+        "path",
+        "git_blob_oid",
+        "sha256",
+        "bytes"
+      ],
+      "mismatch_inventory_section": "mismatch_inventory.exact_mismatches",
+      "mismatch_count": 51,
+      "duplicate_registry_in_later_package_documents": false
+    },
+    "path_partition": {
+      "total": 170,
+      "unchanged": 149,
+      "changed_overlay": 21,
+      "complete": true,
+      "disjoint": true
+    },
+    "new_reproducible_profiles": {
+      "baseline_git_blob_base_manifest_v1": {
+        "path_count": 170,
+        "content_bytes": 11017109,
+        "manifest_bytes": 21817,
+        "manifest_sha256": "038069326933d295d67ea32d98c07c7ff4e5c389283ed519c8566b9c921b454e"
+      },
+      "baseline_git_blob_unchanged_subset_manifest_v1": {
+        "path_count": 149,
+        "content_bytes": 7539344,
+        "manifest_bytes": 19215,
+        "manifest_sha256": "7bab2c12c9633c03f1ab32d879f26741b42d99004aeea8a6899f486a3e36bb8f"
+      },
+      "baseline_git_blob_plus_committed_normalized_overlay_successor_manifest_v1": {
+        "path_count": 170,
+        "content_bytes": 11313521,
+        "manifest_bytes": 21818,
+        "manifest_sha256": "c90e1b0854ffbc78661ae728a4581a8c1aae91cc0ca84a09e10f3bb23bafc2c2",
+        "named_successor_raw": false
+      }
+    },
+    "preserved_historical_roots": {
+      "worktree_observed_base_provenance": {
+        "manifest_sha256": "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597",
+        "content_bytes": 11051221,
+        "manifest_bytes": 21819
+      },
+      "mixed_worktree_observed_unchanged_plus_external_source_raw_changed_provenance": {
+        "manifest_sha256": "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8",
+        "content_bytes": 11361589,
+        "manifest_bytes": 21820
+      },
+      "worktree_observed_unchanged_subset_provenance": {
+        "manifest_sha256": "ce227e2575a3694e13721752addbc77accfebb6a47018516493806a30e581697",
+        "content_bytes": 7573456,
+        "manifest_bytes": 19217
+      },
+      "rewritten_or_deleted": false
+    },
+    "carry_forward_findings": [
+      {
+        "finding_id": "LSR-F02",
+        "severity": "medium",
+        "blocking": false,
+        "status": "carried_forward_unremediated"
+      },
+      {
+        "finding_id": "LSR-F03",
+        "severity": "low",
+        "blocking": false,
+        "status": "carried_forward_unremediated"
+      },
+      {
+        "finding_id": "LSR-F04",
+        "severity": "low",
+        "blocking": false,
+        "status": "carried_forward_unremediated"
+      },
+      {
+        "finding_id": "LSR-F05",
+        "severity": "info",
+        "blocking": false,
+        "status": "carried_forward_unremediated"
+      }
+    ]
+  },
+  "preserved_authority": {
+    "existing_successor_manifest": "immutable_historical_evidence_not_rewritten",
+    "normalized_projection_roots": "unchanged",
+    "applicability_classifications": "unchanged",
+    "development_and_architecture_plans": "unchanged",
+    "state_and_STATE_projection": "unchanged",
+    "renderer_and_projection_profile": "unchanged",
+    "status_and_gates": "unchanged",
+    "runtime_authority": "none"
+  },
+  "mandatory_next_step": {
+    "kind": "fresh_context_read_only_non_author_independent_re_review",
+    "requires_separate_exact_scope_authority": true,
+    "review_must_not_mutate_reviewed_package": true,
+    "review_result_is_not_owner_approval": true,
+    "owner_disposition_after_review_required_for_LSR-F01_closure": true
+  },
+  "prohibitions": {
+    "live_source_read": true,
+    "worktree_renormalization": true,
+    "dot_gitattributes_or_git_config_change": true,
+    "core_autocrlf_change": true,
+    "repository_code_or_tests": true,
+    "network_or_dependencies": true,
+    "locked_environments_or_temp_targets": true,
+    "plan_state_gate_or_implementation_change": true,
+    "runtime_publication_or_remote_effect": true
+  }
+}

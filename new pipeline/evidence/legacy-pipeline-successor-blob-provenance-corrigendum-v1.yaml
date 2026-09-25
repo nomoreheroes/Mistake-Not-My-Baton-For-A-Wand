@@ -1,0 +1,291 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-blob-provenance-corrigendum-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_append_only_blob_provenance_remediation_materialized_pending_independent_re_review_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml",
+      "sha256": "e232ee0fc3fc8351a29cf4488a2d7e167319e9035b944743d644a349bfe6491c",
+      "bytes": 261616
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-blob-provenance-corrigendum-owner-disposition-v1.yaml",
+      "sha256": "edceb0e58fafd7854f0165c53a1ade4b15e2bba6fdb345c3488d0c25a7e4a9f5",
+      "bytes": 6956
+    },
+    "review_finding_source": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml",
+      "sha256": "83cbd72df6f6755b6ab606384b06278a2f18a9698062f2ed18189ab6d0b1f03b",
+      "bytes": 17609,
+      "finding_id": "LSR-F01"
+    }
+  },
+  "git_baseline": {
+    "head": "9ed4a396412038098887245ad2e83b8f66723e72",
+    "parent": "1129f160b2d62af422d64b7c38fbb5ec19c708aa",
+    "tree": "a875e12ee01f91b85358cd0cdf21b8a2e62b9e2e",
+    "tracked_worktree_before_package": "clean_by_Git_status",
+    "index_before_package": "clean",
+    "initial_untracked_set": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml"
+    ],
+    "byte_clean_worktree_assumed": false
+  },
+  "extraction_contract": {
+    "baseline_commit": "84b390ef281a31caa119023c5dee61fceaa25439",
+    "baseline_path_template": "old pipeline/<relative_path>",
+    "overlay_commit": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "overlay_path_template": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/<relative_path>",
+    "method": "git_cat_file_blob_with_redirected_standard_output_base_stream_copied_directly_to_in_memory_byte_array",
+    "filesystem_checkout_or_worktree_bytes_used_for_new_blob_profiles": false,
+    "live_source_read": false,
+    "temp_targets_used": false,
+    "network_used": false,
+    "dependencies_used": false
+  },
+  "exhaustive_binding_registry": {
+    "single_source_path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-corrigendum-approval-request-v1.yaml",
+    "single_source_sha256": "e232ee0fc3fc8351a29cf4488a2d7e167319e9035b944743d644a349bfe6491c",
+    "single_source_section": "git_blob_read_set.entries",
+    "baseline_binding_count": 170,
+    "baseline_binding_fields": [
+      "relative_path",
+      "baseline_git_blob.commit",
+      "baseline_git_blob.path",
+      "baseline_git_blob.git_blob_oid",
+      "baseline_git_blob.sha256",
+      "baseline_git_blob.bytes"
+    ],
+    "overlay_binding_count": 21,
+    "overlay_binding_fields": [
+      "relative_path",
+      "reproducible_successor_source.commit",
+      "reproducible_successor_source.path",
+      "reproducible_successor_source.git_blob_oid",
+      "reproducible_successor_source.sha256",
+      "reproducible_successor_source.bytes"
+    ],
+    "all_baseline_object_ids_resolved_from_declared_commit_and_path": true,
+    "all_baseline_sha256_and_sizes_recomputed_from_git_blob_bytes": true,
+    "all_overlay_object_ids_resolved_from_declared_commit_and_path": true,
+    "all_overlay_sha256_and_sizes_recomputed_from_git_blob_bytes": true,
+    "baseline_binding_errors": [],
+    "overlay_binding_errors": [],
+    "duplicate_binding_registry_created_here": false
+  },
+  "path_partition": {
+    "total": 170,
+    "unchanged": 149,
+    "changed_overlay": 21,
+    "complete": true,
+    "disjoint": true,
+    "changed_overlay_paths": [
+      "I. Architecture & Task Graph/I Layer - Architecture Plan.md",
+      "I. Architecture & Task Graph/I14. Security Review.md",
+      "I. Architecture & Task Graph/I15. Ethics & Legal Review.md",
+      "I. Architecture & Task Graph/I17. Trade-off HITL.md",
+      "I. Architecture & Task Graph/I18. Observability Architect.md",
+      "I. Architecture & Task Graph/I19. Deployment Architect.md",
+      "I. Architecture & Task Graph/I20. Task Tree Builder.md",
+      "I. Architecture & Task Graph/I21. Task Spec Agent.md",
+      "I. Architecture & Task Graph/I22. HITL Tree Review + Risk Acceptance.md",
+      "I. Architecture & Task Graph/I23. Task Graph QA.md",
+      "I. Architecture & Task Graph/I24. Gatekeeper & Publisher.md",
+      "I. Architecture & Task Graph/I6. Architecture Synthesis.md",
+      "I. Architecture & Task Graph/I7. Causal Map Builder.md",
+      "J. Implementation/J Layer - Deep Findings And V-Next Requirements.md",
+      "J. Implementation/J0. Dispatcher.md",
+      "J. Implementation/J11. Documenter.md",
+      "J. Implementation/J14. Infra Methodologist.md",
+      "J. Implementation/J16. Infra Deployer.md",
+      "J. Implementation/J17. Infra Tester.md",
+      "J. Implementation/J4. Methodologist.md",
+      "J. Implementation/J8. Static Analyzer.md"
+    ]
+  },
+  "manifest_profile": {
+    "line": "relative_path<TAB>lowercase_sha256_of_selected_blob_bytes<TAB>decimal_byte_count<LF>",
+    "ordering": "ascending_dotnet_string_comparer_ordinal_by_complete_line_equivalent_to_relative_path_for_unique_paths",
+    "encoding": "UTF8_without_BOM",
+    "final_terminator": "exactly_one_LF",
+    "digest": "SHA256_over_complete_manifest_bytes"
+  },
+  "reproducible_projection_results": {
+    "baseline_git_blob_base_manifest_v1": {
+      "source": "exact_170_committed_blobs_at_84b390ef_old_pipeline_relative_path",
+      "path_count": 170,
+      "content_bytes": 11017109,
+      "manifest_bytes": 21817,
+      "manifest_sha256": "038069326933d295d67ea32d98c07c7ff4e5c389283ed519c8566b9c921b454e"
+    },
+    "baseline_git_blob_unchanged_subset_manifest_v1": {
+      "source": "exact_149_unchanged_committed_blobs_at_84b390ef",
+      "path_count": 149,
+      "content_bytes": 7539344,
+      "manifest_bytes": 19215,
+      "manifest_sha256": "7bab2c12c9633c03f1ab32d879f26741b42d99004aeea8a6899f486a3e36bb8f"
+    },
+    "baseline_git_blob_plus_committed_normalized_overlay_successor_manifest_v1": {
+      "source": "149_baseline_Git_blobs_plus_21_committed_LF_normalized_overlay_blobs",
+      "path_count": 170,
+      "content_bytes": 11313521,
+      "manifest_bytes": 21818,
+      "manifest_sha256": "c90e1b0854ffbc78661ae728a4581a8c1aae91cc0ca84a09e10f3bb23bafc2c2",
+      "explicitly_not_named_successor_raw": true
+    }
+  },
+  "historical_root_provenance_correction": {
+    "existing_values_preserved": true,
+    "existing_manifest_and_evidence_rewritten": false,
+    "existing_base_root": {
+      "manifest_sha256": "73afe757944d57be910727ab4ebc580941eb741b95ad7e318ea629d65b903597",
+      "content_bytes": 11051221,
+      "manifest_bytes": 21819,
+      "correct_role": "worktree_observed_base_provenance_at_legacy_successor_capture"
+    },
+    "existing_successor_raw_root": {
+      "manifest_sha256": "2ea156ba85b5387b3ccea02392dd13a974fb529b600fc6634609044290da83f8",
+      "content_bytes": 11361589,
+      "manifest_bytes": 21820,
+      "correct_role": "mixed_149_worktree_observed_unchanged_plus_21_external_source_raw_changed_provenance"
+    },
+    "existing_unchanged_subset_root": {
+      "manifest_sha256": "ce227e2575a3694e13721752addbc77accfebb6a47018516493806a30e581697",
+      "content_bytes": 7573456,
+      "manifest_bytes": 19217,
+      "correct_role": "worktree_observed_149_path_unchanged_subset_provenance"
+    }
+  },
+  "mismatch_inventory": {
+    "single_source_section": "approval_request.mismatch_inventory.exact_mismatches",
+    "mismatch_count": 51,
+    "matching_path_count": 119,
+    "all_mismatches_are_unchanged_base_paths_without_overlay": true,
+    "relative_paths": [
+      "A.Idea Note Layer/A1.Vision Interview Agent.md",
+      "A.Idea Note Layer/A2.Idea Note Generator.md",
+      "A.Idea Note Layer/A3.Marketing Reviewer v2.md",
+      "A.Idea Note Layer/A4.Architecture Feasibility Reviewer.md",
+      "A.Idea Note Layer/A5.Ethics & Regulatory Reviewer.md",
+      "A.Idea Note Layer/A6.Binary Gatekeeper.md",
+      "B.Concept Layer/B1.Snapshot Projection & Coverage Interview.md",
+      "B.Concept Layer/B2.Peer Review of Concept Coverage.md",
+      "B.Concept Layer/B3.Marketing Coverage Expansion.md",
+      "B.Concept Layer/B4.Architecture Coverage Review.md",
+      "B.Concept Layer/B5.Risk & Operations Coverage.md",
+      "B.Concept Layer/B6.Ethics & Governance Enforcement Coverage Review.md",
+      "B.Concept Layer/B7.Aspect Similarity & Consolidation Review.md",
+      "B.Concept Layer/B8.Coverage Final Gatekeeper.md",
+      "C.Requirements Layer/C1.Aspect Requirement Translator.md",
+      "C.Requirements Layer/C2.Requirements Validation.md",
+      "D.Stories & PRD Layer/D1.Story Inventory Generator.md",
+      "D.Stories & PRD Layer/D2.Story Inventory Review.md",
+      "D.Stories & PRD Layer/D3.Story Detailing.md",
+      "D.Stories & PRD Layer/D4.UX Reviewer.md",
+      "D.Stories & PRD Layer/D5.Feasibility Reviewer (Low-level).md",
+      "D.Stories & PRD Layer/D6.Product & Traceability Reviewer.md",
+      "D.Stories & PRD Layer/D7.Story Gatekeeper & PRD Index Registrar.md",
+      "E. Design Research & Intent Layer/E1.Design Research Analyst.md",
+      "E. Design Research & Intent Layer/E10.DesignMoodSketcherHITL.md",
+      "E. Design Research & Intent Layer/E2.Design Vision Interview (HITL).md",
+      "E. Design Research & Intent Layer/E3.Design Parameter Alignment Synthesizer.md",
+      "E. Design Research & Intent Layer/E4.DesignIntentNormalizerTensionMapper.md",
+      "E. Design Research & Intent Layer/E5.Expressive Adequacy Surface Grammar Reviewer.md",
+      "E. Design Research & Intent Layer/E6.PM Intent Reviewer.md",
+      "E. Design Research & Intent Layer/E7.Marketing Positioning Reviewer.md",
+      "E. Design Research & Intent Layer/E8.Accessibility Intent Reviewer.md",
+      "E. Design Research & Intent Layer/E9.Frontend Design System Feasibility Reviewer.md",
+      "F.UX Architecture/F1. Surface Map Architect.md",
+      "F.UX Architecture/F2. Navigation Flow Architect.md",
+      "F.UX Architecture/F3. Information Architecture Architect.md",
+      "F.UX Architecture/F4. Interaction Pattern Architect.md",
+      "F.UX Architecture/F5. UX Structure QA.md",
+      "F.UX Architecture/F6. PM Flow Story Reviewer.md",
+      "F.UX Architecture/F7. Accessibility Architecture Reviewer.md",
+      "F.UX Architecture/F8. UX Architecture HITL Review.md",
+      "F.UX Architecture/F9. UX Architecture Gatekeeper.md",
+      "H. Design-to-Code Handoff/H1. Traceability Index Builder.md",
+      "H. Design-to-Code Handoff/H10. ELM View Architect.md",
+      "H. Design-to-Code Handoff/H11. ELM View QA.md",
+      "H. Design-to-Code Handoff/H12. ELM Architecture Integrator.md",
+      "H. Design-to-Code Handoff/H13. ELM Architecture QA.md",
+      "H. Design-to-Code Handoff/H15. ELM Architecture Gatekeeper.md",
+      "H. Design-to-Code Handoff/H2. Traceability QA.md",
+      "H. Design-to-Code Handoff/H3. ELM Module Architect.md",
+      "H. Design-to-Code Handoff/H6. ELM State Type QA.md"
+    ],
+    "path_set_matches_exhaustive_request_rows": true
+  },
+  "finding_disposition": {
+    "finding_id": "LSR-F01",
+    "reviewed_severity": "high",
+    "reviewed_blocking": true,
+    "remediation_materialized": true,
+    "remediation_kind": "append_only_reproducible_blob_provenance_corrigendum",
+    "finding_closed": false,
+    "closure_pending": "fresh_context_independent_re_review_and_subsequent_owner_disposition",
+    "semantic_results_affected": false,
+    "normalized_roots_affected": false,
+    "applicability_affected": false
+  },
+  "carry_forward_findings": [
+    {
+      "finding_id": "LSR-F02",
+      "severity": "medium",
+      "blocking": false,
+      "status": "carried_forward_unremediated",
+      "reason": "worktree_renormalization_and_core_autocrlf_change_require_separate_authority"
+    },
+    {
+      "finding_id": "LSR-F03",
+      "severity": "low",
+      "blocking": false,
+      "status": "carried_forward_unremediated",
+      "reason": "BOM_transform_order_hygiene_is_not_part_of_LSR_F01_remediation"
+    },
+    {
+      "finding_id": "LSR-F04",
+      "severity": "low",
+      "blocking": false,
+      "status": "carried_forward_unremediated",
+      "reason": "historical_authority_chains_remain_immutable"
+    },
+    {
+      "finding_id": "LSR-F05",
+      "severity": "info",
+      "blocking": false,
+      "status": "carried_forward_unremediated",
+      "reason": "development_plan_v0_14_adoption_requires_separate_transaction"
+    }
+  ],
+  "preserved_results": {
+    "normalized_projection_roots": "unchanged",
+    "snapshot_partition_148_3": "unchanged",
+    "three_semantic_delta_classifications": "unchanged_K0b04_impact",
+    "applicability_matrix": "unchanged",
+    "plans": "unchanged",
+    "state_and_STATE": "unchanged",
+    "renderer_and_profile": "unchanged",
+    "status_and_gates": "unchanged",
+    "runtime_authority": "none"
+  },
+  "verification_summary": {
+    "direct_read_pin_errors": 0,
+    "baseline_blob_binding_errors": 0,
+    "overlay_blob_binding_errors": 0,
+    "projection_root_errors": 0,
+    "partition_errors": 0,
+    "mismatch_inventory_errors": 0,
+    "new_mismatches": [],
+    "repository_code_or_tests_executed": false
+  },
+  "mandatory_next_step": {
+    "kind": "fresh_context_read_only_non_author_independent_re_review",
+    "separate_authority_required": true,
+    "minimum_subject": "LSR-F01_blob_binding_and_projection_remediation_plus_carry_forward_LSR-F02_through_LSR-F05",
+    "reviewer_may_edit_reviewed_package": false,
+    "reviewer_recommendation_is_owner_approval": false
+  }
+}
