@@ -1,0 +1,135 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "owner_approved_documentation_only_semantic_delta_disposition_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "sha256": "7cefa337af2ae3ad38f529d080da1b3b3e685b68288a217000f899c29419dbb0",
+      "bytes": 21058
+    },
+    "owner_confirmation": "exact_hash_confirmation_in_conversation_on_2026_09_25",
+    "git_baseline": {
+      "head": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+      "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+      "tree": "f5c8977a7068ca260062b142b789168d09698e5b"
+    }
+  },
+  "approved_scope": {
+    "package_kind": "additive_immutable_documentation_semantic_delta_supplement",
+    "write_paths": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+      "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1.yaml"
+    ],
+    "write_path_count": 5,
+    "all_paths_new": true,
+    "existing_files_may_change": false,
+    "independent_review_in_scope": false,
+    "implementation_in_scope": false,
+    "state_or_gate_transition_in_scope": false
+  },
+  "owner_disposition": {
+    "projection_facts_accepted": {
+      "previous_projection": {
+        "path_count": 151,
+        "content_bytes": 10969317,
+        "ordinal_manifest_bytes": 19110,
+        "ordinal_manifest_sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+      },
+      "snapshot_projection": {
+        "path_count": 151,
+        "content_bytes": 10974418,
+        "ordinal_manifest_bytes": 19110,
+        "ordinal_manifest_sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+      },
+      "unchanged_paths": 148,
+      "changed_paths": 3,
+      "changed_path_set": [
+        "J. Implementation/J0. Dispatcher.md",
+        "J. Implementation/J14. Infra Methodologist.md",
+        "J. Implementation/J17. Infra Tester.md"
+      ]
+    },
+    "classification_decision": {
+      "all_three_primary_category": "K0b04_impact",
+      "K0b03_impact_count": 0,
+      "K0b04_impact_count": 3,
+      "N1_impact_count": 0,
+      "requires_owner_decision_primary_count": 0,
+      "no_pipeline_v2_impact_count": 0,
+      "rationale": "the_delta_strengthens_dispatch_generation_and_test_identity_binding_for_credentialed_read_only_provider_verification_and_is_already_routed_by_the_existing_K0b04_dispatcher_security_and_attestation_rows"
+    },
+    "authority_boundary_decision": {
+      "legacy_owner_decision_ids_are_v2_authority": false,
+      "service_account_literals_are_v2_global_constants": false,
+      "machine_local_paths_are_v2_global_constants": false,
+      "provider_specific_commands_are_v2_global_constants": false,
+      "future_native_disposition": "K0b04_owner_must_parameterize_replace_or_reject_project_specific_literals_under_separate_authority_before_any_use",
+      "legacy_text_may_be_runtime_imported": false
+    },
+    "plan_disposition": {
+      "development_plan_v0_14_change_required": false,
+      "canonical_development_plan_change_required": false,
+      "canonical_architecture_plan_change_required": false,
+      "K0b03_planning_package_v1_1_change_required": false,
+      "state_or_gate_change_required": false,
+      "legacy_successor_package_may_be_mutated": false,
+      "additive_semantic_delta_supplement_required": true
+    },
+    "review_disposition": {
+      "existing_successor_package_plus_snapshot_without_supplement_is_review_complete": false,
+      "future_independent_review_input": "existing_successor_package_plus_immutable_prompt_snapshot_plus_this_three_path_delta_package",
+      "future_independent_review_requires_separate_exact_scope_authority": true,
+      "this_disposition_is_not_a_reviewer_recommendation": true
+    }
+  },
+  "preserved_routing": [
+    {
+      "relative_path": "J. Implementation/J0. Dispatcher.md",
+      "classification": "K0b04_impact",
+      "owner": "K0b04_dispatcher_and_F15_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "Alpha0_dispatcher_preflight_and_task_completion_gate",
+      "native_v2_target": "registry_v2_bound_dispatcher_contract_and_F15_hypothesis_evidence",
+      "future_evidence_route": "K0b04_F15_dispatcher_receipt_and_Alpha0_disposition"
+    },
+    {
+      "relative_path": "J. Implementation/J14. Infra Methodologist.md",
+      "classification": "K0b04_impact",
+      "owner": "K0b04_security_and_attestation_proof_owner",
+      "phase": "K0b-04",
+      "consumer": "infra_command_coverage_and_non_mutating_plan_contract",
+      "native_v2_target": "K0b04_F10_tool_policy_and_attestation_limit_matrix",
+      "future_evidence_route": "K0b04_F10_security_receipt_with_no_inferred_live_safety"
+    },
+    {
+      "relative_path": "J. Implementation/J17. Infra Tester.md",
+      "classification": "K0b04_impact",
+      "owner": "K0b04_attestation_limit_owner",
+      "phase": "K0b-04",
+      "consumer": "F10_attestation_policy_and_future_read_only_live_verification_contract",
+      "native_v2_target": "K0b04_attestation_limit_and_capability_non_escalation_test_matrix",
+      "future_evidence_route": "K0b04_F10_and_attestation_limit_receipts_under_separate_execution_authority"
+    }
+  ],
+  "prohibitions": {
+    "live_source_read": true,
+    "legacy_prompt_runtime_import": true,
+    "independent_review": true,
+    "remediation": true,
+    "plan_adoption": true,
+    "gate_transition": true,
+    "K0b03_implementation": true,
+    "K0b04_K0b05_N1_execution": true,
+    "repository_code_or_tests": true,
+    "network_dependencies_locked_environments_or_temp_targets": true,
+    "Alpha0_F10_F15_model_or_provider_execution": true,
+    "runtime_publications_or_remote_effects": true
+  },
+  "runtime_authority": "none"
+}

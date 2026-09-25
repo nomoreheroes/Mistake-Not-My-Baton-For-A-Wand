@@ -1,0 +1,198 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_precommit_document_checks_passed_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "sha256": "7cefa337af2ae3ad38f529d080da1b3b3e685b68288a217000f899c29419dbb0",
+      "bytes": 21058
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "sha256": "a7e51e2724c39eec395667316812a9382381c61c480dbf7a10d23f087b8923c6",
+      "bytes": 6272
+    },
+    "semantic_delta_evidence": {
+      "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+      "sha256": "704029153429f5a9213b7aca3d519034db028e9de1d8fb88c2b500653e753073",
+      "bytes": 13731
+    },
+    "architecture_supplement": {
+      "path": "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+      "sha256": "7cb686afaa08293b3db75043258e35df9fd6a0eaacbc06a2bfffc3bc7b0d3c39",
+      "bytes": 8354
+    }
+  },
+  "baseline": {
+    "head": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "tree": "f5c8977a7068ca260062b142b789168d09698e5b",
+    "tracked_worktree_before_package": "clean",
+    "index_before_package": "clean",
+    "initial_untracked_set": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml"
+    ]
+  },
+  "package_inventory": {
+    "path_count": 5,
+    "all_paths_new": true,
+    "paths": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+      "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1.yaml"
+    ],
+    "existing_files_modified": 0
+  },
+  "verified_projection_facts": {
+    "previous": {
+      "paths": 151,
+      "content_bytes": 10969317,
+      "manifest_bytes": 19110,
+      "manifest_sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+    },
+    "snapshot": {
+      "paths": 151,
+      "content_bytes": 10974418,
+      "manifest_bytes": 19110,
+      "manifest_sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+    },
+    "unchanged_paths": 148,
+    "changed_paths": 3,
+    "changed_path_set": [
+      "J. Implementation/J0. Dispatcher.md",
+      "J. Implementation/J14. Infra Methodologist.md",
+      "J. Implementation/J17. Infra Tester.md"
+    ],
+    "binding_errors": 0,
+    "projection_mismatches": 0
+  },
+  "checks": [
+    {
+      "ordinal": 1,
+      "check": "git_baseline_parent_tree_and_clean_status",
+      "result": "pass",
+      "evidence": "HEAD_parent_tree_exact_tracked_worktree_and_index_clean_before_new_package_paths"
+    },
+    {
+      "ordinal": 2,
+      "check": "exact_156_path_all_new_snapshot_commit_inventory",
+      "result": "pass",
+      "evidence": "156_all_new_equals_151_prompt_paths_plus_5_metadata_paths_with_zero_unexpected_paths"
+    },
+    {
+      "ordinal": 3,
+      "check": "five_snapshot_package_pins",
+      "result": "pass",
+      "evidence": "request_owner_manifest_capture_and_document_check_full_hashes_and_sizes_match_the_committed_snapshot_package"
+    },
+    {
+      "ordinal": 4,
+      "check": "all_151_snapshot_bindings",
+      "result": "pass",
+      "evidence": "every_committed_snapshot_path_matches_normalized_snapshot_sha256_and_bytes_from_the_pinned_snapshot_manifest"
+    },
+    {
+      "ordinal": 5,
+      "check": "all_151_predecessor_projection_bindings",
+      "result": "pass",
+      "evidence": "each_predecessor_path_matches_the_overlay_or_immutable_base_raw_pin_and_normalizes_under_the_declared_contract"
+    },
+    {
+      "ordinal": 6,
+      "check": "exact_projection_roots_and_148_3_partition",
+      "result": "pass",
+      "evidence": "previous_c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc_snapshot_390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d_partition_complete_disjoint"
+    },
+    {
+      "ordinal": 7,
+      "check": "six_semantic_read_file_pins",
+      "result": "pass",
+      "evidence": "J0_J14_J17_before_and_after_full_sha256_and_decimal_bytes_match_the_exact_three_changed_rows"
+    },
+    {
+      "ordinal": 8,
+      "check": "section_evidence_and_exactly_one_classification_per_changed_path",
+      "result": "pass",
+      "evidence": "three_rows_each_have_before_after_section_evidence_and_one_K0b04_impact_classification"
+    },
+    {
+      "ordinal": 9,
+      "check": "preserved_owner_phase_consumer_and_future_route_bindings",
+      "result": "pass",
+      "evidence": "all_three_rows_match_the_existing_21_row_applicability_evidence"
+    },
+    {
+      "ordinal": 10,
+      "check": "legacy_literals_do_not_become_v2_authority",
+      "result": "pass",
+      "evidence": "owner_disposition_evidence_and_supplement_explicitly_deny_authority_to_legacy_owner_ids_service_account_literals_machine_paths_and_provider_commands"
+    },
+    {
+      "ordinal": 11,
+      "check": "plans_unchanged",
+      "result": "pass",
+      "evidence": "development_plan_v0_14_K0b03_v1_1_and_both_canonical_plan_pins_match_and_no_plan_path_is_in_the_write_set"
+    },
+    {
+      "ordinal": 12,
+      "check": "state_renderer_profile_status_and_gates_unchanged",
+      "result": "pass",
+      "evidence": "state_STATE_renderer_v6_and_profile_v6_pins_match_and_none_is_in_the_write_set_G_K0B03_UNTRUSTED_SHAPES_remains_open"
+    },
+    {
+      "ordinal": 13,
+      "check": "UTF8_without_BOM_LF_only_one_final_LF",
+      "result": "pass",
+      "evidence": "all_five_new_documents_checked_as_strict_UTF8_without_BOM_with_zero_CR_bytes_and_exactly_one_final_LF"
+    },
+    {
+      "ordinal": 14,
+      "check": "no_duplicate_keys_and_static_parse",
+      "result": "pass",
+      "evidence": "all_four_JSON_compatible_YAML_documents_parse_and_have_zero_duplicate_object_keys_supplement_is_static_Markdown"
+    },
+    {
+      "ordinal": 15,
+      "check": "cross_document_hashes_and_references",
+      "result": "pass",
+      "evidence": "request_owner_semantic_evidence_and_supplement_hash_chain_matches_and_all_referenced_repository_paths_exist"
+    },
+    {
+      "ordinal": 16,
+      "check": "exact_five_new_paths_and_no_other_staged_paths",
+      "result": "precommit_pass",
+      "evidence": "precommit_candidate_set_is_exactly_the_five_approved_new_paths_staging_must_be_rechecked_immediately_before_commit"
+    },
+    {
+      "ordinal": 17,
+      "check": "future_commit_parent_message_and_trailers",
+      "result": "precommit_contract_bound",
+      "evidence": "required_parent_08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f_message_and_three_trailers_are_fixed_and_must_be_verified_after_commit"
+    },
+    {
+      "ordinal": 18,
+      "check": "runtime_authority_none",
+      "result": "pass",
+      "evidence": "every_new_document_denies_runtime_authority_and_no_runtime_action_was_performed"
+    }
+  ],
+  "format_profile": {
+    "structured_documents": "JSON_compatible_YAML_UTF8_without_BOM_LF_only_exactly_one_final_LF_no_duplicate_keys",
+    "markdown_document": "UTF8_without_BOM_LF_only_exactly_one_final_LF",
+    "temp_targets_used": [],
+    "network_used": false,
+    "dependencies_used": [],
+    "repository_code_or_tests_executed": []
+  },
+  "findings": [],
+  "blocking_finding_count": 0,
+  "independent_review_performed": false,
+  "state_or_gate_transition_performed": false,
+  "implementation_performed": false,
+  "runtime_authority": "none"
+}

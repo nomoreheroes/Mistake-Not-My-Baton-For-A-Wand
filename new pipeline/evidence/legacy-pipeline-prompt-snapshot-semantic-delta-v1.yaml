@@ -1,0 +1,275 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-prompt-snapshot-semantic-delta-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-25",
+  "status": "complete_three_path_semantic_delta_classified_K0b04_documentation_only_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "sha256": "7cefa337af2ae3ad38f529d080da1b3b3e685b68288a217000f899c29419dbb0",
+      "bytes": 21058
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "sha256": "a7e51e2724c39eec395667316812a9382381c61c480dbf7a10d23f087b8923c6",
+      "bytes": 6272
+    }
+  },
+  "git_baseline": {
+    "head": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "tree": "f5c8977a7068ca260062b142b789168d09698e5b",
+    "snapshot_commit_inventory": {
+      "path_count": 156,
+      "all_paths_new": true,
+      "prompt_paths": 151,
+      "metadata_paths": 5,
+      "unexpected_paths": 0
+    }
+  },
+  "bound_inputs": {
+    "previous_successor_manifest": {
+      "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+      "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+      "bytes": 178435
+    },
+    "snapshot_manifest": {
+      "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+      "sha256": "cbd2a54c94e5e163013ab9c97eeb710193727c2a99ac1826ada31e85554ffa7e",
+      "bytes": 147591
+    },
+    "existing_applicability": {
+      "path": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+      "sha256": "a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c",
+      "bytes": 17797
+    },
+    "existing_applicability_addendum": {
+      "path": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+      "sha256": "7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b",
+      "bytes": 11398
+    },
+    "development_plan_v0_14": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "bytes": 101354
+    },
+    "K0b03_planning_package_v1_1": {
+      "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+      "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+      "bytes": 13146
+    },
+    "canonical_development_plan": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "bytes": 97569
+    },
+    "canonical_architecture_plan": {
+      "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+      "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+      "bytes": 246369
+    }
+  },
+  "comparison_contract": {
+    "path_selector": "exact_151_snapshot_manifest_entries_relative_path_values_ending_in_dot_md",
+    "selector_path_count": 151,
+    "selector_is_closed_world": true,
+    "previous_projection_resolution": "committed_overlay_for_changed_overlay_materialized_else_immutable_old_pipeline_relative_path",
+    "normalization": "consume_optional_UTF8_BOM_as_encoding_signature_then_strict_UTF8_then_CRLF_to_LF_then_remaining_CR_to_LF_then_trim_trailing_LFs_then_append_exactly_one_LF_then_encode_UTF8_without_BOM",
+    "snapshot_projection_resolution": "committed_snapshot_path_and_normalized_snapshot_pin_from_each_snapshot_manifest_entry",
+    "ordinal_manifest_profile": "relative_path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>_ordered_by_snapshot_manifest_ordinal",
+    "live_source_read": false,
+    "live_source_path": "C:/Projects/software_workflow",
+    "unselected_content_read": false,
+    "semantic_read_scope": "only_the_three_changed_before_after_pairs"
+  },
+  "projection_results": {
+    "previous_successor_projection": {
+      "path_count": 151,
+      "content_bytes": 10969317,
+      "ordinal_manifest_bytes": 19110,
+      "ordinal_manifest_sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+    },
+    "immutable_snapshot_projection": {
+      "path_count": 151,
+      "content_bytes": 10974418,
+      "ordinal_manifest_bytes": 19110,
+      "ordinal_manifest_sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+    },
+    "partition": {
+      "unchanged_path_count": 148,
+      "changed_path_count": 3,
+      "complete": true,
+      "disjoint": true,
+      "content_byte_delta": 5101
+    },
+    "binding_errors": [],
+    "projection_mismatches": []
+  },
+  "classification_contract": {
+    "allowed_categories": [
+      "no_pipeline_v2_impact",
+      "K0b03_impact",
+      "K0b04_impact",
+      "N1_impact",
+      "requires_owner_decision"
+    ],
+    "exactly_one_primary_category_per_changed_path": true,
+    "category_counts": {
+      "no_pipeline_v2_impact": 0,
+      "K0b03_impact": 0,
+      "K0b04_impact": 3,
+      "N1_impact": 0,
+      "requires_owner_decision": 0
+    },
+    "classification_is_routing_not_implementation_authority": true
+  },
+  "changed_path_rows": [
+    {
+      "ordinal": 1,
+      "relative_path": "J. Implementation/J0. Dispatcher.md",
+      "before": {
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J0. Dispatcher.md",
+        "sha256": "8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784",
+        "bytes": 771025,
+        "section": "Infra_verification_mode_and_verification_mode_admissibility_before_EMA_002_binding"
+      },
+      "after": {
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J0. Dispatcher.md",
+        "sha256": "7fdd2d8c9a58404f096c145ab21250827f536a74fd9f159925c63742db4933e3",
+        "bytes": 773764,
+        "section": "EMA_002_binding_for_credentialed_Google_Cloud_J17_probes",
+        "line_start": 779,
+        "line_end": 804
+      },
+      "semantic_delta": [
+        "scope_alone_no_longer_makes_a_credentialed_probe_live_phase_executable",
+        "owner_signed_attestation_must_bind_isolated_home_non_inherited_environment_separate_tool_state_and_declared_verification_identity",
+        "J14_generation_must_be_current_and_bind_actor_identity_identity_check_and_impersonation_argv",
+        "harness_must_clear_ambient_environment_and_construct_only_the_attested_allowlist",
+        "profile_identity_argv_and_consumer_specific_attestation_projection_must_agree",
+        "any_mismatch_blocks_before_J17_dispatch_without_ambient_fallback"
+      ],
+      "classification": "K0b04_impact",
+      "affected_pipeline_v2_claim": "dispatcher_preflight_and_attestation_evidence_must_prove_identity_environment_plan_and_argv_coherence_before_any_credentialed_probe_is_admitted",
+      "existing_applicability_row": {
+        "line_start": 207,
+        "line_end": 215,
+        "owner": "K0b04_dispatcher_and_F15_proof_owner",
+        "phase": "K0b-04",
+        "consumer": "Alpha0_dispatcher_preflight_and_task_completion_gate",
+        "native_v2_target": "registry_v2_bound_dispatcher_contract_and_F15_hypothesis_evidence",
+        "future_evidence_route": "K0b04_F15_dispatcher_receipt_and_Alpha0_disposition"
+      },
+      "recommended_future_documentation_route": "carry_this_binding_as_a_reviewed_K0b04_dispatcher_and_F15_disposition_input_without_importing_legacy_prompt_or_project_literals"
+    },
+    {
+      "ordinal": 2,
+      "relative_path": "J. Implementation/J14. Infra Methodologist.md",
+      "before": {
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J14. Infra Methodologist.md",
+        "sha256": "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+        "bytes": 269823,
+        "section": "expected_identity_and_test_only_credential_contract_before_EMA_002_OD_2"
+      },
+      "after": {
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J14. Infra Methodologist.md",
+        "sha256": "9ad1e56d85f99e76b1398d326db85c26ce67b49fadd50416d832d44d15ecfdf7",
+        "bytes": 271433,
+        "section": "J17_Google_Cloud_verification_identity",
+        "line_start": 1189,
+        "line_end": 1209
+      },
+      "semantic_delta": [
+        "new_generation_must_not_reuse_a_historical_human_operator_binding",
+        "every_provider_API_command_must_bind_the_declared_actor_and_explicit_impersonation_target",
+        "identity_verification_uses_the_impersonation_property_not_the_OAuth_source_account_listing",
+        "runtime_environment_must_be_non_inheriting_and_bind_isolated_home_and_tool_state",
+        "a_keyless_verification_identity_does_not_require_an_invented_secret_reference",
+        "missing_identity_or_environment_binding_is_an_invalid_declaration_not_an_ambient_fallback"
+      ],
+      "classification": "K0b04_impact",
+      "affected_pipeline_v2_claim": "F10_tool_policy_and_attestation_limit_evidence_must_bind_generated_command_identity_and_environment_without_inferring_live_safety_from_a_credential_label_or_read_only_label",
+      "existing_applicability_row": {
+        "line_start": 229,
+        "line_end": 237,
+        "owner": "K0b04_security_and_attestation_proof_owner",
+        "phase": "K0b-04",
+        "consumer": "infra_command_coverage_and_non_mutating_plan_contract",
+        "native_v2_target": "K0b04_F10_tool_policy_and_attestation_limit_matrix",
+        "future_evidence_route": "K0b04_F10_security_receipt_with_no_inferred_live_safety"
+      },
+      "recommended_future_documentation_route": "carry_the_general_identity_binding_invariant_to_the_K0b04_F10_matrix_and_keep_provider_literals_as_project_configuration_subject_to_owner_disposition"
+    },
+    {
+      "ordinal": 3,
+      "relative_path": "J. Implementation/J17. Infra Tester.md",
+      "before": {
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J17. Infra Tester.md",
+        "sha256": "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+        "bytes": 148671,
+        "section": "observed_identity_contract_before_verification_service_account_binding"
+      },
+      "after": {
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J17. Infra Tester.md",
+        "sha256": "a747ec3fbddb4b041ebfe9729b4ccb550b0f5e3511c7d82464b7586508cbac6e",
+        "bytes": 149423,
+        "section": "observed_identity_is_recorded_and_verification_service_account_enforcement",
+        "line_start": 86,
+        "line_end": 101
+      },
+      "semantic_delta": [
+        "observed_identity_class_now_distinguishes_a_verification_service_account",
+        "a_historical_human_binding_is_not_admissible_in_a_new_generation",
+        "the_secret_free_identity_command_and_every_provider_API_argv_are_checked_before_the_first_API_call",
+        "OAuth_source_identity_is_not_accepted_as_target_execution_identity",
+        "missing_or_mismatched_binding_is_an_invalid_declaration",
+        "J17_does_not_repair_argv_or_fall_back_to_ambient_tool_state"
+      ],
+      "classification": "K0b04_impact",
+      "affected_pipeline_v2_claim": "attestation_limit_and_capability_non_escalation_evidence_must_record_and_verify_the_actual_target_principal_and_fail_closed_before_external_observation",
+      "existing_applicability_row": {
+        "line_start": 251,
+        "line_end": 259,
+        "owner": "K0b04_attestation_limit_owner",
+        "phase": "K0b-04",
+        "consumer": "F10_attestation_policy_and_future_read_only_live_verification_contract",
+        "native_v2_target": "K0b04_attestation_limit_and_capability_non_escalation_test_matrix",
+        "future_evidence_route": "K0b04_F10_and_attestation_limit_receipts_under_separate_execution_authority"
+      },
+      "recommended_future_documentation_route": "carry_identity_observation_and_fail_closed_command_admission_to_the_K0b04_attestation_limit_matrix_under_separate_execution_authority"
+    }
+  ],
+  "compatibility_assessment": {
+    "existing_K0b04_routes_remain_correct": true,
+    "existing_owners_phases_consumers_and_future_routes_remain_correct": true,
+    "development_plan_v0_14_revision_required": false,
+    "canonical_plan_revision_required": false,
+    "K0b03_planning_package_v1_1_revision_required": false,
+    "N1_migration_matrix_change_required_now": false,
+    "legacy_successor_package_revision_in_place_required": false,
+    "additive_three_path_supplement_required_before_independent_review": true,
+    "review_may_use_existing_package_plus_snapshot_without_supplement": false
+  },
+  "authority_boundaries": {
+    "embedded_legacy_owner_decision_ids_are_authoritative_for_pipeline_v2": false,
+    "embedded_service_account_literals_are_global_pipeline_v2_constants": false,
+    "embedded_machine_local_paths_are_global_pipeline_v2_constants": false,
+    "embedded_provider_specific_commands_are_global_pipeline_v2_constants": false,
+    "future_K0b04_owner_must_parameterize_replace_or_reject_project_specific_values": true,
+    "snapshot_is_registry_plan_implementation_or_runtime_authority": false,
+    "legacy_prompts_may_be_imported_at_runtime": false
+  },
+  "findings": [],
+  "blocking_finding_count": 0,
+  "unchanged_governance": {
+    "state": true,
+    "STATE_projection": true,
+    "renderer": true,
+    "projection_profile": true,
+    "status": true,
+    "gates": true,
+    "G_K0B03_UNTRUSTED_SHAPES_remains_open": true
+  },
+  "runtime_authority": "none"
+}

@@ -1,0 +1,458 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-24",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "purpose": "request_a_bounded_documentation_only_semantic_delta_disposition_package_for_the_immutable_legacy_prompt_snapshot",
+  "non_authorizing_statement": {
+    "this_document_grants_implementation_authority": false,
+    "this_document_grants_runtime_authority": false,
+    "this_document_closes_or_changes_a_gate": false,
+    "this_document_adopts_a_plan_as_canonical_authority": false,
+    "this_document_authorizes_independent_review": false,
+    "this_document_authorizes_future_package_materialization_or_commit": false,
+    "separate_exact_hash_owner_confirmation_required": true,
+    "runtime_authority": "none"
+  },
+  "git_baseline": {
+    "repository": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "head": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+    "parent": "b7887957c854825044b448a0ff6a1e84e2ab6562",
+    "tree": "f5c8977a7068ca260062b142b789168d09698e5b",
+    "required_index_status": "clean",
+    "required_worktree_status": "clean",
+    "snapshot_commit_inventory": {
+      "path_count": 156,
+      "all_paths_new": true,
+      "normalized_markdown_prompt_paths": 151,
+      "package_metadata_paths": 5,
+      "unexpected_paths": 0
+    }
+  },
+  "finite_read_set": {
+    "direct_pins": [
+      {
+        "ordinal": 1,
+        "path": "new pipeline/requests/legacy-pipeline-successor-and-plan-revision-approval-request-v1.yaml",
+        "sha256": "1c664576325fafb0d2a7eb3f4eb8d6e1d5492c05666f64709a76c9c50f08e191",
+        "bytes": 38427,
+        "role": "legacy_successor_exact_scope_request"
+      },
+      {
+        "ordinal": 2,
+        "path": "new pipeline/decisions/legacy-pipeline-successor-and-plan-revision-owner-disposition-v1.yaml",
+        "sha256": "4288640e6dd2cd8573bd9d3c59790bcb62a0745ac6b84feb59b0613a38f290f5",
+        "bytes": 8381,
+        "role": "legacy_successor_owner_disposition"
+      },
+      {
+        "ordinal": 3,
+        "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/manifest-v1.yaml",
+        "sha256": "37a18ca9935948511eaf757660f4485bf11ea9f06a59158f42293f985fdee880",
+        "bytes": 178435,
+        "role": "previous_successor_projection_manifest"
+      },
+      {
+        "ordinal": 4,
+        "path": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+        "sha256": "a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c",
+        "bytes": 17797,
+        "role": "existing_21_path_applicability_single_source"
+      },
+      {
+        "ordinal": 5,
+        "path": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+        "sha256": "7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b",
+        "bytes": 11398,
+        "role": "existing_applicability_boundaries"
+      },
+      {
+        "ordinal": 6,
+        "path": "new pipeline/evidence/legacy-pipeline-successor-plan-revision-document-check-v1.yaml",
+        "sha256": "e4ba2175ce06c80e2eb8c749222fa5928fa225358a792e74bc1f4ca9a04b27d6",
+        "bytes": 14339,
+        "role": "legacy_successor_document_check"
+      },
+      {
+        "ordinal": 7,
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+        "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+        "bytes": 101354,
+        "role": "immutable_development_plan_successor"
+      },
+      {
+        "ordinal": 8,
+        "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+        "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+        "bytes": 13146,
+        "role": "immutable_K0b03_planning_successor"
+      },
+      {
+        "ordinal": 9,
+        "path": "new pipeline/requests/legacy-pipeline-prompt-snapshot-approval-request-v2.yaml",
+        "sha256": "78dcb544d6d3d503b411b525a97ab619a8d1a1c4b6d015bd2d99b74672d9ee1b",
+        "bytes": 20205,
+        "role": "prompt_snapshot_exact_scope_request"
+      },
+      {
+        "ordinal": 10,
+        "path": "new pipeline/decisions/legacy-pipeline-prompt-snapshot-owner-disposition-v1.yaml",
+        "sha256": "cdca76ee1772090f17ddc2213d97778a3244c14e562577d762957fbe3d24eeb9",
+        "bytes": 3247,
+        "role": "prompt_snapshot_owner_disposition"
+      },
+      {
+        "ordinal": 11,
+        "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/manifest-v1.yaml",
+        "sha256": "cbd2a54c94e5e163013ab9c97eeb710193727c2a99ac1826ada31e85554ffa7e",
+        "bytes": 147591,
+        "role": "prompt_snapshot_manifest_and_per_entry_bindings"
+      },
+      {
+        "ordinal": 12,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-capture-v1.yaml",
+        "sha256": "5ad4a8969ea08a692342d5991f85760dcd97e027a9e2c20c6b00eec24591b713",
+        "bytes": 155029,
+        "role": "prompt_snapshot_capture_evidence"
+      },
+      {
+        "ordinal": 13,
+        "path": "new pipeline/evidence/legacy-pipeline-prompt-snapshot-document-check-v1.yaml",
+        "sha256": "e8ecfba884d14628a2f1d7a724e87864cbdcc7ad1bc84e617e164df82da2372f",
+        "bytes": 8135,
+        "role": "prompt_snapshot_document_check"
+      },
+      {
+        "ordinal": 14,
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+        "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+        "bytes": 97569,
+        "role": "canonical_development_plan"
+      },
+      {
+        "ordinal": 15,
+        "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+        "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+        "bytes": 246369,
+        "role": "canonical_architecture_plan"
+      },
+      {
+        "ordinal": 16,
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+        "bytes": 84926,
+        "role": "canonical_machine_state_and_gate_inventory"
+      },
+      {
+        "ordinal": 17,
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+        "bytes": 85362,
+        "role": "canonical_state_projection"
+      },
+      {
+        "ordinal": 18,
+        "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+        "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+        "bytes": 12373,
+        "role": "pinned_state_renderer"
+      },
+      {
+        "ordinal": 19,
+        "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+        "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+        "bytes": 191471,
+        "role": "pinned_state_projection_profile"
+      }
+    ],
+    "manifest_defined_projection_sets": {
+      "relative_path_selector": "exact_151_unique_entries_relative_path_values_ending_in_dot_md_from_the_pinned_snapshot_manifest",
+      "selector_is_closed_world": true,
+      "path_count": 151,
+      "previous_successor_projection": {
+        "manifest_pin_ordinal": 3,
+        "path_resolution": "for_each_selected_relative_path_use_committed_overlay_when_successor_entry_disposition_is_changed_overlay_materialized_else_use_immutable_old_pipeline_slash_relative_path",
+        "per_entry_raw_pins_source": "pinned_successor_manifest_entries",
+        "normalization": "BOM_aware_strict_UTF8_then_CRLF_to_LF_then_remaining_CR_to_LF_then_remove_trailing_LFs_then_append_exactly_one_LF_then_UTF8_without_BOM",
+        "path_count": 151,
+        "content_bytes": 10969317,
+        "ordinal_manifest_profile": "relative_path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>_ordered_by_snapshot_manifest_ordinal",
+        "ordinal_manifest_bytes": 19110,
+        "ordinal_manifest_sha256": "c7579bc5f3e4fe04a16888cd83ed79b8efd67c69591be284e0fa42716725e9fc"
+      },
+      "immutable_prompt_snapshot_projection": {
+        "manifest_pin_ordinal": 11,
+        "path_resolution": "exact_entries_snapshot_path_values_from_the_pinned_snapshot_manifest",
+        "per_entry_pins_source": "normalized_snapshot_sha256_and_normalized_snapshot_bytes_in_each_pinned_snapshot_manifest_entry",
+        "path_count": 151,
+        "content_bytes": 10974418,
+        "ordinal_manifest_profile": "relative_path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>_ordered_by_manifest_ordinal",
+        "ordinal_manifest_bytes": 19110,
+        "ordinal_manifest_sha256": "390ab86226549da0f0256e61cfa2b88d04d97771adc02e0b860a26a0e0411d8d"
+      },
+      "partition": {
+        "unchanged_paths": 148,
+        "changed_paths": 3,
+        "complete": true,
+        "disjoint": true
+      }
+    },
+    "semantic_content_read_boundary": {
+      "semantic_read_allowed_only_for_changed_before_after_pairs": true,
+      "allowed_pair_count": 3,
+      "live_source_path": "C:/Projects/software_workflow",
+      "live_source_may_be_read_or_compared": false,
+      "unselected_or_excluded_content_may_be_read_semantically": false
+    }
+  },
+  "semantic_delta_result": {
+    "blocking_findings": 0,
+    "classification_counts": {
+      "no_pipeline_v2_impact": 0,
+      "K0b03_impact": 0,
+      "K0b04_impact": 3,
+      "N1_impact": 0,
+      "requires_owner_decision": 0
+    },
+    "changed_paths": [
+      {
+        "ordinal": 1,
+        "relative_path": "J. Implementation/J0. Dispatcher.md",
+        "before": {
+          "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J0. Dispatcher.md",
+          "sha256": "8147cfb676b73b6e92ba6d96389b3766d8a3ff3867105a439d8d99de3cbe8784",
+          "bytes": 771025,
+          "section_evidence": "verification_mode_admissibility_before_EMA_002_binding"
+        },
+        "after": {
+          "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J0. Dispatcher.md",
+          "sha256": "7fdd2d8c9a58404f096c145ab21250827f536a74fd9f159925c63742db4933e3",
+          "bytes": 773764,
+          "section_evidence": "lines_779_804_EMA_002_binding_for_credentialed_Google_Cloud_J17_probes"
+        },
+        "classification": "K0b04_impact",
+        "affected_pipeline_v2_claim": "dispatcher_preflight_must_bind_attestation_isolated_environment_current_plan_generation_actor_identity_impersonation_argv_and_profile_before_dispatch_and_block_on_mismatch",
+        "existing_applicability_evidence": "legacy-pipeline-successor-applicability-v1.yaml_lines_207_215",
+        "owner": "K0b04_dispatcher_and_F15_proof_owner",
+        "phase": "K0b-04",
+        "consumer": "Alpha0_dispatcher_preflight_and_task_completion_gate",
+        "native_v2_target": "registry_v2_bound_dispatcher_contract_and_F15_hypothesis_evidence",
+        "future_evidence_route": "K0b04_F15_dispatcher_receipt_and_Alpha0_disposition"
+      },
+      {
+        "ordinal": 2,
+        "relative_path": "J. Implementation/J14. Infra Methodologist.md",
+        "before": {
+          "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J14. Infra Methodologist.md",
+          "sha256": "944807441ca11d68d1bfe650b264d4ca35d49596e21e8fc38b41de2a8a1a6c16",
+          "bytes": 269823,
+          "section_evidence": "expected_identity_and_test_only_credential_contract_before_EMA_002_OD_2"
+        },
+        "after": {
+          "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J14. Infra Methodologist.md",
+          "sha256": "9ad1e56d85f99e76b1398d326db85c26ce67b49fadd50416d832d44d15ecfdf7",
+          "bytes": 271433,
+          "section_evidence": "lines_1189_1209_J17_Google_Cloud_verification_identity"
+        },
+        "classification": "K0b04_impact",
+        "affected_pipeline_v2_claim": "F10_tool_policy_and_attestation_evidence_must_bind_actor_ref_literal_impersonation_argv_recursion_base_identity_check_and_isolated_runtime_environment_without_inferred_live_safety",
+        "existing_applicability_evidence": "legacy-pipeline-successor-applicability-v1.yaml_lines_229_237",
+        "owner": "K0b04_security_and_attestation_proof_owner",
+        "phase": "K0b-04",
+        "consumer": "infra_command_coverage_and_non_mutating_plan_contract",
+        "native_v2_target": "K0b04_F10_tool_policy_and_attestation_limit_matrix",
+        "future_evidence_route": "K0b04_F10_security_receipt_with_no_inferred_live_safety"
+      },
+      {
+        "ordinal": 3,
+        "relative_path": "J. Implementation/J17. Infra Tester.md",
+        "before": {
+          "path": "new pipeline/references/legacy-pipeline-successor-2026-09-23/overlay/J. Implementation/J17. Infra Tester.md",
+          "sha256": "0c0b9237853f27d114c112b1360ba726e313355ff4069ae5f37ff489d6439b3a",
+          "bytes": 148671,
+          "section_evidence": "observed_identity_contract_before_verification_service_account_binding"
+        },
+        "after": {
+          "path": "new pipeline/references/legacy-pipeline-prompt-snapshot-2026-09-24/prompts/J. Implementation/J17. Infra Tester.md",
+          "sha256": "a747ec3fbddb4b041ebfe9729b4ccb550b0f5e3511c7d82464b7586508cbac6e",
+          "bytes": 149423,
+          "section_evidence": "lines_86_101_observed_identity_and_verification_service_account_enforcement"
+        },
+        "classification": "K0b04_impact",
+        "affected_pipeline_v2_claim": "attestation_limit_and_capability_non_escalation_evidence_must_distinguish_target_identity_from_OAuth_source_identity_validate_command_and_argv_before_API_use_and_fail_closed_without_repair_or_ambient_fallback",
+        "existing_applicability_evidence": "legacy-pipeline-successor-applicability-v1.yaml_lines_251_259",
+        "owner": "K0b04_attestation_limit_owner",
+        "phase": "K0b-04",
+        "consumer": "F10_attestation_policy_and_future_read_only_live_verification_contract",
+        "native_v2_target": "K0b04_attestation_limit_and_capability_non_escalation_test_matrix",
+        "future_evidence_route": "K0b04_F10_and_attestation_limit_receipts_under_separate_execution_authority"
+      }
+    ],
+    "cross_cutting_disposition": {
+      "common_semantic_delta": "fail_closed_identity_binding_for_credentialed_Google_Cloud_read_only_verification_across_dispatch_generation_and_test_execution",
+      "K0b03_boundary": "unchanged_attestation_compatibility_interface_only_actual_limit_and_F10_F15_evidence_remain_K0b04",
+      "K0b04_boundary": "credentialed_probes_retain_isolated_home_non_inherited_environment_and_observed_identity_with_unknown_or_mismatched_state_blocking",
+      "N1_boundary": "no_new_layer_contract_or_migration_matrix_route",
+      "legacy_owner_decision_ids_are_pipeline_v2_authority": false,
+      "service_account_literals_are_pipeline_v2_global_constants": false,
+      "machine_local_paths_are_pipeline_v2_global_constants": false,
+      "provider_specific_commands_are_pipeline_v2_global_constants": false,
+      "future_K0b04_owner_must_choose_native_parameterization_or_rejection": true
+    }
+  },
+  "plan_and_package_disposition": {
+    "immutable_legacy_successor_package": "remains_valid_as_historical_provenance_and_must_not_be_mutated",
+    "development_plan_v0_14_revision_required": false,
+    "canonical_development_plan_change_required": false,
+    "canonical_architecture_plan_change_required": false,
+    "K0b03_planning_package_v1_1_revision_required": false,
+    "state_or_gate_change_required": false,
+    "additive_semantic_delta_supplement_required_before_independent_review": true,
+    "existing_package_plus_snapshot_without_supplement_is_sufficient_for_review": false,
+    "future_review_input_rule": "review_the_existing_successor_package_the_immutable_prompt_snapshot_and_the_new_three_row_semantic_delta_supplement_together",
+    "independent_review_requires_separate_authority": true
+  },
+  "proposed_future_documentation_package": {
+    "write_paths": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml",
+      "new pipeline/decisions/legacy-pipeline-prompt-snapshot-semantic-delta-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml",
+      "new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md",
+      "new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-document-check-v1.yaml"
+    ],
+    "write_path_count": 5,
+    "all_paths_must_be_new": true,
+    "existing_files_may_be_modified": false,
+    "one_local_commit": {
+      "required": true,
+      "parent": "08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+      "message": "docs(pipeline-v2): record legacy prompt snapshot semantic delta",
+      "trailers": [
+        "Approval-Request-SHA256: <full_hash_of_this_request>",
+        "Snapshot-Commit: 08efc5b7d733c9c5ad0cb88b8bbea128d12ebb2f",
+        "Runtime-Authority: none"
+      ],
+      "exact_staged_path_set_required": true,
+      "commit_is_not_currently_authorized": true
+    }
+  },
+  "execution_resources": {
+    "locked_environments": [],
+    "network_targets": [],
+    "dependencies": [],
+    "temp_targets": [],
+    "repository_code_commands": [],
+    "repository_test_commands": [],
+    "model_or_provider_calls": [],
+    "runtime_publications": [],
+    "remote_effects": []
+  },
+  "allowed_future_package_checks": [
+    {
+      "ordinal": 1,
+      "check": "git_baseline_parent_tree_and_clean_status"
+    },
+    {
+      "ordinal": 2,
+      "check": "exact_156_path_all_new_snapshot_commit_inventory"
+    },
+    {
+      "ordinal": 3,
+      "check": "five_snapshot_package_pins"
+    },
+    {
+      "ordinal": 4,
+      "check": "all_151_snapshot_bindings"
+    },
+    {
+      "ordinal": 5,
+      "check": "all_151_predecessor_projection_bindings"
+    },
+    {
+      "ordinal": 6,
+      "check": "exact_projection_roots_and_148_unchanged_3_changed_partition"
+    },
+    {
+      "ordinal": 7,
+      "check": "full_hash_and_size_pins_for_the_six_semantically_read_before_after_files"
+    },
+    {
+      "ordinal": 8,
+      "check": "section_level_evidence_and_exactly_one_classification_per_changed_path"
+    },
+    {
+      "ordinal": 9,
+      "check": "preservation_of_existing_owner_phase_consumer_and_future_evidence_route_bindings"
+    },
+    {
+      "ordinal": 10,
+      "check": "legacy_owner_ids_service_account_literals_machine_paths_and_provider_commands_do_not_become_v2_authority"
+    },
+    {
+      "ordinal": 11,
+      "check": "development_plan_v0_14_K0b03_v1_1_and_canonical_plans_are_unchanged"
+    },
+    {
+      "ordinal": 12,
+      "check": "state_STATE_renderer_profile_status_and_all_gates_are_unchanged"
+    },
+    {
+      "ordinal": 13,
+      "check": "UTF8_without_BOM_LF_only_and_exactly_one_final_LF_for_all_new_documents"
+    },
+    {
+      "ordinal": 14,
+      "check": "no_duplicate_YAML_or_JSON_keys_and_successful_static_parse"
+    },
+    {
+      "ordinal": 15,
+      "check": "exact_cross_document_hashes_and_no_dangling_references"
+    },
+    {
+      "ordinal": 16,
+      "check": "exactly_five_new_paths_and_no_other_staged_paths"
+    },
+    {
+      "ordinal": 17,
+      "check": "future_commit_parent_message_and_trailers"
+    },
+    {
+      "ordinal": 18,
+      "check": "runtime_authority_remains_none"
+    }
+  ],
+  "stop_conditions": [
+    "git_baseline_parent_tree_or_clean_status_mismatch",
+    "any_direct_read_pin_mismatch",
+    "any_manifest_defined_per_entry_binding_mismatch",
+    "any_projection_root_size_path_count_or_148_3_partition_mismatch",
+    "changed_path_set_is_not_exactly_J0_J14_and_J17",
+    "classification_requires_K0b03_N1_or_any_existing_plan_change",
+    "proof_requires_live_source_or_any_unselected_or_excluded_path",
+    "proof_requires_repository_code_tests_network_dependency_locked_environment_or_temp_target",
+    "any_proposed_write_target_already_exists_before_its_authorized_step",
+    "any_existing_file_state_gate_or_implementation_scope_would_need_to_change",
+    "new_blocking_semantic_conflict",
+    "any_scope_expansion"
+  ],
+  "current_request_materialization_boundary": {
+    "authorized_write_paths": [
+      "new pipeline/requests/legacy-pipeline-prompt-snapshot-semantic-delta-approval-request-v1.yaml"
+    ],
+    "authorized_write_path_count": 1,
+    "other_four_proposed_paths_authorized_now": false,
+    "staging_authorized": false,
+    "commit_authorized": false,
+    "independent_review_authorized": false,
+    "repository_code_or_tests_authorized": false,
+    "network_or_dependency_use_authorized": false,
+    "locked_environment_or_temp_target_use_authorized": false,
+    "state_renderer_profile_status_or_gate_change_authorized": false,
+    "K0b03_implementation_authorized": false,
+    "K0b04_K0b05_or_N1_execution_authorized": false,
+    "Alpha0_F10_F15_model_or_provider_execution_authorized": false,
+    "runtime_publication_or_remote_effect_authorized": false,
+    "runtime_authority": "none"
+  }
+}
