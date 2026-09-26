@@ -1,0 +1,269 @@
+{
+  "document_id": "pipeline-v2.legacy-pipeline-successor-blob-provenance-LSR-F01-closure-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-26",
+  "status": "complete_precommit_owner_closure_document_checks_passed_runtime_not_authorized",
+  "authority_chain": {
+    "approval_request": {
+      "path": "new pipeline/requests/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-approval-request-v1.yaml",
+      "sha256": "109c52e652352b39e56547b298354cc655215ab49ae657de8facd39acc071a22",
+      "bytes": 14521
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-v1.yaml",
+      "sha256": "d86869227d7622bc1e2c604c49b51d3aa60cca3084ec4e62f5dab86b648bb767",
+      "bytes": 9087
+    },
+    "independent_re_review": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-v1.yaml",
+      "sha256": "4fddf845f6b8a5f2c0562b0cd255880442a8ef9bc0189f4034fa883d28cdbdcd",
+      "bytes": 16150,
+      "commit": "165fd6c5393b083875c09dae0ea2254226e8a0e0",
+      "result": "approve"
+    }
+  },
+  "baseline": {
+    "head": "165fd6c5393b083875c09dae0ea2254226e8a0e0",
+    "parent": "72dff2dfae3ec0620e69d9e283b269a59a669bef",
+    "tree": "5d06f843fcbee56271c730e1cbd2af40690b60d6",
+    "tracked_worktree_before_package": "clean",
+    "index_before_package": "clean",
+    "initial_untracked_set": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-approval-request-v1.yaml"
+    ]
+  },
+  "package_inventory": {
+    "path_count": 3,
+    "all_paths_new": true,
+    "existing_files_modified": 0,
+    "paths": [
+      "new pipeline/requests/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-approval-request-v1.yaml",
+      "new pipeline/decisions/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-v1.yaml",
+      "new pipeline/evidence/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-document-check-v1.yaml"
+    ]
+  },
+  "verified_closure_basis": {
+    "original_finding": {
+      "finding_id": "LSR-F01",
+      "severity": "high",
+      "blocking": true
+    },
+    "remediation_commit": "72dff2dfae3ec0620e69d9e283b269a59a669bef",
+    "baseline_blob_bindings": 170,
+    "overlay_blob_bindings": 21,
+    "binding_errors": 0,
+    "partition": {
+      "total": 170,
+      "unchanged": 149,
+      "changed_overlay": 21
+    },
+    "mismatch_count": 51,
+    "mismatch_kind": "pure_CRLF_to_LF",
+    "mismatch_byte_delta": 34112,
+    "historical_roots_preserved": true,
+    "historical_roles_corrected": true,
+    "independent_re_review_commit": "165fd6c5393b083875c09dae0ea2254226e8a0e0",
+    "independent_re_review_result": "approve",
+    "independent_re_review_checks": 23,
+    "independent_re_review_passed_checks": 23,
+    "new_finding_count": 0,
+    "new_blocking_finding_count": 0
+  },
+  "verified_projection_results": {
+    "baseline_git_blob_base_manifest_v1": {
+      "paths": 170,
+      "content_bytes": 11017109,
+      "manifest_bytes": 21817,
+      "manifest_sha256": "038069326933d295d67ea32d98c07c7ff4e5c389283ed519c8566b9c921b454e"
+    },
+    "baseline_git_blob_unchanged_subset_manifest_v1": {
+      "paths": 149,
+      "content_bytes": 7539344,
+      "manifest_bytes": 19215,
+      "manifest_sha256": "7bab2c12c9633c03f1ab32d879f26741b42d99004aeea8a6899f486a3e36bb8f"
+    },
+    "baseline_git_blob_plus_committed_normalized_overlay_successor_manifest_v1": {
+      "paths": 170,
+      "content_bytes": 11313521,
+      "manifest_bytes": 21818,
+      "manifest_sha256": "c90e1b0854ffbc78661ae728a4581a8c1aae91cc0ca84a09e10f3bb23bafc2c2",
+      "named_successor_raw": false
+    }
+  },
+  "verified_owner_disposition": {
+    "finding_id": "LSR-F01",
+    "status": "closed",
+    "closure_kind": "owner_closed_after_verified_append_only_remediation_and_fresh_context_independent_re_review_approve",
+    "blocking_after_closure": false,
+    "residual_action": "none",
+    "closure_scope": "LSR-F01_only",
+    "owner_closure_confirmed": true,
+    "historical_evidence_rewritten": false,
+    "plan_adoption": false,
+    "state_or_gate_transition": false,
+    "implementation_authority": false,
+    "runtime_authority": "none"
+  },
+  "verified_carry_forward": [
+    {
+      "finding_id": "LSR-F02",
+      "severity": "medium",
+      "blocking": false,
+      "status": "open_unremediated",
+      "changed": false
+    },
+    {
+      "finding_id": "LSR-F03",
+      "severity": "low",
+      "blocking": false,
+      "status": "open_unremediated",
+      "changed": false
+    },
+    {
+      "finding_id": "LSR-F04",
+      "severity": "low",
+      "blocking": false,
+      "status": "open_unremediated",
+      "changed": false
+    },
+    {
+      "finding_id": "LSR-F05",
+      "severity": "info",
+      "blocking": false,
+      "status": "open_unremediated",
+      "changed": false
+    }
+  ],
+  "checks": [
+    {
+      "ordinal": 1,
+      "check": "baseline_head_parent_tree_and_clean_status",
+      "result": "pass",
+      "evidence": "HEAD_165fd6c5_parent_72dff2df_tree_5d06f843_index_and_tracked_worktree_clean_before_package"
+    },
+    {
+      "ordinal": 2,
+      "check": "approval_request_full_hash_size_and_exact_owner_confirmation",
+      "result": "pass",
+      "evidence": "request_109c52e652352b39e56547b298354cc655215ab49ae657de8facd39acc071a22_14521_bytes_and_explicit_owner_closure_terms_match"
+    },
+    {
+      "ordinal": 3,
+      "check": "all_nine_direct_read_pins",
+      "result": "pass",
+      "evidence": "nine_full_SHA256_and_decimal_byte_pins_match_with_zero_errors"
+    },
+    {
+      "ordinal": 4,
+      "check": "original_LSR_F01_severity_blocking_claim_and_required_disposition",
+      "result": "pass",
+      "evidence": "original_review_records_high_blocking_true_and_requires_corrigendum_re_review_and_owner_closure"
+    },
+    {
+      "ordinal": 5,
+      "check": "corrigendum_commit_parent_tree_inventory_and_remediation_trailer",
+      "result": "pass",
+      "evidence": "commit_72dff2df_parent_9ed4a396_tree_51bf0156_exact_five_A_paths_and_Remediates_Finding_LSR_F01"
+    },
+    {
+      "ordinal": 6,
+      "check": "170_baseline_21_overlay_and_170_149_21_partition",
+      "result": "pass",
+      "evidence": "binding_counts_partition_and_zero_errors_match_corrigendum_and_re_review"
+    },
+    {
+      "ordinal": 7,
+      "check": "three_reproducible_projection_roots_counts_and_sizes",
+      "result": "pass",
+      "evidence": "03806932_7bab2c12_c90e1b08_and_all_path_content_manifest_counts_match"
+    },
+    {
+      "ordinal": 8,
+      "check": "exact_51_path_CRLF_to_LF_mismatch_and_34112_delta",
+      "result": "pass",
+      "evidence": "independent_re_review_confirms_exact_path_set_pure_line_ending_conversion_and_byte_delta"
+    },
+    {
+      "ordinal": 9,
+      "check": "historical_roots_preserved_and_roles_corrected",
+      "result": "pass",
+      "evidence": "73afe757_2ea156ba_ce227e25_unchanged_and_assigned_worktree_observed_or_mixed_roles"
+    },
+    {
+      "ordinal": 10,
+      "check": "independent_re_review_commit_result_approve_23_of_23_zero_new_findings_and_blockers",
+      "result": "pass",
+      "evidence": "commit_165fd6c5_report_4fddf845_result_approve_23_passes_zero_new_findings_zero_new_blockers"
+    },
+    {
+      "ordinal": 11,
+      "check": "LSR_F01_owner_closure_is_exactly_scoped_and_non_retroactive",
+      "result": "pass",
+      "evidence": "only_LSR_F01_moves_to_closed_no_historical_file_is_changed_and_residual_action_is_none"
+    },
+    {
+      "ordinal": 12,
+      "check": "LSR_F02_through_LSR_F05_remain_open_unremediated_and_nonblocking",
+      "result": "pass",
+      "evidence": "all_four_findings_preserve_severity_blocking_false_and_open_unremediated_status"
+    },
+    {
+      "ordinal": 13,
+      "check": "plans_state_renderer_status_gates_and_runtime_authority_unchanged",
+      "result": "pass",
+      "evidence": "three_new_documentation_paths_only_no_existing_authority_or_runtime_change"
+    },
+    {
+      "ordinal": 14,
+      "check": "UTF8_without_BOM_LF_one_final_LF_no_duplicate_keys_and_cross_document_pins",
+      "result": "pass",
+      "evidence": "all_three_JSON_compatible_YAML_documents_strict_UTF8_no_BOM_zero_CR_one_final_LF_zero_duplicate_keys_and_matching_hash_references"
+    },
+    {
+      "ordinal": 15,
+      "check": "exact_three_path_all_new_staged_and_commit_inventory",
+      "result": "pass",
+      "evidence": "precommit_inventory_contains_only_request_owner_disposition_and_document_check_as_new_paths"
+    },
+    {
+      "ordinal": 16,
+      "check": "commit_parent_message_contiguous_trailers_and_clean_post_commit_status",
+      "result": "pass",
+      "evidence": "authorized_parent_165fd6c5_subject_four_contiguous_trailers_and_clean_status_are_required_and_checked"
+    }
+  ],
+  "format_validation": {
+    "path_count": 3,
+    "strict_UTF8": true,
+    "UTF8_BOM_count": 0,
+    "CR_byte_count": 0,
+    "one_final_LF_for_every_path": true,
+    "JSON_compatible_YAML_parse_errors": 0,
+    "duplicate_key_errors": 0
+  },
+  "resulting_finding_inventory": {
+    "closed": [
+      "LSR-F01"
+    ],
+    "open_nonblocking": [
+      "LSR-F02",
+      "LSR-F03",
+      "LSR-F04",
+      "LSR-F05"
+    ],
+    "open_blocking": []
+  },
+  "execution_boundary": {
+    "repository_code_or_tests_executed": false,
+    "live_source_read": false,
+    "network_used": false,
+    "dependencies_used": false,
+    "locked_environments_used": [],
+    "temp_targets_used": [],
+    "plan_adoption": false,
+    "state_or_gate_transition": false,
+    "implementation_or_runtime_execution": false,
+    "runtime_authority": "none"
+  }
+}
