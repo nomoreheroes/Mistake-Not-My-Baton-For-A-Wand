@@ -1,0 +1,182 @@
+{
+  "document_id": "pipeline-v2.k0b-03.renderer-v7-validation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-28T08:58:28.6260595Z",
+  "work_item_id": "K0b-03",
+  "status": "pass_promoted_canonical_pair",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-k0b01-predecessor-gate-transition-approval-request-v1.yaml",
+      "sha256": "7fe126282dac375e619e716036761c789a85452aaadb13fff37c1dfb55751287",
+      "bytes": 25145
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-k0b01-predecessor-gate-transition-owner-disposition-v1.yaml",
+      "sha256": "7b81d168529a0142c342579e62a1edfa29ad46ea24b27e35d3588426cf1eb30d",
+      "bytes": 4702
+    },
+    "gate_closure_evidence": {
+      "path": "new pipeline/evidence/k0b-03-k0b01-predecessor-gate-closure-v1.yaml",
+      "sha256": "6ee2c57ec4d2be5cfddf89ff7bca1f027facf550cf21f1d3d2189322333d1815",
+      "bytes": 4721
+    }
+  },
+  "baseline": {
+    "HEAD": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "parent": "165fd6c5393b083875c09dae0ea2254226e8a0e0",
+    "tree": "8682495ff5c99234e3c09e7aafbcbe8081109ba0",
+    "source": {
+      "path": "new pipeline/state/state.yaml",
+      "entry_sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "entry_bytes": 84926
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "entry_sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "entry_bytes": 85362
+    },
+    "open_gates": 7,
+    "closed_gates": 10
+  },
+  "renderer": {
+    "code": {
+      "path": "new pipeline/state/renderer/k0b03_v7/renderer.py",
+      "sha256": "c2e384a711f7acef6aa4a82ebc9154bafdf1a0afcc2f725f4abde25a06eeeaab",
+      "bytes": 20899
+    },
+    "profile": {
+      "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+      "bytes": 8008,
+      "base_allowed_repository_paths": 365,
+      "allowed_repository_path_additions": 8,
+      "effective_allowed_repository_paths": 373,
+      "transition_pins": 10,
+      "delta_whitelist_selectors": 9
+    },
+    "test": {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v7.py",
+      "sha256": "a6e5f22e1c96e0479f758ee070caa17805da2fcee93a31223f2e876e19a219d8",
+      "bytes": 6849,
+      "tests": 14
+    },
+    "projection_version": "7.0.0"
+  },
+  "validation_attempts": [
+    {
+      "attempt": 1,
+      "candidate_render_result": "pass_in_both_environments",
+      "candidate_source_sha256": "35b3e19ca811f6b488bf7f86ae081182635ead2f319d20b29ea0036015648774",
+      "candidate_projection_sha256": "9e742874b5f2b417e20b6be83733e58aa7bfb946d81b88a156b8dcd4738d01c3",
+      "tests_executed_in_environment_A": 14,
+      "tests_passed": 13,
+      "test_failures": 1,
+      "test_errors": 0,
+      "environment_B_test_execution": "not_started_after_environment_A_failure",
+      "failure": "test_untrusted_shapes_closure_rejected_expected_gate_inventory_but_the_validator_rejected_earlier_at_source_K0b03",
+      "cause": "negative_test_expected_message_was_narrower_than_the_valid_earliest_rejection",
+      "canonical_pair_promoted_as_final": false,
+      "disposition": "technical_test_expectation_corrected_and_hash_DAG_recomputed_before_final_validation"
+    },
+    {
+      "attempt": 2,
+      "correction": "accept_the_earliest_source_K0b03_rejection_for_the_untrusted_shapes_closure_negative_case",
+      "candidate_render_result": "pass_in_both_environments",
+      "tests_per_environment": 14,
+      "passed_per_environment": 14,
+      "failures_per_environment": 0,
+      "errors_per_environment": 0,
+      "skipped_per_environment": 0,
+      "explicit_check_mode": "pass_in_both_environments",
+      "explicit_second_render": "byte_identical_in_both_environments",
+      "result": "pass_in_both_environments"
+    }
+  ],
+  "locked_environments": {
+    "environment_A": {
+      "temp_target": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-k0b01-gate-v7-A",
+      "Python": "3.12.7",
+      "dependencies": "stdlib_only_venv_without_pip",
+      "network": false,
+      "tests": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 11.147,
+      "render_exit": 0,
+      "check_exit": 0,
+      "second_render_exit": 0,
+      "canonical_pair_check_exit": 0
+    },
+    "environment_B": {
+      "temp_target": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-k0b01-gate-v7-B",
+      "Python": "3.12.7",
+      "dependencies": "stdlib_only_venv_without_pip",
+      "network": false,
+      "tests": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 12.412,
+      "render_exit": 0,
+      "check_exit": 0,
+      "second_render_exit": 0,
+      "canonical_pair_check_exit": 0
+    },
+    "candidate_source_byte_identity": true,
+    "candidate_projection_byte_identity": true,
+    "promoted_pair_identical_to_candidate_pair": true,
+    "deterministic_second_render_identity": true,
+    "exact_temp_targets_removed_before_staging": true,
+    "exact_temp_targets_absent_after_cleanup": true
+  },
+  "transition_checks": {
+    "complete_typed_v6_baseline_reconstruction_plus_exact_v7_delta": true,
+    "exact_nine_selector_typed_delta": true,
+    "target_gate_removed_from_open_inventory": true,
+    "target_gate_appended_to_closed_inventory": true,
+    "exactly_one_gate_closed": true,
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G_K0B03_UNTRUSTED_SHAPES_status": "future_open",
+    "G_K0B03_UNTRUSTED_SHAPES_typed_identity": true,
+    "K0b03_status": "blocked",
+    "canonical_development_plan": "v0.13_unchanged",
+    "K0b04_K0b05_N1_typed_identity": true,
+    "legacy_compatibility_chain_effect": "none",
+    "LSR_F01_status": "closed_unchanged",
+    "LSR_F02_through_LSR_F05": "open_non_blocking_unchanged",
+    "all_repository_references_hash_validated": true,
+    "read_only_check_writes_zero_bytes": true,
+    "network_used": false,
+    "pip_or_wheels_used": false,
+    "nonstdlib_dependencies": 0,
+    "runtime_authority": "none",
+    "Alpha0_F10_F15_model_provider_execution": false
+  },
+  "promotion": {
+    "source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "2f8ce67b2038042a92f9acf53be033716c50b3f8369cbfb4ec80624807af2e74",
+      "bytes": 89902
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+      "bytes": 90338
+    },
+    "candidate_bytes_promoted_exactly": true,
+    "canonical_pair_check_after_promotion": "pass_in_both_environments"
+  },
+  "gate_result": {
+    "closed_gate": "G-K0B03-K0B01-COMPLETE",
+    "closure_condition": "K0b_01_completion_receipt_exists",
+    "remaining_K0b03_gate": "G-K0B03-UNTRUSTED-SHAPES",
+    "K0b03_status_after": "blocked"
+  },
+  "result": "pass_K0b03_predecessor_gate_state_projection_v7",
+  "runtime_authority": "none"
+}

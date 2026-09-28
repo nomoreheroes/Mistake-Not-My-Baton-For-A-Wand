@@ -1,12 +1,12 @@
 {
     "state_id":  "pipeline-v2-program-state",
     "schema_version":  1,
-    "projection_version":  "6.0.0",
-    "generated_at":  "2026-09-23T13:03:18.1007348Z",
+    "projection_version":  "7.0.0",
+    "generated_at":  "2026-09-28T08:26:01.2305056Z",
     "status":  "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
     "projection_profile":  {
-                               "path":  "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
-                               "sha256":  "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233"
+                               "path":  "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+                               "sha256":  "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a"
                            },
     "baseline":  {
                      "pre_remediation_HEAD":  "a031ee56a36cf794646643b67270c6e0f7092e08",
@@ -160,10 +160,14 @@
                                                                           "bytes":  4392
                                                                       },
                              "K0b_02_final_audit_transition":  {
-                                                                   "path":  "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
-                                                                   "sha256":  "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
-                                                                   "bytes":  3440
-                                                               }
+                                                                    "path":  "new pipeline/decisions/k0b-02-final-audit-transition-owner-disposition-v1.yaml",
+                                                                    "sha256":  "99ebfe34b13a2ae53679eaca27c3b02b7f61d5362bb2fb4188bc17fb029076d0",
+                                                                    "bytes":  3440
+                                                                },
+                             "K0b_03_predecessor_gate_transition":  {
+                                                                         "path":  "new pipeline/decisions/k0b-03-k0b01-predecessor-gate-transition-owner-disposition-v1.yaml",
+                                                                         "sha256":  "7b81d168529a0142c342579e62a1edfa29ad46ea24b27e35d3588426cf1eb30d"
+                                                                }
                          },
     "supporting_review_evidence":  {
                                        "K0b_01_v1_2_r1_dispatch_reconciliation":  {
@@ -265,6 +269,10 @@
                                                                            "path":  "new pipeline/evidence/k0b-02-final-external-audit-v1.yaml",
                                                                            "sha256":  "bb7b3e518f3349bf88d89ca236da334989faf13a9a8d2579e797466929de2632",
                                                                            "bytes":  5223
+                                                                       },
+                                       "K0b_03_predecessor_gate_closure":  {
+                                                                                "path":  "new pipeline/evidence/k0b-03-k0b01-predecessor-gate-closure-v1.yaml",
+                                                                                "sha256":  "6ee2c57ec4d2be5cfddf89ff7bca1f027facf550cf21f1d3d2189322333d1815"
                                                                        }
                                    },
     "root_plan_status":  {
@@ -434,7 +442,6 @@
                            "authority_path":  "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
                            "authority_sha256":  "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
                            "open_gate_ids":  [
-                                                 "G-K0B03-K0B01-COMPLETE",
                                                  "G-K0B03-UNTRUSTED-SHAPES"
                                              ]
                        },
@@ -471,17 +478,8 @@
                                              ]
                        }
                    ],
-    "open_gates":  [
-                       {
-                           "gate_id":  "G-K0B03-K0B01-COMPLETE",
-                           "owner":  "K0b-01",
-                           "status":  "blocked_by_predecessor",
-                           "blocks":  [
-                                          "K0b-03"
-                                      ],
-                           "closure_condition":  "K0b_01_completion_receipt_exists"
-                       },
-                       {
+     "open_gates":  [
+                        {
                            "gate_id":  "G-K0B03-UNTRUSTED-SHAPES",
                            "owner":  "K0b-03",
                            "status":  "future_open",
@@ -534,8 +532,8 @@
                                           "N1"
                                       ],
                            "closure_condition":  "context_and_failure_receipt_limits_are_versioned_policy_values_not_function_defaults"
-                       }
-                   ],
+                          }
+                      ],
     "closed_gates":  [
                          {
                              "gate_id":  "G-K0B01-HUMAN-SIGNOFF",
@@ -850,6 +848,51 @@
                                               "projection_profile":  {
                                                                          "path":  "new pipeline/state/renderer/k0b02_v4/projection-profile-v4.yaml",
                                                                          "sha256":  "cfc64fd6fec8756aae63a31ff06ef1629cc919626f21b7a625ea71bb350cf85d"
+                                                                     }
+                                          }
+                         },
+                         {
+                             "gate_id":  "G-K0B03-K0B01-COMPLETE",
+                             "status":  "closed",
+                             "closure_condition":  "K0b_01_completion_receipt_exists",
+                             "closed_by":  "workspace_owner",
+                             "closed_at":  "2026-09-28T08:26:01.2305056Z",
+                             "evidence":  {
+                                              "approval_request":  {
+                                                                       "path":  "new pipeline/requests/k0b-03-k0b01-predecessor-gate-transition-approval-request-v1.yaml",
+                                                                       "sha256":  "7fe126282dac375e619e716036761c789a85452aaadb13fff37c1dfb55751287"
+                                                                   },
+                                              "owner_disposition":  {
+                                                                        "path":  "new pipeline/decisions/k0b-03-k0b01-predecessor-gate-transition-owner-disposition-v1.yaml",
+                                                                        "sha256":  "7b81d168529a0142c342579e62a1edfa29ad46ea24b27e35d3588426cf1eb30d"
+                                                                    },
+                                              "completion_receipt":  {
+                                                                         "path":  "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+                                                                         "sha256":  "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1"
+                                                                     },
+                                              "planning_owner_disposition":  {
+                                                                               "path":  "new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml",
+                                                                               "sha256":  "9f19dc88c3d265ae8f8073f840ae3d84afd6f8ef87db69e650e782fd8ea8ff77"
+                                                                           },
+                                              "gate_closure_proposal":  {
+                                                                            "path":  "new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml",
+                                                                            "sha256":  "f314d65b9ae5b3b0578792dc1a319e89cb3d122af118294b7a1f38402e12f0f2"
+                                                                        },
+                                              "planning_package_v1":  {
+                                                                         "path":  "new pipeline/architecture/k0b-03-planning-package-v1.md",
+                                                                         "sha256":  "0ef7d61150cce6b407a8719b819589c180e3efc6fde55538d50f0d8ef94ca147"
+                                                                     },
+                                              "planning_overlay_v1_1":  {
+                                                                             "path":  "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+                                                                             "sha256":  "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423"
+                                                                         },
+                                              "gate_closure":  {
+                                                                   "path":  "new pipeline/evidence/k0b-03-k0b01-predecessor-gate-closure-v1.yaml",
+                                                                   "sha256":  "6ee2c57ec4d2be5cfddf89ff7bca1f027facf550cf21f1d3d2189322333d1815"
+                                                               },
+                                              "projection_profile":  {
+                                                                         "path":  "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+                                                                         "sha256":  "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a"
                                                                      }
                                           }
                          }

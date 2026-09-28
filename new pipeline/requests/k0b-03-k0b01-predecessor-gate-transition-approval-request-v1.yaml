@@ -1,0 +1,459 @@
+{
+  "request_id": "pipeline-v2.k0b-03-k0b01-predecessor-gate-transition-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "prepared_on": "2026-09-28",
+  "work_item_id": "K0b-03",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Request a later separately confirmed nine-path renderer-v7 and canonical-state transaction that materializes closure of G-K0B03-K0B01-COMPLETE only. This request does not itself close a gate, alter state, execute repository code, or grant implementation or runtime authority.",
+  "current_permission": {
+    "authorized_now": [
+      "read_only_baseline_and_pin_reverification",
+      "creation_of_this_request_only",
+      "static_document_format_and_duplicate_key_checks",
+      "report_complete_file_sha256_and_bytes"
+    ],
+    "repository_writes": [
+      "new pipeline/requests/k0b-03-k0b01-predecessor-gate-transition-approval-request-v1.yaml"
+    ],
+    "locked_environments": [],
+    "temp_targets": [],
+    "network": false,
+    "dependencies": [],
+    "repository_code_or_tests": false,
+    "staging_or_commit": false,
+    "state_or_gate_materialization": false,
+    "runtime_authority": "none"
+  },
+  "authority_boundary": {
+    "owner_confirmation_required": "separate_exact_complete_file_SHA256_and_full_scope_confirmation_after_this_request_is_frozen",
+    "this_document_is_not": [
+      "owner_confirmation",
+      "gate_closure",
+      "plan_adoption",
+      "implementation_authority",
+      "runtime_authority"
+    ],
+    "automatic_gate_closure": false,
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "parent": "165fd6c5393b083875c09dae0ea2254226e8a0e0",
+    "tree": "8682495ff5c99234e3c09e7aafbcbe8081109ba0",
+    "index": "clean",
+    "worktree_before_request": "clean",
+    "canonical_state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "canonical_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee",
+      "bytes": 85362
+    },
+    "renderer_v6": {
+      "path": "new pipeline/state/renderer/k0b02_v6/renderer.py",
+      "sha256": "2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791",
+      "bytes": 12373
+    },
+    "projection_profile_v6": {
+      "path": "new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml",
+      "sha256": "c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233",
+      "bytes": 191471
+    },
+    "root_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "open_gate_count": 7,
+    "closed_gate_count": 10,
+    "runtime_authority": "none"
+  },
+  "direct_read_manifest": {
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_path",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "path_count": 28,
+    "content_bytes": 1124495,
+    "manifest_bytes": 3881,
+    "manifest_sha256": "14995618462a74b01972365cddc745d018436667e1fab83a8b1b40cba3d90f47",
+    "entries": [
+      {"path":".gitattributes","sha256":"58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d","bytes":477},
+      {"path":"new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md","sha256":"f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9","bytes":246369},
+      {"path":"new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md","sha256":"7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5","bytes":101354},
+      {"path":"new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md","sha256":"679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d","bytes":97569},
+      {"path":"new pipeline/architecture/k0b-03-planning-package-v1.1.md","sha256":"58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423","bytes":13146},
+      {"path":"new pipeline/architecture/k0b-03-planning-package-v1.md","sha256":"0ef7d61150cce6b407a8719b819589c180e3efc6fde55538d50f0d8ef94ca147","bytes":26523},
+      {"path":"new pipeline/architecture/legacy-pipeline-prompt-snapshot-semantic-delta-supplement-v1.md","sha256":"7cb686afaa08293b3db75043258e35df9fd6a0eaacbc06a2bfffc3bc7b0d3c39","bytes":8354},
+      {"path":"new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md","sha256":"7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b","bytes":11398},
+      {"path":"new pipeline/architecture/legacy-pipeline-successor-blob-provenance-corrigendum-v1.md","sha256":"5cf564ac016d0862b4b351b7a69278a7e48c97cac276e83e4ffce7b85bd8a734","bytes":7858},
+      {"path":"new pipeline/decisions/k0b-02-transition-and-planning-owner-disposition-v1.yaml","sha256":"10282c45f01518fe96d2f01c6044b445a141f53a039a7368031d5aefc37f9f28","bytes":27337},
+      {"path":"new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml","sha256":"9f19dc88c3d265ae8f8073f840ae3d84afd6f8ef87db69e650e782fd8ea8ff77","bytes":9317},
+      {"path":"new pipeline/decisions/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-v1.yaml","sha256":"d86869227d7622bc1e2c604c49b51d3aa60cca3084ec4e62f5dab86b648bb767","bytes":9087},
+      {"path":"new pipeline/evidence/k0b-02-renderer-v6-validation-v1.yaml","sha256":"850eecddbef383b0d529f4cdcea3196abaecac8e5774d677e1bec9f0c3fd44be","bytes":5806},
+      {"path":"new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml","sha256":"f314d65b9ae5b3b0578792dc1a319e89cb3d122af118294b7a1f38402e12f0f2","bytes":5887},
+      {"path":"new pipeline/evidence/k0b-03-transition-document-check-v1.yaml","sha256":"860f1581565df05dc6e89435cf9c1557aec900d53dfcab0f4bbaa64c8d080d9f","bytes":10426},
+      {"path":"new pipeline/evidence/legacy-pipeline-prompt-snapshot-semantic-delta-v1.yaml","sha256":"704029153429f5a9213b7aca3d519034db028e9de1d8fb88c2b500653e753073","bytes":13731},
+      {"path":"new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml","sha256":"a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c","bytes":17797},
+      {"path":"new pipeline/evidence/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-document-check-v1.yaml","sha256":"524bbc6ce4e9093877b82b3b71832d25411371daf184d8a49d61b900028d8b05","bytes":9751},
+      {"path":"new pipeline/receipts/k0b-01-implementation-completion-v1.yaml","sha256":"c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1","bytes":15226},
+      {"path":"new pipeline/requests/k0b-02-completion-prerequisites-and-bounded-planning-approval-request-v1.yaml","sha256":"a3e6a2710ed7e3d895fb2599c92bd48f7ee23f1add48d37ffe7df5742729ae8c","bytes":35951},
+      {"path":"new pipeline/requests/k0b-03-prerequisite-and-bounded-planning-approval-request-v1.yaml","sha256":"296cf14c033e87d6f6c1ce1f0e1b6da51f424f6e3a7df1623765d85168427a7d","bytes":34654},
+      {"path":"new pipeline/reviews/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-v1.yaml","sha256":"4fddf845f6b8a5f2c0562b0cd255880442a8ef9bc0189f4034fa883d28cdbdcd","bytes":16150},
+      {"path":"new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml","sha256":"83cbd72df6f6755b6ab606384b06278a2f18a9698062f2ed18189ab6d0b1f03b","bytes":17609},
+      {"path":"new pipeline/state/STATE.md","sha256":"1e4fdee5c3c4f3b554b5a78fccd7cf43a9f3f1af92cd734852ec5cbc7d64e7ee","bytes":85362},
+      {"path":"new pipeline/state/renderer/k0b02_v6/projection-profile-v6.yaml","sha256":"c0c09fec211e267621600ca5422b008149c35648701e3b59289ce4d82962b233","bytes":191471},
+      {"path":"new pipeline/state/renderer/k0b02_v6/renderer.py","sha256":"2922d2700c01928c45beed43e5a35316cc025c35cc9934d2b9a7955c49580791","bytes":12373},
+      {"path":"new pipeline/state/state.yaml","sha256":"f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269","bytes":84926},
+      {"path":"new pipeline/tests/state/test_k0b02_renderer_v6.py","sha256":"5c0a527eb59bd4c66f1a97534dc7059e6381f628213960ae7403ab33d454cd1f","bytes":8586}
+    ]
+  },
+  "entry_state_reference_manifest": {
+    "derivation": "All unique path and sha256 pairs recursively present in canonical state, plus every work_items authority_path and authority_sha256 pair.",
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_path",
+    "unique_paths": 98,
+    "content_bytes": 3163992,
+    "manifest_bytes": 13759,
+    "manifest_sha256": "bed2bc30fc088d523a711cb421f2805b2bd5282872c2f8476cd973c710cb1ee9",
+    "missing_or_hash_mismatches": 0,
+    "v6_allowed_repository_path_count": 365,
+    "all_98_paths_are_in_v6_allowlist": true
+  },
+  "host_interpreter_pin": {
+    "path": "C:/ProgramData/anaconda3/python.exe",
+    "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+    "bytes": 104208,
+    "expected_version": "3.12.7",
+    "allowed_future_use": "Create two stdlib-only venvs and execute only the new renderer-v7 and renderer-v7 test after separate exact-hash owner confirmation.",
+    "allowed_current_use": "read_only_complete_file_pin_check_only"
+  },
+  "verified_gate_facts": {
+    "target": {
+      "gate_id": "G-K0B03-K0B01-COMPLETE",
+      "current_inventory": "open_gates",
+      "current_status": "blocked_by_predecessor",
+      "owner": "K0b-01",
+      "blocks": ["K0b-03"],
+      "closure_condition": "K0b_01_completion_receipt_exists",
+      "condition_result": "satisfied_by_existing_pinned_completion_receipt",
+      "automatic_closure": false,
+      "closure_materialized": false
+    },
+    "completion_receipt": {
+      "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+      "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+      "bytes": 15226,
+      "effective_K0b01_status": "implemented_validated_runtime_not_authorized",
+      "closure_condition_addressed": "K0b_01_completion_receipt_exists"
+    },
+    "existing_proposal": {
+      "path": "new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml",
+      "sha256": "f314d65b9ae5b3b0578792dc1a319e89cb3d122af118294b7a1f38402e12f0f2",
+      "bytes": 5887,
+      "condition_result": "satisfied",
+      "closure_materialized": false
+    },
+    "remaining_K0b03_gate": {
+      "gate_id": "G-K0B03-UNTRUSTED-SHAPES",
+      "status": "future_open",
+      "closure_condition": "shape_entropy_JWT_Bearer_provider_token_base64_and_split_line_detectors_exist_and_scanner_is_documented_as_hygiene",
+      "included_in_this_transition": false
+    },
+    "K0b03_status_before_and_after": "blocked",
+    "canonical_development_plan": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "version_role": "canonical_v0.13"
+    },
+    "development_plan_v0_14": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "role": "noncanonical_immutable_successor_not_adopted"
+    },
+    "runtime_authority": "none"
+  },
+  "legacy_compatibility": {
+    "LSR-F01": {
+      "status": "closed",
+      "blocking_after_closure": false,
+      "residual_action": "none"
+    },
+    "carry_forward": [
+      {"finding_id":"LSR-F02","status":"open_unremediated","severity":"medium","blocking":false},
+      {"finding_id":"LSR-F03","status":"open_unremediated","severity":"low","blocking":false},
+      {"finding_id":"LSR-F04","status":"open_unremediated","severity":"low","blocking":false},
+      {"finding_id":"LSR-F05","status":"open_unremediated","severity":"info","blocking":false}
+    ],
+    "effect_on_gate_closure_condition": "none",
+    "legacy_chain_is_state_gate_or_runtime_authority": false,
+    "v0_14_adoption": false,
+    "runtime_authority": "none"
+  },
+  "future_exact_write_scope": {
+    "total_paths": 9,
+    "additions": 7,
+    "modifications": 2,
+    "deletions": 0,
+    "paths": [
+      {"path":"new pipeline/requests/k0b-03-k0b01-predecessor-gate-transition-approval-request-v1.yaml","operation":"add"},
+      {"path":"new pipeline/decisions/k0b-03-k0b01-predecessor-gate-transition-owner-disposition-v1.yaml","operation":"add"},
+      {"path":"new pipeline/evidence/k0b-03-k0b01-predecessor-gate-closure-v1.yaml","operation":"add"},
+      {"path":"new pipeline/state/renderer/k0b03_v7/renderer.py","operation":"add"},
+      {"path":"new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml","operation":"add"},
+      {"path":"new pipeline/tests/state/test_k0b03_renderer_v7.py","operation":"add"},
+      {"path":"new pipeline/evidence/k0b-03-renderer-v7-validation-v1.yaml","operation":"add"},
+      {"path":"new pipeline/state/state.yaml","operation":"modify"},
+      {"path":"new pipeline/state/STATE.md","operation":"modify"}
+    ],
+    "all_other_repository_paths": "byte_immutable"
+  },
+  "ownership": {
+    "workspace_owner": "Sole authority to approve this exact transition and record closed_by workspace_owner.",
+    "K0b01_evidence_owner": "Owns the existing completion receipt fact; no new K0b-01 execution is required or authorized.",
+    "K0b03_future_control_owner": "Retains ownership of G-K0B03-UNTRUSTED-SHAPES and later detector, hygiene, repository, tool, egress, process, abort and compatibility implementation.",
+    "canonical_state_owner": "state.yaml is the sole authored canonical state source.",
+    "projection_owner": "Profile v7 specifies the exact transition; renderer v7 validates and projects; STATE.md is generated only.",
+    "legacy_documents": "Compatibility evidence only, never state, gate, registry, implementation or runtime authority."
+  },
+  "future_state_transition": {
+    "projection_version_before": "6.0.0",
+    "projection_version_after": "7.0.0",
+    "generated_at": "new_factual_UTC_transition_timestamp",
+    "projection_profile_path_after": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+    "active_authority_addition": "active_authority.K0b_03_predecessor_gate_transition",
+    "supporting_review_evidence_addition": "supporting_review_evidence.K0b_03_predecessor_gate_closure",
+    "K0b03_open_gate_ids_after": ["G-K0B03-UNTRUSTED-SHAPES"],
+    "remove_from_open_gates": ["G-K0B03-K0B01-COMPLETE"],
+    "append_to_closed_gates": ["G-K0B03-K0B01-COMPLETE"],
+    "open_gate_count_before": 7,
+    "open_gate_count_after": 6,
+    "closed_gate_count_before": 10,
+    "closed_gate_count_after": 11,
+    "root_status_before_and_after": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "K0b03_status_before_and_after": "blocked",
+    "K0b03_authority_path_and_sha256": "unchanged_canonical_v0_13_binding",
+    "G_K0B03_UNTRUSTED_SHAPES": "typed_and_byte_value_unchanged_future_open",
+    "other_six_open_gates": "typed_and_byte_value_unchanged",
+    "existing_ten_closed_gates": "typed_and_byte_value_unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "scope": "unchanged",
+    "runtime_authority": "none"
+  },
+  "future_closed_gate_record": {
+    "gate_id": "G-K0B03-K0B01-COMPLETE",
+    "status": "closed",
+    "closure_condition": "K0b_01_completion_receipt_exists",
+    "closed_by": "workspace_owner",
+    "closed_at": "new_factual_UTC_transition_timestamp",
+    "evidence_keys": [
+      "approval_request",
+      "owner_disposition",
+      "completion_receipt",
+      "planning_owner_disposition",
+      "gate_closure_proposal",
+      "planning_package_v1",
+      "planning_overlay_v1_1",
+      "gate_closure",
+      "projection_profile"
+    ],
+    "foreign_evidence_or_gate_effects": "forbidden"
+  },
+  "renderer_successor_contract": {
+    "lineage": "immutable_versioned_successor_of_k0b02_v6_not_in_place_edit",
+    "profile_id": "pipeline-v2.state-projection-profile-v7",
+    "projection_version": "7.0.0",
+    "baseline_source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "f94bbac7cede9d5da2b069a84ce3669dd3a1d66e45d1c71e2c365644f42cf269",
+      "bytes": 84926
+    },
+    "delta_whitelist_exact_count": 9,
+    "delta_whitelist": [
+      "generated_at",
+      "projection_version",
+      "projection_profile.path",
+      "projection_profile.sha256",
+      "active_authority.K0b_03_predecessor_gate_transition",
+      "supporting_review_evidence.K0b_03_predecessor_gate_closure",
+      "work_items[work_item_id=K0b-03].open_gate_ids",
+      "open_gates",
+      "closed_gates"
+    ],
+    "transition_validation": "complete_typed_baseline_plus_exact_expected_patch",
+    "v6_allowed_repository_paths": 365,
+    "exact_new_allowed_state_reference_paths": 8,
+    "v7_allowed_repository_paths": 373,
+    "path_scope": "literal_ordinal_deduplicated_union_only",
+    "wildcards": false,
+    "dynamic_discovery": false,
+    "absolute_paths": false,
+    "reparse_points": false,
+    "missing_hash_exemptions": false,
+    "profile_self_hash_embedding": false,
+    "required_rejections": [
+      "tenth_or_foreign_state_selector",
+      "G_K0B03_UNTRUSTED_SHAPES_change_or_closure",
+      "foreign_gate_or_work_item_change",
+      "K0b03_status_or_authority_change",
+      "root_status_scope_or_runtime_authority_change",
+      "missing_duplicate_or_overlapping_gate_ids",
+      "K0b03_open_gate_ids_inventory_disagreement",
+      "closure_condition_or_evidence_binding_mismatch",
+      "unknown_field_or_type_drift",
+      "absolute_escaping_or_reparse_path",
+      "missing_reference_or_hash_mismatch",
+      "BOM_CR_CRLF_or_wrong_final_newline_count",
+      "projection_drift",
+      "output_input_collision",
+      "any_write_in_check_mode"
+    ]
+  },
+  "projection_single_source_boundary": {
+    "canonical_source": "new pipeline/state/state.yaml",
+    "transition_contract": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+    "validator_projector": "new pipeline/state/renderer/k0b03_v7/renderer.py",
+    "derived_projection": "new pipeline/state/STATE.md",
+    "manual_STATE_edit": false,
+    "timestamps": "source_values_only",
+    "environment_values_in_projection": "forbidden"
+  },
+  "future_validation_environment": {
+    "locked_environment_count": 2,
+    "dependencies": "Python_standard_library_only_no_pip_no_wheels",
+    "network": false,
+    "host_interpreter": "C:/ProgramData/anaconda3/python.exe",
+    "temp_targets": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-k0b01-gate-v7-A",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-k0b01-gate-v7-B"
+    ],
+    "entry_requirement": "both_targets_absent_and_not_reparse_points_before_any_creation",
+    "existing_target_disposition": "stop_without_deletion_or_reuse",
+    "allowed_repository_execution": [
+      "new pipeline/state/renderer/k0b03_v7/renderer.py",
+      "new pipeline/tests/state/test_k0b03_renderer_v7.py"
+    ],
+    "all_other_repository_code_or_tests": false,
+    "cleanup": "remove_only_both_exact_targets_after_evidence_capture_and_verify_absence_before_staging"
+  },
+  "future_required_checks": [
+    "baseline_HEAD_parent_tree_clean_index_and_exactly_one_confirmed_untracked_request",
+    "complete_request_SHA256_matches_separate_owner_confirmation",
+    "all_28_direct_pins_and_manifest_root",
+    "98_path_entry_state_reference_manifest_and_zero_mismatches",
+    "v6_365_path_allowlist_and_transition_pins",
+    "K0b01_completion_receipt_authority_and_evidence_chain",
+    "K0b03_existing_proposal_and_planning_chain",
+    "legacy_compatibility_and_LSR_finding_inventory",
+    "absence_of_all_future_output_targets_other_than_the_confirmed_request",
+    "UTF8_without_BOM_LF_one_final_LF_and_no_duplicate_keys",
+    "exact_nine_selector_typed_state_delta",
+    "gate_inventory_7_10_to_6_11",
+    "exactly_one_gate_closed",
+    "G_K0B03_UNTRUSTED_SHAPES_unchanged_future_open",
+    "K0b03_remains_blocked",
+    "canonical_v0_13_downstream_work_items_scope_and_runtime_authority_unchanged",
+    "positive_renderer_v7_case",
+    "negative_foreign_gate_untrusted_gate_status_authority_evidence_duplicate_overlap_extra_field_path_reparse_hash_and_profile_cases",
+    "renderer_check_mode_writes_zero_bytes",
+    "deterministic_repeated_render",
+    "candidate_state_and_projection_byte_identity_between_environment_A_and_B",
+    "promoted_state_pair_identical_to_validated_candidate_pair",
+    "STATE_contains_complete_source_and_correct_source_profile_hashes_and_version",
+    "gitattributes_unchanged_and_effective_core_autocrlf_does_not_change_worktree_or_staged_bytes",
+    "exact_nine_path_inventory_seven_additions_two_modifications_zero_deletions",
+    "git_diff_check",
+    "absence_of_temp_generated_or_untracked_residue",
+    "commit_parent_message_trailers_inventory_and_clean_post_commit_status"
+  ],
+  "future_execution_sequence": [
+    "verify_baseline_clean_status_request_hash_all_read_pins_and_target_absence",
+    "freeze_new_owner_disposition",
+    "freeze_renderer_v7_and_test_v7",
+    "freeze_gate_closure_evidence_without_future_validation_or_commit_claims",
+    "freeze_profile_v7_with_exact_baseline_patch_allowlist_and_pins",
+    "construct_candidate_state_with_only_the_nine_whitelisted_selectors",
+    "create_only_the_two_exact_stdlib_locked_environments",
+    "run_new_renderer_tests_render_and_read_only_checks_in_both_environments",
+    "require_candidate_pair_byte_identity_and_write_validation_evidence",
+    "promote_identical_candidate_bytes_to_state_yaml_and_STATE_md",
+    "recheck_promoted_pair_in_both_environments",
+    "remove_both_exact_temp_targets_and_verify_absence",
+    "verify_all_other_paths_immutable_and_stage_exactly_nine_paths",
+    "run_git_diff_check_and_create_one_local_commit",
+    "verify_commit_parent_message_trailers_inventory_and_clean_status",
+    "prepare_separate_fresh_context_read_only_independent_audit_scope"
+  ],
+  "future_commit": {
+    "count": 1,
+    "local_only": true,
+    "required_parent": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "subject": "docs(pipeline-v2): materialize K0b-03 predecessor gate",
+    "required_trailers_in_order": [
+      "Approval-Request-SHA256: FULL_COMPLETE_REQUEST_SHA256",
+      "Closes-Gate: G-K0B03-K0B01-COMPLETE",
+      "Runtime-Authority: none"
+    ],
+    "push_merge_deploy_release_or_other_remote_effect": false
+  },
+  "independent_review_boundary": {
+    "required_after_future_commit": true,
+    "reviewer_profile": "fresh-context-read-only-non-author",
+    "timing": "after_materialization_commit_and_before_any_K0b03_implementation_authority",
+    "reviewer_recommendation_is_owner_approval": false,
+    "reviewer_recommendation_is_implementation_authority": false
+  },
+  "stop_conditions": [
+    "baseline_HEAD_parent_tree_or_clean_status_mismatch",
+    "any_direct_pin_or_manifest_mismatch",
+    "request_hash_confirmation_missing_or_mismatched",
+    "completion_receipt_missing_or_no_longer_addressing_the_exact_closure_condition",
+    "target_gate_status_owner_condition_or_inventory_drift",
+    "G_K0B03_UNTRUSTED_SHAPES_status_or_record_drift",
+    "K0b03_gate_inventory_or_downstream_work_item_drift",
+    "canonical_development_plan_v0_14_adoption_or_v0_13_drift",
+    "LSR_F01_closure_or_LSR_F02_through_LSR_F05_blocking_inventory_drift",
+    "need_for_a_tenth_write_path_or_historical_file_edit",
+    "need_for_network_dependency_additional_environment_or_additional_temp_target",
+    "either_exact_temp_target_already_exists_is_reparse_or_is_outside_the_exact_root",
+    "renderer_projection_or_environment_nondeterminism",
+    "worktree_staged_or_committed_line_ending_mismatch",
+    "runtime_authority_change",
+    "Git_hook_or_signing_side_effect_requiring_configuration_change_or_scope_expansion",
+    "push_merge_deploy_publication_or_other_remote_effect_required"
+  ],
+  "non_authorizations": [
+    "creation_of_the_other_six_new_paths_before_separate_confirmation",
+    "state_STATE_renderer_profile_status_or_gate_change_now",
+    "gate_closure_now",
+    "locked_environment_or_temp_target_creation_now",
+    "repository_code_or_test_execution_now",
+    "network_dependency_or_package_installation",
+    "canonical_adoption_of_development_plan_v0_14",
+    "K0b03_implementation",
+    "closure_of_G_K0B03_UNTRUSTED_SHAPES",
+    "K0b04_K0b05_or_N1_progress",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "runtime_publication_or_remote_effect",
+    "staging_or_commit_now"
+  ],
+  "completion": {
+    "current_step_complete_when": [
+      "this_request_is_the_only_worktree_change",
+      "request_is_valid_JSON_compatible_YAML_UTF8_without_BOM_LF_one_final_LF_and_has_no_duplicate_keys",
+      "complete_request_SHA256_and_decimal_bytes_are_reported",
+      "no_other_repository_or_external_state_changed"
+    ],
+    "next_authority_required": "workspace_owner_exact_complete_request_SHA256_and_full_nine_path_scope_confirmation",
+    "runtime_authority": "none"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03-k0b01-predecessor-gate-closure-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-28T08:26:01.2305056Z",
+  "work_item_id": "K0b-03",
+  "status": "documentary_predecessor_gate_closure_approved_state_materialization_pending_validation",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-k0b01-predecessor-gate-transition-approval-request-v1.yaml",
+      "sha256": "7fe126282dac375e619e716036761c789a85452aaadb13fff37c1dfb55751287",
+      "bytes": 25145
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-k0b01-predecessor-gate-transition-owner-disposition-v1.yaml",
+      "sha256": "7b81d168529a0142c342579e62a1edfa29ad46ea24b27e35d3588426cf1eb30d",
+      "bytes": 4702
+    },
+    "confirmed_request_sha256": "7fe126282dac375e619e716036761c789a85452aaadb13fff37c1dfb55751287",
+    "runtime_authority": "none"
+  },
+  "closure_basis": {
+    "gate_id": "G-K0B03-K0B01-COMPLETE",
+    "prior_status": "blocked_by_predecessor",
+    "closure_condition": "K0b_01_completion_receipt_exists",
+    "condition_result": "pass",
+    "completion_receipt": {
+      "path": "new pipeline/receipts/k0b-01-implementation-completion-v1.yaml",
+      "sha256": "c0f24a7c09cbd5d190073510de1f9fe159af8e086bd5f344fe0ffc8ffde243d1",
+      "bytes": 15226,
+      "effective_K0b01_status": "implemented_validated_runtime_not_authorized",
+      "automatic_gate_closure": false
+    },
+    "prior_proposal": {
+      "path": "new pipeline/evidence/k0b-03-predecessor-gate-closure-proposal-v1.yaml",
+      "sha256": "f314d65b9ae5b3b0578792dc1a319e89cb3d122af118294b7a1f38402e12f0f2",
+      "bytes": 5887,
+      "condition_result": "satisfied",
+      "closure_materialized": false
+    },
+    "planning_owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-transition-and-planning-owner-disposition-v1.yaml",
+      "sha256": "9f19dc88c3d265ae8f8073f840ae3d84afd6f8ef87db69e650e782fd8ea8ff77",
+      "bytes": 9317
+    },
+    "planning_package_v1": {
+      "path": "new pipeline/architecture/k0b-03-planning-package-v1.md",
+      "sha256": "0ef7d61150cce6b407a8719b819589c180e3efc6fde55538d50f0d8ef94ca147",
+      "bytes": 26523
+    },
+    "planning_overlay_v1_1": {
+      "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+      "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+      "bytes": 13146
+    }
+  },
+  "closure_disposition": {
+    "gate_id": "G-K0B03-K0B01-COMPLETE",
+    "future_status": "closed",
+    "closed_by": "workspace_owner",
+    "close_only_this_gate": true,
+    "target_inventory_after_validation": {
+      "open": 6,
+      "closed": 11
+    },
+    "K0b03_status_after": "blocked",
+    "K0b03_open_gate_ids_after": [
+      "G-K0B03-UNTRUSTED-SHAPES"
+    ],
+    "materialization_renderer": "7.0.0",
+    "state_materialization_at_this_document_freeze": "pending_candidate_validation",
+    "automatic_closure": false
+  },
+  "renderer_inputs": {
+    "renderer": {
+      "path": "new pipeline/state/renderer/k0b03_v7/renderer.py",
+      "sha256": "c2e384a711f7acef6aa4a82ebc9154bafdf1a0afcc2f725f4abde25a06eeeaab",
+      "bytes": 20899
+    },
+    "test": {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v7.py",
+      "sha256": "a6e5f22e1c96e0479f758ee070caa17805da2fcee93a31223f2e876e19a219d8",
+      "bytes": 6849
+    },
+    "profile": "frozen_after_this_evidence_without_forward_hash_embedding",
+    "validation": "recorded_after_actual_two_environment_checks"
+  },
+  "preservation": {
+    "root_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "canonical_development_plan": "v0.13_unchanged",
+    "development_plan_v0_14_adoption": false,
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "other_open_gate_records": "unchanged",
+    "existing_closed_gate_records": "unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "scope": "unchanged",
+    "runtime_authority": "none"
+  },
+  "legacy_compatibility": {
+    "LSR-F01": "closed",
+    "LSR-F02_through_LSR_F05": "open_nonblocking_unchanged",
+    "effect_on_closure_condition": "none",
+    "legacy_runtime_import_or_authority": false
+  },
+  "non_authorizations": [
+    "K0b03_implementation",
+    "G_K0B03_UNTRUSTED_SHAPES_closure",
+    "K0b04_K0b05_or_N1_progress",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "network_or_nonstdlib_dependency",
+    "runtime_publication_or_remote_effect"
+  ],
+  "integrity_rules": {
+    "immutable_after_first_reference": true,
+    "own_hash_profile_hash_validation_hash_or_containing_commit_not_embedded": true,
+    "future_success_claim": false,
+    "historical_evidence_rewrite": false
+  }
+}
