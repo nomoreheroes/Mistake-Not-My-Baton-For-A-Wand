@@ -1,0 +1,210 @@
+{
+  "document_id": "pipeline-v2.k0b-03.renderer-v7-1-reparse-remediation-validation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-29T14:26:04.3029604Z",
+  "work_item_id": "K0b-03",
+  "finding_id": "K0B03-AUD-F01",
+  "status": "pass_remediation_materialized_pending_independent_re_review",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "bytes": 19896
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "sha256": "6c402ec6242eb0b2ff889b98c899b4f8af40b684d16c4ad3acedb4b537dd2439",
+      "bytes": 5550
+    },
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "b7977f90d58f7f54f90ed0494aea02c23d3d8ad3",
+    "parent": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "tree": "e332add7b8948c1f25ee0396b1b6e8a1ceff5868",
+    "entry_status": "clean_except_confirmed_untracked_request",
+    "finite_read_manifest": {
+      "path_count": 18,
+      "content_bytes": 859950,
+      "manifest_bytes": 2243,
+      "sha256": "2e451475d0913eb4df605466da3109a3be28139409e2b524ab4d7a4f5bec0e09",
+      "all_entries_verified": true
+    }
+  },
+  "host_interpreter": {
+    "path": "C:/ProgramData/anaconda3/python.exe",
+    "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+    "bytes": 104208,
+    "version": "3.12.7"
+  },
+  "successor": {
+    "renderer": {
+      "path": "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+      "sha256": "2dea2bd20dfe37bd07c076ce5678b8afc40944d461a66852d8f3e3e7cb2c6c61",
+      "bytes": 21856,
+      "renderer_version": "7.1.0",
+      "lineage": "immutable_renderer_v7_successor",
+      "bounded_diff_from_v7": {
+        "added_lines": 30,
+        "deleted_lines": 9,
+        "allowed_changes": [
+          "renderer_version_metadata",
+          "tag_agnostic_symlink_and_FILE_ATTRIBUTE_REPARSE_POINT_detection",
+          "repository_root_rejection_before_resolve",
+          "check_projection_input_reparse_rejection",
+          "render_output_and_existing_parent_reparse_rejection",
+          "guarded_projection_write"
+        ],
+        "unrelated_semantic_changes": false
+      }
+    },
+    "test": {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v7_1.py",
+      "sha256": "225b826c61ba7a3d9a41b214e29739c5f9773bf34430390f7dcfbe0fb2dbda9c",
+      "bytes": 16762,
+      "exact_case_count": 16
+    },
+    "profile": {
+      "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+      "bytes": 8008,
+      "profile_id": "pipeline-v2.state-projection-profile-v7",
+      "projection_version": "7.0.0",
+      "byte_unchanged": true
+    },
+    "new_projection_profile_created": false,
+    "canonical_state_transition": false
+  },
+  "security_contract": {
+    "repository_root_checked_before_resolve": true,
+    "source_file_and_existing_parents_checked_before_read": true,
+    "profile_file_and_existing_parents_checked_before_read": true,
+    "repository_reference_components_checked": true,
+    "check_projection_file_and_existing_parents_checked_before_read": true,
+    "render_output_and_existing_parents_checked_before_collision_mkdir_or_write": true,
+    "symlink_rejected": true,
+    "Windows_FILE_ATTRIBUTE_REPARSE_POINT_rejected": true,
+    "diagnostic_or_cleanup_followed_reparse": false
+  },
+  "fixture_contract": {
+    "root_relative_path": "reparse-fixtures",
+    "closed_world": true,
+    "authorized_leaf_count": 21,
+    "real_symlink_count_per_environment": 10,
+    "creation_mechanism": "Python_stdlib_Path_symlink_to",
+    "each_real_link_lstat_symlink_confirmed": true,
+    "each_real_link_Windows_reparse_attribute_confirmed": true,
+    "junction_or_generic_reparse_branch": "synthetic_non_symlink_FILE_ATTRIBUTE_REPARSE_POINT",
+    "privilege_or_platform_fallback_used": false,
+    "external_tool_used": false,
+    "unexpected_fixture_paths": 0
+  },
+  "case_matrix": [
+    {"id":"R71-P01","case":"canonical_render_reproduces_committed_STATE_bytes","result_A":"pass","result_B":"pass"},
+    {"id":"R71-P02","case":"canonical_check_passes_and_writes_zero_bytes","result_A":"pass","result_B":"pass"},
+    {"id":"R71-P03","case":"regular_non_reparse_fixture_output_has_exact_projection_bytes","result_A":"pass","result_B":"pass"},
+    {"id":"R71-P04","case":"regular_non_reparse_repository_file_passes_hash_and_size_validation","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N01","case":"source_file_symlink_rejected","rejection_code":"source:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N02","case":"source_parent_directory_symlink_rejected","rejection_code":"source:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N03","case":"profile_file_symlink_rejected","rejection_code":"profile:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N04","case":"profile_parent_directory_symlink_rejected","rejection_code":"profile:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N05","case":"repository_root_directory_symlink_rejected_before_resolve","rejection_code":"repository_root:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N06","case":"transition_pin_intermediate_directory_symlink_rejected","rejection_code":"transition_pin:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N07","case":"state_reference_intermediate_directory_symlink_rejected","rejection_code":"source_reference:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N08","case":"check_projection_file_symlink_rejected","rejection_code":"projection:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N09","case":"check_projection_parent_directory_symlink_rejected","rejection_code":"projection:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N10","case":"render_existing_output_file_symlink_rejected_without_canary_change","rejection_code":"output:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N11","case":"render_output_parent_directory_symlink_rejected_without_real_target_write","rejection_code":"output:reparse","result_A":"pass","result_B":"pass"},
+    {"id":"R71-N12","case":"synthetic_non_symlink_FILE_ATTRIBUTE_REPARSE_POINT_rejected","rejection_code":"synthetic:reparse","result_A":"pass","result_B":"pass"}
+  ],
+  "locked_environments": {
+    "environment_A": {
+      "temp_target": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-renderer-v7-1-reparse-A",
+      "Python": "3.12.7",
+      "creation": "venv_without_pip",
+      "dependencies": "stdlib_only",
+      "network": false,
+      "tests": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fixture_root_absent_after_test_cleanup": true
+    },
+    "environment_B": {
+      "temp_target": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-renderer-v7-1-reparse-B",
+      "Python": "3.12.7",
+      "creation": "venv_without_pip",
+      "dependencies": "stdlib_only",
+      "network": false,
+      "tests": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fixture_root_absent_after_test_cleanup": true
+    },
+    "results_identical": true,
+    "rejection_codes_identical": true,
+    "canonical_projection_identical": true,
+    "canary_targets_unchanged": true,
+    "write_through_reparse_targets": false,
+    "environment_roots_non_reparse_before_cleanup": true,
+    "reparse_descendants_before_environment_cleanup": 0,
+    "environment_root_cleanup": "System_IO_Directory_Delete_recursive_after_explicit_exact_path_and_non_reparse_verification",
+    "exact_environment_roots_absent_after_cleanup": true
+  },
+  "canonical_identity": {
+    "source": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "2f8ce67b2038042a92f9acf53be033716c50b3f8369cbfb4ec80624807af2e74",
+      "bytes": 89902,
+      "byte_unchanged": true
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+      "bytes": 90338,
+      "byte_unchanged": true
+    },
+    "renderer_A_projection_sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+    "renderer_B_projection_sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+    "renderer_A_projection_bytes": 90338,
+    "renderer_B_projection_bytes": 90338
+  },
+  "technical_execution_notes": [
+    "both_authorized_test_executions_passed_on_the_first_test_attempt",
+    "PowerShell_reported_native_stderr_as_error_records_but_both_process_exit_codes_were_zero_and_machine_readable_results_were_pass",
+    "initial_Remove_Item_environment_cleanup_command_was_rejected_by_tool_policy_before_process_execution_and_changed_nothing",
+    "the_same_exact_preverified_cleanup_was_completed_with_System_IO_Directory_Delete_without_following_any_reparse_point"
+  ],
+  "preservation_checks": {
+    "historical_renderer_profile_test_and_validation_v7": "byte_unchanged",
+    "state_and_STATE": "byte_unchanged",
+    "plans": "byte_unchanged",
+    "statuses_and_gate_inventories": "unchanged",
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "legacy_findings": "unchanged",
+    "repository_code_or_tests_outside_successor": false,
+    "network_used": false,
+    "pip_or_wheels_used": false,
+    "nonstdlib_dependencies": 0,
+    "runtime_authority": "none"
+  },
+  "finding_result": {
+    "finding_id": "K0B03-AUD-F01",
+    "original_severity": "medium",
+    "blocking_before_re_review": true,
+    "remediation_materialized": true,
+    "status": "remediation_materialized_pending_independent_re_review",
+    "closed": false,
+    "next_required_action": "fresh_context_read_only_non_author_independent_re_review",
+    "owner_closure_after_approve_requires_separate_authority": true
+  },
+  "result": "pass_renderer_v7_1_reparse_remediation_validation",
+  "runtime_authority": "none"
+}

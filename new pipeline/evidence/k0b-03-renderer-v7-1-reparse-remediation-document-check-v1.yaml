@@ -1,0 +1,142 @@
+{
+  "document_id": "pipeline-v2.k0b-03.renderer-v7-1-reparse-remediation-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-29T14:26:04.3029604Z",
+  "status": "pass_exact_six_path_append_only_package_ready_for_commit",
+  "baseline": {
+    "HEAD": "b7977f90d58f7f54f90ed0494aea02c23d3d8ad3",
+    "parent": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "tree": "e332add7b8948c1f25ee0396b1b6e8a1ceff5868",
+    "tracked_worktree_changes_before_staging": 0,
+    "index_changes_before_staging": 0
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "bytes": 19896,
+      "owner_confirmed_exact_hash": true
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "sha256": "6c402ec6242eb0b2ff889b98c899b4f8af40b684d16c4ad3acedb4b537dd2439",
+      "bytes": 5550
+    },
+    "runtime_authority": "none"
+  },
+  "package_pins": [
+    {
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "bytes": 19896
+    },
+    {
+      "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "sha256": "6c402ec6242eb0b2ff889b98c899b4f8af40b684d16c4ad3acedb4b537dd2439",
+      "bytes": 5550
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+      "sha256": "2dea2bd20dfe37bd07c076ce5678b8afc40944d461a66852d8f3e3e7cb2c6c61",
+      "bytes": 21856
+    },
+    {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v7_1.py",
+      "sha256": "225b826c61ba7a3d9a41b214e29739c5f9773bf34430390f7dcfbe0fb2dbda9c",
+      "bytes": 16762
+    },
+    {
+      "path": "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-validation-v1.yaml",
+      "sha256": "2c426f993aeb55f063134758b9adad18702bc609bb5008d4c0fba569f1b91756",
+      "bytes": 10283
+    }
+  ],
+  "checks": [
+    {"id":"R71-DOC-01","check":"baseline_HEAD_parent_tree","result":"pass"},
+    {"id":"R71-DOC-02","check":"confirmed_request_hash_size_and_owner_confirmation","result":"pass"},
+    {"id":"R71-DOC-03","check":"18_path_finite_read_manifest_and_all_committed_byte_pins","result":"pass","path_count":18,"content_bytes":859950,"manifest_bytes":2243,"sha256":"2e451475d0913eb4df605466da3109a3be28139409e2b524ab4d7a4f5bec0e09"},
+    {"id":"R71-DOC-04","check":"pinned_Python_3_12_7_host_interpreter","result":"pass"},
+    {"id":"R71-DOC-05","check":"owner_disposition_authority_and_non_authorization_boundaries","result":"pass"},
+    {"id":"R71-DOC-06","check":"renderer_v7_1_immutable_successor_and_bounded_v7_diff","result":"pass","added_lines":30,"deleted_lines":9},
+    {"id":"R71-DOC-07","check":"profile_v7_projection_7_0_0_state_and_STATE_byte_identity","result":"pass"},
+    {"id":"R71-DOC-08","check":"repository_root_source_profile_reference_projection_and_output_reparse_boundaries","result":"pass"},
+    {"id":"R71-DOC-09","check":"exact_16_case_matrix_in_environment_A","result":"pass","passed":16,"failures":0,"errors":0,"skipped":0},
+    {"id":"R71-DOC-10","check":"exact_16_case_matrix_in_environment_B","result":"pass","passed":16,"failures":0,"errors":0,"skipped":0},
+    {"id":"R71-DOC-11","check":"real_symlink_and_Windows_reparse_lstat_confirmation","result":"pass","real_links_per_environment":10},
+    {"id":"R71-DOC-12","check":"synthetic_non_symlink_FILE_ATTRIBUTE_REPARSE_POINT_branch","result":"pass"},
+    {"id":"R71-DOC-13","check":"identical_rejection_codes_and_canonical_projection_results","result":"pass"},
+    {"id":"R71-DOC-14","check":"canary_targets_unchanged_and_no_write_through_reparse","result":"pass"},
+    {"id":"R71-DOC-15","check":"network_dependencies_pip_wheels_and_external_fixture_tools_absent","result":"pass"},
+    {"id":"R71-DOC-16","check":"exact_fixture_and_two_environment_root_cleanup","result":"pass","residual_paths":0},
+    {"id":"R71-DOC-17","check":"UTF8_without_BOM_LF_and_one_final_LF","result":"pass"},
+    {"id":"R71-DOC-18","check":"recursive_duplicate_keys_forbidden_and_absent","result":"pass"},
+    {"id":"R71-DOC-19","check":"exact_six_path_all_new_inventory_and_no_existing_file_changes","result":"pass"},
+    {"id":"R71-DOC-20","check":"finding_remains_pending_independent_re_review_and_runtime_authority_none","result":"pass"}
+  ],
+  "canonical_result": {
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "2f8ce67b2038042a92f9acf53be033716c50b3f8369cbfb4ec80624807af2e74",
+      "bytes": 89902,
+      "unchanged": true
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+      "bytes": 90338,
+      "unchanged": true
+    },
+    "environment_A_projection_sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+    "environment_B_projection_sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+    "environment_A_projection_bytes": 90338,
+    "environment_B_projection_bytes": 90338,
+    "results_identical": true
+  },
+  "exact_commit_inventory": {
+    "total_paths": 6,
+    "additions": 6,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+      "new pipeline/tests/state/test_k0b03_renderer_v7_1.py",
+      "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-validation-v1.yaml",
+      "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-document-check-v1.yaml"
+    ],
+    "all_unlisted_paths": "forbidden"
+  },
+  "preservation": {
+    "historical_renderer_profile_test_and_validation_v7": "unchanged",
+    "state_and_STATE": "unchanged",
+    "plans": "unchanged",
+    "statuses_and_gates": "unchanged",
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "legacy_findings": "unchanged"
+  },
+  "finding_disposition": {
+    "finding_id": "K0B03-AUD-F01",
+    "remediation_materialized": true,
+    "status": "remediation_materialized_pending_independent_re_review",
+    "closed": false,
+    "fresh_context_independent_re_review_required": true,
+    "later_owner_closure_disposition_required_after_approve": true
+  },
+  "commit_contract": {
+    "parent": "b7977f90d58f7f54f90ed0494aea02c23d3d8ad3",
+    "subject": "fix(pipeline-v2): harden renderer v7 reparse boundaries",
+    "trailers": [
+      "Approval-Request-SHA256: 9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "Remediates-Finding: K0B03-AUD-F01",
+      "Renderer-Successor: 7.1.0",
+      "Runtime-Authority: none"
+    ]
+  },
+  "result": "pass",
+  "runtime_authority": "none"
+}

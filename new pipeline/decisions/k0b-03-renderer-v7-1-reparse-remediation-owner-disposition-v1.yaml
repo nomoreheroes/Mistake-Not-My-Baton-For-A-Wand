@@ -1,0 +1,128 @@
+{
+  "document_id": "pipeline-v2.k0b-03.renderer-v7-1-reparse-remediation-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-29T14:18:02.5251843Z",
+  "status": "approved_for_exact_six_path_append_only_reparse_remediation_runtime_not_authorized",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "bytes": 19896
+    },
+    "confirmed_request_sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+    "confirmation_actor": "workspace_owner",
+    "confirmation_source_ref": "current_conversation_exact_hash_full_six_path_scope_confirmation_2026_09_29",
+    "conversational_identity": "not_cryptographically_authenticated",
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "b7977f90d58f7f54f90ed0494aea02c23d3d8ad3",
+    "parent": "a7e4c8c37f1df7453f2621cf3eb2c762cbdc7ddc",
+    "tree": "e332add7b8948c1f25ee0396b1b6e8a1ceff5868",
+    "entry_status": "clean_except_confirmed_untracked_request",
+    "runtime_authority": "none"
+  },
+  "finding_disposition": {
+    "finding_id": "K0B03-AUD-F01",
+    "severity": "medium",
+    "blocking": true,
+    "confirmed_classification": "code_and_validation_gap",
+    "affected_claim": "completeness_of_mandatory_renderer_v7_validation_and_pass_promoted_canonical_pair_status",
+    "authorized_action": "materialize_append_only_renderer_v7_1_reparse_remediation",
+    "status_after_materialization": "remediation_materialized_pending_independent_re_review",
+    "closed_by_this_disposition_or_commit": false,
+    "closure_requires": [
+      "fresh_context_read_only_non_author_independent_re_review_approve",
+      "separate_owner_closure_disposition"
+    ]
+  },
+  "architecture_disposition": {
+    "selected": "immutable_renderer_v7_1_successor",
+    "renderer_version": "7.1.0",
+    "profile_id": "pipeline-v2.state-projection-profile-v7",
+    "projection_version": "7.0.0",
+    "profile_v7": "byte_unchanged",
+    "state_yaml": "byte_unchanged",
+    "STATE_md": "byte_unchanged",
+    "new_profile": false,
+    "canonical_state_transition": false,
+    "separate_preflight_wrapper": false,
+    "enforcement_owner": "renderer_v7_1",
+    "historical_renderer_v7": "immutable_preserved_input"
+  },
+  "required_security_result": {
+    "repository_root": "reject_reparse_before_resolve",
+    "source_and_profile": "reject_file_or_parent_reparse_before_read",
+    "repository_components": "reject_every_intermediate_or_final_reparse",
+    "check_projection": "reject_file_or_parent_reparse_before_read",
+    "render_output": "reject_existing_output_or_existing_parent_reparse_before_collision_mkdir_or_write",
+    "missing_output": "check_all_existing_ancestors",
+    "junction_and_generic_reparse": "reject_any_FILE_ATTRIBUTE_REPARSE_POINT",
+    "diagnostics_and_cleanup": "never_follow_reparse",
+    "canonical_projection_sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+    "canonical_projection_bytes": 90338
+  },
+  "validation_disposition": {
+    "locked_environment_count": 2,
+    "stdlib_only": true,
+    "network": false,
+    "dependencies": [],
+    "exact_test_case_count_per_environment": 16,
+    "real_symlink_fixture_required": true,
+    "Windows_reparse_attribute_confirmation_required": true,
+    "synthetic_non_symlink_reparse_case_required": true,
+    "privilege_or_fixture_failure": "hard_stop",
+    "skips_allowed": 0,
+    "canary_write_through_allowed": false,
+    "all_other_repository_code_or_tests": false
+  },
+  "write_scope": {
+    "total_paths": 6,
+    "additions": 6,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+      "new pipeline/tests/state/test_k0b03_renderer_v7_1.py",
+      "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-validation-v1.yaml",
+      "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-document-check-v1.yaml"
+    ],
+    "all_unlisted_paths": "forbidden"
+  },
+  "preservation": {
+    "historical_renderer_profile_test_and_validation_v7": "unchanged",
+    "state_and_STATE": "unchanged",
+    "plans": "unchanged",
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "legacy_findings": "unchanged",
+    "runtime_authority": "none"
+  },
+  "retained_non_authorizations": [
+    "finding_closure",
+    "profile_or_state_transition",
+    "plan_adoption",
+    "gate_transition",
+    "K0b03_implementation",
+    "K0b04_K0b05_or_N1_progress",
+    "network_pip_wheels_or_external_dependency",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "runtime_publication_remote_effect_or_runtime_authority"
+  ],
+  "post_commit_boundary": {
+    "fresh_context_read_only_non_author_independent_re_review_required": true,
+    "review_is_owner_approval": false,
+    "finding_closure_requires_separate_owner_authority": true
+  },
+  "integrity_rules": {
+    "immutable_after_first_reference": true,
+    "own_hash_future_validation_hash_or_containing_commit_not_embedded": true,
+    "historical_evidence_rewrite": false,
+    "future_success_claim": false
+  }
+}
