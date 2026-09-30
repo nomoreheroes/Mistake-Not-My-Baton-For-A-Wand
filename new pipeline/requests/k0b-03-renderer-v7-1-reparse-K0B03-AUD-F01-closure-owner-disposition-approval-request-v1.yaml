@@ -1,0 +1,343 @@
+{
+  "request_id": "pipeline-v2.k0b-03.renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_at_UTC": "2026-09-29T15:32:09.997211Z",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "purpose": "Request a later separately confirmed three-path owner-closure documentation package for K0B03-AUD-F01 after append-only renderer v7.1 remediation and fresh-context independent re-review approve. This request does not itself close the finding, modify historical evidence, adopt a plan, change canonical state or a gate, authorize K0b-03 implementation, or grant runtime authority.",
+  "document_format": {
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "authority": {
+    "request_creation_actor": "workspace_owner",
+    "request_creation_source_ref": "current_conversation_and_attached_exact_scope_2026_09_29",
+    "conversational_identity": "not_cryptographically_authenticated",
+    "finding_id": "K0B03-AUD-F01",
+    "owner_closure_proposed": true,
+    "owner_closure_effective_now": false,
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+    "parent": "5c2c7bfff5138a29f204e2e3cf81817c7e55f022",
+    "tree": "6084681cbfe4411c4f73ccbf80495a8133840421",
+    "required_index_and_worktree": "clean",
+    "observed_index_and_worktree": "clean",
+    "future_commit_parent": "27e5de3b9bca792b9cba5b745d31e00c8244c79b"
+  },
+  "current_permission": {
+    "authorized_now": [
+      "read_only_baseline_and_clean_status_reverification",
+      "read_only_nine_direct_pin_reverification",
+      "read_only_review_result_finding_count_and_closure_basis_reverification",
+      "read_only_future_target_absence_check",
+      "creation_of_this_approval_request_only",
+      "static_UTF8_LF_one_final_LF_and_duplicate_key_checks",
+      "report_complete_request_SHA256_and_bytes"
+    ],
+    "repository_writes": [
+      "new pipeline/requests/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-approval-request-v1.yaml"
+    ],
+    "owner_disposition_creation": false,
+    "document_check_creation": false,
+    "staging_or_commit": false,
+    "repository_code_or_tests": false,
+    "locked_environments": [],
+    "fixtures": [],
+    "temp_targets": [],
+    "network": false,
+    "dependencies": [],
+    "finding_closure": false,
+    "state_or_gate_transition": false,
+    "K0b03_implementation": false,
+    "runtime_authority": "none"
+  },
+  "direct_read_pins": [
+    {
+      "ordinal": 1,
+      "role": "remediation_approval_request",
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-approval-request-v1.yaml",
+      "sha256": "9b9bedc3fbe35fcfc30612e69ca93793e8059d2be3962eba09307df06178e123",
+      "bytes": 19896
+    },
+    {
+      "ordinal": 2,
+      "role": "remediation_owner_disposition",
+      "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-remediation-owner-disposition-v1.yaml",
+      "sha256": "6c402ec6242eb0b2ff889b98c899b4f8af40b684d16c4ad3acedb4b537dd2439",
+      "bytes": 5550
+    },
+    {
+      "ordinal": 3,
+      "role": "renderer_v7_1",
+      "path": "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+      "sha256": "2dea2bd20dfe37bd07c076ce5678b8afc40944d461a66852d8f3e3e7cb2c6c61",
+      "bytes": 21856
+    },
+    {
+      "ordinal": 4,
+      "role": "test_v7_1",
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v7_1.py",
+      "sha256": "225b826c61ba7a3d9a41b214e29739c5f9773bf34430390f7dcfbe0fb2dbda9c",
+      "bytes": 16762
+    },
+    {
+      "ordinal": 5,
+      "role": "remediation_validation",
+      "path": "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-validation-v1.yaml",
+      "sha256": "2c426f993aeb55f063134758b9adad18702bc609bb5008d4c0fba569f1b91756",
+      "bytes": 10283
+    },
+    {
+      "ordinal": 6,
+      "role": "remediation_document_check",
+      "path": "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-document-check-v1.yaml",
+      "sha256": "b6b43c2cb1725ab3a5532f7a945b3122d50eefd04bf050f9a0e19c7c8a797664",
+      "bytes": 7233
+    },
+    {
+      "ordinal": 7,
+      "role": "independent_re_review_approval_request",
+      "path": "new pipeline/requests/k0b-03-renderer-v7-1-reparse-remediation-independent-re-review-approval-request-v1.yaml",
+      "sha256": "dc5a0e6d5e62501344c218bb265c10031a254754fa6cd44809d0c5a9df060f1f",
+      "bytes": 19846
+    },
+    {
+      "ordinal": 8,
+      "role": "independent_re_review_report",
+      "path": "new pipeline/reviews/k0b-03-renderer-v7-1-reparse-remediation-independent-re-review-v1.yaml",
+      "sha256": "2561f7f3db640a1ebd37f597cfbe957500a3e0c26b936bc500099f016c51b36f",
+      "bytes": 15147
+    },
+    {
+      "ordinal": 9,
+      "role": "independent_re_review_document_check",
+      "path": "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-remediation-independent-re-review-document-check-v1.yaml",
+      "sha256": "906c651e19b04e8bcc37761308421083292f32b8c2a95eb5e9922aefcba5bd0d",
+      "bytes": 8813
+    }
+  ],
+  "closure_basis": {
+    "finding_id": "K0B03-AUD-F01",
+    "original_severity": "medium",
+    "original_blocking": true,
+    "original_affected_claim": "completeness_of_mandatory_renderer_v7_validation_and_pass_promoted_canonical_pair_status",
+    "confirmed_expanded_classification": "code_and_validation_gap",
+    "remediation": {
+      "kind": "append_only_immutable_renderer_v7_1_successor_and_validation",
+      "commit": "5c2c7bfff5138a29f204e2e3cf81817c7e55f022",
+      "renderer_version": "7.1.0",
+      "historical_renderer_v7_rewritten": false,
+      "canonical_profile_or_state_transition": false
+    },
+    "remediated_surfaces": [
+      "repository_root_reparse_checked_before_resolve",
+      "source_file_and_lexical_parent_reparse_rejection",
+      "profile_file_and_lexical_parent_reparse_rejection",
+      "each_repository_reference_component_reparse_rejection",
+      "check_projection_file_and_parent_reparse_rejection",
+      "render_output_and_existing_parent_reparse_rejection_before_collision_mkdir_and_write",
+      "tag_agnostic_symlink_and_FILE_ATTRIBUTE_REPARSE_POINT_rejection"
+    ],
+    "validation": {
+      "exact_case_count_per_environment": 16,
+      "environment_count": 2,
+      "passed_per_environment": 16,
+      "failures_per_environment": 0,
+      "errors_per_environment": 0,
+      "skipped_per_environment": 0,
+      "rejection_codes_identical": true,
+      "canonical_output_identical": true,
+      "canary_targets_unchanged": true,
+      "zero_temp_residue": true
+    },
+    "canonical_projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "2fecd206c2d62cf2c7f7cafc53af2ae861d9090e2e17d2c0241f0463f904892c",
+      "bytes": 90338,
+      "byte_identical": true
+    },
+    "independent_re_review": {
+      "documentation_commit": "27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+      "reviewer_profile": "fresh-context-read-only-non-author",
+      "result": "approve",
+      "mandatory_checks": 27,
+      "passed_checks": 27,
+      "failed_checks": 0,
+      "inconclusive_checks": 0,
+      "new_findings": 0,
+      "new_blocking_findings": 0,
+      "remediation_contract_gaps": 0,
+      "remediation_verified": true,
+      "reviewer_recommendation_is_owner_approval": false
+    },
+    "final_condition": "separate_exact_hash_confirmed_owner_disposition",
+    "final_condition_satisfied_by_this_request": false
+  },
+  "non_finding_scope_notes": [
+    {
+      "id": "K0B03-RR-NF01",
+      "topic": "atomic_TOCTOU_protection_against_concurrent_path_substitution",
+      "included_in_approved_remediation_contract": false,
+      "protection_proven": false,
+      "finding": false,
+      "residual_action_for_K0B03_AUD_F01": false,
+      "required_treatment": "preserve_without_overclaim"
+    },
+    {
+      "id": "K0B03-RR-NF02",
+      "topic": "hardlink_alias_identity",
+      "included_in_approved_remediation_contract": false,
+      "protection_proven": false,
+      "finding": false,
+      "residual_action_for_K0B03_AUD_F01": false,
+      "required_treatment": "preserve_without_overclaim"
+    }
+  ],
+  "proposed_owner_disposition": {
+    "finding_id": "K0B03-AUD-F01",
+    "status": "closed",
+    "closure_kind": "owner_closed_after_verified_append_only_renderer_v7_1_remediation_and_fresh_context_independent_re_review_approve",
+    "blocking_after_closure": false,
+    "residual_action": "none",
+    "closure_scope": "K0B03_AUD_F01_only",
+    "historical_evidence_rewritten": false,
+    "remediation_or_review_reclassified": false,
+    "scope_notes_reclassified_as_proven_protection": false,
+    "plan_adoption": false,
+    "state_or_gate_transition": false,
+    "K0b03_implementation_authority": false,
+    "runtime_authority": "none",
+    "effective_only_after_separate_exact_hash_owner_confirmation_and_commit": true
+  },
+  "future_package": {
+    "kind": "append_only_owner_closure_documentation_package",
+    "path_count": 3,
+    "additions": 3,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-approval-request-v1.yaml",
+      "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-v1.yaml",
+      "new pipeline/evidence/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-document-check-v1.yaml"
+    ],
+    "all_unlisted_paths": "forbidden"
+  },
+  "future_owner_disposition_contract": {
+    "must_bind": [
+      "confirmed_complete_request_SHA256_and_bytes",
+      "all_nine_direct_read_pins",
+      "original_severity_blocking_and_affected_claim",
+      "append_only_remediation_commit_and_renderer_version",
+      "all_remediated_surfaces",
+      "two_environment_16_of_16_validation",
+      "canonical_projection_byte_identity",
+      "independent_re_review_commit_profile_approve_and_27_of_27_results",
+      "zero_new_findings_blockers_and_contract_gaps",
+      "two_non_finding_scope_notes_without_protection_overclaim",
+      "final_closed_status_closure_kind_non_blocking_and_no_residual_action",
+      "historical_state_gate_plan_and_runtime_non_authorizations"
+    ],
+    "finding_status": "closed",
+    "blocking_after_closure": false,
+    "residual_action": "none",
+    "owner_actor": "workspace_owner",
+    "owner_confirmation_identity": "conversational_not_cryptographically_authenticated"
+  },
+  "future_document_check_contract": [
+    "baseline_HEAD_parent_tree_and_entry_status",
+    "confirmed_request_SHA256_size_status_and_exact_scope",
+    "all_nine_direct_pins",
+    "closure_basis_and_independent_re_review_result",
+    "owner_confirmation_and_disposition_accuracy",
+    "two_non_finding_scope_notes_without_overclaim",
+    "finding_closed_only_by_owner_disposition",
+    "historical_evidence_unchanged",
+    "state_STATE_profile_plans_statuses_and_gates_unchanged",
+    "cross_document_hashes",
+    "UTF8_without_BOM_LF_one_final_LF_and_no_duplicate_keys",
+    "exact_three_path_all_new_commit_inventory",
+    "runtime_authority_none"
+  ],
+  "future_commit_contract": {
+    "count": 1,
+    "kind": "local_documentation_commit",
+    "parent": "27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+    "path_count": 3,
+    "message": "docs(pipeline-v2): close renderer reparse finding K0B03-AUD-F01",
+    "trailers_contiguous_and_ordered": [
+      "Approval-Request-SHA256: <complete_request_sha256>",
+      "Closes-Finding: K0B03-AUD-F01",
+      "Independent-Re-Review-Commit: 27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+      "Runtime-Authority: none"
+    ],
+    "state_or_gate_transition": false,
+    "K0b03_implementation_authority": false,
+    "runtime_authority": "none"
+  },
+  "future_required_checks": [
+    "baseline_HEAD_parent_tree_and_clean_status",
+    "confirmed_request_hash_size_and_status",
+    "all_nine_direct_pins",
+    "original_finding_severity_blocking_classification_and_affected_claim",
+    "remediation_commit_renderer_version_and_bounded_scope",
+    "remediated_surface_inventory",
+    "exact_two_environment_16_of_16_validation_counts",
+    "canonical_STATE_hash_size_and_byte_identity",
+    "independent_re_review_commit_profile_result_and_27_of_27_counts",
+    "zero_failed_inconclusive_findings_blockers_and_contract_gaps",
+    "two_non_finding_scope_notes_without_protection_overclaim",
+    "owner_confirmation_and_exact_closure_disposition",
+    "finding_closed_non_blocking_and_no_residual_action",
+    "historical_evidence_state_gate_plan_and_runtime_identity",
+    "document_format_and_cross_hash_integrity",
+    "exact_three_path_all_new_inventory",
+    "git_diff_check",
+    "commit_parent_message_trailers_inventory_and_clean_post_commit_status"
+  ],
+  "stop_conditions": [
+    "baseline_HEAD_parent_tree_or_clean_status_mismatch",
+    "any_nine_direct_pin_mismatch",
+    "reviewer_profile_or_review_result_mismatch",
+    "mandatory_check_count_or_pass_count_not_27",
+    "any_failed_or_inconclusive_check",
+    "any_new_finding_blocker_or_remediation_contract_gap",
+    "closure_basis_mismatch",
+    "owner_confirmation_hash_or_scope_mismatch",
+    "attempt_to_close_any_finding_other_than_K0B03_AUD_F01",
+    "attempt_to_reclassify_non_finding_scope_notes_as_proven_protection",
+    "need_to_modify_historical_evidence_state_STATE_profile_plan_status_or_gate",
+    "need_for_a_fourth_repository_path",
+    "K0b03_K0b04_K0b05_N1_or_runtime_scope_expansion"
+  ],
+  "preservation_contract": {
+    "historical_remediation_package": "immutable_unchanged",
+    "independent_re_review_package": "immutable_unchanged",
+    "historical_renderer_profile_test_and_validation_v7": "unchanged",
+    "state_yaml": "byte_unchanged",
+    "STATE_md": "byte_unchanged",
+    "projection_profile_v7": "byte_unchanged",
+    "plans": "unchanged",
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "K0b04_K0b05_N1": "unchanged",
+    "runtime_authority": "none"
+  },
+  "non_authorizations": [
+    "owner_disposition_or_document_check_creation_before_separate_exact_hash_confirmation",
+    "staging_or_commit_now",
+    "historical_evidence_rewrite",
+    "state_STATE_profile_plan_status_or_gate_change",
+    "repository_code_or_test_execution",
+    "environment_fixture_or_temp_target_creation",
+    "network_dependency_pip_or_wheel_use",
+    "K0b03_implementation",
+    "K0b04_K0b05_or_N1_progress",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "runtime_publication_remote_effect_or_runtime_authority"
+  ]
+}
