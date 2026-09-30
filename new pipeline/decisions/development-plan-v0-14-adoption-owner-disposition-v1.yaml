@@ -1,0 +1,85 @@
+{
+  "decision_id": "pipeline-v2.development-plan-v0-14-adoption-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "decided_on": "2026-09-30",
+  "decision_kind": "owner_development_plan_adoption_disposition",
+  "status": "approved_for_exact_materialization",
+  "authority": {
+    "owner_confirmation": "conversation_owner_confirmation_2026_09_30",
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+      "sha256": "2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+      "bytes": 56165
+    },
+    "baseline_HEAD": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "future_commit_parent": "7d5590f74b42f1fabaedfde99be2ca079301e2ef"
+  },
+  "disposition": {
+    "development_plan": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "version": "0.14",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "bytes": 101354,
+      "internal_label": "owner_approved_documentation_successor_implementation_and_runtime_authority_absent",
+      "effective_status": "active_hash_bound_development_plan_v0_14_with_reviewed_legacy_applicability_overlay",
+      "adopt_as_canonical_development_plan": true
+    },
+    "historical_v0_13": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "bytes": 97569,
+      "disposition": "immutable_historical_plan"
+    },
+    "findings": {
+      "LSR-F01": "closed_unchanged",
+      "LSR-F02": "open_nonblocking_unchanged",
+      "LSR-F03": "open_nonblocking_unchanged",
+      "LSR-F04": "open_nonblocking_unchanged",
+      "LSR-F05": "closed_by_this_adoption"
+    },
+    "exact_typed_state_selector_count": 14,
+    "renderer_successor_version": "8.0.0",
+    "projection_version": "8.0.0",
+    "gate_change": false,
+    "work_item_status_change": false,
+    "runtime_authority": "none"
+  },
+  "closure_basis_LSR_F05": {
+    "original_status": "open_nonblocking",
+    "original_claim": "development_plan_v0_13_canonical_and_v0_14_successor_coexist_until_separate_adoption_transaction",
+    "closure_kind": "owner_closed_by_hash_bound_v0_14_adoption_transaction",
+    "blocking_after_closure": false,
+    "residual_action": "none",
+    "independent_review_semantic_result": "pass",
+    "legacy_blob_provenance_LSR_F01": "closed",
+    "historical_evidence_rewritten": false
+  },
+  "preserved_state": {
+    "root_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G-K0B03-K0B01-COMPLETE": "closed",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open",
+    "K0b-03": "blocked",
+    "K0b-04_K0b-05_N1_execution": "unchanged",
+    "runtime_authority": "none"
+  },
+  "single_source_boundaries": {
+    "canonical_development_plan": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+    "canonical_state_source": "new pipeline/state/state.yaml",
+    "generated_projection": "new pipeline/state/STATE.md",
+    "projection_profile": "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+    "renderer": "new pipeline/state/renderer/k0b03_v8/renderer.py",
+    "legacy_applicability_overlay": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md"
+  },
+  "non_authorizations": [
+    "K0b03_implementation",
+    "G_K0B03_UNTRUSTED_SHAPES_closure",
+    "any_other_gate_transition",
+    "K0b04_K0b05_or_N1_progress",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "network_dependency_or_external_effect",
+    "runtime_publication_or_runtime_authority"
+  ]
+}

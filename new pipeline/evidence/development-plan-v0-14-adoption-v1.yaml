@@ -1,0 +1,126 @@
+{
+  "evidence_id": "pipeline-v2.development-plan-v0-14-adoption-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-30",
+  "evidence_kind": "development_plan_adoption_materialization",
+  "status": "materialized_pending_renderer_validation_and_commit",
+  "baseline": {
+    "HEAD": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "parent": "27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+    "tree": "6fb4c2e5a19656f4f59399690bfe1c28a3712a66",
+    "entry_status": "clean_except_confirmed_untracked_approval_request"
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+      "sha256": "2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+      "bytes": 56165
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/development-plan-v0-14-adoption-owner-disposition-v1.yaml",
+      "binding": "sha256_and_bytes_bound_by_projection_profile_v8"
+    }
+  },
+  "plan_transition": {
+    "from": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN.md",
+      "version": "0.13",
+      "sha256": "679a0bfa08d5c249968fe03ce91d85f9205bab6851c2f09aa9efada3f687382d",
+      "bytes": 97569,
+      "disposition": "immutable_historical_plan"
+    },
+    "to": {
+      "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+      "version": "0.14",
+      "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+      "bytes": 101354,
+      "exact_diff_hunk_count": 5,
+      "disposition": "canonical_hash_bound_development_plan"
+    },
+    "applicability_addendum": {
+      "path": "new pipeline/architecture/legacy-pipeline-successor-applicability-addendum-v1.md",
+      "sha256": "7422498e34f803116d04b95061b066dd200a7aa68393ecccf74c2978af02bd2b",
+      "bytes": 11398
+    },
+    "applicability_evidence": {
+      "path": "new pipeline/evidence/legacy-pipeline-successor-applicability-v1.yaml",
+      "sha256": "a5f210453868836c7ad7c977bcac3ed421e56c71eade7a04bcf0b622acb3ef4c",
+      "bytes": 17797
+    }
+  },
+  "review_chain": {
+    "original_review": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-snapshot-independent-review-v1.yaml",
+      "sha256": "83cbd72df6f6755b6ab606384b06278a2f18a9698062f2ed18189ab6d0b1f03b",
+      "bytes": 17609,
+      "historical_result": "changes_required"
+    },
+    "blob_provenance_re_review": {
+      "path": "new pipeline/reviews/legacy-pipeline-successor-blob-provenance-corrigendum-independent-re-review-v1.yaml",
+      "sha256": "4fddf845f6b8a5f2c0562b0cd255880442a8ef9bc0189f4034fa883d28cdbdcd",
+      "bytes": 16150,
+      "result": "approve"
+    },
+    "LSR_F01_owner_closure": {
+      "path": "new pipeline/decisions/legacy-pipeline-successor-blob-provenance-LSR-F01-closure-owner-disposition-v1.yaml",
+      "sha256": "d86869227d7622bc1e2c604c49b51d3aa60cca3084ec4e62f5dab86b648bb767",
+      "bytes": 9087,
+      "status": "closed"
+    },
+    "renderer_v7_1_finding_owner_closure": {
+      "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-v1.yaml",
+      "sha256": "923dc2d11842ce8e3916bc94246c23b70e498dcd275409cf3d3f7ad482064d2d",
+      "bytes": 10550,
+      "status": "closed"
+    }
+  },
+  "state_delta_contract": {
+    "selector_count": 14,
+    "generated_at": "2026-09-30T00:00:00Z",
+    "projection_version": "8.0.0",
+    "selectors": [
+      "generated_at",
+      "projection_version",
+      "projection_profile.path",
+      "projection_profile.sha256",
+      "active_authority.development_plan_v0_14_adoption",
+      "supporting_review_evidence.development_plan_v0_14_adoption",
+      "root_plan_status.development_plan.path",
+      "root_plan_status.development_plan.sha256",
+      "root_plan_status.development_plan.internal_label",
+      "root_plan_status.development_plan.effective_status",
+      "work_items[work_item_id=K0b-03].authority_path",
+      "work_items[work_item_id=K0b-03].authority_sha256",
+      "work_items[work_item_id=N1].authority_path",
+      "work_items[work_item_id=N1].authority_sha256"
+    ],
+    "status_change": false,
+    "gate_inventory_change": false,
+    "work_item_status_change": false,
+    "runtime_authority_change": false
+  },
+  "finding_disposition": {
+    "LSR-F01": "closed_unchanged",
+    "LSR-F02": "open_nonblocking_unchanged",
+    "LSR-F03": "open_nonblocking_unchanged",
+    "LSR-F04": "open_nonblocking_unchanged",
+    "LSR-F05": "closed_by_owner_authorized_adoption"
+  },
+  "preservation": {
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G-K0B03-K0B01-COMPLETE": "closed_unchanged",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open_unchanged",
+    "K0b-03": "blocked_unchanged",
+    "K0b-04_K0b-05_N1_execution": "unchanged",
+    "historical_evidence": "unchanged",
+    "runtime_authority": "none"
+  },
+  "audit_requirement": {
+    "after_commit": "fresh_context_read_only_non_author_audit",
+    "before": "K0b03_implementation_scope_freeze",
+    "audit_is_owner_approval": false,
+    "audit_authorizes_implementation": false
+  }
+}

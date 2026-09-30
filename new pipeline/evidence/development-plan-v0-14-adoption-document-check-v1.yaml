@@ -1,0 +1,135 @@
+{
+  "evidence_id": "pipeline-v2.development-plan-v0-14-adoption-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-30",
+  "evidence_kind": "documentation_and_state_governance_static_check",
+  "status": "pass",
+  "baseline": {
+    "HEAD": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "parent": "27e5de3b9bca792b9cba5b745d31e00c8244c79b",
+    "tree": "6fb4c2e5a19656f4f59399690bfe1c28a3712a66"
+  },
+  "pinned_artifacts": [
+    {
+      "path": "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+      "sha256": "2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+      "bytes": 56165
+    },
+    {
+      "path": "new pipeline/decisions/development-plan-v0-14-adoption-owner-disposition-v1.yaml",
+      "sha256": "6e0c4c44bb0933462a918d0aa751634cacdeaff14c2ffb509bf9466eaa677dd1",
+      "bytes": 3674
+    },
+    {
+      "path": "new pipeline/evidence/development-plan-v0-14-adoption-v1.yaml",
+      "sha256": "379c5a05b88be94d0c7ec7639d4238286060d025b60e45e987112717770a5732",
+      "bytes": 5074
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b03_v8/renderer.py",
+      "sha256": "ec5a1c9ad6d6bf3f867423a5eacc991b500993dc9306af638bf16a85eba81724",
+      "bytes": 20075
+    },
+    {
+      "path": "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+      "sha256": "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a",
+      "bytes": 56669
+    },
+    {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v8.py",
+      "sha256": "9ab55fb77b624a6232c4b2e35f2aecc8bee9fab5d63dae15e400b58962d60b30",
+      "bytes": 21543
+    },
+    {
+      "path": "new pipeline/evidence/k0b-03-renderer-v8-validation-v1.yaml",
+      "sha256": "41635551c836b3fa3973f8a25467d9ace2ca92e195cb858699f80aa2ba882d59",
+      "bytes": 7309
+    },
+    {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "6b8520e2c57b56acd4c3315fbb4d78c93d4a45533804c61eba3cf7c9bd4aa2b2",
+      "bytes": 90882
+    },
+    {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "9b6c8251ca85cec8b0e92ce69daacc71724b4f25bfa06158e4f024c9b9782573",
+      "bytes": 91318
+    }
+  ],
+  "checks": [
+    {"id": "DP14-CHK-01", "claim": "baseline_HEAD_parent_tree_and_entry_status", "result": "pass"},
+    {"id": "DP14-CHK-02", "claim": "confirmed_request_SHA256_size_status_and_exact_scope", "result": "pass"},
+    {"id": "DP14-CHK-03", "claim": "54_path_direct_read_manifest_zero_mismatches", "result": "pass"},
+    {"id": "DP14-CHK-04", "claim": "98_path_entry_state_reference_manifest_zero_mismatches", "result": "pass"},
+    {"id": "DP14-CHK-05", "claim": "development_plan_v0_14_pin_and_exact_five_diff_hunks", "result": "pass"},
+    {"id": "DP14-CHK-06", "claim": "owner_disposition_and_adoption_evidence_authority_chain", "result": "pass"},
+    {"id": "DP14-CHK-07", "claim": "LSR_F05_only_closed_LSR_F02_F03_F04_open_nonblocking", "result": "pass"},
+    {"id": "DP14-CHK-08", "claim": "renderer_v8_lineage_from_immutable_v7_1", "result": "pass"},
+    {"id": "DP14-CHK-09", "claim": "all_v7_1_reparse_hardening_preserved", "result": "pass"},
+    {"id": "DP14-CHK-10", "claim": "profile_allowlist_partition_373_plus_11_equals_384", "result": "pass"},
+    {"id": "DP14-CHK-11", "claim": "exact_12_ordered_transition_pins", "result": "pass"},
+    {"id": "DP14-CHK-12", "claim": "exact_14_selector_typed_state_delta", "result": "pass"},
+    {"id": "DP14-CHK-13", "claim": "candidate_entry_state_reference_projection_100_paths", "result": "pass"},
+    {"id": "DP14-CHK-14", "claim": "state_projection_byte_identity_with_renderer_v8", "result": "pass"},
+    {"id": "DP14-CHK-15", "claim": "two_environment_render_check_and_24_test_results_identical", "result": "pass"},
+    {"id": "DP14-CHK-16", "claim": "negative_foreign_selector_hash_path_duplicate_overlap_reparse_and_line_ending_matrix", "result": "pass"},
+    {"id": "DP14-CHK-17", "claim": "root_status_and_6_open_11_closed_gate_inventory_unchanged", "result": "pass"},
+    {"id": "DP14-CHK-18", "claim": "predecessor_gate_closed_untrusted_shapes_future_open_K0b03_blocked", "result": "pass"},
+    {"id": "DP14-CHK-19", "claim": "K0b04_K0b05_N1_execution_and_runtime_authority_unchanged", "result": "pass"},
+    {"id": "DP14-CHK-20", "claim": "UTF8_without_BOM_LF_one_final_LF_and_duplicate_keys_forbidden", "result": "pass"},
+    {"id": "DP14-CHK-21", "claim": "cross_document_hashes_and_sizes", "result": "pass"},
+    {"id": "DP14-CHK-22", "claim": "network_pip_wheels_dependencies_provider_and_runtime_effects_absent", "result": "pass"},
+    {"id": "DP14-CHK-23", "claim": "both_exact_locked_environment_roots_absent_after_cleanup", "result": "pass"},
+    {"id": "DP14-CHK-24", "claim": "exact_ten_path_inventory_8_additions_2_modifications_0_deletions", "result": "pass"}
+  ],
+  "check_accounting": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "inconclusive": 0
+  },
+  "format_contract": {
+    "text_encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "JSON_compatible_YAML_duplicate_keys": "forbidden",
+    "git_diff_check": "pass"
+  },
+  "cleanup": {
+    "A": "absent",
+    "B": "absent",
+    "fixture_residue": false,
+    "cleanup_scope": "only_two_exact_environment_roots"
+  },
+  "future_commit_inventory": {
+    "total_paths": 10,
+    "additions": 8,
+    "modifications": 2,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+      "new pipeline/decisions/development-plan-v0-14-adoption-owner-disposition-v1.yaml",
+      "new pipeline/evidence/development-plan-v0-14-adoption-v1.yaml",
+      "new pipeline/state/renderer/k0b03_v8/renderer.py",
+      "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+      "new pipeline/tests/state/test_k0b03_renderer_v8.py",
+      "new pipeline/evidence/k0b-03-renderer-v8-validation-v1.yaml",
+      "new pipeline/state/state.yaml",
+      "new pipeline/state/STATE.md",
+      "new pipeline/evidence/development-plan-v0-14-adoption-document-check-v1.yaml"
+    ]
+  },
+  "commit_contract": {
+    "parent": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "subject": "docs(pipeline-v2): adopt development plan v0.14",
+    "trailers": [
+      "Approval-Request-SHA256: 2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+      "Adopts-Development-Plan: 0.14",
+      "Closes-Finding: LSR-F05",
+      "Runtime-Authority: none"
+    ],
+    "local_only": true
+  },
+  "post_commit_requirement": "fresh_context_read_only_non_author_audit_before_K0b03_implementation_scope_freeze"
+}
