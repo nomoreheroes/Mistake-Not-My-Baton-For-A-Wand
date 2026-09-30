@@ -1,12 +1,12 @@
 {
     "state_id":  "pipeline-v2-program-state",
     "schema_version":  1,
-    "projection_version":  "8.0.0",
-    "generated_at":  "2026-09-30T00:00:00Z",
+    "projection_version":  "8.1.0",
+    "generated_at":  "2026-09-30T00:00:01Z",
     "status":  "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
     "projection_profile":  {
-                               "path":  "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
-                               "sha256":  "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a"
+                               "path":  "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+                               "sha256":  "74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5"
                            },
     "baseline":  {
                      "pre_remediation_HEAD":  "a031ee56a36cf794646643b67270c6e0f7092e08",

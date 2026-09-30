@@ -1,0 +1,137 @@
+{
+  "evidence_id": "pipeline-v2.development-plan-v0-14-DP14-AUD-F01-remediation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-30",
+  "evidence_kind": "append_only_reference_manifest_remediation_materialization",
+  "status": "materialized_pending_renderer_validation_and_commit",
+  "baseline": {
+    "HEAD": "2903876161d5d314ded49a1ab71f85de20625510",
+    "parent": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "tree": "7117898d2772e267f8380ed78bd7aa91af16285e",
+    "entry_status": "clean_except_confirmed_untracked_approval_request"
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+      "sha256": "841fb2401a1bc663a862e542dfa7d1a74ed2a32350a600e5ad7c4b56fd4413bd",
+      "bytes": 33039
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+      "binding": "sha256_and_bytes_bound_by_projection_profile_v8_1"
+    }
+  },
+  "finding_basis": {
+    "id": "DP14-AUD-F01",
+    "severity": "high",
+    "blocking": true,
+    "review_result": "changes_required",
+    "approved_baseline_paths": 98,
+    "incorrect_arithmetic_paths": 100,
+    "actual_candidate_paths": 101,
+    "preserved_additional_path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+    "code_gap": "renderer_v8_did_not_enforce_complete_exact_reference_set_after_collection",
+    "test_gap": "test_v8_asserted_incomplete_arithmetic_projection_instead_of_actual_recursive_candidate_projection"
+  },
+  "pre_materialization_reproduction": {
+    "direct_read_manifest": {
+      "paths": 19,
+      "content_bytes": 771504,
+      "manifest_bytes": 2428,
+      "sha256": "34246e8f0500559b2836827f9a93e49a3743d1e10dfe16c79155d6918f6d3456",
+      "mismatches": 0
+    },
+    "approved_baseline_entry_state_manifest": {
+      "paths": 98,
+      "content_bytes": 3110260,
+      "manifest_bytes": 13827,
+      "sha256": "6074d65aeb5411fd1729e9fb0ad0287347c2ea06a5b549d7a04cc399bb7bb14a"
+    },
+    "committed_candidate_manifest": {
+      "paths": 101,
+      "content_bytes": 3180442,
+      "manifest_bytes": 14252,
+      "sha256": "9b1831a2f866c1444df3bb3209adc772d4fffa16a2e06f23873ffe5deeebd46e",
+      "mismatches": 0,
+      "conflicts": 0
+    },
+    "static_external_reference_manifest": {
+      "paths": 99,
+      "content_bytes": 3032891,
+      "manifest_bytes": 14016,
+      "sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202",
+      "mismatches": 0,
+      "conflicts": 0
+    },
+    "work_item_authority_manifest": {
+      "paths": 13,
+      "content_bytes": 218132,
+      "manifest_bytes": 1763,
+      "sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1",
+      "mismatches": 0,
+      "conflicts": 0
+    },
+    "mixed_raw_set": {
+      "paths": 109,
+      "used_as_entry_state_manifest": false
+    }
+  },
+  "selected_architecture": {
+    "name": "immutable_renderer_profile_test_v8_1_successor_with_atomic_canonical_state_STATE_rebind",
+    "renderer_version": "8.1.0",
+    "profile_version": "8.1.0",
+    "base_profile_v8_sha256": "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a",
+    "base_profile_v8_bytes": 56669,
+    "allowlist_partition": "384_plus_4_equals_388",
+    "transition_pin_count": 9,
+    "static_external_reference_count": 99,
+    "computed_profile_binding_count": 1,
+    "state_source_sentinel_count": 1,
+    "candidate_total": 101,
+    "work_item_authority_count": 13,
+    "reparse_hardening_preserved": true
+  },
+  "state_delta_contract": {
+    "selector_count": 4,
+    "generated_at": "2026-09-30T00:00:01Z",
+    "projection_version": "8.1.0",
+    "profile_path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "profile_sha256": "bound_after_final_profile_materialization",
+    "new_active_authority_reference": false,
+    "new_supporting_evidence_reference": false,
+    "status_change": false,
+    "gate_inventory_change": false,
+    "work_item_change": false,
+    "runtime_authority_change": false
+  },
+  "validation_contract": {
+    "environment_count": 2,
+    "tests_per_environment": 30,
+    "positive_control_cases": 6,
+    "reparse_negative_cases": 12,
+    "other_negative_cases": 12,
+    "failures_errors_skips_required": "0_0_0",
+    "cross_environment_candidate_identity_required": true,
+    "cross_environment_rejection_code_identity_required": true,
+    "network_pip_wheels_dependencies": "forbidden"
+  },
+  "preservation": {
+    "canonical_development_plan": "v0.14_unchanged",
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G-K0B03-K0B01-COMPLETE": "closed_unchanged",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open_unchanged",
+    "K0b-03": "blocked_unchanged",
+    "K0b-04_K0b-05_N1_execution": "unchanged",
+    "LSR-F02_LSR-F03_LSR-F04": "open_nonblocking_unchanged",
+    "historical_adoption_artifacts": "unchanged",
+    "runtime_authority": "none"
+  },
+  "post_commit_requirement": {
+    "finding_status": "remediation_materialized_pending_independent_re_review",
+    "fresh_context_read_only_non_author_re_review": "required",
+    "separate_owner_closure_after_approve": "required",
+    "commit_itself_closes_finding": false
+  }
+}

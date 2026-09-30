@@ -1,0 +1,271 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03-renderer-v8-1-DP14-AUD-F01-remediation-validation-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "recorded_on": "2026-09-30",
+  "evidence_kind": "renderer_successor_reference_manifest_remediation_validation",
+  "status": "pass",
+  "baseline": {
+    "HEAD": "2903876161d5d314ded49a1ab71f85de20625510",
+    "parent": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "tree": "7117898d2772e267f8380ed78bd7aa91af16285e"
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+      "sha256": "841fb2401a1bc663a862e542dfa7d1a74ed2a32350a600e5ad7c4b56fd4413bd",
+      "bytes": 33039
+    },
+    "owner_disposition": {
+      "path": "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+      "sha256": "a8bf26a1dc1de3ab9e2554011283913016abd9935c0445ad2a9cc246c8b4854c",
+      "bytes": 4762
+    },
+    "remediation_evidence": {
+      "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-v1.yaml",
+      "sha256": "f9a47a58d83794fcb5d316f0861ca080310d317dc48553a251f5c36819546e41",
+      "bytes": 5293
+    }
+  },
+  "validated_artifacts": {
+    "renderer": {
+      "path": "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+      "version": "8.1.0",
+      "sha256": "bc6ee394d265dbb488b1933f684c0519757fbcf2a7fa93aa9ce69fee5cd94bb0",
+      "bytes": 25704
+    },
+    "profile": {
+      "path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+      "version": "8.1.0",
+      "sha256": "74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5",
+      "bytes": 81499
+    },
+    "test": {
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v8_1.py",
+      "sha256": "b7974ffc1ede9a59faa0840fc764cc30e5b788e0e19d280a0655407e41b3998d",
+      "bytes": 25337
+    },
+    "state": {
+      "path": "new pipeline/state/state.yaml",
+      "sha256": "6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443",
+      "bytes": 90886
+    },
+    "projection": {
+      "path": "new pipeline/state/STATE.md",
+      "sha256": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+      "bytes": 91326
+    }
+  },
+  "lineage": {
+    "immutable_renderer_predecessor": {
+      "path": "new pipeline/state/renderer/k0b03_v8/renderer.py",
+      "version": "8.0.0",
+      "sha256": "ec5a1c9ad6d6bf3f867423a5eacc991b500993dc9306af638bf16a85eba81724",
+      "bytes": 20075
+    },
+    "immutable_profile_base": {
+      "path": "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+      "version": "8.0.0",
+      "sha256": "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a",
+      "bytes": 56669
+    },
+    "base_allowlist_paths": 384,
+    "allowed_path_additions": 4,
+    "effective_allowlist_paths": 388,
+    "transition_pins": 9,
+    "complete_typed_v8_baseline_embedded": true,
+    "original_14_selector_adoption_delta_transitively_pinned": true,
+    "reparse_hardening_preserved": true
+  },
+  "reference_manifests": {
+    "approved_baseline": {
+      "paths": 98,
+      "sha256": "6074d65aeb5411fd1729e9fb0ad0287347c2ea06a5b549d7a04cc399bb7bb14a"
+    },
+    "incorrect_arithmetic_projection": {
+      "paths": 100,
+      "accepted": false
+    },
+    "committed_candidate_before_remediation": {
+      "paths": 101,
+      "sha256": "9b1831a2f866c1444df3bb3209adc772d4fffa16a2e06f23873ffe5deeebd46e"
+    },
+    "static_external": {
+      "paths": 99,
+      "content_bytes": 3032891,
+      "manifest_bytes": 14016,
+      "sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202",
+      "mismatches": 0,
+      "conflicts": 0
+    },
+    "computed_profile_binding": {
+      "paths": 1,
+      "profile_sha256": "74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5"
+    },
+    "state_source_sentinel": {
+      "paths": 1,
+      "source_sha256": "6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443"
+    },
+    "candidate_total": 101,
+    "work_item_authorities": {
+      "paths": 13,
+      "content_bytes": 218132,
+      "manifest_bytes": 1763,
+      "sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1",
+      "validated_separately": true,
+      "included_in_candidate_total": false
+    },
+    "preserved_profile_v7": {
+      "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+      "present": true
+    }
+  },
+  "state_transition": {
+    "exact_typed_selector_count": 4,
+    "selectors": [
+      "generated_at",
+      "projection_version",
+      "projection_profile.path",
+      "projection_profile.sha256"
+    ],
+    "generated_at": "2026-09-30T00:00:01Z",
+    "projection_version": "8.1.0",
+    "profile_path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "profile_sha256": "74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5",
+    "outside_selector_mismatch_count": 0,
+    "active_authority_addition_count": 0,
+    "supporting_evidence_addition_count": 0,
+    "root_status_unchanged": true,
+    "work_items_unchanged": true,
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "gate_inventory_unchanged": true,
+    "G-K0B03-K0B01-COMPLETE": "closed_unchanged",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open_unchanged",
+    "K0b-03": "blocked_unchanged",
+    "runtime_authority": "none"
+  },
+  "locked_environments": [
+    {
+      "id": "A",
+      "root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-dp14-aud-f01-v8-1-A",
+      "creation": "Python_3_12_7_venv_without_pip",
+      "renderer_render": "pass",
+      "renderer_check": "pass",
+      "tests": 30,
+      "passed": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fixture_root_absent_after_test": true
+    },
+    {
+      "id": "B",
+      "root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-dp14-aud-f01-v8-1-B",
+      "creation": "Python_3_12_7_venv_without_pip",
+      "renderer_render": "pass",
+      "renderer_check": "pass",
+      "tests": 30,
+      "passed": 30,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "fixture_root_absent_after_test": true
+    }
+  ],
+  "test_matrix": {
+    "total_per_environment": 30,
+    "positive_control": 6,
+    "reparse_negative": 12,
+    "other_negative": 12,
+    "development_plan_path_and_hash": "two_explicit_subassertions_in_one_test_case",
+    "missing_reference": "rejected",
+    "unexpected_reference": "rejected",
+    "wrong_hash": "rejected",
+    "preserved_profile_v7_deletion": "rejected",
+    "conflicting_path_hash": "rejected",
+    "work_item_authority_mismatch": "rejected_separately",
+    "foreign_selector": "rejected",
+    "duplicate_gate": "rejected",
+    "allowlist_overlap": "rejected",
+    "duplicate_JSON_key": "rejected",
+    "CRLF": "rejected"
+  },
+  "reparse_rejection_codes": {
+    "R81-R01": "source:reparse",
+    "R81-R02": "source:reparse",
+    "R81-R03": "profile:reparse",
+    "R81-R04": "profile:reparse",
+    "R81-R05": "repository_root:reparse",
+    "R81-R06": "transition_pin:reparse",
+    "R81-R07": "source_reference:reparse",
+    "R81-R08": "projection:reparse",
+    "R81-R09": "projection:reparse",
+    "R81-R10": "output:reparse",
+    "R81-R11": "output:reparse",
+    "R81-R12": "synthetic:reparse"
+  },
+  "determinism": {
+    "candidate_state_source_sha256_A": "6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443",
+    "candidate_state_source_sha256_B": "6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443",
+    "candidate_projection_sha256_A": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+    "candidate_projection_sha256_B": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+    "candidate_projection_bytes_A": 91326,
+    "candidate_projection_bytes_B": 91326,
+    "candidate_pairs_byte_identical": true,
+    "repository_projection_equals_both_candidates": true,
+    "rejection_code_sets_identical": true
+  },
+  "technical_attempt_log": [
+    {
+      "attempt": 1,
+      "phase": "environment_A_initial_render",
+      "result": "technical_contract_failure_before_output_write",
+      "code": "profile:transition_pins",
+      "cause": "renderer_successor_uniqueness_count_guard_retained_predecessor_value_12_instead_of_approved_value_9",
+      "disposition": "corrected_guard_to_9_within_exact_renderer_successor_scope"
+    },
+    {
+      "attempt": 2,
+      "phase": "two_environment_render_and_host_hash_comparison",
+      "result": "renderer_pass_host_comparison_helper_unavailable",
+      "code": "PowerShell_SHA256_HashData_method_unavailable",
+      "disposition": "repeated_only_read_only_candidate_comparison_with_Get_FileHash_no_renderer_rerun_required"
+    },
+    {
+      "attempt": 3,
+      "phase": "two_environment_validation",
+      "result": "pass",
+      "scope_expansion": false
+    },
+    {
+      "attempt": 4,
+      "phase": "post_validation_repository_inventory",
+      "result": "unexpected_test_generated_bytecode_detected_and_removed_under_separate_owner_authority",
+      "path": "new pipeline/state/renderer/k0b03_v8_1/__pycache__/renderer.cpython-312.pyc",
+      "sha256": "6bcbdab935dc7d2889c79e1b7442d85ea68394d524e99327a1eb5d2195e7287d",
+      "bytes": 34099,
+      "directory_entry_count": 1,
+      "cleanup": "exact_file_unlinked_then_empty___pycache___directory_removed",
+      "renderer_or_test_rerun_after_cleanup": false,
+      "repository_residue_after_cleanup": false,
+      "scope_expansion": false
+    }
+  ],
+  "finding_disposition": {
+    "DP14-AUD-F01": "remediation_materialized_pending_independent_re_review",
+    "formally_closed": false,
+    "blocking_status_pending_re_review_and_owner_closure": true
+  },
+  "external_effects": {
+    "network": false,
+    "pip": false,
+    "wheels": false,
+    "dependencies": false,
+    "provider_or_model_execution": false,
+    "runtime_publication": false,
+    "remote_effects": false
+  },
+  "post_commit_requirement": "fresh_context_read_only_non_author_independent_re_review_then_separate_owner_closure_if_approve"
+}

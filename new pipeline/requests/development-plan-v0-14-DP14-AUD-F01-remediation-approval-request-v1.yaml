@@ -1,0 +1,741 @@
+{
+  "request_id": "pipeline-v2.development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "prepared_on": "2026-09-30",
+  "work_item_id": "K0b-03",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Request separate exact-hash owner authority for an append-only renderer/profile/test v8.1 successor and atomic canonical state rebind that remediates blocking independent-audit finding DP14-AUD-F01 without rewriting the historical development-plan v0.14 adoption transaction.",
+  "current_permission": {
+    "authorized_now": [
+      "repeat_read_only_baseline_check",
+      "repeat_19_path_direct_pin_manifest_check",
+      "verify_absence_of_this_request_target",
+      "create_only_this_request",
+      "static_document_format_and_duplicate_key_checks",
+      "compute_complete_request_SHA256_and_size"
+    ],
+    "writes_authorized_now": [
+      "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml"
+    ],
+    "all_other_writes_authorized_now": false,
+    "staging_or_commit_authorized_now": false,
+    "repository_code_or_tests_authorized_now": false,
+    "locked_environments_or_temp_targets_authorized_now": false,
+    "network_or_dependencies_authorized_now": false,
+    "remediation_execution_authorized_now": false,
+    "finding_closure_authorized_now": false
+  },
+  "authority_boundary": {
+    "request_creation_actor": "workspace_owner",
+    "source_ref": "current_conversation_and_attached_exact_scope_2026_09_30",
+    "conversational_identity": "not_cryptographically_authenticated",
+    "request_is_owner_confirmation": false,
+    "future_materialization_requires_separate_complete_request_hash_confirmation": true,
+    "historical_adoption_commit_rewrite_authorized": false,
+    "state_transition_effective_now": false,
+    "gate_transition_effective_now": false,
+    "K0b03_implementation_authorized": false,
+    "K0b04_K0b05_N1_progress_authorized": false,
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "repository_root": "C:/Projects/1.Mistake Not My Baton For A Wand",
+    "HEAD": "2903876161d5d314ded49a1ab71f85de20625510",
+    "parent": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+    "tree": "7117898d2772e267f8380ed78bd7aa91af16285e",
+    "required_index_and_worktree": "clean",
+    "observed_index_and_worktree": "clean",
+    "future_commit_parent": "2903876161d5d314ded49a1ab71f85de20625510"
+  },
+  "finding_basis": {
+    "review_profile": "fresh-context_read-only_non-author",
+    "review_result": "changes_required",
+    "finding": {
+      "id": "DP14-AUD-F01",
+      "severity": "high",
+      "blocking": true,
+      "classification": "canonical_reference_manifest_completeness_and_validation_gap",
+      "affected_claim": "renderer-v8 validation completeness and the claimed 100-path candidate entry-state reference projection",
+      "approved_baseline_entry_state_manifest_path_count": 98,
+      "incorrect_arithmetic_projection_path_count": 100,
+      "actual_committed_candidate_projection_path_count": 101,
+      "exact_preserved_additional_path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "preservation_reason": "closed_gates[G-K0B03-K0B01-COMPLETE].evidence.projection_profile",
+      "test_gap": "test v8 removed the preserved profile-v7 path arithmetically and did not compare the complete recursive candidate reference set",
+      "renderer_gap": "renderer v8 collected observed paths but did not enforce exact path-count and full path-to-hash equality after the second technical attempt",
+      "work_item_authority_contract": "separate_13_path_contract",
+      "mixed_raw_set_path_count": 109,
+      "mixed_raw_set_disposition": "not_entry_state_manifest_semantics",
+      "required_disposition": "append_only_renderer_profile_test_successor_with_atomic_state_rebind_then_fresh_context_independent_re_review_then_separate_owner_closure"
+    },
+    "historical_adoption_commit": "2903876161d5d314ded49a1ab71f85de20625510",
+    "historical_commit_and_paths": "immutable",
+    "finding_status_before_future_materialization": "open_blocking",
+    "finding_status_after_future_materialization": "remediation_materialized_pending_independent_re_review",
+    "finding_closed_by_future_materialization": false
+  },
+  "direct_read_manifest": {
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_path",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "path_count": 19,
+    "content_bytes": 771504,
+    "manifest_bytes": 2428,
+    "manifest_sha256": "34246e8f0500559b2836827f9a93e49a3743d1e10dfe16c79155d6918f6d3456",
+    "mismatch_count": 0,
+    "entries": [
+      {
+        "ordinal": 1,
+        "path": ".gitattributes",
+        "sha256": "58f4d563f9e60aeaa68887a8ee2bef99488fafe54b20dbd3fe83fe0b3e34741d",
+        "bytes": 477
+      },
+      {
+        "ordinal": 2,
+        "path": "new pipeline/PIPELINE_V2_ARCHITECTURE_PLAN.md",
+        "sha256": "f5877a07daabbb2ad5d846890587fcb033f58fc0dba49b36668ae476294447b9",
+        "bytes": 246369
+      },
+      {
+        "ordinal": 3,
+        "path": "new pipeline/PIPELINE_V2_DEVELOPMENT_PLAN-v0.14.md",
+        "sha256": "7756786f7bfa141114c33daed510167607f248de753591d10191e889d11015f5",
+        "bytes": 101354
+      },
+      {
+        "ordinal": 4,
+        "path": "new pipeline/architecture/k0b-03-planning-package-v1.1.md",
+        "sha256": "58f6f5151b4394c4a808416395a89565ee9424d36d5f1656f4866af96bae0423",
+        "bytes": 13146
+      },
+      {
+        "ordinal": 5,
+        "path": "new pipeline/decisions/development-plan-v0-14-adoption-owner-disposition-v1.yaml",
+        "sha256": "6e0c4c44bb0933462a918d0aa751634cacdeaff14c2ffb509bf9466eaa677dd1",
+        "bytes": 3674
+      },
+      {
+        "ordinal": 6,
+        "path": "new pipeline/decisions/k0b-03-renderer-v7-1-reparse-K0B03-AUD-F01-closure-owner-disposition-v1.yaml",
+        "sha256": "923dc2d11842ce8e3916bc94246c23b70e498dcd275409cf3d3f7ad482064d2d",
+        "bytes": 10550
+      },
+      {
+        "ordinal": 7,
+        "path": "new pipeline/evidence/development-plan-v0-14-adoption-document-check-v1.yaml",
+        "sha256": "7aee01a45b23abe0ddb2bed1ab2a2d8d40101028d25cae3eb757c3532c632219",
+        "bytes": 6626
+      },
+      {
+        "ordinal": 8,
+        "path": "new pipeline/evidence/development-plan-v0-14-adoption-v1.yaml",
+        "sha256": "379c5a05b88be94d0c7ec7639d4238286060d025b60e45e987112717770a5732",
+        "bytes": 5074
+      },
+      {
+        "ordinal": 9,
+        "path": "new pipeline/evidence/k0b-03-k0b01-predecessor-gate-closure-v1.yaml",
+        "sha256": "6ee2c57ec4d2be5cfddf89ff7bca1f027facf550cf21f1d3d2189322333d1815",
+        "bytes": 4721
+      },
+      {
+        "ordinal": 10,
+        "path": "new pipeline/evidence/k0b-03-renderer-v8-validation-v1.yaml",
+        "sha256": "41635551c836b3fa3973f8a25467d9ace2ca92e195cb858699f80aa2ba882d59",
+        "bytes": 7309
+      },
+      {
+        "ordinal": 11,
+        "path": "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+        "sha256": "2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+        "bytes": 56165
+      },
+      {
+        "ordinal": 12,
+        "path": "new pipeline/state/STATE.md",
+        "sha256": "9b6c8251ca85cec8b0e92ce69daacc71724b4f25bfa06158e4f024c9b9782573",
+        "bytes": 91318
+      },
+      {
+        "ordinal": 13,
+        "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+        "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+        "bytes": 8008
+      },
+      {
+        "ordinal": 14,
+        "path": "new pipeline/state/renderer/k0b03_v7_1/renderer.py",
+        "sha256": "2dea2bd20dfe37bd07c076ce5678b8afc40944d461a66852d8f3e3e7cb2c6c61",
+        "bytes": 21856
+      },
+      {
+        "ordinal": 15,
+        "path": "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+        "sha256": "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a",
+        "bytes": 56669
+      },
+      {
+        "ordinal": 16,
+        "path": "new pipeline/state/renderer/k0b03_v8/renderer.py",
+        "sha256": "ec5a1c9ad6d6bf3f867423a5eacc991b500993dc9306af638bf16a85eba81724",
+        "bytes": 20075
+      },
+      {
+        "ordinal": 17,
+        "path": "new pipeline/state/state.yaml",
+        "sha256": "6b8520e2c57b56acd4c3315fbb4d78c93d4a45533804c61eba3cf7c9bd4aa2b2",
+        "bytes": 90882
+      },
+      {
+        "ordinal": 18,
+        "path": "new pipeline/tests/state/test_k0b03_renderer_v8.py",
+        "sha256": "9ab55fb77b624a6232c4b2e35f2aecc8bee9fab5d63dae15e400b58962d60b30",
+        "bytes": 21543
+      },
+      {
+        "ordinal": 19,
+        "path": "new pipeline/toolchain/k0b01/toolchain-lock-v1.json",
+        "sha256": "3ba58d66cb338256b92387c5b6f621f9b35adad3607ced3d7e2942c7359eafc0",
+        "bytes": 5688
+      }
+    ]
+  },
+  "reproduced_manifest_contracts": {
+    "manifest_profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_path",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "approved_baseline_entry_state_manifest": {
+      "source_commit": "7d5590f74b42f1fabaedfde99be2ca079301e2ef",
+      "path_count": 98,
+      "content_bytes": 3110260,
+      "manifest_bytes": 13827,
+      "manifest_sha256": "6074d65aeb5411fd1729e9fb0ad0287347c2ea06a5b549d7a04cc399bb7bb14a"
+    },
+    "incorrect_arithmetic_projection": {
+      "path_count": 100,
+      "disposition": "rejected_as_incomplete",
+      "omitted_path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml"
+    },
+    "committed_candidate_manifest_before_remediation": {
+      "source_commit": "2903876161d5d314ded49a1ab71f85de20625510",
+      "semantics": "state_source_plus_unique_recursive_objects_containing_both_path_and_sha256",
+      "path_count": 101,
+      "content_bytes": 3180442,
+      "manifest_bytes": 14252,
+      "manifest_sha256": "9b1831a2f866c1444df3bb3209adc772d4fffa16a2e06f23873ffe5deeebd46e",
+      "mismatch_count": 0,
+      "conflict_count": 0
+    },
+    "future_static_external_reference_manifest": {
+      "derivation_source": "committed state at 2903876161d5d314ded49a1ab71f85de20625510",
+      "semantics": "unique_recursive_objects_containing_both_path_and_sha256_excluding_state_source_and_only_the_computed_top_level_projection_profile_self_binding",
+      "preserved_profile_v7_reference_required": true,
+      "preserved_profile_v7_path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "path_count": 99,
+      "content_bytes": 3032891,
+      "manifest_bytes": 14016,
+      "manifest_sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202",
+      "mismatch_count": 0,
+      "conflict_count": 0,
+      "row_source": "the complete ordinal 99-row path-sha256-byte projection reproducible from the pinned committed state; the future profile must materialize every row rather than only this root"
+    },
+    "separate_work_item_authority_manifest": {
+      "semantics": "unique work_items[].authority_path with matching authority_sha256, validated separately and excluded from entry-state manifest counting",
+      "path_count": 13,
+      "content_bytes": 218132,
+      "manifest_bytes": 1763,
+      "manifest_sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1",
+      "mismatch_count": 0,
+      "conflict_count": 0
+    },
+    "mixed_raw_set": {
+      "path_count": 109,
+      "semantics": "candidate_entry_state_paths_union_unique_work_item_authority_paths",
+      "disposition": "diagnostic_only_not_entry_state_manifest_semantics"
+    },
+    "required_reproduction_counts": [
+      98,
+      100,
+      101,
+      109
+    ]
+  },
+  "architecture_selection": {
+    "selected": "immutable_renderer_profile_test_v8_1_successor_with_atomic_canonical_state_STATE_rebind",
+    "renderer_version": "8.1.0",
+    "projection_version": "8.1.0",
+    "single_atomic_commit_required": true,
+    "alternatives": [
+      {
+        "name": "evidence_only_correction",
+        "disposition": "rejected",
+        "reason": "would_leave_canonical_profile_v8_with_the_false_100_path_contract"
+      },
+      {
+        "name": "mandatory_versioned_preflight_validator_before_renderer_v8",
+        "disposition": "rejected",
+        "reason": "would_duplicate_renderer_ownership_and_create_an_additional_mandatory_chaining_boundary"
+      },
+      {
+        "name": "immutable_renderer_profile_test_v8_1_successor_with_atomic_canonical_state_STATE_rebind",
+        "disposition": "selected",
+        "reason": "minimal_append_only_change_that_corrects_canonical_validation_and_keeps_projection_state_and_profile_atomic"
+      }
+    ]
+  },
+  "future_exact_write_set": {
+    "path_count": 10,
+    "addition_count": 8,
+    "modification_count": 2,
+    "deletion_count": 0,
+    "entries": [
+      {
+        "ordinal": 1,
+        "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "ordinal": 2,
+        "path": "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "ordinal": 3,
+        "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "ordinal": 4,
+        "path": "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+        "operation": "add"
+      },
+      {
+        "ordinal": 5,
+        "path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+        "operation": "add"
+      },
+      {
+        "ordinal": 6,
+        "path": "new pipeline/tests/state/test_k0b03_renderer_v8_1.py",
+        "operation": "add"
+      },
+      {
+        "ordinal": 7,
+        "path": "new pipeline/evidence/k0b-03-renderer-v8-1-DP14-AUD-F01-remediation-validation-v1.yaml",
+        "operation": "add"
+      },
+      {
+        "ordinal": 8,
+        "path": "new pipeline/state/state.yaml",
+        "operation": "modify"
+      },
+      {
+        "ordinal": 9,
+        "path": "new pipeline/state/STATE.md",
+        "operation": "modify"
+      },
+      {
+        "ordinal": 10,
+        "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-document-check-v1.yaml",
+        "operation": "add"
+      }
+    ],
+    "all_other_repository_paths": "byte_immutable"
+  },
+  "future_owner_disposition_contract": {
+    "finding_id": "DP14-AUD-F01",
+    "accepted_classification": "blocking_high_reference_manifest_and_validation_gap",
+    "selected_remediation": "renderer_profile_test_v8_1_successor_and_atomic_state_rebind",
+    "status_after_materialization": "remediation_materialized_pending_independent_re_review",
+    "formally_closed": false,
+    "historical_evidence_rewritten": false,
+    "separate_fresh_context_independent_re_review_required": true,
+    "separate_owner_closure_after_approve_required": true,
+    "runtime_authority": "none"
+  },
+  "future_renderer_profile_contract": {
+    "renderer_path": "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+    "renderer_version": "8.1.0",
+    "profile_path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "projection_version": "8.1.0",
+    "immutable_renderer_predecessor": {
+      "path": "new pipeline/state/renderer/k0b03_v8/renderer.py",
+      "sha256": "ec5a1c9ad6d6bf3f867423a5eacc991b500993dc9306af638bf16a85eba81724",
+      "bytes": 20075,
+      "version": "8.0.0"
+    },
+    "immutable_profile_base": {
+      "path": "new pipeline/state/renderer/k0b03_v8/projection-profile-v8.yaml",
+      "sha256": "fdc11f15dc7b9f98a240026f47de5a639c9ba702ee90931051e9e7cc9ada440a",
+      "bytes": 56669,
+      "version": "8.0.0",
+      "effective_allowlist_path_count": 384
+    },
+    "reparse_hardening_lineage": {
+      "source": "renderer_v7_1_and_v8",
+      "must_be_preserved_completely": true,
+      "covered_boundaries": [
+        "repository_root_before_resolve",
+        "source_file_and_existing_parents",
+        "profile_file_and_existing_parents",
+        "each_repository_reference_component",
+        "check_projection_file_and_existing_parents",
+        "render_output_and_each_existing_parent_before_collision_mkdir_or_write",
+        "symlink_junction_and_generic_FILE_ATTRIBUTE_REPARSE_POINT"
+      ]
+    },
+    "allowlist_partition": {
+      "base_count": 384,
+      "addition_count": 4,
+      "effective_count": 388,
+      "exact_additions": [
+        "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+        "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+        "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-v1.yaml",
+        "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml"
+      ],
+      "overlap_count": 0
+    },
+    "transition_pins": {
+      "ordering": "ordinal_path",
+      "count": 9,
+      "entries": [
+        {
+          "ordinal": 1,
+          "path": "new pipeline/requests/development-plan-v0-14-adoption-approval-request-v1.yaml",
+          "sha256": "2af7d38588b4005a7d4d3eb3f7a7b3d6912ab613524c519843c278e20b46baaa",
+          "bytes": 56165
+        },
+        {
+          "ordinal": 2,
+          "path": "new pipeline/decisions/development-plan-v0-14-adoption-owner-disposition-v1.yaml",
+          "sha256": "6e0c4c44bb0933462a918d0aa751634cacdeaff14c2ffb509bf9466eaa677dd1",
+          "bytes": 3674
+        },
+        {
+          "ordinal": 3,
+          "path": "new pipeline/evidence/development-plan-v0-14-adoption-v1.yaml",
+          "sha256": "379c5a05b88be94d0c7ec7639d4238286060d025b60e45e987112717770a5732",
+          "bytes": 5074
+        },
+        {
+          "ordinal": 4,
+          "path": "new pipeline/evidence/k0b-03-renderer-v8-validation-v1.yaml",
+          "sha256": "41635551c836b3fa3973f8a25467d9ace2ca92e195cb858699f80aa2ba882d59",
+          "bytes": 7309
+        },
+        {
+          "ordinal": 5,
+          "path": "new pipeline/evidence/development-plan-v0-14-adoption-document-check-v1.yaml",
+          "sha256": "7aee01a45b23abe0ddb2bed1ab2a2d8d40101028d25cae3eb757c3532c632219",
+          "bytes": 6626
+        },
+        {
+          "ordinal": 6,
+          "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+          "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+          "bytes": 8008
+        },
+        {
+          "ordinal": 7,
+          "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+          "sha256": "materialized_and_separately_confirmed_before_future_execution",
+          "bytes": "materialized_and_separately_confirmed_before_future_execution"
+        },
+        {
+          "ordinal": 8,
+          "path": "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+          "sha256": "materialized_and_bound_before_profile_creation",
+          "bytes": "materialized_and_bound_before_profile_creation"
+        },
+        {
+          "ordinal": 9,
+          "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-v1.yaml",
+          "sha256": "materialized_and_bound_before_profile_creation",
+          "bytes": "materialized_and_bound_before_profile_creation"
+        }
+      ]
+    },
+    "typed_baseline_and_delta": {
+      "complete_typed_v8_baseline_required": true,
+      "transitive_v8_proof_of_original_14_selector_adoption_delta_required": true,
+      "foreign_typed_selector_rejected": true
+    },
+    "entry_state_reference_contract": {
+      "static_external_reference_count": 99,
+      "computed_top_level_profile_self_binding_count": 1,
+      "state_source_sentinel_count": 1,
+      "total_count": 101,
+      "complete_path_to_sha256_equality_required": true,
+      "missing_path_rejected": true,
+      "unexpected_path_rejected": true,
+      "wrong_hash_rejected": true,
+      "conflicting_path_hash_binding_rejected": true,
+      "preserved_profile_v7_reference_required": true,
+      "top_level_profile_self_binding_rule": "computed_from_the_materialized_profile_v8_1_bytes_and_validated_separately_from_the_99_static_rows"
+    },
+    "work_item_authority_contract": {
+      "separate_from_entry_state_manifest": true,
+      "unique_path_count": 13,
+      "each_authority_path_and_authority_sha256_validated": true,
+      "authority_paths_added_to_entry_state_manifest_count": false,
+      "mismatch_rejected": true
+    }
+  },
+  "future_state_transition": {
+    "transition_kind": "correct_reference_manifest_contract_and_rebind_canonical_renderer_profile_without_status_gate_or_authority_change",
+    "exact_typed_selector_count": 4,
+    "selectors": [
+      "generated_at",
+      "projection_version",
+      "projection_profile.path",
+      "projection_profile.sha256"
+    ],
+    "generated_at": "2026-09-30T00:00:01Z",
+    "generated_at_rule": "deterministic_one_second_successor_to_the_committed_v8_transition_timestamp",
+    "projection_version": "8.1.0",
+    "projection_profile_path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "projection_profile_sha256": "computed_from_final_profile_v8_1_bytes_before_candidate_state_materialization",
+    "new_active_authority_reference_added": false,
+    "new_supporting_evidence_reference_added": false,
+    "remediation_authority_binding": "profile_v8_1_transition_pins_plus_atomic_commit",
+    "expected_candidate_reference_path_count_including_state_source": 101,
+    "canonical_development_plan": "v0.14_unchanged",
+    "root_status_change": false,
+    "work_item_status_change": false,
+    "open_gate_change": false,
+    "closed_gate_change": false,
+    "K0b03_authority_change": false,
+    "N1_authority_change": false,
+    "expected_open_gate_count": 6,
+    "expected_closed_gate_count": 11,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "K0b04_K0b05_N1_execution": "unchanged_not_advanced",
+    "LSR_F02_through_LSR_F04": "open_non_blocking_unchanged",
+    "runtime_authority": "none"
+  },
+  "future_test_contract": {
+    "test_path": "new pipeline/tests/state/test_k0b03_renderer_v8_1.py",
+    "framework": "Python_stdlib_unittest_only",
+    "test_count_per_environment": 30,
+    "positive_control_count": 6,
+    "reparse_negative_count": 12,
+    "other_negative_count": 12,
+    "positive_controls": [
+      "canonical_render_reproduces_candidate_STATE_bytes",
+      "canonical_check_is_read_only",
+      "regular_output_has_exact_projection_bytes",
+      "regular_repository_file_passes",
+      "exact_99_plus_1_plus_1_equals_101_entry_state_manifest_equality",
+      "separate_13_path_work_item_authority_validation"
+    ],
+    "reparse_cases": [
+      "source_file_symlink_rejected",
+      "source_parent_symlink_rejected",
+      "profile_file_symlink_rejected",
+      "profile_parent_symlink_rejected",
+      "repository_root_symlink_rejected_before_resolve",
+      "transition_pin_intermediate_symlink_rejected",
+      "state_reference_intermediate_symlink_rejected",
+      "check_projection_file_symlink_rejected",
+      "check_projection_parent_symlink_rejected",
+      "render_existing_output_symlink_rejected",
+      "render_output_parent_symlink_rejected",
+      "synthetic_non_symlink_FILE_ATTRIBUTE_REPARSE_POINT_rejected"
+    ],
+    "other_negative_cases": [
+      "missing_expected_reference_rejected",
+      "unexpected_extra_reference_rejected",
+      "wrong_expected_hash_rejected",
+      "deletion_of_preserved_profile_v7_gate_reference_rejected",
+      "conflicting_duplicate_path_hash_rejected",
+      "work_item_authority_mismatch_rejected_without_mixing_manifest_semantics",
+      "foreign_typed_selector_rejected",
+      "development_plan_path_and_hash_mutations_rejected_as_two_explicit_subassertions_in_one_test_case",
+      "duplicate_gate_rejected",
+      "allowlist_overlap_rejected",
+      "duplicate_JSON_key_rejected",
+      "CRLF_rejected"
+    ],
+    "combined_assertion_disclosure": {
+      "combined_test_case": "development_plan_path_and_hash_mutations_rejected_as_two_explicit_subassertions_in_one_test_case",
+      "reason": "preserve_exact_30_test_total_without_omitting_either_required_assertion",
+      "hidden_case_count": 0
+    },
+    "required_result_per_environment": {
+      "passed": 30,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  },
+  "locked_execution_contract": {
+    "host_interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "bytes": 104208,
+      "version": "3.12.7"
+    },
+    "environment_creation": "venv --without-pip",
+    "environment_count": 2,
+    "environment_roots": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-dp14-aud-f01-v8-1-A",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-dp14-aud-f01-v8-1-B"
+    ],
+    "allowed_repository_executables": [
+      "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+      "new pipeline/tests/state/test_k0b03_renderer_v8_1.py"
+    ],
+    "network": [],
+    "pip": [],
+    "wheels": [],
+    "dependencies": [],
+    "additional_environments": [],
+    "additional_temp_roots": [],
+    "required_cross_environment_identity": [
+      "rejection_codes",
+      "candidate_state_bytes",
+      "candidate_STATE_bytes",
+      "entry_state_reference_count_101",
+      "static_external_reference_count_99",
+      "preserved_profile_v7_reference",
+      "work_item_authority_count_13",
+      "gate_inventory_status_and_runtime_authority"
+    ]
+  },
+  "future_materialization_order": [
+    "verify_confirmed_request_hash_size_status_baseline_and_clean_entry_state",
+    "verify_all_19_direct_read_pins_and_reproduce_98_100_101_109_contracts",
+    "verify_all_seven_remaining_add_targets_absent_and_state_STATE_match_entry_pins",
+    "materialize_owner_disposition_and_remediation_evidence",
+    "compute_and_bind_request_owner_disposition_and_remediation_evidence_hashes",
+    "materialize_renderer_profile_and_test_v8_1_with_exact_contracts",
+    "compute_final_profile_v8_1_hash",
+    "materialize_candidate_state_by_exact_four_selector_delta_only",
+    "create_exact_two_without_pip_environments",
+    "run_only_renderer_v8_1_and_test_v8_1_in_both_environments",
+    "require_30_of_30_zero_failure_error_skip_and_cross_environment_identity",
+    "materialize_byte_identical_canonical_STATE_from_validated_candidate",
+    "materialize_validation_and_document_check_evidence",
+    "repeat_static_format_hash_inventory_and_scope_checks",
+    "remove_only_exact_environment_roots_without_following_reparse_points",
+    "confirm_both_environment_roots_absent_before_staging",
+    "stage_exact_ten_path_inventory",
+    "commit_once_with_exact_parent_subject_and_contiguous_trailers",
+    "verify_post_commit_HEAD_parent_tree_inventory_and_clean_status"
+  ],
+  "future_validation_checks": [
+    "baseline_HEAD_parent_tree_and_clean_status_match",
+    "19_path_read_manifest_matches_exactly",
+    "historical_10_path_adoption_commit_is_immutable",
+    "98_path_baseline_manifest_reproduces",
+    "incorrect_100_path_arithmetic_projection_reproduces_and_is_rejected",
+    "101_path_committed_candidate_manifest_reproduces_with_zero_mismatch_and_conflict",
+    "99_path_static_external_manifest_reproduces_with_exact_root",
+    "13_path_work_item_authority_manifest_reproduces_with_exact_root",
+    "109_path_mixed_raw_set_reproduces_but_is_not_used_as_entry_state_semantics",
+    "preserved_profile_v7_reference_remains_present_and_hash_exact",
+    "profile_v8_1_base_hash_allowlist_partition_and_nine_transition_pins_are_exact",
+    "renderer_v8_1_preserves_all_reparse_hardening",
+    "complete_typed_v8_baseline_and_transitive_14_selector_adoption_proof_hold",
+    "candidate_state_diff_is_exactly_four_typed_selectors",
+    "candidate_reference_contract_is_exactly_99_static_plus_one_profile_plus_one_state_source",
+    "missing_unexpected_wrong_and_conflicting_bindings_are_rejected",
+    "work_item_authorities_are_validated_separately_and_do_not_change_reference_count",
+    "test_matrix_is_exactly_30_cases_with_disclosed_combined_development_plan_case",
+    "both_environments_report_30_passed_zero_failures_errors_skips",
+    "both_environments_have_identical_rejection_codes_and_candidate_bytes",
+    "state_and_STATE_are_byte_consistent_with_profile_v8_1",
+    "development_plan_status_work_items_gates_and_runtime_authority_are_unchanged",
+    "LSR_F02_through_LSR_F04_are_unchanged",
+    "all_new_documents_are_UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_free",
+    "exact_ten_path_inventory_is_eight_additions_two_modifications_zero_deletions",
+    "both_exact_environment_roots_are_absent_before_staging"
+  ],
+  "cleanup_protocol": {
+    "scope": "only_the_two_exact_environment_roots",
+    "pre_delete_checks": [
+      "resolve_each_literal_absolute_target",
+      "confirm_each_target_equals_its_approved_absolute_environment_root",
+      "inspect_with_lstat_without_following_reparse_points",
+      "refuse_cleanup_if_target_identity_or_reparse_safety_is_uncertain"
+    ],
+    "symlink_or_reparse_fixture_cleanup": "unlink_fixture_itself_without_following_target_before_recursive_environment_cleanup",
+    "postcondition": "both_exact_environment_roots_absent_before_staging",
+    "other_temp_or_filesystem_targets": "forbidden"
+  },
+  "stop_conditions": [
+    "baseline_HEAD_parent_tree_or_clean_status_mismatch",
+    "any_19_path_read_manifest_mismatch",
+    "inability_to_reproduce_98_100_101_109",
+    "static_external_manifest_not_exactly_99_paths_or_root_mismatch",
+    "work_item_authority_manifest_not_exactly_13_paths_or_root_mismatch",
+    "preserved_profile_v7_reference_missing_or_changed",
+    "any_future_add_target_exists_before_materialization",
+    "state_or_STATE_entry_pin_mismatch",
+    "future_candidate_total_not_exactly_101",
+    "missing_unexpected_wrong_or_conflicting_binding_not_rejected",
+    "work_item_authorities_mixed_into_entry_state_manifest_semantics",
+    "state_change_outside_exact_four_typed_selectors",
+    "development_plan_authority_status_work_items_gates_or_runtime_authority_change",
+    "reparse_hardening_regression",
+    "test_matrix_not_exactly_30_or_any_required_assertion_hidden",
+    "any_environment_failure_error_skip_or_cross_environment_difference",
+    "environment_target_exists_before_creation_or_is_not_safe_for_exact_cleanup",
+    "cleanup_residue_before_staging",
+    "network_dependency_pip_wheel_additional_environment_or_temp_target_use",
+    "write_set_inventory_or_scope_expansion"
+  ],
+  "future_commit_contract": {
+    "commit_count": 1,
+    "kind": "atomic_local_documentation_state_governance_and_renderer_validation_commit",
+    "parent": "2903876161d5d314ded49a1ab71f85de20625510",
+    "exact_path_count": 10,
+    "subject": "fix(pipeline-v2): correct v0.14 adoption reference manifest",
+    "trailers_contiguous": true,
+    "trailers": [
+      "Approval-Request-SHA256: <complete_confirmed_request_sha256>",
+      "Remediates-Finding: DP14-AUD-F01",
+      "Renderer-Successor: 8.1.0",
+      "Runtime-Authority: none"
+    ],
+    "finding_status_after_commit": "remediation_materialized_pending_independent_re_review",
+    "finding_closed_by_commit": false
+  },
+  "post_commit_order": [
+    "fresh_context_read_only_non_author_independent_re_review",
+    "separate_owner_closure_disposition_only_if_re_review_result_is_approve",
+    "only_after_owner_closure_may_K0b03_implementation_scope_be_refrozen"
+  ],
+  "explicit_non_authorizations": [
+    "rewrite_historical_adoption_commit_or_any_historical_evidence",
+    "create_any_path_outside_future_exact_write_set",
+    "modify_any_existing_path_except_state_and_STATE_in_the_future_confirmed_transaction",
+    "execute_any_repository_code_or_test_except_future_renderer_v8_1_and_test_v8_1_after_separate_confirmation",
+    "use_network_pip_wheels_or_dependencies",
+    "create_additional_environments_or_temp_targets",
+    "close_DP14_AUD_F01_by_the_remediation_commit",
+    "change_development_plan_authority_status_work_items_or_gates",
+    "implement_K0b03_or_close_G_K0B03_UNTRUSTED_SHAPES",
+    "advance_K0b04_K0b05_or_N1",
+    "execute_Alpha0_F10_F15_model_or_provider_operations",
+    "publish_runtime_outputs_or_create_remote_effects",
+    "grant_runtime_authority"
+  ],
+  "runtime_authority": "none"
+}

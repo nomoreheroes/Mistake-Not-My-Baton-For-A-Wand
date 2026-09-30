@@ -1,0 +1,110 @@
+{
+  "decision_id": "pipeline-v2.development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "decided_on": "2026-09-30",
+  "decision_kind": "owner_append_only_audit_finding_remediation_disposition",
+  "status": "approved_for_exact_materialization",
+  "authority": {
+    "owner_confirmation": "conversation_owner_confirmation_2026_09_30",
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+      "sha256": "841fb2401a1bc663a862e542dfa7d1a74ed2a32350a600e5ad7c4b56fd4413bd",
+      "bytes": 33039
+    },
+    "baseline_HEAD": "2903876161d5d314ded49a1ab71f85de20625510",
+    "future_commit_parent": "2903876161d5d314ded49a1ab71f85de20625510"
+  },
+  "finding": {
+    "id": "DP14-AUD-F01",
+    "source_review_result": "changes_required",
+    "severity": "high",
+    "blocking_before_remediation": true,
+    "classification": "canonical_reference_manifest_completeness_and_validation_gap",
+    "approved_baseline_entry_state_manifest_paths": 98,
+    "incorrect_arithmetic_projection_paths": 100,
+    "actual_committed_candidate_projection_paths": 101,
+    "exact_preserved_additional_path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+    "preservation_location": "closed_gates[G-K0B03-K0B01-COMPLETE].evidence.projection_profile",
+    "work_item_authority_manifest_paths": 13,
+    "mixed_raw_set_paths": 109,
+    "mixed_raw_set_is_entry_state_manifest": false
+  },
+  "disposition": {
+    "architecture": "immutable_renderer_profile_test_v8_1_successor_with_atomic_canonical_state_STATE_rebind",
+    "renderer_version": "8.1.0",
+    "projection_version": "8.1.0",
+    "historical_adoption_commit": "immutable",
+    "historical_evidence": "immutable",
+    "evidence_only_correction": "rejected_as_insufficient",
+    "separate_preflight_validator": "rejected_as_duplicate_renderer_ownership_and_chaining_boundary",
+    "finding_status_after_materialization": "remediation_materialized_pending_independent_re_review",
+    "finding_formally_closed": false,
+    "fresh_context_independent_re_review_required": true,
+    "separate_owner_closure_after_approve_required": true,
+    "runtime_authority": "none"
+  },
+  "manifest_contracts": {
+    "approved_baseline_entry_state": {
+      "paths": 98,
+      "manifest_sha256": "6074d65aeb5411fd1729e9fb0ad0287347c2ea06a5b549d7a04cc399bb7bb14a"
+    },
+    "committed_candidate_before_remediation": {
+      "paths": 101,
+      "manifest_sha256": "9b1831a2f866c1444df3bb3209adc772d4fffa16a2e06f23873ffe5deeebd46e"
+    },
+    "static_external_references": {
+      "paths": 99,
+      "manifest_sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202"
+    },
+    "work_item_authorities": {
+      "paths": 13,
+      "manifest_sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1"
+    },
+    "future_candidate_total": 101
+  },
+  "state_transition": {
+    "exact_typed_selector_count": 4,
+    "selectors": [
+      "generated_at",
+      "projection_version",
+      "projection_profile.path",
+      "projection_profile.sha256"
+    ],
+    "generated_at": "2026-09-30T00:00:01Z",
+    "projection_version": "8.1.0",
+    "profile_path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "new_state_authority_or_supporting_reference": false
+  },
+  "preserved_state": {
+    "canonical_development_plan": "v0.14",
+    "root_status": "K0b_02_implemented_validated_externally_audited_runtime_not_authorized",
+    "work_item_statuses_and_authorities": "unchanged",
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G-K0B03-K0B01-COMPLETE": "closed",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open",
+    "K0b-03": "blocked",
+    "K0b-04_K0b-05_N1_execution": "unchanged",
+    "LSR-F02_LSR-F03_LSR-F04": "open_nonblocking_unchanged",
+    "runtime_authority": "none"
+  },
+  "single_source_boundaries": {
+    "canonical_state_source": "new pipeline/state/state.yaml",
+    "generated_projection": "new pipeline/state/STATE.md",
+    "projection_profile": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+    "renderer": "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+    "entry_state_reference_manifest": "profile_v8_1_static_99_plus_computed_profile_binding_plus_state_source_sentinel",
+    "work_item_authority_manifest": "separate_13_path_contract"
+  },
+  "non_authorizations": [
+    "DP14_AUD_F01_closure",
+    "K0b03_implementation",
+    "G_K0B03_UNTRUSTED_SHAPES_closure",
+    "any_gate_transition",
+    "K0b04_K0b05_or_N1_progress",
+    "Alpha0_F10_F15_model_or_provider_execution",
+    "network_dependency_or_external_effect",
+    "runtime_publication_or_runtime_authority"
+  ]
+}
