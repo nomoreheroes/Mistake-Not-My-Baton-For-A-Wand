@@ -1,0 +1,111 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.implementation-independent-audit-document-check-v1",
+  "schema_version": 1,
+  "checked_on": "2026-10-01",
+  "result": "pass",
+  "baseline": {
+    "HEAD": "d000006956903c74799346969a823ed82e60ae32",
+    "parent": "8015b8b1213b8652b6584ad23f406077899802ad",
+    "tree": "b9a48ac1c987bb7fa113bd501aab4938d0b5374e",
+    "entry_index_and_tracked_worktree": "clean",
+    "entry_untracked_inventory": [
+      "new pipeline/requests/k0b-03-implementation-independent-audit-record-approval-request-v1.yaml"
+    ]
+  },
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-03-implementation-independent-audit-record-approval-request-v1.yaml",
+    "sha256": "c4a6471e514546275964de444d8c30821cd947af962e160a5fa4c7bd65508d60",
+    "bytes": 24945,
+    "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+    "owner_confirmation": "separate_complete_SHA256_size_independence_result_findings_and_exact_three_path_scope_confirmation_received"
+  },
+  "review_report": {
+    "path": "new pipeline/reviews/k0b-03-implementation-independent-audit-v1.yaml",
+    "sha256": "e475156afa6ffcebc4d93b41bbba99aaa7c8531aa423df1c45ddec1d11c5f87d",
+    "bytes": 18970,
+    "reviewer_profile": "fresh-context-read-only-non-author",
+    "result": "changes_required",
+    "finding_count": 8,
+    "blocking_finding_count": 8,
+    "required_check_count": 40,
+    "recorded_check_count": 40
+  },
+  "manifests": {
+    "reviewed_commit": {"path_count":47,"content_bytes":169085,"manifest_bytes":5912,"sha256":"96d79bcfd296ffc6af42c8793585d40f2804250568882102cd1a804f41074456"},
+    "predecessor_read_set": {"path_count":63,"content_bytes":1264986,"manifest_bytes":8697,"sha256":"9905b3a42e8c66219de7b76a2e00f8907abc6cbbc9acba12116287c166511ee3"},
+    "audit_read_union": {"path_count":110,"content_bytes":1434071,"manifest_bytes":14609,"sha256":"9aae88d2bf6f11fb57975596b522c7a2548322ecb443d10dc53d6ab364837900"}
+  },
+  "finding_inventory": [
+    {"id":"K0B03-IA-R2-F01","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F02","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F03","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F04","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F05","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F06","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F07","severity":"high","blocking":true,"required_fields_complete":true},
+    {"id":"K0B03-IA-R2-F08","severity":"high","blocking":true,"required_fields_complete":true}
+  ],
+  "checks": [
+    {"id":"K0B03-IA-DOC-01","claim":"baseline_HEAD_parent_tree_and_entry_status","result":"pass"},
+    {"id":"K0B03-IA-DOC-02","claim":"request_SHA256_bytes_status_and_owner_confirmation","result":"pass"},
+    {"id":"K0B03-IA-DOC-03","claim":"reviewer_fresh_context_read_only_non_author_independence","result":"pass"},
+    {"id":"K0B03-IA-DOC-04","claim":"exact_47_path_committed_manifest","result":"pass"},
+    {"id":"K0B03-IA-DOC-05","claim":"exact_63_path_predecessor_manifest","result":"pass"},
+    {"id":"K0B03-IA-DOC-06","claim":"exact_110_path_audit_union_manifest","result":"pass"},
+    {"id":"K0B03-IA-DOC-07","claim":"review_result_changes_required","result":"pass"},
+    {"id":"K0B03-IA-DOC-08","claim":"complete_40_check_accounting","result":"pass"},
+    {"id":"K0B03-IA-DOC-09","claim":"exact_eight_finding_IDs","result":"pass"},
+    {"id":"K0B03-IA-DOC-10","claim":"all_findings_severity_high_and_blocking_true","result":"pass"},
+    {"id":"K0B03-IA-DOC-11","claim":"finding_count_8","result":"pass"},
+    {"id":"K0B03-IA-DOC-12","claim":"blocking_finding_count_8","result":"pass"},
+    {"id":"K0B03-IA-DOC-13","claim":"every_finding_has_path_section_evidence_affected_claim_and_required_disposition","result":"pass"},
+    {"id":"K0B03-IA-DOC-14","claim":"independently_reproduced_static_and_evidence_bound_dynamic_claims_remain_distinct","result":"pass"},
+    {"id":"K0B03-IA-DOC-15","claim":"no_finding_fixed_hidden_downgraded_or_converted_to_approval","result":"pass"},
+    {"id":"K0B03-IA-DOC-16","claim":"request_review_cross_document_hashes","result":"pass"},
+    {"id":"K0B03-IA-DOC-17","claim":"UTF8_no_BOM_LF_one_final_LF_and_no_duplicate_keys","result":"pass"},
+    {"id":"K0B03-IA-DOC-18","claim":"exact_three_path_all_new_commit_inventory","result":"pass"},
+    {"id":"K0B03-IA-DOC-19","claim":"state_gates_statuses_and_runtime_authority_unchanged","result":"pass"}
+  ],
+  "format_validation": {
+    "paths_checked": 3,
+    "UTF8_without_BOM": true,
+    "LF_only": true,
+    "one_final_LF": true,
+    "duplicate_keys": 0
+  },
+  "future_commit_inventory": {
+    "all_new": true,
+    "additions": 3,
+    "modifications": 0,
+    "deletions": 0,
+    "paths": [
+      "new pipeline/requests/k0b-03-implementation-independent-audit-record-approval-request-v1.yaml",
+      "new pipeline/reviews/k0b-03-implementation-independent-audit-v1.yaml",
+      "new pipeline/evidence/k0b-03-implementation-independent-audit-document-check-v1.yaml"
+    ]
+  },
+  "governance": {
+    "reviewed_package_changed": false,
+    "remediation_authorized": false,
+    "owner_closure_authorized": false,
+    "state_or_gate_transition_authorized": false,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b_03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  },
+  "commit_contract": {
+    "parent": "d000006956903c74799346969a823ed82e60ae32",
+    "subject": "docs(pipeline-v2): record K0b-03 implementation independent audit",
+    "trailers_contiguous_and_ordered": [
+      "Approval-Request-SHA256: c4a6471e514546275964de444d8c30821cd947af962e160a5fa4c7bd65508d60",
+      "Reviewer-Independence: fresh-context-read-only-non-author",
+      "Review-Result: changes_required",
+      "Blocking-Findings: 8",
+      "Runtime-Authority: none"
+    ]
+  },
+  "runtime_authority": "none"
+}

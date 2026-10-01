@@ -1,0 +1,241 @@
+{
+  "review_id": "pipeline-v2.k0b-03.implementation-independent-audit-v1",
+  "schema_version": 1,
+  "reviewed_on": "2026-10-01",
+  "review_kind": "fresh_context_read_only_non_author_independent_audit",
+  "reviewer_profile": "fresh-context-read-only-non-author",
+  "result": "changes_required",
+  "finding_count": 8,
+  "blocking_finding_count": 8,
+  "new_finding_count": 8,
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-03-implementation-independent-audit-record-approval-request-v1.yaml",
+    "sha256": "c4a6471e514546275964de444d8c30821cd947af962e160a5fa4c7bd65508d60",
+    "bytes": 24945,
+    "owner_confirmation": "separate_complete_SHA256_size_independence_result_findings_and_exact_three_path_scope_confirmation_received"
+  },
+  "baseline": {
+    "HEAD": "d000006956903c74799346969a823ed82e60ae32",
+    "parent": "8015b8b1213b8652b6584ad23f406077899802ad",
+    "tree": "b9a48ac1c987bb7fa113bd501aab4938d0b5374e",
+    "entry_index_and_worktree": "clean",
+    "exit_index_and_worktree_during_review": "clean"
+  },
+  "reviewer_independence": {
+    "did_not_author_reviewed_package": true,
+    "did_not_modify_repository_files_or_index": true,
+    "did_not_execute_repository_code_or_tests": true,
+    "did_not_create_environments_fixtures_or_temp_targets": true,
+    "did_not_use_network_or_dependencies": true,
+    "dynamic_claims_reexecuted": false,
+    "reviewer_recommendation_is_owner_approval": false
+  },
+  "manifests": {
+    "reviewed_commit": {
+      "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+      "path_count": 47,
+      "content_bytes": 169085,
+      "manifest_bytes": 5912,
+      "sha256": "96d79bcfd296ffc6af42c8793585d40f2804250568882102cd1a804f41074456"
+    },
+    "predecessor_read_set": {
+      "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+      "path_count": 63,
+      "content_bytes": 1264986,
+      "manifest_bytes": 8697,
+      "sha256": "9905b3a42e8c66219de7b76a2e00f8907abc6cbbc9acba12116287c166511ee3"
+    },
+    "audit_read_union": {
+      "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+      "path_count": 110,
+      "content_bytes": 1434071,
+      "manifest_bytes": 14609,
+      "sha256": "9aae88d2bf6f11fb57975596b522c7a2548322ecb443d10dc53d6ab364837900"
+    }
+  },
+  "findings": [
+    {
+      "id": "K0B03-IA-R2-F01",
+      "severity": "high",
+      "blocking": true,
+      "classification": "detector_single_source_and_case_semantics_gap",
+      "path_section_evidence": [
+        "new pipeline/architecture/k0b-03-planning-package-v1.md:63-70",
+        "new pipeline/harness/k0b03_v1/scanner.py:56-60",
+        "new pipeline/harness/k0b03_v1/scanner.py:79-101",
+        "new pipeline/harness/k0b03_v1/scanner.py:60,84,89"
+      ],
+      "evidence_summary": "Scanner hardcodes private-key patterns, lengths, alphabets and thresholds instead of deriving every detector semantic from the versioned profile; Unicode case-insensitive matching is used where ASCII-only comparison is required.",
+      "affected_claim": "checks_8_9_10_detector_profile_only_authored_source_and_completion_detector_families_complete",
+      "required_disposition": "Create an append-only scanner successor that derives all detector semantics from the versioned profile, removes parallel literals and thresholds, adds profile-mutation and exact boundary tests, then runs complete two-environment validation and independent re-review."
+    },
+    {
+      "id": "K0B03-IA-R2-F02",
+      "severity": "high",
+      "blocking": true,
+      "classification": "closed_schema_and_typed_input_boundary_gap",
+      "path_section_evidence": [
+        "new pipeline/contracts/k0b03/detector-profile-v1.schema.json:5-14",
+        "new pipeline/contracts/k0b03/scan-result-v1.schema.json:10",
+        "new pipeline/contracts/k0b03/guard-result-v1.schema.json:11",
+        "new pipeline/contracts/k0b03/scan-request-v1.schema.json"
+      ],
+      "evidence_summary": "Required detector-profile members are absent from properties under additionalProperties false, finding and sanitized-evidence shapes are not closed, and the request string boundary cannot represent invalid submitted UTF-8 bytes with original-byte offsets.",
+      "affected_claim": "checks_12_14_27_closed_typed_contracts_redaction_and_compiler_contract_validity",
+      "required_disposition": "Create complete valid closed schemas, close every finding and evidence field, define typed byte and encoding semantics, add an offline schema validator to both locked environments, and independently re-review the successor package."
+    },
+    {
+      "id": "K0B03-IA-R2-F03",
+      "severity": "high",
+      "blocking": true,
+      "classification": "repository_tool_resource_process_and_egress_enforcement_gap",
+      "path_section_evidence": [
+        "new pipeline/registry/k0b03/repository-tool-policy-v1.json:4-53",
+        "new pipeline/harness/k0b03_v1/guards.py:49-76",
+        "new pipeline/harness/k0b03_v1/guards.py:99-153",
+        "new pipeline/toolchain/k0b03/invoke-v1.ps1:24-52",
+        "new pipeline/tests/k0b03_v1/fixture_support.py:214-248"
+      ],
+      "evidence_summary": "The policy lacks native exact repository, executable, argument-grammar, environment and CWD bindings; guard allowlists are supplied by the caller; the launcher bypasses guard admission and does not apply declared resource, process, output or egress controls.",
+      "affected_claim": "checks_15_through_21_exact_admission_and_applied_enforcement",
+      "required_disposition": "Define exact native bindings in the single policy source and create one enforcing launcher that validates repository and worktree identity, paths, grammar, environment, executable identity, reparse ancestry and actually applies resource, process, output and egress limits before effects."
+    },
+    {
+      "id": "K0B03-IA-R2-F04",
+      "severity": "high",
+      "blocking": true,
+      "classification": "scanner_global_cap_span_overlap_and_ordering_gap",
+      "path_section_evidence": [
+        "new pipeline/harness/k0b03_v1/scanner.py:143-165",
+        "new pipeline/harness/k0b03_v1/scanner.py:177-194",
+        "new pipeline/harness/k0b03_v1/scanner.py:280-289"
+      ],
+      "evidence_summary": "The global result can silently truncate beyond 64 without typed overflow, split-line mappings retain full trimmed fragments rather than exact matched subspans, multi-span overlap checks only the first span, and the final tie-break does not use the declared detector ID.",
+      "affected_claim": "checks_10_11_12_typed_65th_detection_exact_mapping_overlap_dedup_and_deterministic_order",
+      "required_disposition": "Apply the cap at the complete result boundary, emit typed overflow on every 65th detection, implement exact character-to-byte span sets and set-aware overlap, add stable detector IDs and adversarial multi-field and multi-span tests."
+    },
+    {
+      "id": "K0B03-IA-R2-F05",
+      "severity": "high",
+      "blocking": true,
+      "classification": "persisted_abort_reconciliation_FSM_and_fencing_gap",
+      "path_section_evidence": [
+        "new pipeline/harness/k0b03_v1/lifecycle.py:23-55",
+        "new pipeline/harness/k0b03_v1/lifecycle.py:31-44",
+        "new pipeline/tests/k0b03_v1/fixture_support.py:360-377"
+      ],
+      "evidence_summary": "A known-result non-cancellable begun effect can be falsely marked aborted, while durable and idempotent abort replay, expected revision, publication freeze, late-result fencing, reconciliation transitions and begun-effect accounting are absent.",
+      "affected_claim": "checks_20_22_23_abort_incident_reconciliation_complete",
+      "required_disposition": "Implement a persisted FSM with revision fencing and idempotent replay, block every unreconciled non-cancellable or ambiguous effect, and add duplicate, stale, late, crash and partial-effect tests."
+    },
+    {
+      "id": "K0B03-IA-R2-F06",
+      "severity": "high",
+      "blocking": true,
+      "classification": "migration_backup_restore_quarantine_and_compatibility_gap",
+      "path_section_evidence": [
+        "new pipeline/tests/k0b03_v1/fixture_support.py:381-410",
+        "new pipeline/harness/k0b03_v1/compatibility.py:13-21",
+        "new pipeline/harness/k0b03_v1/compatibility.py:44-51",
+        "new pipeline/harness/k0b03_v1/store.py:15-40"
+      ],
+      "evidence_summary": "Validation applies only migration 0007 to an empty database; newer schema admission, full preservation, pre-migration backup, connection-local foreign-key enforcement, CAS state checks, guarded restore and explicit HITL compatibility are incomplete.",
+      "affected_claim": "checks_24_25_26_additive_migration_backup_restore_quarantine_and_compatibility_complete",
+      "required_disposition": "Validate the pinned 0001-to-0007 chain on a populated scratch clone with preservation proofs and verified backup, prohibit newer-schema writes, enable foreign keys per connection, add CAS transitions, guarded new-target restore and an explicit owner or HITL token."
+    },
+    {
+      "id": "K0B03-IA-R2-F07",
+      "severity": "high",
+      "blocking": true,
+      "classification": "mandatory_validation_matrix_coverage_gap",
+      "path_section_evidence": [
+        "new pipeline/architecture/k0b-03-planning-package-v1.md:239-254",
+        "new pipeline/architecture/k0b-03-planning-package-v1.1.md:118-132",
+        "new pipeline/tests/k0b03_v1/fixture_support.py:343-347",
+        "new pipeline/tests/k0b03_v1/fixture_support.py:381-410"
+      ],
+      "evidence_summary": "The 128-case count omits required detector boundaries, repository and Git identity denials, applied launcher controls, persisted FSM faults, full migration preservation and cross-profile or attestation substitution cases; several guard cases assert policy booleans instead of behavior.",
+      "affected_claim": "checks_29_through_33_and_hidden_gap_review_validation_coverage_sufficiency",
+      "required_disposition": "Define a coverage-to-requirement matrix, add every missing negative, boundary and effect case, repeat both locked environments without skips, and issue corrected append-only validation evidence followed by independent re-review."
+    },
+    {
+      "id": "K0B03-IA-R2-F08",
+      "severity": "high",
+      "blocking": true,
+      "classification": "typed_hash_registry_v2_and_attestation_boundary_gap",
+      "path_section_evidence": [
+        "new pipeline/architecture/k0b-03-planning-package-v1.1.md:39-55",
+        "new pipeline/architecture/k0b-03-planning-package-v1.1.md:89-114",
+        "new pipeline/registry/k0b03/hash-profile-registry-v1.json:4-28",
+        "new pipeline/contracts/k0b03/invocation-envelope-v1.schema.json:5-22",
+        "new pipeline/contracts/k0b03/k0b03-contract-package-v1.json:4-17",
+        "new pipeline/harness/k0b03_v1/lifecycle.py:47-50"
+      ],
+      "evidence_summary": "Hash profiles are not mapped to object types, digest fields lack profile and object identity, registry-v2 and event-schema hashes are not bound into the contract package, lifecycle duplicates event policies, and the required attestation compatibility boundary is absent.",
+      "affected_claim": "checks_7_17_23_typed_hash_registry_v2_ownership_and_no_shadow_truth",
+      "required_disposition": "Add object-to-hash-profile mappings and typed digests, bind registry-v2 and event-schema hashes in package/compiler outputs, derive route policy from canonical registry sources, and add a closed attestation boundary with substitution and conflict tests."
+    }
+  ],
+  "check_results": [
+    {"id":1,"result":"pass","evidence_class":"independently_reproduced_static","claim":"HEAD_parent_tree_and_clean_status"},
+    {"id":2,"result":"pass","evidence_class":"independently_reproduced_static","claim":"exact_47_additions_zero_modifications_deletions"},
+    {"id":3,"result":"pass","evidence_class":"independently_reproduced_static","claim":"commit_subject_and_contiguous_trailers"},
+    {"id":4,"result":"pass","evidence_class":"independently_reproduced_static","claim":"all_47_committed_bytes_and_manifest_root"},
+    {"id":5,"result":"pass_artifact_chain","evidence_class":"independently_reproduced_static","claim":"request_and_owner_disposition_authority_chain_with_conversational_noncryptographic_owner_authentication"},
+    {"id":6,"result":"pass","evidence_class":"independently_reproduced_static","claim":"exact_63_path_predecessor_and_110_path_union_manifests"},
+    {"id":7,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F08"],"claim":"registry_v2_ownership_and_no_shadow_registry"},
+    {"id":8,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F01"],"claim":"detector_profile_only_authored_source"},
+    {"id":9,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F01","K0B03-IA-R2-F04","K0B03-IA-R2-F07"],"claim":"detector_family_completeness"},
+    {"id":10,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F01","K0B03-IA-R2-F02","K0B03-IA-R2-F04"],"claim":"UTF8_BOM_line_offset_and_split_line_semantics"},
+    {"id":11,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F04"],"claim":"precedence_overlap_dedup_and_order"},
+    {"id":12,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F02","K0B03-IA-R2-F04"],"claim":"finding_cap_overflow_and_nonreversible_evidence"},
+    {"id":13,"result":"pass","evidence_class":"independently_reproduced_static","claim":"heuristic_hygiene_only_and_never_authorizes"},
+    {"id":14,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F02"],"claim":"closed_authenticated_typed_input_boundary"},
+    {"id":15,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03"],"claim":"repository_identity_relative_path_and_escape_protection"},
+    {"id":16,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03","K0B03-IA-R2-F06"],"claim":"all_claimed_reparse_surfaces"},
+    {"id":17,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03"],"claim":"exact_executable_path_hash_version_admission"},
+    {"id":18,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03"],"claim":"closed_argument_CWD_and_environment_admission"},
+    {"id":19,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03"],"claim":"applied_timeout_CPU_memory_process_and_output_caps"},
+    {"id":20,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03","K0B03-IA-R2-F05"],"claim":"owned_process_cancellation_effect_ID_and_expected_result"},
+    {"id":21,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F03"],"claim":"applied_default_deny_egress"},
+    {"id":22,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F05"],"claim":"unknown_effect_block_no_retry_no_fabricated_success"},
+    {"id":23,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F05"],"claim":"abort_incident_freeze_reconciliation_and_resume"},
+    {"id":24,"result":"pass_static_only_functional_validation_failed","evidence_class":"mixed_static_and_evidence_bound","finding_ids":["K0B03-IA-R2-F06"],"claim":"migration_0007_additive_and_0001_through_0006_unchanged"},
+    {"id":25,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F06"],"claim":"backup_restore_quarantine_and_compatibility_behavior"},
+    {"id":26,"result":"fail","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F06"],"claim":"newer_database_older_harness_read_only_boundary"},
+    {"id":27,"result":"pass_static_with_related_shadow_truth_failure","evidence_class":"independently_reproduced_static","finding_ids":["K0B03-IA-R2-F01","K0B03-IA-R2-F08"],"claim":"compiled_objects_structurally_match_current_sources"},
+    {"id":28,"result":"evidence_bound_not_reproduced","evidence_class":"evidence_bound_dynamic","claim":"four_compiled_outputs_A_B_and_rerender_byte_identity"},
+    {"id":29,"result":"pass_static","evidence_class":"independently_reproduced_static","claim":"case_partition_64_28_14_14_8_and_unique_IDs"},
+    {"id":30,"result":"evidence_bound_not_reproduced_coverage_inadequate","evidence_class":"evidence_bound_dynamic","finding_ids":["K0B03-IA-R2-F07"],"claim":"A_B_128_of_128_with_zero_failures_errors_skips"},
+    {"id":31,"result":"pass_static","evidence_class":"independently_reproduced_static","claim":"technical_attempts_and_successful_reruns_disclosed"},
+    {"id":32,"result":"evidence_bound_partial","evidence_class":"mixed_static_and_evidence_bound","finding_ids":["K0B03-IA-R2-F07"],"claim":"no_skips_fallback_canary_mutation_or_write_through"},
+    {"id":33,"result":"partial","evidence_class":"mixed_static_and_evidence_bound","claim":"repository_clean_external_environment_process_and_temp_cleanup_evidence_bound"},
+    {"id":34,"result":"pass","evidence_class":"independently_reproduced_static","claim":"UTF8_no_BOM_LF_one_final_LF_duplicate_keys_Python_and_PowerShell_AST"},
+    {"id":35,"result":"pass","evidence_class":"independently_reproduced_static","claim":"state_STATE_renderer_profile_and_predecessor_paths_unchanged"},
+    {"id":36,"result":"pass","evidence_class":"independently_reproduced_static","claim":"gate_inventory_6_open_11_closed"},
+    {"id":37,"result":"pass","evidence_class":"independently_reproduced_static","claim":"G_K0B03_K0B01_COMPLETE_closed"},
+    {"id":38,"result":"pass","evidence_class":"independently_reproduced_static","claim":"G_K0B03_UNTRUSTED_SHAPES_future_open"},
+    {"id":39,"result":"pass","evidence_class":"independently_reproduced_static","claim":"K0b03_blocked"},
+    {"id":40,"result":"pass","evidence_class":"independently_reproduced_static","claim":"no_K0b04_K0b05_N1_progress_and_runtime_authority_none"}
+  ],
+  "check_accounting": {
+    "required": 40,
+    "recorded": 40,
+    "failed_or_gap_affected": 21,
+    "dynamic_claims_explicitly_evidence_bound": [28,30,32,33],
+    "successful_128_of_128_count_is_coverage_sufficiency": false
+  },
+  "governance_disposition": {
+    "reviewed_package_changed": false,
+    "remediation_authorized": false,
+    "owner_closure_authorized": false,
+    "state_or_gate_transition_authorized": false,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b_03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "K0b04_K0b05_N1_progress": "none",
+    "mandatory_next_step": "separate_read_only_append_only_successor_remediation_design",
+    "runtime_authority": "none"
+  }
+}
