@@ -1,0 +1,123 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03-v2-remediation-feasibility-and-requirement-matrix-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "captured_on": "2026-10-01",
+  "evidence_kind": "read_only_design_feasibility_and_requirement_matrix",
+  "result": "design_feasible_conditional_on_separate_Windows_enforcement_capability_qualification",
+  "authority": {
+    "approval_request_path": "new pipeline/requests/k0b-03-v2-remediation-design-freeze-approval-request-v1.yaml",
+    "approval_request_sha256": "56ae203850e74d2549482f10b70df98930a8667ae0b685cb5ef1af182851b2df",
+    "approval_request_bytes": 44831,
+    "baseline_HEAD": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "finite_read_manifest_sha256": "252ce256e7745eb22894f58777a4e9b3cfc48e8ffd8e91af71963d69a570268a",
+    "finite_read_path_count": 113,
+    "repository_code_or_tests_executed": false,
+    "capability_probe_executed": false,
+    "runtime_authority": "none"
+  },
+  "architecture": {
+    "selected": "full_append_only_K0b03_v2_replacement_candidate_with_separate_capability_qualification_independent_re_review_owner_closure_and_canonical_adoption_gate_transaction",
+    "historical_package_rewritten": false,
+    "parallel_authored_truth_allowed": false,
+    "implementation_inventory_paths": 70,
+    "implementation_existing_path_modifications": 0,
+    "state_or_gate_paths_in_implementation": 0
+  },
+  "finding_matrix": [
+    {"id":"K0B03-IA-R2-F01","status":"open","severity":"high","blocking":true,"gap":"detector_single_source_and_ASCII_case_semantics","owner":"shared_control_W1_scanner","single_source":"detector_profile_v2","successor":"profile_scanner_compiler","proof_groups":["detector_scanner","contracts_registry_hash_attestation_compiler"],"dependencies":["F02","F04"]},
+    {"id":"K0B03-IA-R2-F02","status":"open","severity":"high","blocking":true,"gap":"closed_schema_and_typed_submitted_bytes","owner":"schema_validator_and_artifact_event_contract_owner","single_source":"closed_v2_schema_set","successor":"schemas_typed_bytes_stdlib_validator","proof_groups":["detector_scanner","contracts_registry_hash_attestation_compiler"],"dependencies":["F08"]},
+    {"id":"K0B03-IA-R2-F03","status":"open","severity":"high","blocking":true,"gap":"applied_repository_tool_process_resource_and_egress_enforcement","owner":"shared_control_tool_boundary","single_source":"repository_tool_policy_v2","successor":"repository_guard_tool_guard_Job_AppContainer_launcher","proof_groups":["repository_tool_launcher_enforcement"],"dependencies":["F05","F08","CP-K0B03-V2-WINDOWS-ENFORCEMENT"]},
+    {"id":"K0B03-IA-R2-F04","status":"open","severity":"high","blocking":true,"gap":"global_cap_exact_spans_overlap_dedup_and_order","owner":"shared_control_W1_scanner","single_source":"detector_profile_v2_and_closed_result_schemas","successor":"scanner_finding_result","proof_groups":["detector_scanner"],"dependencies":["F01","F02"]},
+    {"id":"K0B03-IA-R2-F05","status":"open","severity":"high","blocking":true,"gap":"persisted_abort_reconciliation_FSM_and_fencing","owner":"shared_control_abort_coordinator_and_run_FSM","single_source":"runs_state_revision_plus_v2_journals_and_registry_routes","successor":"lifecycle_store_migration_registry_bindings","proof_groups":["persisted_lifecycle_FSM"],"dependencies":["F03","F06","F08"]},
+    {"id":"K0B03-IA-R2-F06","status":"open","severity":"high","blocking":true,"gap":"full_migration_backup_restore_quarantine_compatibility","owner":"artifact_event_evidence_and_shared_control_admission","single_source":"immutable_0001_0007_plus_additive_0008","successor":"migration_compatibility_store_restore_boundary","proof_groups":["migration_backup_restore_compatibility"],"dependencies":["F05","F08"]},
+    {"id":"K0B03-IA-R2-F07","status":"open","severity":"high","blocking":true,"gap":"mandatory_coverage_matrix","owner":"K0b03_validation_evidence_owner","single_source":"coverage_map_v2","successor":"fixture_catalogs_coverage_map_validation_evidence","proof_groups":["all"],"dependencies":["F01","F02","F03","F04","F05","F06","F08"]},
+    {"id":"K0B03-IA-R2-F08","status":"open","severity":"high","blocking":true,"gap":"typed_hash_registry_event_and_attestation_boundary","owner":"registry_authority_and_artifact_event_plane","single_source":"registry_v2_event_schemas_hash_registry_v2_attestation_boundary","successor":"hash_registry_registry_binding_compiled_bindings_attestation","proof_groups":["contracts_registry_hash_attestation_compiler","persisted_lifecycle_FSM","migration_backup_restore_compatibility"],"dependencies":["F02","F03","F05","F06"]}
+  ],
+  "test_matrix": {
+    "cases_per_environment": 256,
+    "groups": [
+      {"id":"detector_scanner","cases":96,"finding_coverage":["F01","F02","F04","F07"]},
+      {"id":"contracts_registry_hash_attestation_compiler","cases":40,"finding_coverage":["F01","F02","F07","F08"]},
+      {"id":"repository_tool_launcher_enforcement","cases":48,"finding_coverage":["F03","F07","F08"]},
+      {"id":"persisted_lifecycle_FSM","cases":32,"finding_coverage":["F05","F07","F08"]},
+      {"id":"migration_backup_restore_compatibility","cases":32,"finding_coverage":["F05","F06","F07","F08"]},
+      {"id":"CLI_toolchain_determinism","cases":8,"finding_coverage":["F07"]}
+    ],
+    "sum": 256,
+    "environment_count": 2,
+    "required_each": {"passed":256,"failures":0,"errors":0,"skips":0},
+    "successful_count_alone_is_coverage_proof": false,
+    "coverage_map_required": true
+  },
+  "stdlib_schema_feasibility": {
+    "result": "feasible_by_design_without_external_dependency",
+    "authority_source": "closed_v2_Draft_2020_12_schemas",
+    "validator": "deterministic_stdlib_implementation_of_the_exact_frozen_supported_vocabulary",
+    "unknown_keyword": "reject",
+    "remote_ref": "reject",
+    "dependencies": [],
+    "network": false,
+    "proof_deferred_to_implementation_validation": true
+  },
+  "Windows_enforcement_feasibility": {
+    "prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+    "status": "open_blocking_implementation_authority",
+    "Job_Object_design": {
+      "CPU": "technically_available_in_principle_not_host_proven",
+      "memory": "technically_available_in_principle_not_host_proven",
+      "process_count": "technically_available_in_principle_not_host_proven",
+      "time": "technically_available_in_principle_not_host_proven",
+      "output": "bounded_pipe_design_available_in_principle_not_host_proven",
+      "owned_tree": "kill_on_close_and_handle_owned_design_available_in_principle_not_host_proven"
+    },
+    "egress": {
+      "Job_Object_enforces_network": false,
+      "stdlib_user_mode_guard_proves_spawned_child_egress_denial": false,
+      "candidate": "AppContainer_without_network_capabilities_combined_with_Job_Object",
+      "candidate_proven_on_pinned_host": false
+    },
+    "separate_qualification_required": [
+      "temporary_AppContainer_profile_identity",
+      "no_network_capability_SIDs",
+      "suspended_launch",
+      "Job_assignment_before_resume",
+      "loopback_only_denial_probe",
+      "temporary_root_only_ACL",
+      "timeout_CPU_memory_process_output_owned_tree_behavior",
+      "canary_no_write_through",
+      "complete_process_profile_ACL_and_root_cleanup"
+    ],
+    "failed_or_inconclusive_disposition": "do_not_issue_implementation_authority_keep_F03_open_blocking_do_not_weaken_claim",
+    "security_focused_independent_review_required": true
+  },
+  "environments_after_prerequisite": [
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-remediation-A",
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-remediation-B"
+  ],
+  "dependency_policy": {
+    "Python": "3.12.7_pinned",
+    "venv": "--without-pip",
+    "dependencies": [],
+    "network_hosts": [],
+    "bytecode": false,
+    "ambient_PYTHONPATH_plugins_hooks_credentials_and_caches": false
+  },
+  "claims_not_made": [
+    "no_remediation_is_materialized",
+    "no_finding_is_closed",
+    "no_Windows_capability_is_proven",
+    "no_enforcement_is_claimed_applied",
+    "no_v2_package_is_canonical_or_effective",
+    "no_state_or_gate_transition_is_complete",
+    "no_runtime_authority_exists"
+  ],
+  "governance": {
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  }
+}

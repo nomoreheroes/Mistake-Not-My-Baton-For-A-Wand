@@ -1,0 +1,65 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03-v2-remediation-design-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "checked_on": "2026-10-01",
+  "evidence_kind": "static_document_check",
+  "result": "pass",
+  "baseline": {
+    "HEAD": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "parent": "d000006956903c74799346969a823ed82e60ae32",
+    "tree": "92a1aefa137cf770ac28ac01f77f776202a7a10f",
+    "entry_tracked_and_index": "clean",
+    "entry_untracked": ["new pipeline/requests/k0b-03-v2-remediation-design-freeze-approval-request-v1.yaml"]
+  },
+  "cross_document_pins": [
+    {"role":"approval_request","path":"new pipeline/requests/k0b-03-v2-remediation-design-freeze-approval-request-v1.yaml","sha256":"56ae203850e74d2549482f10b70df98930a8667ae0b685cb5ef1af182851b2df","bytes":44831},
+    {"role":"owner_disposition","path":"new pipeline/decisions/k0b-03-v2-remediation-design-freeze-owner-disposition-v1.yaml","sha256":"c034ec84f18aadd0823b29019fd31cc08af9279a31e319b5a02b5e01adcd80c9","bytes":3473},
+    {"role":"architecture_design","path":"new pipeline/architecture/k0b-03-v2-remediation-design-v1.md","sha256":"b8a84cf7ca6064d7b1224c3ba57380caa5f297b638b344b567a239411ff2d7a3","bytes":25193},
+    {"role":"feasibility_and_requirement_matrix","path":"new pipeline/evidence/k0b-03-v2-remediation-feasibility-and-requirement-matrix-v1.yaml","sha256":"d6b4b61427b3bc7487ef6a4c08428331c78af0fcb8526d0cf42be0be86b24429","bytes":8436}
+  ],
+  "checks": [
+    {"id":1,"claim":"baseline_HEAD_parent_tree_and_entry_status","result":"pass"},
+    {"id":2,"claim":"approval_request_SHA256_size_status_and_exact_scope","result":"pass"},
+    {"id":3,"claim":"exact_113_path_embedded_manifest_and_root","result":"pass","path_count":113,"content_bytes":1484188,"manifest_bytes":15069,"manifest_sha256":"252ce256e7745eb22894f58777a4e9b3cfc48e8ffd8e91af71963d69a570268a"},
+    {"id":4,"claim":"eight_findings_remain_open_high_and_blocking","result":"pass","finding_count":8,"blocking_count":8},
+    {"id":5,"claim":"selected_full_append_only_v2_candidate_architecture","result":"pass"},
+    {"id":6,"claim":"CP_K0B03_V2_WINDOWS_ENFORCEMENT_open_and_blocking_implementation_authority","result":"pass"},
+    {"id":7,"claim":"exact_70_path_all_new_future_implementation_inventory","result":"pass","path_count":70,"unique_path_count":70},
+    {"id":8,"claim":"exact_256_case_partition_96_40_48_32_32_8","result":"pass","sum":256},
+    {"id":9,"claim":"no_remediation_implementation_adoption_closure_state_gate_or_runtime_authority","result":"pass"},
+    {"id":10,"claim":"cross_document_hashes_and_sizes","result":"pass"},
+    {"id":11,"claim":"UTF8_no_BOM_LF_one_final_LF_and_duplicate_keys_absent_for_structured_documents","result":"pass"},
+    {"id":12,"claim":"exact_five_path_all_new_commit_inventory","result":"pass","path_count":5,"additions":5,"modifications":0,"deletions":0}
+  ],
+  "check_accounting": {
+    "required": 12,
+    "recorded": 12,
+    "passed": 12,
+    "failed": 0,
+    "inconclusive": 0
+  },
+  "five_path_commit_inventory": [
+    "new pipeline/requests/k0b-03-v2-remediation-design-freeze-approval-request-v1.yaml",
+    "new pipeline/decisions/k0b-03-v2-remediation-design-freeze-owner-disposition-v1.yaml",
+    "new pipeline/architecture/k0b-03-v2-remediation-design-v1.md",
+    "new pipeline/evidence/k0b-03-v2-remediation-feasibility-and-requirement-matrix-v1.yaml",
+    "new pipeline/evidence/k0b-03-v2-remediation-design-document-check-v1.yaml"
+  ],
+  "format_contract": {
+    "encoding": "UTF-8",
+    "BOM": false,
+    "line_endings": "LF",
+    "final_LF_count": 1,
+    "duplicate_keys": "absent"
+  },
+  "governance_retention": {
+    "findings_closed": 0,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  }
+}

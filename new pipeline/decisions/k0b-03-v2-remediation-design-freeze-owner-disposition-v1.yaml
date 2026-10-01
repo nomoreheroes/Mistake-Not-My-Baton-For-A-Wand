@@ -1,0 +1,72 @@
+{
+  "decision_id": "pipeline-v2.k0b-03-v2-remediation-design-freeze-owner-disposition-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "decided_on": "2026-10-01",
+  "work_item_id": "K0b-03",
+  "decision_kind": "owner_design_freeze_disposition",
+  "status": "design_frozen_pending_windows_enforcement_capability_qualification",
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/k0b-03-v2-remediation-design-freeze-approval-request-v1.yaml",
+      "sha256": "56ae203850e74d2549482f10b70df98930a8667ae0b685cb5ef1af182851b2df",
+      "bytes": 44831
+    },
+    "owner_confirmation": "separate_complete_SHA256_size_and_exact_five_path_scope_confirmation_received",
+    "baseline_HEAD": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "runtime_authority": "none"
+  },
+  "selected_architecture": "full_append_only_K0b03_v2_replacement_candidate_with_separate_capability_qualification_independent_re_review_owner_closure_and_canonical_adoption_gate_transaction",
+  "disposition": {
+    "historical_47_path_v1_package": "immutable_unchanged",
+    "historical_independent_audit_record": "immutable_unchanged",
+    "parallel_authored_truth": "forbidden",
+    "K0b03_v2_before_adoption": "candidate_successor_only",
+    "partial_layered_successors": "rejected_because_cross_cutting_findings_would_create_intermediate_split_truth",
+    "implementation_shape_after_prerequisites": "one_atomic_70_path_all_new_commit",
+    "state_and_gate_adoption": "separate_later_transaction_only"
+  },
+  "findings": [
+    {"id":"K0B03-IA-R2-F01","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F02","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F03","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F04","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F05","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F06","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F07","severity":"high","blocking":true,"status":"open"},
+    {"id":"K0B03-IA-R2-F08","severity":"high","blocking":true,"status":"open"}
+  ],
+  "finding_count": 8,
+  "blocking_finding_count": 8,
+  "blocking_prerequisite": {
+    "id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+    "status": "open_blocking_implementation_authority",
+    "finding": "K0B03-IA-R2-F03",
+    "owner_disposition": "implementation_authority_must_not_be_issued_until_successful_separately_authorized_capability_qualification_and_security_focused_review",
+    "failed_or_inconclusive_result": "F03_remains_open_blocking_and_enforcement_claim_is_not_weakened"
+  },
+  "validation_design": {
+    "cases_per_environment": 256,
+    "partition": [96,40,48,32,32,8],
+    "environment_count": 2,
+    "dependencies": [],
+    "network_hosts": [],
+    "successful_count_alone_is_coverage_proof": false
+  },
+  "non_authorizing_effect": {
+    "remediation_materialized": false,
+    "finding_closed": false,
+    "capability_qualification_authorized": false,
+    "implementation_authorized": false,
+    "K0b03_v2_canonical_or_effective": false,
+    "state_or_gate_transition_authorized": false,
+    "runtime_authority": "none"
+  },
+  "governance_retention": {
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "K0b04_K0b05_N1_progress": "none"
+  }
+}
