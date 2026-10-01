@@ -1,0 +1,214 @@
+{
+  "evidence_id": "pipeline-v2.development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-document-check-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "prepared_on": "2026-10-01",
+  "work_item_id": "K0b-03",
+  "finding_id": "DP14-AUD-F01",
+  "document_kind": "independent_re_review_document_check_evidence",
+  "status": "pass",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "execution_boundary": {
+    "check_kind": "document_static_only",
+    "repository_code_or_tests_executed": false,
+    "locked_environments_created": false,
+    "fixtures_created": false,
+    "temp_targets_created": false,
+    "network_used": false,
+    "dependencies_used": false,
+    "existing_repository_files_modified": false,
+    "state_or_gate_transition_performed": false,
+    "runtime_authority": "none"
+  },
+  "baseline": {
+    "HEAD": "0964c8698f7fc02e15ad451155fbb5ba02f5fcdc",
+    "parent": "2903876161d5d314ded49a1ab71f85de20625510",
+    "tree": "12af324ad6929d4e2b11637b7921085191fcfd88",
+    "tracked_and_index_changes_before_materialization": 0,
+    "entry_untracked_inventory": [
+      "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-approval-request-v1.yaml"
+    ],
+    "baseline_match": true
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-approval-request-v1.yaml",
+      "sha256": "16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "bytes": 29799,
+      "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation"
+    },
+    "owner_confirmation": {
+      "source": "current_conversation_2026_10_01",
+      "confirmed_request_sha256": "16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "confirmed_request_bytes": 29799,
+      "authorized_exact_path_count": 3
+    },
+    "reviewer_recommendation_is_owner_approval": false,
+    "owner_closure_authorized": false,
+    "runtime_authority": "none"
+  },
+  "cross_document_bindings": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-approval-request-v1.yaml",
+      "sha256": "16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "bytes": 29799
+    },
+    "review_report": {
+      "path": "new pipeline/reviews/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-v1.yaml",
+      "sha256": "2a09b3151625b6d3a0ec770fe8b887490160605e2ef5ff159a8c692e99412164",
+      "bytes": 15464
+    },
+    "self_binding": "computed_after_materialization_and_verified_externally_to_avoid_recursive_self_hashing"
+  },
+  "remediation_commit_check": {
+    "commit": "0964c8698f7fc02e15ad451155fbb5ba02f5fcdc",
+    "parent": "2903876161d5d314ded49a1ab71f85de20625510",
+    "tree": "12af324ad6929d4e2b11637b7921085191fcfd88",
+    "path_count": 10,
+    "addition_count": 8,
+    "modification_count": 2,
+    "deletion_count": 0,
+    "all_committed_byte_pins_match": true,
+    "pin_mismatch_count": 0
+  },
+  "manifest_checks": {
+    "historical_direct_read_manifest": {
+      "blob_source_commit": "2903876161d5d314ded49a1ab71f85de20625510",
+      "path_count": 19,
+      "content_bytes": 771504,
+      "manifest_bytes": 2428,
+      "manifest_sha256": "34246e8f0500559b2836827f9a93e49a3743d1e10dfe16c79155d6918f6d3456",
+      "row_mismatch_count": 0,
+      "result": "passed"
+    },
+    "work_item_authority_manifest": {
+      "path_count": 13,
+      "content_bytes": 218132,
+      "manifest_bytes": 1763,
+      "manifest_sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1",
+      "mismatch_count": 0,
+      "separate_from_entry_state_reference_count": true,
+      "result": "passed"
+    },
+    "required_manifest_counts": [
+      98,
+      100,
+      101,
+      109
+    ],
+    "static_external_reference_manifest": {
+      "path_count": 99,
+      "content_bytes": 3032891,
+      "manifest_bytes": 14016,
+      "manifest_sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202"
+    },
+    "profile_self_binding_count": 1,
+    "state_source_sentinel_count": 1,
+    "total_entry_state_reference_count": 101
+  },
+  "review_result_check": {
+    "reviewer_profile": "fresh-context_read-only_non-author",
+    "result": "approve",
+    "required_checks": 35,
+    "passed": 35,
+    "failed": 0,
+    "inconclusive": 0,
+    "new_findings": 0,
+    "new_blocking_findings": 0,
+    "remediation_contract_gaps": 0,
+    "all_35_check_ids_unique": true,
+    "all_35_results_passed": true,
+    "reviewer_independence_recorded": true,
+    "reviewer_did_not_execute_repository_code_or_tests": true,
+    "reviewer_recommendation_is_owner_approval": false
+  },
+  "remediation_contract_check": {
+    "effective_allowlist": "384_plus_4_equals_388",
+    "transition_pin_count": 9,
+    "canonical_state_selector_diff_count": 4,
+    "canonical_STATE_sha256": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+    "canonical_STATE_bytes": 91326,
+    "renderer_v8_1_reparse_hardening_preserved": true,
+    "test_count_per_environment": 30,
+    "environment_count": 2,
+    "evidence_bound_passed_per_environment": 30,
+    "evidence_bound_failures_errors_skips_per_environment": "0/0/0",
+    "environment_results_identical": true,
+    "tests_reexecuted_for_documentation_package": false,
+    "environment_temp_or_repository_bytecode_residue_count": 0
+  },
+  "governance_immutability_check": {
+    "canonical_development_plan": "v0.14_unchanged",
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "LSR_F02_through_LSR_F04": "open_non_blocking_unchanged",
+    "K0b04_K0b05_N1": "not_advanced",
+    "runtime_authority": "none"
+  },
+  "finding_check": {
+    "id": "DP14-AUD-F01",
+    "remediation_verified": true,
+    "formally_closed": false,
+    "status_after_documentation_commit": "remediation_verified_pending_separate_owner_closure",
+    "new_finding_count": 0,
+    "new_blocking_finding_count": 0,
+    "residual_remediation_contract_gap_count": 0
+  },
+  "checks": [
+    {"ordinal": 1, "id": "DP14-RR-DC-C01", "check": "baseline_HEAD_parent_tree_and_entry_status", "result": "passed"},
+    {"ordinal": 2, "id": "DP14-RR-DC-C02", "check": "confirmed_request_SHA256_size_status_and_exact_scope", "result": "passed"},
+    {"ordinal": 3, "id": "DP14-RR-DC-C03", "check": "reviewer_independence_and_read_only_non_author_profile", "result": "passed"},
+    {"ordinal": 4, "id": "DP14-RR-DC-C04", "check": "exact_ten_path_remediation_inventory_and_committed_byte_pins", "result": "passed"},
+    {"ordinal": 5, "id": "DP14-RR-DC-C05", "check": "historical_19_path_manifest_root_sizes_and_rows", "result": "passed"},
+    {"ordinal": 6, "id": "DP14-RR-DC-C06", "check": "corrected_13_row_work_authority_manifest_root_sizes_and_separate_semantics", "result": "passed"},
+    {"ordinal": 7, "id": "DP14-RR-DC-C07", "check": "all_35_review_checks_and_exact_accounting", "result": "passed"},
+    {"ordinal": 8, "id": "DP14-RR-DC-C08", "check": "approve_result_and_zero_finding_blocker_gap_counts", "result": "passed"},
+    {"ordinal": 9, "id": "DP14-RR-DC-C09", "check": "manifest_allowlist_transition_reference_state_and_test_contracts", "result": "passed"},
+    {"ordinal": 10, "id": "DP14-RR-DC-C10", "check": "unchanged_plan_status_gate_downstream_and_runtime_authority_state", "result": "passed"},
+    {"ordinal": 11, "id": "DP14-RR-DC-C11", "check": "DP14_AUD_F01_verified_but_not_formally_closed", "result": "passed"},
+    {"ordinal": 12, "id": "DP14-RR-DC-C12", "check": "cross_document_hashes", "result": "passed"},
+    {"ordinal": 13, "id": "DP14-RR-DC-C13", "check": "UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_free_documents", "result": "passed"},
+    {"ordinal": 14, "id": "DP14-RR-DC-C14", "check": "exact_three_path_all_new_commit_inventory", "result": "passed"}
+  ],
+  "check_accounting": {
+    "required": 14,
+    "passed": 14,
+    "failed": 0,
+    "inconclusive": 0
+  },
+  "future_commit_inventory": {
+    "path_count": 3,
+    "addition_count": 3,
+    "modification_count": 0,
+    "deletion_count": 0,
+    "paths": [
+      "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-approval-request-v1.yaml",
+      "new pipeline/reviews/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-v1.yaml",
+      "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-document-check-v1.yaml"
+    ],
+    "all_other_paths": "byte_immutable"
+  },
+  "commit_contract": {
+    "parent": "0964c8698f7fc02e15ad451155fbb5ba02f5fcdc",
+    "subject": "docs(pipeline-v2): record v8.1 remediation independent re-review",
+    "trailers_contiguous": true,
+    "trailers": [
+      "Approval-Request-SHA256: 16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "Reviewer-Independence: fresh-context-read-only-non-author",
+      "Review-Result: approve",
+      "Runtime-Authority: none"
+    ],
+    "closes_DP14_AUD_F01": false
+  },
+  "next_required_authority": "separate_owner_closure_disposition_for_DP14_AUD_F01",
+  "runtime_authority": "none"
+}

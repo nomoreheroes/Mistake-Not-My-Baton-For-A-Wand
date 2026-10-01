@@ -1,0 +1,331 @@
+{
+  "review_id": "pipeline-v2.development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-v1",
+  "schema_version": 1,
+  "version": "1.0.0",
+  "review_completed_on": "2026-09-30",
+  "materialized_on": "2026-10-01",
+  "work_item_id": "K0b-03",
+  "finding_id": "DP14-AUD-F01",
+  "document_kind": "fresh_context_read_only_non_author_independent_re_review",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8-without-BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "authority": {
+    "approval_request": {
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-independent-re-review-approval-request-v1.yaml",
+      "sha256": "16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "bytes": 29799,
+      "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation"
+    },
+    "owner_confirmation": {
+      "source": "current_conversation_2026_10_01",
+      "confirmed_request_sha256": "16cdaf44e89c3cf57e65e8a867139ca86ea28a441a92c749b20f88b6ecd6b249",
+      "confirmed_request_bytes": 29799,
+      "conversational_identity": "not_cryptographically_authenticated"
+    },
+    "reviewer_recommendation_is_owner_approval": false,
+    "finding_closure_authorized": false,
+    "plan_state_gate_or_implementation_authority_granted": false,
+    "runtime_authority": "none"
+  },
+  "reviewer": {
+    "profile": "fresh-context_read-only_non-author",
+    "independence": {
+      "did_not_author_remediation_request": true,
+      "did_not_author_owner_disposition": true,
+      "did_not_author_remediation_evidence": true,
+      "did_not_author_renderer_v8_1": true,
+      "did_not_author_projection_profile_v8_1": true,
+      "did_not_author_test_v8_1": true,
+      "did_not_author_validation_evidence": true,
+      "did_not_author_state_transition": true,
+      "did_not_author_document_check": true
+    },
+    "execution_boundary": {
+      "repository_code_or_tests_executed": false,
+      "repository_files_modified": false,
+      "index_modified": false,
+      "locked_environments_created": false,
+      "fixtures_created": false,
+      "temp_targets_created": false,
+      "network_used": false,
+      "dependencies_used": false
+    }
+  },
+  "baseline": {
+    "HEAD": "0964c8698f7fc02e15ad451155fbb5ba02f5fcdc",
+    "parent": "2903876161d5d314ded49a1ab71f85de20625510",
+    "tree": "12af324ad6929d4e2b11637b7921085191fcfd88",
+    "index_and_worktree_at_review": "clean",
+    "baseline_match": true
+  },
+  "review_result": {
+    "result": "approve",
+    "required_check_count": 35,
+    "passed_check_count": 35,
+    "failed_check_count": 0,
+    "inconclusive_check_count": 0,
+    "new_finding_count": 0,
+    "new_blocking_finding_count": 0,
+    "remediation_contract_gap_count": 0,
+    "baseline_inventory_pin_or_scope_mismatch_count": 0,
+    "recommendation": "remediation_is_verified_and_may_proceed_to_separate_owner_closure_disposition",
+    "recommendation_is_owner_approval": false
+  },
+  "remediation_commit": {
+    "commit": "0964c8698f7fc02e15ad451155fbb5ba02f5fcdc",
+    "parent": "2903876161d5d314ded49a1ab71f85de20625510",
+    "tree": "12af324ad6929d4e2b11637b7921085191fcfd88",
+    "subject": "fix(pipeline-v2): correct v0.14 adoption reference manifest",
+    "trailers": [
+      "Approval-Request-SHA256: 841fb2401a1bc663a862e542dfa7d1a74ed2a32350a600e5ad7c4b56fd4413bd",
+      "Remediates-Finding: DP14-AUD-F01",
+      "Renderer-Successor: 8.1.0",
+      "Runtime-Authority: none"
+    ],
+    "trailers_contiguous": true,
+    "inventory": {
+      "path_count": 10,
+      "addition_count": 8,
+      "modification_count": 2,
+      "deletion_count": 0
+    }
+  },
+  "remediation_commit_pins": [
+    {
+      "ordinal": 1,
+      "path": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+      "operation": "add",
+      "sha256": "841fb2401a1bc663a862e542dfa7d1a74ed2a32350a600e5ad7c4b56fd4413bd",
+      "bytes": 33039
+    },
+    {
+      "ordinal": 2,
+      "path": "new pipeline/decisions/development-plan-v0-14-DP14-AUD-F01-remediation-owner-disposition-v1.yaml",
+      "operation": "add",
+      "sha256": "a8bf26a1dc1de3ab9e2554011283913016abd9935c0445ad2a9cc246c8b4854c",
+      "bytes": 4762
+    },
+    {
+      "ordinal": 3,
+      "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-v1.yaml",
+      "operation": "add",
+      "sha256": "f9a47a58d83794fcb5d316f0861ca080310d317dc48553a251f5c36819546e41",
+      "bytes": 5293
+    },
+    {
+      "ordinal": 4,
+      "path": "new pipeline/state/renderer/k0b03_v8_1/renderer.py",
+      "operation": "add",
+      "sha256": "bc6ee394d265dbb488b1933f684c0519757fbcf2a7fa93aa9ce69fee5cd94bb0",
+      "bytes": 25704
+    },
+    {
+      "ordinal": 5,
+      "path": "new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml",
+      "operation": "add",
+      "sha256": "74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5",
+      "bytes": 81499
+    },
+    {
+      "ordinal": 6,
+      "path": "new pipeline/tests/state/test_k0b03_renderer_v8_1.py",
+      "operation": "add",
+      "sha256": "b7974ffc1ede9a59faa0840fc764cc30e5b788e0e19d280a0655407e41b3998d",
+      "bytes": 25337
+    },
+    {
+      "ordinal": 7,
+      "path": "new pipeline/evidence/k0b-03-renderer-v8-1-DP14-AUD-F01-remediation-validation-v1.yaml",
+      "operation": "add",
+      "sha256": "40eca06f8677b54b6fb2d5dd21a00217168be4567e13a9d8b2739fedd3841a09",
+      "bytes": 10175
+    },
+    {
+      "ordinal": 8,
+      "path": "new pipeline/state/state.yaml",
+      "operation": "modify",
+      "sha256": "6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443",
+      "bytes": 90886
+    },
+    {
+      "ordinal": 9,
+      "path": "new pipeline/state/STATE.md",
+      "operation": "modify",
+      "sha256": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+      "bytes": 91326
+    },
+    {
+      "ordinal": 10,
+      "path": "new pipeline/evidence/development-plan-v0-14-DP14-AUD-F01-remediation-document-check-v1.yaml",
+      "operation": "add",
+      "sha256": "e4c4847575385fe4e9c6cb1302a8adbec2809933aa904332073b08189376f818",
+      "bytes": 8755
+    }
+  ],
+  "finite_read_manifest": {
+    "source_request": "new pipeline/requests/development-plan-v0-14-DP14-AUD-F01-remediation-approval-request-v1.yaml",
+    "blob_source_commit": "2903876161d5d314ded49a1ab71f85de20625510",
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "path_count": 19,
+    "content_bytes": 771504,
+    "manifest_bytes": 2428,
+    "manifest_sha256": "34246e8f0500559b2836827f9a93e49a3743d1e10dfe16c79155d6918f6d3456",
+    "row_mismatch_count": 0,
+    "complete_rows_bound_by_confirmed_request": true
+  },
+  "verified_remediation_contracts": {
+    "manifest_counts": {
+      "approved_baseline": 98,
+      "rejected_incomplete_arithmetic_projection": 100,
+      "committed_candidate_before_remediation": 101,
+      "diagnostic_mixed_raw_set": 109
+    },
+    "effective_allowlist": {
+      "base": 384,
+      "addition": 4,
+      "effective": 388,
+      "overlap_count": 0
+    },
+    "transition_pin_count": 9,
+    "static_external_reference_manifest": {
+      "path_count": 99,
+      "content_bytes": 3032891,
+      "manifest_bytes": 14016,
+      "manifest_sha256": "db29b63ab80a9ba3590eb1d4b68f44e2920116897d1e494da61326428790d202"
+    },
+    "profile_self_binding_count": 1,
+    "state_source_sentinel_count": 1,
+    "total_entry_state_reference_count": 101,
+    "immutable_profile_v7": {
+      "path": "new pipeline/state/renderer/k0b03_v7/projection-profile-v7.yaml",
+      "sha256": "864703ab7fe2b820737d68d0d723869dd58bfe2f184fb5c5dea75486c1051b5a",
+      "bytes": 8008,
+      "preserved": true
+    },
+    "work_item_authority_manifest": {
+      "path_count": 13,
+      "content_bytes": 218132,
+      "manifest_bytes": 1763,
+      "manifest_sha256": "7a55a57a87efe82d760cc5d409fcbe711e84a2e6269c1da0b23ef69188ed0fb1",
+      "mismatch_count": 0,
+      "separate_from_entry_state_count": true
+    },
+    "canonical_state_delta": {
+      "selector_count": 4,
+      "selectors": [
+        "generated_at",
+        "projection_version",
+        "projection_profile.path",
+        "projection_profile.sha256"
+      ],
+      "other_selector_changes": 0,
+      "new_recursive_reference_paths": 0
+    },
+    "canonical_STATE": {
+      "sha256": "f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8",
+      "bytes": 91326,
+      "byte_exact": true
+    },
+    "renderer_v8_1_reparse_hardening_preserved": true,
+    "test_matrix": {
+      "count": 30,
+      "positive_controls": 6,
+      "reparse_negative_cases": 12,
+      "other_negative_cases": 12
+    },
+    "environment_results": {
+      "basis": "committed_validation_evidence_reviewed_without_test_reexecution",
+      "environment_count": 2,
+      "passed_per_environment": 30,
+      "failures_per_environment": 0,
+      "errors_per_environment": 0,
+      "skips_per_environment": 0,
+      "rejection_codes_identical": true,
+      "canonical_output_identical": true
+    },
+    "technical_attempt_disclosure": {
+      "profile_pin_count_attempt": "disclosed",
+      "PowerShell_HashData_attempt": "disclosed",
+      "test_generated_pyc_detection_and_removal": "disclosed"
+    },
+    "residue": {
+      "locked_environment_roots": 0,
+      "temp_targets": 0,
+      "repository_pyc_or_pycache_paths": 0
+    }
+  },
+  "checks": [
+    {"ordinal": 1, "id": "DP14-RR-C01", "result": "passed", "evidence": "HEAD 0964c869; parent 29038761; tree 12af324a; clean review entry state"},
+    {"ordinal": 2, "id": "DP14-RR-C02", "result": "passed", "evidence": "exact 10 paths: 8 additions, 2 modifications, 0 deletions"},
+    {"ordinal": 3, "id": "DP14-RR-C03", "result": "passed", "evidence": "exact subject and four contiguous trailers"},
+    {"ordinal": 4, "id": "DP14-RR-C04", "result": "passed", "evidence": "all ten committed-byte SHA-256 and sizes match; documents have canonical encoding and line endings"},
+    {"ordinal": 5, "id": "DP14-RR-C05", "result": "passed", "evidence": "remediation request, owner disposition, evidence and commit authority chain is complete"},
+    {"ordinal": 6, "id": "DP14-RR-C06", "result": "passed", "evidence": "19-row historical manifest root 34246e8f reproduced with zero mismatches"},
+    {"ordinal": 7, "id": "DP14-RR-C07", "result": "passed", "evidence": "DP14-AUD-F01 cause and preserved profile-v7 reference are represented exactly"},
+    {"ordinal": 8, "id": "DP14-RR-C08", "result": "passed", "evidence": "renderer/profile/test v8.1 are append-only successors"},
+    {"ordinal": 9, "id": "DP14-RR-C09", "result": "passed", "evidence": "historical v8 transaction and evidence are unchanged"},
+    {"ordinal": 10, "id": "DP14-RR-C10", "result": "passed", "evidence": "allowlist partition 384 + 4 = 388 with zero overlap"},
+    {"ordinal": 11, "id": "DP14-RR-C11", "result": "passed", "evidence": "exact nine transition pins"},
+    {"ordinal": 12, "id": "DP14-RR-C12", "result": "passed", "evidence": "complete typed-v8 baseline and transitive original 14-selector adoption proof"},
+    {"ordinal": 13, "id": "DP14-RR-C13", "result": "passed", "evidence": "99-row static external reference manifest root db29b63a"},
+    {"ordinal": 14, "id": "DP14-RR-C14", "result": "passed", "evidence": "exact one computed profile self-binding"},
+    {"ordinal": 15, "id": "DP14-RR-C15", "result": "passed", "evidence": "exact one state-source sentinel"},
+    {"ordinal": 16, "id": "DP14-RR-C16", "result": "passed", "evidence": "99 + 1 + 1 = 101 total entry-state references"},
+    {"ordinal": 17, "id": "DP14-RR-C17", "result": "passed", "evidence": "missing, unexpected, wrong-hash and conflicting bindings are rejected"},
+    {"ordinal": 18, "id": "DP14-RR-C18", "result": "passed", "evidence": "profile-v7 pin 864703ab, 8008 bytes, is preserved"},
+    {"ordinal": 19, "id": "DP14-RR-C19", "result": "passed", "evidence": "13-row work-authority root 7a55a57a reproduced with zero mismatches"},
+    {"ordinal": 20, "id": "DP14-RR-C20", "result": "passed", "evidence": "work-authority rows remain separate from entry-state reference counting"},
+    {"ordinal": 21, "id": "DP14-RR-C21", "result": "passed", "evidence": "canonical state diff is exactly four typed selectors"},
+    {"ordinal": 22, "id": "DP14-RR-C22", "result": "passed", "evidence": "no new recursive state reference paths"},
+    {"ordinal": 23, "id": "DP14-RR-C23", "result": "passed", "evidence": "STATE SHA-256 f7d6162a, 91326 bytes, byte exact"},
+    {"ordinal": 24, "id": "DP14-RR-C24", "result": "passed", "evidence": "renderer-v8.1 preserves all approved reparse hardening"},
+    {"ordinal": 25, "id": "DP14-RR-C25", "result": "passed", "evidence": "exact 30-case matrix: 6 positive, 12 reparse-negative, 12 other-negative"},
+    {"ordinal": 26, "id": "DP14-RR-C26", "result": "passed", "evidence": "committed evidence reports 30/30 and 0/0/0 in both environments; not reexecuted by reviewer"},
+    {"ordinal": 27, "id": "DP14-RR-C27", "result": "passed", "evidence": "rejection codes and canonical outputs are identical across environments"},
+    {"ordinal": 28, "id": "DP14-RR-C28", "result": "passed", "evidence": "all technical attempts and bytecode cleanup are disclosed"},
+    {"ordinal": 29, "id": "DP14-RR-C29", "result": "passed", "evidence": "no environment, temp-target, pyc or pycache residue"},
+    {"ordinal": 30, "id": "DP14-RR-C30", "result": "passed", "evidence": "development-plan v0.14 authority, root status and work-item statuses unchanged"},
+    {"ordinal": 31, "id": "DP14-RR-C31", "result": "passed", "evidence": "gate inventory remains 6 open and 11 closed"},
+    {"ordinal": 32, "id": "DP14-RR-C32", "result": "passed", "evidence": "predecessor gate closed; untrusted-shapes future_open; K0b-03 blocked"},
+    {"ordinal": 33, "id": "DP14-RR-C33", "result": "passed", "evidence": "LSR-F02 through F04 unchanged non-blocking; downstream phases not advanced; runtime none"},
+    {"ordinal": 34, "id": "DP14-RR-C34", "result": "passed", "evidence": "DP14-AUD-F01 remediation verified and explicitly not formally closed"},
+    {"ordinal": 35, "id": "DP14-RR-C35", "result": "passed", "evidence": "no remaining code, validation or evidence gap in the approved remediation contract"}
+  ],
+  "findings": [],
+  "finding_accounting": {
+    "new_findings": 0,
+    "new_blocking_findings": 0,
+    "hidden_or_downgraded_findings": 0
+  },
+  "governance_state_after_review": {
+    "canonical_development_plan": "v0.14_unchanged",
+    "open_gate_count": 6,
+    "closed_gate_count": 11,
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b03_status": "blocked_unchanged",
+    "LSR_F02_through_LSR_F04": "open_non_blocking_unchanged",
+    "K0b04_K0b05_N1": "not_advanced",
+    "DP14_AUD_F01": {
+      "remediation_verified": true,
+      "formally_closed": false,
+      "residual_remediation_gap": "none_found_within_approved_contract",
+      "owner_closure_required": true
+    },
+    "runtime_authority": "none"
+  },
+  "non_authorizations": [
+    "owner_closure_of_DP14_AUD_F01",
+    "plan_state_status_or_gate_transition",
+    "K0b03_implementation_or_G_K0B03_UNTRUSTED_SHAPES_closure",
+    "K0b04_K0b05_or_N1_progress",
+    "repository_code_or_test_execution",
+    "runtime_execution_publication_or_remote_effects"
+  ],
+  "runtime_authority": "none"
+}
