@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2://contracts/k0b03/scan-result-v1",
+  "type": "object",
+  "required": ["schema_version", "result", "authorized", "findings", "overflow", "profile_sha256", "hygiene_statement"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result": {"enum": ["no_shape_finding_observed", "blocked"]},
+    "authorized": {"const": false},
+    "findings": {"type": "array", "maxItems": 64},
+    "overflow": {"type": "boolean"},
+    "profile_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hygiene_statement": {"type": "string"}
+  },
+  "additionalProperties": false
+}

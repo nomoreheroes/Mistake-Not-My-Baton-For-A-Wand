@@ -1,0 +1,45 @@
+{
+  "profile_id": "pipeline-v2.k0b03-toolchain-lock-v1",
+  "profile_version": "1.0.0",
+  "platform": {
+    "os_family": "windows",
+    "architecture": "AMD64",
+    "python_platform": "win32"
+  },
+  "host_python": {
+    "path": "C:/ProgramData/anaconda3/python.exe",
+    "implementation": "CPython",
+    "version": "3.12.7",
+    "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0"
+  },
+  "shell": {
+    "name": "Windows PowerShell",
+    "version": "5.1.20348.4294",
+    "sha256": "38f4384643b3fa0de714d2367b712c2e0fa1c89e2cfd131ae6b831ad962b1033"
+  },
+  "git": {
+    "version": "2.51.2.windows.1",
+    "sha256": "54194a1af7cfb6730448ce14b8f2c1dddd9f950b7f995dc351c1ed16eb179249"
+  },
+  "sqlite": {
+    "python_module_version": "2.6.0",
+    "library_version": "3.45.3",
+    "library_sha256": "0ca33a3cdbd4f54084e64e8ca71ae986f6d738a20d38400470011cd794ec9c02"
+  },
+  "venv": {
+    "arguments": ["-B", "-m", "venv", "--without-pip"],
+    "pip": false,
+    "system_site_packages": false
+  },
+  "dependencies": [],
+  "network_hosts": [],
+  "bytecode": false,
+  "import_strategy": "explicit_entry_point_directory_no_PYTHONPATH_no_implicit_repository_root",
+  "commands": {
+    "compile": "invoke-v1.ps1 -Mode compile -EnvironmentRoot <exact-root> -OutputRoot <exact-root>/work/compiled",
+    "test": "invoke-v1.ps1 -Mode test -EnvironmentRoot <exact-root>",
+    "validate": "invoke-v1.ps1 -Mode validate -EnvironmentRoot <exact-root> -OutputRoot <exact-root>/work/compiled"
+  },
+  "expected_case_count": 128,
+  "runtime_authority": "none"
+}

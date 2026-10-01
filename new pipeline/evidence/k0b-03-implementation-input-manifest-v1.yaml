@@ -1,0 +1,30 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.implementation-input-manifest-v1",
+  "schema_version": 1,
+  "captured_on": "2026-10-01",
+  "baseline": {
+    "HEAD": "8015b8b1213b8652b6584ad23f406077899802ad",
+    "parent": "fdd1fe3c660ae2b96a85b3618b77c91cd86f7423",
+    "tree": "e5bae9eb6a0e8e99b5d19c5b0cc5c6b76440053a",
+    "tracked_and_index_entry": "clean",
+    "only_untracked_entry": "new pipeline/requests/k0b-03-implementation-and-validation-approval-request-v1.yaml"
+  },
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-03-implementation-and-validation-approval-request-v1.yaml",
+    "sha256": "a9f2898950663c6939df3afea998f51f467a576d9832cde1491bb0c6ac6d2e21",
+    "bytes": 38874
+  },
+  "read_manifest": {
+    "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "path_count": 63,
+    "content_bytes": 1264986,
+    "manifest_bytes": 8697,
+    "manifest_sha256": "9905b3a42e8c66219de7b76a2e00f8907abc6cbbc9acba12116287c166511ee3",
+    "complete_rows_source": "approval_request.finite_read_manifest.entries",
+    "reverified_before_first_write": true
+  },
+  "direct_pins_reverified": 8,
+  "future_inventory": {"path_count":47,"all_new":true,"existing_path_modifications":0},
+  "entry_stop_condition_count": 0,
+  "runtime_authority": "none"
+}

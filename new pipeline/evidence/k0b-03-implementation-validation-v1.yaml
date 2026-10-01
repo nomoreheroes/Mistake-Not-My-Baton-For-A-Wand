@@ -1,0 +1,196 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.implementation-validation-v1",
+  "schema_version": 1,
+  "validated_on": "2026-10-01",
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-03-implementation-and-validation-approval-request-v1.yaml",
+    "sha256": "a9f2898950663c6939df3afea998f51f467a576d9832cde1491bb0c6ac6d2e21",
+    "bytes": 38874
+  },
+  "baseline": {
+    "HEAD": "8015b8b1213b8652b6584ad23f406077899802ad",
+    "parent": "fdd1fe3c660ae2b96a85b3618b77c91cd86f7423",
+    "tree": "e5bae9eb6a0e8e99b5d19c5b0cc5c6b76440053a"
+  },
+  "implementation_pins": [
+    {"path":"new pipeline/harness/k0b03_v1/scanner.py","sha256":"b644170766c1827b8317f4e413f93b2a7a4ba7effa439d6f6db070384c8b209e","bytes":14022},
+    {"path":"new pipeline/harness/k0b03_v1/contract.py","sha256":"e9647fd69d3fa7738c1efcef05b511dae0d26ac0be8573c6b9ba68b869afd035","bytes":5890},
+    {"path":"new pipeline/harness/k0b03_v1/guards.py","sha256":"2ce9315296a88559d5604df0e23f0e65aae0b49d2672d0e6131703b03c89e954","bytes":7269},
+    {"path":"new pipeline/harness/k0b03_v1/lifecycle.py","sha256":"3bfbd74969cd7b6780f6b722a6545170664149deb20061a767459a4b2701bae5","bytes":2295},
+    {"path":"new pipeline/harness/k0b03_v1/compatibility.py","sha256":"9927a7a0565ecd31ae22bb0592c8e2f31b5a89dace6000a5242e82c9dfca9c5a","bytes":2315},
+    {"path":"new pipeline/harness/k0b03_v1/compiler.py","sha256":"2ace6819adee07baf3bb08665090dcd415f81ad59dd47df0e81ae237345f857c","bytes":2649},
+    {"path":"new pipeline/tests/k0b03_v1/fixture_support.py","sha256":"9977628ad63501e73643efb6bf441ec88eb9bb024fd9c8e2ac1310eebcc24386","bytes":28148},
+    {"path":"new pipeline/toolchain/k0b03/toolchain-lock-v1.json","sha256":"f8f82543ebef0c87307a19bd73440bd1b116b1fa98f3cb4681283cbca74b1cb8","bytes":1559},
+    {"path":"new pipeline/toolchain/k0b03/invoke-v1.ps1","sha256":"5e334dd23b105810e8a81be1ba136f1652e6718156f9636691eefd56a6e2d801","bytes":2097}
+  ],
+  "fixture_catalogs": [
+    {"path":"new pipeline/tests/k0b03_v1/fixtures/detector-vector-recipes-v1.json","sha256":"13c811d0cd84d57edeacaf6819f95441a986fd235b88f428f420f2bc997a60a9","bytes":3563,"cases":64},
+    {"path":"new pipeline/tests/k0b03_v1/fixtures/guard-vectors-v1.json","sha256":"abd941d1e8d3b2407f0874ef317277098f9c8ea683c12157c409d3adabf4b88a","bytes":1603,"cases":28},
+    {"path":"new pipeline/tests/k0b03_v1/fixtures/lifecycle-recovery-vectors-v1.json","sha256":"062233fa78bb370cf8ba8d4be9ca4d1da2c6141ae741490c6a2dacbd4d598be5","bytes":2652,"lifecycle_cases":14,"compatibility_cases":14,"compiler_CLI_toolchain_cases":8}
+  ],
+  "case_partition": {
+    "scanner_normalization_redaction": 64,
+    "repository_path_tool_environment_egress_process": 28,
+    "lifecycle_abort_reconciliation": 14,
+    "migration_backup_restore_compatibility": 14,
+    "compiler_CLI_toolchain_single_source": 8,
+    "total": 128
+  },
+  "technical_attempts": [
+    {
+      "attempt": "A-1",
+      "mode": "validate",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 125,
+      "failures": 3,
+      "errors": 0,
+      "skips": 0,
+      "disposition": "fixture_expectation_correction_within_exact_scope",
+      "details": [
+        "D042_Google_fixture_used_characters_outside_the_declared_provider_alphabet",
+        "D045_entropy_fixture_used_punctuation_outside_the_declared_token_alphabet",
+        "D056_negative_five_line_fixture_reached_the_labelled_minimum_within_four_lines"
+      ]
+    },
+    {
+      "attempt": "A-2",
+      "mode": "test_repeat",
+      "test_count": 128,
+      "passed": 126,
+      "failures": 0,
+      "errors": 2,
+      "skips": 0,
+      "disposition": "test_case_work_directory_cleanup_added_within_exact_scope",
+      "details": [
+        "T004_and_T005_correctly_hit_the_production_compiler_no_overwrite_guard_on_outputs_retained_from_A_1",
+        "bounded_cleanup_was_added_only_for_each_tests_own_environment_work_case_directory",
+        "production_compiler_no_overwrite_behavior_remained_unchanged"
+      ]
+    },
+    {
+      "attempt": "A-3",
+      "mode": "test_repeat",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass"
+    },
+    {
+      "attempt": "B-1",
+      "mode": "validate",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass"
+    },
+    {
+      "attempt": "A-4",
+      "mode": "full_validate_after_precommit_exact_admission_contract_hardening",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass",
+      "details": [
+        "exact_executable_path_SHA256_and_version_are_now_bound_to_an_explicit_allowlist",
+        "working_directory_is_now_absolute_reparse_checked_existing_and_exactly_allowlisted"
+      ]
+    },
+    {
+      "attempt": "B-2",
+      "mode": "full_validate_after_precommit_exact_admission_contract_hardening",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass"
+    },
+    {
+      "attempt": "A-5",
+      "mode": "full_validate_after_precommit_resource_and_process_contract_completion",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass",
+      "details": [
+        "typed_timeout_CPU_memory_process_and_output_caps_are_bounded_by_the_single_policy_source",
+        "owned_process_tree_and_expected_result_enum_are_fail_closed"
+      ]
+    },
+    {
+      "attempt": "B-3",
+      "mode": "full_validate_after_precommit_resource_and_process_contract_completion",
+      "compile_result": "pass",
+      "test_count": 128,
+      "passed": 128,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "result": "pass"
+    }
+  ],
+  "final_environment_results": {
+    "A": {"passed":128,"failures":0,"errors":0,"skips":0},
+    "B": {"passed":128,"failures":0,"errors":0,"skips":0},
+    "identical_case_inventory": true,
+    "identical_rejection_semantics": true,
+    "identical_SQLite_compatibility_results": true,
+    "identical_sanitized_evidence_semantics": true
+  },
+  "reparse_validation": {
+    "real_file_symlink": "created_lstat_confirmed_as_symlink_and_Windows_reparse_then_rejected",
+    "real_directory_symlink": "created_lstat_confirmed_as_symlink_and_Windows_reparse_then_rejected",
+    "repository_root_intermediate_output_and_output_parent_surfaces": "passed",
+    "synthetic_generic_reparse_branch": "passed",
+    "write_through": 0,
+    "canary_mutations": 0,
+    "residual_reparse_paths_before_cleanup": 0
+  },
+  "compiled_outputs": [
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-detector-profile.json","sha256":"b6fb9beab3396c7c3afe99dd071e835b7aca78e64748d0aa1f824be98e697e7b","bytes":4388},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-hash-profile-map.json","sha256":"6495a078ad334c839350126c45fca962758a6cfd10f16ae58a8d989dc69282ee","bytes":772},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-repository-tool-policy.json","sha256":"3ad8967ae634a35e0f8b87a59807d370f2cc89fb62f9cf9cbc003e1b3ff04753","bytes":1576},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-contract-manifest.json","sha256":"0239222cf1d4d21779acf3546b3e838ed8700b0884b252434d913b68a1aa6c9a","bytes":1362}
+  ],
+  "compiled_copy_count_compared_per_output": 4,
+  "cross_environment_byte_identity": true,
+  "deterministic_second_compile": true,
+  "network_attempts": 0,
+  "dependencies_installed": 0,
+  "provider_or_model_calls": 0,
+  "remote_effects": 0,
+  "process_residue": 0,
+  "repository_bytecode_or_temp_residue": 0,
+  "cleanup": {
+    "PowerShell_recursive_delete_attempts_started": 0,
+    "PowerShell_recursive_delete_attempts_rejected_before_process_start_by_tool_policy": 2,
+    "executed_method": "single_Python_stdlib_allowlisted_resolve_reparse_assertion_and_shutil_rmtree_process",
+    "root_A_absent": true,
+    "root_B_absent": true,
+    "final_contract_hardening_rerun_cleanup": "single_Python_stdlib_exact_root_identity_reparse_assertion_and_shutil_rmtree_process_succeeded",
+    "final_resource_and_process_contract_rerun_cleanup": "single_Python_stdlib_exact_root_identity_reparse_assertion_and_shutil_rmtree_process_succeeded",
+    "other_paths_deleted": 0
+  },
+  "scanner_boundary": {
+    "statement": "Scanner is heuristic hygiene only. It does not prove absence of secrets, prompt-injection safety, JWT/token authenticity, provenance, capability safety, or tool/egress compliance, and it does not satisfy F10 by itself.",
+    "raw_decoded_preview_substring_hash_or_reversible_material_in_evidence": false,
+    "authorizes_any_effect": false
+  },
+  "result": "pass",
+  "status": "implemented_validated_pending_fresh_context_independent_audit_runtime_not_authorized",
+  "state_gate_change": false,
+  "runtime_authority": "none"
+}

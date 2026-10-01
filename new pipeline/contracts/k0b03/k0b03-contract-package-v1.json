@@ -1,0 +1,25 @@
+{
+  "package_id": "pipeline-v2.k0b03-contract-package-v1",
+  "package_version": "1.0.0",
+  "schemas": [
+    "new pipeline/contracts/k0b03/detector-profile-v1.schema.json",
+    "new pipeline/contracts/k0b03/scan-request-v1.schema.json",
+    "new pipeline/contracts/k0b03/scan-result-v1.schema.json",
+    "new pipeline/contracts/k0b03/invocation-envelope-v1.schema.json",
+    "new pipeline/contracts/k0b03/guard-result-v1.schema.json",
+    "new pipeline/contracts/k0b03/compatibility-evidence-v1.schema.json"
+  ],
+  "registries": [
+    "new pipeline/registry/k0b03/detector-profile-v1.json",
+    "new pipeline/registry/k0b03/hash-profile-registry-v1.json",
+    "new pipeline/registry/k0b03/repository-tool-policy-v1.json"
+  ],
+  "migration": "new pipeline/harness/migrations/0007_k0b03_compatibility_evidence_v1.sql",
+  "compiled_outputs": [
+    "compiled-detector-profile.json",
+    "compiled-hash-profile-map.json",
+    "compiled-repository-tool-policy.json",
+    "compiled-contract-manifest.json"
+  ],
+  "runtime_authority": "none"
+}

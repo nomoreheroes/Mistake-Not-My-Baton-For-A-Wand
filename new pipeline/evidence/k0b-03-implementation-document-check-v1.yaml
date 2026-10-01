@@ -1,0 +1,88 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.implementation-document-check-v1",
+  "schema_version": 1,
+  "checked_on": "2026-10-01",
+  "result": "pass",
+  "baseline": {
+    "HEAD": "8015b8b1213b8652b6584ad23f406077899802ad",
+    "parent": "fdd1fe3c660ae2b96a85b3618b77c91cd86f7423",
+    "tree": "e5bae9eb6a0e8e99b5d19c5b0cc5c6b76440053a"
+  },
+  "authority": {
+    "path": "new pipeline/requests/k0b-03-implementation-and-validation-approval-request-v1.yaml",
+    "sha256": "a9f2898950663c6939df3afea998f51f467a576d9832cde1491bb0c6ac6d2e21",
+    "bytes": 38874,
+    "owner_confirmation": "separate_exact_SHA256_size_and_full_exact_scope_confirmation_received"
+  },
+  "exact_inventory": {
+    "path_count": 47,
+    "all_new": true,
+    "existing_path_modifications": 0,
+    "deletions": 0,
+    "source": "approval_request.future_write_scope.paths",
+    "document_check_path": "new pipeline/evidence/k0b-03-implementation-document-check-v1.yaml",
+    "pre_document_check_manifest": {
+      "profile": "ordinal_path_TAB_lowercase_sha256_TAB_decimal_bytes_LF",
+      "path_count": 46,
+      "content_bytes": 162012,
+      "manifest_bytes": 5775,
+      "sha256": "bf442e61d87506c1a180979a35592decee91f7ec1226a2de338628e8646addc1"
+    }
+  },
+  "cross_document_pins": [
+    {"path":"new pipeline/decisions/k0b-03-implementation-and-validation-owner-disposition-v1.yaml","sha256":"82a06f531289f49492eeed19da24967ac72c4defd14ea266d956c6ecf286fa37","bytes":2086},
+    {"path":"new pipeline/evidence/k0b-03-implementation-input-manifest-v1.yaml","sha256":"147730788b6bb83e45129fcfb2bbe0f4d84621505495876334e3cf9fa4dedc4b","bytes":1270},
+    {"path":"new pipeline/evidence/k0b-03-implementation-session-entry-v1.yaml","sha256":"3e0094df2341f9eb0499257b0d8fbe46ee0dbf165f4fdf2f4f7c31fdf0148840","bytes":1139},
+    {"path":"new pipeline/evidence/k0b-03-contract-compiler-receipt-v1.yaml","sha256":"45733394b821a33d9794f29836e6a90bbf1cc495c0812f5b0c10caa2fb8f9586","bytes":1975},
+    {"path":"new pipeline/evidence/k0b-03-compiled-output-manifest-v1.yaml","sha256":"984d1fed62e97e41507d473be29cef76d2269c59141f85138c75660f862cf3ce","bytes":1085},
+    {"path":"new pipeline/evidence/k0b-03-implementation-validation-v1.yaml","sha256":"2f4c322f8f41c49dc274315f60bd428075280fcd653d1bb5b1a36128562187f4","bytes":8980},
+    {"path":"new pipeline/receipts/k0b-03-implementation-completion-v1.yaml","sha256":"556e7db383ac98202c82ca201a9f2501c4096f8416192ed2f4e240378275c4d0","bytes":1723}
+  ],
+  "compiled_outputs": [
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-detector-profile.json","sha256":"b6fb9beab3396c7c3afe99dd071e835b7aca78e64748d0aa1f824be98e697e7b","bytes":4388},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-hash-profile-map.json","sha256":"6495a078ad334c839350126c45fca962758a6cfd10f16ae58a8d989dc69282ee","bytes":772},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-repository-tool-policy.json","sha256":"3ad8967ae634a35e0f8b87a59807d370f2cc89fb62f9cf9cbc003e1b3ff04753","bytes":1576},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-contract-manifest.json","sha256":"0239222cf1d4d21779acf3546b3e838ed8700b0884b252434d913b68a1aa6c9a","bytes":1362}
+  ],
+  "checks": [
+    {"id":"K0B03-DOC-01","claim":"baseline_HEAD_parent_tree_and_clean_tracked_index_at_entry","result":"pass"},
+    {"id":"K0B03-DOC-02","claim":"approval_request_hash_size_status_and_owner_confirmation","result":"pass"},
+    {"id":"K0B03-DOC-03","claim":"exact_63_path_input_manifest_and_direct_pins","result":"pass"},
+    {"id":"K0B03-DOC-04","claim":"exact_47_path_all_new_inventory_and_zero_existing_path_changes","result":"pass"},
+    {"id":"K0B03-DOC-05","claim":"registry_schema_contract_migration_and_compiled_cross_bindings","result":"pass"},
+    {"id":"K0B03-DOC-06","claim":"scanner_is_heuristic_hygiene_only_and_never_authorizes","result":"pass"},
+    {"id":"K0B03-DOC-07","claim":"all_required_detector_families_normalization_precedence_redaction_and_caps","result":"pass"},
+    {"id":"K0B03-DOC-08","claim":"repository_path_escape_symlink_junction_and_generic_reparse_guards","result":"pass"},
+    {"id":"K0B03-DOC-09","claim":"exact_executable_path_SHA256_version_argument_environment_and_working_directory_admission","result":"pass"},
+    {"id":"K0B03-DOC-10","claim":"closed_egress_process_resource_output_and_unknown_effect_contract","result":"pass"},
+    {"id":"K0B03-DOC-11","claim":"abort_incident_freeze_reconciliation_and_resume_contract","result":"pass"},
+    {"id":"K0B03-DOC-12","claim":"additive_migration_backup_restore_quarantine_and_compatibility_contract","result":"pass"},
+    {"id":"K0B03-DOC-13","claim":"exact_128_case_partition_in_each_environment","result":"pass"},
+    {"id":"K0B03-DOC-14","claim":"environment_A_128_passed_zero_failures_errors_skips","result":"pass"},
+    {"id":"K0B03-DOC-15","claim":"environment_B_128_passed_zero_failures_errors_skips","result":"pass"},
+    {"id":"K0B03-DOC-16","claim":"four_compiled_outputs_identical_across_A_B_rerenders_and_repository","result":"pass"},
+    {"id":"K0B03-DOC-17","claim":"real_symlink_and_generic_reparse_cases_passed_with_zero_canary_mutation","result":"pass"},
+    {"id":"K0B03-DOC-18","claim":"technical_attempts_and_precommit_contract_hardening_are_disclosed","result":"pass"},
+    {"id":"K0B03-DOC-19","claim":"both_exact_locked_environment_roots_absent_before_staging","result":"pass"},
+    {"id":"K0B03-DOC-20","claim":"zero_repository_bytecode_temp_process_network_dependency_or_remote_effect_residue","result":"pass"},
+    {"id":"K0B03-DOC-21","claim":"UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_checks","result":"pass"},
+    {"id":"K0B03-DOC-22","claim":"Python_AST_and_JSON_parse_checks","result":"pass"},
+    {"id":"K0B03-DOC-23","claim":"state_STATE_renderer_profile_and_existing_repository_paths_unchanged","result":"pass"},
+    {"id":"K0B03-DOC-24","claim":"gate_inventory_6_open_11_closed_K0b03_blocked_and_untrusted_shapes_future_open_unchanged","result":"pass"},
+    {"id":"K0B03-DOC-25","claim":"K0b04_K0b05_N1_runtime_provider_model_and_publication_not_advanced","result":"pass"}
+  ],
+  "canonical_state_pins_unchanged": [
+    {"path":"new pipeline/state/state.yaml","sha256":"6467caa568416b7232aa8fd070f502abf9278fb62363b76dbf3d8a75cc629443","bytes":90886},
+    {"path":"new pipeline/state/STATE.md","sha256":"f7d6162a319214b6ab9b1052f07f3fd6c4523242ed9c145379b943246d96a8f8","bytes":91326},
+    {"path":"new pipeline/state/renderer/k0b03_v8_1/renderer.py","sha256":"bc6ee394d265dbb488b1933f684c0519757fbcf2a7fa93aa9ce69fee5cd94bb0","bytes":25704},
+    {"path":"new pipeline/state/renderer/k0b03_v8_1/projection-profile-v8-1.yaml","sha256":"74f4fd297af0c4ed31e44c682f8440a299c377fa097afa5ac0476b53090e63d5","bytes":81499}
+  ],
+  "retained_governance": {
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b_03": "blocked_unchanged",
+    "open_closed_gate_inventory": "6/11_unchanged",
+    "mandatory_next_step": "fresh_context_read_only_non_author_independent_audit"
+  },
+  "runtime_authority": "none"
+}

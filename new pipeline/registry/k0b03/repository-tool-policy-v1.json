@@ -1,0 +1,54 @@
+{
+  "policy_id": "pipeline-v2.k0b03-repository-tool-policy-v1",
+  "policy_version": "1.0.0",
+  "repository": {
+    "root_check_before_resolve": true,
+    "relative_paths_only": true,
+    "reject_escape": true,
+    "reject_symlink": true,
+    "reject_junction": true,
+    "reject_any_windows_reparse_point": true,
+    "check_every_existing_component": true,
+    "content_derived_paths": false
+  },
+  "tool": {
+    "exact_executable_path_required": true,
+    "exact_executable_sha256_required": true,
+    "exact_version_required": true,
+    "closed_argument_grammar": true,
+    "exact_working_directory_required": true,
+    "response_files": false,
+    "shell_interpolation": false,
+    "ambient_PATH_substitution": false,
+    "implicit_PYTHONPATH": false,
+    "hooks_plugins_and_credential_helpers": false
+  },
+  "environment": {
+    "allowlist_only": true,
+    "raw_credentials": false,
+    "runtime_secret_values": false,
+    "bytecode": false
+  },
+  "egress": {
+    "default": "deny",
+    "allowed_hosts": [],
+    "model_or_provider_calls": false,
+    "dependency_acquisition": false,
+    "remote_effects": false
+  },
+  "process": {
+    "owned_declared_tree_only": true,
+    "stable_effect_identity": true,
+    "timeout_required": true,
+    "resource_limits_required": true,
+    "output_byte_limit_required": true,
+    "timeout_seconds_maximum": 300,
+    "cpu_seconds_maximum": 120,
+    "memory_bytes_maximum": 536870912,
+    "process_count_maximum": 8,
+    "output_bytes_maximum": 10485760,
+    "allowed_expected_results": ["exit_0"],
+    "arbitrary_PID_kill": false,
+    "unknown_effect_disposition": "block_preserve_evidence_no_retry"
+  }
+}

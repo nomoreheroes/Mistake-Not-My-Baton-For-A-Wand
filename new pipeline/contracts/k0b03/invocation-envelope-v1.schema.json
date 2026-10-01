@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2://contracts/k0b03/invocation-envelope-v1",
+  "type": "object",
+  "required": ["schema_version", "effect_id", "executable", "executable_sha256", "executable_version", "arguments", "working_directory", "environment", "timeout_seconds", "cpu_seconds_maximum", "memory_bytes_maximum", "process_count_maximum", "output_bytes_maximum", "owned_process_tree", "cancellable", "expected_result"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "effect_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]{1,128}$"},
+    "executable": {"type": "string"},
+    "executable_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "executable_version": {"type": "string", "minLength": 1},
+    "arguments": {"type": "array", "items": {"type": "string"}},
+    "working_directory": {"type": "string"},
+    "environment": {"type": "object", "additionalProperties": {"type": "string"}},
+    "timeout_seconds": {"type": "integer", "minimum": 1},
+    "cpu_seconds_maximum": {"type": "integer", "minimum": 1},
+    "memory_bytes_maximum": {"type": "integer", "minimum": 1},
+    "process_count_maximum": {"type": "integer", "minimum": 1},
+    "output_bytes_maximum": {"type": "integer", "minimum": 1},
+    "owned_process_tree": {"const": true},
+    "cancellable": {"type": "boolean"},
+    "expected_result": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "decision_id": "pipeline-v2.k0b-03.implementation-and-validation-owner-disposition-v1",
+  "schema_version": 1,
+  "decided_on": "2026-10-01",
+  "work_item_id": "K0b-03",
+  "approval_request": {
+    "path": "new pipeline/requests/k0b-03-implementation-and-validation-approval-request-v1.yaml",
+    "sha256": "a9f2898950663c6939df3afea998f51f467a576d9832cde1491bb0c6ac6d2e21",
+    "bytes": 38874,
+    "owner_confirmation": "separate_exact_complete_hash_and_size_confirmation_received"
+  },
+  "disposition": "authorize_exact_47_path_all_new_K0b03_implementation_and_two_environment_validation_transaction",
+  "scope": {
+    "new_path_count": 47,
+    "existing_path_modification_count": 0,
+    "detector_families": ["labelled_secret", "private_key", "JWT", "Bearer", "provider_token", "high_entropy", "base64_and_base64url", "split_line"],
+    "guards": ["repository", "worktree", "path", "tool", "environment", "egress", "process"],
+    "lifecycle": ["abort", "incident", "publisher_freeze", "reconciliation"],
+    "compatibility": ["additive_migration_0007", "backup", "restore", "quarantine", "recovery", "resume_check"],
+    "validation": "two_exact_stdlib_only_environments_128_cases_each"
+  },
+  "scanner_boundary": {
+    "classification": "heuristic_hygiene_only",
+    "statement": "Scanner is heuristic hygiene only. It does not prove absence of secrets, prompt-injection safety, JWT/token authenticity, provenance, capability safety, or tool/egress compliance, and it does not satisfy F10 by itself.",
+    "can_block": true,
+    "can_authorize": false
+  },
+  "completion_status_if_all_checks_pass": "implemented_validated_pending_fresh_context_independent_audit_runtime_not_authorized",
+  "retained_state": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b_03": "blocked",
+    "open_closed_gate_inventory": "6/11",
+    "state_STATE_renderer_profile": "unchanged",
+    "runtime_authority": "none"
+  },
+  "mandatory_next_transaction": "fresh_context_read_only_non_author_independent_audit_before_owner_closure_or_gate_transition"
+}

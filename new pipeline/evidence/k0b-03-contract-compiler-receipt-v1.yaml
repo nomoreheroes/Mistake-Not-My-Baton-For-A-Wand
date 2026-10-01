@@ -1,0 +1,25 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.contract-compiler-receipt-v1",
+  "schema_version": 1,
+  "compiler_version": "1.0.0",
+  "profile": "canonical-json-v1",
+  "source_bindings": [
+    {"path":"new pipeline/registry/k0b03/detector-profile-v1.json","sha256":"50c82f591cc14889417e33baa46a8b433abcb6989fdc1432ee311ae6f8a4ebb4","bytes":4963},
+    {"path":"new pipeline/registry/k0b03/hash-profile-registry-v1.json","sha256":"5d522c41e6297c8938239a6547c35d262d844c7dd0d787e9454eb918958f8606","bytes":840},
+    {"path":"new pipeline/registry/k0b03/repository-tool-policy-v1.json","sha256":"69929dc842db616a4a65631a93c2c933ba80d9eb27ecde74a985102366d69d14","bytes":1646},
+    {"path":"new pipeline/contracts/k0b03/k0b03-contract-package-v1.json","sha256":"ede4174e8113f1caee657e59a5951e798baa474a02b626ba48d9589ead045381","bytes":1035},
+    {"path":"new pipeline/harness/migrations/0007_k0b03_compatibility_evidence_v1.sql","sha256":"5111fb4b2e4d94c7f8e0710eda84eb1994242559e8628a880056e9bf2028c804","bytes":1435}
+  ],
+  "environments": ["A", "B"],
+  "compile_count_per_environment": 2,
+  "all_four_copies_byte_identical": true,
+  "deterministic_rerender": true,
+  "outputs": [
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-detector-profile.json","sha256":"b6fb9beab3396c7c3afe99dd071e835b7aca78e64748d0aa1f824be98e697e7b","bytes":4388},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-hash-profile-map.json","sha256":"6495a078ad334c839350126c45fca962758a6cfd10f16ae58a8d989dc69282ee","bytes":772},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-repository-tool-policy.json","sha256":"3ad8967ae634a35e0f8b87a59807d370f2cc89fb62f9cf9cbc003e1b3ff04753","bytes":1576},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-contract-manifest.json","sha256":"0239222cf1d4d21779acf3546b3e838ed8700b0884b252434d913b68a1aa6c9a","bytes":1362}
+  ],
+  "materialization": "repository_outputs_created_only_after_cross_environment_byte_identity",
+  "runtime_authority": "none"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2://contracts/k0b03/detector-profile-v1",
+  "type": "object",
+  "required": ["profile_id", "profile_version", "classification", "input", "precedence", "labelled_secret", "jwt", "bearer", "provider_tokens", "high_entropy", "base64", "split_line", "finding", "mandatory_hygiene_statement"],
+  "properties": {
+    "profile_id": {"const": "pipeline-v2.k0b03-detector-profile-v1"},
+    "profile_version": {"const": "1.0.0"},
+    "classification": {"const": "heuristic_hygiene_only"},
+    "provider_tokens": {"type": "array", "minItems": 18},
+    "precedence": {"type": "array", "minItems": 9, "maxItems": 9},
+    "mandatory_hygiene_statement": {"type": "string", "minLength": 200}
+  },
+  "additionalProperties": false
+}

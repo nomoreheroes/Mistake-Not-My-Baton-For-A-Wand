@@ -1,0 +1,29 @@
+{
+  "registry_id": "pipeline-v2.k0b03-hash-profile-registry-v1",
+  "registry_version": "1.0.0",
+  "profiles": [
+    {
+      "profile_id": "canonical-json-v1",
+      "media_type": "application/json",
+      "encoding": "UTF-8",
+      "BOM": false,
+      "key_order": "ordinal",
+      "separators": [",", ":"],
+      "ensure_ascii": false,
+      "final_LF_count": 1,
+      "duplicate_keys": "reject",
+      "hash_algorithm": "sha256"
+    },
+    {
+      "profile_id": "raw-file-sha256-v1",
+      "input": "exact_file_bytes",
+      "hash_algorithm": "sha256"
+    },
+    {
+      "profile_id": "canonical-yaml-v1-reference",
+      "authority_path": "new pipeline/registry/hash-profiles/canonical-yaml-v1.yaml",
+      "authority_sha256": "46597d916fdcc1954aa678a324d4c7d8f59a7c89570cf48286d59224a3986992",
+      "redefined_here": false
+    }
+  ]
+}

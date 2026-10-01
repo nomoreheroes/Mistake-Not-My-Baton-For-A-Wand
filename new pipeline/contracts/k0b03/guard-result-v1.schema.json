@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2://contracts/k0b03/guard-result-v1",
+  "type": "object",
+  "required": ["schema_version", "result", "authorized", "code", "sanitized_evidence"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result": {"enum": ["admissible_for_next_guard", "blocked"]},
+    "authorized": {"const": false},
+    "code": {"type": "string", "pattern": "^[A-Z0-9_]{1,96}$"},
+    "sanitized_evidence": {"type": "object"}
+  },
+  "additionalProperties": false
+}

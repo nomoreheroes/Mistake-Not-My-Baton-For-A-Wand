@@ -1,0 +1,17 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.compiled-output-manifest-v1",
+  "schema_version": 1,
+  "profile": "path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+  "path_count": 4,
+  "content_bytes": 8098,
+  "entries": [
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-contract-manifest.json","sha256":"0239222cf1d4d21779acf3546b3e838ed8700b0884b252434d913b68a1aa6c9a","bytes":1362},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-detector-profile.json","sha256":"b6fb9beab3396c7c3afe99dd071e835b7aca78e64748d0aa1f824be98e697e7b","bytes":4388},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-hash-profile-map.json","sha256":"6495a078ad334c839350126c45fca962758a6cfd10f16ae58a8d989dc69282ee","bytes":772},
+    {"path":"new pipeline/compiled/k0b03_v1/compiled-repository-tool-policy.json","sha256":"3ad8967ae634a35e0f8b87a59807d370f2cc89fb62f9cf9cbc003e1b3ff04753","bytes":1576}
+  ],
+  "source_of_truth": "versioned_K0b03_registries_contract_package_and_additive_migration",
+  "hand_editing": "forbidden",
+  "cross_environment_identity": true,
+  "runtime_authority": "none"
+}

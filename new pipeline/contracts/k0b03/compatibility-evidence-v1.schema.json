@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-v2://contracts/k0b03/compatibility-evidence-v1",
+  "type": "object",
+  "required": ["schema_version", "operation", "result", "source_schema_version", "target_schema_version", "evidence_sha256"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "operation": {"enum": ["migrate", "backup", "restore", "quarantine", "recover", "resume_check"]},
+    "result": {"enum": ["pass", "blocked"]},
+    "source_schema_version": {"type": "integer", "minimum": 0},
+    "target_schema_version": {"type": "integer", "minimum": 0},
+    "evidence_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

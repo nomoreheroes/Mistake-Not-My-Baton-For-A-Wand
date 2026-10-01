@@ -1,0 +1,27 @@
+{
+  "evidence_id": "pipeline-v2.k0b-03.implementation-session-entry-v1",
+  "schema_version": 1,
+  "captured_on": "2026-10-01",
+  "request_sha256": "a9f2898950663c6939df3afea998f51f467a576d9832cde1491bb0c6ac6d2e21",
+  "entry": {
+    "baseline_match": true,
+    "request_match": true,
+    "request_only_untracked_path": true,
+    "other_46_targets_absent": true,
+    "locked_environment_roots_absent": true,
+    "read_manifest_match": true,
+    "direct_pin_match": true
+  },
+  "toolchain": {
+    "Python": {"version":"3.12.7","sha256":"6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0"},
+    "PowerShell": {"version":"5.1.20348.4294","sha256":"38f4384643b3fa0de714d2367b712c2e0fa1c89e2cfd131ae6b831ad962b1033"},
+    "Git": {"version":"2.51.2.windows.1","sha256":"54194a1af7cfb6730448ce14b8f2c1dddd9f950b7f995dc351c1ed16eb179249"},
+    "dependencies": [],
+    "network_hosts": []
+  },
+  "locked_environments": [
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-implementation-v1-A",
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-implementation-v1-B"
+  ],
+  "runtime_authority": "none"
+}

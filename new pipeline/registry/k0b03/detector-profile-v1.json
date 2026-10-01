@@ -1,0 +1,115 @@
+{
+  "profile_id": "pipeline-v2.k0b03-detector-profile-v1",
+  "profile_version": "1.0.0",
+  "classification": "heuristic_hygiene_only",
+  "input": {
+    "encoding": "strict_utf8",
+    "maximum_bytes": 1048576,
+    "maximum_findings": 64,
+    "normalization": "none",
+    "byte_offsets": "original_input",
+    "physical_line_boundaries": ["CRLF", "LF", "CR"]
+  },
+  "precedence": [
+    "private_key",
+    "labelled_secret",
+    "provider_token",
+    "jwt",
+    "authorization_bearer",
+    "standalone_bearer",
+    "base64",
+    "high_entropy",
+    "split_line"
+  ],
+  "labelled_secret": {
+    "labels": [
+      "api_key",
+      "access_token",
+      "auth_token",
+      "password",
+      "passwd",
+      "secret",
+      "authorization",
+      "private_key",
+      "client_secret",
+      "aws_access_key_id"
+    ],
+    "accept_hyphen_underscore_variants": true,
+    "value_length": {"minimum": 8, "maximum": 4096},
+    "private_key_headers": ["RSA", "EC", "OPENSSH", "GENERIC"]
+  },
+  "jwt": {
+    "segment_1_length": {"minimum": 2, "maximum": 8192},
+    "segment_2_length": {"minimum": 2, "maximum": 8192},
+    "segment_3_length": {"minimum": 0, "maximum": 8192},
+    "maximum_total_length": 16384,
+    "terminal_padding": "permitted",
+    "decoded_json_required": false,
+    "authenticity_claim": false
+  },
+  "bearer": {
+    "ascii_case_insensitive": true,
+    "token_length": {"minimum": 8, "maximum": 16384},
+    "authorization_form": true,
+    "standalone_form": true,
+    "word_alone_is_finding": false
+  },
+  "provider_tokens": [
+    {"provider": "OpenAI", "prefix": "sk-proj-", "suffix_minimum": 16, "suffix_maximum": 4096},
+    {"provider": "OpenAI", "prefix": "sk-svcacct-", "suffix_minimum": 16, "suffix_maximum": 4096},
+    {"provider": "OpenAI", "prefix": "sk-", "suffix_minimum": 16, "suffix_maximum": 4096},
+    {"provider": "Anthropic", "prefix": "sk-ant-", "suffix_minimum": 16, "suffix_maximum": 4096},
+    {"provider": "GitHub", "prefix": "github_pat_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "GitHub", "prefix": "ghp_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "GitHub", "prefix": "gho_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "GitHub", "prefix": "ghu_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "GitHub", "prefix": "ghs_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "GitHub", "prefix": "ghr_", "suffix_minimum": 20, "suffix_maximum": 255},
+    {"provider": "Slack", "prefix": "xoxb-", "suffix_minimum": 10, "suffix_maximum": 255},
+    {"provider": "Slack", "prefix": "xoxa-", "suffix_minimum": 10, "suffix_maximum": 255},
+    {"provider": "Slack", "prefix": "xoxp-", "suffix_minimum": 10, "suffix_maximum": 255},
+    {"provider": "Slack", "prefix": "xoxr-", "suffix_minimum": 10, "suffix_maximum": 255},
+    {"provider": "Slack", "prefix": "xoxs-", "suffix_minimum": 10, "suffix_maximum": 255},
+    {"provider": "AWS", "prefix": "AKIA", "suffix_minimum": 16, "suffix_maximum": 16, "suffix_alphabet": "uppercase_alphanumeric"},
+    {"provider": "AWS", "prefix": "ASIA", "suffix_minimum": 16, "suffix_maximum": 16, "suffix_alphabet": "uppercase_alphanumeric"},
+    {"provider": "Google", "prefix": "AIza", "suffix_minimum": 35, "suffix_maximum": 35, "suffix_alphabet": "ascii_alphanumeric_underscore_hyphen"}
+  ],
+  "high_entropy": {
+    "candidate_length": {"minimum": 24, "maximum": 4096},
+    "shannon_bits_per_character_minimum": 4.0,
+    "required_character_classes": 3,
+    "exclude_unlabelled_pure_hex_lengths": [40, 64]
+  },
+  "base64": {
+    "candidate_length": {"minimum": 24, "maximum": 16384},
+    "strict_decode": true,
+    "permit_unpadded_terminal_form": true,
+    "decoded_bytes_maximum": 12288,
+    "decoded_scan_families": ["labelled_secret", "jwt", "bearer", "provider_token", "high_entropy"],
+    "recursive_decode": false
+  },
+  "split_line": {
+    "adjacent_lines_maximum": 4,
+    "combined_characters_maximum": 16384,
+    "remove_at_join": "line_break_and_horizontal_whitespace_only",
+    "families": ["labelled_secret", "jwt", "bearer", "provider_token", "high_entropy", "base64"]
+  },
+  "finding": {
+    "allowed_fields": [
+      "finding_id",
+      "detector_category",
+      "detector_version",
+      "source_id",
+      "original_byte_spans",
+      "match_length",
+      "scanner_profile_hash",
+      "safe_source_binding",
+      "representation_kind",
+      "blocking_disposition"
+    ],
+    "forbidden_material": ["raw_match", "decoded_material", "preview", "substring_hash", "reversible_encoding"],
+    "severity_semantics": "hygiene_blocking_not_risk_or_liveness_rating",
+    "clean_semantics": "no_shape_finding_observed_not_authorization"
+  },
+  "mandatory_hygiene_statement": "Scanner is heuristic hygiene only. It does not prove absence of secrets, prompt-injection safety, JWT/token authenticity, provenance, capability safety, or tool/egress compliance, and it does not satisfy F10 by itself."
+}
