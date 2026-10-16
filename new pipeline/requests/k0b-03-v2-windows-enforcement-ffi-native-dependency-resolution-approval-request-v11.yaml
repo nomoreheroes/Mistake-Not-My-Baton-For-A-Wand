@@ -1,0 +1,261 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-FFI-NATIVE-DEPENDENCY-RESOLUTION-APPROVAL-V11",
+  "schema_version": "1.0.0",
+  "version": "11.0.0",
+  "prepared_on": "2026-10-02",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_bounded_read_only_native_dependency_resolution_approval_request",
+  "serialization": {
+    "syntax": "strict_JSON_object_valid_as_YAML_1_2",
+    "encoding": "UTF-8_without_BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Record the v10 PE closure stop without a projection claim and request a separate bounded read-only assessment of exactly one prospective ffi.dll source path outside the prior closed world, without directory enumeration, runtime observation repetition, projection materialization, or capability execution.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "repeat_read_only_baseline_and_twelve_entry_pin_checks",
+      "confirm_absence_of_this_v11_target",
+      "create_only_this_v11_approval_request",
+      "validate_UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_absence",
+      "compute_this_request_full_SHA256_and_decimal_byte_size"
+    ],
+    "not_authorized_now": [
+      "read_stat_hash_or_otherwise_check_C:/ProgramData/anaconda3/Library/bin/ffi.dll",
+      "enumerate_C:/ProgramData/anaconda3/Library/bin",
+      "launch_a_new_assessment_driver_or_other_process",
+      "repeat_or_continue_the_runtime_import_observation",
+      "modify_requests_v1_through_v10_probe_or_worker",
+      "create_runtime_projection_profile_root_ACL_environment_fixture_or_temp_target",
+      "launch_any_child_process",
+      "create_socket_listener_connection_or_use_DNS_network",
+      "use_dependency_pip_wheel_or_venv",
+      "create_owner_disposition_capability_evidence_document_check_or_other_repository_path",
+      "stage_or_commit",
+      "close_capability_prerequisite_finding_or_gate",
+      "modify_state_STATE_renderer_profile_plan_status_gate_or_runtime_authority",
+      "advance_K0b03_K0b04_K0b05_or_N1"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean"
+  },
+  "entry_untracked_inventory": {
+    "count": 12,
+    "paths": [
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml","sha256":"ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319","bytes":35702,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml","sha256":"7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84","bytes":20321,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml","sha256":"4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425","bytes":18538,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml","sha256":"8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a","bytes":14830,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml","sha256":"d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce","bytes":11938,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml","sha256":"a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6","bytes":18556,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml","sha256":"a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233","bytes":27492,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml","sha256":"b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d","bytes":17554,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml","sha256":"adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b","bytes":17642,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml","sha256":"a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd","bytes":19430,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py","sha256":"caa9bc7dd7e3731beb749639df953e8c3d878a86b0d991137c7a03f25f37f7c8","bytes":73269,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py","sha256":"06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83","bytes":12602,"disposition":"preserve_byte_identical"}
+    ]
+  },
+  "v10_attempt_provenance": {
+    "attempt_count": 1,
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": ["-I", "-B", "-S"],
+      "source_transport": "stdin_without_temp_file"
+    },
+    "v9_pseudo_origin_correction": "passed",
+    "branch_aware_dispositions": {
+      "subprocess_Popen_grp_line_906": "passed",
+      "subprocess_Popen_grp_line_934": "passed",
+      "subprocess_Popen_pwd_line_962": "passed"
+    },
+    "reached_phases": [
+      "initial_and_final_module_snapshots",
+      "corrected_module_origin_classification",
+      "PYC_to_PY_source_mapping",
+      "worker_used_API_function_local_import_analysis",
+      "three_exact_branch_aware_dispositions",
+      "observed_module_file_hashing",
+      "exact_required_PYD_identification",
+      "PE_dependency_analysis"
+    ],
+    "not_reached_or_not_materialized": [
+      "complete_PE_native_dependency_closure",
+      "immutable_native_manifest_reproduction",
+      "exact_projection_manifest",
+      "projection_claim"
+    ],
+    "stop_kind": "required_PYD_normal_import_unresolved_in_the_authorized_resolver_roots",
+    "exact_stop_code": "PE_CLOSURE_BLOCKER",
+    "blocking_row": {
+      "importer": "C:/ProgramData/anaconda3/DLLs/_ctypes.pyd",
+      "dll": "ffi.dll",
+      "import_kind": "normal",
+      "resolved_path": null,
+      "classification": "unresolved"
+    },
+    "second_assessment_process_launched": false,
+    "exact_projection_manifest_exists_after_v10": false,
+    "partial_attempt_may_be_used_as_projection_claim": false,
+    "repository_or_external_writes": false,
+    "child_process_socket_DNS_or_network_effect": false,
+    "profile_ACL_root_environment_fixture_or_temp_target_effect": false,
+    "state_gate_or_runtime_effect": false
+  },
+  "pinned_importer": {
+    "path": "C:/ProgramData/anaconda3/DLLs/_ctypes.pyd",
+    "sha256": "bb4ab3ebfcd442ab75425a3deb0f4ca5ee4305858f862848f3ddfaa41691f8c5",
+    "bytes": 133904,
+    "PE_machine": "AMD64_expected",
+    "required_normal_import": "ffi.dll"
+  },
+  "prior_authorized_resolver_results": {
+    "import_name": "ffi.dll",
+    "candidates": [
+      {"path":"C:/ProgramData/anaconda3/DLLs/ffi.dll","exists":false},
+      {"path":"C:/ProgramData/anaconda3/ffi.dll","exists":false},
+      {"path":"C:/Windows/System32/ffi.dll","exists":false},
+      {"path":"C:/Windows/System/ffi.dll","exists":false},
+      {"path":"C:/Windows/ffi.dll","exists":false}
+    ],
+    "Library_bin_was_in_prior_read_scope": false,
+    "Library_bin_was_read_or_enumerated": false
+  },
+  "proposed_future_bounded_native_dependency_assessment": {
+    "authority_activation": "requires_separate_owner_confirmation_of_this_request_full_SHA256_and_size",
+    "result_destination": "conversation_only",
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": ["-I", "-B", "-S"],
+      "source_transport": "stdin_without_temp_file",
+      "libraries": ["Python_stdlib_only"],
+      "process_count": 1
+    },
+    "exact_candidate_path": "C:/ProgramData/anaconda3/Library/bin/ffi.dll",
+    "candidate_directory_enumeration": "forbidden",
+    "candidate_absent_result": "exact_ffi_candidate_absent",
+    "candidate_present_checks": [
+      "lowercase_SHA256",
+      "decimal_bytes",
+      "PE_machine",
+      "normal_import_table",
+      "delay_import_table",
+      "AMD64_compatibility_with_pinned__ctypes_PYD"
+    ],
+    "resolver_roots": [
+      "exact_directory_of_the_current_importing_binary",
+      "C:/ProgramData/anaconda3/Library/bin",
+      "immutable_request_v7_43_file_native_startup_set",
+      "C:/Windows/System32",
+      "C:/Windows/System",
+      "C:/Windows"
+    ],
+    "resolver_prohibitions": [
+      "ambient_PATH",
+      "current_directory",
+      "registry_App_Paths",
+      "directory_enumeration",
+      "additional_search_roots",
+      "LoadLibrary_or_target_DLL_execution"
+    ],
+    "dependency_result_fields": [
+      "imported_name",
+      "normal_or_delay_relation",
+      "resolved_exact_path_or_null",
+      "classification"
+    ],
+    "dependency_classifications": [
+      "Windows_system",
+      "API_set",
+      "immutable_native_startup",
+      "exact_ffi_candidate",
+      "unresolved_non_Windows_dependency"
+    ],
+    "additional_non_Windows_dependency_rule": "stop_without_projection_claim_and_return_the_exact_imported_name",
+    "proposed_projection_binding": {
+      "source": "C:/ProgramData/anaconda3/Library/bin/ffi.dll",
+      "projection": "sandbox/runtime/DLLs/ffi.dll",
+      "rename_authorized": false,
+      "alternate_filename_authorized": false,
+      "binary_substitution_authorized": false,
+      "required_loader_argument": "co_location_with__ctypes_PYD_is_sufficient_for_deterministic_resolution_or_the_assessment_stops"
+    },
+    "repository_writes": [],
+    "external_writes": [],
+    "temp_targets": [],
+    "profiles": [],
+    "ACL_mutations": [],
+    "network_endpoints": [],
+    "child_processes": [],
+    "next_step": "return_a_full_non_authorizing_exact_scope_request_for_the_minimal_next_step_based_on_the_candidate_and_transitive_PE_result"
+  },
+  "future_assessment_checks": [
+    "baseline_HEAD_parent_tree_and_clean_tracked_index",
+    "all_twelve_entry_pins_and_request_v11_pin",
+    "fresh_pinned_assessment_driver_version_and_hash",
+    "exactly_one_read_only_assessment_process",
+    "no_directory_enumeration",
+    "only_the_exact_ffi_candidate_is_checked_outside_the_prior_closed_world",
+    "candidate_absence_stops_without_fallback_search",
+    "candidate_presence_produces_full_hash_size_machine_and_PE_tables",
+    "only_the_exact_resolver_roots_are_used",
+    "no_LoadLibrary_import_or_target_DLL_execution",
+    "any_additional_non_Windows_dependency_stops_without_projection_claim",
+    "projection_binding_retains_the_exact_ffi_DLL_filename",
+    "requests_v1_through_v11_probe_and_worker_are_byte_identical_after_assessment",
+    "state_gate_plan_and_runtime_invariants",
+    "conversation_only_result_and_exact_next_non_authorizing_request"
+  ],
+  "future_stop_conditions": [
+    "baseline_or_any_entry_pin_mismatch",
+    "request_v11_pin_mismatch_after_owner_confirmation",
+    "more_than_one_assessment_process_would_be_required",
+    "candidate_path_is_absent",
+    "candidate_is_not_AMD64_PE",
+    "candidate_filename_or_path_differs_from_the_exact_authorized_path",
+    "a_non_Windows_dependency_other_than_the_exact_ffi_candidate_is_required",
+    "a_required_import_is_unresolved_or_architecture_mismatched",
+    "co_location_does_not_provide_a_deterministic_loader_binding",
+    "directory_enumeration_ambient_PATH_registry_or_additional_root_would_be_required",
+    "any_file_write_child_process_DLL_execution_network_or_scope_expansion",
+    "any_repository_byte_change_staging_or_commit",
+    "any_state_gate_plan_implementation_or_runtime_scope_expansion"
+  ],
+  "non_authorizing_boundaries": {
+    "native_dependency_assessment_execution_authorized_now": false,
+    "runtime_import_observation_repetition_authorized": false,
+    "runtime_projection_materialization_authorized": false,
+    "probe_or_worker_modification_authorized": false,
+    "capability_qualification_execution_authorized": false,
+    "capability_prerequisite_closure_authorized": false,
+    "finding_or_gate_closure_authorized": false,
+    "K0b03_implementation_authorized": false,
+    "runtime_authority": "none"
+  },
+  "canonical_invariants": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03": "blocked",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  },
+  "review_timing": {
+    "security_focused_fresh_context_review_required_now": false,
+    "reason": "v10_stopped_before_projection_closure_and_this_request_only_proposes_a_read_only_native_dependency_assessment",
+    "mandatory_security_review_point": "after_successful_full_A_B_capability_qualification_commit_with_the_exact_sandbox_runtime_projection_and_before_owner_closure_of_CP_K0B03_V2_WINDOWS_ENFORCEMENT"
+  },
+  "next_required_action": "separate_owner_confirmation_of_this_request_full_SHA256_and_size_before_any_read_of_the_exact_Library_bin_ffi_candidate"
+}

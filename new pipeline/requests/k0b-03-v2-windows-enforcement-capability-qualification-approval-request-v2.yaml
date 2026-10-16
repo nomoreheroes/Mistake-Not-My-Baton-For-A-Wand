@@ -1,0 +1,428 @@
+{
+  "request_id": "pipeline-v2.k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2",
+  "schema_version": 1,
+  "version": "2.0.0",
+  "prepared_on": "2026-10-02",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "serialization": "UTF-8_no_BOM_LF_one_final_LF_JSON_object_in_yaml_extension",
+  "purpose": "Supersede the v1 capability request only for the bounded AppContainer startup environment and desktop contract established by the four-case suspended-launch diagnostic, while preserving every other Windows enforcement qualification requirement without weakening and without authorizing execution until separate exact-hash owner confirmation.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "recheck_exact_baseline_clean_tracked_and_index_state_three_untracked_byte_pins_target_absence_and_cleanup_state",
+      "create_only_this_v2_approval_request",
+      "perform_UTF8_BOM_LF_final_LF_duplicate_key_hash_and_size_checks"
+    ],
+    "does_not_authorize_modification_of_v1_probe_or_worker": true,
+    "does_not_authorize_future_package": true,
+    "does_not_authorize_capability_or_diagnostic_execution": true,
+    "does_not_authorize_profile_root_ACL_process_listener_socket_or_network_effect": true,
+    "does_not_authorize_staging_or_commit": true,
+    "does_not_authorize_prerequisite_or_finding_closure": true,
+    "does_not_authorize_state_or_gate_transition": true,
+    "does_not_authorize_runtime": true
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean",
+    "required_before_any_future_write_or_execution": true
+  },
+  "entry_untracked_pins": [
+    {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+      "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+      "bytes": 35702,
+      "future_role": "immutable_superseded_historical_authority"
+    },
+    {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "6284e6e4d667f753d47617a581338fb57f2b53bb64bdd14f6da57ace2f96e919",
+      "bytes": 62928,
+      "future_role": "uncommitted_probe_candidate_requiring_only_the_v2_startup_contract_delta_after_separate_confirmation"
+    },
+    {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "48fdf32ee2e203f6ab0003c7d4026b4aaf657ef902ea046e1ebbc5c33d5cb799",
+      "bytes": 11184,
+      "future_role": "byte_identical_worker_candidate_unless_a_separately_reported_static_mismatch_requires_new_authority"
+    }
+  ],
+  "supersession": {
+    "superseded_request_path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+    "superseded_request_sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+    "superseded_request_bytes": 35702,
+    "reason": "bounded_suspended_launch_diagnostic_confirmed_original_AppContainer_environment_allowlist_insufficient",
+    "historical_request_rewritten_or_deleted": false,
+    "scope_delta_is_only": [
+      "replace_the_original_child_environment_allowlist_with_the_exact_successful_D4_closed_bundle",
+      "set_future_AppContainer_STARTUPINFOW_lpDesktop_to_winsta0_default",
+      "record_initial_attempt_A_Win32_203_and_the_exact_D1_through_D4_diagnostic_chain",
+      "expand_the_future_all_new_commit_inventory_from_six_to_seven_paths_by_including_both_v1_and_v2_requests"
+    ],
+    "all_other_v1_contracts_inherited_without_weakening": true
+  },
+  "initial_qualification_stop_record": {
+    "attempt": "A",
+    "scenario": "identity",
+    "status": "stop_inconclusive",
+    "stop_code": "APPCONTAINER_PROCESS_CREATE_FAILED",
+    "raw_win32_code": 203,
+    "message": "The system could not find the environment option that was entered.",
+    "child_process_created": false,
+    "attempt_B_executed": false,
+    "root_exists_after_cleanup": false,
+    "profile_mapping_exists_after_cleanup": false,
+    "profile_folder_exists_after_cleanup": false,
+    "repository_bytecode_residue": false,
+    "staging_or_commit_performed": false
+  },
+  "bounded_suspended_launch_diagnostic": {
+    "schema": "pipeline-v2.k0b03-v2-suspended-launch-diagnostic-v1",
+    "diagnostic_count": 4,
+    "child_code_executed": false,
+    "ResumeThread_called": false,
+    "all_created_processes_terminated_before_resume": true,
+    "pinned_python": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "bytes": 104208,
+      "pin_match": true
+    },
+    "profile_name": "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+    "profile_sid": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+    "sandbox_SDDL_before_sha256": "b05458c902d1656c79de7d8199e571c3291259462cacd1750969248c6bd333c5",
+    "cases": [
+      {
+        "id": "D1",
+        "AppContainer": false,
+        "desktop": null,
+        "environment_profile": "original_v1_exact_allowlist",
+        "CreateProcessW_success": true,
+        "raw_win32_code": 0,
+        "message": "The operation completed successfully.",
+        "token_is_AppContainer": false,
+        "Job_assignment": true,
+        "Job_identity_confirmed": true,
+        "terminated_before_resume": true,
+        "ResumeThread_called": false,
+        "exit_code": 53505,
+        "handles_closed": true
+      },
+      {
+        "id": "D2",
+        "AppContainer": true,
+        "desktop": null,
+        "environment_profile": "original_v1_exact_allowlist",
+        "CreateProcessW_success": false,
+        "raw_win32_code": 203,
+        "message": "The system could not find the environment option that was entered.",
+        "process_created": false,
+        "token_identity": null,
+        "handles_closed": true
+      },
+      {
+        "id": "D3",
+        "AppContainer": true,
+        "desktop": "winsta0\\default",
+        "environment_profile": "original_v1_exact_allowlist",
+        "CreateProcessW_success": false,
+        "raw_win32_code": 203,
+        "message": "The system could not find the environment option that was entered.",
+        "process_created": false,
+        "token_identity": null,
+        "handles_closed": true
+      },
+      {
+        "id": "D4",
+        "AppContainer": true,
+        "desktop": "winsta0\\default",
+        "environment_profile": "expanded_v2_closed_allowlist",
+        "CreateProcessW_success": true,
+        "raw_win32_code": 0,
+        "message": "The operation completed successfully.",
+        "token_is_AppContainer": true,
+        "token_AppContainer_SID": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+        "capability_count": 0,
+        "Job_assignment": true,
+        "Job_identity_confirmed": true,
+        "terminated_before_resume": true,
+        "ResumeThread_called": false,
+        "exit_code": 53508,
+        "handles_closed": true
+      }
+    ],
+    "cleanup": {
+      "errors": [],
+      "sandbox_ACL_restored": true,
+      "root_exists": false,
+      "profile_mapping_exists": false,
+      "profile_folder_exists": false,
+      "repository_bytecode_residue": false
+    }
+  },
+  "diagnostic_conclusion": {
+    "original_environment_block_construction_is_valid": true,
+    "basis_for_environment_block_validity": "D1_success_with_the_original_exact_environment_block",
+    "winsta0_default_alone_resolves_Win32_203": false,
+    "basis_for_desktop_alone_result": "D3_retained_Win32_203",
+    "expanded_bundle_plus_winsta0_default_supports_suspended_AppContainer_creation": true,
+    "basis_for_expanded_bundle_result": "D4_success_with_exact_SID_zero_capabilities_Job_assignment_and_terminate_before_resume",
+    "each_added_variable_is_individually_required": "not_claimed_and_not_tested",
+    "adopted_future_disposition": "retain_the_entire_successful_D4_environment_bundle_as_a_closed_allowlist",
+    "winsta0_default_is_individually_required": "not_claimed",
+    "winsta0_default_future_disposition": "retain_as_a_conservative_part_of_the_only_successful_AppContainer_D4_configuration",
+    "executable_ACL_is_CreateProcess_blocker": false,
+    "Python_startup_stdlib_access_and_worker_execution_proven": false,
+    "Python_startup_stdlib_access_and_worker_execution_future_proof": "complete_A_and_B_18_case_qualification",
+    "capability_prerequisite_closed": false,
+    "dependent_finding_closed": false
+  },
+  "future_child_environment_allowlist": {
+    "closed_world": true,
+    "entry_count": 17,
+    "values": {
+      "ALLUSERSPROFILE": "C:/ProgramData",
+      "APPDATA": "C:/Users/Administrator/AppData/Roaming",
+      "COMSPEC": "C:/Windows/System32/cmd.exe",
+      "HOMEDRIVE": "C:",
+      "HOMEPATH": "/Users/Administrator",
+      "LOCALAPPDATA": "C:/Users/Administrator/AppData/Local",
+      "ProgramData": "C:/ProgramData",
+      "PUBLIC": "C:/Users/Public",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONUTF8": "1",
+      "SystemDrive": "C:",
+      "SystemRoot": "C:/Windows",
+      "TEMP": "<exact-root>/sandbox/tmp",
+      "TMP": "<exact-root>/sandbox/tmp",
+      "USERPROFILE": "C:/Users/Administrator",
+      "WINDIR": "C:/Windows"
+    },
+    "forbidden_variables": [
+      "PATH",
+      "PYTHONPATH",
+      "all_proxy_variables",
+      "all_credential_variables",
+      "all_provider_or_model_variables",
+      "all_variables_not_explicitly_listed_above"
+    ],
+    "individual_added_variable_necessity_claimed": false
+  },
+  "future_AppContainer_startup_delta": {
+    "STARTUPINFOW_lpDesktop": "winsta0\\default",
+    "desktop_individual_necessity_claimed": false,
+    "reason_for_retention": "conservative_retention_of_the_complete_successful_D4_configuration",
+    "PROC_THREAD_ATTRIBUTE_SECURITY_CAPABILITIES": "exact_profile_SID_null_capability_pointer_zero_capability_count",
+    "Job_assignment_before_resume": true,
+    "other_v1_startup_ABI_and_handle_contract_changes": []
+  },
+  "inherited_v1_contract": {
+    "authority_path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+    "authority_sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+    "inherited_without_weakening": [
+      "baseline_and_repository_read_pins",
+      "host_OS_Python_DLL_FirewallAPI_BFE_and_Network_Isolation_pins",
+      "exact_two_execution_roots",
+      "exact_two_temporary_AppContainer_profile_names",
+      "exact_four_loopback_endpoints",
+      "exact_ABI_structures_exports_last_error_and_handle_rules",
+      "suspended_create_Job_assignment_before_resume_order",
+      "sandbox_only_ACL_scope_and_external_ACL_prohibition",
+      "CPU_memory_process_count_timeout_output_and_owned_tree_limits",
+      "fixture_canary_no_write_through_and_cleanup_contract",
+      "exact_18_case_matrix_in_each_of_A_and_B",
+      "WSAEACCES_10013_live_listener_and_zero_accept_egress_contract",
+      "zero_failures_errors_skips_and_identical_A_B_results",
+      "pass_candidate_pending_fresh_context_security_review_result_boundary",
+      "mandatory_fresh_context_security_focused_independent_review",
+      "separate_owner_closure_and_no_runtime_authority",
+      "all_stop_conditions_except_where_the_original_environment_allowlist_is_explicitly_replaced_by_v2"
+    ]
+  },
+  "future_execution_roots": [
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+    "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-B"
+  ],
+  "future_AppContainer_profiles": [
+    "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+    "PipelineV2.K0b03.V2.Capability.B.24067ca6"
+  ],
+  "future_loopback_endpoints": [
+    "127.0.0.1:47631",
+    "[::1]:47632",
+    "127.0.0.1:47633",
+    "[::1]:47634"
+  ],
+  "future_limits": {
+    "wall_timeout_ms": 1500,
+    "CPU_user_time_100ns": 10000000,
+    "process_memory_bytes": 67108864,
+    "job_memory_bytes": 100663296,
+    "active_process_limit": 2,
+    "combined_stdout_stderr_limit_bytes": 65536,
+    "overflow_fixture_output_bytes": 131072,
+    "cleanup_and_active_process_zero_deadline_ms": 10000
+  },
+  "future_case_matrix": {
+    "attempts": [
+      "A",
+      "B"
+    ],
+    "cases_per_attempt": 18,
+    "case_ids": [
+      "CP-WIN-01",
+      "CP-WIN-02",
+      "CP-WIN-03",
+      "CP-WIN-04",
+      "CP-WIN-05",
+      "CP-WIN-06",
+      "CP-WIN-07",
+      "CP-WIN-08",
+      "CP-WIN-09",
+      "CP-WIN-10",
+      "CP-WIN-11",
+      "CP-WIN-12",
+      "CP-WIN-13",
+      "CP-WIN-14",
+      "CP-WIN-15",
+      "CP-WIN-16",
+      "CP-WIN-17",
+      "CP-WIN-18"
+    ],
+    "required_pass_or_expected_block_count_per_attempt": 18,
+    "required_failures": 0,
+    "required_errors": 0,
+    "required_skips": 0,
+    "identical_typed_results_required": true,
+    "identical_canonical_projection_required": true
+  },
+  "future_package": {
+    "all_new_at_commit_baseline": true,
+    "path_count": 7,
+    "paths": [
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+      "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-qualification-owner-disposition-v1.yaml",
+      "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-v1.yaml",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-document-check-v1.yaml"
+    ],
+    "existing_tracked_repository_paths_modified": [],
+    "v1_request_preserved_byte_identical": true,
+    "worker_expected_byte_identical_sha256": "48fdf32ee2e203f6ab0003c7d4026b4aaf657ef902ea046e1ebbc5c33d5cb799",
+    "worker_change_if_static_mismatch_found": "stop_and_request_separate_scope_expansion",
+    "probe_future_change_scope": [
+      "replace_original_environment_allowlist_with_the_exact_17_entry_v2_allowlist",
+      "set_AppContainer_STARTUPINFOW_lpDesktop_to_winsta0_default",
+      "record_initial_attempt_A_Win32_203_and_D1_through_D4_diagnostic_provenance",
+      "no_other_semantic_scope_change"
+    ]
+  },
+  "future_qualification_result_contract": {
+    "success_status": "pass_candidate_pending_fresh_context_security_review",
+    "initial_failed_attempt_and_diagnostic_disclosure_required": true,
+    "complete_clean_A_and_B_rerun_required": true,
+    "repository_evidence_materialized_only_after_A_B_success_and_complete_cleanup": true,
+    "closes_capability_prerequisite": false,
+    "closes_finding": false,
+    "authorizes_K0b03_v2_implementation": false,
+    "authorizes_state_or_gate_transition": false,
+    "runtime_authority": "none"
+  },
+  "future_document_checks": [
+    "baseline_HEAD_parent_tree_and_entry_untracked_pins",
+    "v1_and_v2_request_authority_and_supersession_chain",
+    "initial_attempt_A_Win32_203_record",
+    "exact_D1_D2_D3_D4_results_and_cleanup",
+    "v1_byte_identity",
+    "probe_delta_bounded_to_v2_environment_desktop_and_diagnostic_provenance",
+    "worker_byte_identity",
+    "exact_17_entry_closed_environment_allowlist_and_forbidden_ambient_variables",
+    "winsta0_default_retained_without_individual_necessity_overclaim",
+    "all_inherited_v1_ABI_Job_ACL_limit_fixture_canary_egress_and_cleanup_contracts",
+    "A_18_of_18_zero_failure_error_skip",
+    "B_18_of_18_zero_failure_error_skip",
+    "identical_A_B_typed_results_and_canonical_projections",
+    "Python_startup_stdlib_and_worker_execution_under_exact_AppContainer",
+    "exact_SID_zero_capabilities_no_loopback_exemption_BFE_running",
+    "IPv4_IPv6_WSAEACCES_10013_live_listener_zero_accepts",
+    "complete_process_handle_profile_ACL_listener_socket_root_and_bytecode_cleanup",
+    "no_external_network_DNS_dependency_pip_wheel_external_ACL_or_policy_mutation",
+    "UTF8_no_BOM_LF_one_final_LF_duplicate_keys_and_cross_document_hashes",
+    "exact_seven_path_all_new_commit_inventory"
+  ],
+  "future_stop_conditions": [
+    "baseline_parent_tree_tracked_index_or_untracked_pin_mismatch",
+    "v1_request_probe_or_worker_entry_pin_mismatch_before_separately_authorized_changes",
+    "any_D1_through_D4_result_or_cleanup_claim_mismatch",
+    "any_environment_variable_outside_the_exact_17_entry_v2_allowlist",
+    "PATH_PYTHONPATH_proxy_credential_provider_or_model_environment_presence",
+    "AppContainer_startup_not_using_winsta0_default",
+    "pinned_Python_startup_stdlib_or_worker_execution_failure",
+    "required_API_ABI_BFE_Network_Isolation_profile_root_port_privilege_token_or_Job_mismatch",
+    "nonzero_child_capability_count_or_loopback_exemption",
+    "any_limit_egress_canary_owned_tree_or_case_failure_error_skip",
+    "IPv4_or_IPv6_result_not_exact_WSAEACCES_10013_or_listener_accept_count_nonzero",
+    "A_B_typed_result_or_canonical_projection_difference",
+    "any process_handle_profile_ACL_listener_socket_root_bytecode_or_repository_residue",
+    "any need_to_modify_v1_worker_existing_tracked_repository_state_STATE_renderer_profile_status_gate_firewall_service_Network_Isolation_or_external_ACL",
+    "any external_network_DNS_dependency_pip_wheel_or_scope_expansion",
+    "any prerequisite_finding_or_runtime_claim_weakening"
+  ],
+  "future_commit_contract": {
+    "commit_count": 1,
+    "parent": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "path_count": 7,
+    "inventory": "exact_seven_all_new_future_package_paths_only",
+    "subject": "test(pipeline-v2): qualify Windows enforcement capability",
+    "continuous_trailer_block": [
+      "Approval-Request-SHA256: <full_v2_request_sha256>",
+      "Supersedes-Approval-Request-SHA256: ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+      "Capability-Prerequisite: CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+      "Qualification-Result: pass_candidate_pending_fresh_context_security_review",
+      "Runtime-Authority: none"
+    ],
+    "staging_or_commit_on_stop_failed_or_inconclusive_result": false
+  },
+  "mandatory_independent_security_review": {
+    "timing": "after_successful_capability_commit_before_any_owner_closure_or_K0b03_v2_implementation_authority",
+    "reviewer_profile": "fresh_context_read_only_non_author_security_focused",
+    "must_review_v1_v2_supersession_and_D1_D4_diagnostic_chain": true,
+    "must_review_environment_and_desktop_overclaim_boundaries": true,
+    "inherits_all_v1_security_review_checks": true,
+    "reviewer_recommendation_is_owner_approval": false,
+    "separate_owner_closure_required": true
+  },
+  "canonical_invariants": {
+    "G-K0B03-K0B01-COMPLETE": "closed",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open",
+    "K0b-03": "blocked",
+    "CP-K0B03-V2-WINDOWS-ENFORCEMENT": "open_blocking_implementation_authority",
+    "K0B03-IA-R2-F03": "open_high_blocking",
+    "K0b03_v2_implementation_authorized": false,
+    "K0b04_K0b05_N1_progress": false,
+    "runtime_authority": "none"
+  },
+  "forbidden_current_actions": [
+    "modify_request_v1_probe_or_worker",
+    "create_owner_disposition_capability_evidence_or_document_check",
+    "create_profile_root_ACL_process_Job_listener_socket_or_temp_target",
+    "execute_qualification_diagnostic_worker_repository_code_or_tests",
+    "use_loopback_external_network_DNS_dependency_pip_or_wheel",
+    "stage_or_commit",
+    "modify_existing_tracked_repository_state_STATE_renderer_profile_status_or_gate",
+    "close_capability_prerequisite_or_any_finding",
+    "implement_K0b03_v2_or_progress_K0b04_K0b05_or_N1",
+    "perform_runtime_publication_provider_model_or_remote_effect"
+  ],
+  "next_required_action": "obtain_separate_owner_confirmation_of_the_full_SHA256_and_size_of_this_v2_request_before_any_probe_change_capability_execution_evidence_materialization_staging_or_commit"
+}

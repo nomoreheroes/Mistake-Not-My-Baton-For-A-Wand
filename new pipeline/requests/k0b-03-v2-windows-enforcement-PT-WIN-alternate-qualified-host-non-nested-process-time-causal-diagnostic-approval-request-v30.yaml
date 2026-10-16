@@ -1,0 +1,435 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-ALTERNATE-QUALIFIED-HOST-NON-NESTED-PROCESS-TIME-CAUSAL-DIAGNOSTIC-V30",
+  "schema_version": 1,
+  "request_version": 30,
+  "prepared_on": "2026-10-09",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "runtime_authority": "none",
+  "purpose": "Record the zero-object non-nested launch-context stop and propose a separately authorized alternate-qualified-host route for the exact PT-WIN-01 through PT-WIN-04 causal diagnostic.",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "final_newline_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean",
+    "staging": "absent"
+  },
+  "entry_untracked_inventory": {
+    "count": 31,
+    "preservation": "Every listed entry must remain byte-identical while request v30 is created and until separate exact-hash owner confirmation.",
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+        "sha256": "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+        "bytes": 27364
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-remediation-diagnostic-approval-request-v19.yaml",
+        "sha256": "d8b8f3c93b22904549b89d9605f3b26b48349bac0d2719a720d5077a03872e8d",
+        "bytes": 25880
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+        "bytes": 29825
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "44592b11793c3cc29f4f8d5bdad26a303c11139fffb9f1d90ddcbad5fc18d31d",
+        "bytes": 217933
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-causal-diagnostic-approval-request-v29.yaml",
+        "sha256": "806e63a64b79ddc53805d830d888558e37537e96b19157403694583e185344b8",
+        "bytes": 25584
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+        "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+        "bytes": 59032
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+        "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+        "bytes": 71036
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-07-process-time-control-diagnostic-approval-request-v24.yaml",
+        "sha256": "bf62b56f40b05b047efb2d590d3d2c3ebd9363e65090cfe230c1bfd81e933150",
+        "bytes": 26691
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v25.yaml",
+        "sha256": "708ab388b8f922c578601ebd033d1e4ee32769621791c80121614f78297dc7f5",
+        "bytes": 26008
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v26.yaml",
+        "sha256": "478a646cc5f12135b5f667e4068f028f503861ea742ee1d5b02c29b226863c4c",
+        "bytes": 17777
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-06-process-tree-successor-predicate-remediation-diagnostic-approval-request-v23.yaml",
+        "sha256": "8bdf7dc9838747c952e545dc4c656b3f57bcd69308e763a7337482f9c1f3ea93",
+        "bytes": 24859
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-03-job-memory-topology-remediation-diagnostic-approval-request-v20.yaml",
+        "sha256": "4f291157e79d31cb82427cb1070923bb812454fdd06ece923495d4bd3daf6b75",
+        "bytes": 20915
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-05-successor-predicate-remediation-diagnostic-approval-request-v22.yaml",
+        "sha256": "e0a4459068a012cad4e31dad5003dbcf457ecedb17977ff71e91b9327f5c32dd",
+        "bytes": 27252
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-active-process-accounting-diagnostic-approval-request-v21.yaml",
+        "sha256": "1387c1d8165ed302b2c5ea306478ca4b98538d129cfadcc6c4ee9c0dccc88a01",
+        "bytes": 22422
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-diagnostic-approval-request-v27.yaml",
+        "sha256": "ec09c73f79fa287d813a0960c12baa6ed8e76e4689aad6f8ab3a0fdad9bcb815",
+        "bytes": 19685
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-case-matrix-remediation-diagnostic-approval-request-v18.yaml",
+        "sha256": "78f19f20ad721a64f0dd851683abbc81e9655bf0e6d8f6f42ba25b106d9258c9",
+        "bytes": 24204
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-token-query-remediation-diagnostic-approval-request-v28.yaml",
+        "sha256": "b43f8d0c67019a9eac8a57bb82377aa6925922a36fd5928985f0702705c22a9c",
+        "bytes": 19842
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321
+      }
+    ]
+  },
+  "target": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-alternate-qualified-host-non-nested-process-time-causal-diagnostic-approval-request-v30.yaml",
+    "creation_scope": "this file only",
+    "post_creation_untracked_count": 32,
+    "activation": "none until separate owner confirmation of the exact materialized SHA-256 and byte size"
+  },
+  "accepted_stop_result": {
+    "result_code": "NON_NESTED_LAUNCH_CONTEXT_REQUIRED",
+    "classification": "confirmed_launch_context_blocker_not_PT_WIN_01_through_PT_WIN_04_result",
+    "python_exit_code": 0,
+    "stdout": {
+      "sha256": "76196734d1686f9960ce9252a798305e03a938043b9eb26a4cb2b4136d7244a6",
+      "bytes": 1141
+    },
+    "stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "early_membership_gate": {
+      "API": "IsProcessInJob(GetCurrentProcess(), NULL)",
+      "query_result": true,
+      "GetLastError": 0,
+      "current_process_in_any_Job": true,
+      "runtime_object_count": 0,
+      "retry_in_same_context_permitted": false
+    },
+    "matrix_state": {
+      "PT_WIN_01_through_PT_WIN_04_started": false,
+      "CPU_enforcement_causality": "unresolved",
+      "qualification_result": null
+    }
+  },
+  "zero_object_and_residue_evidence": {
+    "attempt_A_root_absent": true,
+    "attempt_B_root_absent": true,
+    "qualification_profile_mapping_absent": true,
+    "qualification_profile_folder_absent": true,
+    "listeners_created": false,
+    "sockets_created": false,
+    "Jobs_created": false,
+    "completion_ports_created": false,
+    "target_processes_created": false,
+    "repository_bytecode_residue": 0,
+    "tracked_worktree_and_index_clean": true,
+    "staging_absent": true,
+    "untracked_path_count": 31
+  },
+  "immutable_artifact_pins": {
+    "request_v29": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-causal-diagnostic-approval-request-v29.yaml",
+      "sha256": "806e63a64b79ddc53805d830d888558e37537e96b19157403694583e185344b8",
+      "bytes": 25584
+    },
+    "current_probe": {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "44592b11793c3cc29f4f8d5bdad26a303c11139fffb9f1d90ddcbad5fc18d31d",
+      "bytes": 217933
+    },
+    "worker": {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+      "bytes": 29825
+    },
+    "projection_request_v17": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+      "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+      "bytes": 59032
+    },
+    "interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "bytes": 104208,
+      "flags": [
+        "-I",
+        "-B"
+      ]
+    }
+  },
+  "evidence_boundaries": [
+    "The successful early API call proves only that the current diagnostic launcher process is already in a Job.",
+    "No PT-WIN subcase executed.",
+    "No target or companion process was created.",
+    "No conclusion about Job process-time enforcement follows from this stop.",
+    "The diagnostic must not be retried from the same nested-Job launch context.",
+    "A different launcher is not authorized by this request."
+  ],
+  "proposed_future_alternate_host_route": {
+    "authorization_state": "not_authorized_pending_separate_exact_hash_owner_confirmation",
+    "eligible_context": "naturally_non_Job_elevated_interactive_context_on_a_separately_qualified_Windows_host",
+    "same_context_retry": "forbidden",
+    "host_preconditions": [
+      "exact compatible Windows edition installation type version build UBR and AMD64 architecture are pinned before runtime",
+      "exact pinned Python 3.12.7 binary is present at the approved path with the approved SHA-256 and byte size",
+      "identical baseline and exact 31-path entry inventory are present",
+      "requests v1 through v30 probe worker and projection pins match",
+      "effective identity is an elevated Administrator token at High or System integrity",
+      "USERPROFILE LOCALAPPDATA and exact ACL prerequisites match the approved host contract",
+      "attempt roots profile mapping profile folder listeners projected processes and bytecode residue are absent",
+      "the early current-process IsProcessInJob gate returns false before any runtime object is created",
+      "every suspended target reports false for any-Job membership and false for owned-Job membership before owned assignment"
+    ],
+    "host_rejection_conditions": [
+      "current process is already in any Job",
+      "interpreter ABI binary or projection pin mismatch",
+      "baseline or inventory mismatch",
+      "target is already in any Job before owned assignment",
+      "required profile or ACL lifecycle cannot be proven",
+      "any unauthorized launcher substitution is required"
+    ],
+    "transfer_and_connection_authority": "none in this request"
+  },
+  "proposed_future_runtime_diagnostic": {
+    "authorization_state": "not_authorized_pending_separate_exact_hash_owner_confirmation_and_host_identification",
+    "attempt_count": 1,
+    "attempt": "A",
+    "mode": "--non-nested-process-time-causal-diagnostic-only",
+    "matrix": [
+      {
+        "id": "PT-WIN-01",
+        "identity": "non_AppContainer",
+        "process_time_limit_application": "before_owned_assignment"
+      },
+      {
+        "id": "PT-WIN-02",
+        "identity": "non_AppContainer",
+        "process_time_limit_application": "after_owned_assignment_before_resume"
+      },
+      {
+        "id": "PT-WIN-03",
+        "identity": "zero_capability_AppContainer",
+        "process_time_limit_application": "before_owned_assignment"
+      },
+      {
+        "id": "PT-WIN-04",
+        "identity": "zero_capability_AppContainer",
+        "process_time_limit_application": "after_owned_assignment_before_resume"
+      }
+    ],
+    "common_contract": {
+      "target_created_suspended": true,
+      "current_process_in_any_Job_before_runtime_objects": false,
+      "target_in_any_Job_before_owned_assignment": false,
+      "target_in_owned_Job_before_assignment": false,
+      "target_in_owned_Job_after_assignment": true,
+      "PerProcessUserTimeLimit_100ns": 10000000,
+      "JOB_OBJECT_LIMIT_PROCESS_TIME": "present",
+      "JOB_OBJECT_LIMIT_ACTIVE_PROCESS": "absent",
+      "QueryInformationJobObject_ReturnLength": 144,
+      "live_attribution_for_every_NEW_PROCESS_PID": true,
+      "END_OF_PROCESS_TIME_requires_exact_target_process_id_value": true,
+      "target_user_time_acceptance_100ns": {
+        "minimum": 10000000,
+        "maximum": 15000000
+      },
+      "uncontracted_process_allowed": false,
+      "wall_timeout_ms": 5000,
+      "completion_quiet_window_ms": 250,
+      "completion_total_deadline_ms": 10000,
+      "bounded_output": true,
+      "exact_cleanup_and_zero_residue": true
+    },
+    "allowed_result_codes": [
+      "PROCESS_TIME_CONTROL_ALL_CASES_ENFORCED_NON_NESTED",
+      "POST_ASSIGNMENT_PROCESS_TIME_LIMIT_NOT_ENFORCED_NON_NESTED",
+      "APPCONTAINER_SPECIFIC_PROCESS_TIME_LIMIT_NOT_ENFORCED_NON_NESTED",
+      "HOST_WIDE_JOB_PROCESS_TIME_LIMIT_NOT_ENFORCED_NON_NESTED",
+      "NON_NESTED_LAUNCH_CONTEXT_REQUIRED",
+      "NESTED_TARGET_CONTEXT_REQUIRES_SEPARATE_DISPOSITION",
+      "exact_new_blocker"
+    ],
+    "non_substitution": [
+      "companion attribution is not CPU enforcement proof",
+      "PID topology is not CPU enforcement proof",
+      "successful SetInformationJobObject or readback is not enforcement proof",
+      "wall timeout high CPU time generic process exit or cleanup is not enforcement proof",
+      "END_OF_PROCESS_TIME without process_id_value equal to the exact target PID is not enforcement proof"
+    ]
+  },
+  "prohibited_launch_substitutions": [
+    "CREATE_BREAKAWAY_FROM_JOB",
+    "CREATE_SILENT_BREAKAWAY_OK",
+    "Task Scheduler",
+    "service launcher",
+    "use of CREATE_SUSPENDED as a Job escape mechanism"
+  ],
+  "ordered_future_route": [
+    "materialize and verify request v30 under this create-only authority",
+    "obtain separate owner confirmation of the exact v30 SHA-256 and byte size",
+    "identify a candidate naturally non-Job alternate qualified Windows host without connecting or transferring under this request",
+    "prepare separate exact authority naming the host and its read-only preflight mechanism",
+    "pin host OS ABI interpreter baseline inventory probe worker projection identity profile ACL and cleanup prerequisites",
+    "run the zero-object current-process membership gate",
+    "stop if the gate is true or any host pin mismatches",
+    "only after a false gate execute exactly one PT-WIN-01 through PT-WIN-04 attempt A",
+    "perform exact cleanup and return bounded evidence",
+    "perform a separate fresh-context read-only review",
+    "only after all four controls pass prepare separate authority for FR-WIN-01 through FR-WIN-10 attempt A",
+    "review attempt A before any separate attempt B authority"
+  ],
+  "current_step_authority": {
+    "create_only_this_request": true,
+    "probe_worker_or_prior_request_modification": false,
+    "Python_probe_or_worker_execution": false,
+    "alternate_host_connection_or_transfer": false,
+    "runtime_diagnostic_or_process_creation": false,
+    "profile_root_ACL_Job_completion_port_projection_listener_socket_or_network_creation": false,
+    "staging_or_commit": false
+  },
+  "request_document_checks": {
+    "UTF8_without_BOM": "required",
+    "LF_only": "required",
+    "exactly_one_final_LF": "required",
+    "duplicate_keys_absent": "required",
+    "JSON_compatible_YAML_parse": "required",
+    "entry_inventory_count": 31,
+    "post_creation_untracked_count": 32,
+    "compute_full_SHA256_and_byte_size": "required"
+  },
+  "forbidden_scope": [
+    "automatic alternate-host discovery connection or file transfer",
+    "runtime diagnostic or diagnostic retry",
+    "probe worker or prior request modification",
+    "attempt B or FR-WIN-01 through FR-WIN-10",
+    "full capability qualification",
+    "global ACL firewall service registry policy or Network Isolation mutation",
+    "repository staging or commit",
+    "prerequisite finding or gate closure",
+    "K0b-03 K0b-04 K0b-05 N1 or Swarm progress",
+    "runtime publication or remote effects"
+  ],
+  "state_preservation": {
+    "G-K0B03-K0B01-COMPLETE": "closed",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open",
+    "K0b-03": "blocked",
+    "K0b-04_K0b-05_N1_Swarm": "not_advanced",
+    "runtime_authority": "none"
+  },
+  "stop_conditions": [
+    "baseline mismatch",
+    "tracked worktree index or staging mismatch",
+    "31-path inventory path or pin mismatch",
+    "target already exists",
+    "serialization duplicate-key or parse mismatch",
+    "scope expansion or any modification outside target v30"
+  ],
+  "next_required_action": "Report the exact materialized request v30 SHA-256 and byte size and obtain separate owner confirmation before any alternate-host assessment or runtime work."
+}

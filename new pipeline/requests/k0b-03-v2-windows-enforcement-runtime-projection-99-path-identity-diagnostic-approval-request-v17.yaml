@@ -1,0 +1,1292 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-RUNTIME-PROJECTION-99-PATH-IDENTITY-DIAGNOSTIC-V17",
+  "schema_version": "1.0.0",
+  "request_version": 17,
+  "prepared_on": "2026-10-07",
+  "document_kind": "approval_request",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "runtime_authority": "none",
+  "purpose": "Freeze the single-module correction from the observed 98-path projected-runtime failure and propose one bounded attempt-A identity diagnostic using a corrected 99-path projection.",
+  "serialization": {
+    "syntax": "JSON-compatible YAML",
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": false
+  },
+  "current_authority": {
+    "authorized_now": [
+      "verify_baseline_and_18_entry_pins",
+      "create_this_request_v17_only",
+      "perform_document_static_checks",
+      "reproduce_embedded_99_path_manifest",
+      "compute_request_sha256_and_size"
+    ],
+    "forbidden_now": [
+      "modify_probe_or_worker",
+      "materialize_projection",
+      "create_root_profile_ACL_or_listener",
+      "execute_Python_probe_worker_or_diagnostic",
+      "execute_full_qualification",
+      "create_owner_disposition_or_evidence",
+      "stage_or_commit",
+      "close_prerequisite_finding_or_gate",
+      "advance_K0b-03_K0b-04_K0b-05_N1_or_Swarm"
+    ],
+    "activation_rule": "The proposed future diagnostic remains unauthorized until the owner separately confirms this request's exact SHA-256 and byte size."
+  },
+  "baseline": {
+    "head": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean",
+    "entry_untracked_count": 18,
+    "target_entry_state": "absent"
+  },
+  "entry_untracked_inventory": {
+    "count": 18,
+    "preservation": "byte-identical_except_probe_already_authorized_and_pinned_at_current_diagnostic_capture_version",
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "c44a3ce7a49c4a20e23d85a6d8faa37288ccce75a12afff28ba3394e0116352b",
+        "bytes": 83290
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+        "bytes": 12602
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+        "sha256": "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+        "bytes": 27364
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+        "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+        "bytes": 71036
+      }
+    ]
+  },
+  "target": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+    "operation": "add_only",
+    "resulting_untracked_count": 19
+  },
+  "immutable_chain": {
+    "requests_v1_through_v16": "byte-identical",
+    "request_v16": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+      "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+      "bytes": 71036
+    },
+    "current_probe": {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "c44a3ce7a49c4a20e23d85a6d8faa37288ccce75a12afff28ba3394e0116352b",
+      "bytes": 83290
+    },
+    "worker": {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+      "bytes": 12602,
+      "preservation": "byte-identical"
+    },
+    "interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "bytes": 104208
+    }
+  },
+  "historical_diagnostic_chain": {
+    "initial_projection": {
+      "path_count": 98,
+      "content_bytes": 10471943,
+      "manifest_bytes": 9334,
+      "manifest_sha256": "4325a20dac5bca4d6ba922588f2d1528faa2055b86ee2cd24ae5fc7631e7abd1",
+      "historical_inventory_preserved": true
+    },
+    "projected_interpreter_byte_correct": true,
+    "python312_dot_pth_byte_correct": true,
+    "parent_appcontainer_identity": {
+      "token_is_appcontainer": true,
+      "appcontainer_sid": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+      "appcontainer_sid_valid": true,
+      "capability_count": 0
+    },
+    "forced_pre_job_abort_regression": "pass",
+    "normal_worker": {
+      "created_suspended": true,
+      "job_assigned_before_resume": true,
+      "resume_called": true,
+      "exit_code": 1,
+      "termination_reason": "process_exit",
+      "JSON_emitted": false
+    },
+    "exact_blocker": "PROJECTED_RUNTIME_MISSING_STDLIB_MODULE: __future__",
+    "exact_runtime_output": "ModuleNotFoundError: No module named '__future__'",
+    "output": {
+      "bytes": 293,
+      "sha256": "7bba0eafa7ab14adf2fa38e0073bd56187618359d559edd7f6a1060d676a5b78",
+      "UTF8_replacement_characters": 0
+    },
+    "cleanup": {
+      "verified": true,
+      "residue_count": 0
+    }
+  },
+  "correction_source_assessment": {
+    "binding": {
+      "projection_relative_path": "Lib/__future__.py",
+      "source_path": "C:/ProgramData/anaconda3/Lib/__future__.py",
+      "sha256": "981d4c398849f9ebcab72300d9c1fe288fd6d7f28957b3b3fa3a493a5836d95c",
+      "bytes": 5218,
+      "role": "python_source",
+      "discovery_basis": "projected_worker_runtime_missing_module_diagnostic",
+      "dependency_parent": "windows-enforcement-capability-worker.py:8"
+    },
+    "file_evidence": {
+      "regular_file": true,
+      "reparse_point": false,
+      "encoding": "UTF-8 without BOM",
+      "line_endings": "LF",
+      "final_lf_count": 1
+    },
+    "executable_imports": [],
+    "unresolved_dependencies": [],
+    "docstring_only_examples": [
+      "line 20: from __future__ import FeatureName",
+      "line 31: from __future__ import FeatureName"
+    ],
+    "single_new_binding_sufficient": true
+  },
+  "corrected_runtime_projection": {
+    "relationship_to_historical_inventory": "all_98_historical_rows_semantically_byte_identical_plus_one_new_row",
+    "profile": "projection_relative_path<TAB>lowercase_sha256<TAB>decimal_bytes<LF>",
+    "ordering": "ordinal_projection_relative_path",
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "path_count": 99,
+    "content_bytes": 10477161,
+    "manifest_bytes": 9422,
+    "manifest_sha256": "c602d91fbc090dd72912a60be97a7c51aeb832e38d6e96807950de1eeae28b5d",
+    "duplicate_paths": 0,
+    "conflicting_bindings": 0,
+    "added_entry_zero_based_index": 8,
+    "added_entry_one_based_ordinal": 9,
+    "previous_entry": "DLLs/select.pyd",
+    "next_entry": "Lib/_compression.py",
+    "entries": [
+      {
+        "source_path": "C:/ProgramData/anaconda3/Library/bin/LIBBZ2.dll",
+        "projection_relative_path": "DLLs/LIBBZ2.dll",
+        "sha256": "25a4aae35dd89709620106db311af5bca7c868182b961e106a895ae14d2fc98a",
+        "bytes": 83216,
+        "role": "native_dependency",
+        "discovery_basis": "static_PE_symbol_binding",
+        "dependency_parent": "_bz2.pyd"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/DLLs/_bz2.pyd",
+        "projection_relative_path": "DLLs/_bz2.pyd",
+        "sha256": "ce316d62c4bb44e063bdc0f72ed710e39e5436d71b1e09e72fd0e5165c5ff8d9",
+        "bytes": 36112,
+        "role": "python_extension",
+        "discovery_basis": "statically_required_native_binding",
+        "dependency_parent": "bz2"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/DLLs/_ctypes.pyd",
+        "projection_relative_path": "DLLs/_ctypes.pyd",
+        "sha256": "bb4ab3ebfcd442ab75425a3deb0f4ca5ee4305858f862848f3ddfaa41691f8c5",
+        "bytes": 133904,
+        "role": "python_extension",
+        "discovery_basis": "observed_extension_module",
+        "dependency_parent": "_ctypes"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/DLLs/_lzma.pyd",
+        "projection_relative_path": "DLLs/_lzma.pyd",
+        "sha256": "a4b308d6b2af4cc2d3102fc9f29725a0d34773a24a1824fe08c7843f4274b574",
+        "bytes": 48912,
+        "role": "python_extension",
+        "discovery_basis": "statically_required_native_binding",
+        "dependency_parent": "lzma"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/DLLs/_socket.pyd",
+        "projection_relative_path": "DLLs/_socket.pyd",
+        "sha256": "620e2719bdd4e518b927037fdeb8ce4f0f836962d84f8e375d784bb2c0515798",
+        "bytes": 85264,
+        "role": "python_extension",
+        "discovery_basis": "observed_extension_module",
+        "dependency_parent": "_socket"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Library/bin/ffi.dll",
+        "projection_relative_path": "DLLs/ffi.dll",
+        "sha256": "eb22fc95044ce939910d41857445bd0ecc4fc4d810ba30cc6b5f7f55b48ac8ed",
+        "bytes": 40216,
+        "role": "native_dependency",
+        "discovery_basis": "static_PE_import_binding",
+        "dependency_parent": "_ctypes.pyd"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Library/bin/liblzma.dll",
+        "projection_relative_path": "DLLs/liblzma.dll",
+        "sha256": "b8cf9fe6d3eaaff6fcebce37947660297762f2f4dde503f7f56ce6475c439abd",
+        "bytes": 198416,
+        "role": "native_dependency",
+        "discovery_basis": "static_PE_symbol_binding",
+        "dependency_parent": "_lzma.pyd"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/DLLs/select.pyd",
+        "projection_relative_path": "DLLs/select.pyd",
+        "sha256": "bafdf1758831946e03a1bc910eafe5aa92ed59910c6ec54a1d0282d9c923fc62",
+        "bytes": 30480,
+        "role": "python_extension",
+        "discovery_basis": "observed_extension_module",
+        "dependency_parent": "select"
+      },
+      {
+        "projection_relative_path": "Lib/__future__.py",
+        "source_path": "C:/ProgramData/anaconda3/Lib/__future__.py",
+        "sha256": "981d4c398849f9ebcab72300d9c1fe288fd6d7f28957b3b3fa3a493a5836d95c",
+        "bytes": 5218,
+        "role": "python_source",
+        "discovery_basis": "projected_worker_runtime_missing_module_diagnostic",
+        "dependency_parent": "windows-enforcement-capability-worker.py:8"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/_compression.py",
+        "projection_relative_path": "Lib/_compression.py",
+        "sha256": "3ad5d60627477a60939ee44fc1bb3a05dbe8fb52f0f75039b8f5d8f1a278b981",
+        "bytes": 5681,
+        "role": "python_source",
+        "discovery_basis": "statically_required_compression_support",
+        "dependency_parent": "bz2|lzma"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/_weakrefset.py",
+        "projection_relative_path": "Lib/_weakrefset.py",
+        "sha256": "91895a451d06e9f521a1171b31b9b19bc9740f35af00d4fa106338ab7167c9ac",
+        "bytes": 5893,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "_weakrefset"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/argparse.py",
+        "projection_relative_path": "Lib/argparse.py",
+        "sha256": "de868aaccfaa38b3158d48a856d89abb1c9af3a545eb5eb369f6d5e1d09509bf",
+        "bytes": 102268,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "argparse"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/bz2.py",
+        "projection_relative_path": "Lib/bz2.py",
+        "sha256": "76ab3252924e71e859d7d90e8d3db13b6554975cfcac0fdadced4de7f8779330",
+        "bytes": 11847,
+        "role": "python_source",
+        "discovery_basis": "statically_required_shutil_optional_compression_import",
+        "dependency_parent": "shutil"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/collections/__init__.py",
+        "projection_relative_path": "Lib/collections/__init__.py",
+        "sha256": "0af967cd58036507b3d0fbc33b7a996c61dbb52a94b0b738c8bef12cd4cc7dd4",
+        "bytes": 52378,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "collections"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/collections/abc.py",
+        "projection_relative_path": "Lib/collections/abc.py",
+        "sha256": "9cb4208f99128a0489b6c8e6c61637617dd7d4250c59e065491957eda084dd10",
+        "bytes": 119,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "collections.abc"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/contextlib.py",
+        "projection_relative_path": "Lib/contextlib.py",
+        "sha256": "8b7a477f978a8532852fd81e241c78182516bc4975d672d580a5848a76e11eb6",
+        "bytes": 27637,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "contextlib"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/copyreg.py",
+        "projection_relative_path": "Lib/copyreg.py",
+        "sha256": "c8eda41f05c6bf95a4da4726a530409d2485ae060b8d019b3a8034389a15d3e9",
+        "bytes": 7614,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "copyreg"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/ctypes/__init__.py",
+        "projection_relative_path": "Lib/ctypes/__init__.py",
+        "sha256": "e0db1242e78267cba0124ee9fe5963b72d1c8a1832bb51a88abcf012a9cbce76",
+        "bytes": 18210,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "ctypes"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/ctypes/_endian.py",
+        "projection_relative_path": "Lib/ctypes/_endian.py",
+        "sha256": "c5d692bdce10dfee242752620061bab684633bc72445a3def484961ef1bdbf3a",
+        "bytes": 2535,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "ctypes._endian"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/ctypes/wintypes.py",
+        "projection_relative_path": "Lib/ctypes/wintypes.py",
+        "sha256": "5c4d9ba1a21683838ed1d1f007b6038304e42aacf34c576e820311d26cb243f3",
+        "bytes": 5629,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "ctypes.wintypes"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/encodings/__init__.py",
+        "projection_relative_path": "Lib/encodings/__init__.py",
+        "sha256": "78c4744d407690f321565488710b5aaf6486b5afa8d185637aa1e7633ab59cd8",
+        "bytes": 5884,
+        "role": "python_source",
+        "discovery_basis": "observed_initial_bootstrap_module",
+        "dependency_parent": "encodings"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/encodings/aliases.py",
+        "projection_relative_path": "Lib/encodings/aliases.py",
+        "sha256": "6fdcc49ba23a0203ae6cf28e608f8e6297d7c4d77d52e651db3cb49b9564c6d2",
+        "bytes": 15677,
+        "role": "python_source",
+        "discovery_basis": "observed_initial_bootstrap_module",
+        "dependency_parent": "encodings.aliases"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/encodings/cp1252.py",
+        "projection_relative_path": "Lib/encodings/cp1252.py",
+        "sha256": "19aa5bee667f5fb387924a813aec9fa1dda47769d09e8483a748bdb202be6a84",
+        "bytes": 13511,
+        "role": "python_source",
+        "discovery_basis": "observed_initial_bootstrap_module",
+        "dependency_parent": "encodings.cp1252"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/encodings/utf_8.py",
+        "projection_relative_path": "Lib/encodings/utf_8.py",
+        "sha256": "ba0cac060269583523ca9506473a755203037c57d466a11aa89a30a5f6756f3d",
+        "bytes": 1005,
+        "role": "python_source",
+        "discovery_basis": "observed_initial_bootstrap_module",
+        "dependency_parent": "encodings.utf_8"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/enum.py",
+        "projection_relative_path": "Lib/enum.py",
+        "sha256": "13a126fa95a66c2f1a4a8e33079047db0bae127820026726a18b0a69a59fd942",
+        "bytes": 81634,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "enum"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/fnmatch.py",
+        "projection_relative_path": "Lib/fnmatch.py",
+        "sha256": "6683da36e47af523f3f41e18ad244d837783e19e98911cc0b7415dea81494ebc",
+        "bytes": 5999,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "fnmatch"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/functools.py",
+        "projection_relative_path": "Lib/functools.py",
+        "sha256": "cacab9a2d8c018decc6ddc3e8f255f8511ad6639cd87080e3a9abaa8f20ecad8",
+        "bytes": 37881,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "functools"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/gettext.py",
+        "projection_relative_path": "Lib/gettext.py",
+        "sha256": "a5c249a522b6b8e3aa6f1b12a8bcc09508b99ad612b58d2fc973db27ea3b7cc3",
+        "bytes": 21320,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "gettext"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/ipaddress.py",
+        "projection_relative_path": "Lib/ipaddress.py",
+        "sha256": "4a1e3e176e2d88ec7d767bcd0af7d1c953de47387ba2e42fba2e188882d06064",
+        "bytes": 79124,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "ipaddress"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/json/__init__.py",
+        "projection_relative_path": "Lib/json/__init__.py",
+        "sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5",
+        "bytes": 14020,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "json"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/json/decoder.py",
+        "projection_relative_path": "Lib/json/decoder.py",
+        "sha256": "9f02654649816145bc76f8c210a5fe3ba1de142d4d97a1c93105732e747c285b",
+        "bytes": 12473,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "json.decoder"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/json/encoder.py",
+        "projection_relative_path": "Lib/json/encoder.py",
+        "sha256": "af7bd40a0d0d0a3e726a9b4b3a2a543019f6ab97a340d0162a9c29ca9da97869",
+        "bytes": 16070,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "json.encoder"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/json/scanner.py",
+        "projection_relative_path": "Lib/json/scanner.py",
+        "sha256": "8604d9d03786d0d509abb49e9f069337278ea988c244069ae8ca2c89acc2cb08",
+        "bytes": 2425,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "json.scanner"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/keyword.py",
+        "projection_relative_path": "Lib/keyword.py",
+        "sha256": "18c2be738c04ad20ad375f6a71db34b3823c7f40b0340f5294d0e89f3c9b093b",
+        "bytes": 1073,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "keyword"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/locale.py",
+        "projection_relative_path": "Lib/locale.py",
+        "sha256": "3988c5419552d5b9f0bef3695102376f79357f0f440e9cd1f32c501f966e6ef3",
+        "bytes": 78599,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "locale"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/lzma.py",
+        "projection_relative_path": "Lib/lzma.py",
+        "sha256": "58fb9d2fdc8a8af7b25e218f17ea3b51bdfa53bdf40f440ab33c605974ca5c2e",
+        "bytes": 13277,
+        "role": "python_source",
+        "discovery_basis": "statically_required_shutil_optional_compression_import",
+        "dependency_parent": "shutil"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/operator.py",
+        "projection_relative_path": "Lib/operator.py",
+        "sha256": "b2af20f67667203c1730e686cc5d0427becc94db4c97f1d3efe3ed2158473f6a",
+        "bytes": 10965,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "operator"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/pathlib.py",
+        "projection_relative_path": "Lib/pathlib.py",
+        "sha256": "bb172ea6ff01dfe574b0dab3e1642abc38ca176a308ab1785b014408c0cbe621",
+        "bytes": 51108,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "pathlib"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/re/__init__.py",
+        "projection_relative_path": "Lib/re/__init__.py",
+        "sha256": "8ff3c37c63b917fcf8dc8d50993a502292a3dc159e41de4f4018c72a53d1c07b",
+        "bytes": 16315,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "re"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/re/_casefix.py",
+        "projection_relative_path": "Lib/re/_casefix.py",
+        "sha256": "1b12d9136f23db6c3f6f26053fefc15ca964b886838c7b9c1fabf8d2efc1e5c8",
+        "bytes": 5444,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "re._casefix"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/re/_compiler.py",
+        "projection_relative_path": "Lib/re/_compiler.py",
+        "sha256": "c05067f8bfa4c13cbbf1eedc4d5cafc9b621bcb6ebc5771ba0518a18095af15a",
+        "bytes": 26089,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "re._compiler"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/re/_constants.py",
+        "projection_relative_path": "Lib/re/_constants.py",
+        "sha256": "fa4fdb200f238f9e7817b63892b0d69833d8165134801e775e10cc113348a375",
+        "bytes": 5930,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "re._constants"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/re/_parser.py",
+        "projection_relative_path": "Lib/re/_parser.py",
+        "sha256": "a51a85b37cf3f44ba7ff25754da5f31306e4ccfa6eb3c017f9d37bdf4e770840",
+        "bytes": 41201,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "re._parser"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/reprlib.py",
+        "projection_relative_path": "Lib/reprlib.py",
+        "sha256": "8da31054076803065758311f54b18b8a616824941977d907dc3ee729228e9015",
+        "bytes": 6569,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "reprlib"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/selectors.py",
+        "projection_relative_path": "Lib/selectors.py",
+        "sha256": "1eeb102373e18c96311203f30c516e785bd8642275aa0bd66e43a284c9692385",
+        "bytes": 19671,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "selectors"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/shutil.py",
+        "projection_relative_path": "Lib/shutil.py",
+        "sha256": "b43720627b9901a1bcdd22bd9ca290596ecffbcfeae8521a145c113ade12ef41",
+        "bytes": 56792,
+        "role": "python_source",
+        "discovery_basis": "statically_required_worker_used_API_branch",
+        "dependency_parent": "argparse.HelpFormatter"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/signal.py",
+        "projection_relative_path": "Lib/signal.py",
+        "sha256": "0363c964c90ac0b3e515de5749205e6e6454051a1211058375d84d91eab6071a",
+        "bytes": 2495,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "signal"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/socket.py",
+        "projection_relative_path": "Lib/socket.py",
+        "sha256": "b1d5ea1854877f0c20c811900de4d899da8e16a757026b27fad0afb4c7fc6bd5",
+        "bytes": 37664,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "socket"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/struct.py",
+        "projection_relative_path": "Lib/struct.py",
+        "sha256": "9c231f9497caf513a22dee8f790b07f969b0e45854a0bdd6dd84b492e08c2856",
+        "bytes": 257,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "struct"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/subprocess.py",
+        "projection_relative_path": "Lib/subprocess.py",
+        "sha256": "baa9f9138d8d20df6284f67e7d2e790f847f65e2c5370de322d54cccd737f2d9",
+        "bytes": 88725,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "subprocess"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/threading.py",
+        "projection_relative_path": "Lib/threading.py",
+        "sha256": "63c306a32ed31551297a360bac0fd00a7aa394f367301d98d67c58f03840ec38",
+        "bytes": 60199,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "threading"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/types.py",
+        "projection_relative_path": "Lib/types.py",
+        "sha256": "345474ef027a1273f353da9bdc1f7c18f65335e72e681bcc0376774cc51f2405",
+        "bytes": 10993,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "types"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/urllib/__init__.py",
+        "projection_relative_path": "Lib/urllib/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "urllib"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/urllib/parse.py",
+        "projection_relative_path": "Lib/urllib/parse.py",
+        "sha256": "b1bb83c482a4838241c40bca0092d57fd0200b3ee2411fc1d73e0751718ca6db",
+        "bytes": 45008,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "urllib.parse"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/Lib/warnings.py",
+        "projection_relative_path": "Lib/warnings.py",
+        "sha256": "adb02ef44e1e9bf9286afbd4c807c4eabccef5fd07a8b1ec3f7c976dd5827d2f",
+        "bytes": 21902,
+        "role": "python_source",
+        "discovery_basis": "observed_direct_or_transitive_module",
+        "dependency_parent": "warnings"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/VCRUNTIME140.dll",
+        "projection_relative_path": "VCRUNTIME140.dll",
+        "sha256": "02c6aa0e6e624411a9f19b0360a7865ab15908e26024510e5c38a9c08362c35a",
+        "bytes": 119888,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-console-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-console-l1-1-0.dll",
+        "sha256": "869ec6bc79d1da594b0db2cfa510472ca781ffd826acbe7716198415ea3a3605",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-console-l1-2-0.dll",
+        "projection_relative_path": "api-ms-win-core-console-l1-2-0.dll",
+        "sha256": "69a12b4beba7e6cf1a9b7263e2c6a494a60ddbbed0bd8c40920c51179f571d99",
+        "bytes": 21960,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-datetime-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-datetime-l1-1-0.dll",
+        "sha256": "60675dfc2cb2af87456032d28d454baa4821d6b1921cb03f12a2891def445fd6",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-debug-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-debug-l1-1-0.dll",
+        "sha256": "3182765b6cae55cf4c67b9cb5b6f0b037f323585950ff9b6301b59e5e5acf780",
+        "bytes": 21960,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-errorhandling-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-errorhandling-l1-1-0.dll",
+        "sha256": "3746169e2226c52c7b930bbffc8f3e263283d559d3237c4e193cbb07abaced1c",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-fibers-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-fibers-l1-1-0.dll",
+        "sha256": "7ad9720c4999b88c8b8db1dcb1ee765f374900b489b2f09bb40e4951b68b0aab",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-file-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-file-l1-1-0.dll",
+        "sha256": "3a7bdd492a945a962eb18f486ae7bcddc2bbd5b43a12eb461057a6cdc5657f5f",
+        "bytes": 26056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-file-l1-2-0.dll",
+        "projection_relative_path": "api-ms-win-core-file-l1-2-0.dll",
+        "sha256": "1b384401b534ca9a61dce7f51c8d54b9eabb625f86569bf09e449be5724c6ca0",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-file-l2-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-file-l2-1-0.dll",
+        "sha256": "1d2f1efefd0a802190f0257aac7e1589d08ffbaea550c561c69c1827e57b55e7",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-handle-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-handle-l1-1-0.dll",
+        "sha256": "819976a22a6648536ba0c184d80d093d867d513849baa8f7011fade104a7f8c0",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-heap-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-heap-l1-1-0.dll",
+        "sha256": "83ca55315263d7a42d16cf032e67b79359052321c43c5df97d687c2f4d84a79c",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-interlocked-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-interlocked-l1-1-0.dll",
+        "sha256": "7e32a4463c99e54dd1366658b4284020e1a3384c4c366761116309dae49ee831",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-localization-l1-2-0.dll",
+        "projection_relative_path": "api-ms-win-core-localization-l1-2-0.dll",
+        "sha256": "2fb638be18863ef6077fef2b7f4ebda92527b8e19d2e5b39eba27b3bf96a7fed",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-memory-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-memory-l1-1-0.dll",
+        "sha256": "7aacd77d48b5a7595c59ef95c09d65bd9ee6644206b0878a8108398563b09515",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-namedpipe-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-namedpipe-l1-1-0.dll",
+        "sha256": "c184419f20f5ea131239e627dcad237da804a5fd21b446846f5c0d60b06a7b49",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-processenvironment-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-processenvironment-l1-1-0.dll",
+        "sha256": "9ab3de163dd167a9423946c308a6f225e22172e8547ccf154e0269d258588df7",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-processthreads-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-processthreads-l1-1-0.dll",
+        "sha256": "f5b2cd5c8fbe89ac55a09b6939cfacdd0861ff47e1fc3df300412603fa96e00b",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-processthreads-l1-1-1.dll",
+        "projection_relative_path": "api-ms-win-core-processthreads-l1-1-1.dll",
+        "sha256": "5a3d41a750d1d6714232448193e57ab7d8fd718ba9cec24c7afc71f69886dae3",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-profile-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-profile-l1-1-0.dll",
+        "sha256": "23a1324112574ad2f7d903a881592354e8fe915ba3086e830b9dc49cfbf7154c",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-rtlsupport-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-rtlsupport-l1-1-0.dll",
+        "sha256": "17423b1dfc0d5c9246a1b4c50bce5af931b186ad66268761b2611e611d9adbb3",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-string-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-string-l1-1-0.dll",
+        "sha256": "ac5a66b65ead96dfbc63afd947601bd276c1c5ede2a7acc0d580b02ef104892a",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-synch-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-synch-l1-1-0.dll",
+        "sha256": "2d577cdae281cd49141a87340d21ee3b372a297ef9ce35e82cf449dd352f380d",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-synch-l1-2-0.dll",
+        "projection_relative_path": "api-ms-win-core-synch-l1-2-0.dll",
+        "sha256": "220a7cee500b92a005b58d45006b1b98545fcd2040dda5d3d750fe2e6de5c62b",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-sysinfo-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-sysinfo-l1-1-0.dll",
+        "sha256": "371442d516a47a8949945f85c6bb0fe3c3b88731de07a4ff457c2b041c928cfd",
+        "bytes": 21960,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-sysinfo-l1-2-0.dll",
+        "projection_relative_path": "api-ms-win-core-sysinfo-l1-2-0.dll",
+        "sha256": "da65cf54767305c74eaf35e39ac8b7ff472c2df5e22a84e4fc465e2448d2fea3",
+        "bytes": 21960,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-timezone-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-timezone-l1-1-0.dll",
+        "sha256": "9dae313de05c31ab6583545323e422dd1bdaec4aa26e81cbea0d5b69b632fd0c",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-core-util-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-core-util-l1-1-0.dll",
+        "sha256": "d627df017ddcf7472c761f9796cb55fc7a2347f05cc897bf6c7c29aee8e4dd0c",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-conio-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-conio-l1-1-0.dll",
+        "sha256": "4324863a74391b29229e5376020de3e1a04f436abbd4604e305307fde4601fa7",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-convert-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-convert-l1-1-0.dll",
+        "sha256": "6f997e4a9837f42295fa25f45cb564f5efa93c99768e2a2e2643008ecffe97b0",
+        "bytes": 26040,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-environment-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-environment-l1-1-0.dll",
+        "sha256": "3c0893659c504d16984d6b87c61c98fa050d60473ff77e294f69fdb7fae155bb",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-filesystem-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "sha256": "924099811552d0e9623d220fd9f9348a14d44ef08694a15d442010193574b1fe",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-heap-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-heap-l1-1-0.dll",
+        "sha256": "2cfc2c7c376630b595e3582ccd2dda019f82ae5dc1665d34d3621e2c62e1a868",
+        "bytes": 22056,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-locale-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-locale-l1-1-0.dll",
+        "sha256": "3c2bc1ebdcb4c6fedefc5b82419a1a4b5ba035c3f5453e9d083dccdbfe2d9e95",
+        "bytes": 22072,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-math-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-math-l1-1-0.dll",
+        "sha256": "930fbbcfd3fbd97bfc2c0174f059ff48f33fa54274e409ed6d629a7230e45aa0",
+        "bytes": 30248,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-process-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-process-l1-1-0.dll",
+        "sha256": "4efdca4ac7819401a586e2abebc3b858ba8ba0b13ad296c6afacd583500f2575",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-runtime-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "sha256": "5e9837abf4517eb8f74edcf7ea08a3d32916e253d9c24663869dda40cf7b0280",
+        "bytes": 26168,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-stdio-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-stdio-l1-1-0.dll",
+        "sha256": "f2a7e41ededd62b2c192fe6381c8cc33f9bd223164ffc8b38623c9220c009ccb",
+        "bytes": 26168,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-string-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-string-l1-1-0.dll",
+        "sha256": "0b337649b564a760abb57e21fb2a755cff080a604034b71c3e8a3cc48c7da71d",
+        "bytes": 26168,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/api-ms-win-crt-time-l1-1-0.dll",
+        "projection_relative_path": "api-ms-win-crt-time-l1-1-0.dll",
+        "sha256": "63a56aa00ca3bec9225e516ccd336003fc4145c1c1439c7d4d9925d8be24c0e7",
+        "bytes": 21944,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/python.exe",
+        "projection_relative_path": "python.exe",
+        "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+        "bytes": 104208,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "<generated-in-memory:python312._pth>",
+        "projection_relative_path": "python312._pth",
+        "sha256": "dda136779493f74b019f62e349c5506ff5d551f397c0eede6f1f09981d126e55",
+        "bytes": 9,
+        "role": "generated_path_configuration",
+        "discovery_basis": "request_v13_v15_exact_two_line_contract",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/python312.dll",
+        "projection_relative_path": "python312.dll",
+        "sha256": "d5c15f80afcd0679cfe6c82e80fcd30469bc7a54a6d466e161a10a9a57e7e479",
+        "bytes": 7457040,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      },
+      {
+        "source_path": "C:/ProgramData/anaconda3/zlib.dll",
+        "projection_relative_path": "zlib.dll",
+        "sha256": "8dbfd6ef7374a831158bddccb79e3d5665e9625c81af557f15b4150b7877f687",
+        "bytes": 99608,
+        "role": "native_startup",
+        "discovery_basis": "immutable_request_v7_native_startup_manifest",
+        "dependency_parent": "python_startup"
+      }
+    ]
+  },
+  "future_probe_delta": {
+    "authorization_state": "proposed_only_pending_separate_exact_hash_owner_confirmation",
+    "starting_probe_pin": {
+      "sha256": "c44a3ce7a49c4a20e23d85a6d8faa37288ccce75a12afff28ba3394e0116352b",
+      "bytes": 83290
+    },
+    "allowed_changes": [
+      "replace the pinned projection request v16 SHA-256 and byte size with the separately confirmed v17 SHA-256 and byte size",
+      "set projection path count to 99",
+      "set projection content bytes to 10477161",
+      "set projection manifest bytes to 9422",
+      "set projection manifest SHA-256 to c602d91fbc090dd72912a60be97a7c51aeb832e38d6e96807950de1eeae28b5d"
+    ],
+    "request_v17_pin_placeholders": {
+      "sha256": "<full_v17_sha256>",
+      "bytes": "<v17_bytes>"
+    },
+    "bounded_diagnostic_output_capture": "preserve byte-for-byte",
+    "forbidden_changes": [
+      "launch semantics",
+      "AppContainer semantics",
+      "Job semantics",
+      "ACL semantics",
+      "17-entry environment",
+      "limits",
+      "worker",
+      "full-qualification cases",
+      "cleanup semantics"
+    ]
+  },
+  "future_attempt_A_identity_diagnostic": {
+    "authorization_state": "proposed_only",
+    "command": "qualify",
+    "attempt": "A",
+    "identity_diagnostic_only": true,
+    "root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+    "profile": "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+    "endpoints": [
+      "127.0.0.1:47631",
+      "[::1]:47632"
+    ],
+    "child_environment_entry_count": 17,
+    "worker": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+    "projected_interpreter": "sandbox/runtime/python.exe",
+    "projection": {
+      "path_count": 99,
+      "content_bytes": 10477161,
+      "manifest_bytes": 9422,
+      "manifest_sha256": "c602d91fbc090dd72912a60be97a7c51aeb832e38d6e96807950de1eeae28b5d"
+    },
+    "exact_steps": [
+      "preflight",
+      "materialize and byte-verify exactly 99 projection paths",
+      "forced pre-Job abort regression",
+      "one normal identity worker",
+      "bounded diagnostic output capture",
+      "exact cleanup"
+    ],
+    "prohibited_steps": [
+      "CP-WIN-06 through CP-WIN-18",
+      "attempt B",
+      "full qualification"
+    ],
+    "expected_success": {
+      "worker_result_code": "WORKER_IDENTITY",
+      "worker_exit_code": 0,
+      "parent_and_worker": {
+        "token_is_appcontainer": true,
+        "exact_identical_SID": true,
+        "capability_count": 0
+      },
+      "job_assigned_before_resume": true,
+      "active_process_zero_after_completion": true,
+      "valid_single_JSON_worker_record": true,
+      "output_overflow": false,
+      "reader_errors": [],
+      "cleanup_verified": true,
+      "residue_count": 0
+    },
+    "stop_contract": "On the next missing module, DLL, loader, access, runtime, pin, projection, cleanup, or scope mismatch, disclose only bounded authorized evidence, perform exact owned cleanup, and stop without full qualification."
+  },
+  "after_successful_identity_diagnostic": "A separate owner approval is required before full A/B 18-case qualification with the corrected 99-path projection.",
+  "eventual_package": {
+    "authorization_state": "informational_not_authorized",
+    "inventory_kind": "all_new_relative_to_baseline",
+    "path_count": 22,
+    "reason": "immutable requests v1 through v17 are retained",
+    "paths": [
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+      "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-qualification-owner-disposition-v1.yaml",
+      "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-v1.yaml",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-document-check-v1.yaml"
+    ]
+  },
+  "invariants": {
+    "G-K0B03-K0B01-COMPLETE": "closed",
+    "G-K0B03-UNTRUSTED-SHAPES": "future_open",
+    "K0b-03": "blocked",
+    "K0b-04": "unchanged",
+    "K0b-05": "unchanged",
+    "N1": "unchanged",
+    "Swarm": "untouched",
+    "runtime_authority": "none"
+  },
+  "stop_conditions": [
+    "baseline mismatch",
+    "entry pin mismatch",
+    "candidate pin mismatch",
+    "99-row inventory mismatch",
+    "manifest mismatch",
+    "scope expansion"
+  ],
+  "request_document_checks": [
+    "baseline and exact 18-path entry inventory",
+    "requests v1-v16 and worker byte identity",
+    "current probe pin",
+    "candidate __future__.py pin and assessment",
+    "embedded historical 98 rows plus exactly one new row",
+    "99-path content and manifest reproduction",
+    "zero duplicate paths and conflicting bindings",
+    "future diagnostic remains non-authorizing",
+    "UTF-8 without BOM, LF only, one final LF, no duplicate keys",
+    "full v17 SHA-256 and size reported for separate owner confirmation"
+  ],
+  "next_required_action": "Report this request's exact SHA-256 and byte size; do not modify the probe or run the proposed diagnostic without separate exact-hash owner confirmation."
+}

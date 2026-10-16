@@ -1,0 +1,141 @@
+{
+    "review_id":  "K0B03-V2-WINDOWS-ENFORCEMENT-CAPABILITY-SECURITY-REVIEW-V1",
+    "schema_version":  1,
+    "status":  "review_recorded_with_retained_findings",
+    "provenance":  {
+                       "source":  "fresh-context non-author sub-agent review in conversation",
+                       "review_task":  "/root/fresh_review",
+                       "historical_artifact_or_signed_receipt_exists":  false,
+                       "materialized_now_from_conversation":  true,
+                       "review_time_not_invented":  true,
+                       "reviewer_approval_is_not_owner_closure":  true,
+                       "assessment":  "No finding contradicts factual pinned A/B success; governance provenance and immediate inventory attestation limits remain."
+                   },
+    "input_pins":  [
+                       {
+                           "path":  "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+                           "sha256":  "b0430c474976b47e5954355c86490a2774a74e42d811b6fc70615a9fa0cae363",
+                           "bytes":  434509
+                       },
+                       {
+                           "path":  "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+                           "sha256":  "78a39d7a788559145dba1de07ec0d8277d51ebd59e213c201df83684c10482e4",
+                           "bytes":  38073
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-full-qualification-CP-WIN-05-bounded-quiescence-and-failure-projection-remediation-approval-request-v50.yaml",
+                           "sha256":  "c5c3fab750daa0fc384c15e4535be96b4567603e73db322429aa8b8accca5707",
+                           "bytes":  26423
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+                           "sha256":  "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+                           "bytes":  59032
+                       },
+                       {
+                           "path":  "C:\\ProgramData\\anaconda3\\python.exe",
+                           "sha256":  "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+                           "bytes":  104208
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-FR-WIN-07-integration-approval-request-v41.yaml",
+                           "sha256":  "d292c2831826d2de23ecb7126f03108a6823faaa79436051b9479378887cb2ef",
+                           "bytes":  27785
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-trusted-pending-connect-watchdog-integration-approval-request-v47.yaml",
+                           "sha256":  "ff20c3bc4836f97f6801fd321b45d539c53289bdab711a4b1733692a1e59436b",
+                           "bytes":  30302
+                       },
+                       {
+                           "path":  "new pipeline/architecture/k0b-03-v2-remediation-design-v1.md",
+                           "sha256":  "b8a84cf7ca6064d7b1224c3ba57380caa5f297b638b344b567a239411ff2d7a3",
+                           "bytes":  25193
+                       },
+                       {
+                           "path":  "new pipeline/decisions/k0b-03-v2-remediation-design-freeze-owner-disposition-v1.yaml",
+                           "sha256":  "c034ec84f18aadd0823b29019fd31cc08af9279a31e319b5a02b5e01adcd80c9",
+                           "bytes":  3473
+                       }
+                   ],
+    "attachment_pins":  [
+                            {
+                                "path":  "C:\\Users\\Administrator\\.codex\\attachments\\f293ff7e-31c4-4b48-b0ef-9adb50ad1d9e\\Pasted text.txt",
+                                "sha256":  "41a87c5940c15c657cc038c160d7dcc69f30e665e20ccb418ea2be601240d5de",
+                                "bytes":  466665
+                            },
+                            {
+                                "path":  "C:\\Users\\Administrator\\.codex\\attachments\\826aa88c-96f8-4ca3-a9ce-c9c4bcbfb403\\Pasted text.txt",
+                                "sha256":  "4b4b1709e042b10909b4e142148426b76afba48021985f2b8f2984ee3467d530",
+                                "bytes":  444607
+                            },
+                            {
+                                "path":  "C:\\Users\\Administrator\\.codex\\attachments\\ced2c8e5-8d7b-4c13-bbca-511a24d30704\\Pasted text.txt",
+                                "sha256":  "fb6c3ceafe93e5d431cd2724b97ccdec4fd481b4d4dc59f5b19f8fa16932ecb2",
+                                "bytes":  479860
+                            },
+                            {
+                                "path":  "C:\\Users\\Administrator\\.codex\\attachments\\1f89b053-de3d-427d-8976-e8da2a8152a0\\Pasted text.txt",
+                                "sha256":  "fd50916df6b1643e304b4a117c2ab32bc45b4f231f59217b98976a4707e5c358",
+                                "bytes":  951042
+                            }
+                        ],
+    "review_scope":  [
+                         "envelope and raw-byte integrity",
+                         "18-case expected-result matrix and reconstructed canonical projection",
+                         "CP-WIN-05 bounded quiescence and CP-WIN-18 cleanup evidence",
+                         "additional A provenance and separately authorized actual B",
+                         "watchdog claim limits",
+                         "current inventory versus historical attestation",
+                         "wrapper success versus failure-path evidence"
+                     ],
+    "positive_findings":  [
+                              "original A and actual B factual success independently supported",
+                              "all 18 projection records match",
+                              "CP-WIN-05 predicates true, ACTIVE_PROCESS_ZERO observed, final active count zero and PID list empty",
+                              "CP-WIN-18 cleanup errors empty, root/profile absent, BFE running and exemptions unchanged",
+                              "current baseline, pins and 52-file content verification supported"
+                          ],
+    "findings":  [
+                     {
+                         "id":  "CAP-V50-PROVENANCE",
+                         "status":  "retained_not_closed",
+                         "classification":  "governance",
+                         "description":  "An additional distinct A execution was initially presented as B. It was not the originally authorized single A repeat and is not B. Acceptance is not retroactive runtime authorization. Actual B was separately authorized after the mismatch."
+                     },
+                     {
+                         "id":  "CAP-V50-INVENTORY",
+                         "status":  "retained_not_closed",
+                         "classification":  "evidence_limit",
+                         "description":  "The wrapper computes all post-run entry hashes but its success predicate compares inventory count and paths only; content pins cover probe, worker, v17, v50 and Python. Later 52-file verification establishes current preservation, not immutable immediate post-execution preservation."
+                     },
+                     {
+                         "id":  "CAP-V50-WRAPPER",
+                         "status":  "retained_not_closed",
+                         "classification":  "failure_path_limit",
+                         "description":  "No outer wait timeout; copy-task failure may lose partial capture; wrapper parent termination does not provide comprehensive emergency root/profile cleanup. Successful A/B cleanup is not proof of every failure path."
+                     },
+                     {
+                         "id":  "CAP-V50-WATCHDOG",
+                         "status":  "retained_not_closed",
+                         "classification":  "claim_boundary",
+                         "description":  "Trusted CPU and pending-connect watchdog enforcement only. Native JOB_OBJECT_LIMIT_PROCESS_TIME, END_OF_PROCESS_TIME and WSAEACCES are not proven; no universal absence-of-network-effect guarantee."
+                     }
+                 ],
+    "assessment":  "No finding contradicts factual pinned A/B success; governance provenance and immediate inventory attestation limits remain.",
+    "owner_acceptance_is_separate":  true,
+    "summary_reference":  "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-summary-v1.yaml",
+    "preservation":  {
+                         "findings_F01_through_F08":  "open_unchanged",
+                         "F03":  "open_unchanged",
+                         "G_K0B03_UNTRUSTED_SHAPES":  "future_open_unchanged",
+                         "K0b03_canonical_status":  "blocked_unchanged",
+                         "implementation_authority":  "none",
+                         "runtime_authority":  "none",
+                         "canonical_state_mutation":  false,
+                         "staging":  false,
+                         "commit":  false,
+                         "gate_or_finding_closure":  false,
+                         "K0b04_K0b05_N1_Swarm_advancement":  false
+                     }
+}

@@ -1,0 +1,630 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-CASE-MATRIX-REMEDIATION-DIAGNOSTIC-V18",
+  "schema_version": "1.0.0",
+  "request_version": 18,
+  "prepared_on": "2026-10-07",
+  "document_kind": "approval_request",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "runtime_authority": "none",
+  "purpose": "Freeze the evidence-bound causes and missing proofs from the failed attempt-A capability matrix and propose one bounded attempt-A-only remediation diagnostic before any final remediation architecture or renewed qualification.",
+  "serialization": {
+    "syntax": "JSON-compatible YAML",
+    "encoding": "UTF-8 without BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": false
+  },
+  "current_authority": {
+    "authorized_now": [
+      "verify_baseline_and_19_entry_pins",
+      "create_this_request_v18_only",
+      "perform_document_static_checks",
+      "reproduce_embedded_pins_and_counts",
+      "compute_request_sha256_and_size"
+    ],
+    "forbidden_now": [
+      "modify_probe_or_worker",
+      "execute_Python_probe_worker_or_diagnostic",
+      "execute_full_qualification_or_attempt_B",
+      "create_root_profile_ACL_listener_socket_or_temp_target",
+      "create_owner_disposition_evidence_or_document_check",
+      "stage_or_commit",
+      "close_prerequisite_finding_or_gate",
+      "change_state_status_plan_or_runtime_authority",
+      "advance_K0b-03_K0b-04_K0b-05_N1_or_Swarm"
+    ],
+    "activation_rule": "The future diagnostic and every proposed probe or worker delta remain unauthorized until the owner separately confirms this request's exact SHA-256 and byte size."
+  },
+  "baseline": {
+    "head": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean",
+    "entry_untracked_count": 19,
+    "target_entry_state": "absent"
+  },
+  "entry_untracked_inventory": {
+    "count": 19,
+    "preservation": "requests_v1_through_v17_and_worker_byte_identical; probe_pinned_at_current_failed_case_capture_version",
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+        "sha256": "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+        "bytes": 27364
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+        "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+        "bytes": 71036
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+        "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+        "bytes": 59032
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "b9b94f2c9467a2de1be81ca18a773d0649e86447ff1a57f5b67f52cb2284e75a",
+        "bytes": 86029
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+        "bytes": 12602
+      }
+    ]
+  },
+  "target": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-case-matrix-remediation-diagnostic-approval-request-v18.yaml",
+    "operation": "add_only",
+    "resulting_untracked_count": 20
+  },
+  "immutable_chain": {
+    "requests_v1_through_v17": "byte-identical",
+    "request_v17": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+      "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+      "bytes": 59032
+    },
+    "current_probe": {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "b9b94f2c9467a2de1be81ca18a773d0649e86447ff1a57f5b67f52cb2284e75a",
+      "bytes": 86029
+    },
+    "worker": {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+      "bytes": 12602,
+      "preservation": "byte-identical"
+    },
+    "interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": [
+        "-I",
+        "-B"
+      ]
+    }
+  },
+  "historical_attempt_A_evidence": {
+    "attempt_B_executed": false,
+    "short_failure_output": {
+      "bytes": 262,
+      "sha256": "550c5fd355552ea464593b8ba84599b3ec586d9c4c0ba2838ffe194b26580b2f",
+      "stop_code": "CASE_MATRIX_FAILED",
+      "failed_case_ids": [
+        "CP-WIN-09",
+        "CP-WIN-11",
+        "CP-WIN-12",
+        "CP-WIN-14",
+        "CP-WIN-15",
+        "CP-WIN-16"
+      ]
+    },
+    "bounded_failure_capture_output": {
+      "bytes": 10071,
+      "sha256": "d1d547881e5ac972b8bbe6bcd54cd6c6ebdcd85c75f75c1131d924bc641eb466",
+      "stop_code": "CASE_MATRIX_FAILED",
+      "failed_case_ids": [
+        "CP-WIN-05",
+        "CP-WIN-09",
+        "CP-WIN-11",
+        "CP-WIN-12",
+        "CP-WIN-14",
+        "CP-WIN-15",
+        "CP-WIN-16"
+      ],
+      "cleanup": "verified_zero_residue"
+    },
+    "successful_identity_diagnostic": {
+      "result_code": "IDENTITY_DIAGNOSTIC_CAPTURED",
+      "worker_result_code": "WORKER_IDENTITY",
+      "worker_exit_code": 0,
+      "appcontainer_flag": true,
+      "capability_count": 0,
+      "scope_note": "Identity success is not capability-matrix proof."
+    }
+  },
+  "evidence_bound_classifications": [
+    {
+      "case_ids": [
+        "CP-WIN-05"
+      ],
+      "classification": "evidence_gap_and_probable_job_quiescence_race",
+      "established_facts": [
+        "The last A/A drift cannot be selected between forced_abort_ok_false and identity_run_job_accounting_active_process_zero_false from the captured evidence.",
+        "All other CP-WIN-05 predicate inputs are statically required to have been true or execution would have stopped earlier.",
+        "The current failed-case projection omitted forced_pre_Job_abort_result_code, forced_pre_Job_abort, created_suspended, assigned_before_resume, resume_called, job_messages, and accounting.",
+        "After waiting only for the main process, the current probe reads Job accounting immediately and drains GetQueuedCompletionStatus with timeout zero.",
+        "The current probe does not wait for JOB_OBJECT_MSG_ACTIVE_PROCESS_ZERO and ActiveProcesses_equal_zero within the 10000_ms cleanup_quiescence deadline."
+      ],
+      "missing_proofs": [
+        "exact_forced_abort_predicate_components",
+        "exact_normal_identity_predicate_components",
+        "ordered_completion_messages",
+        "bounded_active_process_zero_quiescence"
+      ]
+    },
+    {
+      "case_ids": [
+        "CP-WIN-09"
+      ],
+      "classification": "CPU_limit_configuration_valid_but_enforcement_unproven",
+      "established_facts": [
+        "PerProcessUserTimeLimit is 10000000 in 100_ns units and therefore exactly one second.",
+        "JOB_OBJECT_LIMIT_PROCESS_TIME is configured before CreateProcessW.",
+        "The observed termination reason was wall_timeout.",
+        "JOB_OBJECT_MSG_END_OF_PROCESS_TIME was absent.",
+        "The recorded Job TotalUserTime was 48593750 in 100_ns units."
+      ],
+      "missing_proofs": [
+        "effective_limit_readback",
+        "target_process_GetProcessTimes_user_and_kernel_values",
+        "exact_CPU_limit_enforcement_signal"
+      ],
+      "non_substitution": "Job-wide TotalUserTime and wall_timeout do not prove target-process CPU-limit enforcement."
+    },
+    {
+      "case_ids": [
+        "CP-WIN-11",
+        "CP-WIN-12",
+        "CP-WIN-14"
+      ],
+      "classification": "first_Popen_denied_before_intended_scenario_proof",
+      "throwing_operations": {
+        "CP-WIN-11": "first_subprocess_Popen_in_scenario_job_memory",
+        "CP-WIN-12": "first_subprocess_Popen_in_scenario_active_process",
+        "CP-WIN-14": "first_subprocess_Popen_in_scenario_tree"
+      },
+      "established_facts": [
+        "The worker returned PermissionError with errno_13.",
+        "The worker top-level handler did not preserve failing operation, bounded message, exception args, executable path, exact child scenario, or bounded raw Windows provenance.",
+        "Global ActiveProcessLimit_equal_2 applies to every scenario.",
+        "Identity evidence already shows two Job processes before explicit child workload, creating an architectural conflict for job-memory and owned-tree scenarios that require another process."
+      ],
+      "missing_proofs": [
+        "exact_failing_Popen_step",
+        "exact_exception_message_and_args",
+        "exact_Job_process_inventory_before_and_after_Popen",
+        "distinction_between_ACL_AppContainer_and_Job_limit_denial"
+      ]
+    },
+    {
+      "case_ids": [
+        "CP-WIN-12"
+      ],
+      "classification": "active_process_proof_contract_too_weak",
+      "established_facts": [
+        "The current predicate permits winerror_null.",
+        "A generic PermissionError is not sufficient proof of Job active-process enforcement."
+      ],
+      "missing_proofs": [
+        "effective_ActiveProcessLimit_readback",
+        "exact_Job_process_inventory",
+        "successful_architecturally_comparable_control_creation",
+        "subsequent_denial_attributable_to_the_exact_active_process_limit",
+        "JOB_OBJECT_MSG_ACTIVE_PROCESS_LIMIT_or_separately_pinned_exact_Windows_Job_result"
+      ]
+    },
+    {
+      "case_ids": [
+        "CP-WIN-15",
+        "CP-WIN-16"
+      ],
+      "classification": "egress_exception_normalization_gap",
+      "established_facts": [
+        "The current worker normalizes any OSError to WORKER_EGRESS_DENIED.",
+        "The captured result code was WORKER_EGRESS_DENIED and listener accept count was zero.",
+        "Both winerror and errno were null."
+      ],
+      "missing_proofs": [
+        "exact_socket_exception_type_message_and_args",
+        "exact_winerror_or_errno",
+        "separate_socket_connect_ex_raw_result",
+        "WSAEACCES_10013"
+      ],
+      "non_weakening_rule": "Timeout, a generic socket error, and listener zero accepts must not replace the required WSAEACCES_10013 proof."
+    },
+    {
+      "case_ids": [
+        "CP-WIN-05",
+        "CP-WIN-09",
+        "CP-WIN-11",
+        "CP-WIN-12",
+        "CP-WIN-14",
+        "CP-WIN-15",
+        "CP-WIN-16"
+      ],
+      "classification": "missing_bounded_quiescence_barrier",
+      "required_future_observation": [
+        "continue_bounded_completion_port_collection_after_process_exit_or_termination",
+        "wait_for_JOB_OBJECT_MSG_ACTIVE_PROCESS_ZERO",
+        "repeat_ActiveProcesses_accounting_until_zero",
+        "use_the_exact_10000_ms_deadline",
+        "record_ordered_messages_with_monotonic_offsets_and_accounting_snapshots",
+        "stop_inconclusive_on_deadline_instead_of_treating_later_cleanup_as_case_success"
+      ]
+    }
+  ],
+  "prohibited_proof_substitutions": [
+    "successful_identity_diagnostic_is_not_capability_matrix_proof",
+    "generic_PermissionError_is_not_active_process_job_memory_or_tree_enforcement_proof",
+    "socket_timeout_is_not_WSAEACCES_10013",
+    "listener_zero_accepts_is_not_default_deny_egress_proof",
+    "wall_timeout_is_not_CPU_limit_enforcement_proof",
+    "cleanup_success_is_not_case_success_or_quiescence_proof"
+  ],
+  "proposed_future_diagnostic": {
+    "authorization_state": "not_authorized_by_this_request_creation_step",
+    "scope": "one_attempt_A_only_case_remediation_diagnostic",
+    "cli_flag": "--case-remediation-diagnostic-only",
+    "attempt": "A",
+    "root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+    "profile": "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+    "endpoints": [
+      "127.0.0.1:47631",
+      "[::1]:47632"
+    ],
+    "runtime_projection": {
+      "path_count": 99,
+      "content_bytes": 10477161,
+      "manifest_bytes": 9422,
+      "manifest_sha256": "c602d91fbc090dd72912a60be97a7c51aeb832e38d6e96807950de1eeae28b5d",
+      "duplicate_paths": 0,
+      "conflicting_bindings": 0,
+      "python312_pth_sha256": "dda136779493f74b019f62e349c5506ff5d551f397c0eede6f1f09981d126e55",
+      "python312_pth_bytes": 9
+    },
+    "fixed_execution_contract": {
+      "interpreter_version": "3.12.7",
+      "interpreter_flags": [
+        "-I",
+        "-B"
+      ],
+      "environment_entry_count": 17,
+      "appcontainer_capability_count": 0,
+      "job_assignment": "before_resume",
+      "ACL_scope": "attempt_A_sandbox_only",
+      "cleanup": "exact_owned_objects_and_zero_residue"
+    },
+    "probe_delta_allowlist": [
+      {
+        "change": "add_explicit_CLI_flag",
+        "value": "--case-remediation-diagnostic-only"
+      },
+      {
+        "change": "capture_full_CP_WIN_05_evidence",
+        "fields": [
+          "forced_abort_result_and_identity",
+          "normal_identity_run",
+          "created_suspended",
+          "assigned_before_resume",
+          "resume_called",
+          "ordered_Job_messages",
+          "accounting_snapshots",
+          "exact_predicate_component_results"
+        ]
+      },
+      {
+        "change": "read_back_effective_Job_limits_immediately_after_SetInformationJobObject",
+        "fields": [
+          "LimitFlags",
+          "PerProcessUserTimeLimit",
+          "ProcessMemoryLimit",
+          "JobMemoryLimit",
+          "ActiveProcessLimit"
+        ]
+      },
+      {
+        "change": "add_bounded_Job_quiescence_telemetry",
+        "fields": [
+          "completion_messages_with_monotonic_offsets",
+          "repeated_ActiveProcesses_snapshots",
+          "ACTIVE_PROCESS_ZERO_seen",
+          "deadline_result"
+        ],
+        "deadline_ms": 10000,
+        "predicate_change": false
+      },
+      {
+        "change": "capture_target_process_GetProcessTimes",
+        "fields": [
+          "user_time_100ns",
+          "kernel_time_100ns"
+        ]
+      },
+      {
+        "change": "capture_bounded_Job_process_ID_inventory",
+        "checkpoints": [
+          "before_worker_resume",
+          "after_worker_resume",
+          "before_explicit_Popen",
+          "after_scenario_completion"
+        ]
+      },
+      {
+        "change": "emit_bounded_failed_case_projection_only",
+        "excluded": [
+          "environment_values",
+          "secrets",
+          "unrestricted_output",
+          "repository_content"
+        ]
+      }
+    ],
+    "worker_delta_allowlist": [
+      {
+        "change": "capture_bounded_exception_provenance",
+        "fields": [
+          "scenario",
+          "exact_operation_step",
+          "exception_type",
+          "bounded_message",
+          "exception_args",
+          "winerror",
+          "errno"
+        ]
+      },
+      {
+        "change": "add_exact_Popen_step_markers",
+        "steps": [
+          "job_memory_first_child",
+          "active_process_first_child",
+          "active_process_second_child",
+          "tree_child"
+        ]
+      },
+      {
+        "change": "capture_egress_diagnostic_fields",
+        "fields": [
+          "exception_type",
+          "bounded_message",
+          "exception_args",
+          "winerror",
+          "errno",
+          "separate_socket_connect_ex_result",
+          "exact_socket_family",
+          "exact_endpoint"
+        ],
+        "listener_accept_count_source": "parent_observed"
+      }
+    ],
+    "acceptance_rule_changes": false,
+    "WSAEACCES_10013_requirement_changes": false,
+    "matrix": [
+      {
+        "id": "RD-WIN-01",
+        "purpose": "CP-WIN-05 forced-abort and normal-identity full predicate decomposition"
+      },
+      {
+        "id": "RD-WIN-02",
+        "purpose": "effective Job-limit readback and bounded active-process-zero completion ordering"
+      },
+      {
+        "id": "RD-WIN-03",
+        "purpose": "CPU limit with exact target GetProcessTimes and completion messages; record but do not accept wall-time fallback"
+      },
+      {
+        "id": "RD-WIN-04",
+        "purpose": "job-memory first-Popen provenance"
+      },
+      {
+        "id": "RD-WIN-05",
+        "purpose": "active-process first and second Popen provenance plus exact Job process inventory"
+      },
+      {
+        "id": "RD-WIN-06",
+        "purpose": "owned-tree first-Popen provenance"
+      },
+      {
+        "id": "RD-WIN-07",
+        "purpose": "IPv4 current-connect plus separate connect_ex raw result against 127.0.0.1:47631"
+      },
+      {
+        "id": "RD-WIN-08",
+        "purpose": "IPv6 current-connect plus separate connect_ex raw result against [::1]:47632"
+      },
+      {
+        "id": "RD-WIN-09",
+        "purpose": "exact cleanup and zero residue"
+      }
+    ],
+    "diagnostic_stop_rule": "Capture bounded evidence, perform exact cleanup, and stop after the single attempt-A diagnostic regardless of result.",
+    "required_cleanup_absence": [
+      "process",
+      "profile_mapping_or_folder",
+      "sandbox_ACL_entry",
+      "listener",
+      "socket",
+      "attempt_A_root",
+      "repository_bytecode"
+    ],
+    "forbidden": [
+      "scenario_specific_limit_changes",
+      "success_predicate_changes",
+      "qualification_result",
+      "attempt_B",
+      "full_CP_WIN_01_through_18_qualification",
+      "owner_disposition_evidence_or_document_check",
+      "staging_or_commit",
+      "prerequisite_finding_or_gate_closure",
+      "K0b-03_K0b-04_K0b-05_N1_or_Swarm_progress"
+    ]
+  },
+  "ordered_future_contract": [
+    {
+      "step": 1,
+      "action": "create_v18_and_obtain_separate_exact_hash_and_size_owner_confirmation"
+    },
+    {
+      "step": 2,
+      "action": "obtain_separate_owner_approval_to_modify_only_probe_and_worker_within_v18_scope"
+    },
+    {
+      "step": 3,
+      "action": "execute_exactly_one_attempt_A_only_RD_WIN_01_through_09_diagnostic"
+    },
+    {
+      "step": 4,
+      "action": "stop_after_cleanup_and_determine_final_remediation_architecture"
+    },
+    {
+      "step": 5,
+      "action": "create_immutable_request_v19_if_the_evidence_requires_another_contract"
+    },
+    {
+      "step": 6,
+      "action": "only_after_separate_approval_execute_a_clean_full_attempt_A"
+    },
+    {
+      "step": 7,
+      "action": "permit_attempt_B_only_after_attempt_A_is_18_of_18_and_cleanup_is_verified"
+    },
+    {
+      "step": 8,
+      "action": "materialize_documentation_package_and_local_commit_under_separate_approval"
+    },
+    {
+      "step": 9,
+      "action": "perform_mandatory_fresh_context_security_focused_independent_review"
+    },
+    {
+      "step": 10,
+      "action": "obtain_separate_owner_disposition_for_the_capability_prerequisite"
+    }
+  ],
+  "invariants": {
+    "CP_K0B03_V2_WINDOWS_ENFORCEMENT": "open",
+    "K0B03_IA_R2_F03": "open_blocking",
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b_03": "blocked",
+    "K0b_04_K0b_05_N1_Swarm": "not_advanced",
+    "runtime_authority": "none"
+  },
+  "request_document_checks": [
+    "baseline_head_parent_tree_exact",
+    "tracked_worktree_and_index_clean",
+    "entry_untracked_inventory_exactly_19_paths",
+    "all_19_entry_paths_sha256_and_bytes_exact",
+    "request_v17_probe_and_worker_pins_exact",
+    "historical_outputs_and_failed_case_IDs_exact",
+    "classifications_and_missing_proofs_present_without_overclaim",
+    "future_scope_exactly_one_attempt_A_RD_WIN_01_through_09_diagnostic",
+    "probe_and_worker_delta_allowlists_exact",
+    "forbidden_scope_and_ordered_future_contract_present",
+    "JSON_compatible_YAML_parses",
+    "UTF_8_without_BOM",
+    "LF_only",
+    "exactly_one_final_LF",
+    "no_duplicate_keys",
+    "resulting_untracked_inventory_exactly_20_paths",
+    "no_existing_path_modified"
+  ],
+  "stop_conditions": [
+    "baseline_mismatch",
+    "tracked_or_index_change",
+    "entry_inventory_count_or_path_mismatch",
+    "entry_pin_mismatch",
+    "evidence_or_classification_mismatch",
+    "target_preexists",
+    "document_format_or_duplicate_key_mismatch",
+    "scope_expansion"
+  ],
+  "next_required_action": "Owner must separately confirm this request's exact SHA-256 and byte size before any probe or worker change or diagnostic execution is authorized."
+}

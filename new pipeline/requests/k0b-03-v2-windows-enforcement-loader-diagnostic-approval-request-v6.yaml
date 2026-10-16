@@ -1,0 +1,422 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-LOADER-DIAGNOSTIC-APPROVAL-V6",
+  "schema_version": "1.0.0",
+  "version": "6.0.0",
+  "prepared_on": "2026-10-02",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_read_only_loader_assessment_approval_request",
+  "serialization": {
+    "syntax": "strict_JSON_object_valid_as_YAML_1_2",
+    "encoding": "UTF-8_without_BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Freeze the evidence-bound identity diagnostic result and request a separate read-only PE dependency and ACL assessment that identifies the pre-worker Windows loader blocker without launching another child process or weakening the AppContainer enforcement contract.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "repeat_read_only_baseline_seven_pin_and_residue_checks",
+      "create_only_this_v6_approval_request",
+      "validate_UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_absence",
+      "compute_this_request_full_SHA256_and_decimal_byte_size"
+    ],
+    "not_authorized_now": [
+      "execute_the_PE_or_ACL_assessment",
+      "modify_probe_worker_or_requests_v1_through_v5",
+      "launch_any_process_or_load_or_execute_any_DLL",
+      "create_profile_root_listener_socket_ACL_environment_fixture_or_temp_target",
+      "use_network_DNS_dependencies_pip_wheels_or_venv",
+      "create_owner_disposition_capability_evidence_document_check_or_other_repository_path",
+      "stage_or_commit",
+      "close_capability_prerequisite_finding_or_gate",
+      "modify_state_STATE_renderer_profile_plan_status_gate_or_runtime_authority",
+      "advance_K0b03_K0b04_K0b05_or_N1"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean"
+  },
+  "entry_untracked_inventory": {
+    "count": 7,
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "caa9bc7dd7e3731beb749639df953e8c3d878a86b0d991137c7a03f25f37f7c8",
+        "bytes": 73269,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+        "bytes": 12602,
+        "disposition": "preserve_byte_identical"
+      }
+    ]
+  },
+  "qualification_and_diagnostic_history": {
+    "v1": {
+      "scope": "initial_full_capability_qualification_attempt_A",
+      "result": "APPCONTAINER_PROCESS_CREATE_FAILED",
+      "win32_code": 203,
+      "classification_at_that_time": "environment_contract_gap",
+      "commit_or_evidence_materialization": false
+    },
+    "bounded_suspended_launch_D1_through_D4": {
+      "result": "exact_17_entry_environment_plus_winsta0_default_allows_suspended_AppContainer_creation",
+      "individual_environment_variable_necessity_claimed": false,
+      "child_code_executed": false,
+      "cleanup_verified": true
+    },
+    "v2": {
+      "result": "SID_STRING_FAILED",
+      "win32_code": 1337,
+      "classification": "parent_pointer_valued_TOKEN_APPCONTAINER_INFORMATION_backing_buffer_lifetime_gap",
+      "suspended_pre_Job_process_residue_PID": 12160,
+      "manual_termination_completed": true,
+      "subsequent_residue": 0
+    },
+    "v3": {
+      "parent_token_buffer_lifetime_fixed": true,
+      "parent_IsValidSid_and_ABI_checks_added": true,
+      "direct_pre_Job_process_cleanup_added": true,
+      "forced_pre_Job_abort_regression_added": true,
+      "result": "CHILD_IDENTITY_PROOF_FAILED",
+      "classification_at_that_time": "worker_pointer_valued_token_buffer_lifetime_gap",
+      "cleanup_verified": true
+    },
+    "v4": {
+      "worker_token_buffer_lifetime_IsValidSid_and_ABI_checks_added": true,
+      "result": "CHILD_IDENTITY_PROOF_FAILED",
+      "top_level_payload_exposed_specific_worker_cause": false,
+      "attempt_B_started": false,
+      "cleanup_verified": true
+    },
+    "v5": {
+      "probe_delta": "bounded_identity_diagnostic_only_observability_branch",
+      "full_qualification_behavior_when_flag_absent": "preserved",
+      "attempt": "A_only",
+      "result": "IDENTITY_DIAGNOSTIC_CAPTURED",
+      "remaining_CP_WIN_06_through_CP_WIN_18_scenarios_executed": false,
+      "attempt_B_started": false,
+      "cleanup_verified": true
+    }
+  },
+  "identity_diagnostic_result": {
+    "typed_result": "IDENTITY_DIAGNOSTIC_CAPTURED",
+    "attempt": "A",
+    "parent_identity": {
+      "is_AppContainer": true,
+      "AppContainer_SID": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+      "SID_valid": true,
+      "capability_count": 0,
+      "token_information_bytes": {
+        "TokenIsAppContainer": 4,
+        "TokenAppContainerSid": 48,
+        "TokenCapabilities": 8
+      }
+    },
+    "forced_pre_Job_abort_regression": {
+      "created_suspended": true,
+      "assigned_to_Job_before_resume": false,
+      "ResumeThread_called": false,
+      "direct_TerminateProcess_succeeded": true,
+      "inactive_after_termination": true,
+      "exact_SID_matched": true,
+      "capability_count": 0,
+      "result": true
+    },
+    "normal_identity_child": {
+      "created_suspended": true,
+      "Job_assigned_before_resume": true,
+      "ResumeThread_called": true,
+      "termination_reason": "process_exit",
+      "exit_code_decimal": 3221225781,
+      "exit_code_hexadecimal": "0xC0000135",
+      "exit_code_symbolic_interpretation": "STATUS_DLL_NOT_FOUND",
+      "immediate_active_process_zero_observation": false
+    },
+    "worker_observation": {
+      "parsed_first_JSON_object": null,
+      "typed_result_code": null,
+      "exception_type": null,
+      "winerror": null,
+      "errno": null,
+      "output_total_bytes": 0,
+      "output_retained_bytes": 0,
+      "full_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retained_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "basis_to_claim_worker_Python_user_code_began_execution": false
+    },
+    "classification": "pre_worker_user_code_Windows_loader_failure",
+    "classification_boundary": {
+      "proved": [
+        "parent_AppContainer_identity_and_zero_capabilities",
+        "forced_pre_Job_abort_direct_cleanup",
+        "normal_child_suspended_creation_and_Job_assignment_before_resume",
+        "normal_child_exit_before_worker_JSON_or_any_worker_output",
+        "Windows_status_0xC0000135"
+      ],
+      "not_yet_proved": [
+        "the_exact_missing_or_inaccessible_DLL",
+        "the_exact_loader_search_or_architecture_cause",
+        "that_worker_identity_code_executed",
+        "that_the_host_capability_is_qualified",
+        "that_the_host_capability_is_unavailable"
+      ]
+    },
+    "cleanup": {
+      "verified": true,
+      "process_residue": 0,
+      "profile_residue": 0,
+      "root_residue": 0,
+      "ACL_residue": 0,
+      "port_listener_socket_residue": 0,
+      "loopback_exemption_residue": 0,
+      "handle_residue": 0,
+      "bytecode_residue": 0,
+      "tracked_or_index_changes": 0
+    }
+  },
+  "current_capability_disposition": {
+    "host_capability_qualified": false,
+    "host_capability_failed_or_unavailable": false,
+    "disposition": "undetermined_pending_exact_loader_blocker_assessment",
+    "CP_K0B03_V2_WINDOWS_ENFORCEMENT_closed": false,
+    "K0B03_IA_R2_F03_closed": false,
+    "G_K0B03_UNTRUSTED_SHAPES_closed": false,
+    "K0b03_implementation_authorized": false,
+    "runtime_authority": "none"
+  },
+  "proposed_future_read_only_loader_assessment": {
+    "authority_activation": "requires_separate_owner_confirmation_of_this_request_full_SHA256_and_size",
+    "result_destination": "conversation_only",
+    "repository_writes": [],
+    "external_writes": [],
+    "temp_targets": [],
+    "profiles": [],
+    "ACL_mutations": [],
+    "network_endpoints": [],
+    "child_processes": [],
+    "DLL_loading_or_execution": false,
+    "must_preserve_byte_identical": [
+      "approval_request_v1",
+      "approval_request_v2",
+      "approval_request_v3",
+      "approval_request_v4",
+      "approval_request_v5",
+      "windows_enforcement_capability_probe",
+      "windows_enforcement_capability_worker"
+    ],
+    "assessment_interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "allowed_libraries": [
+        "Python_stdlib",
+        "ctypes_for_read_only_Windows_security_descriptor_queries_only"
+      ],
+      "execution_boundary": "assessment_driver_only_no_child_process_creation_and_no_import_or_execution_of_target_DLL_code"
+    },
+    "binary_roots": {
+      "interpreter_executable": "C:/ProgramData/anaconda3/python.exe",
+      "interpreter_directory": "C:/ProgramData/anaconda3",
+      "deterministic_resolution_order": [
+        "directory_of_the_importing_binary_when_that_directory_is_the_interpreter_directory_or_an_already_resolved_allowed_root",
+        "C:/ProgramData/anaconda3",
+        "C:/Windows/System32",
+        "C:/Windows/System",
+        "C:/Windows"
+      ],
+      "ambient_PATH_used": false,
+      "current_working_directory_used_for_resolution": false,
+      "additional_search_roots": []
+    },
+    "PE_assessment_contract": {
+      "operations": [
+        "read_interpreter_and_candidate_dependency_bytes",
+        "compute_lowercase_SHA256_and_decimal_byte_size",
+        "parse_DOS_PE_COFF_optional_header_and_import_directory_structures_in_memory",
+        "enumerate_direct_import_names",
+        "resolve_each_import_only_against_the_frozen_deterministic_roots",
+        "recurse_over_each_resolved_PE_dependency_until_a_closed_or_explicitly_unresolved_graph_is_reached",
+        "record_PE_machine_type_for_every_resolved_binary",
+        "identify_missing_dependency_architecture_mismatch_and_unresolved_API_set_contracts"
+      ],
+      "forbidden_operations": [
+        "LoadLibrary_or_LoadLibraryEx",
+        "importing_target_DLLs_as_Python_extensions",
+        "executing_TLS_callbacks_DllMain_exports_or_other_target_code",
+        "using_ambient_PATH_registry_App_Paths_current_directory_or_network_resolution",
+        "writing_or_copying_any_binary"
+      ],
+      "per_dependency_fields": [
+        "ordinal",
+        "importing_binary",
+        "imported_DLL_name",
+        "relation_direct_or_transitive",
+        "resolution_status_resolved_or_unresolved",
+        "resolved_path_when_resolved",
+        "lowercase_SHA256_when_resolved",
+        "decimal_bytes_when_resolved",
+        "PE_machine_type_when_resolved",
+        "classification_normal_missing_architecture_mismatch_or_unresolved_API_set"
+      ],
+      "adjacent_runtime_DLL_definition": "PE_files_in_C:/ProgramData/anaconda3_that_are_directly_imported_by_the_pinned_python_executable_or_enter_the_recursive_closure_through_a_resolved_non_Windows_dependency",
+      "graph_order": "ordinal_case_insensitive_normalized_path_then_imported_DLL_name",
+      "cycle_handling": "deduplicate_by_normalized_resolved_path_and_SHA256_while_preserving_all_import_edges"
+    },
+    "ACL_assessment_contract": {
+      "query_only": true,
+      "targets": [
+        "C:/ProgramData/anaconda3",
+        "C:/ProgramData/anaconda3/python.exe",
+        "every_adjacent_imported_DLL_in_the_resolved_closure",
+        "every_resolved_non_Windows_dependency_in_the_closure"
+      ],
+      "principals": [
+        {
+          "name": "exact_attempt_AppContainer_SID",
+          "sid": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205"
+        },
+        {
+          "name": "ALL_APPLICATION_PACKAGES",
+          "sid": "S-1-15-2-1"
+        },
+        {
+          "name": "ALL_RESTRICTED_APPLICATION_PACKAGES",
+          "sid": "S-1-15-2-2"
+        }
+      ],
+      "required_observations": [
+        "owner_group_and_DACL_presence",
+        "canonical_SDDL",
+        "explicit_and_inherited_allow_or_deny_ACE_order",
+        "object_and_container_inheritance_flags",
+        "effective_read_and_execute_applicability_for_each_frozen_principal",
+        "the_first_applicable_deny_or_absence_that_prevents_read_or_execute_when_present"
+      ],
+      "mutation": "forbidden",
+      "overclaim_boundary": "ACL_text_and_applicable_ACE_analysis_is_not_a_substitute_for_a_later_execution_proof_after_separately_authorized_remediation"
+    },
+    "required_result": {
+      "interpreter_pin": [
+        "path",
+        "version",
+        "lowercase_SHA256",
+        "decimal_bytes",
+        "PE_machine_type"
+      ],
+      "dependency_graph": "complete_ordered_edge_inventory_with_per_dependency_fields",
+      "dependency_roots": [
+        "interpreter_executable",
+        "adjacent_runtime_DLLs",
+        "exact_recursive_PE_dependency_closure"
+      ],
+      "ACL_inventory": "target_by_principal_SDDL_and_applicable_read_execute_result",
+      "loader_blocker_classification": [
+        "missing_DLL",
+        "loader_search_mismatch",
+        "architecture_mismatch",
+        "unresolved_API_set_mapping",
+        "AppContainer_ACL_denial",
+        "other_exact_loader_prerequisite",
+        "inconclusive"
+      ],
+      "minimal_future_remediation_route": [
+        "immutable_sandbox_local_pinned_runtime_projection",
+        "different_pinned_interpreter",
+        "separate_exact_ACL_authority",
+        "declare_capability_prerequisite_unavailable_on_this_host",
+        "additional_read_only_diagnostic_authority_if_inconclusive"
+      ],
+      "next_step": "return_the_assessment_only_in_conversation_with_a_full_non_authorizing_exact_scope_approval_request_for_the_minimal_evidence_bound_next_action"
+    }
+  },
+  "future_assessment_checks": [
+    "baseline_HEAD_parent_tree_and_clean_tracked_index",
+    "all_seven_entry_untracked_pins_and_request_v6_pin",
+    "absence_of_new_repository_or_external_writes",
+    "pinned_interpreter_version_SHA256_size_and_PE_machine",
+    "deterministic_resolution_roots_and_ambient_PATH_nonuse",
+    "read_only_PE_parser_bounds_checks_for_each_header_table_and_string",
+    "complete_direct_and_transitive_import_edge_inventory",
+    "resolved_file_SHA256_size_and_machine_for_every_resolved_edge_target",
+    "explicit_missing_architecture_and_API_set_classifications",
+    "read_only_SDDL_and_ACE_inventory_for_every_required_target_and_principal",
+    "no_LoadLibrary_target_import_DLL_execution_child_process_profile_root_ACL_mutation_network_or_temp_target",
+    "requests_v1_through_v6_probe_and_worker_byte_identity_after_assessment",
+    "state_gate_plan_and_runtime_invariants",
+    "conversation_only_result_and_exact_next_non_authorizing_request"
+  ],
+  "future_stop_conditions": [
+    "baseline_or_any_entry_pin_mismatch",
+    "request_v6_pin_mismatch_after_owner_confirmation",
+    "any_required_binary_or_ACL_target_cannot_be_read_without_expanding_authority",
+    "PE_structure_is_malformed_or_out_of_bounds_and_cannot_be_classified_read_only",
+    "dependency_resolution_requires_ambient_PATH_registry_current_directory_network_or_an_unapproved_root",
+    "an_API_set_contract_cannot_be honestly_classified_without_a_new_read_source",
+    "any_need_to_LoadLibrary_execute_a_DLL_or_launch_a_child_process",
+    "any_need_to_create_or_modify_a_file_directory_profile_ACL_listener_socket_environment_or_temp_target",
+    "any_credentials_secrets_proxy_values_or_external_network_would_be_read_or_used",
+    "any repository_byte_change_staging_or_commit",
+    "any state_gate_plan_implementation_or_runtime_scope_expansion"
+  ],
+  "non_weakening_contract": {
+    "AppContainer_required": true,
+    "capability_SID_count": 0,
+    "default_deny_egress_required": true,
+    "policy_declaration_may_substitute_for_enforcement": false,
+    "successful_loader_remediation_may_substitute_for_full_capability_qualification": false,
+    "assessment_may_close_prerequisite_finding_or_gate": false
+  },
+  "canonical_invariants": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03": "blocked",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  },
+  "post_assessment_review_timing": {
+    "security_focused_fresh_context_review_required_now": false,
+    "reason": "the_read_only_loader_assessment_is_diagnostic_and_does_not_materialize_or_qualify_the_enforcement_capability",
+    "mandatory_security_review_point": "after_a_successful_future_full_qualification_commit_and_before_owner_closure_of_CP_K0B03_V2_WINDOWS_ENFORCEMENT"
+  },
+  "next_required_action": "separate_owner_confirmation_of_this_request_full_SHA256_and_size_before_any_PE_or_ACL_assessment"
+}

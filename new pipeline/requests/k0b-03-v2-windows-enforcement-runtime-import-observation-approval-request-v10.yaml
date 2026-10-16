@@ -1,0 +1,364 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-RUNTIME-IMPORT-OBSERVATION-APPROVAL-V10",
+  "schema_version": "1.0.0",
+  "version": "10.0.0",
+  "prepared_on": "2026-10-02",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_branch_aware_corrected_read_only_runtime_import_observation_approval_request",
+  "serialization": {
+    "syntax": "strict_JSON_object_valid_as_YAML_1_2",
+    "encoding": "UTF-8_without_BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Record the v9 function-local import stop without a projection claim and request exactly one fresh corrected observation that retains the v9 pseudo-origin correction and adds only three evidence-bound branch-aware dispositions for unreachable grp and pwd imports in the pinned subprocess.Popen worker call shapes.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "repeat_read_only_baseline_and_eleven_entry_pin_checks",
+      "verify_the_pinned_subprocess_source_and_worker_call_shape_evidence",
+      "confirm_absence_of_this_v10_target",
+      "create_only_this_v10_approval_request",
+      "validate_UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_absence",
+      "compute_this_request_full_SHA256_and_decimal_byte_size"
+    ],
+    "not_authorized_now": [
+      "launch_a_new_Python_or_assessment_driver_process",
+      "repeat_or_continue_the_runtime_import_observation",
+      "modify_requests_v1_through_v9_probe_or_worker",
+      "create_runtime_projection_profile_root_ACL_environment_fixture_or_temp_target",
+      "launch_any_child_process",
+      "create_socket_listener_connection_or_use_DNS_network",
+      "use_dependency_pip_wheel_or_venv",
+      "create_owner_disposition_capability_evidence_document_check_or_other_repository_path",
+      "stage_or_commit",
+      "close_capability_prerequisite_finding_or_gate",
+      "modify_state_STATE_renderer_profile_plan_status_gate_or_runtime_authority",
+      "advance_K0b03_K0b04_K0b05_or_N1"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean"
+  },
+  "entry_untracked_inventory": {
+    "count": 11,
+    "paths": [
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml","sha256":"ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319","bytes":35702,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml","sha256":"7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84","bytes":20321,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml","sha256":"4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425","bytes":18538,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml","sha256":"8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a","bytes":14830,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml","sha256":"d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce","bytes":11938,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml","sha256":"a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6","bytes":18556,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml","sha256":"a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233","bytes":27492,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml","sha256":"b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d","bytes":17554,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml","sha256":"adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b","bytes":17642,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py","sha256":"caa9bc7dd7e3731beb749639df953e8c3d878a86b0d991137c7a03f25f37f7c8","bytes":73269,"disposition":"preserve_byte_identical"},
+      {"path":"new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py","sha256":"06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83","bytes":12602,"disposition":"preserve_byte_identical"}
+    ]
+  },
+  "v9_attempt_provenance": {
+    "attempt_count": 1,
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": ["-I", "-B", "-S"],
+      "source_transport": "stdin_without_temp_file"
+    },
+    "v9_pseudo_origin_correction_result": "passed",
+    "assessment_driver_main_classification": "in_memory_assessment_driver_non_projection",
+    "reached_phases": [
+      "initial_sys_modules_snapshot",
+      "audit_hook_installation",
+      "exact_direct_import_phase",
+      "final_sys_modules_snapshot",
+      "corrected_module_origin_classification",
+      "PYC_to_PY_source_mapping",
+      "worker_used_API_static_function_local_import_analysis"
+    ],
+    "not_reached_or_not_materialized": [
+      "module_file_hashing",
+      "exact_required_PYD_set",
+      "PE_dependency_closure",
+      "immutable_native_manifest_reproduction",
+      "exact_projection_manifest",
+      "projection_claim"
+    ],
+    "stop_kind": "function_local_import_closure_unresolved_under_non_branch_aware_scanner",
+    "exact_stop_code": "FUNCTION_LOCAL_IMPORT_CLOSURE_UNRESOLVED",
+    "exact_unresolved_imports": [
+      {"api_root":"subprocess.Popen","code":"Popen.__init__","import_name":"grp","occurrence_count":2},
+      {"api_root":"subprocess.Popen","code":"Popen.__init__","import_name":"pwd","occurrence_count":1}
+    ],
+    "second_assessment_process_launched": false,
+    "exact_projection_manifest_exists_after_v9": false,
+    "partial_attempt_may_be_used_as_projection_claim": false,
+    "repository_or_external_writes": false,
+    "child_process_socket_DNS_or_network_effect": false,
+    "profile_ACL_root_environment_fixture_or_temp_target_effect": false,
+    "state_gate_or_runtime_effect": false
+  },
+  "pinned_subprocess_source_evidence": {
+    "path": "C:/ProgramData/anaconda3/Lib/subprocess.py",
+    "sha256": "baa9f9138d8d20df6284f67e7d2e790f847f65e2c5370de322d54cccd737f2d9",
+    "bytes": 88725,
+    "Popen___init___signature_lines": "807-815",
+    "relevant_defaults": {
+      "user": null,
+      "group": null,
+      "extra_groups": null
+    },
+    "conditional_imports": [
+      {
+        "module": "grp",
+        "line": 906,
+        "dominating_conditions": ["group_is_not_None", "group_is_str"],
+        "default_condition": "group_is_None"
+      },
+      {
+        "module": "grp",
+        "line": 934,
+        "dominating_conditions": ["extra_groups_is_not_None", "an_extra_group_entry_is_str"],
+        "default_condition": "extra_groups_is_None"
+      },
+      {
+        "module": "pwd",
+        "line": 962,
+        "dominating_conditions": ["user_is_not_None", "user_is_str"],
+        "default_condition": "user_is_None"
+      }
+    ]
+  },
+  "pinned_worker_call_shape_evidence": {
+    "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+    "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+    "bytes": 12602,
+    "Popen_call_sites": [217, 243, 254, 285],
+    "explicit_user_keyword_count": 0,
+    "explicit_group_keyword_count": 0,
+    "explicit_extra_groups_keyword_count": 0,
+    "effective_values": {
+      "user": null,
+      "group": null,
+      "extra_groups": null
+    },
+    "POSIX_identity_switching_used": false,
+    "grp_or_pwd_is_worker_runtime_projection_dependency": false
+  },
+  "bounded_branch_aware_disposition": {
+    "generic_platform_import_suppression": "forbidden",
+    "allowed_exclusions": [
+      {
+        "code": "subprocess.Popen.__init__",
+        "module": "grp",
+        "source_line": 906,
+        "disposition": "statically_present_but_unreachable_under_exact_pinned_worker_call_shapes"
+      },
+      {
+        "code": "subprocess.Popen.__init__",
+        "module": "grp",
+        "source_line": 934,
+        "disposition": "statically_present_but_unreachable_under_exact_pinned_worker_call_shapes"
+      },
+      {
+        "code": "subprocess.Popen.__init__",
+        "module": "pwd",
+        "source_line": 962,
+        "disposition": "statically_present_but_unreachable_under_exact_pinned_worker_call_shapes"
+      }
+    ],
+    "required_proof_for_each_exclusion": [
+      "exact_pinned_subprocess_source_and_line",
+      "dominating_branch_condition",
+      "exact_default_None_value",
+      "all_four_pinned_worker_Popen_call_sites",
+      "absence_of_user_group_and_extra_groups_keywords"
+    ],
+    "forbidden_actions": [
+      "import_grp",
+      "import_pwd",
+      "read_grp_or_pwd_source_for_projection",
+      "include_grp_or_pwd_in_projection",
+      "exclude_any_other_unresolved_function_local_import",
+      "apply_a_generic_Windows_or_platform_conditional_suppression"
+    ],
+    "invalidation_conditions": [
+      "worker_SHA256_or_size_changes",
+      "subprocess_SHA256_or_size_changes",
+      "Popen_signature_default_changes",
+      "worker_Popen_call_site_or_keyword_changes",
+      "dominating_condition_or_import_line_changes"
+    ]
+  },
+  "proposed_future_branch_aware_corrected_observation": {
+    "authority_activation": "requires_separate_owner_confirmation_of_this_request_full_SHA256_and_size",
+    "execution_model": "exactly_one_fresh_pinned_assessment_driver_process_with_no_child_processes",
+    "result_destination": "conversation_only",
+    "repository_writes": [],
+    "external_writes": [],
+    "temp_targets": [],
+    "profiles": [],
+    "ACL_mutations": [],
+    "network_endpoints": [],
+    "worker_or_probe_import_or_execution": false,
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": ["-I", "-B", "-S"],
+      "source_transport": "stdin_or_equivalent_in_memory_mechanism_without_temp_file",
+      "libraries": ["Python_stdlib_only"]
+    },
+    "module_origin_contract": {
+      "assessment_driver_main": "in_memory_assessment_driver_non_projection",
+      "pseudo_origins": "retain_in_snapshots_but_never_abspath_hash_or_project",
+      "built_in_frozen_or_in_memory_without_real_file": "non_projection",
+      "real_disk_backed_requirement": "absolute_existing_regular_loader_file_under_an_approved_closed_world_root",
+      "source_root": "C:/ProgramData/anaconda3/Lib_excluding_site-packages",
+      "extension_root": "C:/ProgramData/anaconda3/DLLs",
+      "bytecode_rule": "every_observed_PYC_or_PYO_must_rebind_unambiguously_to_an_existing_PY_source"
+    },
+    "observation_sequence": [
+      "capture_initial_sys_modules_before_any_observed_direct_import",
+      "install_an_in_memory_audit_hook_for_import_open_and_ctypes_dlopen_events",
+      "import_only_the_exact_literal_worker_standard_library_module_set",
+      "capture_final_sys_modules_and_the_initial_to_final_delta",
+      "apply_the_v9_module_origin_and_PYC_source_contract",
+      "statically_scan_function_local_imports_in_the_worker_used_API_call_graph",
+      "record_all_function_local_imports_before_disposition",
+      "apply_only_the_three_exact_evidence_bound_grp_pwd_branch_dispositions",
+      "stop_on_any_other_unresolved_function_local_import",
+      "hash_only_the_observed_and_statically_required_closed_world_files",
+      "parse_PE_imports_only_for_the_exact_required_PYD_set",
+      "combine_the_result_with_the_immutable_request_v7_43_file_native_startup_manifest",
+      "construct_the_exact_projection_manifest_in_memory_only_if_the_closure_is_fully_closed",
+      "return_the_result_only_in_conversation"
+    ],
+    "exact_observed_direct_imports": [
+      "argparse",
+      "ctypes",
+      "ctypes.wintypes",
+      "json",
+      "os",
+      "pathlib",
+      "socket",
+      "subprocess",
+      "sys",
+      "time"
+    ],
+    "audit_event_contract": {
+      "record": ["import", "open", "ctypes.dlopen"],
+      "stop_on": [
+        "subprocess_Popen_or_os_spawn_event",
+        "socket_creation_connect_bind_or_listen_event",
+        "network_or_DNS_event",
+        "write_create_truncate_rename_delete_or_mkdir_event",
+        "profile_ACL_registry_mutation_or_temp_target_event",
+        "file_read_under_site-packages_user_site_conda-meta_pkgs_or_Scripts",
+        "real_file_read_outside_the_approved_closed_world_roots_and_exact_native_set",
+        "worker_or_probe_import_or_execution"
+      ]
+    },
+    "native_startup_manifest": {
+      "authority_path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+      "path_count": 43,
+      "content_bytes": 8668304,
+      "manifest_bytes": 6968,
+      "manifest_sha256": "795d65df90d2a0c32db9c591057f07ffc5ba3332d28e35e65c44ec617f1c9ece"
+    },
+    "generated_path_configuration": {
+      "projection_relative_path": "python312._pth",
+      "exact_lines": ["Lib", "DLLs"],
+      "line_endings": "LF",
+      "final_lf_count": 1,
+      "import_site_line": false
+    },
+    "required_result": {
+      "initial_sys_modules_snapshot": "ordered_module_name_origin_and_file_binding",
+      "final_sys_modules_snapshot": "ordered_module_name_origin_and_file_binding",
+      "observed_import_delta": "ordered_module_name_origin_and_file_binding",
+      "audit_event_projection": "ordered_sanitized_complete_event_inventory",
+      "pseudo_origin_inventory": "ordered_non_projection_module_bindings",
+      "function_local_import_inventory": "complete_before_disposition",
+      "branch_aware_disposition_inventory": "exactly_the_three_allowed_grp_pwd_rows_or_stop",
+      "exact_required_PYD_set": "ordered_pins_and_PE_dependency_closure",
+      "generated_python312_pth": "exact_bytes_SHA256_and_size",
+      "projection_manifest_profile": "source_or_generated_identity<TAB>projection_relative_path<TAB>lowercase_sha256<TAB>decimal_bytes<TAB>role<LF>",
+      "projection_manifest": ["path_count", "content_bytes", "manifest_bytes", "lowercase_SHA256", "complete_entry_inventory"],
+      "next_step": "return_a_full_non_authorizing_exact_scope_request_for_projection_materialization_and_full_A_B_qualification_only_if_the_closure_is_exact"
+    },
+    "exactness_rule": "an_exact_projection_claim_is_permitted_only_after_every_real_module_path_reachable_function_local_import_required_PYD_and_non_Windows_native_dependency_is_closed_and_pinned",
+    "inconclusive_rule": "any_unresolved_condition_outside_the_three_exact_dispositions_stops_without_a_projection_claim"
+  },
+  "future_observation_checks": [
+    "baseline_HEAD_parent_tree_and_clean_tracked_index",
+    "all_eleven_entry_pins_and_request_v10_pin",
+    "pinned_subprocess_source_hash_size_signature_defaults_and_conditional_import_lines",
+    "pinned_worker_hash_size_four_Popen_call_sites_and_keyword_absence",
+    "fresh_pinned_interpreter_version_and_hash",
+    "exactly_one_branch_aware_corrected_assessment_process",
+    "stdin_or_in_memory_source_without_temp_file",
+    "v9_pseudo_origin_and_real_loader_path_contract",
+    "only_the_ten_exact_literal_standard_library_imports_are_requested",
+    "worker_and_probe_are_neither_imported_nor_executed",
+    "no_child_process_socket_network_write_profile_ACL_root_or_temp_target",
+    "all_function_local_imports_are_recorded_before_disposition",
+    "only_the_three_exact_grp_pwd_rows_receive_branch_aware_disposition",
+    "all_PYC_paths_are_rebound_to_source_PY_or_cause_a_stop",
+    "only_exact_required_PYD_files_receive_PE_analysis",
+    "request_v7_native_43_file_manifest_is_reproduced",
+    "generated_python312_pth_contains_only_Lib_and_DLLs_without_import_site",
+    "projection_manifest_is_exact_or_the_assessment_stops_inconclusive",
+    "requests_v1_through_v10_probe_and_worker_are_byte_identical_after_observation",
+    "state_gate_plan_and_runtime_invariants",
+    "conversation_only_result_and_exact_next_non_authorizing_request"
+  ],
+  "future_stop_conditions": [
+    "baseline_or_any_entry_pin_mismatch",
+    "request_v10_pin_mismatch_after_owner_confirmation",
+    "subprocess_or_worker_source_evidence_mismatch",
+    "Popen_default_or_worker_call_shape_mismatch",
+    "more_than_one_corrected_assessment_process_would_be_required",
+    "audit_observation_reads_a_forbidden_root_or_records_a_forbidden_event",
+    "worker_or_probe_is_imported_or_executed",
+    "a_child_process_socket_listener_connection_network_or_DNS_operation_is_attempted",
+    "a_file_directory_profile_ACL_environment_fixture_or_temp_target_would_be_created_or_modified",
+    "a_non_pseudo_relative_missing_or_out_of_root_loader_path_is_observed",
+    "a_PYC_dependency_cannot_be_rebound_to_an_exact_source_PY",
+    "an_unresolved_function_local_import_is_not_one_of_the_three_exact_grp_pwd_rows",
+    "a_required_PYD_or_native_dependency_is_missing_architecture_mismatched_or_outside_scope",
+    "the_observed_closure_cannot_be_honestly_labeled_exact",
+    "any_repository_byte_change_staging_or_commit",
+    "any_state_gate_plan_implementation_or_runtime_scope_expansion"
+  ],
+  "non_authorizing_boundaries": {
+    "branch_aware_corrected_observation_execution_authorized_now": false,
+    "runtime_projection_materialization_authorized": false,
+    "probe_or_worker_modification_authorized": false,
+    "capability_qualification_execution_authorized": false,
+    "capability_prerequisite_closure_authorized": false,
+    "finding_or_gate_closure_authorized": false,
+    "K0b03_implementation_authorized": false,
+    "runtime_authority": "none"
+  },
+  "canonical_invariants": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03": "blocked",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  },
+  "review_timing": {
+    "security_focused_fresh_context_review_required_now": false,
+    "reason": "neither_v9_nor_this_request_materializes_a_runtime_projection_or_completes_capability_qualification",
+    "mandatory_security_review_point": "after_successful_full_A_B_capability_qualification_commit_with_the_exact_sandbox_runtime_projection_and_before_owner_closure_of_CP_K0B03_V2_WINDOWS_ENFORCEMENT"
+  },
+  "next_required_action": "separate_owner_confirmation_of_this_request_full_SHA256_and_size_before_any_branch_aware_corrected_runtime_import_observation"
+}

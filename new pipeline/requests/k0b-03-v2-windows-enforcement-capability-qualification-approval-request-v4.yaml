@@ -1,0 +1,309 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-CAPABILITY-QUALIFICATION-APPROVAL-V4",
+  "schema_version": "1.0.0",
+  "version": "4.0.0",
+  "prepared_on": "2026-10-02",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "serialization": {
+    "syntax": "strict_JSON_object_valid_as_YAML_1_2",
+    "encoding": "UTF-8_without_BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Supersede request v3 after attempt A proved the corrected parent probe could reach worker execution but the immutable worker repeated the pointer-valued AppContainer SID backing-buffer lifetime defect and failed the joint identity proof.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "repeat_read_only_baseline_and_five_entry_pin_checks",
+      "repeat_read_only_residue_absence_checks",
+      "create_only_this_v4_approval_request",
+      "validate_this_request_UTF8_LF_final_LF_and_duplicate_key_absence",
+      "compute_this_request_full_SHA256_and_decimal_byte_size"
+    ],
+    "not_authorized_now": [
+      "modify_probe_worker_or_requests_v1_v2_v3",
+      "execute_qualification_probe_worker_child_process_or_repository_test",
+      "create_profile_root_listener_socket_ACL_fixture_or_temp_target",
+      "create_owner_disposition_capability_evidence_or_document_check",
+      "stage_or_commit",
+      "modify_state_STATE_renderer_profile_status_gate_or_plan",
+      "advance_K0b03_K0b04_K0b05_or_N1",
+      "grant_runtime_authority"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean"
+  },
+  "entry_untracked_pins": [
+    {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+      "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+      "bytes": 35702,
+      "future_disposition": "preserve_byte_identical"
+    },
+    {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+      "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+      "bytes": 20321,
+      "future_disposition": "preserve_byte_identical"
+    },
+    {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+      "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+      "bytes": 18538,
+      "future_disposition": "preserve_byte_identical"
+    },
+    {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "bbec6732cca962ca6ea783150f990fc345c0b87f5bab87581775ad3897c8ffdf",
+      "bytes": 69071,
+      "future_disposition": "preserve_v2_v3_semantics_and_add_only_v3_stop_provenance"
+    },
+    {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "48fdf32ee2e203f6ab0003c7d4026b4aaf657ef902ea046e1ebbc5c33d5cb799",
+      "bytes": 11184,
+      "future_disposition": "modify_only_by_the_exact_v4_worker_delta_after_separate_confirmation"
+    }
+  ],
+  "supersession": {
+    "supersedes_request_path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+    "supersedes_request_sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+    "requests_v1_v2_v3_remain_immutable_historical_authority_records": true,
+    "reason": "request_v3_required_worker_byte_identity_but_attempt_A_confirmed_the_same_pointer_lifetime_defect_inside_worker_identity_code"
+  },
+  "qualification_and_diagnostic_history": {
+    "v1_initial_attempt": {
+      "attempt": "A",
+      "result": "stop_inconclusive",
+      "stop_code": "APPCONTAINER_PROCESS_CREATE_FAILED",
+      "win32_code": 203,
+      "cause_classification": "insufficient_AppContainer_child_environment"
+    },
+    "suspended_launch_diagnostics": {
+      "D1": "non_AppContainer_original_environment_desktop_NULL_success",
+      "D2": "AppContainer_original_environment_desktop_NULL_Win32_203",
+      "D3": "AppContainer_original_environment_desktop_winsta0_default_Win32_203",
+      "D4": "AppContainer_exact_17_entry_environment_desktop_winsta0_default_success_exact_SID_zero_capabilities_terminate_before_resume"
+    },
+    "v2_attempt": {
+      "attempt": "A",
+      "result": "stop_inconclusive",
+      "stop_code": "SID_STRING_FAILED",
+      "win32_code": 1337,
+      "cause_classification": "parent_probe_pointer_valued_token_buffer_lifetime_defect",
+      "suspended_unassigned_process_residue_PID": 12160,
+      "manual_exact_termination_completed": true,
+      "post_cleanup_residue": 0
+    },
+    "v3_probe_delta": {
+      "parent_token_backing_buffer_lifetime_corrected": true,
+      "IsValidSid_and_ABI_checks_added": true,
+      "pre_Job_direct_termination_cleanup_added": true,
+      "forced_pre_Job_abort_regression_added_inside_CP_WIN_05": true,
+      "probe_sha256": "bbec6732cca962ca6ea783150f990fc345c0b87f5bab87581775ad3897c8ffdf",
+      "probe_bytes": 69071
+    },
+    "v3_attempt": {
+      "attempt": "A",
+      "result": "stop_inconclusive",
+      "stop_code": "CHILD_IDENTITY_PROOF_FAILED",
+      "raw_code": null,
+      "root_exists_after_cleanup": false,
+      "attempt_B_started": false,
+      "capability_evidence_materialized": false,
+      "owner_disposition_materialized": false,
+      "document_check_materialized": false,
+      "staging_performed": false,
+      "commit_performed": false
+    },
+    "v3_post_stop_cleanup": {
+      "process_residue": 0,
+      "profile_mapping_residue": 0,
+      "profile_folder_residue": 0,
+      "root_residue": 0,
+      "port_residue": 0,
+      "loopback_exemption_residue": 0,
+      "bytecode_residue": 0,
+      "tracked_or_index_changes": 0
+    }
+  },
+  "confirmed_worker_call_chain": "scenario_identity -> own_identity -> token_information(TOKEN_APP_CONTAINER_SID) -> TOKEN_APPCONTAINER_INFORMATION.from_buffer_copy -> sid_string",
+  "confirmed_worker_root_cause": {
+    "token_information_behavior": "allocates_a_ctypes_GetTokenInformation_buffer_then_returns_detached_bytes_and_ends_the_backing_allocation_lifetime",
+    "pointer_extraction_behavior": "TOKEN_APPCONTAINER_INFORMATION.from_buffer_copy_copies_the_pointer_value_not_the_pointed_to_SID_storage",
+    "failure_behavior": "sid_string_receives_a_pointer_whose_backing_allocation_lifetime_has_ended_and_worker_emits_WORKER_ERROR_instead_of_WORKER_IDENTITY",
+    "classification": "worker_code_and_validation_gap",
+    "host_capability_failed": false,
+    "host_capability_qualified": false,
+    "F03_weakened": false,
+    "forced_abort_and_full_matrix_must_be_repeated": true
+  },
+  "future_worker_delta": [
+    "retain_the_ctypes_GetTokenInformation_backing_allocation_until_all_pointer_valued_members_have_been_consumed",
+    "do_not_use_detached_bytes_for_TOKEN_APPCONTAINER_INFORMATION",
+    "call_IsValidSid_before_ConvertSidToStringSidW",
+    "add_exact_ABI_size_checks_for_TOKEN_IS_APP_CONTAINER_TOKEN_APP_CONTAINER_SID_and_TOKEN_CAPABILITIES",
+    "require_a_non_NULL_valid_AppContainer_SID_when_token_is_AppContainer",
+    "preserve_scalar_capability_count_processing_and_require_zero_for_the_qualified_worker",
+    "do_not_change_worker_scenarios_arguments_result_codes_filesystem_process_network_or_resource_behavior",
+    "preserve_UTF8_without_BOM_LF_one_final_LF_and_prevent_bytecode",
+    "record_CHILD_IDENTITY_PROOF_FAILED_provenance",
+    "make_no_other_probe_or_worker_semantic_change"
+  ],
+  "future_worker_token_contract": {
+    "TOKEN_IS_APP_CONTAINER": {
+      "kind": "scalar_DWORD",
+      "minimum_bytes": 4,
+      "expected_value": true
+    },
+    "TOKEN_APP_CONTAINER_SID": {
+      "kind": "pointer_valued_TOKEN_APPCONTAINER_INFORMATION",
+      "minimum_bytes": "sizeof_TOKEN_APPCONTAINER_INFORMATION",
+      "backing_buffer_lifetime": "through_IsValidSid_and_ConvertSidToStringSidW",
+      "required_value": "exact_attempt_profile_SID"
+    },
+    "TOKEN_CAPABILITIES": {
+      "kind": "TOKEN_GROUPS",
+      "minimum_bytes": 4,
+      "required_GroupCount": 0
+    }
+  },
+  "future_probe_delta": {
+    "allowed_change": "add_only_v3_CHILD_IDENTITY_PROOF_FAILED_and_cleanup_provenance",
+    "must_preserve": [
+      "exact_v2_17_entry_environment",
+      "winsta0_default_desktop",
+      "parent_token_buffer_lifetime_correction",
+      "IsValidSid_and_ABI_checks",
+      "pre_Job_direct_termination_cleanup",
+      "forced_pre_Job_abort_regression_inside_CP_WIN_05",
+      "exact_18_case_accounting"
+    ],
+    "other_semantic_changes": "forbidden"
+  },
+  "inherited_execution_contract": {
+    "authority_source": "request_v3_except_for_the_exact_v4_worker_and_probe_provenance_delta",
+    "python": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": ["-I", "-B"],
+      "libraries": ["Python_stdlib", "ctypes"]
+    },
+    "roots": [
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+      "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-B"
+    ],
+    "profiles": [
+      "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+      "PipelineV2.K0b03.V2.Capability.B.24067ca6"
+    ],
+    "loopback_endpoints": [
+      "127.0.0.1:47631",
+      "[::1]:47632",
+      "127.0.0.1:47633",
+      "[::1]:47634"
+    ],
+    "environment_entry_count": 17,
+    "desktop": "winsta0\\default",
+    "ACL_scope": "only_exact_attempt_sandbox_for_the_same_attempt_profile_SID",
+    "Job_CPU_memory_process_count_timeout_output_and_cancellation_limits": "exact_request_v3_values",
+    "forced_pre_Job_regression_required_per_attempt": true,
+    "capability_cases_per_attempt": 18,
+    "attempts": ["A", "B"],
+    "required_per_attempt": {
+      "passed_or_expected_block": 18,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "A_B_typed_results_and_canonical_projection_identical_except_attempt_fields": true,
+    "complete_cleanup_before_staging": true,
+    "external_network_DNS_dependencies_pip_wheels_venv_and_policy_mutation": "forbidden"
+  },
+  "future_package": {
+    "all_new_at_commit_baseline": true,
+    "path_count": 9,
+    "paths": [
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+      "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+      "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-qualification-owner-disposition-v1.yaml",
+      "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-v1.yaml",
+      "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-document-check-v1.yaml"
+    ],
+    "existing_tracked_paths_modified": []
+  },
+  "future_checks": [
+    "baseline_parent_tree_and_exact_six_entry_untracked_inventory_after_v4_creation",
+    "requests_v1_v2_v3_v4_byte_identity_and_authority_chain",
+    "probe_diff_bounded_to_v2_v3_changes_plus_v4_provenance_only",
+    "worker_diff_bounded_to_token_buffer_lifetime_IsValidSid_ABI_checks_and_provenance_only",
+    "parent_and_worker_exact_SID_identity_and_zero_capabilities",
+    "forced_pre_Job_abort_terminate_before_resume_zero_residue",
+    "normal_Job_assignment_before_resume",
+    "exact_18_case_A_and_B_accounting",
+    "A_B_typed_result_and_canonical_projection_identity",
+    "canary_preservation_and_zero_listener_accepts",
+    "complete_process_handle_profile_ACL_listener_socket_root_loopback_and_bytecode_cleanup",
+    "UTF8_without_BOM_LF_one_final_LF_and_no_duplicate_keys",
+    "exact_nine_path_all_new_commit_inventory",
+    "unchanged_state_STATE_renderer_profile_statuses_gates_and_runtime_authority"
+  ],
+  "future_stop_conditions": [
+    "baseline_or_any_entry_pin_mismatch",
+    "request_v1_v2_or_v3_byte_change",
+    "probe_or_worker_change_outside_the_exact_v4_delta",
+    "parent_or_worker_token_buffer_lifetime_not_provable",
+    "invalid_NULL_or_nonmatching_AppContainer_SID",
+    "nonzero_capability_count",
+    "forced_abort_child_resumed_assigned_to_Job_or_left_active",
+    "any_process_descendant_profile_root_port_ACL_listener_socket_loopback_handle_or_bytecode_residue",
+    "any_test_failure_error_skip_missing_case_or_A_B_mismatch",
+    "any_external_network_dependency_policy_or_repository_scope_expansion",
+    "any_state_gate_plan_implementation_or_runtime_change"
+  ],
+  "future_commit_contract": {
+    "commit_count": 1,
+    "parent": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "inventory": "exact_nine_all_new_future_package_paths_only",
+    "subject": "test(pipeline-v2): qualify Windows enforcement capability",
+    "continuous_trailer_block": [
+      "Approval-Request-SHA256: <full_v4_request_sha256>",
+      "Supersedes-Approval-Request-SHA256: 4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+      "Capability-Prerequisite: CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+      "Qualification-Result: pass_candidate_pending_fresh_context_security_review",
+      "Runtime-Authority: none"
+    ],
+    "only_commit_eligible_result": "pass_candidate_pending_fresh_context_security_review",
+    "commit_on_stop_failed_or_inconclusive": false
+  },
+  "mandatory_post_commit_review": {
+    "reviewer_profile": "fresh_context_read_only_non_author_security_focused",
+    "required": true,
+    "must_cover_parent_and_worker_token_ABI_lifetime_and_cleanup": true,
+    "reviewer_recommendation_is_owner_approval": false,
+    "only_approve_can_support_later_owner_disposition": true
+  },
+  "canonical_invariants": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03": "blocked",
+    "K0b04_K0b05_N1_progress": "none",
+    "state_STATE_renderer_profile_statuses_gates_modified": false,
+    "runtime_authority": "none"
+  },
+  "next_required_action": "separate_owner_confirmation_of_this_request_full_SHA256_and_size_before_any_probe_or_worker_change_or_execution"
+}

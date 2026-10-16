@@ -1,0 +1,90 @@
+{
+    "decision_id":  "K0B03-V2-WINDOWS-ENFORCEMENT-CAPABILITY-PREREQUISITE-OWNER-DISPOSITION-V1",
+    "schema_version":  1,
+    "status":  "capability_prerequisite_documentarily_completed_with_retained_limits",
+    "authority":  {
+                      "source":  "explicit_owner_confirmation_in_conversation",
+                      "scope":  "exact_five_new_document_paths_only",
+                      "confirmation":  "Owner authorizes the five-file documentary stage, explicitly accepts limited watchdog sufficiency for v50 capability qualification, retains findings, and requires stop before staging or commit.",
+                      "retroactive_authorization_of_additional_A":  false
+                  },
+    "prerequisite":  {
+                         "id":  "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+                         "completion":  "accepted_pinned_v50_capability_evidence_and_security_review",
+                         "scope":  "documentary capability prerequisite only",
+                         "canonical_state_or_gate_transition":  false,
+                         "implementation_authority_issued":  false,
+                         "F03_closed":  false
+                     },
+    "accepted_evidence_reference":  "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-summary-v1.yaml",
+    "accepted_security_review_reference":  "new pipeline/reviews/k0b-03-v2-windows-enforcement-capability-security-review-v1.yaml",
+    "watchdog_decision":  {
+                              "decision":  "accepted_for_pinned_v50_capability_qualification_only",
+                              "mechanisms":  [
+                                                 "trusted retained-handle target user-time CPU watchdog with owned-Job fail-closed termination",
+                                                 "trusted parent pending-connect watchdog with bounded checkpoint, owned-tree termination and quiescence checks"
+                                             ],
+                              "not_proven":  [
+                                                 "native JOB_OBJECT_LIMIT_PROCESS_TIME",
+                                                 "native END_OF_PROCESS_TIME",
+                                                 "native WSAEACCES",
+                                                 "universal absence of every network effect"
+                                             ],
+                              "not_equivalence_to_native":  true,
+                              "design_not_silently_modified":  true,
+                              "required_before_future_implementation":  "Separately authorize alignment of normative v2 enforcement claims with this limited owner acceptance; otherwise requirements conflict remains blocking."
+                          },
+    "additional_A_disposition":  {
+                                     "classification":  "distinct_extra_A_initially_presented_as_B",
+                                     "accepted_as_B":  false,
+                                     "retroactive_authorization":  false,
+                                     "governance_finding":  "CAP-V50-PROVENANCE",
+                                     "later_actual_B":  "separately_authorized_and_factually_valid"
+                                 },
+    "findings":  [
+                     {
+                         "id":  "CAP-V50-PROVENANCE",
+                         "status":  "retained_not_closed",
+                         "classification":  "governance",
+                         "description":  "An additional distinct A execution was initially presented as B. It was not the originally authorized single A repeat and is not B. Acceptance is not retroactive runtime authorization. Actual B was separately authorized after the mismatch."
+                     },
+                     {
+                         "id":  "CAP-V50-INVENTORY",
+                         "status":  "retained_not_closed",
+                         "classification":  "evidence_limit",
+                         "description":  "The wrapper computes all post-run entry hashes but its success predicate compares inventory count and paths only; content pins cover probe, worker, v17, v50 and Python. Later 52-file verification establishes current preservation, not immutable immediate post-execution preservation."
+                     },
+                     {
+                         "id":  "CAP-V50-WRAPPER",
+                         "status":  "retained_not_closed",
+                         "classification":  "failure_path_limit",
+                         "description":  "No outer wait timeout; copy-task failure may lose partial capture; wrapper parent termination does not provide comprehensive emergency root/profile cleanup. Successful A/B cleanup is not proof of every failure path."
+                     },
+                     {
+                         "id":  "CAP-V50-WATCHDOG",
+                         "status":  "retained_not_closed",
+                         "classification":  "claim_boundary",
+                         "description":  "Trusted CPU and pending-connect watchdog enforcement only. Native JOB_OBJECT_LIMIT_PROCESS_TIME, END_OF_PROCESS_TIME and WSAEACCES are not proven; no universal absence-of-network-effect guarantee."
+                     }
+                 ],
+    "design_relationship":  {
+                                "historical_design_and_freeze_files":  "immutable_unchanged",
+                                "limited_capability_acceptance_not_native_equivalence":  true,
+                                "future_claim_alignment":  "separate_authorization_required_before_implementation",
+                                "no_silent_relaxation":  true
+                            },
+    "preservation":  {
+                         "findings_F01_through_F08":  "open_unchanged",
+                         "F03":  "open_unchanged",
+                         "G_K0B03_UNTRUSTED_SHAPES":  "future_open_unchanged",
+                         "K0b03_canonical_status":  "blocked_unchanged",
+                         "implementation_authority":  "none",
+                         "runtime_authority":  "none",
+                         "canonical_state_mutation":  false,
+                         "staging":  false,
+                         "commit":  false,
+                         "gate_or_finding_closure":  false,
+                         "K0b04_K0b05_N1_Swarm_advancement":  false
+                     },
+    "next_step":  "Owner review of the exact five new output hashes and sizes; stop before staging or commit. Any implementation, adoption or closure requires separate authority."
+}

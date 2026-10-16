@@ -1,0 +1,608 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-TRUSTED-CPU-WATCHDOG-FR-WIN-07-INTEGRATION-V41",
+  "schema_version": 1,
+  "request_version": 41,
+  "prepared_on": "2026-10-13",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "runtime_authority": "none",
+  "purpose": "Preserve the successful trusted CPU-watchdog diagnostic and its fresh-context security review, and propose without authorizing one bounded probe-only FR-WIN-07 watchdog integration followed by one separately authorized operator-launched FR-WIN-01 through FR-WIN-10 attempt A.",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8",
+    "bom": false,
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys_forbidden": true
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree_required_clean": true,
+    "index_required_clean": true,
+    "staging_required_absent": true
+  },
+  "entry_untracked_inventory": {
+    "count": 42,
+    "ordering": "path_ordinal_ascending",
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-03-job-memory-topology-remediation-diagnostic-approval-request-v20.yaml",
+        "sha256": "4f291157e79d31cb82427cb1070923bb812454fdd06ece923495d4bd3daf6b75",
+        "bytes": 20915
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-05-successor-predicate-remediation-diagnostic-approval-request-v22.yaml",
+        "sha256": "e0a4459068a012cad4e31dad5003dbcf457ecedb17977ff71e91b9327f5c32dd",
+        "bytes": 27252
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-active-process-accounting-diagnostic-approval-request-v21.yaml",
+        "sha256": "1387c1d8165ed302b2c5ea306478ca4b98538d129cfadcc6c4ee9c0dccc88a01",
+        "bytes": 22422
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-06-process-tree-successor-predicate-remediation-diagnostic-approval-request-v23.yaml",
+        "sha256": "8bdf7dc9838747c952e545dc4c656b3f57bcd69308e763a7337482f9c1f3ea93",
+        "bytes": 24859
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-07-process-time-control-diagnostic-approval-request-v24.yaml",
+        "sha256": "bf62b56f40b05b047efb2d590d3d2c3ebd9363e65090cfe230c1bfd81e933150",
+        "bytes": 26691
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-AppContainer-process-time-information-class-control-diagnostic-approval-request-v34.yaml",
+        "sha256": "08c1bfd98b56fd003a9b660741f1696f1e30a5e44957edb6c2dcc816278e2ccd",
+        "bytes": 23982
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-IC-WIN-basic-process-time-preservation-remediation-approval-request-v38.yaml",
+        "sha256": "4898e37e5f584ab10c33b79c4f183363ff218ec5c5ffbd1fe40fd12b807b96a8",
+        "bytes": 28949
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-alternate-qualified-host-identification-required-approval-request-v31.yaml",
+        "sha256": "171543521a670d79375d55ef0ebdd9211ff2b6f2643905995dc9035e656a46b4",
+        "bytes": 19896
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-alternate-qualified-host-non-nested-process-time-causal-diagnostic-approval-request-v30.yaml",
+        "sha256": "4f7f7586d8eb84cf7abded74a7366bbe79d6cb0ba7a3fc2f827e5119fe6794ff",
+        "bytes": 20646
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-assigned-suspended-target-basic-limit-flag-preservation-control-diagnostic-approval-request-v37.yaml",
+        "sha256": "286f5edc53985359a9113e2d348ea34a05b3469c0ea4a4ad41a29f8001deec2f",
+        "bytes": 26786
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v25.yaml",
+        "sha256": "708ab388b8f922c578601ebd033d1e4ee32769621791c80121614f78297dc7f5",
+        "bytes": 26008
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v26.yaml",
+        "sha256": "478a646cc5f12135b5f667e4068f028f503861ea742ee1d5b02c29b226863c4c",
+        "bytes": 17777
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-current-host-operator-launched-non-nested-process-time-causal-diagnostic-approval-request-v32.yaml",
+        "sha256": "dad1c1fccf10916abdeb67beb11429c7d13c51eeae9c292cfcbe24884acace60",
+        "bytes": 20434
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-empty-job-basic-limit-flag-preservation-control-diagnostic-approval-request-v36.yaml",
+        "sha256": "7296880e983ccb4a2a5c42b787d6ca1bc9dcccb5f5454da86c757046226cc23d",
+        "bytes": 29969
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-information-class-enforcement-repeatability-and-timing-review-approval-request-v39.yaml",
+        "sha256": "ee629e3fb9bb2e09c9f7cfdd611ba95ba09fc21e4beb40fb625be1e87e84dc01",
+        "bytes": 26789
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-information-class-set-failure-attribution-remediation-approval-request-v35.yaml",
+        "sha256": "64629cbf4a760d261b2f159450e7017ec2d0c246a72979b53a2f8cd4a2ceacfb",
+        "bytes": 26102
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-diagnostic-approval-request-v27.yaml",
+        "sha256": "ec09c73f79fa287d813a0960c12baa6ed8e76e4689aad6f8ab3a0fdad9bcb815",
+        "bytes": 19685
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-token-query-remediation-diagnostic-approval-request-v28.yaml",
+        "sha256": "b43f8d0c67019a9eac8a57bb82377aa6925922a36fd5928985f0702705c22a9c",
+        "bytes": 19842
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-causal-diagnostic-approval-request-v29.yaml",
+        "sha256": "806e63a64b79ddc53805d830d888558e37537e96b19157403694583e185344b8",
+        "bytes": 25584
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-result-fresh-review-approval-request-v33.yaml",
+        "sha256": "182b8793db74361425b0a4e209b5eac032ff81f75a6f900d689fe85889d1518c",
+        "bytes": 26241
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-case-matrix-remediation-diagnostic-approval-request-v18.yaml",
+        "sha256": "78f19f20ad721a64f0dd851683abbc81e9655bf0e6d8f6f42ba25b106d9258c9",
+        "bytes": 24204
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-remediation-diagnostic-approval-request-v19.yaml",
+        "sha256": "d8b8f3c93b22904549b89d9605f3b26b48349bac0d2719a720d5077a03872e8d",
+        "bytes": 25880
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+        "sha256": "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+        "bytes": 27364
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+        "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+        "bytes": 59032
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+        "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+        "bytes": 71036
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-architecture-and-diagnostic-approval-request-v40.yaml",
+        "sha256": "9c885cb00aa4fb69f81ca89c4e2adb4af5576a480ec22b2c4e0d46c30656545f",
+        "bytes": 30106
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+        "bytes": 29825
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "2aa1ad62cc53721af54afa4ec72cff73e14cc43cfed98a98e69eb2020bc38f7e",
+        "bytes": 320490
+      }
+    ]
+  },
+  "target": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-FR-WIN-07-integration-approval-request-v41.yaml",
+    "must_be_absent_at_entry": true,
+    "must_be_the_only_created_file": true,
+    "status_after_creation": "non_authorizing_pending_separate_exact_hash_owner_confirmation"
+  },
+  "immutable_artifact_pins": {
+    "approval_request_v40": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-architecture-and-diagnostic-approval-request-v40.yaml",
+      "sha256": "9c885cb00aa4fb69f81ca89c4e2adb4af5576a480ec22b2c4e0d46c30656545f",
+      "bytes": 30106
+    },
+    "probe": {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "2aa1ad62cc53721af54afa4ec72cff73e14cc43cfed98a98e69eb2020bc38f7e",
+      "bytes": 320490
+    },
+    "worker": {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+      "bytes": 29825
+    },
+    "projection_request_v17": {
+      "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+      "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+      "bytes": 59032
+    },
+    "interpreter": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "bytes": 104208
+    }
+  },
+  "accepted_watchdog_diagnostic": {
+    "classification": "TRUSTED_CPU_WATCHDOG_REPEATABLE_WITHIN_BOUND",
+    "non_authorizing_evidence": true,
+    "python_exit_code": 0,
+    "stdout": {
+      "sha256": "5fd7b2fbbf7d8e6e234de730c1053830291b1de3ba37d2ab8586528063b04f1a",
+      "bytes": 70169
+    },
+    "stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "matrix_expected_count": 8,
+    "matrix_actual_count": 8,
+    "passed_count": 8,
+    "failed_count": 0,
+    "errors_count": 0,
+    "skips_count": 0,
+    "ordered_case_results": [
+      {
+        "id": "WD-WIN-01",
+        "identity": "non_AppContainer",
+        "repetition": 1,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-02",
+        "identity": "zero_capability_AppContainer",
+        "repetition": 1,
+        "final_target_user_time_100ns": 10156250,
+        "CPU_overshoot_100ns": 156250,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-03",
+        "identity": "zero_capability_AppContainer",
+        "repetition": 2,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-04",
+        "identity": "non_AppContainer",
+        "repetition": 2,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-05",
+        "identity": "non_AppContainer",
+        "repetition": 3,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-06",
+        "identity": "zero_capability_AppContainer",
+        "repetition": 3,
+        "final_target_user_time_100ns": 10156250,
+        "CPU_overshoot_100ns": 156250,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-07",
+        "identity": "zero_capability_AppContainer",
+        "repetition": 4,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      },
+      {
+        "id": "WD-WIN-08",
+        "identity": "non_AppContainer",
+        "repetition": 4,
+        "final_target_user_time_100ns": 10000000,
+        "CPU_overshoot_100ns": 0,
+        "passed": true
+      }
+    ],
+    "maximum_CPU_overshoot_100ns": 156250,
+    "maximum_CPU_overshoot_ms": 15.625,
+    "non_AppContainer_repetitions": 4,
+    "zero_capability_AppContainer_repetitions": 4,
+    "target_specific_retained_handle_GetProcessTimes_sampling": true,
+    "watchdog_armed_before_ResumeThread_every_case": true,
+    "TerminateJobObject_success_every_case": true,
+    "native_process_time_LimitFlag_absent_every_case": true,
+    "effective_PerProcessUserTimeLimit_zero_every_case": true,
+    "target_membership_before_any_Job_false_every_case": true,
+    "target_membership_after_owned_assignment_true_every_case": true,
+    "live_target_and_conhost_attribution_complete_every_case": true,
+    "uncontracted_process_count": 0,
+    "final_ActiveProcesses_zero_every_case": true,
+    "final_PID_inventory_empty_every_case": true,
+    "Job_quiescence_success_every_case": true,
+    "canary_unchanged": true,
+    "cleanup_verified": true,
+    "zero_runtime_residue": true
+  },
+  "accepted_fresh_context_security_review": {
+    "classification": "REVIEW_CONFIRMS_TRUSTED_CPU_WATCHDOG_REPEATABLE_WITHIN_BOUND_AND_FR_WIN_07_INTEGRATION_ELIGIBLE",
+    "FR_WIN_07_integration_eligible": true,
+    "native_Job_process_time_enforcement_proved": false,
+    "native_process_time_nondeterminism_remains_documented": true,
+    "full_qualification_result_established": false,
+    "generalization_to_other_hosts_established": false,
+    "trusted_watchdog_boundary": "A naturally non-Job trusted supervisor retains the exact target process handle, samples target user time with GetProcessTimes, and fail-closed terminates the owned Job at the CPU budget.",
+    "review_boundaries": [
+      "The watchdog result is not proof of native JOB_OBJECT_LIMIT_PROCESS_TIME enforcement.",
+      "Historical native process-time nondeterminism remains documented.",
+      "The watchdog diagnostic is neither a full qualification result nor an FR-WIN result.",
+      "The evidence applies only to the current host and pinned probe, worker, interpreter and projection.",
+      "Wall time, aggregate Job CPU, process exit, conhost attribution and cleanup do not substitute for target GetProcessTimes evidence."
+    ]
+  },
+  "proposed_future_probe_only_delta": {
+    "authority_state": "not_authorized_by_creation_of_this_request",
+    "separate_exact_v41_hash_and_size_confirmation_required": true,
+    "modified_path_only": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+    "worker_must_remain_byte_identical": true,
+    "scope": "successor FR-WIN-07 runner, predicate, bounded projection, result-code branch and the zero-object launcher gate required by that route",
+    "FR_WIN_07_runner": {
+      "scenario": "cpu",
+      "timeout_ms": 5000,
+      "process_time_limit": false,
+      "defer_process_time_limit_until_assigned": false,
+      "active_process_limit": null,
+      "trusted_cpu_watchdog_enabled": true,
+      "trusted_cpu_budget_100ns": 10000000,
+      "trusted_cpu_poll_interval_ms": 20,
+      "trusted_cpu_maximum_final_user_time_100ns": 15000000,
+      "live_companion_attribution_diagnostic": true,
+      "require_non_nested_target": true
+    },
+    "launcher_gate": {
+      "API": "IsProcessInJob(GetCurrentProcess(), NULL)",
+      "timing": "after immutable pin and CLI validation but before root, profile, ACL, projection, Job, completion port, pipe or target creation",
+      "required_result": false,
+      "true_result_code": "NON_NESTED_LAUNCH_CONTEXT_REQUIRED",
+      "runtime_object_count_on_true": 0,
+      "retry_in_same_context_forbidden": true
+    },
+    "target_membership_contract": {
+      "target_created_suspended": true,
+      "target_in_any_Job_before_owned_assignment": false,
+      "target_in_owned_Job_before_assignment": false,
+      "target_in_owned_Job_after_assignment": true,
+      "assignment_before_resume": true
+    },
+    "watchdog_contract": {
+      "retained_original_exact_target_process_handle": true,
+      "reopen_target_by_PID_for_CPU_accounting_forbidden": true,
+      "armed_before_ResumeThread": true,
+      "ResumeThread_call_count": 1,
+      "CPU_budget_100ns": 10000000,
+      "poll_interval_ms": 20,
+      "maximum_final_target_user_time_100ns": 15000000,
+      "wall_fail_safe_deadline_ms": 5000,
+      "owned_Job_LimitFlags": 9216,
+      "owned_Job_LimitFlags_hex": "0x00002400",
+      "effective_PerProcessUserTimeLimit": 0,
+      "JOB_OBJECT_LIMIT_PROCESS_TIME_forbidden": true,
+      "target_END_OF_PROCESS_TIME_message_forbidden_as_success_evidence": true
+    },
+    "successor_FR_WIN_07_predicate": [
+      "watchdog armed before ResumeThread",
+      "ResumeThread call count equals one",
+      "every GetProcessTimes call successful",
+      "trigger target user_time_100ns greater than or equal to 10000000",
+      "final target user_time_100ns is within 10000000 through 15000000 inclusive",
+      "TerminateJobObject BOOL true with immediate GetLastError zero",
+      "termination reason trusted_cpu_watchdog_limit",
+      "target inactive after termination",
+      "target native END_OF_PROCESS_TIME message count zero",
+      "output overflow false",
+      "reader errors empty",
+      "final ActiveProcesses zero",
+      "final PID inventory empty",
+      "ACTIVE_PROCESS_ZERO observed",
+      "Job quiescence successful"
+    ],
+    "successor_FR_WIN_07_purpose": "trusted_target_user_time_CPU_watchdog_enforcement_with_retained_handle_and_owned_Job_fail_closed_termination",
+    "mismatch_result_code": "FR_WIN_07_TRUSTED_CPU_WATCHDOG_MISMATCH",
+    "historical_native_host_blocker_result_code_forbidden_for_watchdog_mismatch": "CP_WIN_09_HOST_BLOCKER_JOB_PROCESS_TIME_LIMIT_NOT_ENFORCED",
+    "unchanged_contracts": [
+      "FR-WIN-01 through FR-WIN-06 predicates and runners",
+      "FR-WIN-08 through FR-WIN-10 predicates and runners",
+      "worker",
+      "requests",
+      "projection",
+      "environment",
+      "AppContainer",
+      "ACL",
+      "all other Job limits",
+      "output bounds",
+      "cleanup"
+    ],
+    "forbidden_delta": [
+      "native JOB_OBJECT_LIMIT_PROCESS_TIME in successor FR-WIN-07",
+      "CPU threshold relaxation",
+      "worker modification",
+      "request modification",
+      "fallback information class",
+      "PID-only CPU accounting",
+      "wall-time substitution",
+      "generic process enumeration",
+      "WMI or CIM",
+      "event-log reading",
+      "ETW",
+      "external network or DNS",
+      "new imports or projection dependencies"
+    ]
+  },
+  "proposed_future_static_verification": {
+    "authority_state": "not_authorized_by_creation_of_this_request",
+    "probe_AST_parse_without_import_or_execution": true,
+    "required_checks": [
+      "only the authorized probe path changed",
+      "worker and requests v1 through v41 remain byte-identical",
+      "successor FR-WIN-07 uses trusted_cpu_watchdog_enabled true",
+      "successor FR-WIN-07 uses process_time_limit false",
+      "successor FR-WIN-07 does not defer a native process-time limit",
+      "successor FR-WIN-07 effective Job flags require exact 0x2400",
+      "successor FR-WIN-07 budget, polling, final bound and wall deadline remain exact",
+      "early zero-object naturally non-Job supervisor gate dominates runtime object creation",
+      "target membership gates dominate ResumeThread",
+      "FR-WIN-01 through FR-WIN-06 and FR-WIN-08 through FR-WIN-10 are unchanged",
+      "no new imports or projection dependencies"
+    ]
+  },
+  "proposed_future_operator_diagnostic": {
+    "authority_state": "not_authorized_by_creation_of_this_request",
+    "attempt": "A",
+    "mode": "--final-remediation-diagnostic-only",
+    "launcher": "new elevated Windows PowerShell manually opened through Run as Administrator and not a child Codex process",
+    "identity": "WIN-W0C3UIGG8SY\\Administrator",
+    "SID": "S-1-5-21-1272273691-598004227-1729395411-500",
+    "integrity": "High_or_System",
+    "interpreter_flags": [
+      "-I",
+      "-B"
+    ],
+    "root": "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+    "profile": "PipelineV2.K0b03.V2.Capability.A.24067ca6",
+    "ipv4": "127.0.0.1:47631",
+    "ipv6": "[::1]:47632",
+    "success_contract": {
+      "status": "final_remediation_diagnostic_pass_candidate_pending_read_only_review",
+      "result_code": "FINAL_REMEDIATION_DIAGNOSTIC_CAPTURED",
+      "matrix_expected_count": 10,
+      "matrix_actual_count": 10,
+      "passed_count": 10,
+      "failed_count": 0,
+      "errors_count": 0,
+      "skips_count": 0,
+      "successor_FR_WIN_07_predicate": true,
+      "canaries_unchanged": true,
+      "cleanup_verified": true,
+      "zero_residue": true
+    },
+    "repeat_without_new_owner_approval_forbidden": true,
+    "attempt_B_forbidden": true,
+    "full_qualification_forbidden": true
+  },
+  "future_ordered_route_after_separate_confirmation": [
+    "bounded probe-only successor FR-WIN-07 integration",
+    "static AST, constant and scope verification",
+    "prepare an exact bounded operator-launch wrapper",
+    "one naturally non-Job elevated Administrator-token FR-WIN-01 through FR-WIN-10 attempt A",
+    "fresh-context read-only review of the complete FR-WIN evidence",
+    "separate full qualification attempts A and B only after an accepted 10/10 FR-WIN result",
+    "documentation, security review, owner disposition and closure package"
+  ],
+  "current_step_authority": {
+    "create_only_this_request": true,
+    "allowed_post_creation_checks": [
+      "UTF-8 without BOM",
+      "LF-only",
+      "exactly one final LF",
+      "no duplicate JSON keys",
+      "JSON-compatible YAML parse",
+      "exact 42-path entry inventory and pins",
+      "target SHA-256 and byte count",
+      "exactly 43 untracked paths",
+      "clean tracked worktree and index",
+      "staging absent"
+    ],
+    "probe_modification": false,
+    "Python_probe_or_worker_execution": false,
+    "runtime_diagnostic": false,
+    "FR_WIN_01_through_10": false,
+    "attempt_A_or_B": false,
+    "full_qualification": false,
+    "staging_or_commit": false,
+    "closure_or_progression": false
+  },
+  "state_preservation": {
+    "requests_v1_through_v40_byte_identical": true,
+    "probe_byte_identical": true,
+    "worker_byte_identical": true,
+    "all_other_existing_files_byte_identical": true,
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b_03": "blocked",
+    "runtime_authority": "none"
+  },
+  "stop_conditions": [
+    "baseline HEAD, parent or tree mismatch",
+    "tracked worktree or index not clean",
+    "staging present",
+    "entry inventory or immutable pin mismatch",
+    "target v41 already exists at creation entry",
+    "diagnostic evidence mismatch",
+    "serialization mismatch",
+    "scope mismatch",
+    "unexpected repository or runtime residue"
+  ],
+  "request_document_checks": {
+    "target_excluded_from_entry_inventory": true,
+    "entry_inventory_expected_count": 42,
+    "post_creation_untracked_expected_count": 43,
+    "all_entry_pins_required_exact": true,
+    "full_target_SHA256_and_bytes_required": true
+  },
+  "next_required_action": "Validate this request, compute its exact SHA-256 and byte count, stop, and obtain separate owner confirmation before any probe modification, static verification or runtime diagnostic."
+}

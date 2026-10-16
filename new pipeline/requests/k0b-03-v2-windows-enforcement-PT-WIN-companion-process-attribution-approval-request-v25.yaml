@@ -1,0 +1,654 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-PT-WIN-COMPANION-PROCESS-ATTRIBUTION-APPROVAL-REQUEST-V25",
+  "schema_version": "1.0",
+  "request_version": 25,
+  "prepared_on": "2026-10-08",
+  "document_kind": "non_authorizing_exact_scope_approval_request",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "runtime_authority": "none",
+  "purpose": "Record the nested-Job PT-WIN-01 through PT-WIN-04 control diagnostic, its independent review, and the concurrent unexplained companion-process blocker; propose retained-log attribution before any separately authorized instrumented diagnostic or non-nested causal comparison.",
+  "serialization": {
+    "format": "JSON-compatible YAML",
+    "encoding": "UTF-8",
+    "bom": false,
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": false
+  },
+  "current_authority": {
+    "authorized_now": [
+      "create_only_this_request_v25",
+      "verify_document_serialization_inventory_and_exact_pin"
+    ],
+    "not_authorized_now": [
+      "read_event_logs",
+      "modify_probe_or_worker",
+      "execute_Python_probe_worker_or_diagnostic",
+      "create_profile_root_projection_or_ACL",
+      "use_CREATE_BREAKAWAY_FROM_JOB_Task_Scheduler_or_service",
+      "execute_attempt_B_or_full_qualification",
+      "stage_or_commit",
+      "close_prerequisite_finding_or_gate"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean_required",
+    "index": "clean_required",
+    "staging": "absent_required"
+  },
+  "entry_untracked_inventory": {
+    "count": 26,
+    "preservation": "Every listed path must remain byte-identical while request v25 is created.",
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-case-matrix-remediation-diagnostic-approval-request-v18.yaml",
+        "sha256": "78f19f20ad721a64f0dd851683abbc81e9655bf0e6d8f6f42ba25b106d9258c9",
+        "bytes": 24204
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-remediation-diagnostic-approval-request-v19.yaml",
+        "sha256": "d8b8f3c93b22904549b89d9605f3b26b48349bac0d2719a720d5077a03872e8d",
+        "bytes": 25880
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+        "sha256": "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+        "bytes": 27364
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-03-job-memory-topology-remediation-diagnostic-approval-request-v20.yaml",
+        "sha256": "4f291157e79d31cb82427cb1070923bb812454fdd06ece923495d4bd3daf6b75",
+        "bytes": 20915
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-05-successor-predicate-remediation-diagnostic-approval-request-v22.yaml",
+        "sha256": "e0a4459068a012cad4e31dad5003dbcf457ecedb17977ff71e91b9327f5c32dd",
+        "bytes": 27252
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-active-process-accounting-diagnostic-approval-request-v21.yaml",
+        "sha256": "1387c1d8165ed302b2c5ea306478ca4b98538d129cfadcc6c4ee9c0dccc88a01",
+        "bytes": 22422
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-06-process-tree-successor-predicate-remediation-diagnostic-approval-request-v23.yaml",
+        "sha256": "8bdf7dc9838747c952e545dc4c656b3f57bcd69308e763a7337482f9c1f3ea93",
+        "bytes": 24859
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-07-process-time-control-diagnostic-approval-request-v24.yaml",
+        "sha256": "bf62b56f40b05b047efb2d590d3d2c3ebd9363e65090cfe230c1bfd81e933150",
+        "bytes": 26691
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+        "sha256": "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+        "bytes": 59032
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+        "sha256": "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+        "bytes": 71036
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+        "bytes": 29825
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "3010f7691e8d0f34f5f799e27bc33fb41c4ea8e3e882ee6300b54f3a2df32435",
+        "bytes": 175884
+      }
+    ]
+  },
+  "target": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v25.yaml",
+    "must_be_all_new": true,
+    "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation"
+  },
+  "immutable_chain": {
+    "requests_v1_through_v24": "byte_identical",
+    "request_v24": {
+      "sha256": "bf62b56f40b05b047efb2d590d3d2c3ebd9363e65090cfe230c1bfd81e933150",
+      "bytes": 26691
+    },
+    "probe": {
+      "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+      "sha256": "3010f7691e8d0f34f5f799e27bc33fb41c4ea8e3e882ee6300b54f3a2df32435",
+      "bytes": 175884,
+      "state": "byte_identical_until_separate_future_owner_confirmation"
+    },
+    "worker": {
+      "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+      "sha256": "11623fc9207f0dd1721bf62fd79b5928d256ae3fa495d0c30e66d96e5d803e59",
+      "bytes": 29825,
+      "state": "byte_identical"
+    }
+  },
+  "captured_diagnostic": {
+    "schema": "pipeline-v2.k0b03-v2-windows-process-time-control-diagnostic-v1",
+    "stdout": {
+      "sha256": "0330753fb3a7f7b40745640a8b3920cf4c85c38a20a88b2823f0943858c587bc",
+      "bytes": 17010
+    },
+    "stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Python_exit_code": 0,
+    "elapsed_ms": 15969,
+    "result_code": "NESTED_JOB_CONTEXT_PRESENT_REQUIRES_SEPARATE_DISPOSITION",
+    "matrix_expected_count": 4,
+    "matrix_actual_count": 4,
+    "passed_count": 1,
+    "failed_count": 3,
+    "errors_count": 0,
+    "skips_count": 0,
+    "parent_in_any_Job_before_cases": true,
+    "cleanup_verified": true,
+    "post_cleanup_residue": {
+      "process": 0,
+      "profile_mapping": 0,
+      "profile_folder": 0,
+      "ACL": 0,
+      "listeners": 0,
+      "roots": 0,
+      "repository_bytecode": 0
+    },
+    "common_evidence": {
+      "effective_PerProcessUserTimeLimit_100ns": 10000000,
+      "effective_LimitFlags_decimal": 9218,
+      "effective_LimitFlags_hex": "0x2402",
+      "QueryInformationJobObject_result": 1,
+      "QueryInformationJobObject_last_error": 0,
+      "QueryInformationJobObject_returned_length": 144,
+      "created_suspended": true,
+      "assigned_before_resume": true,
+      "resume_called": true,
+      "target_in_any_Job_before_owned_assignment": true,
+      "target_in_owned_Job_before_assignment": false,
+      "target_in_owned_Job_after_assignment": true,
+      "completion_quiet_window_ms": 250,
+      "completion_quiet_window_completed": true,
+      "completion_deadline_expired": false,
+      "final_ActiveProcesses": 0,
+      "final_PID_inventory_empty": true,
+      "Job_quiescence_successful": true,
+      "output_overflow": false,
+      "output_reader_errors": []
+    },
+    "cases": [
+      {
+        "id": "PT-WIN-01",
+        "target_identity": "non_AppContainer",
+        "limit_application": "before_AssignProcessToJobObject",
+        "passed": false,
+        "target_PID": 11812,
+        "companion_PID": 9608,
+        "target_creation_FILETIME_100ns": 134359421063491947,
+        "target_exit_FILETIME_100ns": 134359421094093956,
+        "target_kernel_time_100ns": 1875000,
+        "target_user_time_100ns": 27812500,
+        "Job_total_kernel_time_100ns": 2187500,
+        "Job_total_user_time_100ns": 28125000,
+        "Job_TotalProcesses": 2,
+        "Job_TotalTerminatedProcesses": 1,
+        "termination_reason": "job_process_time_limit",
+        "target_exit_code": 3221225540,
+        "completion_messages": [
+          {
+            "message": 6,
+            "process_id_value": 11812
+          },
+          {
+            "message": 6,
+            "process_id_value": 9608
+          },
+          {
+            "message": 2,
+            "process_id_value": 11812
+          },
+          {
+            "message": 7,
+            "process_id_value": 9608
+          },
+          {
+            "message": 4,
+            "process_id_value": 0
+          }
+        ],
+        "before_worker_resume_PIDs": [
+          11812
+        ],
+        "after_worker_resume_PIDs": [
+          11812
+        ],
+        "final_PIDs": [],
+        "failure_reason": "target_user_time_exceeded_exact_15000000_upper_bound"
+      },
+      {
+        "id": "PT-WIN-02",
+        "target_identity": "non_AppContainer",
+        "limit_application": "after_AssignProcessToJobObject_before_ResumeThread",
+        "passed": false,
+        "target_PID": 4816,
+        "companion_PID": 3800,
+        "target_creation_FILETIME_100ns": 134359421096712449,
+        "target_exit_FILETIME_100ns": 134359421146677600,
+        "target_kernel_time_100ns": 625000,
+        "target_user_time_100ns": 49062500,
+        "Job_total_kernel_time_100ns": 781250,
+        "Job_total_user_time_100ns": 49218750,
+        "Job_TotalProcesses": 2,
+        "Job_TotalTerminatedProcesses": 0,
+        "termination_reason": "wall_timeout",
+        "target_exit_code": 57350,
+        "completion_messages": [
+          {
+            "message": 6,
+            "process_id_value": 4816
+          },
+          {
+            "message": 6,
+            "process_id_value": 3800
+          },
+          {
+            "message": 4,
+            "process_id_value": 0
+          }
+        ],
+        "before_worker_resume_PIDs": [
+          4816
+        ],
+        "after_worker_resume_PIDs": [
+          4816
+        ],
+        "final_PIDs": [],
+        "failure_reason": "wall_timeout_and_END_OF_PROCESS_TIME_absent"
+      },
+      {
+        "id": "PT-WIN-03",
+        "target_identity": "zero_capability_AppContainer",
+        "AppContainer_SID": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+        "capability_count": 0,
+        "limit_application": "before_AssignProcessToJobObject",
+        "passed": true,
+        "target_PID": 13252,
+        "companion_PID": 5172,
+        "target_creation_FILETIME_100ns": 134359421149291848,
+        "target_exit_FILETIME_100ns": 134359421164001112,
+        "target_kernel_time_100ns": 781250,
+        "target_user_time_100ns": 14218750,
+        "Job_total_kernel_time_100ns": 937500,
+        "Job_total_user_time_100ns": 14375000,
+        "Job_TotalProcesses": 2,
+        "Job_TotalTerminatedProcesses": 1,
+        "termination_reason": "job_process_time_limit",
+        "target_exit_code": 3221225540,
+        "completion_messages": [
+          {
+            "message": 6,
+            "process_id_value": 13252
+          },
+          {
+            "message": 6,
+            "process_id_value": 5172
+          },
+          {
+            "message": 2,
+            "process_id_value": 13252
+          },
+          {
+            "message": 7,
+            "process_id_value": 5172
+          },
+          {
+            "message": 4,
+            "process_id_value": 0
+          }
+        ],
+        "before_worker_resume_PIDs": [
+          13252
+        ],
+        "after_worker_resume_PIDs": [
+          13252
+        ],
+        "final_PIDs": [],
+        "evidence_boundary": "literal_case_predicate_passed_but_clean_causal_enforcement_claim_forbidden_by_nested_context_and_unexpected_companion"
+      },
+      {
+        "id": "PT-WIN-04",
+        "target_identity": "zero_capability_AppContainer",
+        "AppContainer_SID": "S-1-15-2-3886083970-3509888303-2822779767-1253701280-2237688528-2608393586-2572866205",
+        "capability_count": 0,
+        "limit_application": "after_AssignProcessToJobObject_before_ResumeThread",
+        "passed": false,
+        "target_PID": 6088,
+        "companion_PID": 148,
+        "target_creation_FILETIME_100ns": 134359421166575576,
+        "target_exit_FILETIME_100ns": 134359421216648593,
+        "target_kernel_time_100ns": 625000,
+        "target_user_time_100ns": 49218750,
+        "Job_total_kernel_time_100ns": 625000,
+        "Job_total_user_time_100ns": 49375000,
+        "Job_TotalProcesses": 2,
+        "Job_TotalTerminatedProcesses": 0,
+        "termination_reason": "wall_timeout",
+        "target_exit_code": 57350,
+        "completion_messages": [
+          {
+            "message": 6,
+            "process_id_value": 6088
+          },
+          {
+            "message": 6,
+            "process_id_value": 148
+          },
+          {
+            "message": 4,
+            "process_id_value": 0
+          }
+        ],
+        "before_worker_resume_PIDs": [
+          6088
+        ],
+        "after_worker_resume_PIDs": [
+          6088
+        ],
+        "final_PIDs": [],
+        "failure_reason": "wall_timeout_and_END_OF_PROCESS_TIME_absent"
+      }
+    ]
+  },
+  "fresh_context_review": {
+    "disposition": "NEEDS_REMEDIATION",
+    "baseline_and_pins_verified": true,
+    "stdout_byte_stream_independently_rehashed": false,
+    "bounded_fields_reviewed": true,
+    "findings": [
+      "NESTED_JOB_CONTEXT_PRESENT_REQUIRES_SEPARATE_DISPOSITION_is_correct_and_takes_precedence",
+      "pre_assignment_message_2_and_post_assignment_wall_timeout_is_only_a_directional_observation_within_the_nested_host",
+      "PT_WIN_01_overshoot_is_outside_the_exact_predicate_but_does_not_establish_a_code_or_predicate_defect",
+      "every_case_has_a_distinct_unexplained_companion_NEW_PROCESS_PID_and_TotalProcesses_2",
+      "pinned_cpu_worker_does_not_spawn_a_child",
+      "PT_WIN_03_literal_pass_must_not_be_used_as_clean_enforcement_proof",
+      "cleanup_is_adequate_for_the_limited_non_authorizing_disposition"
+    ]
+  },
+  "blockers": {
+    "primary": {
+      "code": "NESTED_JOB_CONTEXT_PRESENT_REQUIRES_SEPARATE_DISPOSITION",
+      "basis": "parent_and_every_target_were_already_in_a_Job_before_owned_Job_assignment"
+    },
+    "concurrent": {
+      "code": "UNEXPECTED_COMPANION_PROCESS_ADMISSION",
+      "basis": "each_case_emitted_a_second_NEW_PROCESS_for_a_distinct_PID_and_Job_TotalProcesses_equaled_2_while_the_cpu_worker_has_no_child_spawn"
+    },
+    "causal_claims_forbidden": [
+      "general_post_assignment_process_time_non_enforcement",
+      "AppContainer_specific_process_time_behavior",
+      "clean_pre_assignment_enforcement_success",
+      "host_wide_capability_conclusion_from_the_nested_run"
+    ]
+  },
+  "proposed_future_retained_log_assessment": {
+    "authorization_state": "not_authorized_pending_separate_exact_hash_owner_confirmation",
+    "scope": "bounded_read_only_existing_host_log_companion_process_attribution",
+    "runtime_diagnostic_repeat": "forbidden",
+    "allowed_logs": [
+      {
+        "name": "Security",
+        "event_ids": [
+          4688,
+          4689
+        ],
+        "maximum_events": 100
+      },
+      {
+        "name": "Microsoft-Windows-Sysmon/Operational",
+        "event_ids": [
+          1,
+          5
+        ],
+        "maximum_events": 100,
+        "if_log_exists": true
+      }
+    ],
+    "exact_PID_pairs": [
+      {
+        "case": "PT-WIN-01",
+        "target_PID": 11812,
+        "companion_PID": 9608,
+        "target_creation_FILETIME_100ns": 134359421063491947,
+        "target_exit_FILETIME_100ns": 134359421094093956
+      },
+      {
+        "case": "PT-WIN-02",
+        "target_PID": 4816,
+        "companion_PID": 3800,
+        "target_creation_FILETIME_100ns": 134359421096712449,
+        "target_exit_FILETIME_100ns": 134359421146677600
+      },
+      {
+        "case": "PT-WIN-03",
+        "target_PID": 13252,
+        "companion_PID": 5172,
+        "target_creation_FILETIME_100ns": 134359421149291848,
+        "target_exit_FILETIME_100ns": 134359421164001112
+      },
+      {
+        "case": "PT-WIN-04",
+        "target_PID": 6088,
+        "companion_PID": 148,
+        "target_creation_FILETIME_100ns": 134359421166575576,
+        "target_exit_FILETIME_100ns": 134359421216648593
+      }
+    ],
+    "time_window_contract": {
+      "basis": "each_exact_target_creation_to_exit_FILETIME_interval",
+      "maximum_margin_before_and_after_seconds": 2,
+      "PID_and_time_must_both_match": true,
+      "PID_reuse_without_time_match": "reject"
+    },
+    "allowed_output_fields": [
+      "event_provider",
+      "event_id",
+      "event_time",
+      "process_id",
+      "parent_process_id",
+      "normalized_executable_image_path",
+      "user_SID",
+      "integrity_or_elevation_metadata_if_present",
+      "bounded_command_identity_without_environment_values_credentials_or_unrestricted_command_line"
+    ],
+    "forbidden_actions": [
+      "event_log_configuration_change",
+      "audit_policy_change",
+      "ETW_session_start",
+      "event_log_clear_or_export_to_file",
+      "repository_or_external_file_write",
+      "runtime_process_creation"
+    ],
+    "result_codes": [
+      "COMPANION_PROCESS_ATTRIBUTED",
+      "COMPANION_ATTRIBUTION_REQUIRES_INSTRUMENTED_DIAGNOSTIC",
+      "exact_new_log_scope_or_integrity_blocker"
+    ]
+  },
+  "proposed_future_instrumented_diagnostic": {
+    "authorization_state": "not_authorized_requires_separate_future_request_and_owner_confirmation",
+    "precondition": "retained_log_attribution_absent_or_inconclusive",
+    "purpose": "capture_the_identity_of_every_Job_NEW_PROCESS_PID_while_it_is_still_alive_without_performing_enforcement_comparison",
+    "required_live_fields": [
+      "normalized_executable_image_path",
+      "parent_PID",
+      "creation_time",
+      "token_user_SID",
+      "token_integrity_and_elevation",
+      "token_is_AppContainer",
+      "AppContainer_SID",
+      "capability_count",
+      "target_or_companion_relationship",
+      "inherited_any_Job_membership_before_owned_assignment",
+      "owned_Job_membership"
+    ],
+    "hard_stop": "terminate_the_owned_Job_immediately_after_any_uncontracted_process_is_captured",
+    "enforcement_comparison": "forbidden",
+    "repeat": "forbidden_without_new_authority"
+  },
+  "future_non_nested_causal_comparison": {
+    "authorization_state": "not_authorized_requires_separate_future_request_and_owner_confirmation",
+    "mandatory_preconditions_before_runtime_objects": [
+      "parent_IsProcessInJob_parent_NULL_equals_false",
+      "target_IsProcessInJob_target_NULL_before_owned_assignment_equals_false"
+    ],
+    "if_non_nested_context_unavailable": "ALTERNATE_QUALIFIED_HOST_REQUIRED",
+    "CREATE_BREAKAWAY_FROM_JOB": "not_authorized_by_this_request",
+    "Task_Scheduler_or_service_launcher": "not_authorized_by_this_request"
+  },
+  "cleanup_and_preservation": {
+    "current_diagnostic_cleanup_verified": true,
+    "future_read_only_log_assessment_creates_no_runtime_objects": true,
+    "requests_v1_through_v25": "must_remain_byte_identical_after_creation",
+    "probe_and_worker": "must_remain_byte_identical_until_separate_owner_authority"
+  },
+  "stop_conditions": [
+    "baseline_mismatch",
+    "tracked_or_index_change",
+    "staging_present",
+    "entry_inventory_count_or_path_mismatch",
+    "entry_pin_mismatch",
+    "captured_evidence_or_PID_mapping_mismatch",
+    "event_log_name_or_event_ID_scope_expansion",
+    "event_count_exceeds_100_per_log",
+    "PID_without_exact_time_window_match",
+    "attempt_to_configure_logs_or_audit_policy",
+    "attempt_to_start_ETW_or_runtime_diagnostic",
+    "scope_expansion"
+  ],
+  "ordered_future_contract": [
+    "owner_confirms_exact_request_v25_SHA256_and_byte_size",
+    "reverify_baseline_27_path_inventory_and_all_pins",
+    "perform_only_the_bounded_read_only_retained_log_attribution",
+    "return_COMPANION_PROCESS_ATTRIBUTED_or_COMPANION_ATTRIBUTION_REQUIRES_INSTRUMENTED_DIAGNOSTIC_or_exact_blocker",
+    "perform_separate_fresh_context_read_only_review_of_log_attribution",
+    "only_if_logs_are_inconclusive_prepare_a_separate_instrumented_diagnostic_request",
+    "require_a_separately_proven_non_nested_execution_context_before_any_future_causal_PT_WIN_comparison",
+    "use_an_alternate_qualified_host_if_non_nested_context_cannot_be_obtained_without_forbidden_mechanisms"
+  ],
+  "forbidden_future_scope": [
+    "automatic_probe_or_worker_change",
+    "automatic_runtime_diagnostic_repeat",
+    "CREATE_BREAKAWAY_FROM_JOB",
+    "Task_Scheduler_or_service_use",
+    "additional_profiles_roots_ACLs_listeners_sockets_or_network",
+    "external_dependencies_pip_wheels_or_venv",
+    "global_Anaconda_ACL_firewall_service_or_Network_Isolation_mutation",
+    "attempt_B",
+    "full_CP_WIN_01_through_18_qualification",
+    "owner_disposition_evidence_or_document_check",
+    "staging_or_commit",
+    "prerequisite_finding_or_gate_closure",
+    "K0b_03_K0b_04_K0b_05_N1_or_Swarm_progress",
+    "runtime_publication_or_remote_effect"
+  ],
+  "non_closure_statement": {
+    "CP_K0B03_V2_WINDOWS_ENFORCEMENT": "open_blocking_prerequisite",
+    "K0B03_IA_R2_F03": "not_closed",
+    "G_K0B03_K0B01_COMPLETE": "closed_unchanged",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open_unchanged",
+    "K0b_03": "blocked",
+    "K0b_04_K0b_05_N1_Swarm": "not_advanced",
+    "runtime_authority": "none"
+  },
+  "request_document_checks": [
+    "target_is_all_new",
+    "UTF_8_without_BOM",
+    "LF_only",
+    "exactly_one_final_LF",
+    "no_duplicate_JSON_keys",
+    "JSON_compatible_YAML_parse",
+    "exact_26_path_entry_inventory",
+    "requests_v1_through_v24_probe_and_worker_byte_identical",
+    "record_full_target_SHA256_and_byte_size",
+    "post_creation_untracked_path_count_equals_27"
+  ],
+  "next_required_action": "Obtain separate owner confirmation of the exact request v25 SHA-256 and byte size before any retained-log assessment or subsequent diagnostic work."
+}

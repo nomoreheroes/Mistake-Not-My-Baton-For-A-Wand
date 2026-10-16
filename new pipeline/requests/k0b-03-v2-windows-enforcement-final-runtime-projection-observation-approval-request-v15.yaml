@@ -1,0 +1,604 @@
+{
+  "request_id": "K0B03-V2-WINDOWS-ENFORCEMENT-FINAL-RUNTIME-PROJECTION-OBSERVATION-APPROVAL-V15",
+  "schema_version": "1.0.0",
+  "version": "15.0.0",
+  "prepared_on": "2026-10-05",
+  "work_item_id": "K0b-03",
+  "capability_prerequisite_id": "CP-K0B03-V2-WINDOWS-ENFORCEMENT",
+  "dependent_finding_id": "K0B03-IA-R2-F03",
+  "status": "non_authorizing_pending_separate_exact_hash_owner_confirmation",
+  "document_kind": "non_authorizing_corrected_bounded_read_only_final_runtime_projection_observation_approval_request",
+  "serialization": {
+    "syntax": "strict_JSON_object_valid_as_YAML_1_2",
+    "encoding": "UTF-8_without_BOM",
+    "line_endings": "LF",
+    "final_lf_count": 1,
+    "duplicate_keys": "forbidden"
+  },
+  "purpose": "Record the single v14 observation stop at the standard-library import-time ctypes.dlopen kernel32 event; propose only an exact, source-pinned, call-stack-bound kernel32 exception while preserving the working v14 importlib enumeration correction and all other observation and projection boundaries.",
+  "current_materialization_authority": {
+    "authorized_now": [
+      "repeat_read_only_baseline_clean_tracked_state_and_sixteen_entry_pin_checks",
+      "confirm_absence_of_this_v15_target",
+      "create_only_this_v15_approval_request",
+      "validate_UTF8_without_BOM_LF_one_final_LF_and_duplicate_key_absence",
+      "compute_this_request_full_SHA256_and_decimal_byte_size"
+    ],
+    "only_new_repository_path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+    "existing_repository_paths_to_modify": [],
+    "not_authorized_now": [
+      "launch_new_assessment_process",
+      "execute_corrected_observation",
+      "modify_requests_v1_through_v14_probe_or_worker",
+      "create_any_other_repository_or_external_file",
+      "create_projection_profile_root_ACL_listener_socket_environment_fixture_or_temp_target",
+      "use_network",
+      "stage_or_commit",
+      "close_capability_prerequisite_finding_or_gate",
+      "change_state_STATE_renderer_profile_plans_statuses_gates",
+      "advance_K0b03_K0b04_K0b05_N1_or_runtime_effects"
+    ]
+  },
+  "baseline": {
+    "HEAD": "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+    "parent": "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+    "tree": "eb4f9e0616607510d4c66d3cb793bf64d328f008",
+    "tracked_worktree": "clean",
+    "index": "clean"
+  },
+  "entry_untracked_inventory": {
+    "count": 16,
+    "paths": [
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+        "sha256": "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+        "bytes": 35702,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+        "sha256": "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+        "bytes": 20321,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+        "sha256": "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+        "bytes": 18538,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+        "sha256": "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+        "bytes": 14830,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+        "sha256": "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+        "bytes": 11938,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+        "sha256": "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+        "bytes": 18556,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+        "sha256": "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+        "bytes": 27492,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+        "sha256": "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+        "bytes": 17554,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+        "sha256": "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+        "bytes": 17642,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+        "sha256": "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+        "bytes": 19430,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+        "sha256": "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+        "bytes": 13923,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+        "sha256": "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+        "bytes": 14025,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+        "sha256": "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+        "bytes": 22003,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+        "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+        "bytes": 21271,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+        "sha256": "caa9bc7dd7e3731beb749639df953e8c3d878a86b0d991137c7a03f25f37f7c8",
+        "bytes": 73269,
+        "disposition": "preserve_byte_identical"
+      },
+      {
+        "path": "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+        "sha256": "06f01061024ebfb751780358144a193987cfef568f32a96f777f29ff70dd6d83",
+        "bytes": 12602,
+        "disposition": "preserve_byte_identical"
+      }
+    ]
+  },
+  "v14_attempt_provenance": {
+    "evidence_basis": "prior_single_v14_attempt_output_and_following_read_only_source_and_pin_checks_recorded_in_conversation_and_confirmed_in_owner_v15_request_creation_authorization",
+    "reexecuted_during_v15_request_creation": false,
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": [
+        "-I",
+        "-B",
+        "-S"
+      ],
+      "source_transport": "stdin_without_temp_file",
+      "libraries": [
+        "Python_stdlib_only"
+      ],
+      "process_count": 1
+    },
+    "attempt_count": 1,
+    "completed_direct_imports": [
+      "argparse"
+    ],
+    "allowed_enumeration_events": [
+      {
+        "event_kind": "os.listdir",
+        "exact_directory": "C:\\ProgramData\\anaconda3\\Lib\\re",
+        "normalized_directory": "C:/ProgramData/anaconda3/Lib/re",
+        "importer_module": "importlib._bootstrap_external",
+        "importer_owner": "FileFinder",
+        "importer_function": "_fill_cache",
+        "code_filename": "<frozen importlib._bootstrap_external>",
+        "runtime_module_name": "_frozen_importlib_external",
+        "phase": "observe",
+        "classification": "importlib_internal_closed_world_module_discovery"
+      }
+    ],
+    "enumeration_correction_disposition": "working_and_carried_forward_unchanged",
+    "next_direct_import": "ctypes",
+    "blocked_event": {
+      "event": "ctypes.dlopen",
+      "raw_name": "kernel32",
+      "reason": "forbidden_dlopen_path"
+    },
+    "audit_stop_code": "AUDIT_BLOCK_FORBIDDEN_DLOPEN",
+    "reported_code": "DIRECT_IMPORT_OBSERVATION_STOP",
+    "exception_type": "RuntimeError",
+    "projection_result": "exact_blocker_without_projection_claim",
+    "initial_final_closure_completed": false,
+    "PE_closure_completed": false,
+    "projection_manifest_completed": false,
+    "partial_results_are_projection_authority": false,
+    "repeat_assessment_process_launched": false,
+    "effects": {
+      "repository_or_external_writes": false,
+      "child_processes": false,
+      "sockets": false,
+      "DNS_or_network": false,
+      "profiles": false,
+      "ACL": false,
+      "roots": false,
+      "fixtures": false,
+      "environments": false,
+      "temp_targets": false,
+      "staging_or_commit": false,
+      "runtime_effects": false
+    },
+    "post_stop_verification": {
+      "baseline_unchanged": true,
+      "sixteen_pins_unchanged": true,
+      "tracked_worktree_and_index": "clean",
+      "capability_roots_absent": [
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-A",
+        "C:/Users/Administrator/AppData/Local/Temp/2/pipeline-v2-k0b03-v2-windows-capability-B"
+      ],
+      "repository_bytecode_residue_count": 0
+    }
+  },
+  "ctypes_kernel32_source_evidence": {
+    "path": "C:/ProgramData/anaconda3/Lib/ctypes/__init__.py",
+    "sha256": "e0db1242e78267cba0124ee9fe5963b72d1c8a1832bb51a88abcf012a9cbce76",
+    "bytes": 18210,
+    "evidence_basis": "prior_read_only_source_evidence_confirmed_by_owner",
+    "source_read_or_target_code_execution_during_request_creation": false,
+    "CDLL_constructor": {
+      "function": "ctypes.CDLL.__init__",
+      "start_line": 343
+    },
+    "Windows_loader_mode": {
+      "symbol": "nt._LOAD_LIBRARY_SEARCH_DEFAULT_DIRS",
+      "source_line": 368
+    },
+    "dlopen_call": {
+      "expression": "_dlopen(self._name, mode)",
+      "source_line": 379
+    },
+    "LibraryLoader": {
+      "class_start_line": 442,
+      "function": "ctypes.LibraryLoader.__getattr__",
+      "function_start_line": 446,
+      "constructor_expression": "self._dlltype(name)",
+      "constructor_call_line": 450
+    },
+    "module_level_call": {
+      "expression": "windll.kernel32.GetLastError",
+      "source_line": 479
+    },
+    "raw_logical_DLL_name": "kernel32",
+    "classification": "ctypes_stdlib_import_time_Windows_KnownDLL_binding",
+    "classification_scope": "host_Windows_system_dependency_excluded_from_runtime_projection",
+    "v14_actual_dlopen_was_blocked": true,
+    "v14_successful_system_DLL_resolution_claim": false
+  },
+  "v14_contract_inheritance": {
+    "path": "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+    "sha256": "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+    "bytes": 21271,
+    "disposition": "preserve_byte_identical",
+    "inheritance": "All v14 observation, enumeration, audit-hook, module-origin, PYC, branch, PE, native binding, projection, process-count and no-effect contracts remain unchanged except for the exact kernel32 correction below.",
+    "unchanged_v13_contracts": [
+      "one_fresh_pinned_assessment_driver_process_only",
+      "initial_and_final_sys_modules_snapshots_and_exact_delta",
+      "in_memory_audit_hook_for_import_open_and_ctypes_dlopen",
+      "ten_and_only_ten_exact_direct_stdlib_imports",
+      "v9_stdin_pseudo_origin_correction",
+      "unambiguous_PYC_or_PYO_to_PY_source_rebinding",
+      "three_exact_v10_grp_pwd_branch_aware_dispositions",
+      "no_grp_or_pwd_import_read_or_projection",
+      "complete_observed_Python_bootstrap_module_package_data_and_extension_closure",
+      "PE_analysis_only_for_exact_required_PYD_ffi_and_VCRUNTIME_bindings",
+      "exact_ctypes_to_ffi_binding",
+      "exact_ffi_to_immutable_root_vcruntime_binding",
+      "no_duplicate_DLLs_VCRUNTIME_binding",
+      "merge_with_immutable_request_v7_43_path_native_startup_set",
+      "generated_python312_dot_pth_contains_only_Lib_and_DLLs_without_import_site",
+      "complete_projection_entry_inventory",
+      "ordinal_projection_manifest_path_count_content_bytes_manifest_bytes_and_SHA256",
+      "no_duplicate_projection_paths_or_conflicting_byte_bindings",
+      "conversation_only_result_and_next_non_authorizing_request"
+    ],
+    "precedence": "The v15 kernel32 exception applies only when every conjunctive precondition is satisfied; no other v14 restriction is relaxed."
+  },
+  "preserved_v14_importlib_enumeration_correction": {
+    "correction_kind": "bounded_importlib_internal_closed_world_directory_enumeration",
+    "general_directory_enumeration_authorized": false,
+    "assessment_logic_directory_enumeration_authorized": false,
+    "allowed_events": [
+      "os.listdir",
+      "os.scandir"
+    ],
+    "required_call_origin": {
+      "module": "importlib._bootstrap_external",
+      "owner": "FileFinder",
+      "function": "_fill_cache",
+      "proof_mechanism": "sys._getframe_frame_walk_without_importing_an_assessment_only_helper_module"
+    },
+    "allowed_directory_roots": [
+      "C:/ProgramData/anaconda3/Lib/** excluding site-packages",
+      "C:/ProgramData/anaconda3/DLLs/**"
+    ],
+    "required_event_projection_fields": [
+      "event_kind",
+      "exact_directory",
+      "normalized_directory",
+      "importer_module",
+      "importer_owner",
+      "importer_function",
+      "classification"
+    ],
+    "event_classification": "importlib_internal_closed_world_module_discovery",
+    "required_properties": [
+      "directory_is_strictly_below_an_allowed_root",
+      "directory_does_not_equal_the_root_parent_or_anaconda_root",
+      "directory_does_not_contain_site-packages",
+      "operation_is_read_only",
+      "confirmed_FileFinder_fill_cache_frame_is_present",
+      "event_is_recorded_before_it_is_allowed"
+    ],
+    "always_forbidden_enumeration_targets": [
+      "C:/ProgramData/anaconda3/Library/bin",
+      "C:/ProgramData/anaconda3",
+      "current_working_directory",
+      "repository",
+      "site-packages",
+      "user-site",
+      "conda-meta",
+      "pkgs",
+      "Scripts",
+      "any_other_root"
+    ],
+    "stop_conditions": [
+      "enumeration_event_without_a_confirmed_FileFinder_fill_cache_frame",
+      "enumeration_target_not_strictly_below_Lib_or_DLLs",
+      "enumeration_target_contains_site-packages_or_another_forbidden_component",
+      "enumeration_is_initiated_by_assessment_logic",
+      "enumeration_event_cannot_be_fully_projected_with_all_required_fields"
+    ],
+    "all_other_v13_audit_hook_restrictions": "unchanged"
+  },
+  "single_v15_correction": {
+    "correction_kind": "source_pinned_call_stack_bound_ctypes_import_time_kernel32_logical_name",
+    "event": "ctypes.dlopen",
+    "existing_null_name_allowed": true,
+    "only_new_case_insensitive_logical_name": "kernel32",
+    "comparison": "case_insensitive_exact_whole_logical_name_no_trimming_no_extension_removal_no_basename_conversion",
+    "source_pin": {
+      "path": "C:/ProgramData/anaconda3/Lib/ctypes/__init__.py",
+      "sha256": "e0db1242e78267cba0124ee9fe5963b72d1c8a1832bb51a88abcf012a9cbce76",
+      "bytes": 18210
+    },
+    "source_hash_and_size_must_match_before_allowing_event": true,
+    "required_call_stack_all_of": [
+      {
+        "module": "ctypes",
+        "function": "CDLL.__init__",
+        "constructor_start_line": 343,
+        "active_source_line": 379,
+        "expression": "_dlopen(self._name, mode)"
+      },
+      {
+        "module": "ctypes",
+        "function": "LibraryLoader.__getattr__",
+        "function_start_line": 446,
+        "active_source_line": 450,
+        "expression": "self._dlltype(name)"
+      },
+      {
+        "module": "ctypes",
+        "function": "<module>",
+        "active_source_line": 479,
+        "expression": "windll.kernel32.GetLastError"
+      }
+    ],
+    "frame_proof": "Inspect the live frame chain; require all three relevant frames at the pinned source path and active source lines in the expected nested call order. Record function, qualified function, source path and source line.",
+    "required_loader_mode": {
+      "symbol": "nt._LOAD_LIBRARY_SEARCH_DEFAULT_DIRS",
+      "source_assignment_line": 368,
+      "predicate": "CDLL.__init__ frame local mode equals the pinned interpreter nt._LOAD_LIBRARY_SEARCH_DEFAULT_DIRS value",
+      "event_output": "record the symbol and the observed numeric mode"
+    },
+    "allowed_operation": "Only the natural import-time standard-library kernel32 load after every source, frame, name and mode check has passed.",
+    "event_projection_required_fields": [
+      "raw_name",
+      "normalized_logical_name",
+      "source_path",
+      "source_SHA256",
+      "exact_relevant_frame_function_line_inventory",
+      "loader_mode",
+      "resolved_system_classification",
+      "classification"
+    ],
+    "event_classification": "ctypes_stdlib_import_time_Windows_KnownDLL_binding",
+    "resolved_system_classification": "host_Windows_system_dependency",
+    "kernel32_in_runtime_projection": false,
+    "known_system_classification_does_not_authorize_arbitrary_loader_search": true,
+    "other_short_DLL_names_allowed": false,
+    "generic_logical_name_suppression_allowed": false,
+    "basename_suppression_allowed": false,
+    "extension_based_suppression_allowed": false,
+    "full_path_ctypes_dlopen": "Unchanged: only previously permitted v14 closed-world bindings.",
+    "Library_bin_enumeration": "forbidden",
+    "ambient_PATH_resolution": "forbidden",
+    "current_directory_resolution": "forbidden",
+    "registry_App_Paths_resolution": "forbidden",
+    "manual_LoadLibrary_or_ctypes_CDLL_assessment_calls": "forbidden",
+    "other_v14_audit_and_projection_contracts": "unchanged"
+  },
+  "exact_pinned_runtime_projection_dependencies": {
+    "native_startup_manifest": {
+      "path_count": 43,
+      "content_bytes": 8668304,
+      "manifest_bytes": 6968,
+      "sha256": "795d65df90d2a0c32db9c591057f07ffc5ba3332d28e35e65c44ec617f1c9ece"
+    },
+    "ctypes_extension": {
+      "source": "C:/ProgramData/anaconda3/DLLs/_ctypes.pyd",
+      "projection": "sandbox/runtime/DLLs/_ctypes.pyd",
+      "sha256": "bb4ab3ebfcd442ab75425a3deb0f4ca5ee4305858f862848f3ddfaa41691f8c5",
+      "bytes": 133904
+    },
+    "ffi": {
+      "source": "C:/ProgramData/anaconda3/Library/bin/ffi.dll",
+      "projection": "sandbox/runtime/DLLs/ffi.dll",
+      "sha256": "eb22fc95044ce939910d41857445bd0ecc4fc4d810ba30cc6b5f7f55b48ac8ed",
+      "bytes": 40216,
+      "PE_kind": "PE32+",
+      "machine": "0x8664"
+    },
+    "vcruntime": {
+      "immutable_source": "C:/ProgramData/anaconda3/VCRUNTIME140.dll",
+      "byte_identical_candidate": "C:/ProgramData/anaconda3/Library/bin/VCRUNTIME140.dll",
+      "projection": "sandbox/runtime/VCRUNTIME140.dll",
+      "forbidden_duplicate_projection": "sandbox/runtime/DLLs/VCRUNTIME140.dll",
+      "sha256": "02c6aa0e6e624411a9f19b0360a7865ab15908e26024510e5c38a9c08362c35a",
+      "bytes": 119888
+    },
+    "subprocess_branch_source": {
+      "source": "C:/ProgramData/anaconda3/Lib/subprocess.py",
+      "sha256": "baa9f9138d8d20df6284f67e7d2e790f847f65e2c5370de322d54cccd737f2d9",
+      "bytes": 88725,
+      "allowed_dispositions": [
+        "subprocess.Popen.__init__->grp@906",
+        "subprocess.Popen.__init__->grp@934",
+        "subprocess.Popen.__init__->pwd@962"
+      ]
+    }
+  },
+  "proposed_future_corrected_observation": {
+    "authority_activation": "requires_separate_owner_confirmation_of_this_request_full_SHA256_and_size",
+    "result_destination": "conversation_only",
+    "assessment_driver": {
+      "path": "C:/ProgramData/anaconda3/python.exe",
+      "version": "3.12.7",
+      "sha256": "6965927a96b81d1717c1d2186de7feb9b29ebf8775464020ebc2f25de6ef8ee0",
+      "flags": [
+        "-I",
+        "-B",
+        "-S"
+      ],
+      "source_transport": "stdin_or_in_memory_without_temp_file",
+      "libraries": [
+        "Python_stdlib_only"
+      ],
+      "process_count": 1
+    },
+    "direct_imports": [
+      "argparse",
+      "ctypes",
+      "ctypes.wintypes",
+      "json",
+      "os",
+      "pathlib",
+      "socket",
+      "subprocess",
+      "sys",
+      "time"
+    ],
+    "audit_events": [
+      "import",
+      "open",
+      "ctypes.dlopen",
+      "os.listdir",
+      "os.scandir"
+    ],
+    "observation_sequence": [
+      "verify_baseline_clean_tracked_state_and_exact_seventeen_path_inventory_including_confirmed_v15",
+      "verify_all_sixteen_predecessor_pins_and_the_confirmed_v15_pin",
+      "verify_pinned_assessment_driver_and_ctypes_source_identity",
+      "run_exactly_one_fresh_assessment_driver_with_stdin_or_in_memory_source",
+      "capture_initial_sys_modules_before_observed_direct_imports_and_without_assessment_only_helpers",
+      "install_audit_hook_preserving_v14_enumeration_contract_and_adding_only_v15_kernel32_exception",
+      "perform_only_ten_exact_direct_stdlib_imports_and_automatic_transitive_imports",
+      "record_all_required_audit_events_and_exact_kernel32_name_source_frames_mode_and_system_classification",
+      "capture_final_sys_modules_and_exact_initial_to_final_delta",
+      "apply_unchanged_v13_and_v14_origin_PYC_branch_and_closed_world_contracts",
+      "complete_observed_and_statically_required_Python_bootstrap_module_package_data_and_extension_closure",
+      "perform_only_authorized_exact_PYD_ffi_and_VCRUNTIME_PE_analysis",
+      "reproduce_immutable_43_path_native_startup_manifest",
+      "compute_generated_python312_dot_pth_and_complete_unique_projection_manifest_in_memory",
+      "verify_duplicate_path_and_conflicting_binding_absence",
+      "return_success_or_exact_blocker_without_any_repository_or_external_materialization"
+    ],
+    "success_result": "exact_runtime_projection_observed_and_closed",
+    "failure_result": "exact_blocker_without_projection_claim",
+    "success_output": [
+      "initial_and_final_module_snapshots_and_exact_delta",
+      "complete_sanitized_audit_event_inventory",
+      "complete_allowed_importlib_enumeration_event_inventory",
+      "complete_projection_entry_inventory",
+      "unique_projection_path_count",
+      "content_bytes",
+      "manifest_bytes",
+      "ordinal_manifest_SHA256",
+      "generated_python312_dot_pth_bytes_size_and_SHA256",
+      "exact_required_PYD_and_PE_dependency_closure",
+      "next_full_non_authorizing_materialization_and_A_B_qualification_request",
+      "exact_kernel32_ctypes_dlopen_event_and_conjunctive_source_frame_name_mode_proof"
+    ],
+    "failure_output": [
+      "exact_blocker",
+      "reached_phase",
+      "observed_blocking_event_and_available_evidence",
+      "no_projection_claim",
+      "process_count",
+      "preserved_file_inventory"
+    ],
+    "repository_writes": [],
+    "external_writes": [],
+    "locked_environments": [],
+    "dependencies": [],
+    "temp_targets": [],
+    "profiles": [],
+    "ACL_mutations": [],
+    "network_endpoints": [],
+    "child_processes": [],
+    "staging_or_commit": false,
+    "future_materialization_or_A_B_qualification_authority": "not_granted_requires_separate_exact_scope_approval",
+    "future_commit_contract": "No commit is authorized by this observation request."
+  },
+  "future_checks": [
+    "baseline_HEAD_parent_tree_clean_tracked_state_and_exact_seventeen_path_inventory",
+    "all_sixteen_predecessor_pins_plus_confirmed_v15_pin",
+    "one_fresh_pinned_driver_with_flags_I_B_S_and_in_memory_source",
+    "ctypes_source_path_SHA256_size_and_exact_relevant_lines",
+    "v14_FileFinder_enumeration_contract_preserved",
+    "only_exact_case_insensitive_kernel32_addition_to_ctypes_dlopen_policy",
+    "all_three_relevant_ctypes_frames_are_present_at_required_source_lines",
+    "loader_mode_equals_nt_LOAD_LIBRARY_SEARCH_DEFAULT_DIRS",
+    "complete_kernel32_event_projection_and_host_system_classification",
+    "kernel32_excluded_from_runtime_projection",
+    "no_generic_short_name_basename_or_extension_suppression",
+    "no_manual_LoadLibrary_or_ctypes_CDLL_assessment_calls",
+    "all_other_v14_observation_and_projection_checks",
+    "full_success_inventory_counts_sizes_roots_generated_pth_and_exact_PYD_PE_closure_or_exact_blocker",
+    "preservation_of_requests_v1_through_v15_probe_worker_and_all_canonical_invariants",
+    "conversation_only_result_and_non_authorizing_next_request"
+  ],
+  "future_stop_conditions": [
+    "baseline_or_any_pin_inventory_or_scope_mismatch",
+    "more_than_one_assessment_process_would_be_required",
+    "ctypes_source_path_hash_size_or_relevant_line_mismatch",
+    "kernel32_event_without_all_three_required_call_stack_frames",
+    "kernel32_event_with_wrong_loader_mode",
+    "any_other_short_DLL_name_or_unproved_system_classification",
+    "manual_LoadLibrary_or_ctypes_CDLL_assessment_call_would_be_required",
+    "FileFinder_enumeration_or_other_v14_audit_contract_violation",
+    "origin_PYC_branch_PE_native_dependency_or_projection_manifest_mismatch",
+    "unresolved_function_local_import_except_three_exact_grp_pwd_dispositions",
+    "duplicate_projection_path_or_conflicting_byte_binding",
+    "any_unauthorized_read_write_process_socket_network_profile_ACL_root_environment_fixture_temp_or_runtime_effect",
+    "any_other_v14_stop_condition"
+  ],
+  "non_authorizing_boundaries": {
+    "corrected_observation_authorized_now": false,
+    "runtime_projection_materialization_authorized": false,
+    "probe_or_worker_modification_authorized": false,
+    "capability_qualification_execution_authorized": false,
+    "capability_prerequisite_closure_authorized": false,
+    "finding_or_gate_closure_authorized": false,
+    "K0b03_implementation_authorized": false,
+    "runtime_authority": "none"
+  },
+  "canonical_invariants": {
+    "G_K0B03_K0B01_COMPLETE": "closed",
+    "G_K0B03_UNTRUSTED_SHAPES": "future_open",
+    "K0b03": "blocked",
+    "K0b04_K0b05_N1_progress": "none",
+    "runtime_authority": "none"
+  },
+  "review_timing": {
+    "security_focused_fresh_context_review_required_for_this_request_creation": false,
+    "reason": "The only current deliverable is a non-authorizing request recording the v14 stop and a narrow proposed import-observation correction.",
+    "mandatory_security_review_point": "after_successful_full_A_B_capability_qualification_commit_with_the_exact_sandbox_runtime_projection_and_before_owner_closure_of_CP_K0B03_V2_WINDOWS_ENFORCEMENT"
+  },
+  "next_required_action": "Separate owner confirmation of this request full SHA256 and byte size before one fresh corrected observation process."
+}

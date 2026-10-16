@@ -1,0 +1,355 @@
+{
+    "check_id":  "K0B03-V2-WINDOWS-ENFORCEMENT-CAPABILITY-PREREQUISITE-DOCUMENT-CHECK-V1",
+    "schema_version":  1,
+    "status":  "bounded_document_checks_passed_final_self_pin_reported_in_conversation",
+    "authority":  {
+                      "source":  "explicit_owner_confirmation_in_conversation",
+                      "scope":  "exact_five_new_document_paths_only",
+                      "confirmation":  "Owner authorizes the five-file documentary stage, explicitly accepts limited watchdog sufficiency for v50 capability qualification, retains findings, and requires stop before staging or commit.",
+                      "retroactive_authorization_of_additional_A":  false
+                  },
+    "baseline":  {
+                     "head":  "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+                     "parent":  "4995bd572f0230fc7452ff4088340376c3e5bd4c",
+                     "tree":  "eb4f9e0616607510d4c66d3cb793bf64d328f008"
+                 },
+    "checks":  {
+                   "entry_inventory_52_exact":  true,
+                   "input_and_attachment_pins_exact":  true,
+                   "source_envelope_raw_byte_integrity":  true,
+                   "case_matrix_and_CP05_CP18_checks":  true,
+                   "all_18_A_B_projection_records_equal":  true,
+                   "B_script_hash_exact":  true,
+                   "original_52_hashes_preserved_after_first_four_writes":  true,
+                   "first_four_serializations_valid_duplicate_free":  true,
+                   "targets_previously_absent":  true,
+                   "no_runtime_or_external_network":  true
+               },
+    "first_four_output_pins":  [
+                                   {
+                                       "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-prerequisite-completion-approval-request-v51.yaml",
+                                       "sha256":  "9d3021e87b127bcdb8fb02b1a381c4385a9446dc7f1f22aedca39e51eb7f3c56",
+                                       "bytes":  38282
+                                   },
+                                   {
+                                       "path":  "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-summary-v1.yaml",
+                                       "sha256":  "646df3c3f519c41be08fc2406ef65fb8af6c410d45e62b19deb6a02012293496",
+                                       "bytes":  78202
+                                   },
+                                   {
+                                       "path":  "new pipeline/reviews/k0b-03-v2-windows-enforcement-capability-security-review-v1.yaml",
+                                       "sha256":  "bb4204e8e27932bb4056138bdd40add381104202834e1610f2e7059d64d84783",
+                                       "bytes":  9594
+                                   },
+                                   {
+                                       "path":  "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-prerequisite-owner-disposition-v1.yaml",
+                                       "sha256":  "aa11791356c431d9d7b51a1e6febda9acbda6954cd1f489039adce0659f7aa0a",
+                                       "bytes":  6645
+                                   }
+                               ],
+    "original_52_inventory":  [
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-03-job-memory-topology-remediation-diagnostic-approval-request-v20.yaml",
+                                      "sha256":  "4f291157e79d31cb82427cb1070923bb812454fdd06ece923495d4bd3daf6b75",
+                                      "bytes":  20915
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-05-successor-predicate-remediation-diagnostic-approval-request-v22.yaml",
+                                      "sha256":  "e0a4459068a012cad4e31dad5003dbcf457ecedb17977ff71e91b9327f5c32dd",
+                                      "bytes":  27252
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-04-active-process-accounting-diagnostic-approval-request-v21.yaml",
+                                      "sha256":  "1387c1d8165ed302b2c5ea306478ca4b98538d129cfadcc6c4ee9c0dccc88a01",
+                                      "bytes":  22422
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-06-process-tree-successor-predicate-remediation-diagnostic-approval-request-v23.yaml",
+                                      "sha256":  "8bdf7dc9838747c952e545dc4c656b3f57bcd69308e763a7337482f9c1f3ea93",
+                                      "bytes":  24859
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-07-process-time-control-diagnostic-approval-request-v24.yaml",
+                                      "sha256":  "bf62b56f40b05b047efb2d590d3d2c3ebd9363e65090cfe230c1bfd81e933150",
+                                      "bytes":  26691
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-native-Winsock-WSAEACCES-remediation-review-approval-request-v42.yaml",
+                                      "sha256":  "16710d866487c9a5efb49702e8343b4030faac4a58e2fa6b6fe119d2c78ddee8",
+                                      "bytes":  26499
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-native-Winsock-four-case-control-diagnostic-approval-request-v43.yaml",
+                                      "sha256":  "4199d4cc8f8b0375a18049b29183ea0dc6f2e83fd928aa389813125b397ed143",
+                                      "bytes":  30952
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-network-enforcement-architecture-owner-decision-approval-request-v44.yaml",
+                                      "sha256":  "3ddca84654ec5afb32d3b938f3478bcf0670accefe97ce7b1b1c316f38cdd9eb",
+                                      "bytes":  27155
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-trusted-pending-connect-watchdog-implementation-diagnostic-approval-request-v45.yaml",
+                                      "sha256":  "54a367816141207682ca0ebe5e823e3f3f4424b8a8ce17a7ab6215770f09c3d1",
+                                      "bytes":  32446
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-trusted-pending-connect-watchdog-integration-approval-request-v47.yaml",
+                                      "sha256":  "ff20c3bc4836f97f6801fd321b45d539c53289bdab711a4b1733692a1e59436b",
+                                      "bytes":  30302
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-trusted-pending-connect-watchdog-predicate-key-schema-remediation-diagnostic-approval-request-v46.yaml",
+                                      "sha256":  "fc07e4a04c10a0373a2e0ecf2906a6d2f8191d00f64e06fefc39bca1aa61f152",
+                                      "bytes":  22626
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-AppContainer-process-time-information-class-control-diagnostic-approval-request-v34.yaml",
+                                      "sha256":  "08c1bfd98b56fd003a9b660741f1696f1e30a5e44957edb6c2dcc816278e2ccd",
+                                      "bytes":  23982
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-IC-WIN-basic-process-time-preservation-remediation-approval-request-v38.yaml",
+                                      "sha256":  "4898e37e5f584ab10c33b79c4f183363ff218ec5c5ffbd1fe40fd12b807b96a8",
+                                      "bytes":  28949
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-alternate-qualified-host-identification-required-approval-request-v31.yaml",
+                                      "sha256":  "171543521a670d79375d55ef0ebdd9211ff2b6f2643905995dc9035e656a46b4",
+                                      "bytes":  19896
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-alternate-qualified-host-non-nested-process-time-causal-diagnostic-approval-request-v30.yaml",
+                                      "sha256":  "4f7f7586d8eb84cf7abded74a7366bbe79d6cb0ba7a3fc2f827e5119fe6794ff",
+                                      "bytes":  20646
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-assigned-suspended-target-basic-limit-flag-preservation-control-diagnostic-approval-request-v37.yaml",
+                                      "sha256":  "286f5edc53985359a9113e2d348ea34a05b3469c0ea4a4ad41a29f8001deec2f",
+                                      "bytes":  26786
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v25.yaml",
+                                      "sha256":  "708ab388b8f922c578601ebd033d1e4ee32769621791c80121614f78297dc7f5",
+                                      "bytes":  26008
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-companion-process-attribution-approval-request-v26.yaml",
+                                      "sha256":  "478a646cc5f12135b5f667e4068f028f503861ea742ee1d5b02c29b226863c4c",
+                                      "bytes":  17777
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-current-host-operator-launched-non-nested-process-time-causal-diagnostic-approval-request-v32.yaml",
+                                      "sha256":  "dad1c1fccf10916abdeb67beb11429c7d13c51eeae9c292cfcbe24884acace60",
+                                      "bytes":  20434
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-empty-job-basic-limit-flag-preservation-control-diagnostic-approval-request-v36.yaml",
+                                      "sha256":  "7296880e983ccb4a2a5c42b787d6ca1bc9dcccb5f5454da86c757046226cc23d",
+                                      "bytes":  29969
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-information-class-enforcement-repeatability-and-timing-review-approval-request-v39.yaml",
+                                      "sha256":  "ee629e3fb9bb2e09c9f7cfdd611ba95ba09fc21e4beb40fb625be1e87e84dc01",
+                                      "bytes":  26789
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-information-class-set-failure-attribution-remediation-approval-request-v35.yaml",
+                                      "sha256":  "64629cbf4a760d261b2f159450e7017ec2d0c246a72979b53a2f8cd4a2ceacfb",
+                                      "bytes":  26102
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-diagnostic-approval-request-v27.yaml",
+                                      "sha256":  "ec09c73f79fa287d813a0960c12baa6ed8e76e4689aad6f8ab3a0fdad9bcb815",
+                                      "bytes":  19685
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-live-companion-attribution-token-query-remediation-diagnostic-approval-request-v28.yaml",
+                                      "sha256":  "b43f8d0c67019a9eac8a57bb82377aa6925922a36fd5928985f0702705c22a9c",
+                                      "bytes":  19842
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-causal-diagnostic-approval-request-v29.yaml",
+                                      "sha256":  "806e63a64b79ddc53805d830d888558e37537e96b19157403694583e185344b8",
+                                      "bytes":  25584
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-PT-WIN-non-nested-process-time-result-fresh-review-approval-request-v33.yaml",
+                                      "sha256":  "182b8793db74361425b0a4e209b5eac032ff81f75a6f900d689fe85889d1518c",
+                                      "bytes":  26241
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v1.yaml",
+                                      "sha256":  "ff76127106d65e1d4c5b99ef9673c0f8ed14b4b59ed6d7fccde9b9c3b44d6319",
+                                      "bytes":  35702
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v2.yaml",
+                                      "sha256":  "7ee024faa533ad2211b36a7f3d3927c822213d6331d9068a9e0945127903ea84",
+                                      "bytes":  20321
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v3.yaml",
+                                      "sha256":  "4b1ed41cfeb76f1057b7d193a1e41ca3bb9ef9b9dc058f48e6c9a4bf950b7425",
+                                      "bytes":  18538
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v4.yaml",
+                                      "sha256":  "8f161cf98fb4d5c58f0688da34de535750e041b14cad9bf19e1b74f487c41e4a",
+                                      "bytes":  14830
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-qualification-approval-request-v5.yaml",
+                                      "sha256":  "d035bf4d61cda8e5c8ad63e95957683ba1e9a5531c66edc163a400bfc60e6dce",
+                                      "bytes":  11938
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-case-matrix-remediation-diagnostic-approval-request-v18.yaml",
+                                      "sha256":  "78f19f20ad721a64f0dd851683abbc81e9655bf0e6d8f6f42ba25b106d9258c9",
+                                      "bytes":  24204
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-ffi-native-dependency-resolution-approval-request-v11.yaml",
+                                      "sha256":  "3263029fb1dd22f43b8ba9559949a55664aa18c4e33454faeba8eea3a2a24453",
+                                      "bytes":  13923
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-final-remediation-diagnostic-approval-request-v19.yaml",
+                                      "sha256":  "d8b8f3c93b22904549b89d9605f3b26b48349bac0d2719a720d5077a03872e8d",
+                                      "bytes":  25880
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v13.yaml",
+                                      "sha256":  "d1a57843c410cc79a123180aa87fdf36bec1ef1bfced1625c6ca02e9b5b9eb96",
+                                      "bytes":  22003
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v14.yaml",
+                                      "sha256":  "88002bd4afd3131742d18c5790f21e3a82ebc406b4e632ebe81f873d20fdef6c",
+                                      "bytes":  21271
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-final-runtime-projection-observation-approval-request-v15.yaml",
+                                      "sha256":  "c2e2705c1f798f245fa1fc47556bbea74ac9f95d5fb3005a51a56cd6d7b8c3dc",
+                                      "bytes":  27364
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-full-qualification-successor-predicate-integration-approval-request-v49.yaml",
+                                      "sha256":  "9266d5fed41caa44d60f8c29c798d3cfb8d45626fee9bf0938c6139001395510",
+                                      "bytes":  27788
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-loader-diagnostic-approval-request-v6.yaml",
+                                      "sha256":  "a84698b93a3719b2ae09713463fff8208e8c533702534806f7147b52c0c66ea6",
+                                      "bytes":  18556
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v10.yaml",
+                                      "sha256":  "a236c261bf668d0af0071469c119711876e2320a45bb740b9f2aa8a2b447d6bd",
+                                      "bytes":  19430
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v8.yaml",
+                                      "sha256":  "b7f9d0c19cf1f51745d17709d7804a2716e823c695e9c2974205df289efc294d",
+                                      "bytes":  17554
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-import-observation-approval-request-v9.yaml",
+                                      "sha256":  "adb1c005e85147334dc9ef03e351783c9d578673cc656740fbbf60f8d66e150b",
+                                      "bytes":  17642
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-99-path-identity-diagnostic-approval-request-v17.yaml",
+                                      "sha256":  "f2fbc230aed9df1f5dc66fbc1b1b1afb7cc99ff24e13783f6e28f2f0084625f5",
+                                      "bytes":  59032
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-runtime-projection-materialization-and-A-B-qualification-approval-request-v16.yaml",
+                                      "sha256":  "3d8b85e71209d7f7f1095a0af179f8bdde8f85734c55ceb4222bd644c4d60a81",
+                                      "bytes":  71036
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-sandbox-runtime-projection-design-approval-request-v7.yaml",
+                                      "sha256":  "a2a15fc7b3981e611eda596a88880ca2e414d3a384c69b8d18fb51d9c0fa2233",
+                                      "bytes":  27492
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-successor-watchdogs-full-qualification-A-B-approval-request-v48.yaml",
+                                      "sha256":  "b98158f3f9b11457b0cc097cf474def1c581c241f5eaf55f8da7cae41731b717",
+                                      "bytes":  27553
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-FR-WIN-07-integration-approval-request-v41.yaml",
+                                      "sha256":  "d292c2831826d2de23ecb7126f03108a6823faaa79436051b9479378887cb2ef",
+                                      "bytes":  27785
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-architecture-and-diagnostic-approval-request-v40.yaml",
+                                      "sha256":  "9c885cb00aa4fb69f81ca89c4e2adb4af5576a480ec22b2c4e0d46c30656545f",
+                                      "bytes":  30106
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-vcruntime-native-dependency-resolution-approval-request-v12.yaml",
+                                      "sha256":  "e33f903ebed9f684512d49ccf864b67866e2174d32a3a03232ddca8e1bf7badd",
+                                      "bytes":  14025
+                                  },
+                                  {
+                                      "path":  "new pipeline/tests/k0b03_v2/workers/windows-enforcement-capability-worker.py",
+                                      "sha256":  "78a39d7a788559145dba1de07ec0d8277d51ebd59e213c201df83684c10482e4",
+                                      "bytes":  38073
+                                  },
+                                  {
+                                      "path":  "new pipeline/tools/k0b03_v2/windows-enforcement-capability-probe.py",
+                                      "sha256":  "b0430c474976b47e5954355c86490a2774a74e42d811b6fc70615a9fa0cae363",
+                                      "bytes":  434509
+                                  },
+                                  {
+                                      "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-full-qualification-CP-WIN-05-bounded-quiescence-and-failure-projection-remediation-approval-request-v50.yaml",
+                                      "sha256":  "c5c3fab750daa0fc384c15e4535be96b4567603e73db322429aa8b8accca5707",
+                                      "bytes":  26423
+                                  }
+                              ],
+    "scoped_residue_before_writes":  {
+                                         "roots":  [
+
+                                                   ],
+                                         "known_profile_paths":  [
+
+                                                                 ],
+                                         "profile_monikers":  [
+
+                                                              ],
+                                         "projected_process_ids":  [
+
+                                                                   ],
+                                         "repository_bytecode":  [
+
+                                                                 ],
+                                         "listeners":  [
+
+                                                       ]
+                                     },
+    "targets":  [
+                    "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-prerequisite-completion-approval-request-v51.yaml",
+                    "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-summary-v1.yaml",
+                    "new pipeline/reviews/k0b-03-v2-windows-enforcement-capability-security-review-v1.yaml",
+                    "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-prerequisite-owner-disposition-v1.yaml",
+                    "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-prerequisite-document-check-v1.yaml"
+                ],
+    "expected_final_untracked_count":  57,
+    "hash_dependency_rule":  "Request contains input pins; summary/review/disposition use path references; this check pins first four outputs only. Its own hash and actual final 57-path/state/residue results are reported after write in conversation, avoiding self-hash cycles.",
+    "historical_attestation_limit":  "Current checks do not become contemporaneous immediate post-run 52-file content attestations.",
+    "preservation":  {
+                         "findings_F01_through_F08":  "open_unchanged",
+                         "F03":  "open_unchanged",
+                         "G_K0B03_UNTRUSTED_SHAPES":  "future_open_unchanged",
+                         "K0b03_canonical_status":  "blocked_unchanged",
+                         "implementation_authority":  "none",
+                         "runtime_authority":  "none",
+                         "canonical_state_mutation":  false,
+                         "staging":  false,
+                         "commit":  false,
+                         "gate_or_finding_closure":  false,
+                         "K0b04_K0b05_N1_Swarm_advancement":  false
+                     }
+}
