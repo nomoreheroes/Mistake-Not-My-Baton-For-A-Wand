@@ -1,0 +1,252 @@
+{
+    "request_id":  "K0B03-V2-WATCHDOG-ENFORCEMENT-DESIGN-ALIGNMENT-V52",
+    "schema_version":  1,
+    "status":  "owner_authorized_documentary_stage_only",
+    "authority":  {
+                      "source":  "explicit_owner_confirmation_in_conversation",
+                      "scope":  "five_new_design_alignment_documents_only",
+                      "confirmation":  "Owner authorizes normative CPU/network claims through limited trusted watchdog enforcement, with native process-time/END_OF_PROCESS_TIME/WSAEACCES/universal absence of network effects unproven; preserve old bytes, 70 candidate paths, 256x2 cases, partition and all findings; stop without runtime, staging or commit.",
+                      "implementation_authority":  "none",
+                      "runtime_authority":  "none",
+                      "fresh_context_review_of_this_addendum":  "pending_separate_authorization"
+                  },
+    "baseline":  {
+                     "branch":  "main",
+                     "head":  "334d8682b144a8b2f82006f8babc91cc21ee6d3d",
+                     "parent":  "24067ca6a8cb5fd437ca61d168a9b106163ae0c2",
+                     "tree":  "b55039570954b275b68e75f221aaa876c6e2bcb4"
+                 },
+    "input_pins":  [
+                       {
+                           "path":  "new pipeline/architecture/k0b-03-v2-remediation-design-v1.md",
+                           "bytes":  25193,
+                           "sha256":  "b8a84cf7ca6064d7b1224c3ba57380caa5f297b638b344b567a239411ff2d7a3"
+                       },
+                       {
+                           "path":  "new pipeline/decisions/k0b-03-v2-remediation-design-freeze-owner-disposition-v1.yaml",
+                           "bytes":  3473,
+                           "sha256":  "c034ec84f18aadd0823b29019fd31cc08af9279a31e319b5a02b5e01adcd80c9"
+                       },
+                       {
+                           "path":  "new pipeline/evidence/k0b-03-v2-remediation-feasibility-and-requirement-matrix-v1.yaml",
+                           "bytes":  8436,
+                           "sha256":  "d6b4b61427b3bc7487ef6a4c08428331c78af0fcb8526d0cf42be0be86b24429"
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-trusted-cpu-watchdog-FR-WIN-07-integration-approval-request-v41.yaml",
+                           "bytes":  27785,
+                           "sha256":  "d292c2831826d2de23ecb7126f03108a6823faaa79436051b9479378887cb2ef"
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-FR-WIN-08-09-trusted-pending-connect-watchdog-integration-approval-request-v47.yaml",
+                           "bytes":  30302,
+                           "sha256":  "ff20c3bc4836f97f6801fd321b45d539c53289bdab711a4b1733692a1e59436b"
+                       },
+                       {
+                           "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-prerequisite-completion-approval-request-v51.yaml",
+                           "bytes":  38282,
+                           "sha256":  "9d3021e87b127bcdb8fb02b1a381c4385a9446dc7f1f22aedca39e51eb7f3c56"
+                       },
+                       {
+                           "path":  "new pipeline/evidence/k0b-03-v2-windows-enforcement-capability-qualification-summary-v1.yaml",
+                           "bytes":  78202,
+                           "sha256":  "646df3c3f519c41be08fc2406ef65fb8af6c410d45e62b19deb6a02012293496"
+                       },
+                       {
+                           "path":  "new pipeline/reviews/k0b-03-v2-windows-enforcement-capability-security-review-v1.yaml",
+                           "bytes":  9594,
+                           "sha256":  "bb4204e8e27932bb4056138bdd40add381104202834e1610f2e7059d64d84783"
+                       },
+                       {
+                           "path":  "new pipeline/decisions/k0b-03-v2-windows-enforcement-capability-prerequisite-owner-disposition-v1.yaml",
+                           "bytes":  6645,
+                           "sha256":  "aa11791356c431d9d7b51a1e6febda9acbda6954cd1f489039adce0659f7aa0a"
+                       }
+                   ],
+    "inherited_input_binding":  {
+                                    "source":  {
+                                                   "path":  "new pipeline/requests/k0b-03-v2-windows-enforcement-capability-prerequisite-completion-approval-request-v51.yaml",
+                                                   "bytes":  38282,
+                                                   "sha256":  "9d3021e87b127bcdb8fb02b1a381c4385a9446dc7f1f22aedca39e51eb7f3c56"
+                                               },
+                                    "fields":  [
+                                                   "input_pins",
+                                                   "attachment_pins",
+                                                   "entry_untracked_inventory.paths"
+                                               ],
+                                    "all_rechecked_before_write":  true,
+                                    "raw_evidence_not_copied":  true
+                                },
+    "targets":  [
+                    "new pipeline/requests/k0b-03-v2-watchdog-enforcement-design-alignment-approval-request-v52.yaml",
+                    "new pipeline/architecture/k0b-03-v2-watchdog-enforcement-design-addendum-v1.md",
+                    "new pipeline/evidence/k0b-03-v2-watchdog-enforcement-requirement-coverage-alignment-v1.yaml",
+                    "new pipeline/decisions/k0b-03-v2-watchdog-enforcement-design-alignment-owner-disposition-v1.yaml",
+                    "new pipeline/evidence/k0b-03-v2-watchdog-enforcement-design-alignment-document-check-v1.yaml"
+                ],
+    "entry_untracked_count":  0,
+    "expected_final_untracked_count":  5,
+    "requirements":  [
+                         "WD-CPU-01",
+                         "WD-NET-01",
+                         "WD-TRUST-01",
+                         "WD-ATT-01",
+                         "WD-FAIL-01",
+                         "WD-CP-01",
+                         "WD-COV-01"
+                     ],
+    "priority":  {
+                     "historical_design_immutable":  true,
+                     "new_normative_source":  "new pipeline/architecture/k0b-03-v2-watchdog-enforcement-design-addendum-v1.md",
+                     "scope":  "Only WD-CPU-01, WD-NET-01, WD-TRUST-01, WD-ATT-01, WD-FAIL-01, WD-CP-01 and WD-COV-01 explicitly refine historical sections 7,8,10,11,12,13,14; all other clauses remain unchanged.",
+                     "matrix_role":  "traceability and future coverage obligations, not a second implementation policy",
+                     "unresolved_conflict":  "blocks future implementation authority",
+                     "fresh_context_review":  "pending_separate_authorization",
+                     "implementation_authority":  "none"
+                 },
+    "future_validation":  {
+                              "candidate_inventory_source":  {
+                                                                 "path":  "new pipeline/architecture/k0b-03-v2-remediation-design-v1.md",
+                                                                 "bytes":  25193,
+                                                                 "sha256":  "b8a84cf7ca6064d7b1224c3ba57380caa5f297b638b344b567a239411ff2d7a3"
+                                                             },
+                              "candidate_paths":  [
+                                                      "new pipeline/requests/k0b-03-v2-remediation-and-validation-approval-request-v1.yaml",
+                                                      "new pipeline/decisions/k0b-03-v2-remediation-and-validation-owner-disposition-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-remediation-input-manifest-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-remediation-session-entry-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-contract-compiler-receipt-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-compiled-output-manifest-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-requirement-to-test-coverage-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-remediation-validation-v1.yaml",
+                                                      "new pipeline/evidence/k0b-03-v2-remediation-document-check-v1.yaml",
+                                                      "new pipeline/receipts/k0b-03-v2-remediation-completion-v1.yaml",
+                                                      "new pipeline/registry/k0b03_v2/detector-profile-v2.json",
+                                                      "new pipeline/registry/k0b03_v2/hash-profile-registry-v2.json",
+                                                      "new pipeline/registry/k0b03_v2/repository-tool-policy-v2.json",
+                                                      "new pipeline/registry/k0b03_v2/attestation-compatibility-profile-v1.json",
+                                                      "new pipeline/contracts/k0b03_v2/detector-profile-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/hash-profile-registry-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/repository-tool-policy-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/scan-request-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/finding-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/scan-result-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/invocation-envelope-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/guard-result-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/lifecycle-command-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/lifecycle-result-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/compatibility-evidence-v2.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/attestation-compatibility-v1.schema.json",
+                                                      "new pipeline/contracts/k0b03_v2/k0b03-contract-package-v2.json",
+                                                      "new pipeline/harness/k0b03_v2/__init__.py",
+                                                      "new pipeline/harness/k0b03_v2/canonical.py",
+                                                      "new pipeline/harness/k0b03_v2/schema_validator.py",
+                                                      "new pipeline/harness/k0b03_v2/registry_binding.py",
+                                                      "new pipeline/harness/k0b03_v2/compiler.py",
+                                                      "new pipeline/harness/k0b03_v2/scanner.py",
+                                                      "new pipeline/harness/k0b03_v2/repository_guard.py",
+                                                      "new pipeline/harness/k0b03_v2/tool_guard.py",
+                                                      "new pipeline/harness/k0b03_v2/windows_job.py",
+                                                      "new pipeline/harness/k0b03_v2/windows_appcontainer.py",
+                                                      "new pipeline/harness/k0b03_v2/launcher.py",
+                                                      "new pipeline/harness/k0b03_v2/lifecycle.py",
+                                                      "new pipeline/harness/k0b03_v2/store.py",
+                                                      "new pipeline/harness/k0b03_v2/compatibility.py",
+                                                      "new pipeline/harness/k0b03_v2/attestations.py",
+                                                      "new pipeline/harness/k0b03_v2/cli.py",
+                                                      "new pipeline/harness/migrations/0008_k0b03_v2_remediation.sql",
+                                                      "new pipeline/tests/k0b03_v2/fixture_support.py",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/coverage-map-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/detector-vector-recipes-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/contract-registry-attestation-vectors-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/repository-tool-launcher-vectors-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/lifecycle-recovery-vectors-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/compatibility-migration-vectors-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/toolchain-vectors-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/compiled-output-expectations-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/fixtures/migration-preservation-seed-v2.json",
+                                                      "new pipeline/tests/k0b03_v2/workers/controlled_effect_worker.py",
+                                                      "new pipeline/tests/k0b03_v2/test_scanner.py",
+                                                      "new pipeline/tests/k0b03_v2/test_contracts_registry_attestations.py",
+                                                      "new pipeline/tests/k0b03_v2/test_repository_tool_launcher.py",
+                                                      "new pipeline/tests/k0b03_v2/test_lifecycle.py",
+                                                      "new pipeline/tests/k0b03_v2/test_migration_compatibility.py",
+                                                      "new pipeline/tests/k0b03_v2/test_cli_toolchain.py",
+                                                      "new pipeline/toolchain/k0b03_v2/invoke-v2.ps1",
+                                                      "new pipeline/toolchain/k0b03_v2/toolchain-lock-v2.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-contract-manifest.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-detector-profile.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-hash-profile-map.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-repository-tool-policy.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-registry-event-bindings.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-attestation-boundary.json",
+                                                      "new pipeline/compiled/k0b03_v2/compiled-coverage-map.json"
+                                                  ],
+                              "path_count":  70,
+                              "cases_per_environment":  256,
+                              "environment_count":  2,
+                              "partition":  [
+                                                96,
+                                                40,
+                                                48,
+                                                32,
+                                                32,
+                                                8
+                                            ],
+                              "counts_alone_prove_coverage":  false,
+                              "exact_case_ids":  "future_authored_coverage_map_under_separate_authority",
+                              "current_candidate_creation_permitted":  false
+                          },
+    "retained_findings":  [
+                              {
+                                  "id":  "CAP-V50-PROVENANCE",
+                                  "status":  "retained_not_closed",
+                                  "classification":  "governance",
+                                  "description":  "An additional distinct A execution was initially presented as B. It was not the originally authorized single A repeat and is not B. Acceptance is not retroactive runtime authorization. Actual B was separately authorized after the mismatch."
+                              },
+                              {
+                                  "id":  "CAP-V50-INVENTORY",
+                                  "status":  "retained_not_closed",
+                                  "classification":  "evidence_limit",
+                                  "description":  "The wrapper computes all post-run entry hashes but its success predicate compares inventory count and paths only; content pins cover probe, worker, v17, v50 and Python. Later 52-file verification establishes current preservation, not immutable immediate post-execution preservation."
+                              },
+                              {
+                                  "id":  "CAP-V50-WRAPPER",
+                                  "status":  "retained_not_closed",
+                                  "classification":  "failure_path_limit",
+                                  "description":  "No outer wait timeout; copy-task failure may lose partial capture; wrapper parent termination does not provide comprehensive emergency root/profile cleanup. Successful A/B cleanup is not proof of every failure path."
+                              },
+                              {
+                                  "id":  "CAP-V50-WATCHDOG",
+                                  "status":  "retained_not_closed",
+                                  "classification":  "claim_boundary",
+                                  "description":  "Trusted CPU and pending-connect watchdog enforcement only. Native JOB_OBJECT_LIMIT_PROCESS_TIME, END_OF_PROCESS_TIME and WSAEACCES are not proven; no universal absence-of-network-effect guarantee."
+                              }
+                          ],
+    "native_or_stronger_guarantees_unproven":  [
+                                                   "native JOB_OBJECT_LIMIT_PROCESS_TIME",
+                                                   "native END_OF_PROCESS_TIME",
+                                                   "native WSAEACCES",
+                                                   "exact WFP filter/component attribution",
+                                                   "universal absence of all network effects"
+                                               ],
+    "stop_conditions":  [
+                            "baseline, input pin, inventory, claim, coverage, serialization or scope mismatch",
+                            "target already exists",
+                            "any future candidate path exists",
+                            "unresolved normative contradiction",
+                            "mandatory vectors cannot fit unchanged partition"
+                        ],
+    "preservation":  {
+                         "F01_through_F08":  "open_unchanged",
+                         "F03":  "open_unchanged",
+                         "G_K0B03_UNTRUSTED_SHAPES":  "future_open_unchanged",
+                         "canonical_K0b03":  "blocked_unchanged",
+                         "historical_design":  "byte_identical",
+                         "canonical_state_renderer_profile_STATE":  "unchanged",
+                         "implementation_authority":  "none",
+                         "runtime_authority":  "none",
+                         "staging_commit_push":  false,
+                         "closure_or_advancement":  false
+                     }
+}
